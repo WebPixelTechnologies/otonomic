@@ -391,8 +391,10 @@ body{padding-top: 70px;}
 	position: absolute;
 	top: 243px;
 }
-.ch-item .ch-text h3{}
+
+.ch-item .ch-text h3{ text-align: center;}
 .ch-item .ch-text h4{ 
+	text-align: center;
 	opacity: 0;
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
@@ -421,10 +423,11 @@ body{padding-top: 70px;}
 	padding-bottom: 91px;
 }
 .section-media .media-item{
-	text-align: center;
 	border-right: 1px solid #cccccc;
 }
-
+.section-media .media-item img{
+	margin: 0 auto;
+}
 /* ## Section About ## */
 .section-about{
 	background-color: #acbf00;
@@ -638,14 +641,11 @@ img.grayscale.disabled {
     }
 
 }
-@media (min-width: 768px) and (max-width: 830px) {
-  .container {
+@media (min-width: 768px) and (max-width: 829px) {
+  .holder {
     width: 100%;
     margin-left: -15px;
 	margin-right: -15px;
-  }
-  .navbar-brand img{
-	margin-left:20px;
   }
   .ch-item {
 	width: 100%;
@@ -659,18 +659,12 @@ img.grayscale.disabled {
   }
 }
 @media (min-width: 830px) and (max-width: 1279px) {
-  .container {
+  .holder {
     width: 100%;
-    margin-left: -15px;
-	margin-right: -15px;
-  }
-  .navbar .container-fluid {
-	padding-left: 0px; 
-    padding-right: 0px;
   }
   .navbar .facebook-input-holder{
 	right: 50%;
-	margin-right: -315px;
+	margin-right: -310px;
   }
   .navbar-toggle {
 	margin-right: 5px;
@@ -678,16 +672,51 @@ img.grayscale.disabled {
   .navbar>.container-fluid .navbar-brand {
 	 margin-left: 0; 
   }
+  .ch-item {
+	width: 100%;
+	margin: 0 auto;
+  }
+  .ch-info .ch-info-back {
+	padding-left: 0px;
+  }
+  .ch-info .ch-info-front,
+  .ch-info .ch-info-back{
+  	text-align: center;
+  }
+  .ch-info .ch-info-front img,
+  .ch-info .ch-info-back img{
+  	max-width: 100%;
+  }
+  .section-about .bg-about {
+	margin-top: 0;
+  }
+  .section-about .bg-about .team-default{
+  	left: -350px;
+	width: 705px;
+  }
+  .section-about .bg-about .team-default.active{
+  	margin-top: 85px;
+  }
+  .section-about .bg-about .team-active{
+  	left: -406px;
+	width: 803px;
+  }
+  .section-about .bg-about .team-active.active{
+  	margin-top: 70px;
+  }
+  .section-about .bg-about .computers {
+	left: -925px;
+	width: 1850px;
+  }
+
 }
 @media (min-width: 1280px) {
-  .container{
+  .holder{
     width: 1280px;
     margin-left: auto;
 	margin-right: auto;
   }
-  .navbar .container-fluid {
-    width: 1280px;
-    margin-left: auto;
-	margin-right: auto;
+  .navbar>.container-fluid .navbar-brand {
+	 margin-left: 0; 
   }
 }
