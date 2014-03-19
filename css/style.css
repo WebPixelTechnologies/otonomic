@@ -103,7 +103,7 @@ body{padding-top: 70px;}
 	margin-left: 5px;
 	font-size: 16px;
 }
-.navbar .facebook-input-holder #facebook-url-input.form-control{
+.navbar .facebook-input-holder #main_search_box.form-control{
 	width: 350px;
 	height: 37px;
 	border:0;
@@ -184,7 +184,6 @@ body{padding-top: 70px;}
 	color: white;
 	font-size: 42px;
 	text-shadow: 2px 2px 0px rgba(0,0,0,0.25);
-	letter-spacing: 0.007em;
 }
 .section-home p{
 	color: white;
@@ -199,7 +198,7 @@ body{padding-top: 70px;}
 	margin-left: 10px;
 	font-size: 18px;
 }
-.section-home .form-inline #facebook-url-input.form-control{
+.section-home .form-inline #main_search_box.form-control{
 	width: 460px;
 	height: 50px;
 	border:0;
@@ -294,7 +293,6 @@ body{padding-top: 70px;}
 	color: white;
 	font-size: 42px;
 	text-shadow: 2px 2px 0px rgba(0,0,0,0.25);
-	letter-spacing: 0.007em;
 }
 .section-reviews h3{
 	color: black;
@@ -563,7 +561,6 @@ body{padding-top: 70px;}
 	color: white;
 	font-size: 42px;
 	text-shadow: 2px 2px 0px rgba(0,0,0,0.25);
-	letter-spacing: 0.007em;
 }
 .section-social .social-links{
 	width: 642px;
@@ -624,26 +621,41 @@ img.grayscale.disabled {
 }
 */
 @media (max-width:767px) {
+	.navbar .facebook-input-holder {
+		width: 100%;
+		position: absolute;
+		top: -50px;
+		right: initial;
+		margin-right: auto;
+	}
+	.form-inline .form-group {
+		display: inline-block;
+		margin-bottom: 0;
+		vertical-align: middle;
+	}
+	.navbar .center-logo .logo-img {
+		margin-top: 4px;
+		margin-bottom: 4px;
+		width: 120px;
+	}
+  #wrapper {
+    padding-right: 0;
+  }
 
-    #wrapper {
-      padding-right: 0;
-    }
+  #sidebar-wrapper {
+    right: 0;
+  }
 
-    #sidebar-wrapper {
-      right: 0;
-    }
+  #wrapper.active {
+    position: relative;
+    right: 78%;
+  }
 
-    #wrapper.active {
-      position: relative;
-      right: 78%;
-    }
-
-    #wrapper.active #sidebar-wrapper {
-      right: 78%;
-      width: 79%;
-      transition: all 0.4s ease 0s;
-    }
-
+  #wrapper.active #sidebar-wrapper {
+    right: 78%;
+    width: 79%;
+    transition: all 0.4s ease 0s;
+  }
 }
 @media (min-width: 768px) and (max-width: 829px) {
   .holder {
