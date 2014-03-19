@@ -22,27 +22,27 @@
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <li class="sidebar-login">
-              <a href="#">
+              <a href="#" class="sidebar-link" data-target="">
                 <div class="sidebar-icon"><span class="glyphicon glyphicon-user"></span></div>Login
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#" class="sidebar-link" data-target="features">
                 <div class="sidebar-icon"><img src="images/sidebar-icon1.png" alt="Features"></div>Features
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#" class="sidebar-link" data-target="reviews">
                 <div class="sidebar-icon"><img src="images/sidebar-icon2.png" alt="Reviews"></div>Reviews
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#" class="sidebar-link" data-target="media">
                 <div class="sidebar-icon"><img src="images/sidebar-icon3.png" alt="In the media"></div>In the media
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#" class="sidebar-link" data-target="about">
                 <div class="sidebar-icon about"><img src="images/sidebar-icon4.png" alt="About"></div>About
               </a>
             </li> 
@@ -97,7 +97,7 @@
                     </div><!-- /.col-xs-12 main -->
                   </div>
                 </section>
-                <section><!-- Section Features -->
+                <section class="features"><!-- Section Features -->
                   <div class="row">
                     <div class="section-features holder">
                       <div class="col-xs-12 col-sm-6 col-md-4 title">
@@ -131,7 +131,7 @@
                     </div>
                   </div>
                 </section>
-                <section><!-- Section Reviews -->
+                <section class="reviews"><!-- Section Reviews -->
                   <div class="row section-reviews">
                     <div class="section-reviews-inner holder center-block">
                       <div class="col-xs-12 text-center">
@@ -208,7 +208,7 @@
                     </div>
                   </div>
                 </section>
-                <section><!-- Section Media -->
+                <section class="media"><!-- Section Media -->
                   <div class="row">
                     <div class="section-media holder center-block">
                       <div class="col-xs-4 col-sm-2 col-md-2 media-item">
@@ -232,7 +232,7 @@
                     </div>
                   </div>
                 </section>
-                <section><!-- Section About -->
+                <section class="about"><!-- Section About -->
                   <div class="row section-about">
                     <div class="section-about-inner holder center-block clearfix">
                       <div class="col-xs-12">
@@ -262,7 +262,7 @@
                     </div>
                   </div>
                 </section>
-                <section><!-- Section Social -->
+                <section class="social"><!-- Section Social -->
                   <div class="row section-social">
                     <div class="col-xs-12 text-center">
                       <h1>Share us with the world!</h1>
@@ -375,41 +375,17 @@
           // Scroll Snaping
           function navBarToggle(dir){
             if( dir =='down'){
-              $(".navbar .center-logo").animate({
-                  top: "80",
-                }, 400,"swing", function() {
-                  // Animation complete.
-                });
-                $(".navbar .facebook-input-holder").animate({
-                  top: "16"
-                }, 400,"swing",function() {
-                  // Animation complete.
-                });
-                $(".navbar .navbar-brand img").animate({
-                  marginTop: "14"
-                }, 400,"swing",function() {
-                  // Animation complete.
-                });
+              $(".navbar .center-logo").animate({top: "80",}, 400,"swing");
+              $(".navbar .facebook-input-holder").animate({ top: "16"}, 400,"swing");
+              $(".navbar .navbar-brand img").animate({marginTop: "14"}, 400,"swing");
             }
             else if(dir =='up'){
-              $(".navbar .center-logo").animate({
-                  top: "9",
-                }, 400,"swing", function() {
-                  // Animation complete.
-                });
-                $(".navbar .facebook-input-holder").animate({
-                  top: "-50"
-                }, 400,"swing",function() {
-                  // Animation complete.
-                });
-                $(".navbar .navbar-brand img").animate({
-                  marginTop: "-65"
-                }, 400,"swing",function() {
-                  // Animation complete.
-                });
+              $(".navbar .center-logo").animate({top: "9"}, 400,"swing");
+              $(".navbar .facebook-input-holder").animate({top: "-50"}, 400,"swing");
+              $(".navbar .navbar-brand img").animate({marginTop: "-65"}, 400,"swing");
             }
           }
-          // if scrolled to top
+          // if scrolled to top change header
           $(window).on('scroll', function() {
             var scrollTop = $(this).scrollTop();
             var toggleFlag = $('.navbar').hasClass('active');
@@ -423,6 +399,17 @@
               $('.navbar').addClass('active');
               navBarToggle('down');
             }
+          });
+
+          // Sidebar Menu onClick
+          $('#sidebar-wrapper > .sidebar-nav > li > a.sidebar-link').click(function() {
+              var target = 'section.'+$(this).attr('data-target');
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: ($(target).offset().top)-70
+                }, 1000);
+                return false;
+              }
           });
           // init scrollsnap
           /*$(document).scrollsnap({

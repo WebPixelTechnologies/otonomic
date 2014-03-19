@@ -2,10 +2,14 @@
 /* Google Fonts */
 @import url(http://fonts.googleapis.com/css?family=Changa+One);
 @import url(http://fonts.googleapis.com/css?family=Dosis:300,400,600,700);
-
+@import url(http://fonts.googleapis.com/css?family=Exo+2:800,900);
 /* Type */
 body{ font-family: 'Dosis', sans-serif;}
-h1,h2,h3,h4,h5 { font-family: 'Changa One', cursive, Arial, serif; font-weight: 400; }
+h1,h2,h3,h4,h5 { 
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 800;
+	/*font-family: 'Changa One', cursive, Arial, serif; font-weight: 400; */
+}
 
 /* Defaults*/
 body{padding-top: 70px;}
@@ -644,19 +648,59 @@ img.grayscale.disabled {
 @media (min-width: 768px) and (max-width: 829px) {
   .holder {
     width: 100%;
-    margin-left: -15px;
-	margin-right: -15px;
+  }
+  .navbar .facebook-input-holder{
+	right: 50%;
+	margin-right: -310px;
+  }
+  .navbar-toggle {
+	margin-right: 5px;
+  }
+  .navbar>.container-fluid .navbar-brand {
+	 margin-left: 0; 
   }
   .ch-item {
 	width: 100%;
+	margin: 0 auto;
   }
   .ch-info .ch-info-back {
 	padding-left: 0px;
+  }
+  .ch-info .ch-info-front,
+  .ch-info .ch-info-back{
+  	text-align: center;
   }
   .ch-info .ch-info-front img,
   .ch-info .ch-info-back img{
   	max-width: 100%;
   }
+  .section-features .feature,
+  .section-features .title{
+  	border-right: 1px solid #F7F7F7;
+  	border-bottom: 1px solid #F7F7F7;
+  }
+  .section-about .bg-about {
+	margin-top: 0;
+  }
+  .section-about .bg-about .team-default{
+  	left: -350px;
+	width: 705px;
+  }
+  .section-about .bg-about .team-default.active{
+  	margin-top: 85px;
+  }
+  .section-about .bg-about .team-active{
+  	left: -406px;
+	width: 803px;
+  }
+  .section-about .bg-about .team-active.active{
+  	margin-top: 70px;
+  }
+  .section-about .bg-about .computers {
+	left: -925px;
+	width: 1850px;
+  }
+
 }
 @media (min-width: 830px) and (max-width: 1279px) {
   .holder {
@@ -686,6 +730,11 @@ img.grayscale.disabled {
   .ch-info .ch-info-front img,
   .ch-info .ch-info-back img{
   	max-width: 100%;
+  }
+  .section-features .feature,
+  .section-features .title{
+  	border-right: 1px solid #F7F7F7;
+  	border-bottom: 1px solid #F7F7F7;
   }
   .section-about .bg-about {
 	margin-top: 0;
