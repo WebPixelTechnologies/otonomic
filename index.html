@@ -37,7 +37,7 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="sidebar-link" data-target="media">
+                <a href="#" class="sidebar-link" data-target="media-links">
                   <div class="sidebar-icon"><img src="images/sidebar-icon3.png" alt="In the media"></div>In the media
                 </a>
               </li>
@@ -81,14 +81,14 @@
                     <div class="row section-home">
                         <div class="col-xs-12 text-center">
                         <h1>Even a small business deserves a big spotlight.</h1>
-                        <p>In almost no time, we will turn your Facebook page<br>into a professional website</p>
+                        <p>In almost no time, we will turn your Facebook page into a professional website</p>
                         <form class="form-inline" role="form">
-                          <div class="form-group p2s_fanpages">
+                          <div class="form-group form-group-mobile p2s_fanpages">
                             <label class="sr-only" for="main_search_box">Enter your Facebook business page name</label>
                             <input type="text" class="form-control" id="main_search_box" placeholder="Enter your Facebook business page name">
                             <div class="tb search-wrapper" id="search_wrapper_main"></div>
                           </div>
-                          <div class="form-group">
+                          <div class="form-group form-group-mobile">
                             <button type="submit" class="btn btn-ttc ">Create your website</button>
                           </div>
                         </form>
@@ -99,7 +99,7 @@
                     </div>
                   </section>
                   <section class="features"><!-- Section Features -->
-                    <div class="row">
+                    <div class="row hidden-xs">
                       <div class="section-features holder">
                         <div class="col-xs-12 col-sm-6 col-md-4 title">
                           <h1>All the features small business owners need</h1>
@@ -131,9 +131,80 @@
                         </div>
                       </div>
                     </div>
+                    <div class="row visible-xs features-mobile">
+                      <div class="col-xs-12">
+                          <h1>All the features small business owners need</h1>
+                      </div>
+                      <div id="carousel-features" class="carousel slide clearfix" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-tabs">
+                          <li data-target="#carousel-features" data-slide-to="0" class="active">
+                            <img src="images/mobile-features-icon-1-active.png" class="img-responsive">
+                          </li>
+                          <li data-target="#carousel-features" data-slide-to="1">
+                            <img src="images/mobile-features-icon-2.png" class="img-responsive">
+                          </li>
+                          <li data-target="#carousel-features" data-slide-to="2">
+                            <img src="images/mobile-features-icon-3.png" class="img-responsive">
+                          </li>
+                          <li data-target="#carousel-features" data-slide-to="3">
+                            <img src="images/mobile-features-icon-4.png" class="img-responsive">
+                          </li>
+                          <li data-target="#carousel-features" data-slide-to="4">
+                            <img src="images/mobile-features-icon-5.png" class="img-responsive">
+                          </li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                          <div class="item active">
+                            <img src="images/feature-icon1.png">
+                            <div class="carousel-caption">
+                              <h3>Gorgeous site in a click (really)</h3>
+                              <p>Otonomic was created in 2012 by Omri Allouche, who previously founded Zink, social marketing platform that uses unique technology to increase the word of mouth effect on social networks on social networks and Accessorize London.</p>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <img src="images/feature-icon2.png">
+                            <div class="carousel-caption">
+                             <h3>Auto-updating</h3>
+                             <p>Whenever you post something on your Facebook page, it immediately appears on your Otonomic site. You can just kick back, enjoy sharing news, pictures and whatever else you feel like, and ta-da it’s on your site!</p>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <img src="images/feature-icon3.png">
+                            <div class="carousel-caption">
+                             <h3>Web, tablet and mobile ready</h3>
+                             <p>You know you must cater to all digital tastes. With Otonomic, you get web, mobile and tablet sites right away! So you can reach clients wherever they go, on all platforms and all devices in all sizes.</p>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <img src="images/feature-icon4.png">
+                            <div class="carousel-caption">
+                             <h3>Your domain, your brand</h3>
+                             <p>In today's world, brand name is everything. With us you get your own domain, which means your own fully-branded web, mobile and tablet sites. Don’t settle for less — get the best combo for your business.</p>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <img src="images/feature-icon5.png">
+                            <div class="carousel-caption">
+                             <h3>Business Growth Made Easy</h3>
+                             <p>With features like a blog, video player, and photo gallery, every one of your clients is engaged. With your chic online store, you can easily capitalize on these warm leads. Your clients are happy, so are you.</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <!-- <a class="left carousel-control" href="#carousel-features" data-slide="prev">
+                          <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-features" data-slide="next">
+                          <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a> -->
+                      </div>
+                    </div>
                   </section>
                   <section class="reviews"><!-- Section Reviews -->
-                    <div class="row section-reviews">
+                    <div class="row section-reviews hidden-xs">
                       <div class="section-reviews-inner holder center-block">
                         <div class="col-xs-12 text-center">
                           <h1>Small business owners love us</h1>
@@ -209,9 +280,9 @@
                       </div>
                     </div>
                   </section>
-                  <section class="media"><!-- Section Media -->
-                    <div class="row">
-                      <div class="section-media holder center-block">
+                  <section class="media-links"><!-- Section Media -->
+                    <div class="row hidden-xs">
+                      <div class="section-media holder">
                         <div class="col-xs-4 col-sm-2 col-md-2 media-item">
                           <img src="images/media1.png" class="img-responsive">
                         </div>
@@ -234,7 +305,7 @@
                     </div>
                   </section>
                   <section class="about"><!-- Section About -->
-                    <div class="row section-about">
+                    <div class="row section-about hidden-xs">
                       <div class="section-about-inner holder center-block clearfix">
                         <div class="col-xs-12">
                           <div class="drop-screen center-block">
@@ -307,7 +378,12 @@
           $('.bg-image>img').addClass('grayscale');
       }
       $(function() {
-
+          // Stop all carousels
+          $('.carousel').carousel('pause');
+          $('.carousel-tabs li').click(function(){
+            $('.carousel-tabs li').removeClass('active');
+            $(this).addClass('active');
+          });
           // Turn to grayscale after page load
           setTimeout(turnToGrayscale, 2500);
           // Turn on grayscale onFocus on input field 
@@ -390,15 +466,15 @@
             //console.log(toggleFlag);
             if ( (scrollTop <= 290) && (toggleFlag) ) {
               $('.navbar').removeClass('active');
-              $('#menu-toggle').fadeIn('fast');
+              //$('#menu-toggle').fadeIn('fast');
               $('#menu-toggle').removeClass('hidden-xs');
               navBarToggle('up');
             }
             else if((scrollTop > 290) && (!toggleFlag)){
               $('.navbar').addClass('active');
-              $('#menu-toggle').fadeOut('fast',function(){
-                $('#menu-toggle').addClass('hidden-xs');
-              });
+              $('#menu-toggle').addClass('hidden-xs');
+              /*$('#menu-toggle').fadeOut('fast',function(){
+              });*/
               navBarToggle('down');
             }
           });

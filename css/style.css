@@ -182,12 +182,14 @@ body{padding-top: 70px;}
 	margin-top: 42px;
 	margin-bottom: 10px;
 	color: white;
-	font-size: 20px;
+	font-size: 42px;
 	text-shadow: 2px 2px 0px rgba(0,0,0,0.25);
 }
 .section-home p{
+	max-width: 410px;
+	margin: 0 auto;
 	color: white;
-	font-size: 23px;
+	font-size: 20px;
 	line-height: 29px;
 	margin-bottom: 34px;
 }
@@ -245,7 +247,7 @@ body{padding-top: 70px;}
 	text-shadow: 2px 2px 0px rgba(0,0,0,0.25);
 }
 .section-features .title h1{
-		font-size: 20px;
+		font-size: 41px;
 }
 .section-features .feature-icon{
 	margin-top: 50px;
@@ -292,7 +294,7 @@ body{padding-top: 70px;}
 	margin-top: 42px;
 	margin-bottom: 108px;
 	color: white;
-	font-size: 20px;
+	font-size: 42px;
 	text-shadow: 2px 2px 0px rgba(0,0,0,0.25);
 }
 .section-reviews h3{
@@ -421,7 +423,6 @@ body{padding-top: 70px;}
 }
 /* ## Section Media ## */
 .section-media{
-	/*width: 1280px;*/
 	margin-top: 48px;
 	padding-bottom: 91px;
 }
@@ -560,7 +561,7 @@ body{padding-top: 70px;}
 }
 .section-social h1{
 	color: white;
-	font-size: 20px;
+	font-size: 42px;
 	text-shadow: 2px 2px 0px rgba(0,0,0,0.25);
 }
 .section-social .social-links{
@@ -601,6 +602,68 @@ body{padding-top: 70px;}
 	text-decoration: none;
 }
 
+/* Mobile Specific
+------------------------------------------------------------------ */
+/* Features */
+.features-mobile{
+	background-color: #ffc430;
+}
+.features-mobile h1{
+	color: #fff;
+	font-size: 25px;
+	text-align: center;
+	margin-bottom: 20px;
+	text-shadow: 2px 2px 0px rgba(0,0,0,0.25);
+}
+.features-mobile .carousel-tabs{
+	width: 100%;
+	height: auto;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid #fff;
+}
+.features-mobile .carousel-tabs li{
+	width: 20%;
+	display: inline-block;
+	border-right: 1px solid #fff;
+	margin-right: -4px;
+	margin-bottom: -5px;
+	box-sizing: content-box;
+}
+.features-mobile .carousel-tabs li:last-child{
+	border-right:0;
+}
+.features-mobile .carousel-tabs li.active{
+	width: 20%;
+	display: inline-block;
+	background-color: white;
+}
+.features-mobile .carousel-inner{
+	background-color: #fff;
+}
+.features-mobile .carousel-inner .item{
+	padding-top: 20px;
+	height: 400px;
+}
+.features-mobile .carousel-inner .item img{
+
+	margin: 0 auto;
+}
+.features-mobile .carousel-inner .carousel-caption{
+	position: relative;
+	padding-right: 15%;
+	padding-left: 15%;
+	right: 0;
+	left: 0;
+	text-align: left;
+	color: #000;
+	text-shadow:none;
+}
+.features-mobile .carousel-inner .carousel-caption p{
+	color: #736c6c;
+	font-size: 17px;
+}
 /* Gray scale class
 -------------------------------------------------------------------*/
 img.grayscale {
@@ -653,33 +716,51 @@ img.grayscale.disabled {
 		margin-bottom: 4px;
 		width: 120px;
 	}
-  #wrapper {
-    padding-right: 0;
-  }
+  .section-home h1,
+  .section-social h1,
+  .section-reviews h1{
+  	font-size: 25px;
 
-  #sidebar-wrapper {
-    right: 0;
-  }
-
-  #wrapper.active {
-    position: relative;
-    right: 78%;
-  }
-
-  #wrapper.active #sidebar-wrapper {
-    right: 78%;
-    width: 79%;
-    transition: all 0.4s ease 0s;
   }
   .section-social .social-links,
   .section-social .footer-links {
 		width: 100%;
+		margin-top: 20px;
+		margin-bottom: 20px;
 	}
 	.section-social .social-links .social-link-holder {
 		width: 24.3%;
 		height: auto;
 	}
-
+	.section-social .footer-links .footer-link {
+			padding: 0 15px;
+	}
+	.section-social .footer-links .footer-link a {
+			font-size:22px;
+	}
+	.form-group-mobile{
+		width: 100%;
+	}
+	.section-home .form-inline #main_search_box.form-control {
+		width: 100%;
+	}
+	.section-home .form-inline .form-group-mobile .btn.btn-ttc{
+		width: 50%;
+		margin-left: 0;
+		margin-top: 15px;
+	}
+	.section-home .bg-image {
+		position: relative;
+		width: 100%;
+		margin-top: 80px;
+	}
+	.section-home .bg-image img {
+		width: 1200px;
+		position: relative;
+		top: 0;
+		margin-left: 70%;
+		left: -600px;
+	}
 }
 @media (min-width: 768px) and (max-width: 829px) {
   .holder {
@@ -736,7 +817,6 @@ img.grayscale.disabled {
 	left: -925px;
 	width: 1850px;
   }
-
 }
 @media (min-width: 830px) and (max-width: 1279px) {
   .holder {
