@@ -839,7 +839,6 @@ body{padding-top: 70px;}
 	margin: 0;
 	margin-bottom: -1px;
 	padding: 0;
-	border-top: 1px solid #fff;
 	text-align: left;
 }
 .about-mobile .carousel-tabs li{
@@ -902,6 +901,27 @@ body{padding-top: 70px;}
 	 background-size: 50% auto;
 }
 
+/* mobile Media items*/
+.mobile-media-item-holder{
+	position: relative;
+	min-height: 1px;
+	border-top: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	width: 33.333333%;
+	float: left;
+	padding: 4% 2%;
+	background: right top url('../images/red-tri.png') no-repeat;
+	background-size: 15% auto;
+}
+.mobile-media-item-holder:last-child{
+	margin-bottom: -1px;
+	border-right:0;
+}
+.mobile-media-item-holder.bottom{
+	border-bottom: 1px solid #cccccc;
+}
+.mobile-media-item{
+}
 /* Gray scale class
 -------------------------------------------------------------------*/
 img.grayscale {
