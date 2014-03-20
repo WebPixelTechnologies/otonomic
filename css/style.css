@@ -914,7 +914,7 @@ body{padding-top: 70px;}
 	background-size: 15% auto;
 }
 .mobile-media-item-holder:last-child{
-	margin-bottom: -1px;
+	margin-bottom: 0px;
 	border-right:0;
 }
 .mobile-media-item-holder.bottom{
