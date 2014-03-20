@@ -63,12 +63,12 @@
                     </div>
                     <div class="center-logo center-block">
                       <img src="images/otonomic-logo.png" class="logo-img" alt="otonomic logo">
-                      <img src="images/blue-arrow.png" alt="otonomic logo" class="hidden-xs">
+                      <img src="images/blue-arrow.png" alt="otonomic logo">
                     </div>
                     <div class="form-inline facebook-input-holder">
                       <div class="form-group">
                         <label class="sr-only" for="main_search_box2">Enter your Facebook business page name</label>
-                        <input type="text" class="form-control" id="main_search_box2" placeholder="Enter your Facebook business page name">
+                        <input type="text" class="form-control main_search_box" id="main_search_box2" placeholder="Enter your Facebook business page name">
                       </div>
                       <div class="form-group">
                         <button type="submit" class="btn btn-ttc ">Create <span class="hidden">your</span> website</button>
@@ -85,7 +85,7 @@
                         <form class="form-inline" role="form">
                           <div class="form-group form-group-mobile p2s_fanpages">
                             <label class="sr-only" for="main_search_box">Enter your Facebook business page name</label>
-                            <input type="text" class="form-control" id="main_search_box" placeholder="Enter your Facebook business page name">
+                            <input type="text" class="form-control main_search_box" id="main_search_box" placeholder="Enter your Facebook business page name">
                             <div class="tb search-wrapper" id="search_wrapper_main"></div>
                           </div>
                           <div class="form-group form-group-mobile">
@@ -613,7 +613,7 @@
           });
           // init scrollsnap
           /*$(document).scrollsnap({
-              snaps: 'section',
+              snaps: 'div.row.visible-xs',
               proximity: 100,
               onSnapWait: 500,
               offset:-70,
@@ -621,11 +621,11 @@
                 console.log(obj.context.className);
                 if(obj.context.className != 'home'){
                   //console.log('onSnap: Down');
-                  navBarToggle('down');
+                  //navBarToggle('down');
                 }
                 else{
                   //console.log('onSnap: Up');
-                  navBarToggle('up');
+                  //navBarToggle('up');
                 }
               }
           });*/
