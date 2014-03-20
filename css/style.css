@@ -922,6 +922,9 @@ body{padding-top: 70px;}
 }
 .mobile-media-item{
 }
+.mobile-media-item-holder.bottom:last-child .mobile-media-item {
+	margin-bottom: -1px;
+}
 /* Gray scale class
 -------------------------------------------------------------------*/
 img.grayscale {
