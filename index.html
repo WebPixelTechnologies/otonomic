@@ -480,156 +480,16 @@
     <script type="text/javascript" src="js/jquery.easing.min.js"></script>
     <script type="text/javascript" src="js/jquery.scrollsnap.js"></script>
     <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
-
-    <script>
-      function turnToGrayscale() {
-          $('.bg-image>img').addClass('grayscale');
-      }
-      $(function() {
-
-          //  Carousels
-          /*$('.carousel-tabs li').click(function(){
-            $('.carousel-tabs li').removeClass('active');
-            $(this).addClass('active');
-          });*/
-
-          //Enable swiping...
-          $(".carousel-inner").swipe( {
-            //Generic swipe handler for all directions
-            swipeLeft:function(event, direction, distance, duration, fingerCount) {
-              $(this).parent().carousel('next'); 
-            },
-            swipeRight: function() {
-              $(this).parent().carousel('prev');
-            },
-            //Default is 75px, set to 0 for demo so any distance triggers swipe
-            threshold:0
-          });
-
-          // Turn to grayscale after page load
-          setTimeout(turnToGrayscale, 2500);
-          // Turn on grayscale onFocus on input field 
-          $( "#main_search_box" ).focus(function() {
-            $('.bg-image>img').removeClass('disabled');
-            $('.bg-image>img').addClass('grayscale');
-          });
-          // Turn off grayscale onFocus on input field 
-          $( "#main_search_box" ).blur(function() {
-            $('.bg-image>img').addClass('disabled');
-          });
-
-          // Side menu button toggle
-          $("#menu-toggle").click(function(e) {
-              e.preventDefault();
-              //if open then close
-              if ($("#menu-toggle").hasClass('active')) {
-                  $("#page-content-wrapper").animate({
-                    right: "0",
-                  }, 400,"swing", function() {
-                    // Animation complete.
-                    $("#menu-toggle").toggleClass("active");
-                  });
-                $(".navbar").animate({right: "0",left:"0"}, 400,"swing");
-                $("#sidebar-wrapper").animate({right: "-250"}, 400,"swing");
-              }
-              // else open
-              else{
-                $("#page-content-wrapper").animate({
-                  right: "250",
-                }, 400,"swing", function() {
-                  // Animation complete.
-                  $("#menu-toggle").toggleClass("active");
-                });
-                $(".navbar").animate({right: "250" ,left:"-250"}, 400,"swing");
-                $("#sidebar-wrapper").animate({right: "0"}, 400,"swing");
-              }
-          });
-
-          // feature hover
-          $('.feature').hover(
-          // rollover
-          function(){
-            $(this).find('.feature-icon').addClass('active');
-            $(this).find('h3').addClass('active');
-            $(this).find('p').addClass('active');
-          },
-          // rollout
-          function(){
-            $(this).find('.feature-icon').removeClass('active');
-            $(this).find('h3').removeClass('active');
-            $(this).find('p').removeClass('active');
-          });
-
-          // toggle Drop Screen
-          $('.bottom-bar-handle').click(function() {
-            $('.drop-screen').toggleClass('active');
-            $('.team-default').toggleClass('active');
-            $('.team-active').toggleClass('active');
-          });
-
-          // Scroll Snaping
-          function navBarToggle(dir){
-            if( dir =='down'){
-              $(".navbar .center-logo").animate({top: "80",}, 400,"swing");
-              $(".navbar .facebook-input-holder").animate({ top: "16"}, 400,"swing");
-              $(".navbar .navbar-brand img").animate({marginTop: "14"}, 400,"swing");
-            }
-            else if(dir =='up'){
-              $(".navbar .center-logo").animate({top: "9"}, 400,"swing");
-              $(".navbar .facebook-input-holder").animate({top: "-50"}, 400,"swing");
-              $(".navbar .navbar-brand img").animate({marginTop: "-65"}, 400,"swing");
-            }
-          }
-          // if scrolled to top change header
-          $(window).on('scroll', function() {
-            var scrollTop = $(this).scrollTop();
-            var toggleFlag = $('.navbar').hasClass('active');
-            //console.log(scrollTop);
-            //console.log(toggleFlag);
-            if ( (scrollTop <= 290) && (toggleFlag) ) {
-              $('.navbar').removeClass('active');
-              //$('#menu-toggle').fadeIn('fast');
-              $('#menu-toggle').removeClass('hidden-xs');
-              navBarToggle('up');
-            }
-            else if((scrollTop > 290) && (!toggleFlag)){
-              $('.navbar').addClass('active');
-              $('#menu-toggle').addClass('hidden-xs');
-              /*$('#menu-toggle').fadeOut('fast',function(){
-              });*/
-              navBarToggle('down');
-            }
-          });
-
-          // Sidebar Menu onClick
-          $('#sidebar-wrapper > .sidebar-nav > li > a.sidebar-link').click(function() {
-              var target = 'section.'+$(this).attr('data-target');
-              if (target.length) {
-                $('html,body').animate({
-                  scrollTop: ($(target).offset().top)-70
-                }, 1000);
-                return false;
-              }
-          });
-          // init scrollsnap
-          /*$(document).scrollsnap({
-              snaps: 'div.row.visible-xs',
-              proximity: 100,
-              onSnapWait: 500,
-              offset:-70,
-              onSnap: function(obj){
-                console.log(obj.context.className);
-                if(obj.context.className != 'home'){
-                  //console.log('onSnap: Down');
-                  //navBarToggle('down');
-                }
-                else{
-                  //console.log('onSnap: Up');
-                  //navBarToggle('up');
-                }
-              }
-          });*/
-      });
-    </script>
+    <!-- Custom JS -->
+    <script type="text/javascript" src="js/main.js"></script>
+   <!--  <link href="http://d2zxr4ixkv1lwq.cloudfront.net/lp/css/style_new.css" rel="stylesheet" type="text/css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+    <link href="http://d2zxr4ixkv1lwq.cloudfront.net/lp/css/tipsy.css" rel="stylesheet" type="text/css" /> -->
+    <!-- END Google Analytics -->
+  <!--   <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.0.4/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script src="http://d2zxr4ixkv1lwq.cloudfront.net/lp/js/search_filterv1.0.1.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://d2zxr4ixkv1lwq.cloudfront.net/lp/js/jquery.jsonp-2.4.0.min.js" defer></script>
+    <script type="text/javascript" src="http://d2zxr4ixkv1lwq.cloudfront.net/lp/js/jquery.tipsy.js" defer></script>
+    <script type="text/javascript" src="http://d2zxr4ixkv1lwq.cloudfront.net/lp/js/otonomicv1.0.1.js" defer></script> -->
   </body>
 </html>
