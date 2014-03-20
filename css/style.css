@@ -189,7 +189,7 @@ body{padding-top: 70px;}
 	max-width: 410px;
 	margin: 0 auto;
 	color: white;
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 29px;
 	margin-bottom: 34px;
 }
@@ -604,6 +604,19 @@ body{padding-top: 70px;}
 
 /* Mobile Specific
 ------------------------------------------------------------------ */
+.carousel-indicators {
+	position: static;
+	bottom: initial;
+	left: initial;
+}
+.carousel-indicators li ,
+.carousel-indicators li.active{
+	margin: 0;
+	height: auto;
+	border: 0;
+	border-radius: 0;
+}
+
 /* Features */
 .features-mobile{
 	background-color: #ffc430;
@@ -622,6 +635,7 @@ body{padding-top: 70px;}
 	margin: 0;
 	padding: 0;
 	border-top: 1px solid #fff;
+	text-align: left;
 }
 .features-mobile .carousel-tabs li{
 	width: 20%;
@@ -635,8 +649,6 @@ body{padding-top: 70px;}
 	border-right:0;
 }
 .features-mobile .carousel-tabs li.active{
-	width: 20%;
-	display: inline-block;
 	background-color: white;
 }
 .features-mobile .carousel-inner{
@@ -647,8 +659,8 @@ body{padding-top: 70px;}
 	height: 400px;
 }
 .features-mobile .carousel-inner .item img{
-
 	margin: 0 auto;
+	width: 50%;
 }
 .features-mobile .carousel-inner .carousel-caption{
 	position: relative;
@@ -664,6 +676,53 @@ body{padding-top: 70px;}
 	color: #736c6c;
 	font-size: 17px;
 }
+
+.features-mobile li .carousel-features-ico-1{
+	 padding:50%;
+	 background: center center url('../images/mobile-features-icon-1.png') no-repeat;
+	 background-size: 100% 100%;
+}
+.features-mobile li.active .carousel-features-ico-1{
+	 background:center center url('../images/mobile-features-icon-1-active.png') no-repeat;
+	 background-size: 100% 100%;
+}
+.features-mobile li .carousel-features-ico-2{
+	 padding:50%;
+	 background: center center url('../images/mobile-features-icon-2.png') no-repeat;
+	 background-size: 100% 100%;
+}
+.features-mobile li.active .carousel-features-ico-2{
+	 background:center center url('../images/mobile-features-icon-2-active.png') no-repeat;
+	 background-size: 100% 100%;
+}
+.features-mobile li .carousel-features-ico-3{
+	 padding:50%;
+	 background: center center url('../images/mobile-features-icon-3.png') no-repeat;
+	 background-size: 100% 100%;
+}
+.features-mobile li.active .carousel-features-ico-3{
+	 background:center center url('../images/mobile-features-icon-3-active.png') no-repeat;
+	 background-size: 100% 100%;
+}
+.features-mobile li .carousel-features-ico-4{
+	 padding:50%;
+	 background: center center url('../images/mobile-features-icon-4.png') no-repeat;
+	 background-size: 100% 100%;
+}
+.features-mobile li.active .carousel-features-ico-4{
+	 background:center center url('../images/mobile-features-icon-4-active.png') no-repeat;
+	 background-size: 100% 100%;
+}
+.features-mobile li .carousel-features-ico-5{
+	 padding:50%;
+	 background: center center url('../images/mobile-features-icon-5.png') no-repeat;
+	 background-size: 100% 100%;
+}
+.features-mobile li.active .carousel-features-ico-5{
+	 background:center center url('../images/mobile-features-icon-5-active.png') no-repeat;
+	 background-size: 100% 100%;
+}
+
 /* Gray scale class
 -------------------------------------------------------------------*/
 img.grayscale {
@@ -719,7 +778,7 @@ img.grayscale.disabled {
   .section-home h1,
   .section-social h1,
   .section-reviews h1{
-  	font-size: 25px;
+  	font-size: 24px;
 
   }
   .section-social .social-links,
@@ -745,7 +804,7 @@ img.grayscale.disabled {
 		width: 100%;
 	}
 	.section-home .form-inline .form-group-mobile .btn.btn-ttc{
-		width: 50%;
+		width: 55%;
 		margin-left: 0;
 		margin-top: 15px;
 	}
