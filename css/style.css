@@ -633,6 +633,7 @@ body{padding-top: 70px;}
 	height: auto;
 	list-style: none;
 	margin: 0;
+	margin-bottom: -1px;
 	padding: 0;
 	border-top: 1px solid #fff;
 	text-align: left;
