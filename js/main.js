@@ -138,6 +138,14 @@
                 return false;
               }
           });
+
+          // Mobile placeholder show/hide
+          $('#main_search_box2.form-control').focusin(function(){
+            $(this).removeClass('mobile-header-placeholder');
+          });
+          $('#main_search_box2.form-control').focusout(function(){
+            $(this).addClass('mobile-header-placeholder');
+          });
           // init scrollsnap
           /*$(document).scrollsnap({
               snaps: 'div.row.visible-xs',

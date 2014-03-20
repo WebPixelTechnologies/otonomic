@@ -26,6 +26,7 @@ body{padding-top: 70px;}
   text-shadow: none;
   background-color: #f54500;
   border-radius: 0;
+  font-weight: 400;
 }
 
 /* Apply the custom-colored gradients */
@@ -190,6 +191,7 @@ body{padding-top: 70px;}
 	margin: 0 auto;
 	color: white;
 	font-size: 23px;
+	font-weight: 300;
 	line-height: 29px;
 	margin-bottom: 34px;
 }
@@ -952,16 +954,18 @@ img.grayscale.disabled {
 		width: 100%;
 		position: absolute;
 		top: -50px;
-		right: initial;
-		margin-right: auto;
+		right: 0;
+		left: 0;
+		text-align: center;
 	}
 	.navbar .facebook-input-holder .btn-ttc {
 		width: 100%;
 		height: 50px;
 		margin-top: -5px;
-		margin-left: 5px;
+		margin-left: 0;
 		padding: 4px;
 		font-size: 16px;
+		float: right;
 	}
 	.navbar .facebook-input-holder #main_search_box2.form-control {
 		width: 100%;
@@ -969,10 +973,26 @@ img.grayscale.disabled {
 		margin-top: -5px;
 		font-size: 16px;
 	}
+	.mobile-header-placeholder{
+		background-size: 95% 95%;
+		background: #fff center center url('../images/mobile-header-ph.png') no-repeat;
+	}
+	.form-inline .form-group.header-search-input input::-webkit-input-placeholder {		
+		color: transparent;
+	}
+	.form-inline .form-group.header-search-input input::-moz-placeholder { 
+		color: transparent;
+	}
 	.form-inline .form-group {
 		display: inline-block;
 		margin-bottom: 0;
 		vertical-align: middle;
+	}
+	.form-inline .form-group.header-search-input {
+		width: 55%;
+	}
+		.form-inline .form-group.header-search-button {
+		width: 35%;
 	}
 	.navbar .center-logo .logo-img {
 		margin-top: 4px;
