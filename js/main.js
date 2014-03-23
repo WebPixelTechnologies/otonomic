@@ -9,11 +9,12 @@
             swipeRight: function() {
               $(this).parent().carousel('prev');
             },
-            //Default is 75px, set to 0 for demo so any distance triggers swipe
+            //distance triggers swipe
             threshold:50
           });
           //Enable swiping for menu
-          $("#sidebar-wrapper").swipe( {
+          $("#sidebar-wrapper, .home , a.sidebar-link").swipe( {
+            excludedElements:"button, input, select, textarea, .noSwipe",
             //Generic swipe handler for all directions
             swipeLeft:function(event, direction, distance, duration, fingerCount) {
               openCloseMenu();
@@ -21,7 +22,7 @@
             swipeRight: function() {
               openCloseMenu();
             },
-            //Default is 75px, set to 0 for demo so any distance triggers swipe
+            // distance triggers swipe
             threshold:50
           });
 
@@ -138,8 +139,20 @@
                 return false;
               }
           });
-
+          // Header logo onClick
+          $('.navbar-brand').click(function() {
+                $('html,body').delay(300).animate({
+                  scrollTop: 0
+                }, 700);
+                return false;
+          });
           // Mobile placeholder show/hide
+          $('#main_search_box.form-control').focusin(function(){
+            $(this).removeClass('mobile-placeholder2');
+          });
+          $('#main_search_box.form-control').focusout(function(){
+            $(this).addClass('mobile-placeholder2');
+          });
           $('#main_search_box2.form-control').focusin(function(){
             $(this).removeClass('mobile-header-placeholder');
           });
