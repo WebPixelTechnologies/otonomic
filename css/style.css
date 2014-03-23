@@ -12,7 +12,10 @@ h1,h2,h3,h4,h5 {
 }
 
 /* Defaults*/
-body{padding-top: 70px;}
+body{
+	padding-top: 70px;
+	background-color: #222;
+}
 
 /* Custom button
 -------------------------------------------------- */
@@ -118,6 +121,7 @@ body{padding-top: 70px;}
   width: 250px;
   border-left: 2px solid #000;
   background: #3b3b3b;
+  opacity: 0;
   position: fixed;
   height: 100%;
   overflow-y: auto;
@@ -223,6 +227,9 @@ body{padding-top: 70px;}
 	left: -1250px;
 }
 /* ## Features ## */
+section.features .row{
+	background-color: #f2f0f1;
+}
 .section-features{
 	margin: 0 auto;
 }
@@ -612,6 +619,12 @@ body{padding-top: 70px;}
 
 /* Mobile Specific
 ------------------------------------------------------------------ */
+.carousel-inner > .item {
+    -webkit-transition: 0.2s ease-in-out left;
+    -moz-transition: 0.2s ease-in-out left;
+    -o-transition: 0.2s ease-in-out left;
+    transition: 0.2s ease-in-out left;
+}
 .carousel-indicators {
 	position: static;
 	bottom: initial;
@@ -628,7 +641,7 @@ body{padding-top: 70px;}
 	padding-bottom: 15px;
 }
 /* Features */
-.features-mobile{
+section.features .features-mobile{
 	background-color: #ffc430;
 }
 .features-mobile h1{
@@ -871,11 +884,12 @@ body{padding-top: 70px;}
 }
 .about-mobile .carousel-inner .item{
 	padding-top: 20px;
-	min-height: 400px;
+	min-height: 496px;
 }
 .about-mobile .carousel-inner .item img{
-	margin: 0 auto;
-	width: 60%;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
 }
 .about-mobile .carousel-inner .carousel-caption{
 	position: relative;

@@ -46,25 +46,31 @@
           function openCloseMenu(){
             //if open then close
               if ($("#menu-toggle").hasClass('active')) {
-                  $("#page-content-wrapper").animate({
+                 /* $("#page-content-wrapper").animate({
                     right: "0",
                   }, 300,"swing", function() {
                     // Animation complete.
                     $("#menu-toggle").toggleClass("active");
-                  });
+                  });*/
                 $(".navbar").animate({right: "0",left:"0"}, 300,"swing");
-                $("#sidebar-wrapper").animate({right: "-250"}, 300,"swing");
+                $("#sidebar-wrapper").animate({right: "-250", opacity:"0"}, 300,"swing", function() {
+                    // Animation complete.
+                    $("#menu-toggle").toggleClass("active");
+                  });
               }
               // else open
               else{
-                $("#page-content-wrapper").animate({
+                /*$("#page-content-wrapper").animate({
                   right: "250",
                 }, 300,"swing", function() {
                   // Animation complete.
                   $("#menu-toggle").toggleClass("active");
-                });
+                });*/
                 $(".navbar").animate({right: "250" ,left:"-250"}, 300,"swing");
-                $("#sidebar-wrapper").animate({right: "0"}, 300,"swing");
+                $("#sidebar-wrapper").animate({right: "0",opacity:"1"}, 300,"swing", function() {
+                    // Animation complete.
+                    $("#menu-toggle").toggleClass("active");
+                  });
               }
           }
           $("#menu-toggle").click(function(e) {
@@ -148,17 +154,23 @@
           });
           // Mobile placeholder show/hide
           $('#main_search_box.form-control').focusin(function(){
-            $(this).removeClass('mobile-placeholder2');
+              $(this).removeClass('mobile-placeholder2');
           });
           $('#main_search_box.form-control').focusout(function(){
-            $(this).addClass('mobile-placeholder2');
+            if (!$(this).val()) {
+                $(this).addClass('mobile-placeholder2');
+            };
           });
           $('#main_search_box2.form-control').focusin(function(){
             $(this).removeClass('mobile-header-placeholder');
           });
           $('#main_search_box2.form-control').focusout(function(){
-            $(this).addClass('mobile-header-placeholder');
+            if (!$(this).val()) {
+              $(this).addClass('mobile-header-placeholder');
+            }
           });
+
+          
           // init scrollsnap
           /*$(document).scrollsnap({
               snaps: 'div.row.visible-xs',
