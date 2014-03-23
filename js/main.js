@@ -46,12 +46,6 @@
           function openCloseMenu(){
             //if open then close
               if ($("#menu-toggle").hasClass('active')) {
-                 /* $("#page-content-wrapper").animate({
-                    right: "0",
-                  }, 300,"swing", function() {
-                    // Animation complete.
-                    $("#menu-toggle").toggleClass("active");
-                  });*/
                 $(".navbar").animate({right: "0",left:"0"}, 300,"swing");
                 $("#sidebar-wrapper").animate({right: "-250", opacity:"0"}, 300,"swing", function() {
                     // Animation complete.
@@ -60,12 +54,6 @@
               }
               // else open
               else{
-                /*$("#page-content-wrapper").animate({
-                  right: "250",
-                }, 300,"swing", function() {
-                  // Animation complete.
-                  $("#menu-toggle").toggleClass("active");
-                });*/
                 $(".navbar").animate({right: "250" ,left:"-250"}, 300,"swing");
                 $("#sidebar-wrapper").animate({right: "0",opacity:"1"}, 300,"swing", function() {
                     // Animation complete.
