@@ -130,12 +130,17 @@
 }
 .p2s_fanpages .close-search{
     display: none;
+    color: #666161;
+    font-size: 20px;
+}
+.p2s_fanpages .close-search:hover{
+    color: #f54500;
 }
 .p2s_fanpages span.icon_clear{
     position: absolute;
     right: 0;
     padding-right: 13px;
-    padding: 14px;
+    padding:11px 10px 10px 9px;
     top: -48px;
     border-right: 2px solid #666161;
 }
