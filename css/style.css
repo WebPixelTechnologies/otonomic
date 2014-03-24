@@ -50,7 +50,7 @@ body{
 	border-radius: 0;
 	border-width: 0;
     min-height: 70px;
-    overflow: hidden;
+   /* overflow: hidden;*/
 }
 .navbar-toggle {
 	border: 0px solid transparent;
@@ -81,6 +81,16 @@ body{
 .navbar-header {
 	float: none;
 	display: block;
+}
+.navbar .center-logo-holder{
+	position: absolute;
+	overflow: hidden;
+	height: 70px;
+	top: 0;
+	margin: 0 auto;
+	width: 175px;
+	left: 50%;
+	margin-left: -87px;
 }
 .navbar .center-logo{
 	width: 148px;

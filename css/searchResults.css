@@ -1,16 +1,12 @@
 .p2s_fanpages .main-search-box{
 
 }
-.p2s_fanpages #search_wrapper_main{
-    position: absolute;
-}
 .p2s_fanpages .search-wrapper{
     position: absolute;
     margin-top:0px;
-    margin-left: 10px;
+    margin-left: 0px;
 }
-
-.p2s_fanpages .search_results {
+.p2s_fanpages  .search_results {
     overflow: auto;
     max-height: 330px;
     /*overflow-y: scroll;*/
@@ -25,7 +21,22 @@
     position:relative;
     z-index: 999;
 }
-
+.p2s_fanpages .search-wrapper-floater .search_results {
+    overflow: auto;
+    max-height: 330px;
+    /*overflow-y: scroll;*/
+    width: 352px;
+    margin: 0;
+    border: 2px solid #222;
+    border-top: 0;
+    padding: 0;
+    background-color:white;
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
+    z-index: 999;
+    margin-left: -2px;
+}
 @media only screen and (max-width: 769px) {
     .p2s_fanpages .search-wrapper {
         position: absolute;
@@ -137,6 +148,7 @@
 .p2s_fanpages .close-search:hover{
     color: #f54500;
 }
+
 .p2s_fanpages span.icon_clear{
     position: absolute;
     right: 0;
@@ -145,4 +157,9 @@
     top: -48px;
     border-right: 2px solid #666161;
 }
-.p2s_fanpages .search-wrapper {margin-left: 0px;}
+.p2s_fanpages span.icon_clear.close-search-floater{
+    padding-right: 13px;
+    padding: 7px 10px 3px 10px;
+    top: -38px;
+    border-right: 2px solid #222;
+}

@@ -16,21 +16,6 @@ var already_searched = false;
         $(this).focus();
     });
 
-
-    $(document).on('click','.close-search',function(e){
-            found_result = 0;
-            trackFBConnect('Search LP', 'Close');
-
-            //var wrapper = $(this).parents().eq(2);
-            var wrapper = $("#search_wrapper_main");
-            wrapper.html($('<div/>', {}));
-            //wrapper.prev().attr('value', '');
-            $(".main_search_box").val('');
-            jQuery('#btn_go').tipsy("hide");
-            $(".close-search").hide();
-            closeHowDoISteps();
-    });
-
     if (!Modernizr.input.placeholder) {
         $('[placeholder]').focus(function () {
             var input = $(this);
@@ -139,115 +124,6 @@ var already_searched = false;
 }(window.jQuery, window, document));
 
 $(document).ready(function($){
-    var timeoutEmptySearchBox;
-
-    $(".main_search_box").click(function () {
-        var value = $(this).val();
-        if(value.length == 0) {
-            timeoutEmptySearchBox = setTimeout(function() {
-                show_empty_message();
-            }, 1000);
-        }
-    });
-
-    $(".main_search_box").keyup(function () {
-        clearTimeout(timeoutEmptySearchBox);
-
-        var that = this;
-        var value = $(this).val();
-        //var wrapper = $(this).next();
-        var wrapper = $("#search_wrapper_main");
-        var url = 'https://graph.facebook.com/search';
-
-        jQuery('#btn_go').tipsy("hide");
-
-        //?q={text_box_value, escaped}&type=page&fields=id,name,category,cover,likes
-        if (value.length == 0) {
-            $(".close-search").hide();
-            wrapper.html($('<div/>', {}));
-        } else {
-            $(".close-search").show();
-        }
-
-        if (value.length < minlength) {
-            return;
-        }
-
-        total_req_no += 1;
-        var this_req_no = total_req_no;
-        setTimeout(function () {
-            if (this_req_no < total_req_no) {
-                return;
-            }
-            p2strack++;
-            trackFBConnect("Search LP", "Query", value, p2strack);
-        }, 2000);
-
-        if (!already_searched) {
-        }
-
-        already_searched = true;
-
-        if (value.indexOf("facebook.com") > -1) {
-            // User inserted full address - don't perform search
-            return;
-        }
-
-        /* show_searching_message(); */
-        $.jsonp({
-            url: 'https://graph.facebook.com/search',
-            context: document.body,
-            callbackParameter: "callback",
-            data: {'q': value, type: 'page', fields: 'id,name,category,cover,likes', limit: 9, access_token: '389314351133865|O4FgcprDMY0k6rxRUO-KOkWuVoU'},
-            success: function (json, textStatus, xOptions) {
-                found_only_result_url = '';
-                found_result = json.data.length;
-                if (this_req_no < total_req_no) return;
-
-                var ind = 1;
-                var items = [];
-                //items.push('<div style="position: absolute; right: 10px; top: 10px;width:24px;height:19px;cursor:pointer;"><img class="close-search" src="misc/images/home/close.png" width="24" height="19"/></div>');
-                jQuery.each(json.data, function (key, val) {
-                    if (found_result == 1) {
-                        found_only_result_url = p2s_site_url + 'sites/add/fbid:' + val.id;
-                    }
-
-                    if(SEARCH_PICTURE_SIZE == undefined || SEARCH_PICTURE_SIZE == 'square'){
-                        var simage = 'http://graph.facebook.com/' + val.id + '/picture?type=square'
-                    } else {
-                        var simage = 'http://graph.facebook.com/' + val.id + '/picture?height=' + SEARCH_PICTURE_SIZE +'&width=' + SEARCH_PICTURE_SIZE;
-                    }
-
-                    items.push('<a class="media search-results-item" href="' + p2s_site_url + '/sites/add/fbid:' + val.id + '" title="Click to view site" data-result-number="' + ind + '" >' +
-                        '<div >' +
-                        '<div class="pull-left fanpage">' +
-                        '<img class="media-object" src="'+ simage +'">' +
-                        '</div>' +
-                        '<div class="media-body pull-left">' +
-                        '<p class="media-heading">' +
-                        val.name +
-                        '</p>' +
-                        '<p class="media-address">' +
-                        val.category +
-                        '</p>' +
-                        '<p class="media-address" style="color:black;">' + val.likes + ' likes</p>' +
-                        '</div>' +
-                        '<div class="clearfix"></div>' +
-                        '</div>' +
-                        '</a>'
-                    );
-                    ind++;
-                });
-
-                if (found_result > 0) {
-                    wrapper.html($('<div/>', {'class': 'search_results', html: items.join('')}));
-                } else {
-                    show_page_not_found_message();
-                    //wrapper.html('');
-                }
-            }
-        });
-    });
 
     $(document).on('click','#how_do_i',function(e){
         e.preventDefault();
@@ -260,7 +136,128 @@ $(document).ready(function($){
         }
         return false;
     });
+
 });
+
+var timeoutEmptySearchBox;
+function searchBoxClick(InputField) {
+    console.log('searchBoxClick('+InputField+')');
+    var value = $(InputField).val();
+    if(value.length == 0) {
+        timeoutEmptySearchBox = setTimeout(function() {
+            show_empty_message();
+        }, 1000);
+    }
+}
+
+function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
+    clearTimeout(timeoutEmptySearchBox);
+
+    var that = $(InputField);
+    var value = $(InputField).val();
+
+    var wrapper = $(targetContainer);
+    var url = 'https://graph.facebook.com/search';
+
+    jQuery('#btn_go').tipsy("hide");
+
+    //?q={text_box_value, escaped}&type=page&fields=id,name,category,cover,likes
+    if (value.length == 0) {
+        $(targetCloseBtn).hide();
+        wrapper.html($('<div/>', {}));
+    } else {
+        $(targetCloseBtn).show();
+    }
+
+    if (value.length < minlength) {
+        return;
+    }
+
+    total_req_no += 1;
+    var this_req_no = total_req_no;
+    setTimeout(function () {
+        if (this_req_no < total_req_no) {
+            return;
+        }
+        p2strack++;
+        trackFBConnect("Search LP", "Query", value, p2strack);
+    }, 2000);
+
+    if (!already_searched) {
+    }
+
+    already_searched = true;
+
+    if (value.indexOf("facebook.com") > -1) {
+        // User inserted full address - don't perform search
+        return;
+    }
+
+    /* show_searching_message(); */
+    $.jsonp({
+        url: 'https://graph.facebook.com/search',
+        context: document.body,
+        callbackParameter: "callback",
+        data: {'q': value, type: 'page', fields: 'id,name,category,cover,likes', limit: 9, access_token: '389314351133865|O4FgcprDMY0k6rxRUO-KOkWuVoU'},
+        success: function (json, textStatus, xOptions) {
+            found_only_result_url = '';
+            found_result = json.data.length;
+            if (this_req_no < total_req_no) return;
+
+            var ind = 1;
+            var items = [];
+            jQuery.each(json.data, function (key, val) {
+                if (found_result == 1) {
+                    found_only_result_url = p2s_site_url + 'sites/add/fbid:' + val.id;
+                }
+
+                if(SEARCH_PICTURE_SIZE == undefined || SEARCH_PICTURE_SIZE == 'square'){
+                    var simage = 'http://graph.facebook.com/' + val.id + '/picture?type=square'
+                } else {
+                    var simage = 'http://graph.facebook.com/' + val.id + '/picture?height=' + SEARCH_PICTURE_SIZE +'&width=' + SEARCH_PICTURE_SIZE;
+                }
+
+                items.push('<a class="media search-results-item" href="' + p2s_site_url + '/sites/add/fbid:' + val.id + '" title="Click to view site" data-result-number="' + ind + '" >' +
+                    '<div >' +
+                    '<div class="pull-left fanpage">' +
+                    '<img class="media-object" src="'+ simage +'">' +
+                    '</div>' +
+                    '<div class="media-body pull-left">' +
+                    '<p class="media-heading">' +
+                    val.name +
+                    '</p>' +
+                    '<p class="media-address">' +
+                    val.category +
+                    '</p>' +
+                    '<p class="media-address" style="color:black;">' + val.likes + ' likes</p>' +
+                    '</div>' +
+                    '<div class="clearfix"></div>' +
+                    '</div>' +
+                    '</a>'
+                );
+                ind++;
+            });
+
+            if (found_result > 0) {
+                wrapper.html($('<div/>', {'class': 'search_results', html: items.join('')}));
+            } else {
+                show_page_not_found_message();
+            }
+        }
+    });
+}
+function closeSearch(targetContainer){
+        found_result = 0;
+        trackFBConnect('Search LP', 'Close');
+
+        var wrapper = $(targetContainer);
+        wrapper.html($('<div/>', {}));
+        //wrapper.prev().attr('value', '');
+        $(".main_search_box").val('');
+        jQuery('#btn_go').tipsy("hide");
+        $(".close-search").hide();
+        closeHowDoISteps();
+}
 
 function show_searching_message(){
     var $sbox = $(".search_progress").clone();
