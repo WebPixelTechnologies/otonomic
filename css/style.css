@@ -703,48 +703,48 @@ section.features .features-mobile{
 
 .features-mobile li .carousel-features-ico-1{
 	 padding:50%;
-	 background: center center url('../images/mobile-features-icon-1.png') no-repeat;
-	 background-size: 100% 100%;
+	 background: 0px 0px url('../images/mobile-features-icon-1.png') no-repeat;
+	 background-size: 100% auto;
 }
 .features-mobile li.active .carousel-features-ico-1{
-	 background:center center url('../images/mobile-features-icon-1-active.png') no-repeat;
-	 background-size: 100% 100%;
+	 background: 0% 100% url('../images/mobile-features-icon-1.png') no-repeat;
+	 background-size: 100% auto;
 }
 .features-mobile li .carousel-features-ico-2{
 	 padding:50%;
-	 background: center center url('../images/mobile-features-icon-2.png') no-repeat;
-	 background-size: 100% 100%;
+	 background: 0px 0px url('../images/mobile-features-icon-2.png') no-repeat;
+	 background-size: 100% auto;
 }
 .features-mobile li.active .carousel-features-ico-2{
-	 background:center center url('../images/mobile-features-icon-2-active.png') no-repeat;
-	 background-size: 100% 100%;
+	 background: 0% 100% url('../images/mobile-features-icon-2.png') no-repeat;
+	 background-size: 100% auto;
 }
 .features-mobile li .carousel-features-ico-3{
 	 padding:50%;
-	 background: center center url('../images/mobile-features-icon-3.png') no-repeat;
-	 background-size: 100% 100%;
+	 background: 0px 0px url('../images/mobile-features-icon-3.png') no-repeat;
+	 background-size: 100% auto;
 }
 .features-mobile li.active .carousel-features-ico-3{
-	 background:center center url('../images/mobile-features-icon-3-active.png') no-repeat;
-	 background-size: 100% 100%;
+	 background: 0% 100% url('../images/mobile-features-icon-3.png') no-repeat;
+	 background-size: 100% auto;
 }
 .features-mobile li .carousel-features-ico-4{
 	 padding:50%;
-	 background: center center url('../images/mobile-features-icon-4.png') no-repeat;
-	 background-size: 100% 100%;
+	 background: 0px 0px url('../images/mobile-features-icon-4.png') no-repeat;
+	 background-size: 100% auto;
 }
 .features-mobile li.active .carousel-features-ico-4{
-	 background:center center url('../images/mobile-features-icon-4-active.png') no-repeat;
-	 background-size: 100% 100%;
+	 background: 0% 100% url('../images/mobile-features-icon-4.png') no-repeat;
+	 background-size: 100% auto;
 }
 .features-mobile li .carousel-features-ico-5{
 	 padding:50%;
-	 background: center center url('../images/mobile-features-icon-5.png') no-repeat;
-	 background-size: 100% 100%;
+	 background: 0px 0px url('../images/mobile-features-icon-5.png') no-repeat;
+	 background-size: 100% auto;
 }
 .features-mobile li.active .carousel-features-ico-5{
-	 background:center center url('../images/mobile-features-icon-5-active.png') no-repeat;
-	 background-size: 100% 100%;
+	 background: 0% 100% url('../images/mobile-features-icon-5.png') no-repeat;
+	 background-size: 100% auto;
 }
 
 /* reviews */
@@ -810,39 +810,39 @@ section.features .features-mobile{
 
 .reviews-mobile li .carousel-reviews-ico-1{
 	 padding:50%;
-	 background: center center url('../images/mobile-reviews-icon-1.png') no-repeat;
-	 background-size: 100% 100%;
+	 background: 0px 0px url('../images/mobile-reviews-icon-1.png') no-repeat;
+	 background-size: 100% auto;
 }
 .reviews-mobile li.active .carousel-reviews-ico-1{
-	 background:center center url('../images/mobile-reviews-icon-1-active.png') no-repeat;
-	 background-size: 100% 100%;
+	 background:  0% 100% url('../images/mobile-reviews-icon-1.png') no-repeat;
+	 background-size: 100% auto;
 }
 .reviews-mobile li .carousel-reviews-ico-2{
 	 padding:50%;
-	 background: center center url('../images/mobile-reviews-icon-2.png') no-repeat;
-	 background-size: 100% 100%;
+	 background: 0px 0px url('../images/mobile-reviews-icon-2.png') no-repeat;
+	 background-size: 100% auto;
 }
 .reviews-mobile li.active .carousel-reviews-ico-2{
-	 background:center center url('../images/mobile-reviews-icon-2-active.png') no-repeat;
-	 background-size: 100% 100%;
+	 background: 0% 100% url('../images/mobile-reviews-icon-2.png') no-repeat;
+	 background-size: 100% auto;
 }
 .reviews-mobile li .carousel-reviews-ico-3{
 	 padding:50%;
-	 background: center center url('../images/mobile-reviews-icon-3.png') no-repeat;
-	 background-size: 100% 100%;
+	 background: 0px 0px url('../images/mobile-reviews-icon-3.png') no-repeat;
+	 background-size: 100% auto;
 }
 .reviews-mobile li.active .carousel-reviews-ico-3{
-	 background:center center url('../images/mobile-reviews-icon-3-active.png') no-repeat;
-	 background-size: 100% 100%;
+	 background: 0% 100% url('../images/mobile-reviews-icon-3.png') no-repeat;
+	 background-size: 100% auto;
 }
 .reviews-mobile li .carousel-reviews-ico-4{
 	 padding:50%;
-	 background: center center url('../images/mobile-reviews-icon-4.png') no-repeat;
-	 background-size: 100% 100%;
+	 background: 0px 0px url('../images/mobile-reviews-icon-4.png') no-repeat;
+	 background-size: 100% auto;
 }
 .reviews-mobile li.active .carousel-reviews-ico-4{
-	 background:center center url('../images/mobile-reviews-icon-4-active.png') no-repeat;
-	 background-size: 100% 100%;
+	 background: 0% 100% url('../images/mobile-reviews-icon-4.png') no-repeat;
+	 background-size: 100% auto;
 }
 /* about */
 .about-mobile{
@@ -908,20 +908,21 @@ section.features .features-mobile{
 
 .about-mobile li .carousel-about-ico-1{
 	 padding:20%;
-	 background: center center url('../images/mobile-about-icon-1.png') no-repeat;
+	 background: 50px -10px url('../images/mobile-about-icon-1.png') no-repeat;
 	 background-size: 50% auto;
 }
 .about-mobile li.active .carousel-about-ico-1{
-	 background:center center url('../images/mobile-about-icon-1-active.png') no-repeat;
+	 background:50px -100px url('../images/mobile-about-icon-1.png') no-repeat;
 	 background-size: 50% auto;
+
 }
 .about-mobile li .carousel-about-ico-2{
 	 padding:20%;
-	 background: center center url('../images/mobile-about-icon-2.png') no-repeat;
+	 background: 50px -10px url('../images/mobile-about-icon-2.png') no-repeat;
 	 background-size: 50% auto;
 }
 .about-mobile li.active .carousel-about-ico-2{
-	 background:center center url('../images/mobile-about-icon-2-active.png') no-repeat;
+	 background:50px -100px url('../images/mobile-about-icon-2.png') no-repeat;
 	 background-size: 50% auto;
 }
 
@@ -952,6 +953,8 @@ section.features .features-mobile{
 .mobile-media-item-holder.bottom:last-child .mobile-media-item {
 	margin-bottom: -1px;
 }
+
+
 /* Gray scale class
 -------------------------------------------------------------------*/
 img.grayscale {
