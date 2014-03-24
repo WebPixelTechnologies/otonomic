@@ -73,8 +73,8 @@
             //return false;
         });
 
-
-        $('#main_search_box').focus();
+        if(AUTO_FOCUS == undefined || AUTO_FOCUS == true)
+            $('#main_search_box').focus();
 
         window.scrollTo(0,0);
     });
