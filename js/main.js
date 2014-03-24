@@ -14,7 +14,7 @@
           });
           //Enable swiping for menu
           $("#sidebar-wrapper, .home , a.sidebar-link").swipe( {
-            excludedElements:"button, input, select, textarea, .noSwipe",
+            excludedElements:"button, input, select, textarea, a, .noSwipe",
             //Generic swipe handler for all directions
             swipeLeft:function(event, direction, distance, duration, fingerCount) {
               openCloseMenu();
