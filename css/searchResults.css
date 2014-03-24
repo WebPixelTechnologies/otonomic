@@ -106,6 +106,7 @@
 
 .p2s_fanpages .media p {
     color: #40393a;
+    max-width: 360px
     /*line-height: 1em;*/
     margin-bottom: 0;
     padding: 0;
