@@ -104,6 +104,7 @@
                   trackEvent('Marketing Website', 'About Click', 'Close', '');
                   p2sTrack('Marketing Website', 'About Click', 'Close', '');
               }
+            $('.drop-screen').toggleClass('active');
             $('.team-default').toggleClass('active');
             $('.team-active').toggleClass('active');
           });

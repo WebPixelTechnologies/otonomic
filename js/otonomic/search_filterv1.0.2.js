@@ -55,7 +55,8 @@ var already_searched = false;
     });
 
 
-    $('.btn_go').click(function () {
+    $('.btn_go').click(function (event) {
+        event.preventDefault();
         var $thisParent = $(this).parent().parent().find('.p2s_fanpages');
         //console.log('btn_go:'+ $thisParent.attr('id'));
         if($.trim($thisParent.find('.main_search_box').val()) == ''){

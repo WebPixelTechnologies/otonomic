@@ -45,6 +45,9 @@ body{
 .btn-ttc:hover {
   background-position: 0 -15px;
 }
+.btn-ttc:focus {
+  color: white;
+}
 /* NavBar */
 .navbar{
 	border-radius: 0;
