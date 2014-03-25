@@ -180,7 +180,7 @@
     }
 
     function makeAjaxTrackCall(data, callback) {
-        var url = WEBROOT + 'code/track_click/';
+        var url = WEBROOT + 'code/sites/track_click/';
         if (typeof site_id != "undefined" && site_id) {
             url += site_id + '/';
         };
