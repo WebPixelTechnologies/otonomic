@@ -572,6 +572,26 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
     <link href="http://d2zxr4ixkv1lwq.cloudfront.net/lp/css/tipsy.css" rel="stylesheet" type="text/css" />
     <!-- END Google Analytics -->
+    <div id="fb-root"></div>
+
+    <script type="text/javascript">
+        window.fbAsyncInit = function() {
+            FB.init({ appId: "334469486646650",status: true,cookie: true,xfbml: true});
+
+            window.fbAsyncInit.fbLoaded.resolve();
+            //checkConnectedWithFacebook();
+        };
+
+        window.fbAsyncInit.fbLoaded = jQuery.Deferred();
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js&appId=334469486646650";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
     <script>
       AUTO_FOCUS = false;
       SEARCH_PICTURE_SIZE = 80;
