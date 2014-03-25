@@ -97,7 +97,13 @@
 
           // toggle Drop Screen
           $('.bottom-bar-handle').click(function() {
-            $('.drop-screen').toggleClass('active');
+            if($('.drop-screen').hasClass('active')){
+                  trackEvent('Marketing Website', 'About Click', 'Open', '');
+                  p2sTrack('Marketing Website', 'About Click', 'Open', '');
+              } else {
+                  trackEvent('Marketing Website', 'About Click', 'Close', '');
+                  p2sTrack('Marketing Website', 'About Click', 'Close', '');
+              }
             $('.team-default').toggleClass('active');
             $('.team-active').toggleClass('active');
           });
@@ -143,7 +149,7 @@
                 $('html,body').delay(300).animate({
                   scrollTop: ($(target).offset().top)-70
                 }, 700);
-                return false;
+                //return false;
               }
           });
           // Header logo onClick

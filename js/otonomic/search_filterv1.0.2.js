@@ -57,7 +57,7 @@ var already_searched = false;
 
     $('.btn_go').click(function () {
         var $thisParent = $(this).parent().parent().find('.p2s_fanpages');
-        console.log('btn_go:'+ $thisParent.attr('id'));
+        //console.log('btn_go:'+ $thisParent.attr('id'));
         if($.trim($thisParent.find('.main_search_box').val()) == ''){
             found_result = 0;   //clear previous results if user delete text from search box
         }
@@ -67,7 +67,6 @@ var already_searched = false;
         }
         $(this).tipsy("hide");
         var $el = $thisParent.find('.main_search_box');
-        console.log($el);
         var $page_url = $el.val();
 
         trackFBConnect("Search LP", "Go", $page_url);
@@ -128,7 +127,7 @@ $(document).ready(function($){
 var timeoutEmptySearchBox;
 
 function searchBoxClick(InputField) {
-    console.log('searchBoxClick('+InputField+')');
+    //console.log('searchBoxClick('+InputField+')');
     var value = $(InputField).val();
     if(value.length == 0) {
         timeoutEmptySearchBox = setTimeout(function() {
