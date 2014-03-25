@@ -50,29 +50,24 @@ var already_searched = false;
     });
 
     $('#preview-form .form-submit, #preview-form2 .form-submit').on('click', function (e) {
-        /*
-         if(!(url = $('#form_name').val())) {
-         e.preventDefault();
-         $('#form_name').focus();
-         return false;
-         };
-         */
-
         $('body').css('cursor', 'progress');
         $(this).html('Loading...&nbsp;').css('cursor', 'progress').parent('form').submit();
     });
 
 
-    $('#btn_go').click(function () {
-        if($.trim($('.main_search_box').val()) == ''){
+    $('.btn_go').click(function () {
+        var $thisParent = $(this).parent().parent().find('.p2s_fanpages');
+        console.log('btn_go:'+ $thisParent.attr('id'));
+        if($.trim($thisParent.find('.main_search_box').val()) == ''){
             found_result = 0;   //clear previous results if user delete text from search box
         }
         if (found_result > 1) {
-            jQuery('#btn_go').tipsy("show");
+            $(this).tipsy("show");
             return false;
         }
-        jQuery('#btn_go').tipsy("hide");
-        var $el = $('.main_search_box');
+        $(this).tipsy("hide");
+        var $el = $thisParent.find('.main_search_box');
+        console.log($el);
         var $page_url = $el.val();
 
         trackFBConnect("Search LP", "Go", $page_url);
@@ -100,27 +95,18 @@ var already_searched = false;
         }
 
         if(AUTO_FOCUS == undefined || AUTO_FOCUS == true)
-            $('.main_search_box').focus();
+            $thisParent.find('.main_search_box').focus();
 
 
         if ($page_url.indexOf("facebook.com") > -1 || $.trim($page_url) == '') {
             //input box is empty
-            //$('#search_wrapper_main').html('<div class="search_results"><div style="position: absolute; right: 10px; top: 10px;width:24px;height:19px;cursor:pointer;"><img class="close-search" src="/shared/fanpages/images/close.png" width="24" height="19"/></div><div id="empty_search_box_go" class="center"><img src="/shared/fanpages/images/up-arrow.png"><div>Please type your facebook fan page name <br><small>or</small> <br>Paste its url in the searchbox</div></div></div>').show();
-            show_empty_message();
+            show_empty_message($thisParent);
         } else {
             //page not found
-            //$('#search_wrapper_main').html('<div class="search_results"><div id="empty_search_box_go" class="center"><img src="/shared/fanpages/images/up-arrow.png"><div>This fan page was not found. <br> Please paste its URL or refine your search</div></div></div>').show();
-            show_page_not_found_message();
+            show_page_not_found_message($thisParent);
         }
     });
 
-    /*$(".main_search_box").click(function () {
-        console.log(found_result);
-        if(found_result == 0){
-            //$('#search_wrapper_main').html('<div class="search_results"><div id="empty_search_box_go" class="center"><img src="/shared/fanpages/images/up-arrow.png"><div style="margin-top: 18px;">Type in your Facebook Fan Page in the search box above</div><img style="float: right" class="close-search" src="/shared/fanpages/images/close.png" width="24" height="19"/></div></div>').show();
-            show_empty_message();
-        }
-    });*/
 }(window.jQuery, window, document));
 
 $(document).ready(function($){
@@ -140,12 +126,13 @@ $(document).ready(function($){
 });
 
 var timeoutEmptySearchBox;
+
 function searchBoxClick(InputField) {
     console.log('searchBoxClick('+InputField+')');
     var value = $(InputField).val();
     if(value.length == 0) {
         timeoutEmptySearchBox = setTimeout(function() {
-            show_empty_message();
+            show_empty_message(InputField);
         }, 1000);
     }
 }
@@ -159,7 +146,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
     var wrapper = $(targetContainer);
     var url = 'https://graph.facebook.com/search';
 
-    jQuery('#btn_go').tipsy("hide");
+    jQuery('.btn_go').tipsy("hide");
 
     //?q={text_box_value, escaped}&type=page&fields=id,name,category,cover,likes
     if (value.length == 0) {
@@ -241,7 +228,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
             if (found_result > 0) {
                 wrapper.html($('<div/>', {'class': 'search_results', html: items.join('')}));
             } else {
-                show_page_not_found_message();
+                show_page_not_found_message(InputField);
             }
         }
     });
@@ -254,33 +241,36 @@ function closeSearch(targetContainer){
         wrapper.html($('<div/>', {}));
         //wrapper.prev().attr('value', '');
         $(".main_search_box").val('');
-        jQuery('#btn_go').tipsy("hide");
+        jQuery('.btn_go').tipsy("hide");
         $(".close-search").hide();
         closeHowDoISteps();
 }
 
 function show_searching_message(){
+    //console.log('show_searching_message()');
     var $sbox = $(".search_progress").clone();
     $('#search_wrapper_main').html('').html($sbox).show();
 }
 
-function show_empty_message(){
+function show_empty_message(inputField){
+    //console.log('show_empty_message('+inputField+')');
     closeHowDoISteps();
-    if($(".main_search_box").val() == ''){
+    if($(inputField).val() == ''){
         var $tbox = $(".t_box").clone();
         $(".msg_info" , $tbox).html('Search for your Facebook Business Page above');
         $(".first_msg" , $tbox).html('Type in its name in the search box');
         $(".first_msg_desc" , $tbox).html('e.g. Jessica\'s Pastries');
-        $('#search_wrapper_main').html('').html($tbox).show();
+        $(inputField).parent().find('.search-wrapper').html('').html($tbox).show();
         $(".close_btn").show();
     } else {
         show_page_not_found_message();
     }
 }
-function show_page_not_found_message(){
+function show_page_not_found_message(inputField){
+    //console.log('show_page_not_found_message()');
     closeHowDoISteps();
     var $tbox = $(".t_box").clone();
-    $('#search_wrapper_main').html('').html($tbox).show();
+    $(inputField).parent().find('.search-wrapper').html('').html($tbox).show();
     $(".close_btn").show();
 }
 

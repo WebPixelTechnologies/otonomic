@@ -55,20 +55,6 @@
     .p2s_fanpages .search_results {width: 95%;margin: 0;max-height: inherit}
 }
 
-/*.p2s_fanpages .search_results{
-    overflow: auto;
-    max-height: 330px;
-    width: 685px;
-    border: 1px solid #bbb;
-    padding: 15px;
-    box-shadow: 4px 4px 7px #ddd;
-    background-color:white;
-    margin-left: auto;
-    margin-right: auto;
-    position:relative;
-    text-align: left;
-}*/
-
 .p2s_fanpages #empty_search_box_go {color:black;font-size: 22px;line-height:1.1em;}
 .p2s_fanpages #empty_search_box_go img {display: inline-block;margin-right: 0.5em;margin-top: 0.5em;vertical-align: top;}
 .p2s_fanpages #empty_search_box_go div{display:inline-block}
@@ -163,3 +149,104 @@
     top: -38px;
     border-right: 2px solid #222;
 }
+
+.t_box{
+    position: absolute;
+    margin-top: 5px;
+}
+.t_box, .search_progress {
+    border: 2px solid #666161;
+    width: 655px;
+    font-weight: normal;
+    display: inline-block;
+    background-color: #ffffff;
+    text-align: left;
+    z-index: 1;
+}
+.t_box .msgbox {
+  padding: 8px 25px 8px 48px;
+  float: left;
+  display: inline-block;
+  width: 522px;
+}
+.t_box .steps {
+  float: left;
+/*  display: inline-block;*/
+}
+.t_box .header {
+    color: #009dc4;
+    margin-left: -30px;
+    line-height: 30px;
+}
+.t_box .header span.msg_info, .search_progress span.msg_info {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 800;
+    color: #009dc4;
+    font-size: 19px;
+    margin-top: 10px;
+    display: inline-block;
+}
+.t_box .close_btn {
+    height: 26px;
+    width: 26px;
+    display: inline-block;
+}
+.t_box .body_info {
+    margin-top: 15px;
+}
+.t_box h1 {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    color: #000000;
+    font-size: 16px;
+    margin: 0;
+    display: inline-block;
+    font-weight: bold;
+    text-shadow:none;
+}
+.t_box .or_msg {
+  font-size: 24px;
+  color: #009dc4;
+  margin: 10px 0;
+}
+.t_box p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #757575;
+  margin: 0;
+}
+.t_box #how_do_i {
+    display: block;
+    color: #009dc4;
+    text-decoration: underline;
+}
+.t_box #fb_connector {
+  background-image: url("../images/fb_connect.png");
+  text-indent: -9999px;
+  display: inline-block;
+  width: 119px;
+  height: 32px;
+  float: left;
+  margin-right: 10px;
+}
+.t_box .steps {
+  margin-top: 25px;
+  width: 310px;
+}
+.t_box ul{margin: 0 10px; padding: 0}
+.t_box li {
+  list-style: none;
+  margin-bottom: 18px;
+}
+.t_box li:last-child{
+    margin-bottom: 0;
+}
+.search_progress {
+    padding: 20px;
+}
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
+
+.t_box .steps{display: none;}
+.t_box.open {width:920px;}
+.t_box.open .msgbox {border-right:1px solid #000000;}
+.t_box.open .steps {display: inline-block;}

@@ -20,42 +20,44 @@
   </head>
   <body>
   <div id="wrapper">
+      <!-- Side Navbar -->
       <div id="sidebar-wrapper">
           <ul class="sidebar-nav">
               <li class="sidebar-login">
-                <a href="#" class="sidebar-link track_event" data-target="" data-ga-category="Marketing Website" data-ga-event="Menu Usage" data-ga-label="Login" data-ajax-track="1">
+                <a href="#" onclick='trackFBConnect("Search LP", "Query", value, p2strack);' class="sidebar-link" data-target="">
                   <div class="sidebar-icon"><span class="glyphicon glyphicon-user"></span></div>Login
                 </a>
               </li>
               <li>
-                <a href="#" class="sidebar-link track_event" data-target="features" data-ga-category="Marketing Website" data-ga-event="Menu Usage" data-ga-label="Features" data-ajax-track="1">
+                <a href="#" class="sidebar-link" data-target="features">
                   <div class="sidebar-icon"><img src="images/sidebar-icon1.png" alt="Features"></div>Features
                 </a>
               </li>
               <li>
-                <a href="#" class="sidebar-link track_event" data-target="reviews" data-ga-category="Marketing Website" data-ga-event="Menu Usage" data-ga-label="Reviews" data-ajax-track="1">
+                <a href="#" class="sidebar-link" data-target="reviews">
                   <div class="sidebar-icon"><img src="images/sidebar-icon2.png" alt="Reviews"></div>Reviews
                 </a>
               </li>
               <!-- <li>
-                <a href="#" class="sidebar-link track_event" data-target="media-links" data-ga-category="Marketing Website" data-ga-event="Menu Usage" data-ga-label="Media" data-ajax-track="1">
+                <a href="#" class="sidebar-link" data-target="media-links">
                   <div class="sidebar-icon"><img src="images/sidebar-icon3.png" alt="In the media"></div>In the media
                 </a>
               </li> -->
               <li>
-                <a href="#" class="sidebar-link track_event" data-target="about" data-ga-category="Marketing Website" data-ga-event="Menu Usage" data-ga-label="About" data-ajax-track="1">
+                <a href="#" class="sidebar-link" data-target="about">
                   <div class="sidebar-icon about"><img src="images/sidebar-icon4.png" alt="About"></div>About
                 </a>
               </li> 
           </ul>
       </div>
+      <!-- Main Content -->
       <div id="page-content-wrapper">
           <div class="page-content">
             <div class="container-fluid">
              <!-- top navbar -->
               <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                   <div class="navbar-header">
-                       <button type="button" class="navbar-toggle track_event track_hover" id="menu-toggle" data-toggle="offcanvas" data-target=".sidebar-nav" data-ga-category="Marketing Website"  data-ga-event="Menu Click" data-ga-event-hover="Menu Hover" data-ajax-track="1">
+                       <button type="button" class="navbar-toggle" id="menu-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
                          <span class="icon-bar"></span>
                          <span class="icon-bar"></span>
                          <span class="icon-bar"></span>
@@ -69,18 +71,21 @@
                     </div>
                   </div>
                   <div class="form-inline facebook-input-holder">
-                    <div class="form-group header-search-input p2s_fanpages">
+                    <div id="main_search_holder2" class="form-group header-search-input p2s_fanpages">
                       <label class="sr-only" for="main_search_box2">Enter your Facebook business page name</label>
+
                       <input type="text" id="main_search_box2" onClick="searchBoxClick('#main_search_box2');"onKeyup="searchBoxKeyUp('#main_search_box2','#search_wrapper_floater','.close-search-floater');" class="form-control main_search_box mobile-header-placeholder" autocomplete="off" placeholder="Enter your Facebook business page name">
+                      
                       <div class="tb search-wrapper search-wrapper-floater" id="search_wrapper_floater"></div>
                       <div style="position:relative;">
                         <span class="icon_clear close-search close-search-floater" onClick="closeSearch('#search_wrapper_floater')" style="display: none;">
                           <span class="glyphicon glyphicon-remove"></span>
                         </span>
                       </div>
+
                     </div>
                     <div class="form-group header-search-button">
-                      <button type="submit" id="btn_go" class="btn btn-ttc ">Create <span class="hidden">Your</span> Website</button>
+                      <button id="btn_go2" class="btn_go btn btn-ttc ">Create <span class="hidden">Your</span> Website</button>
                     </div>
                   </div>
               </div>
@@ -92,18 +97,21 @@
                         <h1>Even a small business deserves a big spotlight.</h1>
                         <p>In almost no time, we will turn your Facebook page into a professional website</p>
                         <form class="form-inline" role="form">
-                          <div class="form-group form-group-mobile p2s_fanpages">
+                          <div id="main_search_holder" class="form-group form-group-mobile p2s_fanpages">
                             <label class="sr-only" for="main_search_box">Enter your Facebook business page name</label>
+                            
                             <input type="text" id="main_search_box" onClick="searchBoxClick('#main_search_box');"onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');" class="form-control main_search_box mobile-placeholder2" autocomplete="off" placeholder="Enter your Facebook business page name">
+
                             <div class="tb search-wrapper" id="search_wrapper_main"></div>
                             <div style="position:relative;">
                               <span class="icon_clear close-search" onClick="closeSearch('#search_wrapper_main')" style="display: none;">
                                 <span class="glyphicon glyphicon-remove"></span>
                               </span>
                             </div>
+
                           </div>
                           <div class="form-group form-group-mobile">
-                            <button id="btn_go" class="btn btn-ttc ">Create Your Website</button>
+                            <button id="btn_go" title='Choose your page from the suggestions below' class="input_title btn_go btn btn-ttc ">Create Your Website</button>
                           </div>
                         </form>
                         <div class="bg-image">
@@ -120,27 +128,27 @@
                             <h1>All the features small business owners need</h1>
                           </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 feature track_event track_hover" data-ga-category="Marketing Website" data-ga-event-hover="Features Hover" data-ga-label="Gorgeous" data-ajax-track="1">
+                        <div class="col-xs-12 col-sm-6 col-md-4 feature">
                           <img class="feature-icon" src="images/feature-icon1.png">
                           <h3>Gorgeous site in a click (really)</h3>
                           <p>Otonomic was created in 2012 by Omri Allouche, who previously founded Zink, social marketing platform that uses unique technology to increase the word of mouth effect on social networks on social networks and Accessorize London.</p>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 feature track_event track_hover" data-ga-category="Marketing Website" data-ga-event-hover="Features Hover" data-ga-label="Auto" data-ajax-track="1">
+                        <div class="col-xs-12 col-sm-6 col-md-4 feature">
                           <img class="feature-icon" src="images/feature-icon2.png">
                           <h3>Auto-updating</h3>
                           <p>Otonomic was created in 2012 by Omri Allouche, who previously founded Zink, social marketing platform that uses unique technology to increase the word of mouth effect on social networks on social networks and Accessorize London.</p>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 feature track_event track_hover" data-ga-category="Marketing Website" data-ga-event-hover="Features Hover" data-ga-label="Mobile" data-ajax-track="1">
+                        <div class="col-xs-12 col-sm-6 col-md-4 feature">
                           <img class="feature-icon" src="images/feature-icon3.png">
                           <h3>Web, tablet and mobile ready</h3>
                           <p>Otonomic was created in 2012 by Omri Allouche, who previously founded Zink, social marketing platform that uses unique technology to increase the word of mouth effect on social networks on social networks and Accessorize London.</p>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 feature track_event track_hover" data-ga-category="Marketing Website" data-ga-event-hover="Features Hover" data-ga-label="Domain" data-ajax-track="1">
+                        <div class="col-xs-12 col-sm-6 col-md-4 feature">
                           <img class="feature-icon" src="images/feature-icon4.png">
                           <h3>Your domain, your brand</h3>
                           <p>Otonomic was created in 2012 by Omri Allouche, who previously founded Zink, social marketing platform that uses unique technology to increase the word of mouth effect on social networks on social networks and Accessorize London.</p>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 feature track_event track_hover" data-ga-category="Marketing Website" data-ga-event-hover="Features Hover" data-ga-label="Growth" data-ajax-track="1">
+                        <div class="col-xs-12 col-sm-6 col-md-4 feature">
                           <img class="feature-icon" src="images/feature-icon5.png">
                           <h3>Business gtrowth made easy</h3>
                           <p>Otonomic was created in 2012 by Omri Allouche, who previously founded Zink, social marketing platform that uses unique technology to increase the word of mouth effect on social networks on social networks and Accessorize London.</p>
@@ -217,7 +225,7 @@
                         <div class="col-xs-12 text-center">
                           <h1>Small business owners love us</h1>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-3 track_hover" data-ga-category="Marketing Website" data-ga-event="Testimonials Click" data-ga-event-hover="Testimonials Hover" data-ga-label="Arnold Schwarzenegger" data-ajax-track="1">
+                        <div class="col-xs-12 col-sm-6 col-md-3">
                           <div class="ch-item">       
                             <div class="ch-info">
                               <div class="ch-info-front">
@@ -229,12 +237,12 @@
                             </div>
                             <div class="ch-text">
                               <h3>Arnold Schwarzenegger</h3>
-                              <h4><a href="#" class="track_event" data-ga-category="Marketing Website" data-ga-event="Testimonials Site Click" data-ga-label="Arnold Schwarzenegger" data-ajax-track="1">www.arnoldschwarzenegger.com</a></h4>
+                              <h4><a href="#">www.arnoldschwarzenegger.com</a></h4>
                               <p>Not a techie? Not a problem! With our new technology, creating your own fabulous website from your Facebook page literally takes one click. You don’t have to know anything about programming or design.</p>
                             </div>
                           </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-3 track_hover" data-ga-category="Marketing Website" data-ga-event="Testimonials Click" data-ga-event-hover="Testimonials Hover" data-ga-label="Shwina Magdalenna" data-ajax-track="1">
+                        <div class="col-xs-12 col-sm-6 col-md-3">
                           <div class="ch-item">       
                             <div class="ch-info">
                               <div class="ch-info-front">
@@ -246,12 +254,12 @@
                             </div>
                             <div class="ch-text">
                               <h3>Shwina Magdalenna</h3>
-                              <h4><a href="#" class="track_event" data-ga-category="Marketing Website" data-ga-event="Testimonials Site Click" data-ga-label="Shwina Magdalenna" data-ajax-track="1">www.shwinamagdalenna.com</a></h4>
+                              <h4><a href="#">www.arnoldschwarzenegger.com</a></h4>
                               <p>Otonomic was created in 2012 by Omri Allouche, who previously founded Zink, social marketing platform that uses unique technology to increase the word of mouth effect on social networks on social networks and Accessorize London.</p>
                             </div>
                           </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-3 track_hover" data-ga-category="Marketing Website" data-ga-event="Testimonials Click" data-ga-event-hover="Testimonials Hover" data-ga-label="Frederick Costallenatto" data-ajax-track="1">
+                        <div class="col-xs-12 col-sm-6 col-md-3">
                           <div class="ch-item">       
                             <div class="ch-info">
                               <div class="ch-info-front">
@@ -263,12 +271,12 @@
                             </div>
                             <div class="ch-text">
                               <h3>Frederick Costallenatto</h3>
-                              <h4><a href="#" class="track_event" data-ga-category="Marketing Website" data-ga-event="Testimonials Site Click" data-ga-label="Frederick Costallenatto" data-ajax-track="1">www.frederickcostallenatto.com</a></h4>
+                              <h4><a href="#">www.arnoldschwarzenegger.com</a></h4>
                               <p>Otonomic was created in 2012 by Omri Allouche, who previously founded Zink, social marketing platform that uses unique technology to increase the word of mouth effect on social networks on social networks and Accessorize London.</p>
                             </div>
                           </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-3 track_hover" data-ga-category="Marketing Website" data-ga-event="Testimonials Click" data-ga-event-hover="Testimonials Hover" data-ga-label="Fanny May" data-ajax-track="1">
+                        <div class="col-xs-12 col-sm-6 col-md-3">
                           <div class="ch-item">       
                             <div class="ch-info">
                               <div class="ch-info-front">
@@ -280,7 +288,7 @@
                             </div>
                             <div class="ch-text">
                               <h3>Fanny May</h3>
-                              <h4><a href="#" class="track_event" data-ga-category="Marketing Website" data-ga-event="Testimonials Site Click" data-ga-label="Fanny May" data-ajax-track="1">www.fannymay.com</a></h4>
+                              <h4><a href="#">www.arnoldschwarzenegger.com</a></h4>
                               <p>Otonomic was created in 2012 by Omri Allouche, who previously founded Zink, social marketing platform that uses unique technology to increase the word of mouth effect on social networks on social networks and Accessorize London.</p>
                             </div>
                           </div>
@@ -478,28 +486,76 @@
                       </div>
                       <div class="social-links center-block">
                         <div class="social-link-holder google-plus">
-                          <a href="#" class="social-link track_event" data-ga-category="Marketing Website" data-ga-event="Share Click" data-ga-label="Gmail" data-ajax-track="1"><img src="images/social-icon-1.png" class="img-responsive"></a>
+                          <a href="#" class="social-link"><img src="images/social-icon-1.png" class="img-responsive"></a>
                         </div>
                         <div class="social-link-holder facebook">
-                          <a href="#" class="social-link track_event" data-ga-category="Marketing Website" data-ga-event="Share Click" data-ga-label="Facebook" data-ajax-track="1"><img src="images/social-icon-2.png" class="img-responsive"></a>
+                          <a href="#" class="social-link"><img src="images/social-icon-2.png" class="img-responsive"></a>
                         </div>
                         <div class="social-link-holder twitter">
-                          <a href="#" class="social-link track_event" data-ga-category="Marketing Website" data-ga-event="Share Click" data-ga-label="Twitter" data-ajax-track="1"><img src="images/social-icon-3.png" class="img-responsive"></a>
+                          <a href="#" class="social-link"><img src="images/social-icon-3.png" class="img-responsive"></a>
                         </div>
                         <div class="social-link-holder email">
-                          <a href="#" class="social-link track_event" data-ga-category="Marketing Website" data-ga-event="Share Click" data-ga-label="Email" data-ajax-track="1"><img src="images/social-icon-4.png" class="img-responsive"></a>
+                          <a href="#" class="social-link"><img src="images/social-icon-4.png" class="img-responsive"></a>
                         </div>
                       </div>
                       <div class="footer-links center-block">
-                        <div class="footer-link"><a href="#" class="track_event" data-ga-category="Marketing Website" data-ga-event="Footer" data-ga-label="ToU" data-ajax-track="1">Terms of Use</a></div>
-                        <div class="footer-link"><a href="#" class="track_event" data-ga-category="Marketing Website" data-ga-event="Footer" data-ga-label="PP" data-ajax-track="1">Privacy Policy</a></div>
-                        <div class="footer-link"><a href="#" class="track_event" data-ga-category="Marketing Website" data-ga-event="Footer" data-ga-label="FAQ" data-ajax-track="1">FAQ</a></div>
+                        <div class="footer-link"><a href="">Terms of Use</a></div>
+                        <div class="footer-link"><a href="">Privacy Policy</a></div>
+                        <div class="footer-link"><a href="">FAQ</a></div>
                       </div>
                     </div>
                   </section>
               </div>
           </div>
       </div>
+  </div>
+  <div style="display: none">
+    <div class="t_box">
+        <div class="msgbox">
+            <div class="header">
+                <a href="#" class="close_btn close-search" onClick="closeSearch('.search-wrapper')"><span class="glyphicon glyphicon-remove"></span></a>
+                <span class="msg_info">We weren't able to find this page on Facebook</span>
+            </div>
+
+            <div class="body_info">
+                <h1 class="first_msg">Refine your search</h1>
+                <p class="first_msg_desc">e.g. "my business" instead of "mybusiness"</p>
+                <p class="or_msg">Or</p>
+                <h1>Enter the full Facebook address of your business</h1>
+                <p style="display: inline-block;">e.g.: "https://www.facebook.com/pages/Jessicas-Pastries"</p>
+                <a href="#" id="how_do_i">How do I do that?</a>
+                <p class="or_msg">Or</p>
+                <a href="/shared/facebook_login.php" class="facebook_connect track_event measure_time" id="fb_connector" data-ga-category="LandingPage" data-ga-event="Connect with Facebook" data-ga-label="Search explanation box" data-ajax-track="1">
+                    Connect
+                </a>
+                <h1 style="float: left;line-height: 34px">
+                    So we can find your page for you.
+                </h1>
+            </div>
+        </div>
+
+        <div class="steps">
+            <ul>
+                <li>
+                    <h1>Step 1 </h1> | <span>Go to your Facebook business page</span>
+                </li>
+                <li>
+                    <h1>Step 2 </h1> | <span>Copy the address shown in your browser</span>
+                    <p>(starts with "https://www.facebook.com")</p>
+                </li>
+                <li>
+                    <h1>Step 3 </h1> | <span>Paste the address in the search box above.</span>
+                </li>
+                <li>
+                    <h1>Step 4 </h1> | <span>Click "Get your Website"</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="search_progress" style="position: absolute; left: -35px;">
+        <span class="msg_info">Search in progress, please wait...!!!</span>
+    </div>
   </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -512,7 +568,6 @@
     <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
     <!-- Custom JS -->
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="//cherne.net/brian/resources/jquery.hoverIntent.minified.js"></script>
     
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
     <link href="http://d2zxr4ixkv1lwq.cloudfront.net/lp/css/tipsy.css" rel="stylesheet" type="text/css" />
@@ -522,9 +577,18 @@
       AUTO_FOCUS = false;
       SEARCH_PICTURE_SIZE = 80;
     </script>
+    <link href="css/tipsy.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/otonomic/search_filterv1.0.2.js"></script>
     <script type="text/javascript" src="js/otonomic/jquery.jsonp-2.4.0.min.js" defer></script>
     <script type="text/javascript" src="js/otonomic/jquery.tipsy.js" defer></script>
     <script type="text/javascript" src="js/otonomic/otonomicv1.0.1.js" defer></script>
+    <script type="text/javascript">
+    jQuery(document).ready(function(){
+        jQuery('.btn_go').tipsy({
+            gravity:  'se',//jQuery.fn.tipsy.autoNS,
+            trigger: 'manual'
+        });
+    });
+    </script>
   </body>
 </html>
