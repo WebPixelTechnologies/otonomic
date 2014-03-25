@@ -146,7 +146,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
     var wrapper = $(targetContainer);
     var url = 'https://graph.facebook.com/search';
 
-    jQuery('.btn_go').tipsy("hide");
+    jQuery('.input_title').tipsy("hide");
 
     //?q={text_box_value, escaped}&type=page&fields=id,name,category,cover,likes
     if (value.length == 0) {

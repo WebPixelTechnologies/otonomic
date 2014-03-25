@@ -163,19 +163,24 @@
     text-align: left;
     z-index: 1;
 }
+.search-wrapper-floater .t_box,.search-wrapper-floater .search_progress {
+    width: 508px;
+}
 .t_box .msgbox {
-  padding: 8px 25px 8px 48px;
+  padding: 8px 18px 18px 18px;
   float: left;
   display: inline-block;
-  width: 522px;
+  width: 458px;
 }
 .t_box .steps {
   float: left;
-/*  display: inline-block;*/
+}
+.t_box .steps li>span{
+  font-size: 16px;
+  font-weight: 400;
 }
 .t_box .header {
     color: #009dc4;
-    margin-left: -30px;
     line-height: 30px;
 }
 .t_box .header span.msg_info, .search_progress span.msg_info {
@@ -187,8 +192,8 @@
     display: inline-block;
 }
 .t_box .close_btn {
-    height: 26px;
-    width: 26px;
+    position: absolute;
+    right: 8px;
     display: inline-block;
 }
 .t_box .body_info {
@@ -211,7 +216,7 @@
 }
 .t_box p {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   color: #757575;
   margin: 0;
 }
@@ -247,6 +252,6 @@
 /* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
 
 .t_box .steps{display: none;}
-.t_box.open {width:920px;}
-.t_box.open .msgbox {border-right:1px solid #000000;}
+.t_box.open {width:800px;}
+.t_box.open .msgbox {border-right:2px solid #666161}
 .t_box.open .steps {display: inline-block;}
