@@ -45,12 +45,12 @@ var already_searched = false;
         e.preventDefault();
         $.ajax({
           type: "get",
-          url: $(this).attr('href'),
-          headers :{'X-Requested-With': 'XMLHttpRequest'}
+          url: $(this).attr('href')
         })
-        .done(function( msg ) {
-            if (msg) {
-                alert( "Data Saved: " + msg );  
+        .done(function(response) {
+            responseObj = $.parseJSON(response);
+            if (responseObj.status === 'success') {
+                window.location.href = responseObj.redirect;
             };
         });
         var page_name = $('p.media-heading', this).html();
