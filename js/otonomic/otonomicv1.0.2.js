@@ -12,30 +12,16 @@
     function currentUrl() {
         return current_url = location.protocol + '//' + location.host + location.pathname;
     }
-
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-37736198-1']);
-    _gaq.push(['_setDomainName', 'page2site.com']);
-    _gaq.push(['_setAllowLinker', true]);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
         
 
-    jQuery(document).ready(function($){
+    jQuery(document).ready(function(){
         jQuery('#btn_go').tipsy({
             gravity:  'se',//jQuery.fn.tipsy.autoNS,
             trigger: 'manual'
         });
+    });
 
-        //track as page loaded
-        trackEvent('Marketing Website', 'View', '', '');
-        p2sTrack('Marketing Website', 'View', '', '');
-
+    jQuery(document).ready(function($) {
         // Track time since the page is loaded in the P2S database
         var time_counter = 0;
         var next_record_time = 1;
@@ -48,7 +34,9 @@
                 p2sTrack('LandingPage', 'Page Loaded', ''+time_counter+' seconds');
             }
         }, 1000);
+    });
 
+    jQuery(document).ready(function($) {
         trackFBConnect('Search Page', 'Document Ready');
 
         $("#btn_video").click(function(e) {
@@ -73,61 +61,10 @@
             //return false;
         });
 
-        if(AUTO_FOCUS == undefined || AUTO_FOCUS == true)
-            $('#main_search_box').focus();
+
+        $('#main_search_box').focus();
 
         window.scrollTo(0,0);
-
-        //mouse click event
-        jQuery(document).on('click', '.track_event', function (e) {
-            //e.preventDefault();
-            var element = jQuery(this);
-            var category = (typeof(element.attr("data-ga-category")) != "undefined") ? element.attr("data-ga-category") : '';
-            var event = (typeof(element.attr("data-ga-event")) != "undefined") ? element.attr("data-ga-event") : '';
-            var label = (typeof(element.attr("data-ga-label")) != "undefined") ? element.attr("data-ga-label") : '';
-            var value = (typeof(element.attr("data-ga-value")) != "undefined") ? element.attr("data-ga-value") : null;
-            var ajax_track = element.attr("data-ajax-track") || 1;
-
-            if (value == null && element.hasClass("measure_time")) {
-                value = new Date().getTime() - reference_time;
-            }
-
-            trackEvent(category, event, label, value);
-            if (ajax_track == 1) {
-                p2sTrack(category, event, label, value);
-            }
-
-            /*var href = $(this).attr("href");
-             var target = $(this).attr("target");
-             e.preventDefault(); // don't open the link yet
-             setTimeout(function() { // now wait 300 milliseconds...
-             window.open(href,(!target?"_self":target)); // ...and open the link as usual
-             },300);*/
-        });
-
-        $(".track_hover").hoverIntent(function(e){
-            var element = jQuery(this);
-            var category = (typeof(element.attr("data-ga-category")) != "undefined") ? element.attr("data-ga-category") : '';
-            var event = (typeof(element.attr("data-ga-event-hover")) != "undefined") ? element.attr("data-ga-event-hover") : '';
-            var label = (typeof(element.attr("data-ga-label")) != "undefined") ? element.attr("data-ga-label") : '';
-            var value = (typeof(element.attr("data-ga-value")) != "undefined") ? element.attr("data-ga-value") : null;
-            var ajax_track = element.attr("data-ajax-track") || 1;
-
-            if (value == null && element.hasClass("measure_time")) {
-                value = new Date().getTime() - reference_time;
-            }
-
-            trackEvent(category, event, label, value);
-            if (ajax_track == 1) {
-                p2sTrack(category, event, label, value);
-            }
-        }, function(e){
-            return false;
-        });
-        //mouse hover event
-        /*jQuery(document).on('mouseenter', '.track_hover', function (e) {
-
-        });*/
     });
 
     function trackEvent(category, event, label, value, non_interaction) {
