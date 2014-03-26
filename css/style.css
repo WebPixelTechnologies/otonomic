@@ -204,7 +204,7 @@ body{
 	text-shadow: 2px 2px 0px rgba(0,0,0,0.25);
 }
 .section-home p{
-	max-width: 460px;
+	max-width: 470px;
 	margin: 0 auto;
 	color: white;
 	font-size: 23px;
@@ -283,6 +283,7 @@ section.features .row{
 	text-align: center;
 	margin: 0 auto;
 	transition: all 0.5s ease 0s;
+	font-weight: 600;
 }
 .section-features p{
 	opacity: 0;
@@ -470,7 +471,7 @@ section.features .row{
 .section-about-inner{}
 .section-about .drop-screen{
 	position: absolute;
-	margin-top: -390px;
+	margin-top: -570px;
 	left: 50%;
 	margin-left: -280px;
 	width: 560px;

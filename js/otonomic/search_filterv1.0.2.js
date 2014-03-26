@@ -44,11 +44,13 @@ var already_searched = false;
     $("#search_wrapper_main,#search_wrapper_floater").delegate(".search-results-item", 'click', function (e) {
         e.preventDefault();
         $.ajax({
-          type: "POST",
+          type: "get",
           url: $(this).attr('href')
         })
         .done(function( msg ) {
-            alert( "Data Saved: " + msg );
+            if (msg) {
+                alert( "Data Saved: " + msg );  
+            };
         });
         var page_name = $('p.media-heading', this).html();
         var result_number = $(this).data('result-number');
