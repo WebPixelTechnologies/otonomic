@@ -178,7 +178,6 @@
             }
           });
 
-          
           // init scrollsnap
           /*$(document).scrollsnap({
               snaps: 'div.row.visible-xs',

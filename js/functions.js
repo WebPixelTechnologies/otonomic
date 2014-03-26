@@ -409,22 +409,6 @@ function redirect_user(url, message, timeout) {
     }, timeout);
 }
 
-function showLoader(message, is_model) {
-    jQuery("#loader span").html(message);
-    if(typeof is_model === "undefined") is_model = false;
-    jQuery.fancybox.open({
-        href: "#loader",
-        padding: 20,
-        width: 300,
-        height: 50,
-        fitToView: true,
-        autoSize: true,
-        closeBtn: false,
-        modal : is_model
-    });
-    return false;
-}
-
 function showMessage(message, timeout){
     if (typeof message == "undefined") {
         return false;

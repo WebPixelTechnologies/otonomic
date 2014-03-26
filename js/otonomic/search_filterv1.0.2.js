@@ -1,6 +1,6 @@
 var found_result = 0;
 var found_only_result_url = '';
-var p2s_site_url = 'http://builder.page2site.com/';
+var p2s_site_url = 'http://builder.otonomic.com/';
 //var p2s_site_url = 'http://p2s.test/';        //for localhost
 
 var total_req_no = 0;
@@ -41,10 +41,19 @@ var already_searched = false;
         });
     }
 
-    $("#search_wrapper_main").delegate(".search-results-item", 'click', function (e) {
+    $("#search_wrapper_main,#search_wrapper_floater").delegate(".search-results-item", 'click', function (e) {
+        e.preventDefault();
+        $.ajax({
+          type: "POST",
+          url: $(this).attr('href')
+        })
+        .done(function( msg ) {
+            alert( "Data Saved: " + msg );
+        });
         var page_name = $('p.media-heading', this).html();
         var result_number = $(this).data('result-number');
         var search_query = $('.main_search_box').val();
+        closeSearch('#'+$(this).parent().parent().attr('id'));
         showLoader('Your site is being created for you!', true);
         trackFBConnect('Search LP', 'Choose Page', search_query + ' >> ' + page_name, result_number);
     });
@@ -145,7 +154,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
 
     var wrapper = $(targetContainer);
     var url = 'https://graph.facebook.com/search';
-    console.log($(InputField).parent().parent().find('div.btn_go'));
+    //console.log($(InputField).parent().parent().find('div.btn_go'));
     $(InputField).parent().parent().find('div>button.btn_go').tipsy("hide");
 
     //?q={text_box_value, escaped}&type=page&fields=id,name,category,cover,likes
@@ -282,4 +291,34 @@ function closeHowDoISteps(){
 function openHowDoISteps(){
     $("#how_do_i").addClass('open');
     $(".t_box").addClass('open');
+}
+
+var loaderCounter;
+var interval;
+function counterLoader(counterElementId){
+            loaderCounter = 10;
+            document.getElementById(counterElementId).innerHTML = loaderCounter;
+            interval = setInterval(function(){
+                if (loaderCounter <= 0){
+                    setTimeout(function(){
+                       /* $scope.showPageLoader = false;
+                        if(!$scope.$$phase)
+                            $scope.$apply();*/
+                    },500);
+                    clearInterval(interval);
+                    return;
+                }
+                loaderCounter--;
+                document.getElementById(counterElementId).innerHTML = loaderCounter;
+
+            }, 1000);
+        }
+
+function showLoader(message, is_model) {
+
+    $('.navbar').css('display','none');
+    $('.loading-box').animate({opacity: '1'}, 1500,'swing');
+    $('.loading-box').addClass('show');
+
+    counterLoader('loaderCounter');
 }
