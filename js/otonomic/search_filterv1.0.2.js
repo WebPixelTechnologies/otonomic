@@ -305,7 +305,16 @@ function counterLoader(counterElementId){
             interval = setInterval(function(){
                 if (loaderCounter <= 0){
                     setTimeout(function(){
-                       window.location.replace(redirect_url);
+                        var ua    = navigator.userAgent.toLowerCase(),
+                        isIE      = ua.indexOf('msie') !== -1,
+                        version   = parseInt(ua.substr(ua.indexOf('msie')+5, 1), 10);
+
+                    // IE9 
+                    if (isIE && version == 9) {
+                        $('.loading-content .loading-counter-text').html('<p>Your website is ready</p><a href="'+redirect_url+'" class="btn btn-lg btn-ttc">See Your Website</a>');
+                    }
+                    // All other browsers
+                    else { window.location.href = redirect_url; }
                     },500);
                     clearInterval(interval);
                     return;
