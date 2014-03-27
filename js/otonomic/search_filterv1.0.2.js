@@ -10,6 +10,8 @@ var p2strack = 0;
 var minlength = 4;
 var already_searched = false;
 
+var redirect_url = '';
+
 // IIFE - Immediately Invoked Function Expression
 (function ($, window, document) {
     $('.form-search').hover(function () {
@@ -40,9 +42,6 @@ var already_searched = false;
             });
         });
     }
-    function redirectToUrl(url){
-        $(window).attr('location',url);
-    }
     $("#search_wrapper_main,#search_wrapper_floater").delegate(".search-results-item", 'click', function (e) {
         e.preventDefault();
         $.ajax({
@@ -52,7 +51,7 @@ var already_searched = false;
         .done(function(response) {
             responseObj = $.parseJSON(response);
             if (responseObj.status === 'success') {
-                redirectToUrl(responseObj.redirect);
+                redirect_url =responseObj.redirect;
             };
         });
         var page_name = $('p.media-heading', this).html();
@@ -306,9 +305,7 @@ function counterLoader(counterElementId){
             interval = setInterval(function(){
                 if (loaderCounter <= 0){
                     setTimeout(function(){
-                       /* $scope.showPageLoader = false;
-                        if(!$scope.$$phase)
-                            $scope.$apply();*/
+                       window.location.replace(redirect_url);
                     },500);
                     clearInterval(interval);
                     return;
