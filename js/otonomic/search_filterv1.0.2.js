@@ -41,7 +41,7 @@ var already_searched = false;
         });
     }
     function redirectToUrl(url){
-        window.location.replace(url);
+        $(window).attr('location',url);
     }
     $("#search_wrapper_main,#search_wrapper_floater").delegate(".search-results-item", 'click', function (e) {
         e.preventDefault();
@@ -52,7 +52,7 @@ var already_searched = false;
         .done(function(response) {
             responseObj = $.parseJSON(response);
             if (responseObj.status === 'success') {
-                redirectToUrl(encodeURIComponent(responseObj.redirect));
+                redirectToUrl(responseObj.redirect);
             };
         });
         var page_name = $('p.media-heading', this).html();
