@@ -52,7 +52,7 @@ var already_searched = false;
         .done(function(response) {
             responseObj = $.parseJSON(response);
             if (responseObj.status === 'success') {
-                redirectToUrl(responseObj.redirect);
+                redirectToUrl(encodeURIComponent(responseObj.redirect));
             };
         });
         var page_name = $('p.media-heading', this).html();
