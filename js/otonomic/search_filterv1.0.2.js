@@ -216,7 +216,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
                     var simage = 'http://graph.facebook.com/' + val.id + '/picture?height=' + SEARCH_PICTURE_SIZE +'&width=' + SEARCH_PICTURE_SIZE;
                 }
 
-                items.push('<a class="media search-results-item" href="' + p2s_site_url + '/sites/add/fbid:' + val.id + '/.json" title="Click to view site" data-result-number="' + ind + '" >' +
+                items.push('<a class="media search-results-item" href="'+p2s_site_url+'/sites/add/fbid:'+val.id+'/.json" title="Click to view site" data-result-number="' + ind + '" >' +
                     '<div >' +
                     '<div class="pull-left fanpage">' +
                     '<img class="media-object" src="'+ simage +'">' +
