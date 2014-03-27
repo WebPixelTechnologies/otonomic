@@ -105,6 +105,7 @@
                   p2sTrack('Marketing Website', 'About Click', 'Close', '');
               }
             $('.drop-screen').toggleClass('active');
+            $('.bg-about').toggleClass('active');
             $('.team-default').toggleClass('active');
             $('.team-active').toggleClass('active');
           });

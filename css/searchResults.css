@@ -25,7 +25,7 @@
     overflow: auto;
     max-height: 330px;
     /*overflow-y: scroll;*/
-    width: 352px;
+    width: 392px;
     margin: 0;
     border: 2px solid #222;
     border-top: 0;
@@ -164,7 +164,7 @@
     z-index: 1;
 }
 .search-wrapper-floater .t_box,.search-wrapper-floater .search_progress {
-    width: 508px;
+    width: 548px;
 }
 .t_box .msgbox {
   padding: 8px 18px 18px 18px;

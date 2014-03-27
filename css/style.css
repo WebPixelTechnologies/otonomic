@@ -107,11 +107,11 @@ body{
 	margin-left: 11px;
 }
 .navbar .facebook-input-holder{
-	width: 520px;
+	width: 550px;
 	position: absolute;
 	top: -50px;
 	right: 50%;
-	margin-right: -260px;
+	margin-right: -275px;
 }
 .navbar .facebook-input-holder .btn-ttc{
 	box-shadow: 2px 2px 0px rgba(0,0,0,0.25);
@@ -121,7 +121,7 @@ body{
 	font-size: 16px;
 }
 .navbar .facebook-input-holder #main_search_box2.form-control{
-	width: 350px;
+	width: 390px;
 	height: 37px;
 	border:0;
 	border-radius: 0;
@@ -470,11 +470,12 @@ section.features .row{
 }
 .section-about-inner{}
 .section-about .drop-screen{
+	height: 80px;
+	width: 560px;
 	position: absolute;
-	margin-top: -570px;
+	margin-top: 0px;
 	left: 50%;
 	margin-left: -280px;
-	width: 560px;
 	background-color: white;
 	border-right: 2px solid #758200;
 	border-bottom: 2px solid #758200;
@@ -485,13 +486,21 @@ section.features .row{
 	transition: all 0.4s ease-out;
 }
 .section-about .drop-screen.active{
-	margin-top: 0;
+	height: 650px;
 }
 .section-about .drop-screen-inner{
-	padding: 33px 60px;
+	padding: 10px 60px 33px 60px;
+	overflow: hidden;
+	height: 100%;
 }
 .section-about .drop-screen .drop-screen-inner img{
 	margin-left: 36px;
+}
+.section-about .drop-screen h1{
+	margin-top: 10px;
+	margin-bottom: 30px;
+	font-size: 42px;
+	text-align:center;
 }
 .section-about .drop-screen h3{
 	font-family: 'Dosis', sans-serif;
@@ -530,7 +539,7 @@ section.features .row{
 	z-index: 1;
 }
 .section-about .bg-text{
-	margin-top: 110px;
+	margin-top: 160px;
 	padding: 15px;
 	width: 560px;
 	color: white;
@@ -549,6 +558,19 @@ section.features .row{
 	height: 260px;
 	margin-top: 50px;
 	overflow: hidden;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.section-about .bg-about.active{
+	margin-top: 230px;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 .section-about .bg-about .team-default{
 	position: absolute;
