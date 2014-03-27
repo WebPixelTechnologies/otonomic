@@ -41,7 +41,7 @@ var already_searched = false;
         });
     }
     function redirectToUrl(url){
-        window.location = url;
+        window.location.replace(url);
     }
     $("#search_wrapper_main,#search_wrapper_floater").delegate(".search-results-item", 'click', function (e) {
         e.preventDefault();
