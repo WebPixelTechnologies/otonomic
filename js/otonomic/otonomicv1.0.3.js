@@ -111,6 +111,27 @@
              window.open(href,(!target?"_self":target)); // ...and open the link as usual
              },300);*/
         });
+
+        $(".track_hover").hoverIntent(function(e){
+            var element = jQuery(this);
+            var category = (typeof(element.attr("data-ga-category")) != "undefined") ? element.attr("data-ga-category") : '';
+            var event = (typeof(element.attr("data-ga-event-hover")) != "undefined") ? element.attr("data-ga-event-hover") : '';
+            var label = (typeof(element.attr("data-ga-label")) != "undefined") ? element.attr("data-ga-label") : '';
+            var value = (typeof(element.attr("data-ga-value")) != "undefined") ? element.attr("data-ga-value") : null;
+            var ajax_track = element.attr("data-ajax-track") || 1;
+
+            if (value == null && element.hasClass("measure_time")) {
+                value = new Date().getTime() - reference_time;
+            }
+
+            trackEvent(category, event, label, value);
+            if (ajax_track == 1) {
+                p2sTrack(category, event, label, value);
+            }
+        }, function(e){
+            return false;
+        });
+
     });
     
     function trackEvent(category, event, label, value, non_interaction) {
@@ -163,7 +184,7 @@
     }
 
     function makeAjaxTrackCall(data, callback) {
-        var url = WEBROOT + 'code/sites/track_click/';
+        var url = WEBROOT + 'sites/track_click/';
         if (typeof site_id != "undefined" && site_id) {
             url += site_id + '/';
         };
