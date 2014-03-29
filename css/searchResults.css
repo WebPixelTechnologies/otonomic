@@ -77,7 +77,8 @@
     text-decoration: none;
 }
 
-.p2s_fanpages img.media-object {
+.p2s_fanpages  .fanpage img.media-object {
+    height: 80px;
     width: 80px;
 }
 .p2s_fanpages .media-object {
