@@ -311,7 +311,7 @@ function counterLoader(counterElementId){
 
                     // IE9 
                     if (isIE && version == 9) {
-                        $('.loading-content .loading-counter-text').html('<p>Your website is ready</p><a href="'+redirect_url+'" class="btn btn-lg btn-ttc">See Your Website</a>');
+                        $('.loading-content .loading-counter-text').html('<p>Your website is ready</p><a href="'+redirect_url+'" class="btn btn-lg btn-ttc" class="btn_go btn btn-ttc track_event" data-ga-category="Marketing Website"  data-ga-event="site created ie9fix" data-ajax-track="1">See Your Website</a>');
                     }
                     // All other browsers
                     else { window.location.href = redirect_url; }
