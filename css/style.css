@@ -384,6 +384,7 @@ section.features .row{
 
 .ch-info .ch-info-front {
 	overflow: hidden;
+	text-align: center;
 }
 
 .ch-info .ch-info-back {
@@ -396,8 +397,8 @@ section.features .row{
 	background: transparent;
 	opacity: 0;
 }
-
-.ch-item:hover .ch-info-front {
+/* Diabled hover Effect*/
+/*.ch-item:hover .ch-info-front {
 	-webkit-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
 	-moz-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
 	-o-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
@@ -406,6 +407,7 @@ section.features .row{
 	opacity: 0;
 }
 
+
 .ch-item:hover .ch-info-back {
 	-webkit-transform: rotate3d(1,0,0,0deg);
 	-moz-transform: rotate3d(1,0,0,0deg);
@@ -413,7 +415,7 @@ section.features .row{
 	-ms-transform: rotate3d(1,0,0,0deg);
 	transform: rotate3d(1,0,0,0deg);
 	opacity: 1;
-}
+}*/
 .ch-item .ch-text{
 	position: absolute;
 	top: 243px;
@@ -422,7 +424,7 @@ section.features .row{
 .ch-item .ch-text h3{ text-align: center;}
 .ch-item .ch-text h4{ 
 	text-align: center;
-	opacity: 0;
+	opacity: 1; /*make visible  deafult = 0*/
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	-o-transition: all 0.4s ease;
@@ -430,25 +432,31 @@ section.features .row{
 	transition: all 0.4s ease;
 }
 .ch-item .ch-text p{ 
-	opacity: 0;
+	opacity: 1; /*make visible  deafult = 0*/
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	-o-transition: all 0.4s ease;
 	-ms-transition: all 0.4s ease;
 	transition: all 0.4s ease;
 }
+.ch-item .ch-text > h4 > a{
+	color:#fff;
+	padding: 5px;
+	text-decoration: none;
+	background-color: #0f6b99;
+}
 .ch-item:hover .ch-text > h4{
 	opacity: 1;
 }
-.ch-item:hover .ch-text > h4 > a{
+/*.ch-item:hover .ch-text > h4 > a{
 	color: black;
 	padding: 5px;
-}
-.ch-item:hover .ch-text > h4 > a:hover{
+}*/
+/*.ch-item:hover .ch-text > h4 > a:hover{
 	color: black;
 	text-decoration: none;
 	background-color: #ffc430;
-}
+}*/
 .ch-item:hover .ch-text > p{
 	opacity: 1;
 }

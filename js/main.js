@@ -80,8 +80,12 @@
               closeMenu();
             }
           });
+          //<<<<<<<<<< Disable Features-Section Animations
+          $('.section-features .feature img').addClass('active');
+          $('.section-features .feature h3').addClass('active');
+          $('.section-features .feature p').addClass('active');
           // feature hover
-          $('.feature').hover(
+          /*$('.feature').hover(
           // rollover
           function(){
             $(this).find('.feature-icon').addClass('active');
@@ -93,10 +97,11 @@
             $(this).find('.feature-icon').removeClass('active');
             $(this).find('h3').removeClass('active');
             $(this).find('p').removeClass('active');
-          });
+          });*/
+          // >>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
           // toggle Drop Screen
-          $('.bottom-bar-handle').click(function() {
+          $('.bottom-bar-handle').mousedown(function() {
             if($('.drop-screen').hasClass('active')){
                   trackEvent('Marketing Website', 'About Click', 'Open', '');
                   p2sTrack('Marketing Website', 'About Click', 'Open', '');
@@ -179,6 +184,15 @@
             }
           });
 
+          // Close .t_box if click anywhere but the box
+          $('html').click(function(){
+              closeSearch('.search-wrapper');
+          });
+          $(".search-wrapper").click(function(e) {
+              e.stopPropagation(); // This is the preferred method.
+              return false;        // This should not be used unless you do not want
+                                   // any click events registering inside the div
+          });
           // init scrollsnap
           /*$(document).scrollsnap({
               snaps: 'div.row.visible-xs',

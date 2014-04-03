@@ -62,8 +62,8 @@
             //return false;
         });
 
-
-        $('#main_search_box').focus();
+        /* Disabled for marketing Website*/
+        //$('#main_search_box').focus();
 
         window.scrollTo(0,0);
     });
