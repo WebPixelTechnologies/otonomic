@@ -254,6 +254,7 @@ function closeSearch(targetContainer){
         wrapper.html($('<div/>', {}));
         //wrapper.prev().attr('value', '');
         $(".main_search_box").val('');
+        //$("#main_search_box").focus();
         jQuery('.btn_go').tipsy("hide");
         $(".close-search").hide();
         closeHowDoISteps();
