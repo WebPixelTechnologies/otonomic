@@ -260,7 +260,7 @@ body{
 }
 .section-likes .btn-group{
 	width: 60%; 
-	margin: -20px auto 0 auto;
+	margin: 20px auto 0 auto;
 }
 .section-likes .btn-group .dropdown-menu{
 	min-width: 100%;
