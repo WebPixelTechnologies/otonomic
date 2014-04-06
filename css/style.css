@@ -231,13 +231,29 @@ body{
 .section-home .bg-image{
 	position: relative;
 	width: 100%;
-	margin-top: 138px;
+	margin-top: 30px;
 }
 .section-home .bg-image img{
 	position: relative;
 	top: 0;
 	margin-left: 50%;
 	left: -1250px;
+}
+/* ## Likes ## */
+.section-likes{
+	height: 60px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #666666;
+}
+.section-likes .likes-div{
+	margin: 0 auto;
+	width: 580px;
+}
+.section-likes .like-div{
+	margin-right: 30px;
+	display: inline-block;
+	float: left;
 }
 /* ## Features ## */
 section.features .row{
