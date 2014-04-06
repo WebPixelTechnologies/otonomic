@@ -27,7 +27,7 @@
               threshold:50
             });
             // init scrollsnap
-            $(document).scrollsnap({
+            /*$(document).scrollsnap({
                 snaps: 'div.row.visible-xs',
                 proximity: 100,
                 onSnapWait: 500,
@@ -43,7 +43,7 @@
                     //navBarToggle('up');
                   }
                 }
-            });
+            });*/
           }
 
           // Turn to grayscale after page load
