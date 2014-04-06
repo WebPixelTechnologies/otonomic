@@ -255,6 +255,37 @@ body{
 	display: inline-block;
 	float: left;
 }
+.section-likes .btn-group{
+	width: 60%; 
+	margin: -20px auto 0 auto;
+}
+.section-likes .btn-group .dropdown-menu{
+	min-width: 100%;
+	background-color: #3b3b3b;
+	border:0;
+	border-radius: 0;
+	padding: 0px 0;
+	margin-bottom: -50px;
+}
+.section-likes .btn-group .dropdown-menu li{
+	border-bottom: 1px solid #595657;
+	padding: 15px 0;
+	text-align: left;
+	padding-left: 20%;
+}
+.section-likes .btn-social{
+	width: 100%;
+	height: 50px;
+	border:0;
+	color: #fff;
+	background-color: #3b3b3b;
+	box-shadow: 1px 1px 1px 0px #0d0d0d;
+	font-size: 24px;
+	line-height: 24px;
+}
+.section-likes .btn-social img{
+	margin-top: -5px;
+}
 /* ## Features ## */
 section.features .row{
 	background-color: #f2f0f1;
