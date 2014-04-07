@@ -251,10 +251,10 @@ body{
 }
 .section-likes .likes-div{
 	margin: 0 auto;
-	width: 620px;
+	width: 380px;
 }
 .section-likes .like-div{
-	margin-right: 30px;
+	margin-right: 10px;
 	display: inline-block;
 	float: left;
 }
@@ -368,7 +368,7 @@ section.features .row{
 
 .section-reviews{
 	background-color: #29abe2;
-	padding-bottom: 110px;
+	padding-bottom: 150px;
 }
 .section-reviews-inner{}
 .section-reviews h1{
@@ -490,7 +490,8 @@ section.features .row{
 	-ms-transition: all 0.4s ease;
 	transition: all 0.4s ease;
 }
-.ch-item .ch-text p{ 
+.ch-item .ch-text p{
+	margin: 0 40px; 
 	opacity: 1; /*make visible  deafult = 0*/
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
@@ -1094,6 +1095,15 @@ img.grayscale.disabled {
     -webkit-filter: grayscale(0%);
 }
 */
+
+/* Social Buttons Enforce width*/
+
+iframe#twitter-widget-0{
+	width: 80px!important;
+}
+div#___plusone_0{
+	width: 60px!important;
+}
 @media (max-width:767px) {
 	.carousel-caption p{
 		font-size: 19px!important;
