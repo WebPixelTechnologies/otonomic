@@ -124,8 +124,8 @@ var redirect_url = '';
 
 $(document).ready(function($){
 
-    $(document).on('click','#how_do_i',function(e){
-        e.preventDefault();
+    $(document).on('click','#how_do_i',function(event){
+        event.preventDefault();
         var $this = $(this);
 
         if($this.hasClass('open')){
@@ -133,7 +133,7 @@ $(document).ready(function($){
         } else {
             openHowDoISteps();
         }
-        return false;
+        //return false;
     });
 
 });
@@ -258,6 +258,7 @@ function closeSearch(targetContainer){
         jQuery('.btn_go').tipsy("hide");
         $(".close-search").hide();
         closeHowDoISteps();
+        $('#main_search_box').focus();
 }
 
 function show_searching_message(){
@@ -301,10 +302,18 @@ function openHowDoISteps(){
 var loaderCounter;
 var interval;
 function counterLoader(counterElementId){
-            loaderCounter = 10;
+            loaderCounter = 8;
             document.getElementById(counterElementId).innerHTML = loaderCounter;
             interval = setInterval(function(){
-                if (loaderCounter <= 0){
+                if (loaderCounter <= 1){
+                    //fade in/out animation 
+                    $(".loading-content").animate({opacity:"0"}, 300,"swing", function() {
+                        $('.loading-content').html('<p>Your new website is <strong>ready</strong>!</p>');
+                        $('.loading-image>img').attr('src','images/loading/v.gif');
+                        $('.loading-page .loading-content p').css('margin','71px 0  34px 0');
+                        $(".loading-content").animate({opacity:"1"}, 300,"swing");
+                    });
+                    // start redirect
                     setTimeout(function(){
                         var ua    = navigator.userAgent.toLowerCase(),
                         isIE      = ua.indexOf('msie') !== -1,
@@ -316,8 +325,11 @@ function counterLoader(counterElementId){
                     }
                     // All other browsers
                     else { window.location.href = redirect_url; }
-                    },500);
+                    },1000);
+
                     clearInterval(interval);
+                    loaderCounter--;
+                    document.getElementById(counterElementId).innerHTML = loaderCounter;
                     return;
                 }
                 loaderCounter--;

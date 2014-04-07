@@ -94,14 +94,26 @@
             });  
           }
 
-          $("#menu-toggle").click(function(e) {
-              e.preventDefault();
+          $("#menu-toggle").click(function(event) {
+              event.preventDefault();
               openCloseMenu();
           });
           $("section").click(function() {
+            //closeSearch('.search-wrapper');
             if ($("#menu-toggle").hasClass('active')) {
               closeMenu();
             }
+          });
+
+          // Close .t_box if click anywhere but the box
+          /*$('section').click(function(){
+              closeSearch('.search-wrapper');
+          });*/
+          
+          $(".search-wrapper").click(function(e) {
+              //e.stopPropagation(); // This is the preferred method.
+              //return false;        // This should not be used unless you do not want
+                                   // any click events registering inside the div
           });
           //<<<<<<<<<< Disable Features-Section Animations
           $('.section-features .feature img').addClass('active');
@@ -206,16 +218,4 @@
               $(this).addClass('mobile-header-placeholder');
             }
           });
-
-          // Close .t_box if click anywhere but the box
-          $('html').click(function(){
-              closeSearch('.search-wrapper');
-          });
-          
-          $(".search-wrapper").click(function(e) {
-              e.stopPropagation(); // This is the preferred method.
-              return false;        // This should not be used unless you do not want
-                                   // any click events registering inside the div
-          });
-          
       });
