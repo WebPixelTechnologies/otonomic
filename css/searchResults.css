@@ -37,23 +37,7 @@
     z-index: 999;
     margin-left: -2px;
 }
-@media only screen and (max-width: 769px) {
-    .p2s_fanpages .search-wrapper {
-        position: absolute;
-        margin-top: 5px;
-        background-color: #FFF;
-        border: 1px solid #EEE;
-        padding: 5px;
-        width: 95%;
-    }
-    .p2s_fanpages .search-wrapper {
-        border: 1px solid #EEE;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
-    .p2s_fanpages .search_results {width: 95%;margin: 0;max-height: inherit}
-}
+
 
 .p2s_fanpages #empty_search_box_go {color:black;font-size: 22px;line-height:1.1em;}
 .p2s_fanpages #empty_search_box_go img {display: inline-block;margin-right: 0.5em;margin-top: 0.5em;vertical-align: top;}
@@ -236,8 +220,7 @@
   display: inline-block;
   width: 119px;
   height: 32px;
-  float: left;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 .t_box .steps {
   margin-top: 25px;
@@ -260,3 +243,30 @@
 .t_box.open {width:800px;}
 .t_box.open .msgbox {border-right:2px solid #666161}
 .t_box.open .steps {display: inline-block;}
+
+@media only screen and (max-width: 769px) {
+    .p2s_fanpages .search-wrapper {
+        position: relative;
+        background-color: #FFF;
+        padding: 5px;
+        width: 100%;
+        border:0;
+        padding: 0;
+        margin: 0;
+    }
+    .p2s_fanpages .search-wrapper .t_box{
+        left: 0;
+        width: 100%;
+    }
+    .p2s_fanpages .search-wrapper .t_box .msgbox{
+        width: 100%;
+    }
+    .p2s_fanpages .close-search {
+        padding: 7px 10px 15px 22px;
+    }
+    .p2s_fanpages .search_results {
+        width: 100%;
+        margin: 0;
+        max-height: inherit;
+    }
+}
