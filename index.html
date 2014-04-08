@@ -81,18 +81,18 @@
                     <div id="main_search_holder2" class="form-group header-search-input p2s_fanpages">
                       <label class="sr-only LoNotSensitive" for="main_search_box2">Simply enter the name of your business Facebook page here</label>
 
-                      <input type="text" id="main_search_box2" onClick="searchBoxClick('#main_search_box2');"onKeyup="searchBoxKeyUp('#main_search_box2','#search_wrapper_floater','.close-search-floater');" class="form-control main_search_box mobile-header-placeholder" autocomplete="off" placeholder="Simply enter the name of your business Facebook page here">
+                      <input type="text" id="main_search_box2" data-attr="top" onClick="searchBoxClick('#main_search_box2');"onKeyup="searchBoxKeyUp('#main_search_box2','#search_wrapper_floater','.close-search-floater');" class="form-control main_search_box mobile-header-placeholder" autocomplete="off" placeholder="Simply enter the name of your business Facebook page here">
                       
                       <div class="tb search-wrapper search-wrapper-floater" id="search_wrapper_floater"></div>
                       <div style="position:relative;">
-                        <span class="icon_clear close-search close-search-floater" onClick="closeSearch('#search_wrapper_floater')" style="display: none;">
+                        <span class="icon_clear close-search close-search-floater" onClick="closeSearch('#search_wrapper_floater','top')" style="display: none;">
                           <span class="glyphicon glyphicon-remove"></span>
                         </span>
                       </div>
 
                     </div>
                     <div class="form-group header-search-button">
-                      <button id="btn_go2" class="btn_go btn btn-ttc track_event">See <span class="hidden-xs">Your</span> Website</button>
+                      <button id="btn_go2" data-attr="top" class="btn_go btn btn-ttc track_event">See <span class="hidden-xs">Your</span> Website</button>
                     </div>
                   </div>
               </div>
@@ -107,18 +107,18 @@
                           <div id="main_search_holder" class="form-group form-group-mobile p2s_fanpages">
                             <label class="sr-only" for="main_search_box">Simply enter the name of your business Facebook page here</label>
                             
-                            <input type="text" id="main_search_box" onClick="searchBoxClick('#main_search_box');"onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');" class="form-control main_search_box mobile-placeholder2 LoNotSensitive" autocomplete="off" placeholder="Simply enter the name of your business Facebook page here">
+                            <input type="text" id="main_search_box" data-attr="center" onClick="searchBoxClick('#main_search_box');"onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');" class="form-control main_search_box mobile-placeholder2 LoNotSensitive" autocomplete="off" placeholder="Simply enter the name of your business Facebook page here">
 
                             <div class="tb search-wrapper" id="search_wrapper_main"></div>
                             <div style="position:relative;">
-                              <span class="icon_clear close-search" onClick="closeSearch('#search_wrapper_main')" style="display: none;">
+                              <span class="icon_clear close-search" onClick="closeSearch('#search_wrapper_main','center')" style="display: none;">
                                 <span class="glyphicon glyphicon-remove"></span>
                               </span>
                             </div>
 
                           </div>
                           <div class="form-group form-group-mobile">
-                            <button id="btn_go" title='Choose your page from the suggestions below' class="btn_go btn btn-ttc ">See Your Website</button>
+                            <button id="btn_go" data-attr="center" title='Choose your page from the suggestions below' class="btn_go btn btn-ttc ">See Your Website</button>
                           </div>
                         </form>
                         <div class="bg-image">
@@ -160,7 +160,7 @@
                               <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fotonomic.com%2F&media=http%3A%2F%2Fotonomic.com%2Fimages%2Fsection-home-bg.png&description=Even%20a%20small%20business%20deserves%20a%20big%20spotlight." data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>
                             </li>
                             <li>
-                              <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://otonomic.com/" data-via="Otonomic.com" data-lang="en">Tweet</a>
+                              <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://twitter.com/otonomic/" data-via="Otonomic.com" data-lang="en">Tweet</a>
                             </li>
                             <li>
                               <div class="g-plusone" data-size="medium" data-href="http://otonomic.com/"></div>
