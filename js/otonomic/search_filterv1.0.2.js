@@ -59,7 +59,7 @@ var redirect_url = '';
         var search_query = $('.main_search_box').val();
         closeSearch('#'+$(this).parent().parent().attr('id'));
         showLoader('Your site is being created for you!', true);
-        trackFBConnect('Search Marketing Website', 'Choose Page', $(this).attr('data-attr')+";"+search_query + ' >> ' + page_name, result_number);
+        trackFBConnect('Search Marketing Website', 'Choose Page', $(this).attr('data-attr')+","+search_query + ' >> ' + page_name, result_number);
     });
 
     $('#preview-form .form-submit, #preview-form2 .form-submit').on('click', function (e) {
@@ -82,7 +82,7 @@ var redirect_url = '';
         $(this).tipsy("hide");
         var $el = $thisParent.find('.main_search_box');
         var $page_url = $el.val();
-        trackFBConnect("Search Marketing Website", "Go", $(this).attr('data-attr')+";"+$page_url);
+        trackFBConnect("Search Marketing Website", "Go", $(this).attr('data-attr')+","+$page_url);
         if ($page_url.indexOf("facebook.com") > -1) {
             var url = p2s_site_url + 'sites/add/?u=' + encodeURIComponent($page_url);
             trackFBConnect("Search Marketing Website", "Choose Url", $page_url);
@@ -96,7 +96,7 @@ var redirect_url = '';
 
 
         if (found_result == 1 && $.trim(found_only_result_url) != '') {
-            trackFBConnect("Search Marketing Website", "Choose Url", $(this).attr('data-attr')+";"+found_only_result_url);
+            trackFBConnect("Search Marketing Website", "Choose Url", $(this).attr('data-attr')+","+found_only_result_url);
             setTimeout(function () { // now wait 300 milliseconds...
                 showLoader('Your site is being created for you!', true);
                 window.location = found_only_result_url;
@@ -178,7 +178,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
             return;
         }
         p2strack++;
-        trackFBConnect("Search Marketing Website", "Query", $(this).attr('data-attr')+";"+value, p2strack);
+        trackFBConnect("Search Marketing Website", "Query", $(InputField).attr('data-attr')+","+value, p2strack);
     }, 2000);
 
     if (!already_searched) {
@@ -246,7 +246,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
 }
 function closeSearch(targetContainer,from){
         found_result = 0;
-        trackFBConnect('Search Marketing Website', from+";"+'Close');
+        trackFBConnect('Search Marketing Website', from+","+'Close');
 
         var wrapper = $(targetContainer);
         wrapper.html($('<div/>', {}));
