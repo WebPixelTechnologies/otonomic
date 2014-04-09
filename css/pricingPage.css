@@ -1,29 +1,53 @@
 /* Google Fonts */
-@import url(http://fonts.googleapis.com/css?family=Changa+One);
 @import url(http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700);
-@import url(http://fonts.googleapis.com/css?family=Exo+2:200,800,900);
+@import url(http://fonts.googleapis.com/css?family=Exo+2:100,200,700,800,900);
+
 /* Type */
-body{ font-family: 'Dosis', sans-serif;}
+/*<<<<< Google fonts Chrome bug fix (might not be needed in the future)*/
+body
+{
+-webkit-animation-duration: 0.1s;
+-webkit-animation-name: fontfix;
+-webkit-animation-iteration-count: 1;
+-webkit-animation-timing-function: linear;
+-webkit-animation-delay: 0.1s;
+}
+
+@-webkit-keyframes fontfix{
+from{ opacity: 1; }
+to{ opacity: 1; }
+}
+/*
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+body{ 
+	font-family: 'Dosis', sans-serif;
+	color: #231f20;
+}
 h1,h2,h3,h4,h5 { 
 	font-family: 'Exo 2', sans-serif;
-	font-weight: 800;
-	/*font-family: 'Changa One', cursive, Arial, serif; font-weight: 400; */
+	font-weight: 700;
+}
+h1{
+	font-size: 38px;
 }
 
+.sub-title{
+	font-size: 21px;
+}
 /* Defaults*/
 body{
-	padding-top: 70px;
+	padding-top: 60px;
 }
 b, strong {
-font-weight: 800;
+	font-weight: 700;
 }
 
-button > img ,
+button > img,
 a.btn > img{
 	vertical-align: text-bottom;
 }
 /* Custom button
--------------------------------------------------- */
+==================== */
 
 /* Override base .btn styles */
 /* Apply text and background changes to three key states: default, hover, and active (click). */
@@ -35,6 +59,13 @@ a.btn > img{
   background-color: #f54500;
   border-radius: 0;
   font-weight: 500;
+  box-shadow: 2px 2px 1px 0px #085680;
+  font-size: 16.5px;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  -ms-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
 }
 
 /* Apply the custom-colored gradients */
@@ -47,22 +78,28 @@ a.btn > img{
 /* Set the hover state */
 /* An easy hover state is just to move the gradient up a small amount. Add other embellishments as you see fit. */
 .btn-ttc:hover {
-  background-position: 0 -15px;
+  margin-top: -2px;
+  margin-left: -2px;
+  padding: 10px 16px;
+  border-radius: 3px;
 }
 .btn-ttc:focus {
   color: white;
 }
-/* Blue button */
+/* Blue button 
+==================*/
 .btn-ttc-blue,
 .btn-ttc-blue:hover,
 .btn-ttc-blue:active {
   color: white;
   text-shadow: none;
-  padding: 8px 14px;
+  padding: 7px 14px;
   background-color: #0c86c6;
   border-radius: 2px;
-  font-weight: 500;
-  box-shadow: 2px 2px 1px 0px #085680;
+  font-weight: 300;
+  box-shadow: 1px 1px 1px 0px #085680;
+  font-size: 16.5px;
+  letter-spacing: -0.015em;
   -webkit-transition: all 0.1s ease-out;
   -moz-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
@@ -82,15 +119,43 @@ a.btn > img{
 .btn-ttc-blue:focus {
   color: white;
 }
+.btn-ttc-blue>img{
+	margin-right: 6px;
+	padding-bottom: 2px;
+}
+/* Payment-plan Option Buttons 
+==================================*/
+.section-pricing .btn-group{
+	background-color: #dbd9da;
+	border-radius: 5px;
+	padding: 2px 2px 4px 2px;
+}
+.btn-payment-plan,
+.btn-payment-plan:active{
+	font-size: 16px;
+	box-shadow: none;
+	-webkit-box-shadow:none;
+    color: #231f20; 
+}
+.btn-payment-plan{
+	padding: 6px 18px;
+}
+.btn-payment-plan.active{
+	padding: 6px 16px;
+	color: white;
+	text-shadow: none;
+	background-color: #f54500;
+	border-radius: 2px!important;
+	font-weight: 500;
+	box-shadow: 1px 1px 1px 0px #a62f00;
+}
 
-/* Buttons */
-
-
-/* NavBar */
+/* NavBar 
+==============*/
 .navbar{
 	border-radius: 0;
 	border-width: 0;
-    min-height: 70px;
+    min-height: 60px;
     box-shadow: 3px 3px 0px #bfbfbf;
 }
 .navbar-toggle {
@@ -126,7 +191,7 @@ a.btn > img{
 .navbar .center-logo-holder{
 	position: absolute;
 	overflow: hidden;
-	height: 70px;
+	height: 60px;
 	top: 0;
 	margin: 0 auto;
 	width: 175px;
@@ -167,5 +232,81 @@ a.btn > img{
 }
 
 .navbar .back-btn-holder{
-	margin-left: 30px;
+	padding-top: 10px;
+	padding-left: 30px;
+}
+
+/* Sections 
+=================*/
+
+section .section-pricing{ background-color: #f2f0f1;}
+
+section .section-pricing h1.title{
+	margin-top: 23px;
+	margin-bottom: 5px;
+}
+section .section-pricing p.sub-title{
+	margin-top: 0px;
+	margin-bottom: 13px;
+}
+
+/* Pricing Table 
+==================*/
+.pricing-table{
+	margin-top: 50px;
+	max-width: 830px;
+}
+.pricing-table h1{
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 200;
+	font-size: 41px;
+	text-transform: uppercase;
+}
+.pricing-table strong{
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 700;
+}
+.pricing-table sup, sub{
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 200;
+	font-size: 16px;
+}
+.pricing-table sup{
+	top: -1em;
+}
+.pricing-table sub{
+	bottom: 0;
+}
+/* - VIP - */
+.vip-table{
+	background-color: #dbd9da;
+}
+.vip-table-header{
+	color: #fff;
+	background-color: #231f20;
+}
+.vip-table-content{
+	background-color: #dbd9da
+}
+/* - Business - */
+.business-table{
+	background-color: #fff;
+}
+.business-table-header{
+	color: #fff;
+	background-color: #f54500;
+}
+.business-table-content{
+	
+}
+/* - Free - */
+.free-table{
+	background-color: #dbd9da;
+}
+.free-table-header{
+	color: #fff;
+	background-color: #666161;
+}
+.free-table-content{
+	background-color: #dbd9da
 }

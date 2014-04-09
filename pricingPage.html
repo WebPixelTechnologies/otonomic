@@ -28,29 +28,103 @@
      <!-- top navbar -->
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
           <div class="navbar-header">
-               <button type="button" class="navbar-toggle track_event track_hover hidden" id="menu-toggle" data-toggle="offcanvas" data-target=".sidebar-nav" data-ga-category="Marketing Website"  data-ga-event="Menu Click" data-ga-event-hover="Menu Hover" data-ajax-track="1">
-                 <span class="icon-bar"></span>
-                 <span class="icon-bar"></span>
-                 <span class="icon-bar"></span>
-               </button>
-               <a class="navbar-brand hidden-xs" href="#"><img src="images/otonomic-logo.png" alt="otonomic logo"></a>
-          </div>
-          <div class="center-logo-holder">
-            <div class="center-logo center-block">
-              <img src="images/otonomic-logo.png" class="logo-img" alt="otonomic logo">
-            </div>
-          </div>
-          <div class="back-btn-holder">
-          	<button class="btn btn-ttc-blue back-btn"><img src="/images/pricing/back-icon.png" alt="Back"> Back to Your Website</button>
+	            <button type="button" class="navbar-toggle track_event track_hover hidden" id="menu-toggle" data-toggle="offcanvas" data-target=".sidebar-nav" data-ga-category="Marketing Website"  data-ga-event="Menu Click" data-ga-event-hover="Menu Hover" data-ajax-track="1">
+	              <span class="icon-bar"></span>
+	              <span class="icon-bar"></span>
+	              <span class="icon-bar"></span>
+	            </button>
+	            <div class="upper-bar">
+	              <div class="center-logo-holder">
+		              <div class="center-logo center-block">
+		              	<img src="images/otonomic-logo.png" class="logo-img" alt="otonomic logo" width="140px;">
+		              </div>
+		            </div>
+			          <div class="back-btn-holder">
+			          	<button class="btn btn-ttc-blue back-btn">
+			          		<img src="/images/pricing/back-icon.png" alt="Back"> Back to Your Website
+			          	</button>
+			          </div>
+			        </div>
+			        <div class="lower-bar hidden">
+	            	<a class="navbar-brand hidden-xs" href="#"><img src="images/otonomic-logo.png" alt="otonomic logo"></a>
+			        </div>
           </div>
       </div>
     </div>
     <div class="container-fluid">
-      <section class="home"><!-- Section Home -->
-        <div class="row section-home">
+      <section class="pricing"><!-- Section pricing -->
+        <div class="row section-pricing">
             <div class="col-xs-12 text-center">
-            <h1>Try our Premium plans - Free for 14 days!</h1>
-            <p>You can cancel any time.</p>
+            <h1 class="title">Try our Premium plans - Free for 14 days!</h1>
+            <p class="sub-title">You can cancel any time.</p>
+            </div>
+            <div class="col-xs-12 text-center">
+            	<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-payment-plan active">
+							    <input type="radio" name="payment-plan" id="yearly" > Yearly
+							  </label>
+							  <label class="btn btn-payment-plan">
+							    <input type="radio" name="payment-plan" id="monthly"> Monthly
+							  </label>
+							</div>
+            </div>
+            <div class="col-xs-12 text-center">
+            		<div class="row pricing-table center-block">
+            			<div class="col-xs-4 vip-table">
+            				<div class="vip-table-header">
+            					<h1>VIP <sup>$</sup><strong>29</strong><sub>00</sub></h1>
+            					<p>Per month, Billed annually</p>
+            				</div>
+            				<div class="vip-table-content">
+            						<ul>
+            							<li>Custom Design</li>
+            							<li>Advanced SEO</li>
+            							<li>No Banners</li>
+            							<li>Free Domain</li>
+            							<li>Unlimited Web Pages</li>
+            							<li>Unlimited Online Store Items</li>
+            							<li>5 Languages</li>
+            							<li>Phone /Chat /Email Support</li>
+            						</ul>
+            				  </div>
+            			</div>
+            			<div class="col-xs-4 business-table">
+            					<div class="business-table-header">
+            						<h1>Business <sup>$</sup><strong>8</strong><sub>00</sub></h1>
+            						<p>Per month, Billed annually</p>
+            				  </div>
+            				  <div class="business-table-content">
+            						<ul>
+            							<li>Custom Design</li>
+            							<li>Advanced SEO</li>
+            							<li>No Banners</li>
+            							<li>Free Domain</li>
+            							<li>8 Web Pages</li>
+            							<li>10 Online Store Items</li>
+            							<li>English Only</li>
+            							<li>Chat /Email Support</li>
+            						</ul>
+            				  </div>
+            			</div>
+            			<div class="col-xs-4 free-table">
+            					<div class="free-table-header">
+            						<h1>Free <sup>$</sup><strong>0</strong><sub>00</sub></h1>
+            						<p>No cost</p>
+            				  </div>
+            				  <div class="free-table-content">
+            						<ul>
+            							<li>Custom Design</li>
+            							<li>Advanced SEO</li>
+            							<li>No Banners</li>
+            							<li>Free Domain</li>
+            							<li>2 Web Pages</li>
+            							<li>2 Online Store Items</li>
+            							<li>English Only</li>
+            							<li>Email Support</li>
+            						</ul>
+            				  </div>
+            			</div>
+            		</div>
             </div>
         </div>
       </section>
