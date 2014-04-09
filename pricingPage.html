@@ -1,0 +1,107 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Otonomic - Pricing page</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <meta property="og:title" content="Even a small business deserves a big spotlight." />
+    <meta property="og:site_name" content="otonomic"/>
+    <meta property="og:description" content="In under 20 seconds , we will turn your Facebook page into a professional website"/>
+    <meta property="og:url" content="http://otonomic.com"/>
+    <meta property="og:image" content="http://otonomic.com/images/section-home-bg.png"/>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom style -->
+    <link href="css/pricingPage.css" rel="stylesheet">
+    <!-- Google+ -->
+    <link href="https://plus.google.com/112126439055007134666" rel="publisher">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<div class="container-fluid">
+     <!-- top navbar -->
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <div class="navbar-header">
+               <button type="button" class="navbar-toggle track_event track_hover hidden" id="menu-toggle" data-toggle="offcanvas" data-target=".sidebar-nav" data-ga-category="Marketing Website"  data-ga-event="Menu Click" data-ga-event-hover="Menu Hover" data-ajax-track="1">
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand hidden-xs" href="#"><img src="images/otonomic-logo.png" alt="otonomic logo"></a>
+          </div>
+          <div class="center-logo-holder">
+            <div class="center-logo center-block">
+              <img src="images/otonomic-logo.png" class="logo-img" alt="otonomic logo">
+            </div>
+          </div>
+          <div class="back-btn-holder">
+          	<button class="btn btn-ttc-blue back-btn"><img src="/images/pricing/back-icon.png" alt="Back"> Back to Your Website</button>
+          </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <section class="home"><!-- Section Home -->
+        <div class="row section-home">
+            <div class="col-xs-12 text-center">
+            <h1>Try our Premium plans - Free for 14 days!</h1>
+            <p>You can cancel any time.</p>
+            </div>
+        </div>
+      </section>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+    <!-- Custom JS -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+    
+    <!-- Social  -->
+    <!-- // Facebook -->
+    <div id="fb-root"></div>
+    <script type="text/javascript">
+        window.fbAsyncInit = function() {
+            FB.init({ appId: "373931652687761",status: true,cookie: true,xfbml: true});
+
+            window.fbAsyncInit.fbLoaded.resolve();
+            //checkConnectedWithFacebook();
+        };
+
+        window.fbAsyncInit.fbLoaded = jQuery.Deferred();
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js&appId=373931652687761";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- // Google Plus -->
+    <script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/platform.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+    <!-- // Twitter -->
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+    </script>
+    <!-- // Pintrest -->
+    <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
+    <!-- // Linkedin -->
+    <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+    <!-- /Social  -->
+  </body>
+</html>

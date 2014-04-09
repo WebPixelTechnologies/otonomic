@@ -39,7 +39,6 @@ font-weight: 800;
 .btn-ttc {
   background-repeat: repeat-x;
   background-image: linear-gradient(top, #f54500 0%, #f54500 100%);
-  ...
 }
 
 /* Set the hover state */

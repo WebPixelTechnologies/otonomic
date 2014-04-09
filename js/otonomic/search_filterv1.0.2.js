@@ -57,7 +57,7 @@ var redirect_url = '';
         var page_name = $('p.media-heading', this).html();
         var result_number = $(this).data('result-number');
         var search_query = $('.main_search_box').val();
-        closeSearch('#'+$(this).parent().parent().attr('id'));
+        closeSearch('#'+ $(this).parent().parent().attr('id'));
         showLoader('Your site is being created for you!', true);
         trackFBConnect('Search Marketing Website', 'Choose Page', $(this).attr('data-attr')+","+search_query + ' >> ' + page_name, result_number);
     });
@@ -215,7 +215,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
                     var simage = 'http://graph.facebook.com/' + val.id + '/picture?height=' + SEARCH_PICTURE_SIZE +'&width=' + SEARCH_PICTURE_SIZE;
                 }
 
-                items.push('<a class="media search-results-item" href="'+p2s_site_url+'/sites/add/fbid:'+val.id+'/.json" title="Click to view site" data-result-number="' + ind + '" >' +
+                items.push('<a class="media search-results-item" data-attr="'+$(InputField).attr('data-attr')+'" href="'+p2s_site_url+'/sites/add/fbid:'+val.id+'/.json" title="Click to view site" data-result-number="' + ind + '" >' +
                     '<div >' +
                     '<div class="pull-left fanpage">' +
                     '<img class="media-object" src="'+ simage +'">' +
@@ -246,7 +246,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
 }
 function closeSearch(targetContainer,from){
         found_result = 0;
-        trackFBConnect('Search Marketing Website', from+","+'Close');
+        trackFBConnect('Search Marketing Website','Close',from);
 
         var wrapper = $(targetContainer);
         wrapper.html($('<div/>', {}));
