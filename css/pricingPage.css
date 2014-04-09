@@ -3,22 +3,7 @@
 @import url(http://fonts.googleapis.com/css?family=Exo+2:100,200,700,800,900);
 
 /* Type */
-/*<<<<< Google fonts Chrome bug fix (might not be needed in the future)*/
-body
-{
--webkit-animation-duration: 0.1s;
--webkit-animation-name: fontfix;
--webkit-animation-iteration-count: 1;
--webkit-animation-timing-function: linear;
--webkit-animation-delay: 0.1s;
-}
 
-@-webkit-keyframes fontfix{
-from{ opacity: 1; }
-to{ opacity: 1; }
-}
-/*
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 body{ 
 	font-family: 'Dosis', sans-serif;
 	color: #231f20;
@@ -253,14 +238,19 @@ section .section-pricing p.sub-title{
 /* Pricing Table 
 ==================*/
 .pricing-table{
-	margin-top: 50px;
+	margin-top: 95px;
 	max-width: 830px;
+}
+.pricing-table > div{
+	border-radius: 2px;
 }
 .pricing-table h1{
 	font-family: 'Exo 2', sans-serif;
 	font-weight: 200;
 	font-size: 41px;
 	text-transform: uppercase;
+	margin-bottom: 5px;
+	margin-top: 8px;
 }
 .pricing-table strong{
 	font-family: 'Exo 2', sans-serif;
@@ -272,13 +262,43 @@ section .section-pricing p.sub-title{
 	font-size: 16px;
 }
 .pricing-table sup{
-	top: -1em;
+	top: -1.3em;
 }
 .pricing-table sub{
 	bottom: 0;
 }
+.pricing-table .table-header{
+	margin: -20px -15px;
+	margin-bottom: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 2px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+.pricing-table .table-header p{
+	font-size: 16px;
+	margin-bottom: 13px;
+}
+.pricing-table .table-header h1 strong{
+	font-size: 47px;
+}
+.pricing-table .table-content{
+	margin-top: 10px;
+}
+.pricing-table .table-content ul{
+	
+}
+.pricing-table .table-content ul li{
+	text-align: left;
+	font-size: 16px;
+	padding: 9px 0px;
+	list-style-type: square;
+}
 /* - VIP - */
 .vip-table{
+	margin-left: -25px;
+	width: 270px;
 	background-color: #dbd9da;
 }
 .vip-table-header{
@@ -290,9 +310,14 @@ section .section-pricing p.sub-title{
 }
 /* - Business - */
 .business-table{
+	margin-top: -25px;
+	padding-bottom: 35px!important;
+	width: 330px;
 	background-color: #fff;
+	box-shadow: 3px 3px 0px #dbd9da;
 }
 .business-table-header{
+	padding-top: 35px!important;
 	color: #fff;
 	background-color: #f54500;
 }
@@ -301,6 +326,7 @@ section .section-pricing p.sub-title{
 }
 /* - Free - */
 .free-table{
+	width: 230px;
 	background-color: #dbd9da;
 }
 .free-table-header{
