@@ -19,6 +19,7 @@ body{
 b, strong {
 font-weight: 800;
 }
+p{line-height: 23px;}
 /* Custom button
 -------------------------------------------------- */
 
@@ -395,8 +396,7 @@ section.features .row{
 }
 .section-reviews p{
 	color: white;
-	font-size: 20px;
-	line-height: 22px;
+	font-size: 18px;
 }
 
 /* ## Flippin ## */
@@ -561,7 +561,7 @@ section.features .row{
 	transition: all 0.4s ease-out;
 }
 .section-about .drop-screen.active{
-	height: 650px;
+	height: 620px;
 }
 .section-about .drop-screen-inner{
 	padding: 10px 60px 33px 60px;
@@ -586,6 +586,7 @@ section.features .row{
 .section-about .drop-screen p{
 	line-height: 23px;
 	font-size: 18px;
+	margin-top: 13px;
 }
 .section-about .bottom-bar{
 	background-color: #5a5a5a;
@@ -621,8 +622,8 @@ section.features .row{
 }
 .section-about .bg-text h3{
 	font-family: 'Dosis', sans-serif;
-	font-weight: 600;
-	font-size: 23px;
+	font-weight: 400;
+	font-size: 18px;
 }
 .section-about .bg-text p{
 	margin: 20px 0;

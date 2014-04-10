@@ -42,9 +42,9 @@ a.btn > img{
   color: white;
   text-shadow: none;
   background-color: #f54500;
-  border-radius: 0;
-  font-weight: 500;
-  box-shadow: 2px 2px 1px 0px #085680;
+  border-radius: 2px;
+  font-weight: 300;
+  box-shadow: 2px 2px 0px 0px #a62f00;
   font-size: 16.5px;
   -webkit-transition: all 0.1s ease-out;
   -moz-transition: all 0.1s ease-out;
@@ -63,10 +63,10 @@ a.btn > img{
 /* Set the hover state */
 /* An easy hover state is just to move the gradient up a small amount. Add other embellishments as you see fit. */
 .btn-ttc:hover {
-  margin-top: -2px;
-  margin-left: -2px;
-  padding: 10px 16px;
-  border-radius: 3px;
+  margin-top: 2px;
+  box-shadow: none;
+  /*margin-left: -2px;
+  padding: 10px 16px;*/
 }
 .btn-ttc:focus {
   color: white;
@@ -82,7 +82,7 @@ a.btn > img{
   background-color: #0c86c6;
   border-radius: 2px;
   font-weight: 300;
-  box-shadow: 1px 1px 1px 0px #085680;
+  box-shadow: 2px 2px 0px 0px #085680;
   font-size: 16.5px;
   letter-spacing: -0.015em;
   -webkit-transition: all 0.1s ease-out;
@@ -96,10 +96,10 @@ a.btn > img{
   background-image: linear-gradient(top, #0c86c6 0%, #0c86c6 100%);
 }
 .btn-ttc-blue:hover {
-  margin-top: -2px;
-  margin-left: -2px;
-  padding: 10px 16px;
-  border-radius: 3px;
+  	margin-top: -3px;
+  	margin-left: -2px;
+  	padding: 10px 16px;
+  	border-radius: 3px;
 }
 .btn-ttc-blue:focus {
   color: white;
@@ -124,6 +124,7 @@ a.btn > img{
 }
 .btn-payment-plan{
 	padding: 6px 18px;
+	margin-right: 1px;
 }
 .btn-payment-plan.active{
 	padding: 6px 16px;
@@ -132,7 +133,7 @@ a.btn > img{
 	background-color: #f54500;
 	border-radius: 2px!important;
 	font-weight: 500;
-	box-shadow: 1px 1px 1px 0px #a62f00;
+	box-shadow: 1px 1px 0px 0px #a62f00;
 }
 
 /* NavBar 
@@ -234,7 +235,16 @@ section .section-pricing p.sub-title{
 	margin-top: 0px;
 	margin-bottom: 13px;
 }
-
+section .section-pricing  .table-content ul{
+	margin-left: -20px;
+	margin-bottom: 30px;
+}
+section .table-content .btn {
+	font-family:'Exo 2', sans-serif;
+}
+section .table-content .btn b{
+	font-weight: 800!important;
+}
 /* Pricing Table 
 ==================*/
 .pricing-table{
@@ -285,6 +295,8 @@ section .section-pricing p.sub-title{
 }
 .pricing-table .table-content{
 	margin-top: 10px;
+	padding: 15px;
+	padding-top: 0;
 }
 .pricing-table .table-content ul{
 	
@@ -294,6 +306,14 @@ section .section-pricing p.sub-title{
 	font-size: 16px;
 	padding: 9px 0px;
 	list-style-type: square;
+	color: #0d0c0d;
+}
+.pricing-table .table-content ul > li.have{
+	list-style-image: url('../images/pricing/v.png');
+}
+.pricing-table .table-content ul > li.have-not{
+	list-style-image: url('../images/pricing/x.png');
+	text-decoration:line-through;
 }
 /* - VIP - */
 .vip-table{
@@ -308,21 +328,46 @@ section .section-pricing p.sub-title{
 .vip-table-content{
 	background-color: #dbd9da
 }
+.vip-table-content .btn{
+	background-color: #231f20;
+	box-shadow: 2px 2px 0px #000;
+	padding: 10px 10px;
+	font-size: 18px;
+	letter-spacing: 1px;
+}
+
 /* - Business - */
 .business-table{
 	margin-top: -25px;
-	padding-bottom: 35px!important;
+	padding-bottom: 15px!important;
 	width: 330px;
 	background-color: #fff;
 	box-shadow: 3px 3px 0px #dbd9da;
+	z-index: 10;
 }
 .business-table-header{
 	padding-top: 35px!important;
 	color: #fff;
 	background-color: #f54500;
 }
+.business-table-badge{
+	position: absolute;
+	top: -20;
+	left: 60px;
+	letter-spacing: 20px;
+}
 .business-table-content{
 	
+}
+.business-table-content .btn{
+	padding: 10px 45px;
+	font-size: 21px;
+	letter-spacing: 1px;
+}
+
+.business-table-content .btn img{
+	margin-right: 10px;
+	margin-left: -10px;
 }
 /* - Free - */
 .free-table{
@@ -335,4 +380,12 @@ section .section-pricing p.sub-title{
 }
 .free-table-content{
 	background-color: #dbd9da
+}
+.free-table-content .btn{
+	background-color: #666161;
+	box-shadow: none;
+	padding: 10px 10px;
+	font-size: 13px;
+	letter-spacing: 1px;
+	color: #9e9c93;
 }
