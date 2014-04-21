@@ -57,9 +57,9 @@ var redirect_url = '';
         var page_name = $('p.media-heading', this).html();
         var result_number = $(this).data('result-number');
         var search_query = $('.main_search_box').val();
-        closeSearch('#'+$(this).parent().parent().attr('id'));
+        closeSearch('#'+ $(this).parent().parent().attr('id'));
         showLoader('Your site is being created for you!', true);
-        trackFBConnect('Search LP', 'Choose Page', search_query + ' >> ' + page_name, result_number);
+        trackFBConnect('Search Marketing Website', 'Choose Page', $(this).attr('data-attr')+","+search_query + ' >> ' + page_name, result_number);
     });
 
     $('#preview-form .form-submit, #preview-form2 .form-submit').on('click', function (e) {
@@ -82,12 +82,10 @@ var redirect_url = '';
         $(this).tipsy("hide");
         var $el = $thisParent.find('.main_search_box');
         var $page_url = $el.val();
-
-        trackFBConnect("Search LP", "Go", $page_url);
-
+        trackFBConnect("Search Marketing Website", "Go", $(this).attr('data-attr')+","+$page_url);
         if ($page_url.indexOf("facebook.com") > -1) {
             var url = p2s_site_url + 'sites/add/?u=' + encodeURIComponent($page_url);
-            trackFBConnect("Search LP", "Choose Url", $page_url);
+            trackFBConnect("Search Marketing Website", "Choose Url", $page_url);
             setTimeout(function () { // now wait 300 milliseconds...
                 showLoader('Your site is being created for you!', true);
                 window.location = url;
@@ -98,7 +96,7 @@ var redirect_url = '';
 
 
         if (found_result == 1 && $.trim(found_only_result_url) != '') {
-            trackFBConnect("Search LP", "Choose Url", found_only_result_url);
+            trackFBConnect("Search Marketing Website", "Choose Url", $(this).attr('data-attr')+","+found_only_result_url);
             setTimeout(function () { // now wait 300 milliseconds...
                 showLoader('Your site is being created for you!', true);
                 window.location = found_only_result_url;
@@ -124,8 +122,8 @@ var redirect_url = '';
 
 $(document).ready(function($){
 
-    $(document).on('click','#how_do_i',function(e){
-        e.preventDefault();
+    $(document).on('click','#how_do_i',function(event){
+        event.preventDefault();
         var $this = $(this);
 
         if($this.hasClass('open')){
@@ -133,7 +131,7 @@ $(document).ready(function($){
         } else {
             openHowDoISteps();
         }
-        return false;
+        //return false;
     });
 
 });
@@ -180,7 +178,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
             return;
         }
         p2strack++;
-        trackFBConnect("Search LP", "Query", value, p2strack);
+        trackFBConnect("Search Marketing Website", "Query", $(InputField).attr('data-attr')+","+value, p2strack);
     }, 2000);
 
     if (!already_searched) {
@@ -217,7 +215,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
                     var simage = 'http://graph.facebook.com/' + val.id + '/picture?height=' + SEARCH_PICTURE_SIZE +'&width=' + SEARCH_PICTURE_SIZE;
                 }
 
-                items.push('<a class="media search-results-item" href="'+p2s_site_url+'/sites/add/fbid:'+val.id+'/.json" title="Click to view site" data-result-number="' + ind + '" >' +
+                items.push('<a class="media search-results-item" data-attr="'+$(InputField).attr('data-attr')+'" href="'+p2s_site_url+'/sites/add/fbid:'+val.id+'/.json" title="Click to view site" data-result-number="' + ind + '" >' +
                     '<div >' +
                     '<div class="pull-left fanpage">' +
                     '<img class="media-object" src="'+ simage +'">' +
@@ -246,9 +244,9 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
         }
     });
 }
-function closeSearch(targetContainer){
+function closeSearch(targetContainer,from){
         found_result = 0;
-        trackFBConnect('Search LP', 'Close');
+        trackFBConnect('Search Marketing Website','Close',from);
 
         var wrapper = $(targetContainer);
         wrapper.html($('<div/>', {}));
@@ -257,6 +255,7 @@ function closeSearch(targetContainer){
         jQuery('.btn_go').tipsy("hide");
         $(".close-search").hide();
         closeHowDoISteps();
+        $('#main_search_box').focus();
 }
 
 function show_searching_message(){
@@ -300,10 +299,18 @@ function openHowDoISteps(){
 var loaderCounter;
 var interval;
 function counterLoader(counterElementId){
-            loaderCounter = 10;
+            loaderCounter = 8;
             document.getElementById(counterElementId).innerHTML = loaderCounter;
             interval = setInterval(function(){
-                if (loaderCounter <= 0){
+                if (loaderCounter <= 1){
+                    //fade in/out animation 
+                    $(".loading-content").animate({opacity:"0"}, 300,"swing", function() {
+                        $('.loading-content').html('<p>Your new website is <strong>ready</strong>!</p>');
+                        $('.loading-image>img').attr('src','images/loading/v.gif');
+                        $('.loading-page .loading-content p').css('margin','71px 0  34px 0');
+                        $(".loading-content").animate({opacity:"1"}, 300,"swing");
+                    });
+                    // start redirect
                     setTimeout(function(){
                         var ua    = navigator.userAgent.toLowerCase(),
                         isIE      = ua.indexOf('msie') !== -1,
@@ -315,8 +322,11 @@ function counterLoader(counterElementId){
                     }
                     // All other browsers
                     else { window.location.href = redirect_url; }
-                    },500);
+                    },1000);
+
                     clearInterval(interval);
+                    loaderCounter--;
+                    document.getElementById(counterElementId).innerHTML = loaderCounter;
                     return;
                 }
                 loaderCounter--;

@@ -3,8 +3,8 @@
     var nextpageURL = 'http://www.page2site.com/shared/facebook_fanpages.php';
     var debug_enabled = 0;
 
-     var connect_path = '/shared/';
- var reference_time = new Date().getTime();
+    var connect_path = '/shared/';
+    var reference_time = new Date().getTime();
     var user_facebook_id;
     var fanpage_permissions = 'manage_pages,email,offline_access';
     var personal_permissions = 'user_location,user_about_me,user_photos,user_events,user_videos';
@@ -62,8 +62,8 @@
             //return false;
         });
 
-
-        $('#main_search_box').focus();
+        /* Disabled for marketing Website*/
+        //$('#main_search_box').focus();
 
         window.scrollTo(0,0);
     });

@@ -2,7 +2,7 @@
 /* Google Fonts */
 @import url(http://fonts.googleapis.com/css?family=Changa+One);
 @import url(http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700);
-@import url(http://fonts.googleapis.com/css?family=Exo+2:800,900);
+@import url(http://fonts.googleapis.com/css?family=Exo+2:200,800,900);
 /* Type */
 body{ font-family: 'Dosis', sans-serif;}
 h1,h2,h3,h4,h5 { 
@@ -16,7 +16,9 @@ body{
 	padding-top: 70px;
 	background-color: #222;
 }
-
+b, strong {
+font-weight: 800;
+}
 /* Custom button
 -------------------------------------------------- */
 
@@ -37,7 +39,6 @@ body{
 .btn-ttc {
   background-repeat: repeat-x;
   background-image: linear-gradient(top, #f54500 0%, #f54500 100%);
-  ...
 }
 
 /* Set the hover state */
@@ -231,13 +232,63 @@ body{
 .section-home .bg-image{
 	position: relative;
 	width: 100%;
-	margin-top: 138px;
+	margin-top: 30px;
 }
 .section-home .bg-image img{
 	position: relative;
 	top: 0;
 	margin-left: 50%;
 	left: -1250px;
+}
+/* ## Likes ## */
+.section-likes{
+	height: 100px;
+	padding-top: 0px;
+	padding-bottom: 20px;
+	background-color: #666666;
+}
+.section-likes h3{
+	color: #fff;
+}
+.section-likes .likes-div{
+	margin: 0 auto;
+	width: 380px;
+}
+.section-likes .like-div{
+	margin-right: 10px;
+	display: inline-block;
+	float: left;
+}
+.section-likes .btn-group{
+	width: 60%; 
+	margin: 20px auto 0 auto;
+}
+.section-likes .btn-group .dropdown-menu{
+	min-width: 100%;
+	background-color: #3b3b3b;
+	border:0;
+	border-radius: 0;
+	padding: 0px 0;
+	margin-bottom: -50px;
+}
+.section-likes .btn-group .dropdown-menu li{
+	border-bottom: 1px solid #595657;
+	padding: 15px 0;
+	text-align: left;
+	padding-left: 20%;
+}
+.section-likes .btn-social{
+	width: 100%;
+	height: 50px;
+	border:0;
+	color: #fff;
+	background-color: #3b3b3b;
+	box-shadow: 1px 1px 1px 0px #0d0d0d;
+	font-size: 24px;
+	line-height: 24px;
+}
+.section-likes .btn-social img{
+	margin-top: -5px;
 }
 /* ## Features ## */
 section.features .row{
@@ -252,8 +303,8 @@ section.features .row{
 .section-features > div{
 	text-align: center;
 	height: 395px;
-	padding-right: 50px;
-	padding-left: 50px;
+	padding-right: 40px;
+	padding-left: 40px;
 }
 .section-features .feature{
 	overflow: hidden;
@@ -263,14 +314,24 @@ section.features .row{
 	background-color: #fff;
 }
 .section-features .title{
+	display: table;
+    height:395px; /* height of parent */
+    overflow: hidden;
 	text-align: left;
 	color: white;
 	background-color: #ffc430;
-	padding: 120px 50px 120px 50px;
+	/*padding: 120px 50px 120px 50px;*/
 	text-shadow: 2px 2px 0px rgba(0,0,0,0.25);
 }
+.section-features .title .title-inner{
+	display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
 .section-features .title h1{
-		font-size: 41px;
+	font-size: 41px;
 }
 .section-features .feature-icon{
 	margin-top: 50px;
@@ -279,11 +340,10 @@ section.features .row{
 	transition: all 0.4s ease 0s;
 }
 .section-features h3{
-	padding-bottom: 50px;
-	text-align: center;
-	margin: 0 auto;
-	transition: all 0.5s ease 0s;
-	font-weight: 600;
+	padding-bottom: 10px;
+	font-family: 'Exo 2' sans-serif;
+	font-weight: 800;
+	text-align: left;
 }
 .section-features p{
 	opacity: 0;
@@ -309,12 +369,12 @@ section.features .row{
 
 .section-reviews{
 	background-color: #29abe2;
-	padding-bottom: 110px;
+	padding-bottom: 150px;
 }
 .section-reviews-inner{}
 .section-reviews h1{
 	margin-top: 42px;
-	margin-bottom: 108px;
+	margin-bottom: 80px;
 	color: white;
 	font-size: 42px;
 	text-shadow: 2px 2px 0px rgba(0,0,0,0.25);
@@ -384,6 +444,7 @@ section.features .row{
 
 .ch-info .ch-info-front {
 	overflow: hidden;
+	text-align: center;
 }
 
 .ch-info .ch-info-back {
@@ -396,8 +457,8 @@ section.features .row{
 	background: transparent;
 	opacity: 0;
 }
-
-.ch-item:hover .ch-info-front {
+/* Diabled hover Effect*/
+/*.ch-item:hover .ch-info-front {
 	-webkit-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
 	-moz-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
 	-o-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
@@ -406,6 +467,7 @@ section.features .row{
 	opacity: 0;
 }
 
+
 .ch-item:hover .ch-info-back {
 	-webkit-transform: rotate3d(1,0,0,0deg);
 	-moz-transform: rotate3d(1,0,0,0deg);
@@ -413,42 +475,55 @@ section.features .row{
 	-ms-transform: rotate3d(1,0,0,0deg);
 	transform: rotate3d(1,0,0,0deg);
 	opacity: 1;
-}
+}*/
 .ch-item .ch-text{
 	position: absolute;
 	top: 243px;
+	margin: 0 40px;
 }
 
-.ch-item .ch-text h3{ text-align: center;}
+.ch-item .ch-text h3{ text-align: left;}
 .ch-item .ch-text h4{ 
-	text-align: center;
-	opacity: 0;
+	text-align: left;
+	margin: 8px 0 10px;
+	opacity: 1; /*make visible  deafult = 0*/
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	-o-transition: all 0.4s ease;
 	-ms-transition: all 0.4s ease;
 	transition: all 0.4s ease;
 }
-.ch-item .ch-text p{ 
-	opacity: 0;
+.ch-item .ch-text p{
+	opacity: 1; /*make visible  deafult = 0*/
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	-o-transition: all 0.4s ease;
 	-ms-transition: all 0.4s ease;
 	transition: all 0.4s ease;
+}
+.ch-item .ch-text > h4 > a{
+	color:#000;
+	padding: 0;
+	text-decoration: none;
+}
+.ch-item .ch-text > h4 > a:hover{
+	color:#fff;
+	padding: 5px;
+	text-decoration: none;
+	background-color: #0f6b99;
 }
 .ch-item:hover .ch-text > h4{
 	opacity: 1;
 }
-.ch-item:hover .ch-text > h4 > a{
+/*.ch-item:hover .ch-text > h4 > a{
 	color: black;
 	padding: 5px;
-}
-.ch-item:hover .ch-text > h4 > a:hover{
+}*/
+/*.ch-item:hover .ch-text > h4 > a:hover{
 	color: black;
 	text-decoration: none;
 	background-color: #ffc430;
-}
+}*/
 .ch-item:hover .ch-text > p{
 	opacity: 1;
 }
@@ -522,7 +597,7 @@ section.features .row{
 	margin-left: -4px;
 	background-color: #3b3b3b;
 	border-radius: 50%;
-	height: 19px;
+	height: 18px;
 	width: 9px;
 }
 .section-about .bottom-bar-side-right{
@@ -534,7 +609,7 @@ section.features .row{
 }
 .section-about .bottom-bar-handle{
 	text-align: center;
-	margin-top: 19px;
+	margin-top: 18px;
 	cursor: pointer;
 	z-index: 1;
 }
@@ -610,9 +685,8 @@ section.features .row{
 .section-social{
 	background-color: #231f20;
 }
-.section-social h1{
+.section-social h3{
 	color: white;
-	font-size: 42px;
 	text-shadow: 2px 2px 0px rgba(0,0,0,0.25);
 }
 .section-social .social-links{
@@ -630,11 +704,13 @@ section.features .row{
 .section-social .social-links .social-link-holder.email{background-color: #ffc430;}
 
 .section-social .footer-links{
-	width: 642px;
+	max-width: 600px;
 	margin-top: 32px;
 	margin-bottom: 40px;
 }
 .section-social .footer-links .footer-link{
+	width: 33%;
+	text-align: center;
 	display: inline-block;
 	padding: 0 35px;
 	overflow: hidden;
@@ -645,21 +721,31 @@ section.features .row{
 }
 .section-social .footer-links .footer-link a{
 	font-weight: 300;
-	font-size: 36px;
+	font-size: 23px;
 	color: #b2a8a8;
 	letter-spacing: -0.005em;
 }
 .section-social .footer-links .footer-link a:hover{
 	text-decoration: none;
 }
-
+.section-social .powered-by{
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+.section-social .powered-by img{
+	height: 36px;
+	margin-top: -22px;
+}
 /* Mobile Specific
 ------------------------------------------------------------------ */
 .carousel-inner > .item {
-    -webkit-transition: 0.2s ease-in-out left;
-    -moz-transition: 0.2s ease-in-out left;
-    -o-transition: 0.2s ease-in-out left;
-    transition: 0.2s ease-in-out left;
+    -webkit-transition: 0.3s ease-in-out left;
+    -moz-transition: 0.3s ease-in-out left;
+    -o-transition: 0.3s ease-in-out left;
+    transition: 0.3s ease-in-out left;
 }
 .carousel-indicators {
 	position: static;
@@ -920,7 +1006,7 @@ section.features .features-mobile{
 }
 .about-mobile .carousel-inner .item{
 	padding-top: 20px;
-	min-height: 496px;
+	min-height: 545px;
 }
 .about-mobile .carousel-inner .item img{
 	position: absolute;
@@ -1011,7 +1097,19 @@ img.grayscale.disabled {
     -webkit-filter: grayscale(0%);
 }
 */
+
+/* Social Buttons Enforce width*/
+
+iframe#twitter-widget-0{
+	width: 80px!important;
+}
+div#___plusone_0{
+	width: 60px!important;
+}
 @media (max-width:767px) {
+	.carousel-caption p{
+		font-size: 19px!important;
+	}
 	.navbar .facebook-input-holder {
 		width: 100%;
 		position: absolute;
@@ -1077,8 +1175,8 @@ img.grayscale.disabled {
   	font-size: 24px;
   }
 	.section-home p{
-		font-size: 18px;
-		line-height: 18px;
+		font-size: 23px;
+		line-height: 23px;
 	}
   .section-social .social-links,
   .section-social .footer-links {

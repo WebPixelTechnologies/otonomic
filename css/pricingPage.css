@@ -1,0 +1,171 @@
+/* Google Fonts */
+@import url(http://fonts.googleapis.com/css?family=Changa+One);
+@import url(http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700);
+@import url(http://fonts.googleapis.com/css?family=Exo+2:200,800,900);
+/* Type */
+body{ font-family: 'Dosis', sans-serif;}
+h1,h2,h3,h4,h5 { 
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 800;
+	/*font-family: 'Changa One', cursive, Arial, serif; font-weight: 400; */
+}
+
+/* Defaults*/
+body{
+	padding-top: 70px;
+}
+b, strong {
+font-weight: 800;
+}
+
+button > img ,
+a.btn > img{
+	vertical-align: text-bottom;
+}
+/* Custom button
+-------------------------------------------------- */
+
+/* Override base .btn styles */
+/* Apply text and background changes to three key states: default, hover, and active (click). */
+.btn-ttc,
+.btn-ttc:hover,
+.btn-ttc:active {
+  color: white;
+  text-shadow: none;
+  background-color: #f54500;
+  border-radius: 0;
+  font-weight: 500;
+}
+
+/* Apply the custom-colored gradients */
+/* Note: you'll need to include all the appropriate gradients for various browsers and standards. */
+.btn-ttc {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(top, #f54500 0%, #f54500 100%);
+}
+
+/* Set the hover state */
+/* An easy hover state is just to move the gradient up a small amount. Add other embellishments as you see fit. */
+.btn-ttc:hover {
+  background-position: 0 -15px;
+}
+.btn-ttc:focus {
+  color: white;
+}
+/* Blue button */
+.btn-ttc-blue,
+.btn-ttc-blue:hover,
+.btn-ttc-blue:active {
+  color: white;
+  text-shadow: none;
+  padding: 8px 14px;
+  background-color: #0c86c6;
+  border-radius: 2px;
+  font-weight: 500;
+  box-shadow: 2px 2px 1px 0px #085680;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  -ms-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+.btn-ttc-blue {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(top, #0c86c6 0%, #0c86c6 100%);
+}
+.btn-ttc-blue:hover {
+  margin-top: -2px;
+  margin-left: -2px;
+  padding: 10px 16px;
+  border-radius: 3px;
+}
+.btn-ttc-blue:focus {
+  color: white;
+}
+
+/* Buttons */
+
+
+/* NavBar */
+.navbar{
+	border-radius: 0;
+	border-width: 0;
+    min-height: 70px;
+    box-shadow: 3px 3px 0px #bfbfbf;
+}
+.navbar-toggle {
+	border: 0px solid transparent;
+	display: block;
+	margin-right: 0;
+	padding: 14px 19px 8px 19px;
+}
+.navbar-toggle .icon-bar {
+	height: 6px;
+	width: 30px;
+
+}
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+	background-color: transparent;
+}
+
+.navbar-brand {
+	float: none;
+	padding: 15px;
+	font-size: 18px;
+	line-height: 20px;
+	height: 50px;
+}
+.navbar-brand img{
+	margin-top: -65px;
+	width: 126px;
+}
+.navbar-header {
+	float: none;
+	display: block;
+}
+.navbar .center-logo-holder{
+	position: absolute;
+	overflow: hidden;
+	height: 70px;
+	top: 0;
+	margin: 0 auto;
+	width: 175px;
+	left: 50%;
+	margin-left: -87px;
+}
+.navbar .center-logo{
+	width: 148px;
+	position: absolute;
+	top: 9px;
+	left: 50%;
+	margin-left: -74px;
+	text-align: center;
+}
+.navbar .center-logo .logo-img{
+	margin-left: 11px;
+}
+.navbar .facebook-input-holder{
+	width: 550px;
+	position: absolute;
+	top: -50px;
+	right: 50%;
+	margin-right: -275px;
+}
+.navbar .facebook-input-holder .btn-ttc{
+	box-shadow: 2px 2px 0px rgba(0,0,0,0.25);
+	width: 150px;
+	height: 37px;
+	margin-left: 5px;
+	font-size: 16px;
+}
+.navbar .facebook-input-holder #main_search_box2.form-control{
+	width: 390px;
+	height: 37px;
+	border:0;
+	border-radius: 0;
+	font-size: 16px;
+}
+
+.navbar .back-btn-holder{
+	margin-left: 30px;
+}

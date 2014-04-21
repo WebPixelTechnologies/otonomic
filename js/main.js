@@ -12,19 +12,39 @@
             //distance triggers swipe
             threshold:50
           });
-          //Enable swiping for menu
-          $("#sidebar-wrapper, .home , a.sidebar-link").swipe( {
-            excludedElements:"button, input, select, textarea, a, .noSwipe",
-            //Generic swipe handler for all directions
-            swipeLeft:function(event, direction, distance, duration, fingerCount) {
-              openCloseMenu();
-            },
-            swipeRight: function() {
-              openCloseMenu();
-            },
-            // distance triggers swipe
-            threshold:50
-          });
+          if ($(window).width() < 960) {
+            //Enable swiping for menu
+            $("#sidebar-wrapper, .home , a.sidebar-link").swipe( {
+              excludedElements:"button, input, select, textarea, a, .noSwipe",
+              //Generic swipe handler for all directions
+              swipeLeft:function(event, direction, distance, duration, fingerCount) {
+                openCloseMenu();
+              },
+              swipeRight: function() {
+                openCloseMenu();
+              },
+              // distance triggers swipe
+              threshold:50
+            });
+            // init scrollsnap
+            /*$(document).scrollsnap({
+                snaps: 'div.row.visible-xs',
+                proximity: 100,
+                onSnapWait: 500,
+                offset:-70,
+                onSnap: function(obj){
+                  console.log(obj.context.className);
+                  if(obj.context.className != 'home'){
+                    //console.log('onSnap: Down');
+                    //navBarToggle('down');
+                  }
+                  else{
+                    //console.log('onSnap: Up');
+                    //navBarToggle('up');
+                  }
+                }
+            });*/
+          }
 
           // Turn to grayscale after page load
           function turnToGrayscale() {
@@ -33,15 +53,19 @@
           setTimeout(turnToGrayscale, 3500);
 
           // Turn on grayscale onFocus on input field 
-          $( "#main_search_box" ).focus(function() {
+          $( "#main_search_box" ).focus(function(event) {
+            event.stopPropagation();
             $('.bg-image>img').removeClass('disabled');
             $('.bg-image>img').addClass('grayscale');
           });
           // Turn off grayscale onFocus on input field 
-          $( "#main_search_box" ).blur(function() {
+          $( "#main_search_box" ).focusout(function() {
             $('.bg-image>img').addClass('disabled');
+            console.log("focus out");
           });
-
+          $( "#main_search_box" ).click(function(event){
+            event.stopPropagation();
+          })
           // Side menu button toggle
           function openCloseMenu(){
             //if open then close
@@ -70,18 +94,33 @@
             });  
           }
 
-          $("#menu-toggle").click(function(e) {
-              e.preventDefault();
+          $("#menu-toggle").click(function(event) {
+              event.preventDefault();
               openCloseMenu();
           });
           $("section").click(function() {
+            //closeSearch('.search-wrapper');
             if ($("#menu-toggle").hasClass('active')) {
-              $( "#main_search_box" ).blur();
               closeMenu();
             }
           });
+
+          // Close .t_box if click anywhere but the box
+          /*$('section').click(function(){
+              closeSearch('.search-wrapper');
+          });*/
+          
+          $(".search-wrapper").click(function(e) {
+              //e.stopPropagation(); // This is the preferred method.
+              //return false;        // This should not be used unless you do not want
+                                   // any click events registering inside the div
+          });
+          //<<<<<<<<<< Disable Features-Section Animations
+          $('.section-features .feature img').addClass('active');
+          $('.section-features .feature h3').addClass('active');
+          $('.section-features .feature p').addClass('active');
           // feature hover
-          $('.feature').hover(
+          /*$('.feature').hover(
           // rollover
           function(){
             $(this).find('.feature-icon').addClass('active');
@@ -93,10 +132,11 @@
             $(this).find('.feature-icon').removeClass('active');
             $(this).find('h3').removeClass('active');
             $(this).find('p').removeClass('active');
-          });
+          });*/
+          // >>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
           // toggle Drop Screen
-          $('.bottom-bar-handle').click(function() {
+          $('.bottom-bar-handle').mousedown(function() {
             if($('.drop-screen').hasClass('active')){
                   trackEvent('Marketing Website', 'About Click', 'Open', '');
                   p2sTrack('Marketing Website', 'About Click', 'Open', '');
@@ -178,43 +218,4 @@
               $(this).addClass('mobile-header-placeholder');
             }
           });
-
-          // init scrollsnap
-          /*$(document).scrollsnap({
-              snaps: 'div.row.visible-xs',
-              proximity: 100,
-              onSnapWait: 500,
-              offset:-70,
-              onSnap: function(obj){
-                console.log(obj.context.className);
-                if(obj.context.className != 'home'){
-                  //console.log('onSnap: Down');
-                  //navBarToggle('down');
-                }
-                else{
-                  //console.log('onSnap: Up');
-                  //navBarToggle('up');
-                }
-              }
-          });*/
       });
-// Facebook share 
-function fbShare(url, title, descr, image, winWidth, winHeight) {
-    var winTop = (screen.height / 2) - (winHeight / 2);
-    var winLeft = (screen.width / 2) - (winWidth / 2);
-    window.open('http://www.facebook.com/sharer.php?s=100&p[title]=' + title + '&p[summary]=' + descr + '&p[url]=' + url + '&p[images][0]=' + image, 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width='+winWidth+',height='+winHeight);
-}
-
-// Google share 
-function googlePlusShare(url, winWidth, winHeight) {
-    var winTop = (screen.height / 2) - (winHeight / 2);
-    var winLeft = (screen.width / 2) - (winWidth / 2);
-    window.open(url,'','top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width='+winWidth+',height='+winHeight);
-}
-
-// Twitter share 
-function twitterShare(url, winWidth, winHeight) {
-    var winTop = (screen.height / 2) - (winHeight / 2);
-    var winLeft = (screen.width / 2) - (winWidth / 2);
-    window.open(url,'','top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width='+winWidth+',height='+winHeight);
-}
