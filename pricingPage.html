@@ -129,7 +129,7 @@
             							<li data-index="6">English Only</li>
             							<li data-index="7">Email Support</li>
             						</ul>
-            						<button class="btn btn-ttc"><b>Already on this plan</b></button>
+            						<button class="btn btn-ttc">Already on this plan</button>
             				  </div>
             			</div>
             		</div>
@@ -142,8 +142,8 @@
             		<span><img src="images/pricing/v.png"> Email Address</span>
             	</p>
             	<img src="images/pricing/creditCards_logos.png" alt="Credit Cards logos">
-            	<p><img src="images/pricing/lock.png" class="lock-icon"> PayPal, Visa, MasterCard secure payments</p>
-            	<!-- <div class="fb-facepile" data-href="http://otonomic.com/" data-width="270" data-max-rows="1" data-colorscheme="light" data-size="large" data-show-count="true"></div> -->
+            	<p class="payments"><img src="images/pricing/lock.png" class="lock-icon"> PayPal, Visa, MasterCard secure payments</p>
+            	<div class="fb-facepile" data-href="http://otonomic.com/" data-width="270" data-max-rows="1" data-colorscheme="light" data-size="large" data-show-count="true"></div>
             </div>
         </div>
       </section>
@@ -257,9 +257,8 @@
 	          	</div>
 	          	<div class="text-center figure">
 	          		<img src="images/pricing/figure1.png">
-	          		<p>Didn’t find your answer?
-	          			<button class="btn btn-ttc"><img src="images/pricing/email-icon.png"/>Contact Us</button>
-	          		</p>
+	          		<p>Didn’t find your answer?</p>
+	          		<button class="btn btn-ttc"><img src="images/pricing/email-icon.png"/>Contact Us</button>
 	          	</div>
 	          </div>
 	      </div>
@@ -290,6 +289,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.easing.min.js"></script>
     <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
@@ -338,15 +338,15 @@
     <script type="text/javascript">
     $(document).ready(
     	function(){
-    	$('.pricing-table .table-content ul li').hover(function(){
-    		var index = $(this).attr('data-index');
-    		console.log('hover list:'+index);
-    		$('.pricing-table .table-content ul li[data-index='+index+']').addClass('active');
-    	},
-    	function(){
-    		var index = $(this).attr('data-index');
-    		$('.pricing-table .table-content ul li[data-index='+index+']').removeClass('active');
-    	});
+    		// toggle table hover
+	    	$('.pricing-table .table-content ul li').hover(function(){
+	    		var index = $(this).attr('data-index');
+	    		$('.pricing-table .table-content ul li[data-index='+index+']').addClass('active');
+	    	},
+	    	function(){
+	    		var index = $(this).attr('data-index');
+	    		$('.pricing-table .table-content ul li[data-index='+index+']').removeClass('active');
+	    	});
     });
     </script>
   </body>
