@@ -15,7 +15,9 @@ h1,h2,h3,h4,h5 {
 h1{
 	font-size: 38px;
 }
-
+h3{
+	font-size: 21px;
+}
 .sub-title{
 	font-size: 21px;
 }
@@ -44,7 +46,7 @@ a.btn > img{
   background-color: #f54500;
   border-radius: 2px;
   font-weight: 300;
-  box-shadow: 2px 2px 0px 0px #a62f00;
+  box-shadow: 1px 1px 0px 0px #a62f00;
   font-size: 16.5px;
   -webkit-transition: all 0.1s ease-out;
   -moz-transition: all 0.1s ease-out;
@@ -63,10 +65,10 @@ a.btn > img{
 /* Set the hover state */
 /* An easy hover state is just to move the gradient up a small amount. Add other embellishments as you see fit. */
 .btn-ttc:hover {
-  margin-top: 2px;
-  box-shadow: none;
-  /*margin-left: -2px;
-  padding: 10px 16px;*/
+  /*margin-top: 2px;*/
+  /*box-shadow: none;*/
+  /*margin-left: 2px;*/
+  /*padding: 10px 16px;*/
 }
 .btn-ttc:focus {
   color: white;
@@ -236,14 +238,176 @@ section .section-pricing p.sub-title{
 	margin-bottom: 13px;
 }
 section .section-pricing  .table-content ul{
-	margin-left: -20px;
-	margin-bottom: 30px;
+	margin-left: -40px;
+	margin-bottom: 20px;
 }
 section .table-content .btn {
 	font-family:'Exo 2', sans-serif;
 }
 section .table-content .btn b{
 	font-weight: 800!important;
+}
+section .plans-include{
+	margin-top: 25px;
+}
+section .plans-include h3{
+
+}
+section .plans-include p{
+	font-size: 16px;
+	font-weight: 300;
+	color: #666161;
+	margin-bottom: 20px;
+}
+section .plans-include p span{
+	margin-right: 15px;
+}
+section .plans-include p span>img{
+	margin-right: 5px;
+}
+section .plans-include .lock-icon{
+	margin-top: -8px;
+	margin-right: 5px;
+}
+
+
+section .section-counter{
+	height: 85px;
+	color: #fff;
+	background-color: #231f20;
+	border-top: 3px solid #bfbfbf;
+	border-bottom: 3px solid #a62f00;
+}
+section .section-counter .counter-inner{
+	margin-top: 5px;
+}
+
+section .section-counter img{
+	vertical-align: top;
+}
+section .section-counter p{
+	display: inline-block;
+	font-size: 21px;
+	padding-top: 11px;
+}
+section .section-counter .counter-digits{
+	color: #fff;
+	font-size: 33px;
+	font-weight: 800;
+	font-family: 'Exo 2',sans-serif;
+}
+
+section .section-testimonials{
+	color: #fff;
+	font-size: 16px;
+	background-color: #f54500;
+}
+section .section-testimonials .testimonial{
+	padding: 50px 50px;
+}
+section .section-testimonials h3{
+	color: #231f20;
+	font-size: 21px;
+	font-weight: 800;
+	margin-bottom: 0;
+}
+
+section .section-testimonials a{
+	color: #231f20;
+}
+section .section-testimonials p{
+	margin-top: 10px;
+}
+
+section .section-likes{
+	height: 100px;
+	padding-top: 0px;
+	padding-bottom: 20px;
+	background-color: #f54500;
+}
+section .section-likes h3{
+	margin-top: 0;
+	color: #000;
+	font-size: 21px;
+	font-weight: 800;
+}
+section .section-likes .likes-div{
+	margin: 0 auto;
+}
+section .section-likes .like-div{
+	min-width: 90px;
+	/*margin-right: 10px;*/
+	display: inline-block;
+	text-align: left;
+}
+section .section-likes .fb{
+	padding-right: 28px;
+}
+
+section .section-faq {
+	background-color: #fff;
+	border-top: 3px solid #bfbfbf;
+	border-bottom: 3px solid #bfbfbf;
+}
+
+section .section-faq h3.question{
+	font-weight: 800;
+	font-family: 'Exo 2',sans-serif;
+	color: #f54500;
+}
+section .section-faq p.answer{
+	font-size: 16px;
+	color: #231f20;
+}
+section .section-faq img{
+	vertical-align: top;
+}
+section .section-faq .figure{
+	margin-bottom: -4px;
+}
+section .section-faq .figure p{
+	display: inline-block;
+	font-size: 21px;
+	padding-top: 55px;
+}
+section .section-faq .figure img{
+	vertical-align: middle;
+	padding-right: 5px;
+	margin-top: -3px;
+}
+section .section-start-trial{
+	color: #fff;
+	min-height: 500px;
+	background-color: #231f20;
+	background-image: url('../images/pricing/footer-bg.png');
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+section .section-start-trial p.sub-title{
+	color: #dbd9da;
+	font-size: 19px;
+	margin-top: 15px;
+	margin-bottom: 13px;
+}
+section .section-footer ul{
+	list-style-type: none;
+	width: 100%;
+	margin: 0 auto;
+
+}
+section .section-footer ul li{
+	display: inline-block;
+	margin: 0 auto;
+	padding: 0 5px;
+	font-size: 16px;
+}
+section .section-footer ul li a{
+	color: #231f20;
+}
+section .section-footer ul li img{
+	margin-top: 2px;
+	margin-left: 5px;
+	margin-bottom: 20px;
 }
 /* Pricing Table 
 ==================*/
@@ -253,6 +417,8 @@ section .table-content .btn b{
 }
 .pricing-table > div{
 	border-radius: 2px;
+	padding-left: 0;
+	padding-right: 0;
 }
 .pricing-table h1{
 	font-family: 'Exo 2', sans-serif;
@@ -294,9 +460,10 @@ section .table-content .btn b{
 	font-size: 47px;
 }
 .pricing-table .table-content{
-	margin-top: 10px;
-	padding: 15px;
-	padding-top: 0;
+	margin: 0px;
+	margin-left: -15px;
+	padding-top: 10px;
+	padding-bottom: 15px;
 }
 .pricing-table .table-content ul{
 	
@@ -304,9 +471,17 @@ section .table-content .btn b{
 .pricing-table .table-content ul li{
 	text-align: left;
 	font-size: 16px;
-	padding: 9px 0px;
+	padding: 9px 30px;
+	list-style-position: inside;
 	list-style-type: square;
 	color: #0d0c0d;
+	cursor: default;
+}
+.pricing-table .table-content ul li.active{
+	padding: 9px 30px 6px 30px;
+	background-color: #f2f0f1;
+	border-bottom: 3px solid #bfbfbf;
+	/*margin-top: 3px;*/
 }
 .pricing-table .table-content ul > li.have{
 	list-style-image: url('../images/pricing/v.png');
@@ -316,72 +491,92 @@ section .table-content .btn b{
 	text-decoration:line-through;
 }
 /* - VIP - */
-.vip-table{
+.pricing-table .vip-table{
 	margin-left: -25px;
 	width: 270px;
-	background-color: #dbd9da;
 }
-.vip-table-header{
+.pricing-table .vip-table-header{
 	color: #fff;
 	background-color: #231f20;
 }
-.vip-table-content{
+.pricing-table .vip-table-content{
 	background-color: #dbd9da
 }
-.vip-table-content .btn{
+.pricing-table .vip-table-content .btn{
+	margin-right: 15px;
 	background-color: #231f20;
 	box-shadow: 2px 2px 0px #000;
-	padding: 10px 10px;
+	padding: 6px 30px;
 	font-size: 18px;
 	letter-spacing: 1px;
 }
 
 /* - Business - */
-.business-table{
+.pricing-table .business-table{
 	margin-top: -25px;
 	padding-bottom: 15px!important;
-	width: 330px;
-	background-color: #fff;
-	box-shadow: 3px 3px 0px #dbd9da;
+	width: 300px;
 	z-index: 10;
 }
-.business-table-header{
+.pricing-table .business-table-header{
 	padding-top: 35px!important;
 	color: #fff;
 	background-color: #f54500;
+	box-shadow: 3px 3px 0px #dbd9da;
 }
-.business-table-badge{
+.pricing-table .business-table-badge{
 	position: absolute;
-	top: -20;
+	top: -20px;
 	left: 60px;
 	letter-spacing: 20px;
 }
-.business-table-content{
-	
+.pricing-table .business-table-dude{
+	position: absolute;
+	top: -129px;
+	left: 270px;
 }
-.business-table-content .btn{
+.pricing-table .business-table-dude-text{
+	position: absolute;
+	top: 27px;
+	right: -65px;
+	font-size: 16px;
+	font-weight: 700;
+	color: #f54500;
+}
+.pricing-table .business-table-content{
+	margin-right: -15px!important;
+	background-color: #fff;
+	box-shadow: 0px 3px 0px #dbd9da;
+	padding-bottom: 30px;
+}
+.pricing-table .business-table-content ul{
+	margin-bottom: 35px;
+}
+.pricing-table .business-table-content .btn{
 	padding: 10px 45px;
 	font-size: 21px;
 	letter-spacing: 1px;
+	box-shadow: 3px 3px 0px 0px #a62f00;
 }
 
-.business-table-content .btn img{
+.pricing-table .business-table-content .btn img{
 	margin-right: 10px;
 	margin-left: -10px;
 }
 /* - Free - */
-.free-table{
+.pricing-table .free-table{
 	width: 230px;
-	background-color: #dbd9da;
 }
-.free-table-header{
+.pricing-table .free-table-header{
 	color: #fff;
 	background-color: #666161;
 }
-.free-table-content{
+.pricing-table .free-table-content{
+	margin-left: 15px!important;
+	margin-right: -15px!important;
 	background-color: #dbd9da
 }
-.free-table-content .btn{
+.pricing-table .free-table-content .btn{
 	background-color: #666161;
 	box-shadow: none;
 	padding: 10px 10px;
