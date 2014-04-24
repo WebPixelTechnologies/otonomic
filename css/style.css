@@ -546,6 +546,13 @@ section.features .row{
 	background-color: #acbf00;
 	overflow: hidden;
 }
+.section-about h1 {
+	margin-top: 42px;
+	margin-bottom: 50px;
+	color: white;
+	font-size: 42px;
+	text-shadow: 2px 2px 0px rgba(0,0,0,0.25);
+}
 .section-about-inner{}
 .section-about .drop-screen{
 	height: 80px;
@@ -618,7 +625,8 @@ section.features .row{
 	z-index: 1;
 }
 .section-about .bg-text{
-	margin-top: 160px;
+	/*margin-top: 160px;*/
+	margin-top: -15px;
 	padding: 15px;
 	width: 560px;
 	color: white;
@@ -1218,7 +1226,24 @@ img.grayscale.disabled {
 		margin-left: 70%;
 		left: -600px;
 	}
-}
+	.section-about .bg-text {
+		width: 100%;
+	}
+	.section-about .bg-about {
+		height: 100px;
+		margin-top: 0;
+	}
+	.section-about .bg-about .team-default {
+		width: 90%;
+		left: -45%;
+		top: 5px;
+	}
+	.section-about .bg-about .computers {
+		margin-left: 0;
+		left: -70%;
+		width: 240%;
+		top: 50px;
+	}
 @media (min-width: 768px) and (max-width: 829px) {
   .holder {
     width: 100%;
