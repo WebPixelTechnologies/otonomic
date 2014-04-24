@@ -1244,6 +1244,7 @@ img.grayscale.disabled {
 		width: 240%;
 		top: 50px;
 	}
+}
 @media (min-width: 768px) and (max-width: 829px) {
   .holder {
     width: 100%;
