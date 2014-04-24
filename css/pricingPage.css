@@ -1,29 +1,40 @@
 /* Google Fonts */
-@import url(http://fonts.googleapis.com/css?family=Changa+One);
 @import url(http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700);
-@import url(http://fonts.googleapis.com/css?family=Exo+2:200,800,900);
+@import url(http://fonts.googleapis.com/css?family=Exo+2:100,200,700,800,900);
+
 /* Type */
-body{ font-family: 'Dosis', sans-serif;}
+
+body{ 
+	font-family: 'Dosis', sans-serif;
+	color: #231f20;
+}
 h1,h2,h3,h4,h5 { 
 	font-family: 'Exo 2', sans-serif;
-	font-weight: 800;
-	/*font-family: 'Changa One', cursive, Arial, serif; font-weight: 400; */
+	font-weight: 700;
 }
-
+h1{
+	font-size: 38px;
+}
+h3{
+	font-size: 21px;
+}
+.sub-title{
+	font-size: 21px;
+}
 /* Defaults*/
 body{
-	padding-top: 70px;
+	padding-top: 60px;
 }
 b, strong {
-font-weight: 800;
+	font-weight: 700;
 }
 
-button > img ,
+button > img,
 a.btn > img{
 	vertical-align: text-bottom;
 }
 /* Custom button
--------------------------------------------------- */
+==================== */
 
 /* Override base .btn styles */
 /* Apply text and background changes to three key states: default, hover, and active (click). */
@@ -33,8 +44,16 @@ a.btn > img{
   color: white;
   text-shadow: none;
   background-color: #f54500;
-  border-radius: 0;
-  font-weight: 500;
+  border-radius: 2px;
+  font-weight: 300;
+  padding: 7px 14px;
+  box-shadow: 2px 2px 0px 0px #a62f00;
+  font-size: 16.5px;
+/*  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  -ms-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;*/
 }
 
 /* Apply the custom-colored gradients */
@@ -47,22 +66,27 @@ a.btn > img{
 /* Set the hover state */
 /* An easy hover state is just to move the gradient up a small amount. Add other embellishments as you see fit. */
 .btn-ttc:hover {
-  background-position: 0 -15px;
+	margin-top: 1px;
+  	margin-left: 1px;
+  	box-shadow: 1px 1px 0px 0px #a62f00;
 }
 .btn-ttc:focus {
   color: white;
 }
-/* Blue button */
+/* Blue button 
+==================*/
 .btn-ttc-blue,
 .btn-ttc-blue:hover,
 .btn-ttc-blue:active {
   color: white;
   text-shadow: none;
-  padding: 8px 14px;
+  padding: 7px 14px;
   background-color: #0c86c6;
   border-radius: 2px;
-  font-weight: 500;
-  box-shadow: 2px 2px 1px 0px #085680;
+  font-weight: 300;
+  box-shadow: 2px 2px 0px 0px #085680;
+  font-size: 16.5px;
+  letter-spacing: -0.015em;
   -webkit-transition: all 0.1s ease-out;
   -moz-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
@@ -74,23 +98,52 @@ a.btn > img{
   background-image: linear-gradient(top, #0c86c6 0%, #0c86c6 100%);
 }
 .btn-ttc-blue:hover {
-  margin-top: -2px;
-  margin-left: -2px;
-  padding: 10px 16px;
-  border-radius: 3px;
+  	margin-top: -3px;
+  	margin-left: -2px;
+  	padding: 10px 16px;
+  	border-radius: 3px;
 }
 .btn-ttc-blue:focus {
   color: white;
 }
+.btn-ttc-blue>img{
+	margin-right: 6px;
+	padding-bottom: 2px;
+}
+/* Payment-plan Option Buttons 
+==================================*/
+.section-pricing .btn-group{
+	background-color: #dbd9da;
+	border-radius: 5px;
+	padding: 2px 2px 4px 2px;
+}
+.btn-payment-plan,
+.btn-payment-plan:active{
+	font-size: 16px;
+	box-shadow: none;
+	-webkit-box-shadow:none;
+    color: #231f20; 
+}
+.btn-payment-plan{
+	padding: 6px 18px;
+	margin-right: 1px;
+}
+.btn-payment-plan.active{
+	padding: 6px 16px;
+	color: white;
+	text-shadow: none;
+	background-color: #f54500;
+	border-radius: 2px!important;
+	font-weight: 500;
+	box-shadow: 1px 1px 0px 0px #a62f00;
+}
 
-/* Buttons */
-
-
-/* NavBar */
+/* NavBar 
+==============*/
 .navbar{
 	border-radius: 0;
 	border-width: 0;
-    min-height: 70px;
+    min-height: 60px;
     box-shadow: 3px 3px 0px #bfbfbf;
 }
 .navbar-toggle {
@@ -126,7 +179,7 @@ a.btn > img{
 .navbar .center-logo-holder{
 	position: absolute;
 	overflow: hidden;
-	height: 70px;
+	height: 60px;
 	top: 0;
 	margin: 0 auto;
 	width: 175px;
@@ -167,5 +220,402 @@ a.btn > img{
 }
 
 .navbar .back-btn-holder{
-	margin-left: 30px;
+	padding-top: 10px;
+	padding-left: 30px;
+}
+
+/* Sections 
+=================*/
+
+section .section-pricing{ background-color: #f2f0f1;}
+
+section .section-pricing h1.title{
+	margin-top: 23px;
+	margin-bottom: 5px;
+}
+section .section-pricing p.sub-title{
+	margin-top: 0px;
+	margin-bottom: 13px;
+}
+section .section-pricing  .table-content ul{
+	margin-left: -40px;
+	margin-bottom: 20px;
+}
+section .table-content .btn {
+	font-family:'Exo 2', sans-serif;
+}
+section .table-content .btn b{
+	font-weight: 800;
+}
+section .plans-include{
+	margin-top: 4px;
+}
+section .plans-include h3{
+	margin-bottom: 7px;
+}
+section .plans-include p{
+	font-size: 16px;
+	font-weight: 300;
+	color: #666161;
+	margin-bottom: 28px;
+}
+section .plans-include p span{
+	margin-right: 15px;
+}
+section .plans-include p span>img{
+	margin-right: 5px;
+}
+section .plans-include p.payments{
+	margin-top: 6px;
+}
+section .plans-include .lock-icon{
+	margin-top: -8px;
+	margin-right: 5px;
+}
+
+
+section .section-counter{
+	height: 90px;
+	color: #fff;
+	background-color: #231f20;
+	border-top: 3px solid #bfbfbf;
+	border-bottom: 3px solid #a62f00;
+}
+section .section-counter .counter-inner{
+	margin-top: 5px;
+}
+
+section .section-counter img{
+	vertical-align: top;
+}
+section .section-counter p{
+	display: inline-block;
+	font-size: 21px;
+	padding-top: 11px;
+}
+section .section-counter .counter-digits{
+	color: #fff;
+	font-size: 33px;
+	font-weight: 800;
+	font-family: 'Exo 2',sans-serif;
+}
+
+section .section-testimonials{
+	color: #fff;
+	font-size: 16px;
+	background-color: #f54500;
+}
+section .section-testimonials .testimonial{
+	padding: 44px 55px;
+}
+section .section-testimonials .title{
+	margin-top: 33px;
+}
+section .section-testimonials h3{
+	color: #231f20;
+	font-size: 21px;
+	font-weight: 800;
+	margin-top: 14px;
+	margin-bottom: 0;
+}
+
+section .section-testimonials a{
+	color: #231f20;
+}
+section .section-testimonials p{
+	margin-top: 10px;
+}
+
+section .section-likes{
+	height: 150px;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	background-color: #f54500;
+}
+section .section-likes h3{
+	margin-top: 0;
+	color: #000;
+	font-size: 21px;
+	font-weight: 800;
+}
+section .section-likes p{
+	margin-bottom: 4px;
+}
+section .section-likes .likes-div{
+	margin: 0 auto;
+}
+section .section-likes .like-div{
+	min-width: 90px;
+	/*margin-right: 10px;*/
+	display: inline-block;
+	text-align: left;
+}
+section .section-likes .like-div .fb{
+	padding-right: 28px;
+}
+
+section .section-faq {
+
+	background-color: #fff;
+	border-top: 3px solid #bfbfbf;
+	border-bottom: 3px solid #bfbfbf;
+}
+section .section-faq h1{
+	margin-top: 23px;
+	margin-bottom: 31px;
+}
+section .section-faq h3.question{
+	margin-bottom: 2px;
+	font-weight: 800;
+	font-family: 'Exo 2',sans-serif;
+	color: #f54500;
+	padding: 0 15px 0 16px;
+}
+section .section-faq p.answer{
+	font-size: 16px;
+	color: #231f20;
+	padding: 0 30px 15px 17px;
+}
+section .section-faq img{
+	vertical-align: top;
+}
+section .section-faq .figure{
+	margin-bottom: -4px;
+	margin-top: -12px;
+	margin-right: 130px;
+}
+section .section-faq .figure p{
+	margin-right: 5px;
+	display: inline-block;
+	font-size: 16px;
+	padding-top: 55px;
+}
+section .section-faq .figure .btn-holder{
+	position: absolute;
+	display: inline-block;
+	padding-top: 47px;
+}
+section .section-faq .figure img{
+	vertical-align: middle;
+	padding-right: 1px;
+	margin-top: -3px;
+}
+section .section-start-trial{
+	color: #fff;
+	min-height: 495px;
+	background-color: #231f20;
+	background-image: url('../images/pricing/footer-bg.png');
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+section .section-start-trial h1.title{
+	margin-top: 31px;
+	margin-bottom: 20px;
+}
+section .section-start-trial .btn-ttc{
+	padding: 9px 23px;
+	font-size: 22px;
+	letter-spacing: 0.5px;
+}
+section .section-start-trial p.sub-title{
+	color: #dbd9da;
+	font-size: 19px;
+	margin-top: 7px;
+	margin-bottom: 13px;
+}
+section .section-footer ul{
+	list-style-type: none;
+	width: 100%;
+	margin: 0 auto;
+
+}
+section .section-footer ul li{
+	display: inline-block;
+	margin: 0 auto;
+	padding: 0 5px;
+	font-size: 16px;
+}
+section .section-footer ul li a{
+	color: #231f20;
+}
+section .section-footer ul li img{
+	margin-top: 2px;
+	margin-left: 5px;
+	margin-bottom: 20px;
+}
+/* Pricing Table 
+==================*/
+.pricing-table{
+	margin-top: 95px;
+	max-width: 830px;
+}
+.pricing-table > div{
+	border-radius: 2px;
+	padding-left: 0;
+	padding-right: 0;
+}
+.pricing-table h1{
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 200;
+	font-size: 41px;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+	margin-top: 8px;
+}
+.pricing-table strong{
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 700;
+}
+.pricing-table sup, sub{
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 200;
+	font-size: 16px;
+}
+.pricing-table sup{
+	top: -1.3em;
+}
+.pricing-table sub{
+	bottom: 0;
+}
+.pricing-table .table-header{
+	margin: -20px -15px;
+	margin-bottom: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 2px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+.pricing-table .table-header p{
+	font-size: 16px;
+	margin-bottom: 13px;
+}
+.pricing-table .table-header h1 strong{
+	font-size: 47px;
+}
+.pricing-table .table-content{
+	margin: 0px;
+	margin-left: -15px;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+.pricing-table .table-content ul{
+	
+}
+.pricing-table .table-content ul li{
+	text-align: left;
+	font-size: 16px;
+	padding: 9px 30px;
+	list-style-position: inside;
+	list-style-type: square;
+	color: #0d0c0d;
+	cursor: default;
+}
+.pricing-table .table-content ul li.active{
+	padding: 9px 30px 6px 30px;
+	background-color: #f2f0f1;
+	border-bottom: 3px solid #bfbfbf;
+	/*margin-top: 3px;*/
+}
+.pricing-table .table-content ul > li.have{
+	list-style-image: url('../images/pricing/v.png');
+}
+.pricing-table .table-content ul > li.have-not{
+	list-style-image: url('../images/pricing/x.png');
+	text-decoration:line-through;
+}
+/* - VIP - */
+.pricing-table .vip-table{
+	width: 270px;
+}
+.pricing-table .vip-table-header{
+	color: #fff;
+	background-color: #231f20;
+}
+.pricing-table .vip-table-content{
+	background-color: #dbd9da
+}
+.pricing-table .vip-table-content .btn{
+	margin-right: 15px;
+	background-color: #231f20;
+	box-shadow: 1px 1px 0px #000;
+	padding: 6px 30px;
+	font-size: 18px;
+	letter-spacing: 1px;
+}
+
+/* - Business - */
+.pricing-table .business-table{
+	margin-top: -25px;
+	padding-bottom: 15px!important;
+	width: 300px;
+	z-index: 10;
+}
+.pricing-table .business-table-header{
+	padding-top: 35px!important;
+	color: #fff;
+	background-color: #f54500;
+	box-shadow: 3px 3px 0px #dbd9da;
+}
+.pricing-table .business-table-badge{
+	position: absolute;
+	top: -20px;
+	left: 60px;
+	letter-spacing: 20px;
+}
+.pricing-table .business-table-dude{
+	position: absolute;
+	top: -129px;
+	left: 270px;
+}
+.pricing-table .business-table-dude-text{
+	position: absolute;
+	top: 27px;
+	right: -65px;
+	font-size: 16px;
+	font-weight: 700;
+	color: #f54500;
+}
+.pricing-table .business-table-content{
+	margin-right: -15px!important;
+	background-color: #fff;
+	box-shadow: 0px 3px 0px #dbd9da;
+	padding-bottom: 30px;
+}
+.pricing-table .business-table-content ul{
+	margin-bottom: 35px;
+}
+.pricing-table .business-table-content .btn{
+	padding: 9px 45px;
+	margin-top: 15px;
+	font-size: 21px;
+	letter-spacing: 1px;
+	box-shadow: 2px 2px 0px 0px #a62f00;
+}
+
+.pricing-table .business-table-content .btn img{
+	margin-right: 10px;
+	margin-left: -10px;
+}
+/* - Free - */
+.pricing-table .free-table{
+	width: 230px;
+}
+.pricing-table .free-table-header{
+	color: #fff;
+	background-color: #666161;
+}
+.pricing-table .free-table-content{
+	margin-left: 15px!important;
+	margin-right: -15px!important;
+	background-color: #dbd9da
+}
+.pricing-table .free-table-content .btn{
+	background-color: #666161;
+	box-shadow: none;
+	padding: 10px 10px;
+	font-size: 13px;
+	font-weight: 600!important;
+	cursor: default;
+	color: #9e9c93;
 }

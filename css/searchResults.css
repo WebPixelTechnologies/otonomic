@@ -194,7 +194,7 @@
     color: #000000;
     font-size: 16px;
     margin: 0;
-    /*display: inline-block;*/
+    display: inline-block;
     font-weight: bold;
     text-shadow:none;
 }
@@ -220,7 +220,8 @@
   display: inline-block;
   width: 119px;
   height: 32px;
-  /*margin-left: 10px;*/
+  margin-right: 10px;
+  float: left;
 }
 .t_box .steps {
   margin-top: 25px;

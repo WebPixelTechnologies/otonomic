@@ -250,12 +250,14 @@ function closeSearch(targetContainer,from){
 
         var wrapper = $(targetContainer);
         wrapper.html($('<div/>', {}));
-        //wrapper.prev().attr('value', '');
         $(".main_search_box").val('');
         jQuery('.btn_go').tipsy("hide");
-        $(".close-search").hide();
         closeHowDoISteps();
-        $('#main_search_box').focus();
+
+        // perevent scrolling to top of the page on close
+        if(from != 'top'){
+            $('#main_search_box').focus();
+        }
 }
 
 function show_searching_message(){
