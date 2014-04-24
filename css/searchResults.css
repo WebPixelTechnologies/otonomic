@@ -76,6 +76,7 @@
 }
 
 .p2s_fanpages .media-body {
+    width: calc(100% - 85px);
     margin-left: 5px;
     text-align: left;
 }
@@ -88,10 +89,11 @@
 
 .p2s_fanpages .media p {
     color: #40393a;
-    max-width: 360px
-    /*line-height: 1em;*/
     margin-bottom: 0;
     padding: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .p2s_fanpages .media-heading {
     color: #f54500 !important;
