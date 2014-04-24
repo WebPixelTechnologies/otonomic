@@ -46,13 +46,14 @@ a.btn > img{
   background-color: #f54500;
   border-radius: 2px;
   font-weight: 300;
-  box-shadow: 1px 1px 0px 0px #a62f00;
+  padding: 7px 14px;
+  box-shadow: 2px 2px 0px 0px #a62f00;
   font-size: 16.5px;
-  -webkit-transition: all 0.1s ease-out;
+/*  -webkit-transition: all 0.1s ease-out;
   -moz-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
   -ms-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;*/
 }
 
 /* Apply the custom-colored gradients */
@@ -65,9 +66,9 @@ a.btn > img{
 /* Set the hover state */
 /* An easy hover state is just to move the gradient up a small amount. Add other embellishments as you see fit. */
 .btn-ttc:hover {
-	margin: -4px -1px -4px -1px;
-	border-radius: 3px;
-	border: 5px solid #f54500;
+	margin-top: 1px;
+  	margin-left: 1px;
+  	box-shadow: 1px 1px 0px 0px #a62f00;
 }
 .btn-ttc:focus {
   color: white;
@@ -326,7 +327,7 @@ section .section-testimonials p{
 }
 
 section .section-likes{
-	height: 100px;
+	height: 150px;
 	padding-top: 30px;
 	padding-bottom: 20px;
 	background-color: #f54500;
@@ -349,7 +350,7 @@ section .section-likes .like-div{
 	display: inline-block;
 	text-align: left;
 }
-section .section-likes .fb{
+section .section-likes .like-div .fb{
 	padding-right: 28px;
 }
 
@@ -389,8 +390,10 @@ section .section-faq .figure p{
 	font-size: 16px;
 	padding-top: 55px;
 }
-section .section-faq .figure button{
-	
+section .section-faq .figure .btn-holder{
+	position: absolute;
+	display: inline-block;
+	padding-top: 47px;
 }
 section .section-faq .figure img{
 	vertical-align: middle;

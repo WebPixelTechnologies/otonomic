@@ -253,12 +253,15 @@ p{line-height: 23px;}
 }
 .section-likes .likes-div{
 	margin: 0 auto;
-	width: 380px;
 }
 .section-likes .like-div{
-	margin-right: 10px;
+	min-width: 90px;
 	display: inline-block;
-	float: left;
+	text-align: left;
+	vertical-align: top;
+}
+.section-likes .fb {
+	padding-right: 28px;
 }
 .section-likes .btn-group{
 	width: 60%; 
@@ -1099,14 +1102,7 @@ img.grayscale.disabled {
 }
 */
 
-/* Social Buttons Enforce width*/
 
-iframe#twitter-widget-0{
-	width: 80px!important;
-}
-div#___plusone_0{
-	width: 60px!important;
-}
 @media (max-width:767px) {
 	.carousel-caption p{
 		font-size: 19px!important;

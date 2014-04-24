@@ -61,7 +61,6 @@
           // Turn off grayscale onFocus on input field 
           $( "#main_search_box" ).focusout(function() {
             $('.bg-image>img').addClass('disabled');
-            console.log("focus out");
           });
           $( "#main_search_box" ).click(function(event){
             event.stopPropagation();
