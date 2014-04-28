@@ -87,7 +87,6 @@
                       <input type="text" id="main_search_box2" data-attr="top" 
                       onClick="searchBoxClick('#main_search_box2');"
                       onKeyup="searchBoxKeyUp('#main_search_box2','#search_wrapper_floater','.close-search-floater');"
-                      onChange="searchBoxKeyUp('#main_search_box2','#search_wrapper_floater','.close-search-floater');" 
                       class="form-control main_search_box mobile-header-placeholder" autocomplete="off" placeholder="Simply enter the name of your business Facebook page here">
                       
                       <div class="tb search-wrapper search-wrapper-floater" id="search_wrapper_floater" data-attr="top"></div>
@@ -117,7 +116,6 @@
                             <input type="text" id="main_search_box" data-attr="center" 
                             onClick="searchBoxClick('#main_search_box');" 
                             onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
-                            onChange="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
                             class="form-control main_search_box mobile-placeholder2 LoNotSensitive" 
                             autocomplete="off" placeholder="Simply enter the name of your business Facebook page here">
 
@@ -749,14 +747,19 @@
 
     <script type="text/javascript" src="js/otonomic/otonomicv1.0.4.js"></script>
     <script type="text/javascript">
+    $.preloadImages = function(){
+       for(var i = 0; i<arguments.length; i++){
+          $("<img />").attr("src", arguments[i]);
+       }
+    }
     jQuery(document).ready(function(){
         jQuery('.btn_go').tipsy({
             gravity:  'se',//jQuery.fn.tipsy.autoNS,
             trigger: 'manual'
         });
+        $.preloadImages("backscreen.png");
     });
     </script>
-
     <script type="text/javascript" src="js/functions.js"></script>
   </body>
 </html>

@@ -59,6 +59,7 @@ var redirect_url = '';
         var search_query = $('.main_search_box').val();
         closeSearch('#'+ $(this).parent().parent().attr('id'));
         showLoader('Your site is being created for you!', true);
+        $('.main_search_box').blur();
         trackFBConnect('Search Marketing Website', 'Choose Page', $(this).attr('data-attr')+","+search_query + ' >> ' + page_name, result_number);
     });
 
