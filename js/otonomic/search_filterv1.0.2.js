@@ -260,6 +260,7 @@ function closeSearch(targetContainer,from){
         jQuery('.btn_go').tipsy("hide");
         closeHowDoISteps();
         $(".close-search").hide();
+        $(".close-search-floater").hide();
         // perevent scrolling to top of the page on close
         if(from != 'top'){
             $('#main_search_box').focus();
