@@ -71,18 +71,22 @@ var redirect_url = '';
     $('.btn_go').click(function (event) {
         event.preventDefault();
         var $thisParent = $(this).parent().parent().find('.p2s_fanpages');
-        //console.log('btn_go:'+ $thisParent.attr('id'));
+        var $el = $thisParent.find('.main_search_box');
+        var $page_url = $el.val();
+
+        console.log($page_url.indexOf("facebook.com"));
+
         if($.trim($thisParent.find('.main_search_box').val()) == ''){
             found_result = 0;   //clear previous results if user delete text from search box
         }
-        if (found_result > 1) {
+        if (found_result > 1 && ($page_url.indexOf("facebook.com") == -1)) {
             $(this).tipsy("show");
             return false;
         }
+
         $(this).tipsy("hide");
-        var $el = $thisParent.find('.main_search_box');
-        var $page_url = $el.val();
         trackFBConnect("Search Marketing Website", "Go", $(this).attr('data-attr')+","+$page_url);
+
         if ($page_url.indexOf("facebook.com") > -1) {
             var url = p2s_site_url + 'sites/add/?u=' + encodeURIComponent($page_url);
             trackFBConnect("Search Marketing Website", "Choose Url", $page_url);
@@ -188,6 +192,8 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
 
     if (value.indexOf("facebook.com") > -1) {
         // User inserted full address - don't perform search
+        $(targetCloseBtn).hide();
+        wrapper.html($('<div/>', {}));
         return;
     }
 

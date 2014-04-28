@@ -110,7 +110,12 @@
                           <div id="main_search_holder" class="form-group form-group-mobile p2s_fanpages">
                             <label class="sr-only" for="main_search_box">Simply enter the name of your business Facebook page here</label>
                             
-                            <input type="text" id="main_search_box" data-attr="center" onClick="searchBoxClick('#main_search_box');"onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');" class="form-control main_search_box mobile-placeholder2 LoNotSensitive" autocomplete="off" placeholder="Simply enter the name of your business Facebook page here">
+                            <input type="text" id="main_search_box" data-attr="center" 
+                            onClick="searchBoxClick('#main_search_box');" 
+                            onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
+                            onChange="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
+                            class="form-control main_search_box mobile-placeholder2 LoNotSensitive" 
+                            autocomplete="off" placeholder="Simply enter the name of your business Facebook page here">
 
                             <div class="tb search-wrapper" id="search_wrapper_main" data-attr="center"></div>
                             <div style="position:relative;">
