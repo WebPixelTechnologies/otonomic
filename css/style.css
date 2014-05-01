@@ -1236,6 +1236,10 @@ img.grayscale.disabled {
 		width: 240%;
 		top: 50px;
 	}
+
+}
+@media (max-width: 767px){
+
 }
 @media (min-width: 768px) and (max-width: 829px) {
   .holder {
@@ -1365,7 +1369,6 @@ img.grayscale.disabled {
 	left: -925px;
 	width: 1850px;
   }
-
 }
 @media (min-width: 1280px) {
   .holder{
