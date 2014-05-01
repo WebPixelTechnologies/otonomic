@@ -1006,11 +1006,11 @@ section.features .features-mobile{
 	background-color: #29abe3;
 }
 .about-mobile .carousel-inner{
-	background-color: #29abe3;
+	background-color: #acbf00;
 }
 .about-mobile .carousel-inner .item{
 	padding-top: 20px;
-	min-height: 545px;
+	min-height: 625px;
 }
 .about-mobile .carousel-inner .item img{
 	position: absolute;
