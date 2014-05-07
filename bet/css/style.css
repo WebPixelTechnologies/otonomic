@@ -199,3 +199,17 @@ footer p>img{
 	font-size: 16px;
 	padding-right: 5px;
 }
+
+
+
+@media all and (max-width: 755px) {
+    button.navbar-toggle {
+        display: none;
+    }
+    div.jumbotron {
+        margin-top: 60px;
+    }
+    body{
+        background-color: #F54500;
+    }
+}
