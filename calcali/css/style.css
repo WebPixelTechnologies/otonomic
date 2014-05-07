@@ -1,0 +1,193 @@
+@font-face {
+    font-family: 'gisha';
+    src: url('gisha-webfont.eot');
+    src: url('gisha-webfont.eot?#iefix') format('embedded-opentype'),
+         url('gisha-webfont.woff') format('woff'),
+         url('gisha-webfont.ttf') format('truetype'),
+         url('gisha-webfont.svg#gisharegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'gisha';
+    src: url('gishabd-webfont.eot');
+    src: url('gishabd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('gishabd-webfont.woff') format('woff'),
+         url('gishabd-webfont.ttf') format('truetype'),
+         url('gishabd-webfont.svg#gishabold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 83px;
+  background-color: #f54500;
+  font-family: 'gisha', sans-serif;
+  background-image: url('../images/bg.png');
+  background-position: 70% 100px;
+  background-repeat: no-repeat;
+}
+
+ul {
+	font-family: 'Miriam', sans-serif;
+	font-size: 18.5px;
+	color: #0d0b0c;
+	padding-right: 25px;
+}
+li{
+	list-style-image: url('../images/v.png');
+}
+h1,h2,h3,h4,h5{
+	font-weight: bold;
+	color: #0d0b0c;
+}
+h3{
+	font-size: 19px;
+}
+/* Custom button
+-------------------------------------------------- */
+
+/* Override base .btn styles */
+/* Apply text and background changes to three key states: default, hover, and active (click). */
+.btn-ttc,
+.btn-ttc:hover,
+.btn-ttc:active {
+  color: white;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+  background-color: #64b285;
+  box-shadow: 2px 2px 0px #325942;
+  border-radius: 2px;
+}
+
+/* Apply the custom-colored gradients */
+/* Note: you'll need to include all the appropriate gradients for various browsers and standards. */
+.btn-ttc {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(top, #009ED2 0%, #64b285 100%);
+  ...
+}
+
+/* Set the hover state */
+/* An easy hover state is just to move the gradient up a small amount. Add other embellishments as you see fit. */
+.btn-ttc:hover {
+  background-position: 0 -15px;
+}
+
+.btn-ttc.disabled{
+	color: #f54500;
+	background-color: #a62f00;
+	opacity: 1;
+	box-shadow: none;
+}
+.btn-ttc.disabled > img{
+	display: none;
+}
+#submit_btn{
+	padding: 15px 30px;
+	font-size: 19px;
+	font-weight: bold;
+}
+
+span.help-inline.nod_msg {
+	position: absolute;
+	width: 100%;
+	height: 45px;
+	color: white;
+	padding: 12px;
+	font-family: 'Miriam', sans-serif;
+	font-size: 17px;
+}
+
+footer{
+	background-color: #dbdbdb;
+	margin-top: 20px;
+	padding: 20px;
+	border-top: 3px solid #a62f00;
+}
+footer p{
+	font-size: 23px;
+}
+footer p>img{
+	padding-right: 20px;
+}
+/* Bootstrap Changes 
+--------------------------------------------------*/
+.navbar {
+	min-height: 63px;
+	margin-bottom: 20px;
+	border: 3px solid #0d0b0c;
+}
+.navbar-header{
+	width: 100%;
+}
+.navbar-header-text{
+	color: white;
+	font-size: 37px;
+	padding: 5px 0 0 0;
+	margin: 0;
+}
+.navbar-header a>img{
+	padding-top: 5px;
+}
+.navbar-brand {
+	padding: 0;
+}
+.jumbotron {
+	padding: 5px;
+	margin:  0px;
+	color: white;
+	background-color: transparent;
+}
+.jumbotron p{
+	font-size: 23px;
+}
+.form-control{
+	display: inline-block;
+}
+.form-control {
+	font-family: 'Miriam', sans-serif;
+	border-radius: 2px;
+	border-width: 0px;
+	height: 45px;
+	box-shadow: inset -2px 2px 0px 0px #a62f00;
+	font-size: 18px;
+	-webkit-transition:none;
+	transition:none;
+}
+.form-control:focus {
+	border-color: #71bf92;
+	border-width: 3px;
+	outline: 0;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+}
+.has-error .form-control {
+	border-color: #71bf92;
+	box-shadow: inset -2px 2px 0px 0px #a62f00;
+}
+.has-error .form-control:focus {
+	border-color: #71bf92;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+}
+
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+	float: right;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.checkbox{
+	padding-left: 0px;
+}
+.checkbox label{
+	font-family: 'Miriam', sans-serif;
+	color: #171818;
+	font-size: 16px;
+	padding-right: 5px;
+}

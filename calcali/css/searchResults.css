@@ -1,0 +1,275 @@
+.p2s_fanpages .main-search-box{
+
+}
+.p2s_fanpages .search-wrapper{
+    position: absolute;
+    margin-top:0px;
+    margin-left: 0px;
+}
+.p2s_fanpages  .search_results {
+    overflow: auto;
+    max-height: 330px;
+    /*overflow-y: scroll;*/
+    width: 460px;
+    margin: 0;
+    border: 2px solid #666161;
+    border-top: 0;
+    padding: 0;
+    background-color:white;
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
+    z-index: 999;
+}
+.p2s_fanpages .search-wrapper-floater .search_results {
+    overflow: auto;
+    max-height: 330px;
+    /*overflow-y: scroll;*/
+    width: 392px;
+    margin: 0;
+    border: 2px solid #222;
+    border-top: 0;
+    padding: 0;
+    background-color:white;
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
+    z-index: 999;
+    margin-left: -2px;
+}
+
+
+.p2s_fanpages #empty_search_box_go {color:black;font-size: 22px;line-height:1.1em;}
+.p2s_fanpages #empty_search_box_go img {display: inline-block;margin-right: 0.5em;margin-top: 0.5em;vertical-align: top;}
+.p2s_fanpages #empty_search_box_go div{display:inline-block}
+.p2s_fanpages #empty_search_box_go small{font-size:0.8em;}
+
+.p2s_fanpages .media {
+    float: left;
+    margin: 0;
+    padding: 3px;
+    padding-bottom: 2px;
+    min-height: 80px;
+    width: 100%;
+    background-color: #f2f0f1;
+}
+.p2s_fanpages .media:hover {
+    background-color: #fff;
+}
+.p2s_fanpages a {
+    color: #0088CC;
+    text-decoration: none;
+}
+
+.p2s_fanpages  .fanpage img.media-object {
+    height: 80px;
+    width: 80px;
+}
+.p2s_fanpages .media-object {
+    display: block;
+}
+.p2s_fanpages img {
+    border: 0 none;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.p2s_fanpages .media-body {
+    width: calc(100% - 85px);
+    margin-left: 5px;
+    text-align: left;
+}
+.p2s_fanpages .pull-left {
+    float: left;
+}
+.p2s_fanpages .media, .media-body {
+    overflow: hidden;
+}
+
+.p2s_fanpages .media p {
+    color: #40393a;
+    margin-bottom: 0;
+    padding: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.p2s_fanpages .media-heading {
+    color: #f54500 !important;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 0 5px;
+}
+
+.p2s_fanpages .media-address {
+    margin: 5px 5px;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+}
+.p2s_fanpages .center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.p2s_fanpages .close-search{
+    display: none;
+    color: #666161;
+    font-size: 20px;
+    margin-top: -8px;
+    margin-right: -8px;
+    padding: 17px 20px 15px 22px;
+}
+.p2s_fanpages .close-search:hover{
+    color: #f54500;
+}
+
+.p2s_fanpages span.icon_clear{
+    position: absolute;
+    right: 0;
+    margin: 0;
+    padding-right: 13px;
+    padding:11px 10px 10px 9px;
+    top: -48px;
+    border-right: 2px solid #666161;
+}
+.p2s_fanpages span.icon_clear.close-search-floater{
+    padding-right: 13px;
+    padding: 7px 10px 3px 10px;
+    top: -38px;
+    border-right: 2px solid #222;
+}
+
+.t_box{
+    position: absolute;
+    margin-top: 5px;
+}
+.t_box, .search_progress {
+    border: 2px solid #666161;
+    width: 655px;
+    font-weight: normal;
+    display: inline-block;
+    background-color: #ffffff;
+    text-align: left;
+    z-index: 1;
+}
+.search-wrapper-floater .t_box,.search-wrapper-floater .search_progress {
+    width: 548px;
+}
+.t_box .msgbox {
+  padding: 8px 18px 18px 18px;
+  float: left;
+  display: inline-block;
+  width: 458px;
+}
+.t_box .steps {
+  float: left;
+}
+.t_box .steps li>span{
+  font-size: 16px;
+  font-weight: 400;
+}
+.t_box .header {
+    color: #009dc4;
+    line-height: 30px;
+}
+.t_box .header span.msg_info, .search_progress span.msg_info {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 800;
+    color: #009dc4;
+    font-size: 19px;
+    margin-top: 10px;
+    display: inline-block;
+}
+.t_box .close_btn {
+    position: absolute;
+    right: 8px;
+    display: inline-block;
+}
+.t_box .body_info {
+    margin-top: 15px;
+}
+.t_box h1 {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    color: #000000;
+    font-size: 16px;
+    margin: 0;
+    display: inline-block;
+    font-weight: bold;
+    text-shadow:none;
+}
+.t_box .or_msg {
+  font-size: 24px;
+  color: #009dc4;
+  margin: 10px 0;
+}
+.t_box p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #757575;
+  margin: 0;
+}
+.t_box #how_do_i {
+    display: block;
+    color: #009dc4;
+    text-decoration: underline;
+}
+.t_box #fb_connector {
+  background-image: url("../images/fb_connect.png");
+  text-indent: -9999px;
+  display: inline-block;
+  width: 119px;
+  height: 32px;
+  margin-right: 10px;
+  float: left;
+}
+.t_box .steps {
+  margin-top: 25px;
+  width: 310px;
+}
+.t_box ul{margin: 0 10px; padding: 0}
+.t_box li {
+  list-style: none;
+  margin-bottom: 18px;
+}
+.t_box li:last-child{
+    margin-bottom: 0;
+}
+.search_progress {
+    padding: 20px;
+}
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
+
+.t_box .steps{display: none;}
+.t_box.open {width:800px;}
+.t_box.open .msgbox {border-right:2px solid #666161}
+.t_box.open .steps {display: inline-block;}
+
+@media only screen and (max-width: 769px) {
+    .p2s_fanpages .search-wrapper {
+        position: relative;
+        background-color: #FFF;
+        padding: 5px;
+        width: 100%;
+        border:0;
+        padding: 0;
+        margin: 0;
+    }
+    .p2s_fanpages .search-wrapper .t_box{
+        left: 0;
+        width: 100%;
+    }
+    .p2s_fanpages .search-wrapper .t_box .msgbox{
+        width: 100%;
+    }
+    .p2s_fanpages .close-search {
+        padding: 7px 10px 15px 22px;
+    }
+    .p2s_fanpages .search_results {
+        width: 100%;
+        margin: 0;
+        max-height: inherit;
+    }
+}
