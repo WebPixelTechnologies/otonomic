@@ -1,21 +1,21 @@
 @font-face {
     font-family: 'gisha';
-    src: url('gisha-webfont.eot');
-    src: url('gisha-webfont.eot?#iefix') format('embedded-opentype'),
-         url('gisha-webfont.woff') format('woff'),
-         url('gisha-webfont.ttf') format('truetype'),
-         url('gisha-webfont.svg#gisharegular') format('svg');
+    src: url('../fonts/gisha-webfont.eot');
+    src: url('../fonts/gisha-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gisha-webfont.woff') format('woff'),
+         url('../fonts/gisha-webfont.ttf') format('truetype'),
+         url('../fonts/gisha-webfont.svg#gisharegular') format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'gisha';
-    src: url('gishabd-webfont.eot');
-    src: url('gishabd-webfont.eot?#iefix') format('embedded-opentype'),
-         url('gishabd-webfont.woff') format('woff'),
-         url('gishabd-webfont.ttf') format('truetype'),
-         url('gishabd-webfont.svg#gishabold') format('svg');
+    src: url('../fonts/gishabd-webfont.eot');
+    src: url('../fonts/gishabd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gishabd-webfont.woff') format('woff'),
+         url('../fonts/gishabd-webfont.ttf') format('truetype'),
+         url('../fonts/gishabd-webfont.svg#gishabold') format('svg');
     font-weight: bold;
     font-style: normal;
 
