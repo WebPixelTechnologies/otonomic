@@ -118,7 +118,7 @@ footer p{
 	font-size: 23px;
 }
 footer p>img{
-	padding-right: 20px;
+	/*padding-right: 20px;*/
 }
 /* Bootstrap Changes 
 --------------------------------------------------*/
@@ -197,7 +197,13 @@ footer p>img{
 	padding-right: 5px;
 }
 
-
+ul.media-links{
+	
+	list-style-image: none;
+}
+ul.media-links li{
+	display: inline-block;
+}
 /* Extra small devices (phones, less than 768px) */
 @media(max-width:767px){
 	.content{
