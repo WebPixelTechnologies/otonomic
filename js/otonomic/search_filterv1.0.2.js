@@ -347,7 +347,7 @@ function counterLoader(counterElementId){
 
 function showLoader(message, is_model) {
 
-    $('.navbar').css('display','none');
+    $('#wrapper').css('display','none');
     $('.loading-box').animate({opacity: '1'}, 1500,'swing');
     $('.loading-box').addClass('show');
 

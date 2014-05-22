@@ -531,6 +531,9 @@ section.features .row{
 	opacity: 1;
 }
 /* ## Section Media ## */
+.media-links .row{
+	background-color: #fff;
+}
 .section-media{
 	margin-top: 48px;
 	padding-bottom: 91px;
@@ -1006,11 +1009,11 @@ section.features .features-mobile{
 	background-color: #29abe3;
 }
 .about-mobile .carousel-inner{
-	background-color: #29abe3;
+	background-color: #acbf00;
 }
 .about-mobile .carousel-inner .item{
 	padding-top: 20px;
-	min-height: 545px;
+	min-height: 625px;
 }
 .about-mobile .carousel-inner .item img{
 	position: absolute;
@@ -1236,6 +1239,9 @@ img.grayscale.disabled {
 		width: 240%;
 		top: 50px;
 	}
+
+}
+@media (max-width: 767px){
 }
 @media (min-width: 768px) and (max-width: 829px) {
   .holder {
@@ -1365,7 +1371,6 @@ img.grayscale.disabled {
 	left: -925px;
 	width: 1850px;
   }
-
 }
 @media (min-width: 1280px) {
   .holder{
