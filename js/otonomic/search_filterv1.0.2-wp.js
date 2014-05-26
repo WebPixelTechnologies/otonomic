@@ -19,8 +19,11 @@ function sleep(millis, callback) {
 }
 
 function get_site_id(redirect_url){
+    console.log("getting site id after created");
     $.get( redirect_url + "/sites/view/.json", function( data ) {
         
+        console.log("the site created: "+ data);
+
         sleep(5000, function(){
              create_wp_site(data.id, data.slug);
         });
@@ -32,6 +35,7 @@ function get_site_id(redirect_url){
 
 function create_wp_site(site_id, slug){
 
+    console.log('not, lets create wp site with slug: '+ slug);
     window.slug = slug;
     $.get( "http://iproplay.com/migration/index.php?site_id="+ site_id , function( data ) {
 
