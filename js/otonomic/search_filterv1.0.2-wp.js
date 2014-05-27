@@ -60,6 +60,11 @@ function sleep(millis, callback) {
 function get_site_id(redirect_url){
     
         site_json_url = parseURL(redirect_url).domain;
+
+        if(site_json_url.indexOf("otonomic.com") == -1){
+            site_json_url = site_json_url + "m";
+        }
+
         console.log("site json: "+ site_json_url);
 
     $.get( "http://"+ site_json_url + "/sites/view/.json", function( data ) {
