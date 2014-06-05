@@ -61,6 +61,9 @@ function get_site_id(redirect_url){
     
         site_json_url = parseURL(redirect_url).domain;
 
+
+	console.log(site_json_url.indexOf("otonomic.com"));
+
         if(site_json_url.indexOf("otonomic.com") == -1){
             site_json_url = site_json_url + "m";
         }
