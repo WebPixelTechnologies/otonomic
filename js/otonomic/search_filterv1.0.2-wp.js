@@ -72,9 +72,9 @@ function get_site_id(redirect_url){
         
         console.log("the site created: "+ data);
 
-        sleep(5000, function(){
+       // sleep(5000, function(){
              create_wp_site(data.id, data.slug);
-        });
+       // });
 
 
     }, "json" );
@@ -139,9 +139,9 @@ function create_wp_site(site_id, slug){
 		console.log("response: "+ responseObj.redirect);        
     
                // showLoader('Your site is being created for you!', true);
-		sleep(7000, function(){
+		//sleep(7000, function(){
                     get_site_id(redirect_url);
-                });
+        //        });
 		//showLoader('Your site is being created for you!', true);               
                 
 		return false;
