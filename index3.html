@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Organization">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Otonomic</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <meta property="og:title" content="Give your business the website it deserves!" />
+    <meta property="og:site_name" content="otonomic"/>
+    <meta property="og:description" content="Do you need a website for your business? Otonomic will create one for you in seconds, just try it out!"/>
+    <meta property="og:url" content="http://www.otonomic.com"/>
+    <meta property="og:image" content="http://otonomic.com/images/logo148x148.png"/>
+    <meta itemprop="name" content="Ototnomic">
+    <meta itemprop="description" content="Do you need a website for your business? Otonomic will create one for you in seconds, just try it out!">
+    <meta itemprop="image" content="http://otonomic.com/images/logo148x148.png">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom style -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/searchResults.css" rel="stylesheet">
+    <!-- Google+ -->
+    <link href="https://plus.google.com/112126439055007134666" rel="publisher">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div id="wrapper">
+      <!-- Side Navbar -->
+      <div id="sidebar-wrapper">
+          <ul class="sidebar-nav">
+              <li class="sidebar-login">
+                <a href="/shared/facebook_login.php" class="facebook_connect sidebar-link track_event" data-target="" data-ga-category="Marketing Website" data-ga-event="Menu Usage" data-ga-label="Login" data-ajax-track="1">
+                  <div class="sidebar-icon"><span class="glyphicon glyphicon-user"></span></div>Login
+                </a>
+              </li>
+              <li>
+                <a href="#" class="sidebar-link track_event" data-target="features" data-ga-category="Marketing Website" data-ga-event="Menu Usage" data-ga-label="Features" data-ajax-track="1">
+                  <div class="sidebar-icon"><img src="images/sidebar-icon1.png" alt="Features"></div>Features
+                </a>
+              </li>
+              <li>
+                <a href="#" class="sidebar-link track_event" data-target="reviews" data-ga-category="Marketing Website" data-ga-event="Menu Usage" data-ga-label="Reviews" data-ajax-track="1">
+                  <div class="sidebar-icon"><img src="images/sidebar-icon2.png" alt="Reviews"></div>Reviews
+                </a>
+              </li>
+              <!-- <li>
+                <a href="#" class="sidebar-link track_event" data-target="media-links" data-ga-category="Marketing Website" data-ga-event="Menu Usage" data-ga-label="Media" data-ajax-track="1">
+                  <div class="sidebar-icon"><img src="images/sidebar-icon3.png" alt="In the media"></div>In the media
+                </a>
+              </li> -->
+              <li>
+                <a href="#" class="sidebar-link track_event" data-target="about" data-ga-category="Marketing Website" data-ga-event="Menu Usage" data-ga-label="About" data-ajax-track="1">
+                  <div class="sidebar-icon about"><img src="images/sidebar-icon4.png" alt="About"></div>About
+                </a>
+              </li> 
+          </ul>
+      </div>
+      <!-- Main Content -->
+      <div id="page-content-wrapper">
+          <div class="page-content">
+            <div class="container-fluid">
+             <!-- top navbar -->
+              <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                  <div class="navbar-header">
+                       <button type="button" class="navbar-toggle track_event track_hover" id="menu-toggle" data-toggle="offcanvas" data-target=".sidebar-nav" data-ga-category="Marketing Website"  data-ga-event="Menu Click" data-ga-event-hover="Menu Hover" data-ajax-track="1">
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+                       </button>
+                       <a class="navbar-brand hidden-xs" href="#"><img src="images/otonomic-logo.png" alt="otonomic logo"></a>
+                  </div>
+                  <div class="center-logo-holder">
+                    <div class="center-logo center-block">
+                      <img src="images/otonomic-logo.png" class="logo-img" alt="otonomic logo">
+                      <img src="images/blue-arrow.png" alt="otonomic logo">
+                    </div>
+                  </div>
+                  <div class="form-inline facebook-input-holder">
+                    <div id="main_search_holder2" class="form-group header-search-input p2s_fanpages">
+                      <label class="sr-only LoNotSensitive" for="main_search_box2">Simply enter the name of your business Facebook page here</label>
+
+                      <input type="text" id="main_search_box2" data-attr="top" 
+                      onClick="searchBoxClick('#main_search_box2');"
+                      onKeyup="searchBoxKeyUp('#main_search_box2','#search_wrapper_floater','.close-search-floater');"
+                      class="form-control main_search_box mobile-header-placeholder" autocomplete="off" placeholder="Simply enter the name of your business Facebook page here">
+                      
+                      <div class="tb search-wrapper search-wrapper-floater" id="search_wrapper_floater" data-attr="top"></div>
+                      <div style="position:relative;">
+                        <span class="icon_clear close-search close-search-floater" onClick="closeSearch('#search_wrapper_floater','top')" style="display: none;">
+                          <span class="glyphicon glyphicon-remove"></span>
+                        </span>
+                      </div>
+
+                    </div>
+                    <div class="form-group header-search-button">
+                      <button id="btn_go2" data-attr="top" class="btn_go btn btn-ttc track_event">See <span class="hidden-xs">Your</span> Website</button>
+                    </div>
+                  </div>
+              </div>
+            </div>
+              <div class="container-fluid">
+                  <section class="home"><!-- Section Home -->
+                    <div class="row section-home">
+                        <div class="col-xs-12 text-center">
+                        <h1>Give your business the website it deserves!</h1>
+                        <p>In under 20 seconds , we will turn your Facebook page into a professional website</p>
+                        <form class="form-inline" role="form">
+                          <div id="main_search_holder" class="form-group form-group-mobile p2s_fanpages">
+                            <label class="sr-only" for="main_search_box">Simply enter the name of your business Facebook page here</label>
+                            
+                            <input type="text" id="main_search_box" data-attr="center" 
+                            onClick="searchBoxClick('#main_search_box');" 
+                            onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
+                            class="form-control main_search_box mobile-placeholder2 LoNotSensitive" 
+                            autocomplete="off" placeholder="Simply enter the name of your business Facebook page here">
+
+                            <div class="tb search-wrapper" id="search_wrapper_main" data-attr="center"></div>
+                            <div style="position:relative;">
+                              <span class="icon_clear close-search" onClick="closeSearch('#search_wrapper_main','center')" style="display: none;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                              </span>
+                            </div>
+
+                          </div>
+                          <div class="form-group form-group-mobile">
+                            <button id="btn_go" data-attr="center" title='Choose your page from the suggestions below' class="btn_go btn btn-ttc ">See Your Website</button>
+                          </div>
+                        </form>
+                        <div class="bg-image">
+                          <img src="images/section-home-bg.png" class="">
+                        </div>
+                      </div><!-- /.col-xs-12 main -->
+                    </div>
+                  </section>
+                  <section class="likes">
+                    <div class="row section-likes">
+                      <div class="hidden-xs col-xs-12 text-center">
+                        <div class="likes-div">
+                          <h3>Like and Share Otonomic</h3>
+                          <div class="like-div fb">
+                            <div class="fb-like" data-href="https://www.facebook.com/page2site" data-width="86" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                          </div>
+                          <div class="like-div">
+                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.otonomic.com" data-text="Do you need a website for your business? Otonomic will create one for you in seconds, just try it out!" data-via="otonomic" data-lang="en">Tweet</a>
+                          </div>
+                          <div class="like-div">
+                            <div class="g-plusone" data-size="medium" data-prefilltext="Engage your users today, create a Google+ page for your business." data-href="http://otonomic.com/"></div>
+                          </div>
+                          <div class="like-div">
+                            <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fotonomic.com%2F&media=http%3A%2F%2Fotonomic.com%2Fimages%2Flogo148x148.png&description=Do%20you%20need%20a%20website%20for%20your%20business%3F%20Otonomic%20will%20create%20one%20for%20you%20in%20seconds%2C%20just%20try%20it%20out!" data-pin-do="buttonPin" data-pin-config="beside" data-pin-color="white"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_white_20.png" /></a>
+                          </div>
+                          <div class="like-div">
+                            <script type="IN/Share" data-url="http://otonomic.com/" data-counter="right"></script>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="visible-xs col-xs-12 text-center">
+                        <div class="btn-group  dropup">
+                          <button class="btn-social dropdown-toggle" type="button" data-toggle="dropdown">
+                            <img src="images/thumbs-up.png" width="26">  Like/Share us
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><script type="IN/Share" data-url="http://otonomic.com/" data-counter="right"></script></li>
+                            <li>
+                              <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fotonomic.com%2F&media=http%3A%2F%2Fotonomic.com%2Fimages%2Flogo148x148.png&description=Do%20you%20need%20a%20website%20for%20your%20business%3F%20Otonomic%20will%20create%20one%20for%20you%20in%20seconds%2C%20just%20try%20it%20out!" data-pin-do="buttonPin" data-pin-config="beside" data-pin-color="white"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_white_20.png" /></a>
+                            </li>
+                            <li>
+                              <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.otonomic.com" data-text="Do you need a website for your business? Otonomic will create one for you in seconds, just try it out!" data-via="otonomic" data-lang="en">Tweet</a>
+                            </li>
+                            <li>
+                              <div class="g-plusone" data-size="medium" data-href="http://otonomic.com/"></div>
+                            </li>
+                            <li>
+                              <div class="fb-like" data-href="https://www.facebook.com/page2site" data-width="86" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="features"><!-- Section Features -->
+                    <div class="row hidden-xs">
+                      <div class="section-features holder">
+                        <div class="col-xs-12 col-sm-6 col-md-4 title">
+                          <div class="title-inner">
+                            <h1>The Perfect Website for All Your Business Needs</h1>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 feature track_event track_hover" data-ga-category="Marketing Website" data-ga-event-hover="Features Hover" data-ga-label="Gorgeous" data-ajax-track="1">
+                          <img class="feature-icon" src="images/feature-icon1.png">
+                          <h3>Gorgeous site in 1 click</h3>
+                          <p>Not a techie? Not a problem! With our new technology, creating your own fabulous website from your Facebook page literally takes one click. You don’t have to know anything about programming or design.</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 feature track_event track_hover" data-ga-category="Marketing Website" data-ga-event-hover="Features Hover" data-ga-label="Auto" data-ajax-track="1">
+                          <img class="feature-icon" src="images/feature-icon2.png">
+                          <h3>Self-updating</h3>
+                          <p>Whenever you post something on your Facebook page, it immediately appears on your Otonomic site. You can just kick back, enjoy sharing news, pictures and whatever else you feel like on Facebook, and ta-da - it’s on your site!</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 feature track_event track_hover" data-ga-category="Marketing Website" data-ga-event-hover="Features Hover" data-ga-label="Mobile" data-ajax-track="1">
+                          <img class="feature-icon" src="images/feature-icon3.png">
+                          <h3>Web, tablet and mobile ready</h3>
+                          <p>You know you must cater to all digital tastes. With Otonomic, you get web, mobile and tablet sites right away! So you can reach clients wherever they go, on all platforms and all devices in all sizes.</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 feature track_event track_hover" data-ga-category="Marketing Website" data-ga-event-hover="Features Hover" data-ga-label="Domain" data-ajax-track="1">
+                          <img class="feature-icon" src="images/feature-icon4.png">
+                          <h3>Your domain, your brand</h3>
+                          <p>In today's world, brand name is everything. With us you get your own domain, which means your own fully-branded web, mobile and tablet sites. Don’t settle for less— get the best combo for your business.</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 feature track_event track_hover" data-ga-category="Marketing Website" data-ga-event-hover="Features Hover" data-ga-label="Growth" data-ajax-track="1">
+                          <img class="feature-icon" src="images/feature-icon5.png">
+                          <h3>Business Growth Made Easy</h3>
+                          <p>With features like a blog, video player, and photo gallery, every one of your clients is engaged. With your chic online store, you can easily capitalize on these warm leads. Your clients are happy, so are you.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row visible-xs features-mobile">
+                      <div class="col-xs-12">
+                          <h1>The Perfect Website for All Your Business Needs</h1>
+                      </div>
+                      <div id="carousel-features" class="carousel slide clearfix" data-interval="false" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators carousel-tabs">
+                          <li data-target="#carousel-features" data-slide-to="0" class="active">
+                          <div class="carousel-features-ico-1"></div>
+                          </li>
+                          <li data-target="#carousel-features" data-slide-to="1">
+                            <div class="carousel-features-ico-2"></div>
+                          </li>
+                          <li data-target="#carousel-features" data-slide-to="2">
+                            <div class="carousel-features-ico-3"></div>
+                          </li>
+                          <li data-target="#carousel-features" data-slide-to="3">
+                            <div class="carousel-features-ico-4"></div>
+                          </li>
+                          <li data-target="#carousel-features" data-slide-to="4">
+                            <div class="carousel-features-ico-5"></div>
+                          </li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                          <div class="item active">
+                            <img src="images/feature-icon1.png">
+                            <div class="carousel-caption">
+                              <h3>Gorgeous site in 1 click</h3>
+                              <p>Not a techie? Not a problem! With our new technology, creating your own fabulous website from your Facebook page literally takes one click. You don’t have to know anything about programming or design.</p>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <img src="images/feature-icon2.png">
+                            <div class="carousel-caption">
+                             <h3>Self-updating</h3>
+                             <p>Whenever you post something on your Facebook page, it immediately appears on your Otonomic site. You can just kick back, enjoy sharing news, pictures and whatever else you feel like on Facebook, and ta-da - it’s on your site!</p>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <img src="images/feature-icon3.png">
+                            <div class="carousel-caption">
+                             <h3>Web, tablet and mobile ready</h3>
+                             <p>You know you must cater to all digital tastes. With Otonomic, you get web, mobile and tablet sites right away! So you can reach clients wherever they go, on all platforms and all devices in all sizes.</p>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <img src="images/feature-icon4.png">
+                            <div class="carousel-caption">
+                             <h3>Your domain, your brand</h3>
+                             <p>In today's world, brand name is everything. With us you get your own domain, which means your own fully-branded web, mobile and tablet sites. Don’t settle for less— get the best combo for your business.</p>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <img src="images/feature-icon5.png">
+                            <div class="carousel-caption">
+                             <h3>Business Growth Made Easy</h3>
+                             <p>With features like a blog, video player, and photo gallery, every one of your clients is engaged. With your chic online store, you can easily capitalize on these warm leads. Your clients are happy, so are you. </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="reviews"><!-- Section Reviews -->
+                    <div class="row section-reviews hidden-xs">
+                      <div class="section-reviews-inner holder center-block">
+                        <div class="col-xs-12 text-center">
+                          <h1>Small business owners love us</h1>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 track_hover" data-ga-category="Marketing Website" data-ga-event="Testimonials Click" data-ga-event-hover="Testimonials Hover" data-ga-label="Grymm" data-ajax-track="1">
+                          <div class="ch-item">       
+                            <div class="ch-info">
+                              <div class="ch-info-front">
+                                <!-- <img src="images/review-user1.png"> -->
+                                <img src="images/review-user1-over.png">
+                              </div>
+                              <div class="ch-info-back">
+                                <img src="images/review-user1-over.png">
+                              </div>  
+                            </div>
+                            <div class="ch-text">
+                              <h3>Grymm</h3>
+                              <h4><a href="http://artisticembracetattoo.com/" target="_blank" class="track_event" data-ga-category="Marketing Website" data-ga-event="Testimonials Site Click" data-ga-label="Grymm" data-ajax-track="1">artisticembracetattoo.com</a></h4>
+                              <p>I've had my website for a little over a month now and my clients absolutely love it!!! They have told me that it's extremely easy to navigate and it looks awesome! I couldn't have had a better website!</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 track_hover" data-ga-category="Marketing Website" data-ga-event="Testimonials Click" data-ga-event-hover="Testimonials Hover" data-ga-label="Shawna Todd" data-ajax-track="1">
+                          <div class="ch-item">       
+                            <div class="ch-info">
+                              <div class="ch-info-front">
+                                <!-- <img src="images/review-user2.png"> -->
+                                <img src="images/review-user2-over.png">
+                              </div>
+                              <div class="ch-info-back">
+                                <img src="images/review-user2-over.png">
+                              </div>  
+                            </div>
+                            <div class="ch-text">
+                              <h3>Shawna Todd</h3>
+                              <h4><a href="http://boulderacupuncture.me/" target="_blank" class="track_event" data-ga-category="Marketing Website" data-ga-event="Testimonials Site Click" data-ga-label="Shawna Todd" data-ajax-track="1">boulderacupuncture.me</a></h4>
+                              <p>I had been wanting a website for my small business for too long. I never found the time or energy to get it done. I'm so grateful, I wish I had done it sooner.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 track_hover" data-ga-category="Marketing Website" data-ga-event="Testimonials Click" data-ga-event-hover="Testimonials Hover" data-ga-label="Steve Bross" data-ajax-track="1">
+                          <div class="ch-item">       
+                            <div class="ch-info">
+                              <div class="ch-info-front">
+                                <!-- <img src="images/review-user3.png"> -->
+                                <img src="images/review-user3-over.png">
+                              </div>
+                              <div class="ch-info-back">
+                                <img src="images/review-user3-over.png">
+                              </div>  
+                            </div>
+                            <div class="ch-text">
+                              <h3>Steve Bross</h3>
+                              <h4><a href="http://thehawkmobile.com/" target="_blank"  target="_blank" class="track_event" data-ga-category="Marketing Website" data-ga-event="Testimonials Site Click" data-ga-label="Steve Bross" data-ajax-track="1">thehawkmobile.com</a></h4>
+                              <p>Since I do a lot of daily updates, I like the fact that the page updates on it's own. Otonomic have been very helpful in working with me to get the site just the way I wanted it. Glad I found them!
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 track_hover" data-ga-category="Marketing Website" data-ga-event="Testimonials Click" data-ga-event-hover="Testimonials Hover" data-ga-label="Fanny May" data-ajax-track="1">
+                          <div class="ch-item">       
+                            <div class="ch-info">
+                              <div class="ch-info-front">
+                                <!-- <img src="images/review-user4.png"> -->
+                                <img src="images/review-user4-over.png">
+                              </div>
+                              <div class="ch-info-back">
+                                <img src="images/review-user4-over.png">
+                              </div>  
+                            </div>
+                            <div class="ch-text">
+                              <h3>Brian O'Callaghan</h3>
+                              <h4><a href="http://www.dublinacupunctureclinic.com/" target="_blank" class="track_event" data-ga-category="Marketing Website" data-ga-event="Testimonials Site Click" data-ga-label="Brian O'Callaghan" data-ajax-track="1">dublinacupunctureclinic.com</a></h4>
+                              <p>Otonomic offered me what I need at the time I needed it, a well designed, informative website that I update effortlessly wherever I travel.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row visible-xs reviews-mobile">
+                      <div class="col-xs-12">
+                          <h1>Small business owners love us</h1>
+                      </div>
+                      <div id="carousel-reviews" class="carousel slide clearfix" data-interval="false" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators carousel-tabs">
+                          <li data-target="#carousel-reviews" data-slide-to="0" class="active">
+                          <div class="carousel-reviews-ico-1"></div>
+                          </li>
+                          <li data-target="#carousel-reviews" data-slide-to="1">
+                            <div class="carousel-reviews-ico-2"></div>
+                          </li>
+                          <li data-target="#carousel-reviews" data-slide-to="2">
+                            <div class="carousel-reviews-ico-3"></div>
+                          </li>
+                          <li data-target="#carousel-reviews" data-slide-to="3">
+                            <div class="carousel-reviews-ico-4"></div>
+                          </li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                          <div class="item active">
+                            <img src="images/reviews-icon1.png">
+                            <div class="carousel-caption">
+                              <h3>Grymm</h3>
+                              <p>I've had my website for a little over a month now and my clients absolutely love it!!! They have told me that it's extremely easy to navigate and it looks awesome! I couldn't have had a better website!</p>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <img src="images/reviews-icon2.png">
+                            <div class="carousel-caption">
+                             <h3>Shawna Todd</h3>
+                             <p>I had been wanting a website for my small business for to long. I never found the time or energy to get it done. I'm so grateful, I wish I had done it sooner..</p>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <img src="images/reviews-icon3.png">
+                            <div class="carousel-caption">
+                              <h3>Steve Bross</h3>
+                              <p>Since I do a lot of daily updates, I like the fact that the page updates on it's own. Otonomic been very helpful in working with me to get the site just the way I wanted it. Glad I found them!</p>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <img src="images/reviews-icon4.png">
+                            <div class="carousel-caption">
+                             <h3>Brian O'Callaghan</h3>
+                             <p>Otonomic offered me what I need at the time I needed it, a well designed, informative website that I update effortlessly wherever I travel.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="media-links "><!-- Section Media -->
+                    <div class="row hidden-xs">
+                      <div class="section-media holder">
+                        <div class="col-xs-4 col-sm-2 col-md-2 col-sm-offset-1 col-md-offset-1 media-item">
+                          <img src="images/media1.png" class="img-responsive">
+                        </div>
+                        <div class="col-xs-4 col-sm-2 col-md-2 media-item">
+                          <img src="images/media2.png" class="img-responsive">
+                        </div>
+                        <div class="col-xs-4 col-sm-2 col-md-2 media-item">
+                          <img src="images/media3.png" class="img-responsive">
+                        </div>
+                        <div class="col-xs-4 col-sm-2 col-md-2 media-item">
+                          <img src="images/media4.png" class="img-responsive">
+                        </div>
+                        <div class="col-xs-4 col-sm-2 col-md-2 media-item">
+                          <img src="images/media5.png" class="img-responsive">
+                        </div>
+                        <!-- <div class="col-xs-4 col-sm-2 col-md-2">
+                          <img src="images/media6.png" class="img-responsive">
+                        </div> -->
+                      </div>
+                    </div>
+                    <div class="row visible-xs">
+                      <a href="#">
+                        <div class="mobile-media-item-holder">
+                          <div class="mobile-media-item">
+                            <img src="images/media1.png" class="img-responsive">
+                          </div>
+                        </div>
+                      </a>
+                      <a href="#">
+                        <div class="mobile-media-item-holder">
+                          <div class="mobile-media-item">
+                            <img src="images/media2.png" class="img-responsive">
+                          </div>
+                        </div>
+                      </a>
+                      <a href="#">
+                        <div class="mobile-media-item-holder">
+                          <div class="mobile-media-item">
+                            <img src="images/media3.png" class="img-responsive">
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="row visible-xs">
+                      <a href="#">
+                        <div class="mobile-media-item-holder bottom">
+                          <div class="mobile-media-item">
+                            <img src="images/media4.png" class="img-responsive">
+                          </div>
+                        </div>
+                      </a>
+                      <a href="#">
+                        <div class="mobile-media-item-holder bottom">
+                          <div class="mobile-media-item">
+                            <img src="images/media5.png" class="img-responsive">
+                          </div>
+                        </div>
+                      </a>
+                      <a href="#">
+                        <div class="mobile-media-item-holder bottom">
+                          <div class="mobile-media-item">
+                            <img src="images/media6.png" class="img-responsive">
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </section>
+                  <section class="about"><!-- Section About -->
+                    <div class="row section-about hidden-xs">
+                      <div class="section-about-inner holder center-block clearfix">
+                        <div class="col-xs-12">
+                          <div class="drop-screen center-block">
+                            <div class="drop-screen-inner">
+                              <h1>We are otonomic.</h1>
+                              <img src="images/about-team.png">
+                              <p>Otonomic was created to empower small businesses on the web.<br/>20,000 freelancers and business owners have already chosen Otonomic to create and manage their websites.</p>
+                              <p>Otonomic was established in 2012 by Omri Allouche, an experienced entrepreneur, formerly the founder of social marketing platform Zink. The company currently employs a team of 10 talented professionals, led by veterans including Edik Mitelman, formerly of Conduit and Ilan Lichtnaier, formerly of Conduit, HP and Netcraft.</p>
+                            </div>
+                            <div class="bottom-bar">
+                              <div class="bottom-bar-side-left"></div>
+                              <div class="bottom-bar-side-right pull-right"></div>
+                              <div class="bottom-bar-handle"><img src="images/handle.gif"></div>
+                            </div>
+                          </div>
+                          <div class="bg-text center-block">
+                            <p>Otonomic was created to empower small businesses on the web.<br/>20,000 freelancers and business owners have already chosen Otonomic to create and manage their websites.</p>
+                            <p>Otonomic was established in 2012 by Omri Allouche, an experienced entrepreneur, formerly the founder of social marketing platform Zink. The company currently employs a team of 10 talented professionals, led by veterans including Edik Mitelman, formerly of Conduit and Ilan Lichtnaier, formerly of Conduit, HP and Netcraft.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="bg-about text-center">
+                          <img src="images/team-default.png" class="team-default active">
+                          <img src="images/team-active.png" class="team-active">
+                          <img src="images/computers.png" class="computers">
+                      </div>
+                    </div>
+                    <div class="row visible-xs about-mobile">
+                      <div id="carousel-about" class="carousel slide clearfix" data-interval="false" data-ride="carousel">
+                        <!-- Indicators -->
+                        <!-- <ol class="carousel-indicators carousel-tabs">
+                          <li data-target="#carousel-about" data-slide-to="0" class="active">
+                            <div class="carousel-about-ico-1"></div>
+                          </li>
+                          <li data-target="#carousel-about" data-slide-to="1">
+                            <div class="carousel-about-ico-2"></div>
+                          </li>
+                        </ol> -->
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                          <div class="item active">
+                            <div class="carousel-caption">
+                              <h1>We are otonomic.</h1>
+                              <p>Otonomic was created to empower small businesses on the web. 20,000 freelancers and business owners have already chosen Otonomic to create and manage their websites.</p>
+                              <p>Otonomic was established in 2012 by Omri Allouche, an experienced entrepreneur, formerly the founder of social marketing platform Zink. The company currently employs a team of 10 talented professionals, led by veterans including Edik Mitelman, formerly of Conduit and Ilan Lichtnaier, formerly of Conduit, HP and Netcraft.</p>
+                            </div>
+                            <img src="images/about-mobile-bg-1.png">
+                          </div>
+                          <!-- <div class="item">
+                            <div class="carousel-caption">
+                             <p>Otonomic was created in 2012 by <strong>Omri Allouche</strong>, who previously founded Zink, a social marketing platform that uses unique technology to increase the word of mouth effect on social networks and serves clients like P&G, Greenpeace, and Accessorize London.</p>
+                             <p>His fellow travellers on this journey are <strong>Edik Mitelman</strong> (product) and <strong>Ilan Lichtnaier</strong> (design), who took part in introducing the community toolbar at Conduit and elsewhere, and Roman Raslin who dominated the Israeli online gaming scene since 2006.</p>
+                            </div>
+                            <img src="images/about-mobile-bg-2.png">
+                          </div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="social"><!-- Section Social -->
+                    <div class="row section-social">
+                      <div class="col-xs-12 text-center">
+                        <h3>Also see us at:</h3>
+                      </div>
+                      <div class="social-links center-block">
+                        <div class="social-link-holder google-plus">
+                          <a href="https://plus.google.com/+Otonomic/" target="_blank" class="social-link track_event" data-ga-category="Marketing Website" data-ga-event="Share Click" data-ga-label="Google Plus" data-ajax-track="1"><img src="images/social-icon-1.png" class="img-responsive"></a>
+                        </div>
+                        <div class="social-link-holder facebook">
+                          <a href="https://www.facebook.com/page2site" target="_blank" class="social-link track_event" data-ga-category="Marketing Website" data-ga-event="Share Click" data-ga-label="Facebook" data-ajax-track="1"><img src="images/social-icon-2.png" class="img-responsive"></a>
+                        </div>
+                        <div class="social-link-holder twitter">
+                          <a href="https://twitter.com/otonomic/" target="_blank" class="social-link track_event" data-ga-category="Marketing Website" data-ga-event="Share Click" data-ga-label="Twitter" data-ajax-track="1"><img src="images/social-icon-3.png" class="img-responsive"></a>
+                        </div>
+                        <div class="social-link-holder email">
+                          <a href="http://www.linkedin.com/company/otonomic" target="_blank" class="social-link track_event" data-ga-category="Marketing Website" data-ga-event="Share Click" data-ga-label="Linkedin" data-ajax-track="1"><img src="images/social-icon-4.png" class="img-responsive"></a>
+                        </div>
+                      </div>
+                      <div class="footer-links center-block">
+                        <div class="footer-link"><a href="pdfs/Otonomic_Terms_of_Service.pdf" target="_blank"class="track_event" data-ga-category="Marketing Website" data-ga-event="Footer" data-ga-label="ToU" data-ajax-track="1">Terms of Use</a></div>
+                        <div class="footer-link"><a href="pdfs/Otonomic_Privacy_Policy.pdf" target="_blank" class="track_event" data-ga-category="Marketing Website" data-ga-event="Footer" data-ga-label="PP" data-ajax-track="1">Privacy Policy</a></div>
+                        <div class="footer-link"><a href="http://support.otonomic.com" target="_blank" class="track_event" data-ga-category="Marketing Website" data-ga-event="Footer" data-ga-label="FAQ" data-ajax-track="1">FAQ</a></div>
+                      </div>
+                      <div class="powered-by">© 2014 <img src="images/otonomic-logo.png" alt="otonomic logo"></div>
+                    </div>
+                  </section>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div style="display: none">
+    <div class="t_box">
+        <div class="msgbox">
+            <div class="header">
+                <a href="#" class="close_btn close-search" onClick="closeSearch('.search-wrapper'); return false;"><span class="glyphicon glyphicon-remove"></span></a>
+                <span class="msg_info">We weren't able to find this page on Facebook</span>
+            </div>
+
+            <div class="body_info">
+                <h1 class="first_msg">Refine your search</h1>
+                <p class="first_msg_desc">e.g. "my business" instead of "mybusiness"</p>
+                <p class="or_msg">Or</p>
+                <h1>Enter the full Facebook address of your business</h1>
+                <p style="display: inline-block;">e.g.: "https://www.facebook.com/pages/Jessicas-Pastries"</p>
+                <a href="#" id="how_do_i">How do I do that?</a>
+                <p class="or_msg">Or</p>
+                <a href="/shared/facebook_login.php" class="facebook_connect track_event measure_time" id="fb_connector" data-ga-category="LandingPage" data-ga-event="Connect with Facebook" data-ga-label="Search explanation box" data-ajax-track="1">Connect
+                </a>
+                <h1 style="line-height: 34px; float:left;">So we can find your page for you.</h1>
+                
+            </div>
+        </div>
+
+        <div class="steps">
+            <ul>
+                <li>
+                    <h1>Step 1 </h1> | <span>Go to your Facebook business page</span>
+                </li>
+                <li>
+                    <h1>Step 2 </h1> | <span>Copy the address shown in your browser</span>
+                    <p>(starts with "https://www.facebook.com")</p>
+                </li>
+                <li>
+                    <h1>Step 3 </h1> | <span>Paste the address in the search box above.</span>
+                </li>
+                <li>
+                    <h1>Step 4 </h1> | <span>Click "See my website"</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="search_progress" style="position: absolute; left: -35px;">
+        <span class="msg_info">Search in progress, please wait...!!!</span>
+    </div>
+  </div>
+  <link rel="stylesheet" href="css/loadingStyle.css">
+<div class="loading-box">
+  <div class="masking">
+       <div class="loading-page">
+           <div class="loading-content">
+               <p>We're building <strong>your new website</strong> now.</p>
+               <p class="loading-counter-text">It will be ready in... <label id='loaderCounter'></label> seconds  </p>
+               <span>So don't close this tab</span>
+           </div>
+           <div class="loading-image" >
+               <img src="images/loading/oto-loading.gif"/>
+           </div>
+           <div class="fb-like" data-href="https://www.facebook.com/page2site" data-width="86" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+       </div>
+   </div>
+</div>
+
+
+      <script>
+        (function(_,e,rr,s){_errs=[s];var c=_.onerror;_.onerror=function(){var a=arguments;_errs.push(a);
+            c&&c.apply(this,a)};var b=function(){var c=e.createElement(rr),b=e.getElementsByTagName(rr)[0];
+            c.src="//beacon.errorception.com/"+s+".js";c.async=!0;b.parentNode.insertBefore(c,b)};
+            _.addEventListener?_.addEventListener("load",b,!1):_.attachEvent("onload",b)})
+                (window,document,"script","52713acf0a2b9bf55800090f");
+    </script>
+    <!-- END ErrorCeption -->
+    <!-- START LuckyOrange -->
+    <script type='text/javascript'>
+        window.__wtw_lucky_site_id = 10400;
+
+        (function() {
+            var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+            wa.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://ca10400') + '.luckyorange.com/w.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+        })();
+    </script>
+    <!-- END LuckyOrange -->
+
+<script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-37736198-1']);
+    _gaq.push(['_setDomainName', 'otonomic.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/placeholders.min.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollstop.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollsnap.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+    <!-- Custom JS -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="//cherne.net/brian/resources/jquery.hoverIntent.minified.js"></script>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+    <link href="http://d2zxr4ixkv1lwq.cloudfront.net/lp/css/tipsy.css" rel="stylesheet" type="text/css" />
+    <!-- END Google Analytics -->
+    
+    <!-- Social  -->
+    <!-- // Facebook -->
+    <div id="fb-root"></div>
+    <script type="text/javascript">
+        window.fbAsyncInit = function() {
+            FB.init({ appId: "373931652687761",status: true,cookie: true,xfbml: true});
+
+            window.fbAsyncInit.fbLoaded.resolve();
+            //checkConnectedWithFacebook();
+        };
+
+        window.fbAsyncInit.fbLoaded = jQuery.Deferred();
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js&appId=373931652687761";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- // Google Plus -->
+    <script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/platform.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+    <!-- // Twitter -->
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+    </script>
+    <!-- // Pintrest -->
+    <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
+    <!-- // Linkedin -->
+    <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+    <!-- /Social  -->
+    <script>
+      AUTO_FOCUS = false;
+      SEARCH_PICTURE_SIZE = 80;
+    </script>
+    <link href="css/tipsy.css" rel="stylesheet" type="text/css">
+  <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/otonomic/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="js/otonomic/search_filterv1.0.2-wpsimfo.js"></script>
+    <script type="text/javascript" src="js/otonomic/jquery.jsonp-2.4.0.min.js"></script>
+    <script type="text/javascript" src="js/otonomic/jquery.tipsy.js"></script>
+
+    <script type="text/javascript" src="js/otonomic/otonomicv1.0.4.js"></script>
+    <script type="text/javascript">
+    $.preloadImages = function(){
+       for(var i = 0; i<arguments.length; i++){
+          $("<img />").attr("src", arguments[i]);
+       }
+    }
+    jQuery(document).ready(function(){
+        jQuery('.btn_go').tipsy({
+            gravity:  'se',//jQuery.fn.tipsy.autoNS,
+            trigger: 'manual'
+        });
+        $.preloadImages("backscreen.png");
+    });
+    </script>
+    <script type="text/javascript" src="js/functions.js"></script>
+  </body>
+</html>
