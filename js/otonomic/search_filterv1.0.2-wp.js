@@ -51,46 +51,14 @@ function parseURL(url){
     return parsed_url;
 }
 
-function sleep(millis, callback) {
-    setTimeout(function()
-            { callback(); }
-    , millis);
-}
-
-function get_site_id(redirect_url){
-    
-        site_json_url = parseURL(redirect_url).domain;
 
 
-	console.log(site_json_url.indexOf("otonomic.com"));
-
-        if(site_json_url.indexOf("otonomic.com") == -1){
-            site_json_url = site_json_url + "m";
-        }
-
-        console.log("site json: "+ site_json_url);
-
-    $.get( "http://"+ site_json_url + "/sites/view/.json", function( data ) {
-
-        
-        console.log("the site created: "+ data);
-
-       // sleep(5000, function(){
-             create_wp_site(data.id, data.slug);
-       // });
+function create_wp_site(page_id){
 
 
-    }, "json" );
-}
+    $.get( "http://iproplay.com/migration/index.php?site_id="+ page_id + "&theme=parallax", function( data ) {
 
-
-function create_wp_site(site_id, slug){
-
-    console.log('not, lets create wp site with slug: '+ slug);
-    window.slug = slug;
-    $.get( "http://iproplay.com/migration/index.php?site_id="+ site_id , function( data ) {
-
-        window.location = "http://"+ window.slug + ".iproplay.com";
+        window.location = data;
 
     });
 }
@@ -128,6 +96,12 @@ function create_wp_site(site_id, slug){
     $("#search_wrapper_main,#search_wrapper_floater").delegate(".search-results-item", 'click', function (e) {
         e.preventDefault();
         $('#btn_go').text('loading...');
+        var page_id = $(this).attr('href').replace(/[^0-9]/g,'');
+        create_wp_site(page_id);
+
+    return false;
+
+
 
 	$.ajax({
           type: "get",
@@ -141,6 +115,7 @@ function create_wp_site(site_id, slug){
 
 		console.log("response: "+ responseObj.redirect);        
     
+
                // showLoader('Your site is being created for you!', true);
 		//sleep(7000, function(){
                     get_site_id(redirect_url);
