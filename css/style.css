@@ -531,6 +531,9 @@ section.features .row{
 	opacity: 1;
 }
 /* ## Section Media ## */
+.media-links .row{
+	background-color: #fff;
+}
 .section-media{
 	margin-top: 48px;
 	padding-bottom: 91px;

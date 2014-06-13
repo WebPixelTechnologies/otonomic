@@ -38,7 +38,7 @@
   <div class="wrapper">
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
-        <div class="navbar-header">
+        <div class="navbar-header hidden-xs hidden-sm">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
@@ -46,7 +46,10 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand pull-left" href="#"><img src="images/otonomic-logo.png" alt="www.otomonic.com"></a>
-          <p class="navbar-header-text pull-right hidden-xs hidden-sm">אתר אינטרנט חינם למאזיני ג'יגה ב'</p>
+          <p class="navbar-header-text pull-right">אתר אינטרנט חינם לעסקים קטנים</p>
+        </div>
+        <div class="navbar-header text-center hidden-lg hidden-md">
+          <a class="" href="#"><img src="images/otonomic-logo.png" alt="www.otomonic.com"></a>
         </div>
         <div class="navbar-collapse collapse">
           
@@ -57,7 +60,7 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h3 class="hidden-md hidden-lg">אתר אינטרנט חינם למאזיני ג'יגה ב'</h3>
+        <h3 class="hidden-md hidden-lg">אתר אינטרנט חינם לקוראי "ישראל היום"</h3>
         <p>אתר עסקי הוא המפתח לעצמאות באינטרנט. לאתר ניתן <br/>להפנות לקוחות ומתעניינים ולהגיע דרכו לקהלים חדשים.</p>
       </div>
     </div>
@@ -66,7 +69,7 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-xs-12 col-md-5 content">
-          <p>לכבוד יום העצמאות ה-66 של מדינת ישראל, חברת אוטונומיק מעניקה במתנה אתר בחינם ל-100 עסקים קטנים בישראל מבין "מאזיני ג'יגה ב'". האתר כולל:</p>
+          <p>חברת אוטונומיק מעניקה במתנה אתר בחינם ל-100 עסקים קטנים בישראל. האתר כולל:</p>
           <ul>
             <li>אתר מקצועי ומרהיב המתעדכן אוטומטית מתוך דף הפייסבוק</li>
             <li>מותאם לצפייה בטאבלטים וטלפונים ניידים</li>
@@ -84,21 +87,21 @@
                 <div class="col-xs-8">
                   <div class="form-group">
                     <label for="name" class="sr-only">Name</label>
-                    <input type="text" class="form-control" id="name" name="name" class="required" placeholder="שם (חובה)">
+                    <input type="text" class="form-control" id="name" name="name" class="required" placeholder="שם">
                   </div>
                   <div class="form-group">
                     <label for="email" class="sr-only">Email address</label>
-                    <input type="email" class="form-control" id="email" name="email" class="required" placeholder="אימייל (חובה)">
+                    <input type="email" class="form-control" id="email" name="email" class="required" placeholder="אימייל">
                   </div>
                   <div class="form-group">
                     <label for="phone" class="sr-only">Phone</label>
-                    <input type="tel" class="form-control" id="phone" name="phone" class="required" placeholder="מספר טלפון (חובה)">
+                    <input type="tel" class="form-control" id="phone" name="phone" class="required" placeholder="מספר טלפון">
                   </div>
                   <div class="form-group form-search">
                     <label for="search" class="sr-only">Facebook Page</label>
-                    <input type="text" id="main_search_box" class="form-control main_search_box" name="search_name"  placeholder="כתובת דף פייסבוק (חובה)">
+                    <input type="text" id="main_search_box" class="form-control main_search_box" name="search_name"  placeholder="שם דף פייסבוק">
                     <input type="text" id="search" class="form-control  hidden" name="search">
-                    <input type="text" id="media" class="form-control  hidden" name="media" value="Bet">
+                    <input type="text" id="media" class="form-control  hidden" name="media" value="SMB">
                     <div class="tb search-wrapper" id="search_wrapper_main"></div>
                   </div>
                 </div>
@@ -110,7 +113,7 @@
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="isStore" value="Store"> אני צריך חנות אונליין
+                        <input type="checkbox" name="isStore" value="Store"> אני רוצה חנות וירטואלית
                       </label>
                     </div>
                 </div>
@@ -140,7 +143,15 @@
 </div>
 <footer>
   <div class="container text-center">
-    <p>אוטונומיק ב: <img src="images/in-media.png"></p>
+    <!-- <p>סקירות על אוטונומיק במיטב אתרי החדשות העסקיים בעולם:<img class="img-responsive center-block" src="images/in-media.png"></p> -->
+    <p>סקירות על אוטונומיק במיטב אתרי החדשות העסקיים בעולם:</p>
+    <ul class="media-links">
+      <li><a href="http://www.inc.com/christina-desmarais/6-tools-that-can-save-you-precious-time.html?cid=sf01001" target="_blank"><img src="images/media5.png"></a></li>
+      <li><a href="http://allfacebook.com/otonomic_b131534" target="_blank"><img src="images/media4.png"></a></li>
+      <li><a href="https://finance.yahoo.com/news/otonomic-launches-one-click-website-130000355.html" target="_blank"><img src="images/media2.png"></a></li>
+      <li><a href="http://smallbusiness.m.foxbusiness.com/quickPage.html?page=32797&content=103642197&pageNum=-1" target="_blank"><img src="images/media3.png"></a></li>
+      <li><a href="http://money.msn.com/business-news/article.aspx?feed=PR&Date=20140501&ID=17577473&topic=TOPIC_FINANCING&isub=1" target="_blank"><img src="images/media1.png"></a></li>
+    </ul>
   </div>
 </footer>
     <!-- Search box template -->

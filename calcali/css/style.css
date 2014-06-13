@@ -22,14 +22,12 @@
 }
 
 
+
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 63px;
   background-color: #dbdbdb;
   font-family: 'gisha', sans-serif;
-  background-image: url('../images/bg.png');
-  background-position: 70% 100px;
-  background-repeat: no-repeat;
 }
 
 ul {
@@ -198,3 +196,42 @@ footer p>img{
 	font-size: 16px;
 	padding-right: 5px;
 }
+
+
+/* Extra small devices (phones, less than 768px) */
+@media(max-width:767px){
+	.content{
+		margin-bottom: 20px;
+	}
+	span.help-inline.nod_msg{
+		width: 55%;
+	}
+	.content p{
+		font-size: 14px;
+	}
+	ul , .jumbotron p{
+		font-size: 16px;
+	}
+	.jumbotron p br{
+		display: none;
+	}
+	.checkbox label {
+		font-size: 14px;
+	}
+	h3 {
+		text-align: center;
+		font-size: 16px;
+	}
+}
+/* Small devices (tablets, 768px and up) */
+@media(min-width:768px){}
+/* Medium devices (desktops, 992px and up) */
+@media(min-width:992px){
+	body {
+		background-image: url('../images/bg.png');
+		background-position: 70% 100px;
+		background-repeat: no-repeat;
+	}
+}
+/* Large devices (large desktops, 1200px and up) */
+@media(min-width:1200px){}
