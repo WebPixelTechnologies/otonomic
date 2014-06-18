@@ -213,7 +213,7 @@
                                 <input type="text" class="form-control" id="phone" name="contact_phone" value="" placeholder="">
                             </div>
                             <div class="form-group text-center">
-                              <a href="#" onclick="return false;" class="submit btn btn-ttc btn-lg"><span class="glyphicon glyphicon-ok"></span> Done </a>
+                              <a href="#" onclick="return false;" class="submit btn btn-ttc btn-lg"><span class="glyphicon glyphicon-ok" id="contact-form-btn"></span> Done </a>
                               <h4>We will never misuse your contact information.</h4>
                               <a href="#" onclick="return false;" class="submit-skip" ><h4><u>I don’t want a Contact page in my website</u></h4></a>
                             </div>
@@ -255,7 +255,7 @@
                 <h4>Now you will be directed to your website to look around.<br/>
                 Then you will be guided through some basic editing steps.<br/>
                 You will be able to contact us anytime for help.</h4>
-                <a href="#" onclick="return false;" class="submit btn btn-ttc-orange btn-lg" style="margin-bottom:20px;"><img src="images/smiley.png"> See my  website! </a>
+                <a href="#" class="submit btn btn-ttc-orange btn-lg" style="margin-bottom:20px;" id="see-my-website-btn"><img src="images/smiley.png"> See my  website! </a>
               </div>
             </div>
           </div>
@@ -395,17 +395,128 @@
 
       <script>
 
+          function getParameterByName(name) {
+              name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+              var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                  results = regex.exec(location.search);
+              return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+          }
+
+          var page_id = getParameterByName('page_id');
+
+          $('#see-my-website-btn').click(function(){
+              window.location.href = window.blog_redirect;
+          });
+
+          if(page_id){
+
+              $.get("http://iproplay.com/migration/index.php?site_id="+ page_id +"&theme=parallax", function( data ) {
+               
+                  window.is_blog_ready = 1;
+                  window.blog_redirect = data.redirect;
+                  window.blog_id = data.blog_id;
+
+                  $('#see-my-website-btn').attr('href',data.redirect);
+
+                  console.log(data)
+                  blog_created();
+
+              }, "json" );
 
 
-function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
+              $.get("https://graph.facebook.com/"+ page_id , function( data ) {
+               
+                  delete data.location.latitude;
+                  delete data.location.longitude;
 
-    var page_id = getParameterByName('page_id');
-alert(page_id);
+                    var address_parts = [];
+
+                    for(var x in data.location){
+                      address_parts.push(data.location[x]);
+                    }
+
+
+                  var phone = (data.phone) ? data.phone : "";
+                  var address = (address_parts.join(", ")) ? address_parts.join(", ") : "";
+                  var email = (data.email) ? (data.email) : "";
+
+
+                  window.parsed_page_data = {
+                      'phone' : phone,
+                      'address' : address,
+                      'email' : email
+                  }
+
+                  console.log(data);
+                  console.log(window.parsed_page_data);
+
+
+                  $('#address').val(window.parsed_page_data.address);
+                  $('#email').val(window.parsed_page_data.email);
+                  $('#phone').val(window.parsed_page_data.phone);
+
+              }, "json" );
+        }
+
+
+
+
+          function blog_created(){
+
+              if(window.is_contact_saved == 1){
+
+                 send_contact_data();
+              }
+
+            return;
+          }
+
+
+          function contact_form_submited (){
+
+              window.is_contact_saved = 1;
+
+              if(window.is_blog_ready == 1){
+               
+                send_contact_data();
+
+              } else {
+                  window.users_contacts = {
+                    'phone' : $('#phone').val(),
+                    'address' : $('#address').val(),
+                    'email' : $('#email').val()
+                 }
+
+              }
+
+          }
+
+
+          function send_contact_data(){
+
+                if(window.users_contacts != undefined){
+                  var _phone = window.users_contacts.phone;
+                  var _email = window.users_contacts.email;
+                  var _address = window.users_contacts.address;
+                } else {
+                  var _phone = $('#phone').val();
+                  var _email = $('#address').val();
+                  var _address = $('#email').val();
+                }
+
+
+                // $.post( "test.php", { phone: _phone, address: _address, email: _email })
+                //   .done(function( data ) {
+                //     alert( "Data Loaded: " + data );
+                //   });
+          }
+
+
+          $('#contact-form-btn').click(function(){
+             contact_form_submited ();
+          });
+
+
       </script>
   </body>
 </html>
