@@ -84,12 +84,8 @@ function get_site_id(redirect_url){
 function create_wp_site(site_id, slug){
 
     console.log('not, lets create wp site with slug: '+ slug);
-    window.slug = slug;
-    $.get( "http://iproplay.com/migration/simfo/index.php?site_id="+ site_id , function( data ) {
 
-        window.location = "http://"+ window.slug + ".iproplay.com";
-
-    });
+    window.location = "http://otonomic.com/progresslp/?page_id="+ site_id;
 }
 
 // IIFE - Immediately Invoked Function Expression
