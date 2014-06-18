@@ -93,46 +93,7 @@ function create_wp_site(page_id){
             });
         });
     }
-    $("#search_wrapper_main,#search_wrapper_floater").delegate(".search-results-item", 'click', function (e) {
-        e.preventDefault();
-        $('#btn_go').text('loading...');
-        // var page_id = $(this).attr('href').replace(/[^0-9]/g,'');
-        // create_wp_site(page_id);
 
-    return false;
-
-
-
-	$.ajax({
-          type: "get",
-          url: $(this).attr('href')
-        })
-        .done(function(response) {
-            responseObj = $.parseJSON(response);
-            if (responseObj.status === 'success') {
-                redirect_url =responseObj.redirect;
-		
-
-		console.log("response: "+ responseObj.redirect);        
-    
-
-               // showLoader('Your site is being created for you!', true);
-		//sleep(7000, function(){
-                    get_site_id(redirect_url);
-        //        });
-		//showLoader('Your site is being created for you!', true);               
-                
-		return false;
-            };
-        });
-        var page_name = $('p.media-heading', this).html();
-        var result_number = $(this).data('result-number');
-        var search_query = $('.main_search_box').val();
-        closeSearch('#'+ $(this).parent().parent().attr('id'));
-        //showLoader('Your site is being created for you!', true);
-        $('.main_search_box').blur();
-        trackFBConnect('Search Marketing Website', 'Choose Page', $(this).attr('data-attr')+","+search_query + ' >> ' + page_name, result_number);
-    });
 
     $('#preview-form .form-submit, #preview-form2 .form-submit').on('click', function (e) {
         $('body').css('cursor', 'progress');
