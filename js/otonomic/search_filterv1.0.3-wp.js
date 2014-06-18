@@ -96,8 +96,8 @@ function create_wp_site(page_id){
     $("#search_wrapper_main,#search_wrapper_floater").delegate(".search-results-item", 'click', function (e) {
         e.preventDefault();
         $('#btn_go').text('loading...');
-        var page_id = $(this).attr('href').replace(/[^0-9]/g,'');
-        create_wp_site(page_id);
+        // var page_id = $(this).attr('href').replace(/[^0-9]/g,'');
+        // create_wp_site(page_id);
 
     return false;
 
@@ -293,7 +293,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
                     var simage = 'http://graph.facebook.com/' + val.id + '/picture?height=' + SEARCH_PICTURE_SIZE +'&width=' + SEARCH_PICTURE_SIZE;
                 }
 
-                items.push('<a class="media search-results-item" data-attr="'+$(InputField).attr('data-attr')+'" href="'+p2s_site_url+'/sites/add/fbid:'+val.id+'/.json" title="Click to view site" data-result-number="' + ind + '" >' +
+                items.push('<a class="media search-results-item" data-attr="'+$(InputField).attr('data-attr')+'" href="http://otonomic.com/progresslp?page_id='+val.id+'" title="Click to view site" data-result-number="' + ind + '" >' +
                     '<div >' +
                     '<div class="pull-left fanpage">' +
                     '<img class="media-object" src="'+ simage +'">' +
