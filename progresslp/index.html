@@ -388,5 +388,24 @@
         
         });
       </script>
+
+
+
+
+
+      <script>
+
+
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+    var page_id = getParameterByName('page_id');
+alert(page_id);
+      </script>
   </body>
 </html>

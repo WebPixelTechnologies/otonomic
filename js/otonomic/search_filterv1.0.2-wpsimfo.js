@@ -85,7 +85,7 @@ function create_wp_site(site_id, slug){
 
     console.log('not, lets create wp site with slug: '+ slug);
 
-    window.location = "http://otonomic.com/progresslp/?page_id="+ site_id;
+    window.location = "http://otonomic.com/progresslp?page_id="+ site_id;
 }
 
 // IIFE - Immediately Invoked Function Expression
