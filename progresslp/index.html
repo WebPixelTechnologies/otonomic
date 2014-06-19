@@ -455,6 +455,8 @@
                   $('#email').val(window.parsed_page_data.email);
                   $('#phone').val(window.parsed_page_data.phone);
 
+                  jQuery('#address').geocomplete('find',jQuery('#address').val());
+
               }, "json" );
         }
 
