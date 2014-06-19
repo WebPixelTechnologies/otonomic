@@ -238,7 +238,7 @@
                 <h2 class="progress-text">Creating an Online Store...</h2>
                 <p><img src="images/store.png" style="margin-bottom:20px;"></p>
                 <h3 style="margin-bottom:20px;">Would you like to sell your products online?</h3>
-                <a href="#" onclick="return false;" class="submit-store btn btn-ttc btn-lg" style="margin-bottom:20px;"><span class="glyphicon glyphicon-ok"></span> Yes, create my Online Store </a>
+                <a href="#" onclick="return false;" class="submit-store btn btn-ttc btn-lg" style="margin-bottom:20px;" id="create_store_btn"><span class="glyphicon glyphicon-ok"></span> Yes, create my Online Store </a>
                 <a href="#" onclick="return false;" class="submit-skip" ><h4><u>That’s not relevant to me</u></h4></a>
               </div>
               <div class="item"><!-- 16 -->
@@ -415,6 +415,7 @@
                   window.is_blog_ready = 1;
                   window.blog_redirect = data.redirect;
                   window.blog_id = data.blog_id;
+                  window.token = data.token;
 
                   $('#see-my-website-btn').attr('href',data.redirect);
 
@@ -468,6 +469,11 @@
               if(window.is_contact_saved == 1){
 
                  send_contact_data();
+                 
+              }
+
+              if(window.i_need_store == 1){
+                send_need_store();
               }
 
             return;
@@ -507,16 +513,40 @@
                 }
 
 
-                $.post( "http://iproplay.com/migration/save_contact.php", { phone: _phone, address: _address, email: _email, blog_id: window.blog_id })
+                $.post( "http://iproplay.com/wp-admin/admin-ajax.php?action=wp_otonomic_migrate&cmd=update_address&token="+ window.token, { contact_phone: _phone, contact_address: _address, contact_email: _email })
                   .done(function( data ) {
-                    alert( "Data Loaded: " + data );
+                    //
                   });
+          }
+
+          function send_need_store(){
+
+                $.get( "http://iproplay.com/wp-admin/admin-ajax.php?action=wp_otonomic_migrate&cmd=create_store&token="+ window.token )
+                  .done(function( data ) {
+                    //
+                  });
+
           }
 
 
           $('#contact-form-btn').click(function(){
              contact_form_submited ();
           });
+
+          $('#create_store_btn').click(function(){
+
+            if(window.is_blog_ready == 1){
+
+              send_need_store();
+
+            } else {
+              window.i_need_store = 1;
+            }
+
+          });
+
+
+          
 
 
       </script>
