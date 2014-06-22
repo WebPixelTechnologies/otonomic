@@ -296,8 +296,8 @@
               progressBar.set(92);
 
             } else if (owl.currentItem == 16){
-
               progressBar.set(100);
+              owl.stop() // Autoplay Stop
               
             } else {
 
@@ -313,6 +313,7 @@
             if (percent == 100) {
                 $('.progressjs-theme-blue .progressjs-percent').hide();
                 progressBar.end();
+                owl.stop() // Autoplay Stop
             };
 
         });
