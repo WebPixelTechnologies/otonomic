@@ -405,6 +405,10 @@
 
           var page_id = getParameterByName('page_id');
 
+          $('#see-my-website-btn').click(function(){
+              window.location.href = window.blog_redirect;
+          });
+
           if(page_id){
 
               $.get("http://iproplay.com/migration/index.php?facebook_id="+ page_id +"&theme=parallax", function( data ) {
@@ -418,6 +422,7 @@
                   window.blog_redirect = data.redirect;
                   window.blog_id = data.blog_id;
                   window.token = data.token;
+
 
                   $('#see-my-website-btn').attr('href',data.redirect);
 
