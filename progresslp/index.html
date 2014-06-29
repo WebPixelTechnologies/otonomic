@@ -418,6 +418,10 @@
                   window.blog_id = data.blog_id;
                   window.token = data.token;
 
+                  if (data.redirect.indexOf("http://") < 0){
+                      data.redirect = "http://"+ data.redirect;
+                  }
+                  
                   $('#see-my-website-btn').attr('href',data.redirect);
 
                   console.log(data)
