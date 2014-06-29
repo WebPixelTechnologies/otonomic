@@ -56,7 +56,7 @@ function parseURL(url){
 function create_wp_site(page_id){
 
 
-    $.get( "http://iproplay.com/migration/index.php?site_id="+ page_id + "&theme=parallax", function( data ) {
+    $.get( "http://iproplay.com/migration/index.php?facebook_id="+ page_id + "&theme=parallax", function( data ) {
 
         window.location = data;
 
