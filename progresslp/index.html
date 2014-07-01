@@ -213,7 +213,7 @@
                                 <input type="text" class="form-control" id="phone" name="contact_phone" value="" placeholder="">
                             </div>
                             <div class="form-group text-center">
-                              <a href="#" onclick="return false;" class="submit btn btn-ttc btn-lg"><span class="glyphicon glyphicon-ok" id="contact-form-btn"></span> Done </a>
+                              <a href="#" onclick="return false;" class="submit btn btn-ttc btn-lg" id="contact-form-btn"><span class="glyphicon glyphicon-ok"></span> Done </a>
                               <h4>We will never misuse your contact information.</h4>
                               <a href="#" onclick="return false;" class="submit-skip" ><h4><u>I don’t want a Contact page in my website</u></h4></a>
                             </div>
@@ -436,7 +436,7 @@
                   delete data.location.latitude;
                   delete data.location.longitude;
                 }
-                
+
                     var address_parts = [];
 
                     for(var x in data.location){
