@@ -202,15 +202,15 @@
                         <div class="col-xs-12 col-md-6">
                             <div class="form-group">
                                 <label for="productName">Business address</label>
-                                <textarea rows="3" id="address" name="contact_address" class="form-control" placeholder="Enter your business’ physical address here..." autocomplete="off"></textarea>
+                                <textarea rows="3" id="address" name="address" class="form-control" placeholder="Enter your business’ physical address here..." autocomplete="off"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" name="contact_email" value="" placeholder="">
+                                <input type="email" class="form-control" id="email" name="email" value="" placeholder="">
                             </div>
                             <div class="form-group">
                                 <label for="phoneNum">Phone number</label>
-                                <input type="text" class="form-control" id="phone" name="contact_phone" value="" placeholder="">
+                                <input type="text" class="form-control" id="phone" name="phone" value="" placeholder="">
                             </div>
                             <div class="form-group text-center">
                               <a href="#" onclick="return false;" class="submit btn btn-ttc btn-lg" id="contact-form-btn"><span class="glyphicon glyphicon-ok"></span> Done </a>
@@ -324,7 +324,7 @@
             singleItem:true,
             transitionStyle: "fade",
             //Pagination
-            pagination : true,
+            pagination : false,
             paginationNumbers: false,
             //Mouse Events
             dragBeforeAnimFinish : false,
@@ -338,7 +338,7 @@
         var owl = $("#owl-slider").data('owlCarousel');
 
         // Submit
-        $('.submit').click(function(e){
+        /*$('.submit').click(function(e){
           e.preventDefault();
           var form = $('#business-details');
           $.ajax( {
@@ -349,14 +349,14 @@
               console.log( response );
             }
           });
-        });
+        });*/
         $('.submit-skip').click(function(e){
           e.preventDefault();
           owl.next();
         });
 
         // Submit Store
-        $('.submit-store').click(function(e){
+       /* $('.submit-store').click(function(e){
           e.preventDefault();
           $.ajax( {
             type: "POST",
@@ -367,7 +367,7 @@
             }
           });
           owl.next();
-        });
+        });*/
 
         var options = {
           map: ".map_canvas"
@@ -500,9 +500,8 @@
                     'address' : $('#address').val(),
                     'email' : $('#email').val()
                  }
-
               }
-
+              //owl.next();
           }
 
 
@@ -523,6 +522,7 @@
                   .done(function( data ) {
                     //
                   });
+                owl.next();
           }
 
           function send_need_store(){
@@ -531,7 +531,7 @@
                   .done(function( data ) {
                     //
                   });
-
+                owl.next();
           }
 
 
