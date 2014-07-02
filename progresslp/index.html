@@ -467,12 +467,12 @@
                   var _address = window.users_contacts.address;
                 } else {
                   var _phone = $('#phone').val();
-                  var _email = $('#address').val();
-                  var _address = $('#email').val();
+                  var _email = $('#email').val();
+                  var _address = $('#address').val();
                 }
 
 
-                $.post( "http://iproplay.com/wp-admin/admin-ajax.php?action=wp_otonomic_migrate&cmd=update_address&token="+ window.token, { phone: _phone, address: _address, email: _email })
+                $.post( "http://iproplay.com/wp-admin/admin-ajax.php?action=wp_otonomic_migrate&cmd=update_address&blog_id="+ window.blog_id +"&token="+ window.token, { phone: _phone, address: _address, email: _email })
                   .done(function( data ) {
                     //
                   });
@@ -480,7 +480,7 @@
 
           function send_need_store(){
 
-                $.get( "http://iproplay.com/wp-admin/admin-ajax.php?action=wp_otonomic_migrate&cmd=create_store&token="+ window.token )
+                $.get( "http://iproplay.com/wp-admin/admin-ajax.php?action=wp_otonomic_migrate&cmd=create_store&blog_id="+ window.blog_id +"&token="+ window.token )
                   .done(function( data ) {
                     //
                   });
