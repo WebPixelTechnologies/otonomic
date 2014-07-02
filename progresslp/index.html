@@ -337,37 +337,10 @@
         //get carousel instance data and store it in variable owl
         var owl = $("#owl-slider").data('owlCarousel');
 
-        // Submit
-        /*$('.submit').click(function(e){
-          e.preventDefault();
-          var form = $('#business-details');
-          $.ajax( {
-            type: "POST",
-            url: form.attr( 'action' ),
-            data: form.serialize(),
-            success: function( response ) {
-              console.log( response );
-            }
-          });
-        });*/
         $('.submit-skip').click(function(e){
           e.preventDefault();
           owl.next();
         });
-
-        // Submit Store
-       /* $('.submit-store').click(function(e){
-          e.preventDefault();
-          $.ajax( {
-            type: "POST",
-            url: "some_url",
-            data: {'is_store':'true'},
-            success: function( response ) {
-              console.log( response );
-            }
-          });
-          owl.next();
-        });*/
 
         var options = {
           map: ".map_canvas"
@@ -383,15 +356,7 @@
           .bind("geocode:multiple", function(event, results){
             //$.log("Multiple: " + results.length + " results found");
           });
-        
-        });
-      </script>
-
-
-
-
-
-      <script>
+      
 
           function getParameterByName(name) {
               name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -501,7 +466,6 @@
                     'email' : $('#email').val()
                  }
               }
-              //owl.next();
           }
 
 
@@ -518,11 +482,10 @@
                 }
 
 
-                $.post( "http://iproplay.com/wp-admin/admin-ajax.php?action=wp_otonomic_migrate&cmd=update_address&token="+ window.token, { contact_phone: _phone, contact_address: _address, contact_email: _email })
+                $.post( "http://iproplay.com/wp-admin/admin-ajax.php?action=wp_otonomic_migrate&cmd=update_address&token="+ window.token, { phone: _phone, address: _address, email: _email })
                   .done(function( data ) {
                     //
                   });
-                owl.next();
           }
 
           function send_need_store(){
@@ -531,12 +494,12 @@
                   .done(function( data ) {
                     //
                   });
-                owl.next();
           }
 
 
           $('#contact-form-btn').click(function(){
              contact_form_submited ();
+             owl.next();
           });
 
           $('#create_store_btn').click(function(){
@@ -548,9 +511,9 @@
             } else {
               window.i_need_store = 1;
             }
-
+            owl.next();
           });
-
+     });
 
           
 
