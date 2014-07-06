@@ -1,0 +1,176 @@
+@font-face {
+    font-family: 'aller';
+    src: url('../fonts/aller_bd-webfont.eot');
+    src: url('../fonts/aller_bd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aller_bd-webfont.svg') format('svg'),
+         url('../fonts/aller_bd-webfont.woff') format('woff'),
+         url('../fonts/aller_bd-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'aller';
+    src: url('../fonts/aller_lt-webfont.eot');
+    src: url('../fonts/aller_lt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aller_lt-webfont.svg') format('svg'),
+         url('../fonts/aller_lt-webfont.woff') format('woff'),
+         url('../fonts/aller_lt-webfont.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'aller';
+    src: url('../fonts/aller_rg-webfont.eot');
+    src: url('../fonts/aller_rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aller_rg-webfont.svg') format('svg'),
+         url('../fonts/aller_rg-webfont.woff') format('woff'),
+         url('../fonts/aller_rg-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+	font-family: 'aller','Open Sans', sans-serif;
+	background-color: #f3ede9;
+}
+
+#header{
+	height: 80px;
+	background-color: #3d3632;
+}
+
+#header p.header-title{
+	display: inline-block;
+	padding-left: 45px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 35px;
+	line-height: 80px;
+}
+#header div.logo-container{
+	position: relative;
+	height: 80px;
+	padding: 15px 25px 0 25px;
+	background-color: #231f20;
+}
+#header div.left-side-border{
+	position: absolute;
+	top: 0;
+	right: 180px;
+	border-top: 80px solid #231f20;
+	border-left: 15px solid transparent;
+	font-size: 0px;
+	line-height: 0%;
+	width: 0px;
+}
+
+#content{
+	height: 510px;
+	background-image: url('../images/stage-bg.jpg');
+	background-size: 100% 100%;
+}
+#content div.content-inner{
+	padding: 50px;
+}
+#content p.title-text{
+	margin-bottom: 30px;
+	color: #3d3632;
+	font-size: 30px;
+	line-height: 39px;
+	font-weight: lighter;
+}
+#content p.sub-title-text{
+	color: #3d3632;
+	font-size: 20px;
+	line-height: 26px;
+	font-weight: lighter;
+}
+
+#testimonials{
+	height: 190px;
+	border-top: 5px solid #f3ede9;
+	background-color: #fff;
+}
+#testimonials .col-md-4{
+	padding: 0;
+}
+#testimonials .counter p{
+	padding: 20px 0 7px 0;
+	font-size: 20px;
+	font-weight: lighter;
+}
+
+#testimonials h4.media-heading{
+	font-size: 14px;
+	font-weight: bold;
+}
+#testimonials h4.media-heading:before{
+	content: url('../images/quotes.png');
+	margin-right: 10px;
+	margin-left: -30px;
+}
+#testimonials .media-body{
+	padding:20px 0 0 30px;
+	font-size: 14px;
+	font-weight: lighter;
+}
+
+#testimonials img.testi-image-1{
+	margin-left: 20px;
+	margin-right: -40px;
+}
+#testimonials img.testi-image-2{
+	margin-left: 20px;
+}
+#testimonials img.testi-image-3{
+	margin-left: 20px;
+	margin-right: -20px;
+}
+
+#content .red-arrows{
+	position: relative;
+	top: -20px;
+	left: 30px;
+}
+#content .search-field{
+	margin-top: -15px;
+	font-size: 16px;
+	width: 90%;
+	border-bottom: 5px solid #f54500;
+	background-color: #f54500;
+}
+#content .search-field .form-control{
+	height: 50px;
+	border: 0;
+	border-radius: 0;
+}
+#content .search-field .btn{
+	height: 50px;
+	margin-left:  0!important;
+	line-height: 45px;
+	font-size: 16px;
+	color: #fff;
+	font-weight: bold;
+	background-color: #f54500;
+	border: 0;
+	border-radius: 0;
+	outline: 0;
+}
+#content .search-field .btn:hover{
+	border: 0;
+	margin-left:0;
+}
+#content .search-field .btn:focus{
+	border: 0;
+	outline: 0;
+}
+
+::-webkit-input-placeholder { color:#b3aa9b!important; font-size: 15px;}
+::-moz-placeholder { color:#b3aa9b!important; font-size: 15px;} /* firefox 19+ */
+:-ms-input-placeholder { color:#b3aa9b!important; font-size: 15px;} /* ie */
+input:-moz-placeholder { color:#b3aa9b!important; font-size: 15px;}
+
+
