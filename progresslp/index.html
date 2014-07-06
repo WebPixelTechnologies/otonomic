@@ -482,18 +482,14 @@
                 }
 
 
-                $.post( "http://iproplay.com/wp-admin/admin-ajax.php?action=wp_otonomic_migrate&cmd=update_address&blog_id="+ window.blog_id +"&token="+ window.token, { phone: _phone, address: _address, email: _email })
-                  .done(function( data ) {
-                    //
-                  });
+                $.post( window.blog_redirect + '/?json=settings.set', { phone: _phone }));
+                $.post( window.blog_redirect + '/?json=settings.set', { address: _address }));
+                $.post( window.blog_redirect + '/?json=settings.set', { email: _email }));
+
           }
 
           function send_need_store(){
-
-                $.get( "http://iproplay.com/wp-admin/admin-ajax.php?action=wp_otonomic_migrate&cmd=create_store&blog_id="+ window.blog_id +"&token="+ window.token )
-                  .done(function( data ) {
-                    //
-                  });
+                  $.post(window.blog_redirect + '/?json=store.create');
           }
 
 
