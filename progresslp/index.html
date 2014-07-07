@@ -413,9 +413,6 @@
                       'email' : email
                   }
 
-                  console.log(data);
-                  console.log(window.parsed_page_data);
-
 
                   $('#address').val(window.parsed_page_data.address);
                   $('#email').val(window.parsed_page_data.email);
@@ -477,11 +474,41 @@
 
                 var values_changes = { phone: _phone, address: _address, email : _email}
                 $.post( window.site_url + '/?json=settings.set_many', { values: values_changes });
- 
+
+                request = $.ajax({
+                    type: "POST",
+                    url:  window.site_url + '/?json=settings.set_many',
+                    data: { values: values_changes }
+                    statusCode: {
+                      200: function() {
+                          return;
+                       },
+                      307:function(){
+                        set_many(values_changes)
+                       }
+                     }
+                });
+          }
+
+          function set_many(values_changes){
+            $.post( window.site_url + '/?json=settings.set_many', { values: values_changes });
           }
 
           function send_need_store(){
-                  $.post(window.site_url + '/?json=store.create');
+
+
+              request = $.ajax({
+                    type: "POST",
+                    url: window.site_url + '/?json=store.create',
+                    statusCode: {
+                      200: function() {
+                        doSomething();
+                       },
+                      307:function(){
+                        s$.post(window.site_url + '/?json=store.create');
+                       }
+                     }
+                });
           }
 
 
