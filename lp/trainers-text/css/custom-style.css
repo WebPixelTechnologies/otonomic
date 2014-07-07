@@ -90,8 +90,7 @@ body{
 }
 
 #testimonials{
-	height: 190px;
-	border-top: 5px solid #f3ede9;
+	margin-top: 5px;
 	background-color: #fff;
 }
 #testimonials .col-md-4{
