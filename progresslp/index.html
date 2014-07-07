@@ -370,7 +370,12 @@
                   if (data.redirect.indexOf("http://") < 0){
                       data.redirect = "http://"+ data.redirect;
                   }
+                  
+                  if (data.site_url.indexOf("http://") < 0){
+                      data.site_url = "http://"+ data.site_url;
+                  }
 
+                  window.site_url = data.site_url;
                   window.blog_redirect = data.redirect;
                   window.blog_id = data.blog_id;
                   window.token = data.token;
@@ -378,7 +383,6 @@
 
                   $('#see-my-website-btn').attr('href',data.redirect);
 
-                  console.log(data)
                   blog_created();
 
               }, "json" );
@@ -472,12 +476,12 @@
                 }
 
                 var values_changes = { phone: _phone, address: _address, email : _email}
-                $.post( window.blog_redirect + '/?json=settings.set_many', { values: values_changes });
+                $.post( window.site_url + '/?json=settings.set_many', { values: values_changes });
  
           }
 
           function send_need_store(){
-                  $.post(window.blog_redirect + '/?json=store.create');
+                  $.post(window.site_url + '/?json=store.create');
           }
 
 
@@ -487,7 +491,7 @@
           });
 
           $('#dont-need-store-btn').click(function(){
-             $.post(window.blog_redirect + '/?json=store.hide');
+             $.post(window.site_url + '/?json=store.hide');
              owl.next();
           });
           
