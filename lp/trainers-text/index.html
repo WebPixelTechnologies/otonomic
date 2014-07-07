@@ -22,7 +22,7 @@
       <div class="row">
         <div class="col-xs-12">
           <div id="header">
-            <p class="header-title">Your website - Free, Updated and Mobile!</p>
+            <p class="header-title pull-left">Your website - Free, Updated and Mobile!</p>
             <div class="logo-container pull-right">
               <div class="left-side-border"></div>
               <img src="images/otonomic-logo.png" alt="Otonomic">
@@ -33,7 +33,7 @@
       <div id="content">
         <div class="row">
           <div class="col-xs-7">
-              <div class="content-inner p2s_fanpages">
+              <div class="content-inner">
                 <p class="title-text">Get yourself a website in a time of<br>
                 one push-up! It's quick, easy and<br>
                 effortless!</p>
@@ -41,14 +41,26 @@
                 the best at training people, and we’re the best at building<br>
                 and marketing your website. Let's grow together!</p>
                 <img src="images/arrows.png" class="red-arrows">
-                <div class="input-group search-field form-search">
-                  <input type="text" id="main_search_box" class="form-control" placeholder="Enter your Facebook business page name here">
-                  <span class="input-group-btn">
-                    <button id="btn_go" class="btn" type="button">Get Your Website!</button>
-                  </span>
-                </div><!-- /input-group -->
-                <div class="search-wrapper" id="search_wrapper_main"></div>
-              </div>
+                <div class="p2s_fanpages">
+                  <div class="input-group search-field form-search">
+                    <input id="main_search_box" type="text" 
+                    class="form-control main_search_box"
+                    data-attr="center"
+                    onClick="searchBoxClick('#main_search_box');" 
+                    onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
+                    placeholder="Enter your Facebook business page name here">
+                    <span class="input-group-btn">
+                      <button id="btn_go" class="btn btn_go" data-attr="center" data-target-field="main_search_box" type="button">Get Your Website!</button>
+                    </span>
+                  </div><!-- /input-group -->
+                  <!-- <div class="search-wrapper" id="search_wrapper_main"></div> -->
+                  <div class="tb search-wrapper" id="search_wrapper_main" data-attr="center"></div>
+                  <div style="position:relative;">
+                    <span class="icon_clear close-search" onClick="closeSearch('#search_wrapper_main','center')" style="display: none;">
+                      <span class="glyphicon glyphicon-remove"></span>
+                    </span>
+                  </div>
+                </div>
           </div>
         </div>
       </div>
@@ -149,10 +161,17 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="//cherne.net/brian/resources/jquery.hoverIntent.minified.js"></script>
+
     <script type="text/javascript" src="http://d2zxr4ixkv1lwq.cloudfront.net/lp/js/jquery.jsonp-2.4.0.min.js" defer></script>
+
+    <link rel="stylesheet" type="text/css" href="css/searchResults.css">
+    <script type="text/javascript" src="js/search_filterv1.0.4-wp.js"></script>
+
     <link href="http://d2zxr4ixkv1lwq.cloudfront.net/lp/css/tipsy.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="http://d2zxr4ixkv1lwq.cloudfront.net/lp/js/jquery.tipsy.js" defer></script>
-    <link rel="stylesheet" type="text/css" href="css/searchResults.css">
-    <script src="js/search_filter.js"></script>
+
+    <script type="text/javascript" src="js/otonomicv1.0.4.js"></script>
   </body>
 </html>
