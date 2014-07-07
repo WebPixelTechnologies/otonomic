@@ -478,7 +478,7 @@
                 request = $.ajax({
                     type: "POST",
                     url:  window.site_url + '/?json=settings.set_many',
-                    data: { values: values_changes }
+                    data: { values: values_changes },
                     statusCode: {
                       200: function() {
                           return;
