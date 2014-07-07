@@ -127,12 +127,12 @@
 
 .p2s_fanpages span.icon_clear{
     position: absolute;
-    right: 0;
+    right: 210px;
     margin: 0;
     padding-right: 13px;
-    padding:11px 10px 10px 9px;
-    top: -48px;
-    border-right: 2px solid #666161;
+    padding: 11px 10px 10px 9px;
+    top: -50px;
+    z-index: 99;
 }
 .p2s_fanpages span.icon_clear.close-search-floater{
     padding-right: 13px;
