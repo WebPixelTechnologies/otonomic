@@ -228,7 +228,7 @@
                 <p><img src="images/store.png" style="margin-bottom:20px;"></p>
                 <h3 style="margin-bottom:20px;">Would you like to sell your products online?</h3>
                 <a href="#" onclick="return false;" class="submit-store btn btn-ttc btn-lg" style="margin-bottom:20px;" id="create_store_btn"><span class="glyphicon glyphicon-ok"></span> Yes, I need an online store</a>
-                <a href="#" onclick="return false;" class="submit-skip" ><h4><u>No, I don’t want to sell products online</u></h4></a>
+                <a href="#" onclick="return false;" class="submit-skip" id="dont-need-store-btn"><h4><u>No, I don’t want to sell products online</u></h4></a>
               </div>
               <div class="item"><!-- 16 -->
                 <h2 class="progress-text">Finalizing your new website...</h2>
@@ -485,6 +485,13 @@
              contact_form_submited ();
              owl.next();
           });
+
+          $('#dont-need-store-btn').click(function(){
+             $.post(window.blog_redirect + '/?json=store.hide');
+             owl.next();
+          });
+          
+
 
           $('#create_store_btn').click(function(){
 
