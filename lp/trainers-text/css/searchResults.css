@@ -243,7 +243,7 @@
 /* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
 
 .t_box .steps{display: none;}
-.t_box.open {width:800px;}
+.t_box.open {width:850px;}
 .t_box.open .msgbox {border-right:2px solid #666161}
 .t_box.open .steps {display: inline-block;}
 
