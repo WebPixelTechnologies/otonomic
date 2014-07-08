@@ -176,7 +176,7 @@ $(document).ready(function($){
 var timeoutEmptySearchBox;
 
 function searchBoxClick(InputField) {
-    console.log('searchBoxClick('+InputField+')');
+    //console.log('searchBoxClick('+InputField+')');
     var value = $(InputField).val();
     if(value.length == 0) {
         timeoutEmptySearchBox = setTimeout(function() {
@@ -308,7 +308,7 @@ function show_searching_message(){
 }
 
 function show_empty_message(inputField){
-    console.log(inputField);
+    //console.log(inputField);
     closeHowDoISteps();
     if($(inputField).val() == ''){
         var $tbox = $(".t_box").clone();
