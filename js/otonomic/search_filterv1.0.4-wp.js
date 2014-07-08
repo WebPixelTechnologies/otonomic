@@ -216,6 +216,11 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
         }
         p2strack++;
         trackFBConnect("Search Marketing Website", "Query", $(InputField).attr('data-attr')+","+value, p2strack);
+
+        window._fbq = window._fbq || [];
+        window._fbq.push(['track', '6016621432630', {'value':'0.00','currency':'USD'}]);
+
+
     }, 2000);
 
     if (!already_searched) {

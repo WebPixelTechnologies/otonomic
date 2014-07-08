@@ -31,6 +31,19 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script>
+          (function() {
+            var _fbq = window._fbq || (window._fbq = []);
+            if (!_fbq.loaded) {
+              var fbds = document.createElement('script');
+              fbds.async = true;
+              fbds.src = '//connect.facebook.net/en_US/fbds.js';
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(fbds, s);
+              _fbq.loaded = true;
+            }
+          })();
+    </script>
   </head>
 
   <body class="wp-lp">
@@ -228,7 +241,7 @@
                 <p><img src="images/store.png" style="margin-bottom:20px;"></p>
                 <h3 style="margin-bottom:20px;">Would you like to sell your products online?</h3>
                 <a href="#" onclick="return false;" class="submit-store btn btn-ttc btn-lg" style="margin-bottom:20px;" id="create_store_btn"><span class="glyphicon glyphicon-ok"></span> Yes, I need an online store</a>
-                <a href="#" onclick="return false;" class="submit-skip" ><h4><u>No, I don’t want to sell products online</u></h4></a>
+                <a href="#" onclick="return false;" class="submit-skip" id="dont-need-store-btn"><h4><u>No, I don’t want to sell products online</u></h4></a>
               </div>
               <div class="item"><!-- 16 -->
                 <h2 class="progress-text">Finalizing your new website...</h2>
@@ -370,7 +383,18 @@
                   if (data.redirect.indexOf("http://") < 0){
                       data.redirect = "http://"+ data.redirect;
                   }
+                  
+                  if (data.site_url.indexOf("http://") < 0){
+                      data.site_url = "http://"+ data.site_url;
+                  }
 
+
+                    // Site created, facebook fixel
+                    window._fbq = window._fbq || [];
+                    window._fbq.push(['track', '6008636103630', {'value':'0.00','currency':'USD'}]);
+
+
+                  window.site_url = data.site_url;
                   window.blog_redirect = data.redirect;
                   window.blog_id = data.blog_id;
                   window.token = data.token;
@@ -378,7 +402,6 @@
 
                   $('#see-my-website-btn').attr('href',data.redirect);
 
-                  console.log(data)
                   blog_created();
 
               }, "json" );
@@ -408,9 +431,6 @@
                       'address' : address,
                       'email' : email
                   }
-
-                  console.log(data);
-                  console.log(window.parsed_page_data);
 
 
                   $('#address').val(window.parsed_page_data.address);
@@ -471,19 +491,43 @@
                   var _address = $('#address').val();
                 }
 
+                var values_changes = { phone: _phone, address: _address, email : _email}
+                $.post( window.site_url + '/?json=settings.set_many', { values: values_changes });
 
-                $.post( "http://iproplay.com/wp-admin/admin-ajax.php?action=wp_otonomic_migrate&cmd=update_address&blog_id="+ window.blog_id +"&token="+ window.token, { phone: _phone, address: _address, email: _email })
-                  .done(function( data ) {
-                    //
-                  });
+                request = $.ajax({
+                    type: "POST",
+                    url:  window.site_url + '/?json=settings.set_many',
+                    data: { values: values_changes },
+                    statusCode: {
+                      200: function() {
+                          return;
+                       },
+                      307:function(){
+                        set_many(values_changes)
+                       }
+                     }
+                });
+          }
+
+          function set_many(values_changes){
+            $.post( window.site_url + '/?json=settings.set_many', { values: values_changes });
           }
 
           function send_need_store(){
 
-                $.get( "http://iproplay.com/wp-admin/admin-ajax.php?action=wp_otonomic_migrate&cmd=create_store&blog_id="+ window.blog_id +"&token="+ window.token )
-                  .done(function( data ) {
-                    //
-                  });
+
+              request = $.ajax({
+                    type: "POST",
+                    url: window.site_url + '/?json=store.create',
+                    statusCode: {
+                      200: function() {
+                        doSomething();
+                       },
+                      307:function(){
+                        s$.post(window.site_url + '/?json=store.create');
+                       }
+                     }
+                });
           }
 
 
@@ -491,6 +535,13 @@
              contact_form_submited ();
              owl.next();
           });
+
+          $('#dont-need-store-btn').click(function(){
+             $.post(window.site_url + '/?json=store.hide');
+             owl.next();
+          });
+          
+
 
           $('#create_store_btn').click(function(){
 
