@@ -78,7 +78,7 @@
                 <div class="p2s_fanpages">
                   <div class="input-group search-field form-search">
                     <input id="main_search_box" type="text" 
-                    class="form-control main_search_box"
+                    class="form-control main_search_box LoNotSensitive"
                     data-attr="center"
                     onClick="searchBoxClick('#main_search_box');" 
                     onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
@@ -230,6 +230,17 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
+    <!-- START LuckyOrange -->
+    <script type='text/javascript'>
+        window.__wtw_lucky_site_id = 10400;
+
+        (function() {
+            var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+            wa.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://ca10400') + '.luckyorange.com/w.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+        })();
+    </script>
+    <!-- END LuckyOrange -->
     <script type="text/javascript" src="js/functions.js"></script>
   </body>
 </html>
