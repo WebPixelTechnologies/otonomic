@@ -377,7 +377,8 @@
           if(page_id){
 
               $.get("http://iproplay.com/migration/index.php?facebook_id="+ page_id +"&theme=parallax", function( data ) {
-               
+              
+
                   window.is_blog_ready = 1;
 
                   if (data.redirect.indexOf("http://") < 0){
@@ -388,6 +389,9 @@
                       data.site_url = "http://"+ data.site_url;
                   }
 
+                  if(data.status == 'fail'){
+                    window.location = data.site_url;
+                  }
 
                     // Site created, facebook fixel
                     window._fbq = window._fbq || [];
