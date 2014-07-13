@@ -372,6 +372,7 @@
 
           $('#see-my-website-btn').click(function(){
               window.location.href = window.blog_redirect;
+              track_click('Loading Page','Show Website');
           });
 
           if(page_id){
@@ -391,12 +392,17 @@
 
                   if(data.status == 'fail'){
                     window.location = data.site_url;
+                    var page_type = window.page_type || 'Fan Page';
+                    track_click('Account Manage','Create Success', page_type);
+                  } else {
+                    track_click('Account Manage','Site Exists', '');
                   }
 
                     // Site created, facebook fixel
                     window._fbq = window._fbq || [];
                     window._fbq.push(['track', '6008636103630', {'value':'0.00','currency':'USD'}]);
 
+                
 
                   window.site_url = data.site_url;
                   window.blog_redirect = data.redirect;
@@ -429,7 +435,11 @@
                   var address = (address_parts.join(", ")) ? address_parts.join(", ") : "";
                   var email = (data.email) ? (data.email) : "";
 
-
+                  if(data.likes != undefined){
+                    window.page_type = 'Fan Page';
+                  } else {
+                    window.page_type = 'Personal Page';
+                  }
                   window.parsed_page_data = {
                       'phone' : phone,
                       'address' : address,
@@ -511,6 +521,13 @@
                        }
                      }
                 });
+
+                if(window.parsed_page_data.phone != undefined && window.parsed_page_data.phone != _phone)
+                    track_click('Loading Page','Contact Details','edited phone');
+                if(window.parsed_page_data.address != undefined && window.parsed_page_data.address != _address)
+                    track_click('Loading Page','Contact Details','edited address');
+                if(window.parsed_page_data.email != undefined && window.parsed_page_data.email != _email)
+                    track_click('Loading Page','Contact Details','edited email');
           }
 
           function set_many(values_changes){
@@ -542,12 +559,15 @@
 
           $('#dont-need-store-btn').click(function(){
              $.post(window.site_url + '/?json=store.hide');
+             track_click('Loading Page','Online Store', 'Yes');
              owl.next();
           });
           
 
 
           $('#create_store_btn').click(function(){
+
+            track_click('Loading Page','Online Store', 'No');
 
             if(window.is_blog_ready == 1){
 
@@ -560,9 +580,35 @@
           });
      });
 
+      </script>
+
+
+
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-37736198-1', 'auto');
+          ga('send', 'pageview');
+          track_event('Loading Page', 'View')
+      </script>
+
+
+      <script>
+        function track_event(category, action, label, value){
           
+          label = label || '';
 
-
+          if(!value){
+            ga('send', 'event', category, action, label);
+            jQuery.get('http://otonomic.com/code/sites/track_click/', { category: category, action: action , label: label });
+          } else {
+            ga('send', 'event', category, action, label,value);
+            jQuery.get('http://otonomic.com/code/sites/track_click/', { category: category, action: action , label: label, value: value });
+          }
+        }
       </script>
   </body>
 </html>
