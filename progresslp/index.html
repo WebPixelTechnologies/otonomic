@@ -408,10 +408,10 @@
 
                   if(data.status == 'fail'){
                     window.location = data.site_url;
+                    track_event('Account Manage','Site Exists', '');
+                  } else {
                     var page_type = window.page_type || 'Fan Page';
                     track_event('Account Manage','Create Success', page_type);
-                  } else {
-                    track_event('Account Manage','Site Exists', '');
                   }
 
                     // Site created, facebook fixel
@@ -434,6 +434,8 @@
 
 
               $.get("https://graph.facebook.com/"+ page_id , function( data ) {
+               console.log("the page:"+ page_id);
+               console.log(data);
                
                if(data.location.latitude != undefined && data.location.longitude != undefined){
                   delete data.location.latitude;
