@@ -372,7 +372,7 @@
 
           $('#see-my-website-btn').click(function(){
               window.location.href = window.blog_redirect;
-              track_click('Loading Page','Show Website');
+              track_event('Loading Page','Show Website');
           });
 
           if(page_id){
@@ -393,7 +393,7 @@
                   if(data.status == 'fail'){
                     window.location = data.site_url;
                     var page_type = window.page_type || 'Fan Page';
-                    track_click('Account Manage','Create Success', page_type);
+                    track_event('Account Manage','Create Success', page_type);
                   } else {
                     track_click('Account Manage','Site Exists', '');
                   }
@@ -523,11 +523,11 @@
                 });
 
                 if(window.parsed_page_data.phone != undefined && window.parsed_page_data.phone != _phone)
-                    track_click('Loading Page','Contact Details','edited phone');
+                    track_event('Loading Page','Contact Details','edited phone');
                 if(window.parsed_page_data.address != undefined && window.parsed_page_data.address != _address)
-                    track_click('Loading Page','Contact Details','edited address');
+                    track_event('Loading Page','Contact Details','edited address');
                 if(window.parsed_page_data.email != undefined && window.parsed_page_data.email != _email)
-                    track_click('Loading Page','Contact Details','edited email');
+                    track_event('Loading Page','Contact Details','edited email');
           }
 
           function set_many(values_changes){
@@ -559,7 +559,7 @@
 
           $('#dont-need-store-btn').click(function(){
              $.post(window.site_url + '/?json=store.hide');
-             track_click('Loading Page','Online Store', 'Yes');
+             track_event('Loading Page','Online Store', 'Yes');
              owl.next();
           });
           
@@ -567,7 +567,7 @@
 
           $('#create_store_btn').click(function(){
 
-            track_click('Loading Page','Online Store', 'No');
+            track_event('Loading Page','Online Store', 'No');
 
             if(window.is_blog_ready == 1){
 
