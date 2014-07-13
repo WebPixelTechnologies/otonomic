@@ -52,10 +52,10 @@
 
           if(!value){
             ga('send', 'event', category, action, label);
-            jQuery.get('http://otonomic.com/code/sites/track_click/', { category: category, event: action , label: label });
+            jQuery.post('http://otonomic.com/code/sites/track_click/', { category: category, event: action , label: label });
           } else {
             ga('send', 'event', category, action, label,value);
-            jQuery.get('http://otonomic.com/code/sites/track_click/', { category: category, event: action , label: label, value: value });
+            jQuery.post('http://otonomic.com/code/sites/track_click/', { category: category, event: action , label: label, value: value });
           }
         }
   </script>
