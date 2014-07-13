@@ -436,12 +436,11 @@
               $.get("https://graph.facebook.com/"+ page_id , function( data ) {
                console.log("the page:"+ page_id);
                console.log(data);
-               
-               if(data.location.latitude != undefined && data.location.longitude != undefined){
+
+               if(data.location != undefined && data.location.latitude != undefined && data.location.longitude != undefined){
                   delete data.location.latitude;
                   delete data.location.longitude;
                 }
-
                     var address_parts = [];
 
                     for(var x in data.location){
