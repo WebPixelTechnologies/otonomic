@@ -16,7 +16,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  <!-- Facebook Conversion Code for User searched for page -->
+    <!-- Facebook Conversion Code for User searched for page -->
     <script>(function() {
       var _fbq = window._fbq || (window._fbq = []);
       if (!_fbq.loaded) {
@@ -35,7 +35,7 @@
       <div class="row">
         <div class="col-xs-12">
           <div id="header">
-            <p class="header-title pull-left">Get a Free Website that Updates Itself!<br>This is how it works:</p>
+            <p class="header-title pull-left">Your website - Free, Updated and Mobile!</p>
             <div class="logo-container pull-right">
               <div class="left-side-border"></div>
               <img src="images/otonomic-logo.png" alt="Otonomic">
@@ -47,33 +47,12 @@
         <div class="row">
           <div class="col-xs-7">
               <div class="content-inner">
-                <div class="media">
-                  <a class="pull-left" href="#">
-                    <img class="media-object" src="images/plane.png" alt="We automatically build and design your website">
-                  </a>
-                  <div class="media-body">
-                    <h4 class="media-heading">We automatically build and design your website</h4>
-                    using the content from your Facebook business page
-                  </div>
-                </div>
-                <div class="media">
-                  <a class="pull-left" href="#">
-                    <img class="media-object" src="images/beer.png" alt="You don't have to do anything">
-                  </a>
-                  <div class="media-body">
-                    <h4 class="media-heading">You don't have to do anything</h4>
-                    and it only takes about a minute
-                  </div>
-                </div>
-                <div class="media last">
-                  <a class="pull-left" href="#">
-                    <img class="media-object" src="images/facebook.png" alt="Enter your Facebook business page name">
-                  </a>
-                  <div class="media-body">
-                    <h4 class="media-heading">Enter your Facebook business page name</h4>
-                    below and get your website now!
-                  </div>
-                </div>
+                <p class="title-text">Get yourself a website in a time of<br>
+                one push-up! It's quick, easy and<br>
+                effortless!</p>
+                <p class="sub-title-text">Everyone should focus on what they’re doing best. You’re<br>
+                the best at training people, and we’re the best at building<br>
+                and marketing your website. Let's grow together!</p>
                 <img src="images/arrows.png" class="red-arrows">
                 <div class="p2s_fanpages">
                   <div class="input-group search-field form-search">
@@ -95,7 +74,6 @@
                     </span>
                   </div>
                 </div>
-              </div>
           </div>
         </div>
       </div>
@@ -166,7 +144,7 @@
                   <p class="or_msg">Or</p>
                   <a href="/shared/facebook_login.php" class="facebook_connect track_event measure_time" id="fb_connector" data-ga-category="LandingPage" data-ga-event="Connect with Facebook" data-ga-label="Search explanation box" data-ajax-track="1">Connect
                   </a>
-                <h1 style="line-height: 34px; float:left;">So we can find your page for you.</h1>
+                  <h1 style="line-height: 34px; float:left;">So we can find your page for you.</h1>
               </div>
           </div>
 
@@ -213,6 +191,15 @@
 
     <script type="text/javascript" src="js/otonomicv1.0.4.js"></script>
 
+      <script type="text/javascript">
+          var query_tags = {
+              <?php $get_params = $_GET;
+              foreach($get_params as $key => $val) {
+                echo "'$key': '$val',";
+              }
+              ?>
+          };
+      </script>
     <div id="fb-root"></div>
     <script type="text/javascript">
         window.fbAsyncInit = function() {
