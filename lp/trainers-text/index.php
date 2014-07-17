@@ -217,17 +217,51 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-    <!-- START LuckyOrange -->
-    <script type='text/javascript'>
-        window.__wtw_lucky_site_id = 10400;
 
-        (function() {
-            var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
-            wa.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://ca10400') + '.luckyorange.com/w.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
-        })();
-    </script>
-    <!-- END LuckyOrange -->
+
+
+
+
+
+
+        <!-- START ErrorCeption -->
+        <script>
+            (function(_,e,rr,s){_errs=[s];var c=_.onerror;_.onerror=function(){var a=arguments;_errs.push(a);
+                c&&c.apply(this,a)};var b=function(){var c=e.createElement(rr),b=e.getElementsByTagName(rr)[0];
+                c.src="//beacon.errorception.com/"+s+".js";c.async=!0;b.parentNode.insertBefore(c,b)};
+                _.addEventListener?_.addEventListener("load",b,!1):_.attachEvent("onload",b)})
+                    (window,document,"script","52713acf0a2b9bf55800090f");
+        </script>
+        <!-- END ErrorCeption -->
+
+        <!-- START LuckyOrange -->
+        <script type='text/javascript'>
+            window.__wtw_lucky_site_id = 10400;
+
+            (function() {
+                var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+                wa.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://ca10400') + '.luckyorange.com/w.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+            })();
+        </script>
+        <!-- END LuckyOrange -->
+
+        <!-- START Google Analytics -->
+        <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-37736198-1']);
+            _gaq.push(['_setDomainName', 'otonomic.com']);
+            _gaq.push(['_setAllowLinker', true]);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        <!-- END Google Analytics -->
+
     <script type="text/javascript" src="js/functions.js"></script>
   </body>
 </html>

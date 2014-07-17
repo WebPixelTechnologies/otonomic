@@ -28,6 +28,7 @@
         var next_record_time = 1;
         p2sTrack('LandingPage', 'Page Loaded', '0 seconds');
 
+        /*
         var page_loaded_interval_func = setInterval(function() {
             time_counter++;
             if(time_counter >= next_record_time) {
@@ -35,10 +36,11 @@
                 p2sTrack('LandingPage', 'Page Loaded', ''+time_counter+' seconds');
             }
         }, 1000);
+        */
     });
 
     jQuery(document).ready(function($) {
-        trackFBConnect('Search Page', 'Document Ready');
+        // trackFBConnect('Search Page', 'Document Ready');
 
         $("#btn_video").click(function(e) {
             e.preventDefault();

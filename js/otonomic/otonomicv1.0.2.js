@@ -37,7 +37,7 @@
     });
 
     jQuery(document).ready(function($) {
-        trackFBConnect('Search Page', 'Document Ready');
+        // trackFBConnect('Search Page', 'Document Ready');
 
         $("#btn_video").click(function(e) {
             e.preventDefault();
