@@ -45,6 +45,20 @@
           })();
     </script>
 
+    <script type="text/javascript">
+    var _paq = _paq || [];
+    
+          _paq.push(['trackPageView']);
+          _paq.push(['enableLinkTracking']);
+          (function() {
+              var u=(("https:" == document.location.protocol) ? "https" : "http") + "://a.otonomic.com/";
+              _paq.push(['setTrackerUrl', u+'piwik.php']);
+              _paq.push(['setSiteId', 1]);
+              var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+              g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+          })();
+      </script>
+
     <script>
         function track_event(category, action, label, value){
           
@@ -53,9 +67,11 @@
           if(!value){
             ga('send', 'event', category, action, label);
             jQuery.post('http://otonomic.com/code/sites/track_click/', { category: category, event: action , label: label });
+            _paq.push(['trackEvent', category, action, labal ]);
           } else {
             ga('send', 'event', category, action, label,value);
             jQuery.post('http://otonomic.com/code/sites/track_click/', { category: category, event: action , label: label, value: value });
+            _paq.push(['trackEvent', category, action, labal, value ]);
           }
         }
   </script>
@@ -623,19 +639,6 @@
           })();
       </script>
 
-      <script type="text/javascript">
-    var _paq = _paq || [];
-    
-          _paq.push(['trackPageView']);
-          _paq.push(['enableLinkTracking']);
-          (function() {
-              var u=(("https:" == document.location.protocol) ? "https" : "http") + "://a.otonomic.com/";
-              _paq.push(['setTrackerUrl', u+'piwik.php']);
-              _paq.push(['setSiteId', 1]);
-              var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-              g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-          })();
-      </script>
-      <noscript><p><img src="http://a.otonomic.com/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+      
   </body>
 </html>
