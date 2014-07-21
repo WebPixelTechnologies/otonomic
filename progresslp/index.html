@@ -62,7 +62,8 @@
     <script>
         function track_event(category, action, label, value){
           
-          label = label || '';
+          if(label == undefined)
+              label = '';
 
           if(!value){
             ga('send', 'event', category, action, label);
