@@ -186,7 +186,7 @@
             }
 
             _paq.push(['trackEvent', category, event, label, value ]);
-        }
+        
     }
 
     function trackFBConnect(category, event, label, value) {
