@@ -1,0 +1,507 @@
+@font-face {
+    font-family: 'aller';
+    src: url('../fonts/aller_bd-webfont.eot');
+    src: url('../fonts/aller_bd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aller_bd-webfont.svg#allerbold') format('svg'),
+         url('../fonts/aller_bd-webfont.woff') format('woff'),
+         url('../fonts/aller_bd-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'aller';
+    src: url('../fonts/aller_lt-webfont.eot');
+    src: url('../fonts/aller_lt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aller_lt-webfont.svg#aller_lightregular') format('svg'),
+         url('../fonts/aller_lt-webfont.woff') format('woff'),
+         url('../fonts/aller_lt-webfont.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'aller';
+    src: url('../fonts/aller_rg-webfont.eot');
+    src: url('../fonts/aller_rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aller_rg-webfont.svg#allerregular') format('svg'),
+         url('../fonts/aller_rg-webfont.woff') format('woff'),
+         url('../fonts/aller_rg-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html {
+	height: 100%;
+}
+body {
+  	height: 100%;
+  	background-color: #3d3632;
+  	color: #3d3632;
+  	font-family: 'aller', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'aller', sans-serif;
+	font-weight: 300;
+}
+h1{
+	font-size: 62px;
+}
+a{
+	color: #0980b2;
+}
+a:hover{
+	color: #0980b2;
+}
+a.btn{
+	font-weight: bold;
+}
+a.btn img{
+	margin-top: -2px!important;
+}
+.wp-lp #progress-bar{
+	height: 30px;
+}
+.wp-lp #progress-text{
+	margin-top: -20px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 16px;
+}
+.full-height{
+	height: calc( 100% - 93px );
+}
+select {
+	font-family: arial, sans-serif;
+}
+
+
+/* Header
+----------------------------------*/
+.navbar {
+	min-height: 63px;
+	margin-bottom: 0;
+	border-radius: 0;
+	background-color: #231f20;
+	border: 0;
+}
+.navbar-header{
+	width: 100%;
+}
+.center-logo {
+	width: 150px;
+	display: inline-block;
+}
+/* BG image 
+----------------------------------*/
+.bg-image{
+	position: absolute;
+	top: 93px;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+}
+.bg-image img{
+	height: 100%;
+	min-width: 100%;
+	min-height: 100%;
+}
+.bg-image .map_canvas{
+	min-width: 100%;
+	min-height: 100%;
+}
+/* INTRO 
+----------------------------------*/
+#intro{
+
+}
+#intro h1.intro-title{
+	margin-top: 40px;
+	font-size: 42px;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+#intro p.site-name{
+	margin-bottom: 30px;
+	color: #f54500;
+	font-size: 70px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+#intro .bg-image img{
+	height: auto;
+	left: 50%;
+	margin-left: -960px;
+	position: relative;
+}
+
+/* STAGE
+----------------------------------*/
+.content{
+ 	width: 960px;
+ 	margin: 0 auto;
+}
+.content-panel{
+	position: relative;
+	width: 470px;
+	padding: 40px;
+	height: 100%;
+	box-shadow: 3px 0px 0px 0px rgba(0,0,0,0.2);
+}
+.content-panel h1.title{
+	margin-bottom: 30px;
+	color: #f54500;
+	font-size: 42px;
+	font-weight: normal;
+	line-height: 50px;
+	text-transform: uppercase;
+}
+.content-panel h3{
+	font-weight: bold;
+}
+.content-panel p{
+	font-size: 20px;
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+
+/* STAGE-1
+-----------------------------------*/
+#stage-1{
+	height: 100%;
+}
+#stage-1 .content-panel{
+	margin-left: 18%;
+	padding-right: 20px;
+	background-color: #f5ece6;
+}
+#stage-1 img.oto-gif{
+	margin:0 -40px;
+}
+#stage-1 .bg-image img{
+	float: right;
+}
+
+/* STAGE-2
+----------------------------------*/
+#stage-2{
+	height: 100%;
+}
+#stage-2 .content-panel{
+	margin-left: auto;
+	margin-right: 18%;
+	background-color: #f5ece6;
+}
+#stage-2 .bg-image img{
+	float: right;
+}
+/* STAGE-3
+----------------------------------*/
+#stage-3{
+	height: 100%;
+}
+#stage-3 .content-panel{
+	margin-left: 18%;
+	background-color: #fff;
+}
+#stage-3 h3{
+	line-height: 32px;
+	font-weight: normal;
+}
+#stage-3 h4{
+	margin-top: 60px;
+	font-size: 16px;
+	font-weight: normal;
+}
+#stage-3 h4 img{
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+/* STAGE-4
+----------------------------------*/
+#stage-4{
+	height: 100%;
+}
+#stage-4 .content-panel{
+	margin-left: auto;
+	margin-right: 18%;
+	background-color: #fff;
+}
+#stage-4 h1.title{
+	color: #3d3531;
+}
+#stage-4 .bg-image img{
+	float: right;
+}
+/* STAGE-5
+----------------------------------*/
+#stage-5{
+	height: 100%;
+}
+#stage-5 .content-panel{
+	margin-left: 18%;
+	background-color: #f5ece6;
+}
+#stage-5 .content-panel h3{
+	margin-bottom: 60px;
+}
+#stage-5 .form-control{
+	background-color: #fff;
+}
+#stage-5 .category-submit{
+	margin-top: 220px;
+	margin-right: 2px;
+}
+/* Congratz
+----------------------------------*/
+#congratz{
+
+}
+#congratz .bg-image{
+	background-color: #e8b400;
+	text-align: center;
+}
+#congratz .bg-image img{
+	height: initial;
+	max-width: 1214px;
+	min-width: initial;
+	min-height: initial;
+}
+#congratz h1.congratz-title{
+	margin-top: 170px;
+	margin-bottom: 50px;
+	font-size: 70px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+#congratz h2{
+	font-size: 42px;
+	font-weight: lighter;
+	text-transform: uppercase;
+}
+#congratz h3{
+	margin-bottom: 50px;
+}
+#congratz .btn{
+	padding: 16px 30px;
+}
+#congratz .tos{
+	margin-top: 15%;
+}
+/* typeahead
+-----------------------------------*/
+#cat-selector .tt-dropdown-menu {
+  max-height: 200px;
+  overflow-y: auto;
+}
+.typeahead,
+.tt-query,
+.tt-hint {
+  width: 390px;
+  height: 30px;
+  font-size: 16px;
+  padding: 8px 12px;
+  line-height: 30px;
+  outline: none;
+
+}
+
+.typeahead:focus {
+  border: 2px solid #0097cf;
+}
+
+.tt-query {
+  -webkit-box-shadow: inset 1px 1px 0px rgba(217,214,215,1);
+  -mozbox-shadow: inset 1px 1px 0px rgba(217,214,215,1);
+  box-shadow: inset 1px 1px 0px rgba(217,214,215,1);
+}
+
+.tt-hint {
+  color: #999
+}
+
+.tt-dropdown-menu {
+  width: 390px;
+  margin-top: 0px;
+  padding: 0 0 0 1px;
+  background-color: #fff;
+  -webkit-box-shadow: inset 1px 1px 0px rgba(217,214,215,1);
+  -mozbox-shadow: inset 1px 1px 0px rgba(217,214,215,1);
+  box-shadow: inset 1px 1px 0px rgba(217,214,215,1);
+}
+
+.tt-suggestion {
+  padding: 6px 20px;
+  font-size: 16px;
+  line-height: 40px;
+  color: #524843;
+}
+
+.tt-suggestion.tt-cursor {
+  cursor: pointer;
+  color: #524843;
+  font-size: 16px;
+  background-color: #faf3c9;
+
+}
+
+.tt-suggestion p {
+	font-size: 16px;
+  	margin: 0;
+}
+/* Form 
+-----------------------------------*/
+.wp-lp .form-group {
+	margin-bottom: 20px;
+}
+.wp-lp label {
+	font-size: 16px;
+	margin-bottom:10px;
+}
+.wp-lp .form-control{
+	height: initial;
+	border: 0;
+	color: #666161;
+	line-height: 28px;
+	border-radius: 0;
+	-webkit-box-shadow: inset 1px 1px 0px rgba(217,214,215,1);
+	box-shadow: inset 1px 1px 0px rgba(217,214,215,1);
+	background-color: #f5ece6;
+	-webkit-transition: .05s all ease-in-out;
+	transition: .05s all ease-in-out;
+}
+.wp-lp .form-control:hover{
+	background-color: #c9f2da;
+	/*-webkit-box-shadow:  0px 0px 0px 2px #c9f2da;
+	box-shadow:  0px 0px 0px 3px #c9f2da;*/
+}
+.wp-lp .form-control:focus{
+	background-color: #c9f2da;
+	/*-webkit-box-shadow:  0px 0px 0px 2px #c9f2da;
+	box-shadow:  0px 0px 0px 3px #c9f2da;*/
+}
+
+/* glyphicons*/
+.wp-lp p span.glyphicon-thumbs-up, 
+.wp-lp p span.glyphicon-ok {
+	color: #325942;
+	font-size: 50px;
+}
+/* Custom button
+-------------------------------------------------- */
+
+/* Override base .btn styles */
+/* Apply text and background changes to three key states: default, hover, and active (click). */
+.btn-ttc,
+.btn-ttc:hover,
+.btn-ttc:active {
+  color: white;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+  background-color: #64b285;
+  box-shadow: 2px 2px 0px #325942;
+  border-radius: 2px;
+}
+
+/* Apply the custom-colored gradients */
+/* Note: you'll need to include all the appropriate gradients for various browsers and standards. */
+.btn-ttc {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(top, #009ED2 0%, #64b285 100%);
+}
+
+/* Set the hover state */
+/* An easy hover state is just to move the gradient up a small amount. Add other embellishments as you see fit. */
+.btn-ttc:hover {
+  background-color: #6aba8c;
+  background-position: 0 -15px;
+}
+
+.btn-ttc.disabled{
+	color: #f54500;
+	background-color: #a62f00;
+	opacity: 1;
+	box-shadow: none;
+}
+.btn-ttc.disabled >{
+	display: none;
+}
+.btn-ttc-orange,
+.btn-ttc-orange:hover,
+.btn-ttc-orange:active {
+  padding-right: 30px;
+  padding-left: 30px;
+  color: white;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+  background-color: #f54500;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+/* Apply the custom-colored gradients */
+/* Note: you'll need to include all the appropriate gradients for various browsers and standards. */
+.btn-ttc-orange {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(top, #009ED2 0%, #f54500 100%);
+}
+
+/* Set the hover state */
+/* An easy hover state is just to move the gradient up a small amount. Add other embellishments as you see fit. */
+.btn-ttc-orange:hover {
+  background-color: #f65b1f;
+  background-position: 0 -15px;
+}
+
+.btn-ttc-orange.disabled{
+	color: #f54500;
+	background-color: #a62f00;
+	opacity: 1;
+	box-shadow: none;
+}
+.btn-ttc-orange.disabled >{
+	display: none;
+}
+.btn-ttc-orange .glyphicon{
+	margin-right: 10px;
+}
+
+/* Owl-Carousel
+-------------------------------------------------*/
+#owl-slider .item p{
+    text-align: center;
+}
+#owl-slider .item img{
+	margin-top: 20px;
+    height: auto;
+}
+#owl-slider .item img.location{
+	margin-top: 10px;
+    height: auto;
+}
+#owl-slider .item .map_canvas {
+	width: 282px;
+	height: 282px;
+	max-width: 100%;
+	margin-top: 32px;
+	border: 3px solid #cfcca6;
+}
+#owl-slider .item .behold{
+	margin-top: 150px;
+}
+#owl-slider .item .devices-holder{
+	position: relative;
+}
+#owl-slider .item .devices-holder .desktop{
+	position: absolute;
+}
+#owl-slider .item .devices-holder .ipad{
+	position: absolute;
+	top: 195px;
+	left: 540px;
+}
+#owl-slider .item .devices-holder .iphone{
+	position: absolute;
+	top: 240px;
+	left: 480px;
+}
