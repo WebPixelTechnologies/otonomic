@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="wp Landing page">
+    <meta name="author" content="Denis Driamov">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <title>Wp-loading-page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- owl-carousel -->
+    <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="js/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="js/owl-carousel/owl.transitions.css" rel="stylesheet">
+
+    <!-- Nprogress -->
+    <link href="css/nprogress.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/wp-loading-page.css" rel="stylesheet">
+
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body class="wp-lp">
+    <div class="navbar navbar-inverse" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="center-logo-holder">
+            <div class="center-logo center-block" style="margin-top: 9px;">
+              <img src="images/otonomic-logo.png" class="logo-img" alt="otonomic logo">
+            </div>
+            <div id="progress-text" class="text-center">Creating Website Layout...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div id="progress-bar"></div>
+      </div>
+    </div>
+    <div class="container-fluid full-height">
+      <div id="intro" class="row ">
+        <div class="bg-image"><img src="images/bg1.jpg"></div>
+        <div class="col-xs-12">
+          <div class="content text-center">
+            <h1 class="intro-title">Otonomic is preparing a great website for</h1>
+            <p class="site-name">ilan’s cuppa coffee</p>
+            <h3>In a few seconds, your site will be ready with content from your Facebook page.</h3>
+          </div>
+        </div>
+      </div>
+      <div id="stage-1" class="row hidden">
+        <div class="bg-image"><img src="images/bg2.jpg"></div>
+        <div class="content-panel">
+          <h1 class="title">
+            Otonomic does<br>
+            all the work<br>
+            for you.</h1>
+          <h3>You don’t have to write anything!</h3>
+          <p>All the content you need for the <br>website is on Facebook.</p>
+          <h3>You don’t have to update your site!</h3>
+          <p>We’ll update your site whenever <br>you post anything new on Facebook.</p>
+          <img class="oto-gif " src="images/oto.gif">
+        </div>
+      </div>
+      <div id="stage-2" class="row hidden">
+        <div class="bg-image"><img src="images/bg3.jpg"></div>
+        <div class="content-panel">
+          <h1 class="title">
+            Everything your<br>
+            business needs.</h1>
+          <div id="owl-slider1" class="owl-carousel owl-theme">
+
+              <div class="item">
+                <h3>Search optimization (SEO)</h3>
+                <p>Get found on Google</p>
+                <p class="text-center"><img src="images/image1.png"></p>
+              </div>
+
+              <div class="item">
+                <h3>Mobile ready</h3>
+                <p>Looks amazing on any device</p>
+                <p class="text-center"><img src="images/image2.png"></p>
+              </div>
+
+              <div class="item">
+                <h3>Gorgeous design</h3>
+                <p>A choice of stunning business themes</p>
+                <p class="text-center"><img src="images/image3.png"></p>
+              </div>
+
+              <div class="item">
+                <h3>Absolutely FREE!</h3>
+                <p></p>
+                <p class="text-center"><img src="images/image4.png"></p>
+              </div>
+              
+          </div>
+        </div>
+      </div>
+      <div id="stage-3" class="row hidden">
+        <div class="bg-image"><div class="map_canvas"></div></div>
+        <div class="content-panel">
+          <h1 class="title">
+            Full Contact<br>
+            Details make<br>
+            people trust you!
+            </h1>
+          <h3>Review, update and complete your contact details to make sure clients can reach you:</h3>
+          <form role="form" id="business-details" action="">
+            <div class="row">
+              <div class="col-xs-12">
+                  <div class="form-group">
+                      <label for="productName">Business address</label>
+                      <textarea rows="3" id="address" name="contact_address" class="form-control" placeholder="E.g. 2816A Sunset Boulevard, Los Angeles" autocomplete="off"></textarea>
+                  </div>
+                  <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" class="form-control" id="email" name="contact_email" value="" placeholder="E.g. johndoe@gmail.com">
+                  </div>
+                  <div class="form-group">
+                      <label for="phoneNum">Phone number</label>
+                      <input type="text" class="form-control" id="phone" name="contact_phone" value="" placeholder="E.g. (800) 867-9229">
+                  </div>
+                  <div class="form-group text-right">
+                    <a href="#" onclick="return false;" class="submit btn btn-ttc-orange btn-lg"><span class="glyphicon glyphicon-ok"></span>Done</a>
+                  </div>
+                  <h4><img src="images/shield-icon.png"> We will never misuse your contact information.</h4>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="stage-4" class="row hidden">
+        <div class="bg-image"><img src="images/bg4.jpg"></div>
+        <div class="content-panel">
+          <h1 class="title">
+            Would you like<br>
+            to sell products<br>
+            online?</h1>
+          <div class="row">
+            <div class="col-xs-6">
+              <a href="#" onclick="return false;" class="submit-skip btn btn-block btn-ttc-orange btn-lg"><span class="glyphicon glyphicon-remove"></span>No, Thanks</a>
+            </div>
+            <div class="col-xs-6">
+              <a href="#" onclick="return false;" class="submit-store btn btn-block btn-ttc-orange btn-lg"><span class="glyphicon glyphicon-ok"></span>Sell Online</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="stage-5" class="row hidden">
+        <div class="bg-image"><img src="images/bg5.jpg"></div>
+        <div class="content-panel">
+          <h1 class="title">
+            A perfect fit<br/>
+            for your needs.</h1>
+          <div id="owl-slider2" class="owl-carousel owl-theme">
+
+              <div class="item">
+                <h3>What’s your business category?</h3>
+                <div id="cat-selector" class="forum-group">
+                  <input class="typeahead form-control" type="text" placeholder="Select category">
+                </div>
+                <div class="form-group category-submit text-right">
+                    <a href="#" onclick="return false;" class="submit-category-btn btn btn-ttc-orange btn-lg"><span class="glyphicon glyphicon-ok"></span>Done</a>
+                </div>
+              </div>
+
+              <div class="item">
+                <h3>Use your own domain</h3>
+                <p class="text-center"><img src="images/image5.png"></p>
+              </div>
+
+              <div class="item">
+                <h3>Add your Twitter and YouTube accounts</h3>
+                <p class="text-center"><img src="images/image6.png"></p>
+              </div>
+
+              <div class="item">
+                <h3>Allow visitors to book appointments through your site</h3>
+                <p class="text-center"><img src="images/image7.png"></p>
+              </div>
+              
+          </div>
+        </div>
+      </div>
+      <div id="congratz" class="row hidden">
+        <div class="bg-image"><img src="images/bg6.png"></div>
+        <div class="col-xs-12">
+          <div class="content">
+            <h1 class="congratz-title">Congratulations!</h1>
+            <h2>Your new website is ready at</h2>
+            <h3>http://www.otonomic.ilanscuppacoffee.com</h3>
+            <a href="#" onclick="return false;" class=" btn btn-ttc-orange btn-lg">Take me to my website!</a>
+            <p class="tos">By clicking the button, you approve the Otonomic <a href="#">Terms of Service</a></p>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/nprogress.js"></script>
+    <script src="js/owl-carousel/owl.carousel.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+    <script src="js/jquery.geocomplete.min.js"></script>
+    <script src="js/typeahead.jquery.min.js"></script>
+    <script src="js/jquery.timer.js"></script>
+    <script type="text/javascript">
+      $(function(){
+          
+        NProgress.configure({
+          parent: '#progress-bar',
+          trickle: false,
+          minimum: 0.001,
+          showSpinner: false,
+          trickleRate: 0.001, 
+          trickleSpeed: 100,
+          ease: 'linear', 
+          speed: 1000 ,
+          template: '<div class="bar" role="bar"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
+        });
+        // start progress
+        NProgress.start();
+
+        // seconds counter
+        var secondsPassed = 0;
+
+        // Progress timer
+        var nprogressSpeed = 0.0123;
+        var timer = $.timer(function() {
+
+          // Start Progress
+          NProgress.inc(nprogressSpeed);
+
+          // Display precentage
+          $('.peg').html(Math.ceil(NProgress.status*100)+'%');
+
+          // Increment seconds
+          secondsPassed = secondsPassed + 0.5;
+          //secondsPassed = parseFloat(secondsPassed.toPrecision(2), 10);
+          console.log('Seconds Passed:'+secondsPassed);
+
+          // Actions based on number of seconds passed
+          switch (secondsPassed) {
+              case 5:
+                  $('#intro').fadeOut('fast',function(){
+                    $(this).addClass('hidden');
+                    $('#stage-1').fadeIn('fast').removeClass('hidden');
+                  });
+                  $('#progress-text').html('Copying your Photos, Posts and Videos from Facebook…');
+                  break;
+              case 13:
+                  $('#stage-1').fadeOut('fast',function(){
+                    $(this).addClass('hidden');
+                    $('#stage-2').fadeIn('fast').removeClass('hidden');
+                  });
+                  $('#progress-text').html('Building the site…');
+                  break;
+              case 18:
+                  owl.next();
+                  break;
+              case 21:
+                  owl.next();
+                  break;
+              case 24:
+                  owl.next();
+                  break;
+              case 27:
+                  $('#stage-2').fadeOut('fast',function(){
+                    $(this).addClass('hidden');
+                    $('#stage-3').fadeIn('fast').removeClass('hidden');
+                    // init google maps
+                    var options = {
+                      map: ".map_canvas",
+                      location: "New york"
+                    };
+                    $("#address").trigger("geocode");
+                    $("#address").geocomplete(options)
+                      .bind("geocode:result", function(event, result){
+                        //$.log("Result: " + result.formatted_address);
+                      })
+                      .bind("geocode:error", function(event, status){
+                        //$.log("ERROR: " + status);
+                      })
+                      .bind("geocode:multiple", function(event, results){
+                        //$.log("Multiple: " + results.length + " results found");
+                      });
+                  });
+                  $('#progress-text').html('Adding contact details…');
+
+                  // pause timer and wait for contact details submit
+                  timer.pause();
+                  // pause progress bar 
+                  NProgress.set(NProgress.status);
+                  break;
+              case 32:
+                  owl2.next();
+                  break;
+              case 35:
+                  owl2.next();
+                  break;
+              case 38:
+                  NProgress.done(true);
+                  $('.peg').html('100%');
+                  timer.stop();
+                  $('.bg-image').delay( 1300 ).animate({top:63},150);
+
+                  $('#stage-5').fadeOut('fast',function(){
+                    $(this).addClass('hidden');
+                    $('#congratz').fadeIn('fast').removeClass('hidden');
+                  });
+                  $('#progress-text').html('Building the site…');
+
+                  break;
+          }/* End Switch*/
+
+        });/* End Timer*/
+  
+
+        // init timer
+        timer.set({ time : 500, autostart : true });
+
+
+        // owl-carousel init
+        $("#owl-slider1").owlCarousel({
+ 
+            navigation : false, 
+            singleItem:true,
+            transitionStyle: "fade",
+            //Pagination
+            pagination : false,
+            paginationNumbers: false,
+            //Mouse Events
+            dragBeforeAnimFinish : false,
+            mouseDrag : false,
+            touchDrag : false,
+            //Basic Speeds
+            slideSpeed : 200,
+
+        });
+
+        //get carousel instance data and store it in variable owl
+        var owl = $("#owl-slider1").data('owlCarousel');
+
+        // owl-carousel init
+        $("#owl-slider2").owlCarousel({
+ 
+            navigation : false, 
+            singleItem:true,
+            transitionStyle: "fade",
+            //Pagination
+            pagination : false,
+            paginationNumbers: false,
+            //Mouse Events
+            dragBeforeAnimFinish : false,
+            mouseDrag : false,
+            touchDrag : false,
+            //Basic Speeds
+            slideSpeed : 200,
+
+        });
+
+        //get carousel instance data and store it in variable owl
+        var owl2 = $("#owl-slider2").data('owlCarousel');
+
+        // function that switched to stage-4 from stage-3
+        function switchToStage4(){
+          $('#stage-3').fadeOut('fast',function(){
+            $(this).addClass('hidden');
+            $('#stage-4').fadeIn('fast').removeClass('hidden');
+          });
+          $('#progress-text').html('Creating online store…');
+        }
+
+        // function that switched to stage-5 from stage-4
+        function switchToStage5(){
+          $('#stage-4').fadeOut('fast',function(){
+            $(this).addClass('hidden');
+            $('#stage-5').fadeIn('fast').removeClass('hidden');
+          });
+          $('#progress-text').html('Adding personalization options…');
+        }
+
+        // Contact details submit
+        $('.submit').click(function(e){
+          e.preventDefault();
+          var form = $('#business-details');
+          $.ajax( {
+            type: "POST",
+            url: form.attr( 'action' ),
+            data: form.serialize(),
+            success: function( response ) {
+              //console.log( response );
+            }
+          });
+          // Increment progress bar a little
+          NProgress.set(NProgress.status+0.01);
+          // Display precentage
+          $('.peg').html(Math.ceil(NProgress.status*100)+'%');
+          // Switch stage
+          switchToStage4();
+        });
+
+        // Submit Store
+        $('.submit-store').click(function(e){
+          e.preventDefault();
+          $.ajax( {
+            type: "POST",
+            url: "some_url",
+            data: {'is_store':'true'},
+            success: function( response ) {
+              //console.log( response );
+            }
+          });
+          // Switch stage
+          switchToStage5();
+          // Increment progress bar a little
+          NProgress.set(NProgress.status+0.02);
+          // Display precentage
+          $('.peg').html(Math.ceil(NProgress.status*100)+'%');
+        });
+
+        // Skip Submit
+        $('.submit-skip').click(function(e){
+          e.preventDefault();
+          // Switch stage
+          switchToStage5();
+          // Increment progress bar a little
+          NProgress.set(NProgress.status+0.02);
+          // Display precentage
+          $('.peg').html(Math.ceil(NProgress.status*100)+'%');
+        });
+
+        
+        // Submit category
+        $('.submit-category-btn').click(function(e){
+          $.ajax( {
+            type: "POST",
+            url: "some_url",
+            data: {'is_store':'true'},
+            success: function( response ) {
+              //console.log( response );
+            }
+          });
+          // Resume timer
+          timer.play();
+          // Increment progress bar a little
+          NProgress.set(NProgress.status+0.01);
+          // Display precentage
+          $('.peg').html(Math.ceil(NProgress.status*100)+'%');
+          // Resume progress bar
+          NProgress.inc(nprogressSpeed);
+          // Next silde
+          owl2.next();
+
+        });
+
+        // typeahead (auto-complete)
+        var substringMatcher = function(strs) {
+          return function findMatches(q, cb) {
+            var matches, substrRegex;
+         
+            // an array that will be populated with substring matches
+            matches = [];
+         
+            // regex used to determine if a string contains the substring `q`
+            substrRegex = new RegExp(q, 'i');
+         
+            // iterate through the pool of strings and for any string that
+            // contains the substring `q`, add it to the `matches` array
+            $.each(strs, function(i, str) {
+              if (substrRegex.test(str)) {
+                // the typeahead jQuery plugin expects suggestions to a
+                // JavaScript object, refer to typeahead docs for more info
+                matches.push({ value: str });
+              }
+            });
+         
+            cb(matches);
+          };
+        };
+         
+        var categories = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
+          'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
+          'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
+          'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
+          'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
+          'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
+          'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
+          'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
+          'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+        ];
+         
+        $('#cat-selector .typeahead').typeahead({
+          hint: true,
+          highlight: true,
+          minLength: 1
+        },
+        {
+          name: 'categories',
+          displayKey: 'value',
+          source: substringMatcher(categories)
+        });
+
+
+      });
+      </script>
+  </body>
+</html>

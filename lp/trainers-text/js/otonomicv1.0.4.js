@@ -176,6 +176,16 @@
     function p2sTrack(category, event, label, value) {
         var data = {category: category, event: event, label: label, value: value};
         makeAjaxTrackCall(data);
+
+        if (typeof label == "undefined") {
+            value = null;
+        }
+
+        if (typeof value == "undefined") {
+            value = null;
+        }
+
+        _paq.push(['trackEvent', category, event, label, value ]);
     }
 
     function trackFBConnect(category, event, label, value) {

@@ -45,17 +45,34 @@
           })();
     </script>
 
+    <script type="text/javascript">
+    var _paq = _paq || [];
+    
+          _paq.push(['trackPageView']);
+          _paq.push(['enableLinkTracking']);
+          (function() {
+              var u=(("https:" == document.location.protocol) ? "https" : "http") + "://a.otonomic.com/";
+              _paq.push(['setTrackerUrl', u+'piwik.php']);
+              _paq.push(['setSiteId', 1]);
+              var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+              g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+          })();
+      </script>
+
     <script>
         function track_event(category, action, label, value){
           
-          label = label || '';
+          if(label == undefined)
+              label = '';
 
           if(!value){
             ga('send', 'event', category, action, label);
             jQuery.post('http://otonomic.com/code/sites/track_click/', { category: category, event: action , label: label });
+            _paq.push(['trackEvent', category, action, label ]);
           } else {
             ga('send', 'event', category, action, label,value);
             jQuery.post('http://otonomic.com/code/sites/track_click/', { category: category, event: action , label: label, value: value });
+            _paq.push(['trackEvent', category, action, label, value ]);
           }
         }
   </script>
@@ -285,7 +302,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/progress.js/progress.min.js"></script>
-    <script src="js/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/owl-carousel/owl.carousel.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
     <script src="js/jquery.geocomplete.min.js"></script>
     <script type="text/javascript">
@@ -393,7 +410,7 @@
 
           if(page_id){
 
-              $.get("http://iproplay.com/migration/index.php?facebook_id="+ page_id +"&theme=parallax", function( data ) {
+              $.get("http://wp.otonomic.com/migration/index.php?facebook_id="+ page_id +"&theme=parallax", function( data ) {
               
 
                   window.is_blog_ready = 1;
@@ -622,5 +639,7 @@
               var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
           })();
       </script>
+
+      
   </body>
 </html>
