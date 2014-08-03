@@ -1,0 +1,331 @@
+@font-face {
+    font-family: 'aller';
+    src: url('../fonts/aller_bd-webfont.eot');
+    src: url('../fonts/aller_bd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aller_bd-webfont.svg#allerbold') format('svg'),
+         url('../fonts/aller_bd-webfont.woff') format('woff'),
+         url('../fonts/aller_bd-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'aller';
+    src: url('../fonts/aller_lt-webfont.eot');
+    src: url('../fonts/aller_lt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aller_lt-webfont.svg#aller_lightregular') format('svg'),
+         url('../fonts/aller_lt-webfont.woff') format('woff'),
+         url('../fonts/aller_lt-webfont.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'aller';
+    src: url('../fonts/aller_rg-webfont.eot');
+    src: url('../fonts/aller_rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aller_rg-webfont.svg#allerregular') format('svg'),
+         url('../fonts/aller_rg-webfont.woff') format('woff'),
+         url('../fonts/aller_rg-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html {
+	/*height: 100%;*/
+}
+body {
+	margin-bottom: 220px;
+  	min-height: 100%;
+  	background: center center url('../images/bg.jpg') no-repeat;
+  	background-position: top center;
+  	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  	background-color: #fff;
+  	color: #3d3632;
+  	font-family: 'aller', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'aller', sans-serif;
+	font-weight: 300;
+}
+h1{
+	font-size: 62px;
+}
+a{
+	color: #0980b2;
+}
+a:hover{
+	color: #0980b2;
+}
+a.btn{
+	font-weight: bold;
+}
+a.btn img{
+	margin-top: -2px!important;
+}
+
+
+
+/* Header
+----------------------------------*/
+.navbar {
+	min-height: 66px;
+	margin-bottom: 0;
+	border-radius: 0;
+	background-color: #231f20;
+	border-bottom: 3px solid #39322f;
+}
+.navbar-header{
+	width: 100%;
+}
+.center-logo {
+	width: 150px;
+	display: inline-block;
+}
+.header{
+	color: #fff;
+}
+.header .header-outer{
+	background-color: #524843;
+}
+.header h1{
+	font-size: 42px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.header .content{
+	padding-left: 55px;
+	padding-bottom: 10px;
+}
+.header .content .header-badge{
+	margin-left: -50px;
+	position: absolute;
+	margin-top: 20px;
+}
+.header .header-deco{
+	overflow: hidden;
+}
+/* Main Content
+-----------------------------------*/
+#main-content{
+	color: #524843;
+	padding-left: 55px;
+}
+#main-content h1{
+	font-weight: normal;
+	font-size: 36px;
+	color: #524843;
+}
+#main-content .main-buttons .btn{
+	margin: 20px 20px 0 0;
+	padding: 20px;
+	padding-right: 0;
+}
+#main-content .main-buttons .media .media-heading {
+	font-size: 15px;
+	font-weight: bold;
+	text-align: left;
+}
+#main-content .main-buttons .media .single-title{
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+#main-content .main-buttons .media .media-body{
+	font-size: 15px;
+	font-weight: 300;
+	text-align: left;
+}
+#main-content .main-buttons .media i.glyphicons:before{
+	font-size: 35px;
+	color: #d63d00;
+	line-height: 15px;
+}
+#main-content .main-buttons .media .right-icon i.glyphicons:before{
+	font-size: 25px;
+	color: #d63d00;
+	line-height: 15px;
+}
+#main-content .main-buttons .media .media-icon{
+	margin-right: 20px;
+}
+#main-content .main-buttons .media .media-icon.right-icon{
+	margin-left: 20px;
+	margin-right: 0;
+}
+
+#main-content h1.share-heading{
+	margin-top: 60px;
+}
+
+.share-buttons a{
+	margin-right: 10px;
+	z-index: 1;
+}
+.share-buttons .website-link{
+	display: inline-block;
+	width: 300px;
+	padding-left: 10px;
+	cursor: text;
+	margin-left: -14px;
+}
+
+/* Footer
+-----------------------------------*/
+.footer {
+	position: fixed;
+	bottom: 0;
+	margin-top: 80px;
+	width: 100%;
+	height: 60px;
+	background-color: #524843;
+	
+}
+.footer .footer-deco{
+	margin-top: -30px;
+	overflow: hidden;
+}
+.footer .footer-links{
+	color: #fff;
+	line-height: 60px;
+}
+.footer .footer-links a{
+	color: #fff;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+}
+/* Form 
+-----------------------------------*/
+.wp-lp .form-group {
+	margin-bottom: 20px;
+}
+.wp-lp label {
+	font-size: 16px;
+	margin-bottom:10px;
+}
+.wp-lp .form-control{
+	height: initial;
+	border: 0;
+	color: #666161;
+	line-height: 28px;
+	border-radius: 3;
+	-webkit-box-shadow: inset 1px 1px 0px rgba(217,214,215,1);
+	box-shadow: inset 1px 1px 0px rgba(217,214,215,1);
+	background-color: #f5ece6;
+	-webkit-transition: .05s all ease-in-out;
+	transition: .05s all ease-in-out;
+}
+.wp-lp .form-control:hover{
+	/*background-color: #c9f2da;*/
+	/*-webkit-box-shadow:  0px 0px 0px 2px #c9f2da;
+	box-shadow:  0px 0px 0px 3px #c9f2da;*/
+}
+.wp-lp .form-control:focus{
+	background-color: #c9f2da;
+	/*-webkit-box-shadow:  0px 0px 0px 2px #c9f2da;
+	box-shadow:  0px 0px 0px 3px #c9f2da;*/
+}
+
+/* glyphicons*/
+.wp-lp p span.glyphicon-thumbs-up, 
+.wp-lp p span.glyphicon-ok {
+	color: #325942;
+	font-size: 50px;
+}
+/* Custom button
+-------------------------------------------------- */
+
+/* Override base .btn styles */
+/* Apply text and background changes to three key states: default, hover, and active (click). */
+.btn-ttc,
+.btn-ttc:hover,
+.btn-ttc:active {
+  color: #3d3531;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+  background-color: #ebe4dd;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+}
+
+/* Apply the custom-colored gradients */
+/* Note: you'll need to include all the appropriate gradients for various browsers and standards. */
+.btn-ttc {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(top, #009ED2 0%, #64b285 100%);
+}
+
+/* Set the hover state */
+/* An easy hover state is just to move the gradient up a small amount. Add other embellishments as you see fit. */
+.btn-ttc:hover {
+  background-color: #dcd6cf;
+  background-position: 0 -15px;
+}
+
+.btn-ttc.disabled{
+	color: #f54500;
+	background-color: #a62f00;
+	opacity: 1;
+	box-shadow: none;
+}
+.btn-ttc.disabled >{
+	display: none;
+}
+.btn-ttc-yellow{
+	text-transform: none;
+	color: #3d3531;
+	font-size: 12px;
+	background-color: #e8b400;
+	padding: 15px;
+}
+.btn-ttc-yellow:hover{
+	background-color: #dbaa00;
+}
+.btn-ttc-yellow .glyphicons{
+	padding-left: 25px;
+}
+.btn-ttc-yellow .glyphicons:before{
+	color: #3d3531!important;
+	font-size: 20px;
+	line-height: 0;
+}
+.btn-ttc-orange,
+.btn-ttc-orange:hover,
+.btn-ttc-orange:active {
+  padding-right: 30px;
+  padding-left: 30px;
+  color: white;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+  background-color: #f54500;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+}
+
+/* Apply the custom-colored gradients */
+/* Note: you'll need to include all the appropriate gradients for various browsers and standards. */
+.btn-ttc-orange {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(top, #009ED2 0%, #f54500 100%);
+}
+
+/* Set the hover state */
+/* An easy hover state is just to move the gradient up a small amount. Add other embellishments as you see fit. */
+.btn-ttc-orange:hover {
+  background-color: #f65b1f;
+  background-position: 0 -15px;
+}
+
+.btn-ttc-orange.disabled{
+	color: #f54500;
+	background-color: #a62f00;
+	opacity: 1;
+	box-shadow: none;
+}
+.btn-ttc-orange.disabled >{
+	display: none;
+}
+.btn-ttc-orange .glyphicons:before{
+	color: white!important;
+}
