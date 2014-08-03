@@ -33,7 +33,7 @@
   </head>
 
   <body class="wp-lp">
-    <div class="navbar navbar-inverse" role="navigation">
+    <div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
           <div class="center-logo-holder">
@@ -51,7 +51,7 @@
       </div>
     </div>
     <div class="container-fluid full-height">
-      <div id="intro" class="row ">
+      <div id="intro" class="row">
         <div class="bg-image"><img src="images/bg1.jpg"></div>
         <div class="col-xs-12">
           <div class="content text-center">
@@ -334,8 +334,22 @@
 
         // init timer
         timer.set({ time : 500, autostart : true });
-
-
+        /*var options = {
+                      map: ".map_canvas",
+                      location: "New york"
+                    };
+        $("#address").trigger("geocode");
+                    $("#address").geocomplete(options)
+                      .bind("geocode:result", function(event, result){
+                        //$.log("Result: " + result.formatted_address);
+                      })
+                      .bind("geocode:error", function(event, status){
+                        //$.log("ERROR: " + status);
+                      })
+                      .bind("geocode:multiple", function(event, results){
+                        //$.log("Multiple: " + results.length + " results found");
+                      });
+*/
         // owl-carousel init
         $("#owl-slider1").owlCarousel({
  
