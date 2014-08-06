@@ -10,6 +10,38 @@
     var personal_permissions = 'user_location,user_about_me,user_photos,user_events,user_videos';
     var num_reject_basic_permissions = 1;
 
+
+    function get_facebook_id_from_url(identifier) {
+        if($result = getNumberFromString(identifier)) {
+            return $result;
+        }
+
+        $pattern = /facebook.com\/([a-zA-Z0-9\/._-]*)/i;
+
+        if( $matches = identifier.match($pattern)) {
+            $result = $matches[1];
+
+        } else {
+            $pattern = /(\/)?([a-zA-Z0-9\/._-]*)/;
+            if( $matches = identifier.match($pattern)) {
+                $result = $matches[0];
+            }
+        }
+
+        return $result.replace('/,- ', '');
+    }
+
+    function getNumberFromString(string) {
+        $pattern = /\/([0-9]+[^a-zA-Z?&])/;
+
+        if( $matches = string.match($pattern)) {
+            return $matches[1];
+        }
+        return '';
+    }
+
+
+
     function currentUrl() {
         return current_url = location.protocol + '//' + location.host + location.pathname;
     }
@@ -198,6 +230,10 @@
     }
 
     function makeAjaxTrackCall(data, callback) {
+        console.log("Tracking to Otonomic DB is disabled.")
+        return;
+
+/*
         var url = WEBROOT + 'code/sites/track_click/';
         if (typeof site_id != "undefined" && site_id) {
             url += site_id + '/';
@@ -213,6 +249,7 @@
                 }
             }
         });
+        */
     }
 
     function objectToArray(obj) {
