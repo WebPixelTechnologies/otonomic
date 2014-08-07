@@ -1,0 +1,597 @@
+@charset "utf-8";
+
+/* ------------------- Reset ------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0;	font-size: 100%; vertical-align: baseline; background: transparent;}
+body { line-height: 1;	color: #171717;	font-size: 12px; font-family: Arial, Helvetica, sans-serif;	min-width:1100px; background: #EBEBEB url("../images/bg.png");}
+* { padding: 0; margin: 0;}
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+.clearfix { display: inline-block; *zoom:1;}
+* html .clearfix { height: 1%;} /* Hides from IE-mac \*/
+.clearfix { display: block;}
+ul,
+ol { list-style:none; margin:0; padding:0;}
+ul li,
+ol li {	padding:0;}
+table {	border: none; margin: auto;}
+blockquote, q {	quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none;}
+/* remember to define focus styles! */
+:focus { outline: 0;}
+/* remember to highlight inserts somehow! */
+ins { text-decoration: none;}
+del { text-decoration: line-through;}
+
+/* ------------------- Reset End ------------------- */
+
+/* ------------------- Typography ------------------- */
+
+a {	text-decoration: none; color: #C72812;}
+p{ display: block; color: #404040; line-height: 1.5; font-size: 11px; margin-bottom: 5px;}
+h1, h2, h3, h4{	display: block; padding: 0;	color: #292929;	font-size: 32px; font-weight: bold; margin-bottom: 20px;}
+h1 span, h2 span, h3 span, h4 span{ display: inline-block; color:#C72812;}
+h1 span.h1big{ font-size: 60px;}
+h1 span.h1big span{ font-size: 30px; vertical-align: top;}
+h2{	font-size: 28px;}
+h3{ font-size: 24px;}
+h4{	font-size: 20px;}
+table,table.compare{ width: 100%; border-spacing: 0; padding: 0;}
+table td,table.compare td{ text-align: center; vertical-align: middle; padding: 10px;}
+table td{ text-align: left; padding: 3px;}
+table td.center{ text-align: center; padding: 3px;}
+table.compare td.firsttd{ text-align: left;	background: #ffffff; color: #3F3F3F; font-size: 13px; font-weight: bold; width: 30%;}
+table.compare thead td{	background: #E8E8E8; color: #3F3F3F; font-size: 15px; font-weight: bold;}
+table.compare thead td.mytd{ color: #C72812; font-size: 18px; font-weight: bold;}
+table.compare tbody tr{	background: #F3F3F3;}
+table.compare tbody tr.alttr{ background: #E8E8E8;}
+
+/* ------------------- Typography End ------------------- */
+
+/* ------------------- Layout ------------------- */
+
+.right{	text-align: right !important;}
+.fright{ float: right !important;}
+.container{	width: 960px; margin: 0 auto; position: relative;}
+.dots{ clear: both; width: 100%; height: 1px; margin: 15px 0; border-top: 3px dotted #ACACAC;}
+.leftmargin{ margin-left: 30px !important;}
+.rightmargin{ margin-right: 30px !important;}
+.topmargin{ margin-top: 30px !important;}
+.bottommargin{ margin-bottom: 30px !important;}
+.nomargin{ margin: 0 !important;}
+.center{ text-align: center !important;}
+.hidden{ display: none; visibility: hidden;}
+.nothidden{ display: block; visibility: visible;}
+
+
+/* ------------------- Error & Success Messages ------------------- */
+
+.successmsg,.errormsg{
+	display: none;
+	position: relative;
+	float: left;
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+.successmsg{
+	background: #B8FAC4;
+	border: 1px solid #10ED36;
+	color: #14652D;
+}
+
+.errormsg{
+	background: #FDCECF;
+	border: 1px solid #F84E52;
+	color: #72070B;
+}
+
+.successmsg .message,.errormsg .message{
+	border: 1px solid #EEEEEE;
+	padding: 10px;
+}
+
+/* ------------------- Error & Success Messages End ------------------- */
+
+
+/* ------------------- Header ------------------- */
+
+#header{
+	display: block;
+	position: relative;
+	background: transparent;
+	height: 80px;
+}
+
+#logo{
+	display: block;
+	position: relative;
+	float: left;
+	height: 80px;
+	line-height: 80px;
+}
+
+#logo a{
+	display: block;
+	position: relative;
+	float: left;
+	color: #414141;
+	font-size: 44px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px #f2f2f2;
+}
+
+#logo a span{
+	display: inline-block;
+	color: #C72812;
+}
+
+
+#topcontacts{
+	display: block;
+	position: relative;
+	float: right;
+	height: 70px;
+	line-height: 30px;
+	margin-top: 10px;
+	color: #414141;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+#topcontacts span{
+	display: inline-block;
+	color: #C72812;
+}
+
+
+
+
+/* ------------------- Header End ------------------- */
+
+
+/* ------------------- Content ------------------- */
+
+#content{
+	display: block;
+	position: relative;
+	background: #FFF;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+
+
+/* ------------------- Offer Area ------------------- */
+
+#offer{
+	display: block;
+	position: relative;
+	float: left;
+	width: 900px;
+	margin: 30px 30px 50px;
+}
+
+#offerleft,#offerright{
+	display: block;
+	position: relative;
+	float: left;
+	width: 430px;
+}
+
+#offerright{
+	margin-left: 40px;
+	height: 300px;
+	background: url("../images/offerimgbg.png") no-repeat;
+}
+
+#offer p.describe{ color: #464646; font-size: 17px; font-weight: normal; line-height: 1.4;}
+
+
+#offer a.secondary{
+	border-bottom: 1px solid #C72812;
+	font-size: 16px;
+	margin-left: 10px;
+}
+
+#offer a.secondary:hover{
+	color: #7C7C7C;
+	border-bottom: 1px solid #7C7C7C;
+}
+
+a.action{
+	display: inline-block;
+	width: 350px;
+	height: 65px;
+	text-align: center;
+	line-height: 65px;
+	color: #4E4E4E;
+	font-weight: bold;
+	font-size: 28px;
+	text-transform: uppercase;
+	background: url("../images/bigbutton.png") no-repeat;
+	margin-bottom: 10px;
+}
+
+#offerright #offerslide,#offerright #offerstatic{
+	display: block;
+	position: relative;
+	margin: 5px;
+	width: 420px;
+	height: 290px;
+	overflow: hidden;
+}
+
+#offerright #offerslide img,#offerright #offerstatic img{
+	width: 420px;
+	height: 290px;
+}
+
+/* ------------------- Offer Area End ------------------- */
+
+
+/* ------------------- Detailed Content ------------------- */
+
+.details{
+	display: block;
+	position: relative;
+	float: left;
+	width: 900px;
+	margin: 0 30px 30px;
+}
+
+.details .tabnav,.details .tabnav li{
+	display: block;
+	float: left;
+	position: relative;
+	height: 80px;
+	z-index: 10;
+}
+
+.details .tabnav li{
+	margin-left: 20px;
+	margin-bottom: 0;
+}
+
+.details .tabnav li:first-child{
+	margin-left: 0;
+}
+
+.details .tabnav li.active,html .details .tabnav li.active{
+	background: url("../images/tabsep.png") no-repeat bottom center;
+}
+
+.details .tabnav li a{
+	display: block;
+	float: left;
+	height: 45px;
+	line-height: 45px;
+	padding-left: 20px;
+	background: url("../images/tableft.png") no-repeat left;
+}
+
+.details .tabnav li a span{
+	display: inline-block;
+	height: 45px;
+	line-height: 45px;
+	padding-right: 20px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #646464;
+	text-transform: uppercase;
+	background: url("../images/tabright.png") no-repeat right;
+}
+
+
+
+.details .details-container{
+	display: block;
+	position: relative;
+	float: left;
+	width: 898px;
+	background: #EAEAEA;
+	border: 1px solid #C7C7C7;
+	margin-top: -2px;
+}
+
+.details .details-container .details-content{
+	padding: 20px;
+	border: 1px solid #FFF;
+}
+
+
+
+.col-full,.col-half,.col-big,.col-small{
+	display: block;
+	position: relative;
+	float: left;
+	width: 47%;
+	margin-right: 6%;
+}
+
+.col-big{
+	width: 62%;
+}
+
+.col-small{
+	width: 32%;
+}
+
+.col-full{
+	width: 900px;
+	margin-right: 0;
+	margin: 0 0 30px 30px;
+}
+
+.last{
+	margin-right: 0;
+	clear: right;
+}
+
+#bottompromo{
+	display: block;
+	float: left;
+	position: relative;
+	margin: 30px 0 20px;
+}
+
+#bottompromo .bpleft{
+	display: block;
+	float: left;
+	color: #292929;
+	font-size: 33px;
+	font-weight: bold;
+	height: 65px;
+	line-height: 65px;
+}
+
+#bottompromo .bpleft span{
+	color: #C72812;
+}
+
+#bottompromo .bpright{
+	display: block;
+	float: right;
+}
+
+
+.productfeatures { display: block; float: left; margin-right: -60px;}
+.productfeatures li{ display: block; float: left; position: relative; margin: 10px 0 20px; width: 340px; padding-left: 60px; margin-right: 58px;}
+.productfeatures h3{ display: block; color: #202020; font-size: 18px; margin-bottom: 10px;}
+.productfeatures p{ display: block; font-size: 13px;}
+.productfeatures li img{ display: block; position: absolute; left: 0; top: 0; width: 48px; height: 48px;}
+
+
+/* ------------------- Detailed Content End ------------------- */
+
+/* ------------------- Testimonials ------------------- */
+
+#testi-monials { display: block; float: left; margin-right: -27px;}
+#testi-monials li{
+	display: block;
+	position: relative;
+	float: left;
+	margin: 10px 27px 20px 0;
+	width: 410px;
+	font-size: 13px;
+	color: #4E4E4E;
+	line-height: 1.4;
+}
+
+#testi-monials li .testiimage{
+	display: block;
+	float: left;
+	margin-right: 10px;
+	width: 124px;
+	height: 143px;
+	background: url("../images/author.png") no-repeat;
+}
+
+#testi-monials li .testiimage img{
+	display: block;
+	margin: 19px 22px;
+	width: 80px;
+	height: 105px;
+}
+
+#testi-monials li .testicontent{
+	display: block;
+	float: left;
+	width: 236px;
+	padding-left: 40px;
+	background: url("../images/quote.png") no-repeat left top;
+}
+
+#testi-monials li .testicontent span{
+	display: block;
+	text-align: right;
+	font-size: 12px;
+	font-weight: bold;
+	font-style: italic;
+	color: #C72812;
+	margin-top: 15px;
+}
+
+
+/* ------------------- Testimonials End ------------------- */
+
+
+/* ------------------- Gallery ------------------- */
+
+#pgallery{
+	display: block; float: left; margin-right: -21px;
+}
+
+#pgallery li{
+	display: block;
+	position: relative;
+	float: left;
+	margin: 10px 19px 20px 0;
+	width: 273px;
+	height: 145px;
+	background: url("../images/gallerybg.png") no-repeat;
+}
+
+#pgallery li a{
+	display: block;
+	position: relative;
+	float: left;
+	margin: 10px;
+	width: 253px;
+	height: 125px;
+}
+
+#pgallery li a img{
+	display: block;
+	position: relative;
+	width: 253px;
+	height: 125px;
+}
+
+#pgallery li a span{
+	display: none;
+	position: absolute;
+	z-index: 10;
+	width: 253px;
+	height: 125px;
+	top: 0;
+	left: 0;
+	background-color: rgba(15, 15, 15, 0.8);	
+}
+
+#pgallery li a span img{
+	width: 48px;
+	height: 48px;
+	top: 50%;
+	left: 50%;
+	margin-top: -24px;
+	margin-left: -24px;
+}
+
+
+
+/* ------------------- Gallery End ------------------- */
+
+
+/* ------------------- Form ------------------- */
+
+input[type="text"],select,textarea,#newsletter input[type="text"]{
+	display: block;
+	width: 90%;
+	border: 1px solid #9B9B9B;
+	padding: 7px;
+	color: #787878;
+}
+
+label{
+	display: block;
+	color: #3F3F3F;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 10px 0;
+}
+
+select{
+	width: auto;
+}
+
+textarea{
+	height: 120px;
+}
+
+input[type="submit"].bigsubmit,.bigsubmit,input[type="submit"].smallsubmit,#newsletter input[type="submit"].bigsubmit{ display: block; width: 200px; height: 40px; color: #3B3B3B; font-size: 14px; text-transform: uppercase; font-weight: bold; line-height: 40px; border: none; background: url("../images/bigsubmit.png") no-repeat; text-shadow: 1px 1px 1px #f2f2f2; margin: 5px 0; cursor: pointer;}
+
+input[type="submit"].smallsubmit{ width: 120px; background: url("../images/smallsubmit.png") no-repeat;}
+
+#getquote input[type="submit"].bigsubmit{
+	position: relative;
+	margin: 5px auto;
+}
+
+#newsletter{
+	display: block;
+	position: relative;
+	float: left;
+	width: 100%;	
+}
+
+#newsletter input[type="text"]{
+	float: left;
+	width: 620px;
+	height: 38px;
+	line-height: 38px;
+	padding: 0 7px;
+	font-size: 14px;
+	font-style: italic;
+}
+
+#newsletter input[type="submit"].bigsubmit{
+	float: right;
+	margin: 0;
+}
+
+.invalidfield{
+	border: 2px solid #CC0000 !important;
+}
+
+
+/* ------------------- Form End ------------------- */
+
+
+
+/* ------------------- Content End ------------------- */
+
+
+
+
+/* ------------------- Footer ------------------- */
+
+#footer{
+	display: block;
+	position: relative;
+	background: transparent;
+	height: 50px;
+	line-height: 50px;
+}
+
+#footer #copyrights{
+	display: block;
+	position: relative;
+	float: left;
+	color: #3C3C3C;
+}
+
+#footer #copyrights a{
+	display: inline-block;
+	color: #292929;
+	margin-left: 10px;
+}
+
+#footer #copyrights a:hover{
+	text-decoration: underline;
+}
+
+
+#footer #fsocial{
+	display: block;
+	position: relative;
+	float: right;
+}
+
+
+#footer #fsocial li{ display: block; float: left; margin: 13px 0 0 10px; }
+#footer #fsocial li a, #footer #fsocial li a img{ display: block; float: left; height: 24px; width: 24px;}
+#footer #fsocial li a img{ margin: 0;}
+
+/* ------------------- Footer End ------------------- */
+
+
+/* ------------------- Layout End ------------------- */

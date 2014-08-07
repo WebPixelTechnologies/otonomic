@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://localhost/lp/creative/index.php -->
+<html class="">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- <script src="//cdn.optimizely.com/js/326727683.js"></script> -->
+<script type="text/javascript" async="" src="./p2s_files/inpage_linkid.js" id="undefined"></script>
+<script type="text/javascript" async="" src="./p2s_files/b419432bd575e62df9c5261699db0141d877e73f.1.js"></script>
+<script type="text/javascript" async="" src="./p2s_files/i.js"></script>
+<script id="facebook-jssdk" src="./p2s_files/all.js&appId=402185779876907"></script>
+<script type="text/javascript" async="" src="./p2s_files/dc.js"></script>
+<script src="./p2s_files/jquery-1.10.1.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="./p2s_files/functions.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+<link href="./p2s_files/index.css" type="text/css" rel="stylesheet">
+
+<link href="stylesheet.css" type="text/css" rel="stylesheet">
+
+
+<title>Page2Site</title>
+<script src="./p2s_files/index.js" type="text/javascript"></script>
+
+
+
+
+<!-- Add jQuery library -->
+
+
+	
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+			/*
+			 *  Different effects
+			 */
+
+			// Change title type, overlay closing speed
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedOut : 0
+					}
+				}
+			});
+
+			// Disable opening and closing animations, change title type
+			$(".fancybox-effects-b").fancybox({
+				openEffect  : 'none',
+				closeEffect	: 'none',
+
+				helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+			});
+
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+
+				openEffect : 'none',
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background' : 'rgba(238,238,238,0.85)'
+						}
+					}
+				}
+			});
+
+			// Remove padding, set opening and closing animations, close if clicked and disable overlay
+			$(".fancybox-effects-d").fancybox({
+				padding: 0,
+
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+
+				closeClick : true,
+
+				helpers : {
+					overlay : null
+				}
+			});
+
+			/*
+			 *  Button helper. Disable animations, hide close button, change title type and content
+			 */
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+
+
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
+
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+
+			/*
+			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+			*/
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+
+			/*
+			 *  Open manually
+			 */
+
+			$("#fancybox-manual-a").click(function() {
+				$.fancybox.open('1_b.jpg');
+			});
+
+			$("#fancybox-manual-b").click(function() {
+				$.fancybox.open({
+					href : 'iframe.html',
+					type : 'iframe',
+					padding : 5
+				});
+			});
+
+			$("#fancybox-manual-c").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : 'My title'
+					}, {
+						href : '2_b.jpg',
+						title : '2nd title'
+					}, {
+						href : '3_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+
+		});
+	</script>
+
+
+
+
+
+</head>
+<body >
+<div id="fb-root" class=" fb_reset">
+  <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+    <div>
+      <iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="./p2s_files/xd_arbiter.htm" style="border: none;"></iframe>
+      <iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="./p2s_files/xd_arbiter(1).htm" style="border: none;"></iframe>
+    </div>
+  </div>
+  <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+    <div></div>
+  </div>
+</div>
+ 
+<a href="http://localhost/lp/creative/index.php#main_content" id="facebook_connector" style="display:none">Connect Facebook</a> <a href="http://localhost/lp/creative/index.php#personal_content" id="facebook_pconnector" style="display:none">Connect Personal Facebook</a>
+<div class="tb" id="main_content" style="display:none">
+  <div id="facebook_fanpages" class="dialog_box emphasize_links" style="">
+    <div class="center"><img src="./p2s_files/logo.png"></div>
+    <p style="margin:20px 0 10px;text-align:center;font-size:19px;line-height:1.4em;padding:0 20px;"> In order to create your website, we need you to connect to Facebook:<br>
+      <br>
+    </p>
+    <div class="center"> <a href="http://localhost/lp/creative/index.php#" class="facebook_connect track_event measure_time" data-ga-category="Facebook Connect" data-ga-event="Connect with Facebook" data-ga-label="Facebook reject basic permissions" data-ajax-track="1"> <img src="./p2s_files/fb_connect_233x40.png" alt="Connect with Facebook" title="Connect with Facebook"> </a> </div>
+    <p style="margin:20px 0 10px;text-align:center;font-size:15px;line-height:1.4em;padding:0 20px 25px;color:#777;"> Don't worry, you will have full control over your website. <br>
+      We won't publish on your behalf nor make any changes to your page without your permission. <br>
+      <a id="a_contact_us_to_learn_more" class="track_event" data-ga-category="Facebook Connect" data-ga-event="Contact Us" data-ga-label="Facebook reject basic permissions" data-ajax-track="1" href="http://page2site.com/contact" target="_blank" style="text-decoration: underline">Contact us to learn more</a> </p>
+    <div class="right" style="font-size:10px;"> <a id="a_connect_later" class="track_event" data-ga-category="Facebook Connect" data-ga-event="Connect Later" data-ga-label="Facebook reject basic permissions" data-ajax-track="1" href="http://page2site.com/faq" target="_blank" onclick="parent.jQuery.fancybox.close();" style="text-decoration: underline">Connect later</a> </div>
+  </div>
+</div>
+<div class="tb" id="personal_content" style="display:none">
+  <div id="personal_page" class="dialog_box emphasize_links" style="">
+    <div class="center"><img src="./p2s_files/logo.png"></div>
+    <p style="margin:20px 0 0px;text-align:center;font-size:14px;line-height:1.4em;padding:0 20px;"> Creating a website requires your timeline content. We need your permission to read it.<br>
+      <br>
+    </p>
+    <div class="center"> <a href="javascript:void(0);" class="personal"> <img src="./p2s_files/fb_connect_233x40.png" alt="Connect with Facebook" title="Connect with Facebook"> </a> </div>
+    <p style="margin:20px 0 10px;text-align:center;font-size:10px;line-height:1.4em;padding:0 20px 25px;color:rgb(207, 205, 205);"> Don't worry, you will have full control over your website. <br>
+      We won't publish on your behalf nor make any changes to your page without your permission. <br>
+      <a id="a_contact_us_to_learn_more" href="http://page2site.com/contact" target="_blank" style="text-decoration: underline">Contact us to learn more</a> </p>
+    <div class="right" style="font-size:10px;"> <a id="a_connect_later" class="track_event" data-ga-category="Facebook Connect" data-ga-event="Connect Later" data-ga-label="personal permissions" data-ajax-track="1" href="http://page2site.com/faq" target="_blank" onclick="parent.jQuery.fancybox.close();" style="text-decoration: underline">Connect later</a> </div>
+  </div>
+</div>
+<div class="domHide" style="display: none">
+  <div class="media site-item"> <a href="http://localhost/lp/creative/index.php#" target="_blank" class="page_image" style="float: left"> <img class="media-object" src="" height="50" width="50"> </a>
+    <div class="media-body pull-left" style="float: left;margin-left: 10px">
+      <p class="media-heading"> <a href="http://localhost/lp/creative/index.php#" target="_blank" class="page_name"></a> </p>
+    </div>
+  </div>
+</div>
+<div id="why_we_need_manage_page" style="margin: 0 auto; padding:0px 30px; display: none">
+  <div class="dialog_box emphasize_links" style="">
+    <p class="more_info_message"> Want to create a website for your <b>Fan Page</b>?<br>
+      This is only possible if you allow us to "Manage your pages".<br>
+      We won't make any changes to your pages nor post on your behalf. </p>
+    <div class="center"> <a href="http://localhost/lp/creative/index.php#" id="btn_facebook_show_my_pages" class="facebook_connect tracking_enabled measure_time" data-ga-category="Facebook Connect" data-ga-event="Connect with Facebook" data-ga-label="Reject manage pages"> <img src="./p2s_files/fb_show_my_pages_233x56.png" alt="Connect with Facebook" title="Connect with Facebook"> </a> </div>
+    <div style="margin:10px 0;">
+      <p> <a id="why_manage_pages" href="http://localhost/lp/creative/index.php#" style="color:#15c;text-decoration:underline;">Why do we need the "manage your pages" permission?</a> </p>
+      <p id="why_manage_pages_div" class="emphasize_links"> This permission enables page2site to list the fan pages you administrate, and create beautiful websites for them.<br>
+        We'll never perform any action on your pages without your explicit approval. </p>
+    </div>
+  </div>
+</div>
+<div class="personal_site_create_loading" style="display:none">
+  <div style="width: 200px;margin: 100px auto;">
+    <p>Creating your site, please wait...</p>
+  </div>
+</div>
+<div id="loader" style="display:none">
+  <div class="center" style="margin: 40px auto;"> <img src="./p2s_files/loader.gif" style="margin-right: 10px;"> <span>Loading...</span> </div>
+</div>
+
+
+
+<div class="newcotainer"> 
+
+<div class="askus"> <a class="fancybox" href="#inline1"><img src="images/askus.jpg" width="48" height="116" alt=""></a></div>
+
+<div id="inline1" style="width:400px;display: none;">
+		<h3>Etiam quis mi eu elit</h3>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mi eu elit tempor facilisis id et neque. Nulla sit amet sem sapien. Vestibulum imperdiet porta ante ac ornare. Nulla et lorem eu nibh adipiscing ultricies nec at lacus. Cras laoreet ultricies sem, at blandit mi eleifend aliquam. Nunc enim ipsum, vehicula non pretium varius, cursus ac tortor. Vivamus fringilla congue laoreet. Quisque ultrices sodales orci, quis rhoncus justo auctor in. Phasellus dui eros, bibendum eu feugiat ornare, faucibus eu mi. Nunc aliquet tempus sem, id aliquam diam varius ac. Maecenas nisl nunc, molestie vitae eleifend vel, iaculis sed magna. Aenean tempus lacus vitae orci posuere porttitor eget non felis. Donec lectus elit, aliquam nec eleifend sit amet, vestibulum sed nunc.
+		</p>
+	</div>
+
+<div class="logo"><a href="#"><img src="images/logo.png" width="154" height="85" alt=""></a> </div>
+
+<div class="rightlinks"> 
+
+<div class="login"><a href="#">Login</a></div>  
+
+<div class="creatacc"><a href="#">CREATE WEBSITE </a></div>
+
+</div>
+
+<div class="slidercont"> 
+
+
+<div class="sliderslogan"> 
+
+With <span> Page2site</span>  I got <br/>
+A free website for my business!
+
+</div>
+
+<div class="bottoncont">
+
+<a href="#"><img src="images/create-btn.png" width="458" height="105" alt=""></a> 
+
+ </div>
+
+</div>
+
+
+
+
+<div class=" body-cont">
+
+<div class="body-heading"> <h2> Over 10,000 sites created using <span>Page2site</span> </h2></div>
+
+<div class="samplecont"> 
+
+
+
+  <section class="e-block"> <a target="_blank" href="http://griyaspreiandfashions.com/sites/store"> <img src="./p2s_files/page2site_griya_store.jpg" alt="Griya Sprei &amp; Fashion">
+    <h3>Griya Sprei &amp; Fashion</h3>
+    </a> </section>
+  <section class="e-block"> <a target="_blank" href="http://coachingdevidahn.com/sites/blog"> <img src="./p2s_files/page2site_coaching_de_vida_blog.jpg" alt="Coaching de vida Honduras">
+    <h3>COACHING DE VIDA</h3>
+    </a> </section>
+  <section class="e-block"> <a target="_blank" href="http://sklcosmetiques973.com/sites/portfolio"> <img src="./p2s_files/page2site_sklcosmetics_photos.jpg" alt="SKL Conseils ">
+    <h3>SKL Conseils</h3>
+    </a> </section>
+  
+</div>
+
+
+<div class="tempcont"> 
+<div class="sampletemp-heading"> <h1> 30 Beautiful Templates </h1>
+<span> <em>You can change your site's appearance in click</em></span>
+</div>
+  <section class="carousel">
+    <div class="l-arrow"> <img src="./p2s_files/l-arrow-e.png" alt="Left Arrow"> </div>
+    <div class="c-box">
+      <div class="c-block" style="left: 0px;"> <img src="./p2s_files/sensation.png" alt="Sensation">
+        <h3>SENSATION</h3>
+        <!-- <div class="c-button">Create a site with this template</div> --> 
+      </div>
+      <div class="c-block" style="left: 310px;"> <img src="./p2s_files/beulah.jpg" alt="Beulah">
+        <h3>BEULAH</h3>
+        <!-- <div class="c-button">Create a site with this template</div> --> 
+      </div>
+      <div class="c-block" style="left: 620px;"> <img src="./p2s_files/half-tone.jpg" alt="Half Tone">
+        <h3>HALF TONE</h3>
+        <!-- <div class="c-button">Create a site with this template</div> --> 
+      </div>
+      <div class="c-block" style="left: 930px;"> <img src="./p2s_files/nova.jpg" alt="Half Tone">
+        <h3>NOVA</h3>
+        <!-- <div class="c-button">Create a site with this template</div> --> 
+      </div>
+      <div class="c-block" style="left: 1240px;"> <img src="./p2s_files/muro.jpg" alt="Half Tone">
+        <h3>MURO</h3>
+        <!-- <div class="c-button">Create a site with this template</div> --> 
+      </div>
+    </div>
+    <!-- c-box -->
+    <div class="r-arrow"> <img src="./p2s_files/r-arrow-d.png" alt="Right Arrow"> </div>
+  </section>
+</div>
+
+
+<div class="create-website"> <a href="#"><img src="images/create-btn2.png" width="400" height="108" alt=""></a></div>
+
+<div class="videobg"> 
+
+<div class="videoslogan">
+See the story of Jessica 
+and realize your potential 
+with <span>Page2site</span>
+
+</div>
+
+
+<div class="videobg2"> 
+
+<div class="videocont"> <img src="images/videoimg.jpg" width="483" height="300" alt=""> </div>
+
+
+ </div>
+ 
+
+
+
+
+</div>
+
+
+
+<div class="iconcontent">  <section class="q-block"> <img src="./p2s_files/fresh.png" alt="Fresh">
+    <h3>FRESH</h3>
+    Your site will be automatically updated from your Facebook page. Just
+    keep posting your posts, photos and videos on Facebook and your
+    website will always be fresh and up-to-date </section>
+  <section class="q-block"> <img src="./p2s_files/fast.png" alt="Fast">
+    <h3>FAST</h3>
+    Get a beautiful working website ready to launch in seconds. Don't
+    waste time writing once again about who you are and what you do, just
+    connect your Facebook page, and you've got a brand new site </section>
+  <section class="q-block"> <img src="./p2s_files/beautiful.png" alt="Beautiful">
+    <h3>BEAUTIFUL</h3>
+    We've got over 30 templates designed by top professionals to make
+    your content stand out. Feel like a fresh look? you can change your
+    template with just 1 click – all your content will be automatically
+    transferred </section>
+  <section class="q-block"> <img src="./p2s_files/social.png" alt="Social">
+    <h3>SOCIAL</h3>
+    Present all your social activity on a single site. Add social
+    accounts to your site to create a central focal point for displaying
+    your interactions on Facebook, Twitter, LinkedIn, Picasa, Flickr,
+    Pinterest and more </section></div>
+
+
+<div class="testimonialcont"><article class="panel6" style="margin-left:0px;">
+  <div class="arrows"> <img src="./p2s_files/l-arrow-d.png" alt="Left Arrow"><img src="./p2s_files/r-arrow-e.png" alt="Right Arrow"> </div>
+  <h2>Testimonials</h2>
+  
+  <section class="testimonials">
+    <section class="testimonial " style="display: block;">
+    <div class="testimonial-thumb"> 
+    
+    <div class="t-icon"> <img src="./p2s_files/user-sonia-robinson.png" alt="Testimonial"> </div>
+      <div class="t-statement">I was surprised by how easy it was to create and customize the website. After years of putting off building a site, I finally have one that works and looks great.</div>
+      <div class="t-author">
+        <p>- Sonia Robinson, USA </p>
+        <a href="http://robinsoninvestmentfirm.page2site.com/" class="website">http://robinsoninvestmentfirm.page2site.com/</a></div>
+    
+    </div>
+    
+    <div class="testimonialspe"> </div>
+    
+    <div class="testimonial-thumb"> 
+    
+    <div class="t-icon"> <img src="./p2s_files/user-sonia-robinson.png" alt="Testimonial"> </div>
+      <div class="t-statement">I was surprised by how easy it was to create and customize the website. After years of putting off building a site, I finally have one that works and looks great.</div>
+      <div class="t-author">
+        <p>- Sonia Robinson, USA </p>
+        <a href="http://robinsoninvestmentfirm.page2site.com/" class="website">http://robinsoninvestmentfirm.page2site.com/</a></div>
+    
+    </div>
+     
+    
+    </section>
+    <section class="testimonial">
+    
+    <div class="testimonial-thumb"> 
+      <div class="t-icon"> <img src="./p2s_files/user-karl-loupec.png" alt="Testimonial"> </div>
+      <div class="t-statement">I would like to thank the Page2site team for their great service and their extraordinary patience. Thanks to them, my site looks even better than I envisioned it and I had 3 new customers asking for a price proposal in the first week alone!</div>
+      <div class="t-author">
+        <p>- Karl Loupec, France </p>
+        <a href="http://sklcosmetiques973.com/" class="website">http://sklcosmetiques973.com</a></div>
+        
+        </div>
+        
+        <div class="testimonialspe"></div>
+        
+        <div class="testimonial-thumb"> 
+      <div class="t-icon"> <img src="./p2s_files/user-karl-loupec.png" alt="Testimonial"> </div>
+      <div class="t-statement">I would like to thank the Page2site team for their great service and their extraordinary patience. Thanks to them, my site looks even better than I envisioned it and I had 3 new customers asking for a price proposal in the first week alone!</div>
+      <div class="t-author">
+        <p>- Karl Loupec, France </p>
+        <a href="http://sklcosmetiques973.com/" class="website">http://sklcosmetiques973.com</a></div>
+        
+        </div>
+    </section>
+  </section>
+  <div class="clear"></div>
+</article> </div>
+
+
+<div class="create-website"> <a href="#"><img src="images/create-btn2.png" width="400" height="108" alt=""></a></div>
+
+</div>
+
+
+ 
+ 
+</div>
+
+<div class="clear"> </div>
+
+
+<!-- panel3 -->
+
+
+
+
+
+
+
+
+<div class="clear"></div>
+<article class="panel4 left panel8">
+  <h2> Frequently Asked Questions </h2>
+  <section class="q-block double">
+    <h3>Is it really free?</h3>
+    Yes, the site you create with us is totally free and yours to use. We have paid plans for users who prefer a site without our ads, who want their own domain, or that need awesome features like an online store.<br>
+    Feel free to visit our <a target="_blank" href="http://localhost/faq">FAQ</a> for more information, or <a href="mailto:support@page2site.com">contact support</a>. <br>
+    <br>
+    <h3>How is my private information protected?</h3>
+    Page2site uses public information from you profile to create your website and to make you the only person that can edit the site and make changes. We will never use this information for any other purpose without your consent. <br>
+    Feel free to visit our <a target="_blank" href="http://localhost/privacy">privacy policy</a> or <a target="_blank" href="http://localhost/faq">FAQ</a> for more information, or <a href="mailto:support@page2site.com">contact support</a>. </section>
+  <section class="q-block double">
+    <h3>Will my site update automatically when I update Facebook?</h3>
+    That's an absolute yes. The great thing about your new website is that all you need to do to keep it updated is the same you did before - keep posting interesting content to your Facebook page.<br>
+    Feel free to visit our <a target="_blank" href="http://localhost/faq">FAQ</a> for more information, or <a href="mailto:support@page2site.com">contact support</a>. <br>
+    <br>
+    <h3>Will my site change my Facebook page?</h3>
+    Page2site works only one way: From Facebook to your website. We will never make any changes to your page, or post anything on your page, without asking your approval every time. Regardless, It is highly recommended to share your new site on Facebook and on any other network to give it a good head start.<br>
+    Feel free to visit our <a target="_blank" href="http://localhost/faq">FAQ</a> for more information, or <a href="mailto:support@page2site.com">contact support</a>. </section>
+  <div class="clear"></div>
+</article>
+<br>
+<br>
+<br>
+<footer>
+
+<div class="newcotainer"> 
+
+<div class="footerpart1">
+
+<div class="footerpart1-heading">Contact Us:</div>
+
+<div class="footerpartrow2"> 
+
+
+<div class="innfooter"> phone. (+) 972-3-9679584<br/>
+fax. (+) 972-3-9679585<br/>
+Email. support@page2site.com</div>
+
+<div class="footerpart1-heading">Contact Us:</div>
+
+<div class="innfooter"> 
+
+<img src="images/facebook.png" width="44" height="44" alt="">
+<img src="images/twitter.png" width="44" height="44" alt="">
+<img src="images/linkedin.png" width="44" height="44" alt="">
+
+<img src="images/gplus.png" width="44" height="44" alt=""></div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="footerpart2">
+
+<div class="footerpart1-heading footerpart1-heading2">Main Info:</div>
+
+<div class="footerpartrow2"> 
+
+
+<div class="innfooter"> 
+<ul>
+<li><a href="#">About page2site </a></li>
+<li><a href="#">Blog</a></li>
+<li><a href="#">Help</a></li>
+<li><a href="#">Terms of use</a></li>
+<li><a href="#">Privacy</a></li>
+<li><a href="#">Affiliate</a></li>
+<li><a href="#">Abuse</a></li>
+<li><a href="#">Developers</a></li>
+</ul>
+</div>
+</div>
+
+
+</div>
+
+
+<div class="footerpart2">
+
+<div class="footerpart1-heading footerpart1-heading2">Main Info:</div>
+
+<div class="footerpartrow2" style="background:none;"> 
+
+
+<div class="innfooter"> 
+<ul>
+<li><a href="#">About page2site </a></li>
+<li><a href="#">Blog</a></li>
+<li><a href="#">Help</a></li>
+<li><a href="#">Terms of use</a></li>
+<li><a href="#">Privacy</a></li>
+<li><a href="#">Affiliate</a></li>
+<li><a href="#">Abuse</a></li>
+<li><a href="#">Developers</a></li>
+</ul>
+</div>
+</div>
+
+
+</div>
+
+
+
+<div class="copright"> Promote your business, showcase your art, set up an online shop or just test out new ideas. page2site has everything you need to build a fully-personalized, high-quality free website. Browse our collection of beautiful website templates. You'll find loads of stunning designs, ready to be customized.
+
+<p>Copyright © 2013-2014 Page2Site. All rights reserved</p>
+
+</div>
+
+</div>
+
+
+</footer>
+
+
+
+
+
+
+
+
+</body>
+</html>

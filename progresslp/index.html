@@ -437,7 +437,7 @@
             // var request_url = "http://wp.otonomic.com/migration/index.php?" + $.param(request_data);
             var request_url = "http://wp.otonomic.com/migration/index.php";
 
-            $.get({
+            $.ajax({
                 url: request_url,
                 dataType: "jsonp",
                 data: request_data,

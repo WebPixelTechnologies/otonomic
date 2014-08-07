@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'LatoRegular';
+    src: url('Lato-Regular/lato-regular.eot');
+    src: url('Lato-Regular/lato-regular.eot') format('embedded-opentype'),
+    url('Lato-Regular/lato-regular.woff') format('woff'),
+    url('Lato-Regular/lato-regular.ttf') format('truetype'),
+    url('Lato-Regular/lato-regular.svg#LatoRegular') format('svg');
+}
+
+
+.t_box, .search_progress {
+  border: 2px solid #000000;
+  width: 595px;
+  font-family: 'LatoRegular';
+  font-weight: normal;
+  display: inline-block;
+    background-color: #ffffff;
+    text-align: left;
+    z-index: 1;
+}
+.t_box .msgbox {
+  padding: 8px 25px 8px 48px;
+  float: left;
+  display: inline-block;
+  width: 522px;
+}
+.t_box .steps {
+  float: left;
+  display: inline-block;
+}
+.t_box .header {
+  color: #009dc4;
+  margin-left: -30px;
+  line-height: 30px;
+}
+.t_box .header span, .search_progress span {
+  color: #009dc4;
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 10px;
+  display: inline-block;
+}
+.t_box .close_btn {
+  background-image: url("../images/close_btn.png");
+  text-indent: -9999px;
+  height: 26px;
+  width: 26px;
+  display: inline-block;
+}
+.t_box .body_info {
+  margin-top: 15px;
+}
+.t_box h1 {
+    font-family: 'LatoRegular';
+    color: #000000;
+  font-size: 16px;
+  margin: 0;
+  display: inline-block;
+    font-weight: bold;
+}
+.t_box .or_msg {
+  font-size: 24px;
+  color: #009dc4;
+  margin: 10px 0;
+}
+.t_box p {
+  font-size: 16px;
+  color: #757575;
+  margin: 0;
+}
+.t_box #how_do_i {
+  float: right;
+  color: #009dc4;
+    text-decoration: underline;
+}
+.t_box #fb_connector {
+  background-image: url("../images/fb_connect.png");
+  text-indent: -9999px;
+  display: inline-block;
+  width: 119px;
+  height: 32px;
+  float: left;
+  margin-right: 10px;
+}
+.t_box .steps {
+  margin-top: 25px;
+  width: 310px;
+}
+.t_box ul{margin: 0 10px; padding: 0}
+.t_box li {
+  list-style: none;
+  margin-bottom: 18px;
+}
+.t_box li:last-child{
+    margin-bottom: 0;
+}
+.search_progress {
+    padding: 20px;
+}
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */

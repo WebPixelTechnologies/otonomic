@@ -1,0 +1,1 @@
+<?php include_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'include_files' . DIRECTORY_SEPARATOR . 'google_analytics_code.php'; ?>

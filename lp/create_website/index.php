@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	    <meta charset="utf-8">
+	
+	    <meta name="description" content="Page2site creates beautiful, professional and content-rich websites for small businesses. Page2site offers a great way to promote your business and get more fans and likes to your Facebook fan page.">
+	    <meta name="keywords" content="website builder, website creator, free website, promote facebook page">
+	
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	
+	    <link rel="shortcut icon" href="/code/zice_admin/images/logo/page2site/favicon.png" />
+	
+	    <meta property="og:title" content=""/>
+	    <meta property="og:type" content="website"/>
+	    <meta property="og:image" content="http://builder.page2site.com/files/sites/background/8fcae553aa37baa797fa8b1e8044a38c-cat1-resized-453x429.jpg"/>
+	    <meta property="og:site_name" content="FC Barcelona - Page2site"/>
+	    <meta property="fb:admins" content="19717048"/>
+	    <meta property="og:description" content=""/>
+	
+	    <title>Let us treat you with a professional website</title>
+	
+	    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+	    <!-- css section -->
+	    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css"/><![endif]-->
+	    <link rel="shortcut icon" href="img/favicon.ico"/>
+		<?php require_once 'google_analytics.php'; ?>
+
+        <?php
+        if(!empty($_GET['success'])){
+            include_once 'facebook_ads_conversion_tracking.php';
+        }
+        ?>
+
+        <!-- START LuckyOrange -->
+        <script type='text/javascript'>
+            var __wtw_lucky_ref_id = 1835418;
+            var __wtw_lucky_site_id = 10400;
+
+            (function() {
+                var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+                wa.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://ca557711') + '.luckyorange.com/w.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+            })();
+        </script>
+        <!-- END LuckyOrange -->
+        
+	</head>
+	<body>
+	
+	<div id="wrapper">
+	
+		<div id="header">
+			<div class="fanPage"><span>Have a</span> <strong>Fan Page?</strong></div>
+			<div class="createForYou">We'll create a WEBSITE for You!</div>
+		</div><!-- end header -->
+		
+		<div id="container">
+	
+	    	<div class="introduce">
+                <img src="img/logo_transparent_150px.png" class="logo">
+	        	<h2 class="title">Let us treat you with a<br /><strong>Beautiful Website</strong>, filled with your content.</h2>
+	            
+				<div class="services">
+					
+					<p><strong class="big">We will:</strong></p>
+					
+					<div class="listWrap"><div class="listInner">
+						<ul class="list">
+							<li>Design your site</li>
+							<li>Add your company information, photos,  videos
+	                                <br> and Facebook Posts</li>
+							<li>Add special widgets</li>
+						</ul>
+					</div></div>
+					
+					<p>and will send you your new site for your comments.</p>
+					
+					<p><strong>If you like our work,</strong> 
+					<br>you can claim your site for <span class="highlight">only $9<span class="highlight" style="font-size:0.7em">.9</span>/month</span>, and get:</p>
+					
+					<div class="listWrap"><div class="listInner">
+						<ul class="list">
+							<li>Free .com domain <span class="fade">(e.g. http://mybeautifulsite.com)</span></li>
+							<li>2 email addresses <span class="fade">(e.g. john@mybeautifulsite.com)</span></li>
+							<li>Free Hosting</li>
+							<li>Online Store</li>
+						</ul>
+					</div></div>
+					
+					<p>and <strong>much more....</strong></p>
+					
+					 <p>* No commitment<br>
+	                    * First draft ready for you in 3 days
+	                 </p>
+						
+				</div><!-- end services -->
+				
+	        </div><!-- end introduce -->
+			
+	        <div class="creatWebsite">
+	        	<div class="getStart">
+	            	<h3 class="title">Get Started Here!</h3>
+	                <p>We will send you your new site for your comments.<br>It's free to claim. No commitment. First draft ready for you in 3 days.</p>
+	            </div>
+				<div class="inner">
+					<div class="createWebForm">
+						<?php if(isset($_GET['success']) && $_GET['success']==1): ?>
+							<div class="msgAlert">We received your message, thanks!</div>
+						<?php endif; ?>
+						
+						<form id="frm_createWeb" method="post" action="doFormSubmit.php">
+							<p>
+								<label>Name*</label>
+								<input type="text" class="txt" onblur="if(this.value=='')this.value='John Smith'" onclick="if(this.value=='John Smith')this.value='';" value="John Smith" name="username" id="username" data-validate="name" data-describedby="msgName" data-description="testName" />
+							</p>
+							<div id="msgName" class="error_wrapper">
+								<label for="username" generated="true" class="msgAlert error"></label>
+							</div>
+							<p>
+								<label>Email*</label>
+								<input type="text" class="txt" onblur="if(this.value=='')this.value='john@gmail.com'" onclick="if(this.value=='john@gmail.com')this.value='';" value="john@gmail.com" name="email" id="email" data-validate="email" data-describedby="msgEmail" data-description="testEmail" />
+							</p>
+							<div id="msgEmail" class="error_wrapper">
+								<label for="email" generated="true" class="msgAlert error"></label>
+							</div>
+							<p>
+								<label>Fan Page URL*</label>
+								<input style="font-size:0.9em" type="text" class="txt" name="fanpage" id="fanpage" onblur="if(this.value=='')this.value='http://facebook.com/page2site'" onclick="if(this.value=='http://facebook.com/page2site')this.value='';" value="http://facebook.com/page2site" />
+							</p>
+							<div id="msgFanpage" class="error_wrapper">
+								<label for="fanpage" generated="true" class="msgAlert error"></label>
+							</div>
+							<p>
+								<label>Phone*</label>
+								<input type="text" class="txt" onblur="if(this.value=='')this.value='1 541 123 4567'" onclick="if(this.value=='1 541 123 4567')this.value='';" value="1 541 123 4567" name="phone" id="phone"/>
+							</p>
+							<div id="msgPhone" class="error_wrapper">
+								<label for="phone" generated="true" class="msgAlert error" type="number"></label>
+							</div>
+							
+							<p style="font-size:.7em;color:red;margin:0;padding:0;">* Required field</p>
+							<p><input type="submit" value="Create My Website" class="submit" name="submit"></p>
+							<span id="messages"></span>
+						</form>
+					</div><!-- end createWebForm-->
+				</div>
+	            <p class="promise">We will never sell your email address to any 3rd party 
+	or send you nasty spam. <strong>Promise.</strong></p>
+	        </div><!-- end creatWebsite -->
+	        
+	        <div id="demoSites">
+	        	<h3 class="title">Over <strong>10,000</strong> sites created using Page2Site</h3>
+	            <ul class="list">
+	            	<li><a href="http://griyaspreiandfashions.com">
+						<div class="img"><img src="img/griya-fashion.jpg" alt=""></div>
+	                    <h4 class="title">Griya Fashion</h4>
+						<h5 class="label">Fashion &amp; Clothing</h5>
+	                </a></li>
+	                <li><a href="http://sklcosmetiques973.com">
+						<div class="img"><img src="img/sklcosmetics-photos.jpg" alt=""></div>
+	                    <h4 class="title">Klcosmetics Photos</h4>
+						<h5 class="label">Beauty &amp; Fashion</h5>
+	                </a></li>
+	                <li><a href="http://coachingdevidahn.com"">
+						<div class="img"><img src="img/coaching-de-vide-blog.jpg" alt=""></div>
+	               		<h4 class="title">Coaching de Vida</h4>
+						<h5 class="label">Personal Coacher</h5>
+	                </a></li>
+	            </ul>
+	        </div><!-- end demoSites -->
+	
+	<!--
+	        <div id="videoArea">
+	        	<h3 class="mainTitle title">Watch Video</h3>
+	            <div class="videoBox"><img src="img/img_video.jpg" alt=""></div>
+	        </div><!-- end videoArea -->
+	
+	        <div id="videoArea">
+	            <h3 class="mainTitle title">Proudly integrating:</h3>
+	            <div class="videoBox">
+	                <img src="img/logo_verifone.jpg" alt="Verifone" width="190">
+	                <img src="img/logo_amazon.png" alt="Amazon" width="190">
+	                <img src="img/logo_paypal.jpg" alt="PayPal" width="190">
+	                <img src="img/logo_facebook.jpg" alt="Facebook" width="190">
+	            </div>
+	        </div><!-- end videoArea -->
+	
+	        <div class="testimonial">
+			
+	        	<h3 class="title">Testimonials</h3> 
+				          
+	            <ul class="slider">
+					<li>
+						<div class="comment">
+							<img src="img/user-sonia-robinson.png" alt="" class="avatar">
+							<div class="contentWrap">
+								<div class="commentContent">
+									<p>I was surprised by how easy it was to create and customize the website. After years of putting off building a site, I finally have one that works and looks great.</p>
+								</div>
+								<p class="username">- Sonia Robinson, USA</p>
+								<a href="http://robinsoninvestmentfirm.page2site.com/" class="website">http://robinsoninvestmentfirm.page2site.com/</a>
+							</div>
+						</div>
+	                    <div class="comment">
+	                        <img src="img/user-karl-loupec.png" alt="" class="avatar">
+	                        <div class="contentWrap">
+	                            <div class="commentContent">
+	                                <p>I would like to thank the Page2site team for their great service and their extraordinary patience. Thanks to them, my site looks even better than I envisioned it and I had 3 new customers asking for a price proposal in the first week alone!</p>
+	                            </div>
+	                            <p class="username">- Karl Loupec, France</p>
+	                            <a href="http://sklcosmetiques973.com" class="website">http://sklcosmetiques973.com</a>
+	                        </div>
+	                    </div>
+					</li>
+	<!--
+					<li>
+						<div class="comment">
+							<img src="img/xavler-ortega.png" alt="" class="avatar">
+							<div class="contentWrap">
+								<div class="commentContent">
+									<p>I would like to thank the Page2site team for their great service and their extraordinary patience. Thanks to them, my site looks even better than I envisioned it and I had 3 new customers asking for a price proposal in the first week alone!</p>
+								</div>
+								<p class="username">- Xavier Ortega, Honduras</p>
+								<a href="#" class="website">http://coachingdevidahn.com</a>
+							</div>
+						</div>
+						<div class="comment">
+							<img src="img/linda-thorstone.png" alt="" class="avatar">
+							<div class="contentWrap">
+								<div class="commentContent">
+									<p>I was surprised by how easy it was to create and customize the website. After years of putting off building a site, I finally have one that works and looks great.</p>
+								</div>
+								<p class="username">- Linda Thorstone, Sweden</p>
+								<a href="#" class="website">http://coachingdevidahn.com</a>
+							</div>
+						</div>
+					</li>
+	-->
+				</ul><!-- end slider -->
+				
+	        </div><!-- end testimonial -->
+			
+		</div><!-- end Container -->
+		
+	</div><!-- end wrapper -->
+	
+	<!-- javascript -->
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.js"></script>
+	<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+	<!-- javascript section  -->
+	<script type="text/javascript" src="js/main.js"></script>
+	
+	<?php 
+	if(isset($_GET['success']) && $_GET['success']==1){
+		include_once 'google_adwords.php';
+	}
+	?>
+	</body>
+</html>

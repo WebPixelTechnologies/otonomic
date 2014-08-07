@@ -1,0 +1,70 @@
+.csszoom{
+    overflow-x: hidden;
+
+   transform-origin: center top 0;
+   -ms-transform-origin: center top 0;
+   -mos-transform-origin: center top 0;
+   -webkit-transform-origin: center top 0;
+   -o-transform-origin: center top 0;
+
+    -ms-transform-origin-y: 0;
+    -moz-transform-origin-y: 0;
+    -o-transform-origin-y:0;
+    -webkit-transform-origin-y:0;
+    transform-origin-y: 0;  /* Standard Property */
+
+}
+
+@media (max-width: 801px) {
+
+    .csszoom{
+        -ms-transform: scale(.75); /* IE 9 */
+        -moz-transform: scale(.75); /* Firefox */
+        -o-transform: scale(.75); /* Opera */
+        -webkit-transform: scale(.75); /* Safari And Chrome */
+        transform: scale(.75); /* Standard Property */
+    }
+    .ie8 .csszoom{
+        zoom:.75;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .csszoom{
+        -ms-transform: scale(1.255); /* IE 9 */
+        -moz-transform: scale(1.255); /* Firefox */
+        -o-transform: scale(1.255); /* Opera */
+        -webkit-transform: scale(1.255); /* Safari And Chrome */
+        transform: scale(1.255); /* Standard Property */
+    }
+    .ie8 .csszoom{
+        zoom:1.255;
+    }
+
+    #dog.csszoom{
+        -ms-transform: scale(1.1); /* IE 9 */
+        -moz-transform: scale(1.1); /* Firefox */
+        -o-transform: scale(1.1); /* Opera */
+        -webkit-transform: scale(1.1); /* Safari And Chrome */
+        transform: scale(1.1); /* Standard Property */
+    }
+    .ie8 #dog.csszoom{
+        zoom:1.1;
+    }
+}
+
+@media (min-width: 1901px) {
+
+    .csszoom{
+        -ms-transform: scale(1.85); /* IE 9 */
+        -moz-transform: scale(1.85); /* Firefox */
+        -o-transform: scale(1.85); /* Opera */
+        -webkit-transform: scale(1.85); /* Safari And Chrome */
+        transform: scale(1.85); /* Standard Property */
+    }
+    .ie8 .csszoom{
+        zoom:1.85;
+    }
+
+}
