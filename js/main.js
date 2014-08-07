@@ -50,7 +50,7 @@
           function turnToGrayscale() {
               $('.bg-image>img').addClass('grayscale');
           }
-          setTimeout(turnToGrayscale, 3500);
+          setTimeout(turnToGrayscale, 8500);
 
           // Turn on grayscale onFocus on input field 
           $( "#main_search_box" ).focus(function(event) {

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Otonomic - Personal Trainers</title>
+    <title>Otonomic 1 click website - Personal Trainers</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -16,19 +16,8 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <!-- Facebook Conversion Code for User searched for page -->
-    <script>(function() {
-      var _fbq = window._fbq || (window._fbq = []);
-      if (!_fbq.loaded) {
-        var fbds = document.createElement('script');
-        fbds.async = true;
-        fbds.src = '//connect.facebook.net/en_US/fbds.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(fbds, s);
-        _fbq.loaded = true;
-      }
-    })();
-    </script>
+
+      <script src="/js/otonomic-analytics.js"></script>
   </head>
   <body>
     <div class="container">
@@ -174,22 +163,22 @@
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="/js/jquery-1.11.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
     <script type="text/javascript" src="//cherne.net/brian/resources/jquery.hoverIntent.minified.js"></script>
 
     <script type="text/javascript" src="http://d2zxr4ixkv1lwq.cloudfront.net/lp/js/jquery.jsonp-2.4.0.min.js" defer></script>
 
     <link rel="stylesheet" type="text/css" href="css/searchResults.css">
-    <script type="text/javascript" src="js/search_filterv1.0.4-wp.js"></script>
+    <script type="text/javascript" src="/js/search_filterv1.0.4-wp.js"></script>
 
     <link href="http://d2zxr4ixkv1lwq.cloudfront.net/lp/css/tipsy.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="http://d2zxr4ixkv1lwq.cloudfront.net/lp/js/jquery.tipsy.js" defer></script>
 
-    <script type="text/javascript" src="js/otonomicv1.0.4.js"></script>
+    <script type="text/javascript" src="/js/otonomicv1.0.4.js"></script>
 
       <script type="text/javascript">
           var query_tags = {
@@ -224,60 +213,15 @@
 
 
 
-        <!-- START ErrorCeption -->
-        <script>
-            (function(_,e,rr,s){_errs=[s];var c=_.onerror;_.onerror=function(){var a=arguments;_errs.push(a);
-                c&&c.apply(this,a)};var b=function(){var c=e.createElement(rr),b=e.getElementsByTagName(rr)[0];
-                c.src="//beacon.errorception.com/"+s+".js";c.async=!0;b.parentNode.insertBefore(c,b)};
-                _.addEventListener?_.addEventListener("load",b,!1):_.attachEvent("onload",b)})
-                    (window,document,"script","52713acf0a2b9bf55800090f");
-        </script>
-        <!-- END ErrorCeption -->
 
-        <!-- START LuckyOrange -->
-        <script type='text/javascript'>
-            window.__wtw_lucky_site_id = 10400;
 
-            (function() {
-                var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
-                wa.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://ca10400') + '.luckyorange.com/w.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
-            })();
-        </script>
-        <!-- END LuckyOrange -->
 
-        <!-- START Google Analytics -->
-        <script>
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-37736198-1']);
-            _gaq.push(['_setDomainName', 'otonomic.com']);
-            _gaq.push(['_setAllowLinker', true]);
-            _gaq.push(['_trackPageview']);
 
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-        </script>
 
-        <script type="text/javascript">
-    var _paq = _paq || [];
     
-            _paq.push(['trackPageView']);
-            _paq.push(['enableLinkTracking']);
-            (function() {
-                var u=(("https:" == document.location.protocol) ? "https" : "http") + "://a.otonomic.com/";
-                _paq.push(['setTrackerUrl', u+'piwik.php']);
-                _paq.push(['setSiteId', 1]);
-                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-                g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-            })();
-        </script>
         <noscript><p><img src="http://a.otonomic.com/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
 
-        <!-- END Google Analytics -->
 
-    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="/js/functions.js"></script>
   </body>
 </html>
