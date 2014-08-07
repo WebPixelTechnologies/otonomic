@@ -1,6 +1,5 @@
 var found_result = 0;
 var found_only_result_url = '';
-var p2s_site_url = 'http://builder.otonomic.com/';
 var p2s_site_creation_base_url = 'http://wp.otonomic.com/migration/';
 
 var ot_wp_site_creation_url = "http://wp.otonomic.com/migration/index.php?theme=parallax";
@@ -8,6 +7,7 @@ var ot_loading_page_url     = "http://otonomic.com/progresslp";
 if(typeof (query_tags) == 'undefined') {
     query_tags = {};
 }
+
 var total_req_no = 0;
 var sto;
 var p2strack = 0;
@@ -128,6 +128,7 @@ function create_wp_site(page_id){
 
         if ($page_url.indexOf("facebook.com") > -1) {
             // var url = p2s_site_url + 'sites/add/?u=' + encodeURIComponent($page_url);
+            var url = ot_wp_site_creation_url + "&facebook_id=" + encodeURIComponent($page_url);
             trackFBConnect("Search Marketing Website", "Choose Url", $page_url);
 
             query_tags.page_id = $page_url;

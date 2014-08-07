@@ -1,9 +1,14 @@
 var found_result = 0;
 var found_only_result_url = '';
+<<<<<<< HEAD
 // var p2s_site_url = 'http://builder.otonomic.com/';
+var p2s_site_creation_base_url = 'http://iproplay.com/migration/';
+var ot_wp_site_creation_url = "http://iproplay.com/migration/index.php?theme=parallax";
+=======
+var p2s_site_url = 'http://builder.otonomic.com/';
 var p2s_site_creation_base_url = 'http://wp.otonomic.com/migration/';
-
 var ot_wp_site_creation_url = "http://wp.otonomic.com/migration/index.php?theme=parallax";
+>>>>>>> 8d476d9cea320917781a5a7f352ee703ff8a6795
 var ot_loading_page_url     = "http://otonomic.com/progresslp";
 if(typeof (query_tags) == 'undefined') {
     query_tags = {};
@@ -63,8 +68,12 @@ function parseURL(url){
 
 
 function create_wp_site(page_id){
+
+
     $.get( ot_wp_site_creation_url + "&facebook_id=" + page_id, function( data ) {
+
         window.location = data;
+
     });
 }
 
@@ -108,11 +117,13 @@ function create_wp_site(page_id){
 
     $('.btn_go').click(function (event) {
         event.preventDefault();
-        var targetID = $(this).data('target-field');
-        var $searchField = $('#'+targetID);
-        var $page_url = $searchField.val();
+        var $thisParent = $(this).parent().parent().find('.p2s_fanpages');
+        var $el = $thisParent.find('.main_search_box');
+        var $page_url = $el.val();
 
-        if($.trim($searchField.val()) == ''){
+        console.log($page_url.indexOf("facebook.com"));
+
+        if($.trim($thisParent.find('.main_search_box').val()) == ''){
             found_result = 0;   //clear previous results if user delete text from search box
         }
         if (found_result > 1 && ($page_url.indexOf("facebook.com") == -1)) {
@@ -125,7 +136,7 @@ function create_wp_site(page_id){
 
         if ($page_url.indexOf("facebook.com") > -1) {
             // var url = p2s_site_url + 'sites/add/?u=' + encodeURIComponent($page_url);
-            var url = ot_wp_site_creation_url + "&facebook_id=" + encodeURIComponent($page_url);
+            var url = ot_wp_site_creation_url + "&facebook_id==" + encodeURIComponent($page_url);
             trackFBConnect("Search Marketing Website", "Choose Url", $page_url);
             setTimeout(function () { // now wait 300 milliseconds...
                 // showLoader('Your site is being created for you!', true);
@@ -147,15 +158,15 @@ function create_wp_site(page_id){
         }
 
         if(AUTO_FOCUS == undefined || AUTO_FOCUS == true)
-            $searchField.focus();
+            $thisParent.find('.main_search_box').focus();
 
 
         if ($page_url.indexOf("facebook.com") > -1 || $.trim($page_url) == '') {
             //input box is empty
-            show_empty_message($('.p2s_fanpages'));
+            show_empty_message($thisParent);
         } else {
             //page not found
-            show_page_not_found_message($('.p2s_fanpages'));
+            show_page_not_found_message($thisParent);
         }
     });
 
@@ -180,11 +191,11 @@ $(document).ready(function($){
 var timeoutEmptySearchBox;
 
 function searchBoxClick(InputField) {
-    console.log('searchBoxClick('+InputField+')');
+    //console.log('searchBoxClick('+InputField+')');
     var value = $(InputField).val();
     if(value.length == 0) {
         timeoutEmptySearchBox = setTimeout(function() {
-            show_empty_message($(InputField).parent());
+            show_empty_message(InputField);
         }, 1000);
     }
 }
@@ -197,7 +208,6 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
 
     var wrapper = $(targetContainer);
     var url = 'https://graph.facebook.com/search';
-
     //console.log($(InputField).parent().parent().find('div.btn_go'));
     $(InputField).parent().parent().find('div>button.btn_go').tipsy("hide");
 
@@ -224,6 +234,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
 
         window._fbq = window._fbq || [];
         window._fbq.push(['track', '6016621432630', {'value':'0.00','currency':'USD'}]);
+
 
     }, 2000);
 
@@ -391,7 +402,7 @@ function counterLoader(counterElementId){
 
 function showLoader(message, is_model) {
     return;
-    
+
     $('#wrapper').css('display','none');
     $('.loading-box').animate({opacity: '1'}, 1500,'swing');
     $('.loading-box').addClass('show');

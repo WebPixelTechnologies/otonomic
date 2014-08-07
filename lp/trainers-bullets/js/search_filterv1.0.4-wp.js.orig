@@ -8,8 +8,6 @@ var ot_loading_page_url     = "http://otonomic.com/progresslp";
 if(typeof (query_tags) == 'undefined') {
     query_tags = {};
 }
-//var p2s_site_url = 'http://p2s.test/';        //for localhost
-
 var total_req_no = 0;
 var sto;
 var p2strack = 0;
@@ -20,6 +18,8 @@ var already_searched = false;
 var redirect_url = '';
 var AUTO_FOCUS = true;
 var SEARCH_PICTURE_SIZE = 80;
+
+var facebook_site_created_pixel_id = '6008636103630';
 
 function parseURL(url){
     parsed_url = {}
@@ -108,13 +108,16 @@ function create_wp_site(page_id){
 
     $('.btn_go').click(function (event) {
         event.preventDefault();
+
         var targetID = $(this).data('target-field');
+
         var $searchField = $('#'+targetID);
         var $page_url = $searchField.val();
 
         if($.trim($searchField.val()) == ''){
             found_result = 0;   //clear previous results if user delete text from search box
         }
+        // Can't select one result - cancel the click on Go.
         if (found_result > 1 && ($page_url.indexOf("facebook.com") == -1)) {
             $(this).tipsy("show");
             return false;
@@ -125,12 +128,18 @@ function create_wp_site(page_id){
 
         if ($page_url.indexOf("facebook.com") > -1) {
             // var url = p2s_site_url + 'sites/add/?u=' + encodeURIComponent($page_url);
+<<<<<<< HEAD
+=======
             var url = ot_wp_site_creation_url + "&facebook_id=" + encodeURIComponent($page_url);
+>>>>>>> origin/master
             trackFBConnect("Search Marketing Website", "Choose Url", $page_url);
+
+            query_tags.page_id = $page_url;
+            current_site_creation_link = ot_loading_page_url + '?' + $.param(query_tags);
+
+            // var url = ot_wp_site_creation_url + "facebook_url=" + encodeURIComponent($page_url);
             setTimeout(function () { // now wait 300 milliseconds...
-                // showLoader('Your site is being created for you!', true);
-                window.location = url;
-                //window.open(href,(!target?"_self":target)); // ...and open the link as usual
+                window.location = current_site_creation_link;
             }, 300);
             return false;
         }
@@ -139,9 +148,7 @@ function create_wp_site(page_id){
         if (found_result == 1 && $.trim(found_only_result_url) != '') {
             trackFBConnect("Search Marketing Website", "Choose Url", $(this).attr('data-attr')+","+found_only_result_url);
             setTimeout(function () { // now wait 300 milliseconds...
-                // showLoader('Your site is being created for you!', true);
                 window.location = found_only_result_url;
-                //window.open(href,(!target?"_self":target)); // ...and open the link as usual
             }, 300);
             return false;
         }
@@ -185,7 +192,7 @@ function searchBoxClick(InputField) {
     if(value.length == 0) {
         timeoutEmptySearchBox = setTimeout(function() {
             show_empty_message($(InputField).parent());
-        }, 1000);
+        }, 1500);
     }
 }
 
@@ -201,7 +208,6 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
     //console.log($(InputField).parent().parent().find('div.btn_go'));
     $(InputField).parent().parent().find('div>button.btn_go').tipsy("hide");
 
-    //?q={text_box_value, escaped}&type=page&fields=id,name,category,cover,likes
     if (value.length == 0) {
         $(targetCloseBtn).hide();
         wrapper.html($('<div/>', {}));
@@ -240,6 +246,8 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
     }
 
     /* show_searching_message(); */
+
+    // Search Facebook
     $.jsonp({
         url: 'https://graph.facebook.com/search',
         context: document.body,
@@ -252,11 +260,15 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
 
             var ind = 1;
             var items = [];
+            var current_site_creation_link;
+
             jQuery.each(json.data, function (key, val) {
                 query_tags.page_id = val.id;
+                current_site_creation_link = ot_loading_page_url + '?' + $.param(query_tags);
+
                 if (found_result == 1) {
                     // found_only_result_url = p2s_site_url + 'sites/add/fbid:' + val.id;
-                    found_only_result_url = ot_loading_page_url + '?' + $.param(query_tags);
+                    found_only_result_url = current_site_creation_link;
                 }
 
                 if(SEARCH_PICTURE_SIZE == undefined || SEARCH_PICTURE_SIZE == 'square'){
@@ -265,7 +277,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
                     var simage = 'http://graph.facebook.com/' + val.id + '/picture?height=' + SEARCH_PICTURE_SIZE +'&width=' + SEARCH_PICTURE_SIZE;
                 }
 
-                items.push('<a class="media search-results-item" data-attr="'+$(InputField).attr('data-attr')+'" href="' + ot_loading_page_url + '?' + $.param(query_tags) + '" title="Click to view site" data-result-number="' + ind + '" >' +
+                items.push('<a class="media search-results-item" data-attr="'+$(InputField).attr('data-attr')+'" href="' + current_site_creation_link + '" title="Click to view site" data-result-number="' + ind + '" >' +
                     '<div >' +
                     '<div class="pull-left fanpage">' +
                     '<img class="media-object" src="'+ simage +'">' +
@@ -285,6 +297,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
                 );
                 ind++;
             });
+            query_taqs.page_id = null;
 
             if (found_result > 0) {
                 wrapper.html($('<div/>', {'class': 'search_results', html: items.join('')}));
@@ -391,7 +404,7 @@ function counterLoader(counterElementId){
 
 function showLoader(message, is_model) {
     return;
-    
+
     $('#wrapper').css('display','none');
     $('.loading-box').animate({opacity: '1'}, 1500,'swing');
     $('.loading-box').addClass('show');

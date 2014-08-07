@@ -35,6 +35,7 @@ html {
 	height: 100%;
 }
 body {
+	padding-top: 93px;
   	height: 100%;
   	background-color: #3d3632;
   	color: #3d3632;
@@ -60,7 +61,12 @@ a.btn img{
 	margin-top: -2px!important;
 }
 .wp-lp #progress-bar{
+	position: fixed;
+	top: 63px;
 	height: 30px;
+	z-index: 1;
+	background-color: #3d3632;
+	width: 100%;
 }
 .wp-lp #progress-text{
 	margin-top: -20px;
@@ -84,6 +90,7 @@ select {
 	border-radius: 0;
 	background-color: #231f20;
 	border: 0;
+	z-index: 1;
 }
 .navbar-header{
 	width: 100%;
@@ -95,7 +102,7 @@ select {
 /* BG image 
 ----------------------------------*/
 .bg-image{
-	position: absolute;
+	position: fixed;
 	top: 93px;
 	right: 0;
 	left: 0;
@@ -146,8 +153,8 @@ select {
 	position: relative;
 	width: 470px;
 	padding: 40px;
-	height: 100%;
 	box-shadow: 3px 0px 0px 0px rgba(0,0,0,0.2);
+	min-height: 100%;
 }
 .content-panel h1.title{
 	margin-bottom: 30px;

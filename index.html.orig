@@ -27,20 +27,18 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <!-- Facebook Conversion Code for User searched for page -->
-    <script>(function() {
-      var _fbq = window._fbq || (window._fbq = []);
-      if (!_fbq.loaded) {
-        var fbds = document.createElement('script');
-        fbds.async = true;
-        fbds.src = '//connect.facebook.net/en_US/fbds.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(fbds, s);
-        _fbq.loaded = true;
-      }
-    })();
-    </script>
+
+      <script src="/js/otonomic-analytics.js"></script>
+      <!-- START Facebook Pixel Tracking -->
+      <!-- Facebook Conversion Code for User visited homepage -->
+      <script>
+      window._fbq = window._fbq || [];
+      window._fbq.push(['track', '6016621317030', {'value':'0.00','currency':'USD'}]);
+      </script>
+      <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6016621317030&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
+      <!-- END Facebook Pixel Tracking -->
   </head>
+
   <body>
   <div id="wrapper">
       <!-- Side Navbar -->
@@ -189,7 +187,7 @@
                               <div class="g-plusone" data-size="medium" data-href="http://otonomic.com/"></div>
                             </li>
                             <li>
-                              <div class="fb-like" data-href="https://www.facebook.com/page2site" data-width="86" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+                              <div class="fb-like" data-href="https://www.facebook.com/otonomic" data-width="86" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
                             </li>
                           </ul>
                         </div>
@@ -572,7 +570,7 @@
                           <a href="https://plus.google.com/+Otonomic/" target="_blank" class="social-link track_event" data-ga-category="Marketing Website" data-ga-event="Share Click" data-ga-label="Google Plus" data-ajax-track="1"><img src="images/social-icon-1.png" class="img-responsive"></a>
                         </div>
                         <div class="social-link-holder facebook">
-                          <a href="https://www.facebook.com/page2site" target="_blank" class="social-link track_event" data-ga-category="Marketing Website" data-ga-event="Share Click" data-ga-label="Facebook" data-ajax-track="1"><img src="images/social-icon-2.png" class="img-responsive"></a>
+                          <a href="https://www.facebook.com/otonomic" target="_blank" class="social-link track_event" data-ga-category="Marketing Website" data-ga-event="Share Click" data-ga-label="Facebook" data-ajax-track="1"><img src="images/social-icon-2.png" class="img-responsive"></a>
                         </div>
                         <div class="social-link-holder twitter">
                           <a href="https://twitter.com/otonomic/" target="_blank" class="social-link track_event" data-ga-category="Marketing Website" data-ga-event="Share Click" data-ga-label="Twitter" data-ajax-track="1"><img src="images/social-icon-3.png" class="img-responsive"></a>
@@ -593,6 +591,9 @@
           </div>
       </div>
   </div>
+
+
+
   <div style="display: none">
     <div class="t_box">
         <div class="msgbox">
@@ -640,7 +641,9 @@
     </div>
   </div>
   <link rel="stylesheet" href="css/loadingStyle.css">
-<div class="loading-box">
+
+
+  <div class="loading-box">
   <div class="masking">
        <div class="loading-page">
            <div class="loading-content">
@@ -651,14 +654,15 @@
            <div class="loading-image" >
                <img src="images/loading/oto-loading.gif"/>
            </div>
-           <div class="fb-like" data-href="https://www.facebook.com/page2site" data-width="86" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+           <div class="fb-like" data-href="https://www.facebook.com/otonomic" data-width="86" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
        </div>
    </div>
 </div>
 
 
-  <!-- START ErrorCeption -->
-    <script>
+<<<<<<< HEAD
+=======
+      <script>
         (function(_,e,rr,s){_errs=[s];var c=_.onerror;_.onerror=function(){var a=arguments;_errs.push(a);
             c&&c.apply(this,a)};var b=function(){var c=e.createElement(rr),b=e.getElementsByTagName(rr)[0];
             c.src="//beacon.errorception.com/"+s+".js";c.async=!0;b.parentNode.insertBefore(c,b)};
@@ -666,7 +670,6 @@
                 (window,document,"script","52713acf0a2b9bf55800090f");
     </script>
     <!-- END ErrorCeption -->
-
     <!-- START LuckyOrange -->
     <script type='text/javascript'>
         window.__wtw_lucky_site_id = 10400;
@@ -679,7 +682,6 @@
     </script>
     <!-- END LuckyOrange -->
 
-<!-- START Google Analytics -->
 <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-37736198-1']);
@@ -693,10 +695,9 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
 </script>
-<!-- END Google Analytics -->
 
   <!-- Piwik -->
-      <script type="text/javascript">
+  <script type="text/javascript">
       var _paq = _paq || [];
 
       _paq.push(['trackPageView']);
@@ -715,23 +716,23 @@
   <!-- End Piwik Code -->
 
 
+>>>>>>> origin/master
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/placeholders.min.js"></script>
-    <script type="text/javascript" src="js/jquery.scrollstop.js"></script>
-    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
-    <script type="text/javascript" src="js/jquery.scrollsnap.js"></script>
-    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/placeholders.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.scrollstop.js"></script>
+    <script type="text/javascript" src="/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.scrollsnap.js"></script>
+    <script type="text/javascript" src="/js/jquery.touchSwipe.min.js"></script>
     <!-- Custom JS -->
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
     <script type="text/javascript" src="//cherne.net/brian/resources/jquery.hoverIntent.minified.js"></script>
     
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
     <link href="http://d2zxr4ixkv1lwq.cloudfront.net/lp/css/tipsy.css" rel="stylesheet" type="text/css" />
-    <!-- END Google Analytics -->
-    
+
     <!-- Social  -->
     <!-- // Facebook -->
     <div id="fb-root"></div>
@@ -753,6 +754,7 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
+
     <!-- // Google Plus -->
     <script type="text/javascript">
       (function() {
@@ -773,12 +775,20 @@
       AUTO_FOCUS = false;
       SEARCH_PICTURE_SIZE = 80;
     </script>
+
     <link href="css/tipsy.css" rel="stylesheet" type="text/css">
   <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css">
+<<<<<<< HEAD
     <script type="text/javascript" src="/js/jquery.fancybox.pack.js"></script>
     <script type="text/javascript" src="/js/search_filterv1.0.4-wp.js"></script>
     <script type="text/javascript" src="/js/jquery.jsonp-2.4.0.min.js"></script>
     <script type="text/javascript" src="/js/jquery.tipsy.js"></script>
+=======
+    <script type="text/javascript" src="js/otonomic/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="js/otonomic/search_filterv1.0.4-wp.js"></script>
+    <script type="text/javascript" src="js/otonomic/jquery.jsonp-2.4.0.min.js"></script>
+    <script type="text/javascript" src="js/otonomic/jquery.tipsy.js"></script>
+>>>>>>> origin/master
 
     <script type="text/javascript" src="/js/otonomicv1.0.4.js"></script>
     <script type="text/javascript">
@@ -787,7 +797,7 @@
           $("<img />").attr("src", arguments[i]);
        }
     }
-    jQuery(document).ready(function(){
+    jQuery(document).ready(function($){
         jQuery('.btn_go').tipsy({
             gravity:  'se',//jQuery.fn.tipsy.autoNS,
             trigger: 'manual'
@@ -795,22 +805,6 @@
         $.preloadImages("backscreen.png");
     });
     </script>
-
-    <script type="text/javascript">
-    var _paq = _paq || [];
-      
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      (function() {
-          var u=(("https:" == document.location.protocol) ? "https" : "http") + "://a.otonomic.com/";
-          _paq.push(['setTrackerUrl', u+'piwik.php']);
-          _paq.push(['setSiteId', 1]);
-          var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-          g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-      })();
-  </script>
-  <noscript><p><img src="http://a.otonomic.com/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
-
     <script type="text/javascript" src="js/functions.js"></script>
   </body>
 </html>
