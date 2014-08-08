@@ -261,6 +261,41 @@
     <script src="js/jquery.geocomplete.min.js"></script>
 
     <script type="text/javascript">
+    function callback(data) {
+        window.is_blog_ready = 1;
+
+        if (data.redirect.indexOf("http://") < 0) {
+            data.redirect = "http://" + data.redirect;
+        }
+
+        if (data.site_url.indexOf("http://") < 0) {
+            data.site_url = "http://" + data.site_url;
+        }
+
+        if (data.status == 'fail') {
+            window.location = data.site_url;
+            track_event('Account Manage', 'Site Exists', data.message);
+
+        } else {
+            var page_type = window.page_type || 'Fan Page';
+            track_event('Account Manage', 'Create Success', page_type);
+        }
+
+        // Site created, facebook fixel
+        window._fbq = window._fbq || [];
+        window._fbq.push(['track', facebook_site_created_pixel_id, {'value':'0.00', 'currency':'USD'}]);
+
+        window.site_url = data.site_url;
+        window.blog_redirect = data.redirect;
+        window.blog_id = data.blog_id;
+        window.token = data.token;
+
+        jQuery('#see-my-website-btn').attr('href', data.redirect);
+
+        blog_created();
+    };
+
+
     $(function () {
         track_event('Loading Page', 'View');
 
@@ -429,55 +464,37 @@
             }, "json");
         }
 
+        function is_localhost() {
+            if( location.host == 'otonomic.test' || location.host == 'localhost') {
+                return true;
+            }
+
+            return false;
+        }
+
         function createWebsiteUsingAjax(page_id) {
             var request_data = {};
             request_data.theme = "parallax";
             request_data.facebook_id = encodeURIComponent(page_id);
 
             // var request_url = "http://wp.otonomic.com/migration/index.php?" + $.param(request_data);
-            var request_url = "http://wp.otonomic.com/migration/index.php";
+            localhost = is_localhost();
+
+            var request_url;
+            if(localhost) {
+                request_url = "http://wp.test/migration/index.php";
+            } else {
+                request_url = "http://wp.otonomic.com/migration/index.php";
+            }
 
             $.ajax({
                 url: request_url,
                 type: "GET",
-                dataType: "json",
-                 data: request_data
-
-            }).done(
-                function (data) {
-                    window.is_blog_ready = 1;
-
-                    if (data.redirect.indexOf("http://") < 0) {
-                        data.redirect = "http://" + data.redirect;
-                    }
-
-                    if (data.site_url.indexOf("http://") < 0) {
-                        data.site_url = "http://" + data.site_url;
-                    }
-
-                    if (data.status == 'fail') {
-                        window.location = data.site_url;
-                        track_event('Account Manage', 'Site Exists', data.message);
-
-                    } else {
-                        var page_type = window.page_type || 'Fan Page';
-                        track_event('Account Manage', 'Create Success', page_type);
-                    }
-
-                    // Site created, facebook fixel
-                    window._fbq = window._fbq || [];
-                    window._fbq.push(['track', facebook_site_created_pixel_id, {'value':'0.00', 'currency':'USD'}]);
-
-                    window.site_url = data.site_url;
-                    window.blog_redirect = data.redirect;
-                    window.blog_id = data.blog_id;
-                    window.token = data.token;
-
-                    $('#see-my-website-btn').attr('href', data.redirect);
-
-                    blog_created();
-                }
-            );
+                dataType: "jsonp",
+                data: request_data,
+                jsonp : "callback",
+                jsonpCallback: "callback"
+            });
         }
 
         function blog_created() {
