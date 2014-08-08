@@ -57,7 +57,7 @@
         <div class="col-xs-12">
           <div class="content text-center">
             <h1 class="intro-title">Otonomic is preparing a great website for</h1>
-            <p class="site-name">ilan’s cuppa coffee</p>
+            <p class="site-name" id="ot-fb-name">YOUR BUSINESS</p>
             <h3>In a few seconds, your site will be ready with content from your Facebook page.</h3>
           </div>
         </div>
@@ -172,7 +172,7 @@
               <div class="item">
                 <h3>What’s your business category?</h3>
                 <div id="cat-selector" class="forum-group">
-                  <input class="typeahead form-control" type="text" placeholder="Select category">
+                  <input class="typeahead form-control" type="text" placeholder="Select category" id="fb_category">
                 </div>
                 <div class="form-group category-submit text-right">
                     <a href="#" onclick="return false;" class="submit-category-btn btn btn-ttc-orange btn-lg"><span class="glyphicon glyphicon-ok"></span>Done</a>
@@ -203,8 +203,8 @@
           <div class="content">
             <h1 class="congratz-title">Congratulations!</h1>
             <h2>Your new website is ready at</h2>
-            <h3>http://www.otonomic.ilanscuppacoffee.com</h3>
-            <a href="#" onclick="return false;" class=" btn btn-ttc-orange btn-lg">Take me to my website!</a>
+            <h3 id="oto-web-url">Otonomic is creating your site...</h3>
+            <a href="javascript:void(0)" class=" btn btn-ttc-orange btn-lg" id="see-my-website-btn">Take me to my website!</a>
             <p class="tos">By clicking the button, you approve the Otonomic <a href="#">Terms of Service</a></p>
           </div>
         </div>
@@ -223,6 +223,13 @@
     <script src="js/jquery.timer.js"></script>
     <script type="text/javascript">
       $(function(){
+		  
+		var page_id = getParameterByName('page_id');
+		var page_name = getParameterByName('page_name');
+		
+		track_event('Loading Page', 'View');
+		jQuery('input[type=text]').addClass('LoNotSensitive');
+		
           
         NProgress.configure({
           parent: '#progress-bar',
@@ -395,19 +402,23 @@
           });
           $('#progress-text').html('Adding personalization options…');
         }
+		
+		if (page_id) {
+
+            createWebsiteUsingAjax(page_id);
+
+            getFacebookPageAddress(page_id);
+        }
+		
+		if(page_name)
+		{
+			$('#ot-fb-name').html(page_name);
+		}
 
         // Contact details submit
         $('.submit').click(function(e){
           e.preventDefault();
-          var form = $('#business-details');
-          $.ajax( {
-            type: "POST",
-            url: form.attr( 'action' ),
-            data: form.serialize(),
-            success: function( response ) {
-              //console.log( response );
-            }
-          });
+          contact_form_submited();
           // Increment progress bar a little
           NProgress.set(NProgress.status+0.01);
           // Display precentage
@@ -419,14 +430,14 @@
         // Submit Store
         $('.submit-store').click(function(e){
           e.preventDefault();
-          $.ajax( {
-            type: "POST",
-            url: "some_url",
-            data: {'is_store':'true'},
-            success: function( response ) {
-              //console.log( response );
-            }
-          });
+			if (window.is_blog_ready == 1) 
+			{
+				send_need_store();
+			} 
+			else 
+			{
+				window.i_need_store = 1;
+			}
           // Switch stage
           switchToStage5();
           // Increment progress bar a little
@@ -438,6 +449,7 @@
         // Skip Submit
         $('.submit-skip').click(function(e){
           e.preventDefault();
+		  send_dont_need_store();
           // Switch stage
           switchToStage5();
           // Increment progress bar a little
@@ -449,14 +461,15 @@
         
         // Submit category
         $('.submit-category-btn').click(function(e){
-          $.ajax( {
-            type: "POST",
-            url: "some_url",
-            data: {'is_store':'true'},
-            success: function( response ) {
-              //console.log( response );
+			e.preventDefault();
+            window.facebook_category = jQuery('#fb_category').val();
+          	if(window.is_blog_ready == 1){
+
+              set_site_category();
+
+            } else {
+              window.set_site_category_pending = 1;
             }
-          });
           // Resume timer
           timer.play();
           // Increment progress bar a little
@@ -713,6 +726,234 @@
 
 
       });
+
+/* required functions */
+function callback(data) {
+	window.is_blog_ready = 1;
+
+	if (data.redirect.indexOf("http://") < 0) {
+		data.redirect = "http://" + data.redirect;
+	}
+
+	if (data.site_url.indexOf("http://") < 0) {
+		data.site_url = "http://" + data.site_url;
+	}
+
+	if (data.status == 'fail') {
+		window.location = data.site_url;
+		track_event('Account Manage', 'Site Exists', data.message);
+
+	} else {
+		var page_type = window.page_type || 'Fan Page';
+		track_event('Account Manage', 'Create Success', page_type);
+	}
+
+	// Site created, facebook fixel
+	window._fbq = window._fbq || [];
+	//window._fbq.push(['track', facebook_site_created_pixel_id, {'value':'0.00', 'currency':'USD'}]);
+
+	window.site_url = data.site_url;
+	window.blog_redirect = data.redirect;
+	window.blog_id = data.blog_id;
+	window.token = data.token;
+
+	jQuery('#see-my-website-btn').attr('href', data.redirect);
+	jQuery('#oto-web-url').html(data.site_url);
+
+	blog_created();
+}
+function getParameterByName(name) {
+	name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+	var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+			results = regex.exec(location.search);
+	return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+function getFacebookPageAddress(page_id) {
+	var facebook_query_page_url = "https://graph.facebook.com/" + page_id;
+	$.get(facebook_query_page_url, function (data) {
+		console.log("the page:" + page_id);
+		console.log(data);
+
+		if (data.location != undefined && data.location.latitude != undefined && data.location.longitude != undefined) {
+			delete data.location.latitude;
+			delete data.location.longitude;
+		}
+		var address_parts = [];
+
+		for (var x in data.location) {
+			address_parts.push(data.location[x]);
+		}
+
+		var phone = (data.phone) ? data.phone : "";
+		var address = (address_parts.join(", ")) ? address_parts.join(", ") : "";
+		var email = (data.email) ? (data.email) : "";
+
+		if (data.likes != undefined) {
+			window.page_type = 'Fan Page';
+		} else {
+			window.page_type = 'Personal Page';
+		}
+		window.parsed_page_data = {
+			'phone':phone,
+			'address':address,
+			'email':email
+		}
+
+
+		$('#address').val(address);
+		$('#email').val(email);
+		$('#phone').val(phone);
+
+		jQuery('#address').geocomplete('find', jQuery('#address').val());
+
+	}, "json");
+}
+function is_localhost() {
+	if( location.host == 'otonomic.test' || location.host == 'localhost') {
+		return true;
+	}
+
+	return false;
+}
+
+function createWebsiteUsingAjax(page_id) {
+	var request_data = {};
+	request_data.theme = "parallax";
+	request_data.facebook_id = encodeURIComponent(page_id);
+
+	// var request_url = "http://wp.otonomic.com/migration/index.php?" + $.param(request_data);
+	localhost = is_localhost();
+
+	var request_url;
+	if(localhost) {
+		request_url = "http://wp.test/migration/index.php";
+	} else {
+		request_url = "http://wp.otonomic.com/migration/index.php";
+	}
+
+	$.ajax({
+		url: request_url,
+		type: "GET",
+		dataType: "jsonp",
+		data: request_data,
+		jsonp : "callback",
+		jsonpCallback: "callback"
+	});
+}
+
+function blog_created() {
+	if (window.is_contact_saved == 1) {
+		send_contact_data();
+	}
+
+	if (window.i_need_store == 1) {
+		send_need_store();
+	}
+	if(window.set_site_category_pending == 1){
+		set_site_category();
+	}
+
+	return;
+}
+
+
+function contact_form_submited() {
+	window.is_contact_saved = 1;
+
+	if (window.is_blog_ready == 1) {
+		send_contact_data();
+
+	} else {
+		window.users_contacts = {
+			'phone':$('#phone').val(),
+			'address':$('#address').val(),
+			'email':$('#email').val()
+		}
+	}
+}
+
+
+function send_contact_data() {
+
+	if (window.users_contacts != undefined) {
+		var _phone = window.users_contacts.phone;
+		var _email = window.users_contacts.email;
+		var _address = window.users_contacts.address;
+	} else {
+		var _phone = $('#phone').val();
+		var _email = $('#email').val();
+		var _address = $('#address').val();
+	}
+
+	var values_changes = { phone:_phone, address:_address, email:_email}
+	// $.post( window.site_url + '/?json=settings.set_many', { values: values_changes });
+
+	request = $.ajax({
+		type:"POST",
+		url:window.site_url + '/?json=settings.set_many',
+		data:{ values:values_changes },
+		statusCode:{
+			200:function () {
+				return;
+			},
+			307:function () {
+				$.post(window.site_url + '/?json=settings.set_many', { values:values_changes });
+			}
+		}
+	});
+}
+
+function set_site_category()
+{
+	_facebook_category = window.facebook_category;
+	
+	var values_changes = { facebook_category: _facebook_category }
+	request = $.ajax({
+		type:"POST",
+		url:window.site_url + '/?json=settings.set_many',
+		data:{ values:values_changes },
+		statusCode:{
+			200:function () {
+				return;
+			},
+			307:function () {
+				$.post(window.site_url + '/?json=settings.set_many', { values:values_changes });
+			}
+		}
+	});
+}
+
+function send_need_store() {
+	track_event('Loading Page', 'Online Store', 'Yes');
+	request = $.ajax({
+		type:"POST",
+		url:window.site_url + '/?json=store.create',
+		statusCode:{
+			200:function () {
+				//doSomething();
+			},
+			307:function () {
+				$.post(window.site_url + '/?json=store.create');
+			}
+		}
+	});
+}
+
+function send_dont_need_store() {
+	track_event('Loading Page', 'Online Store', 'No');
+	request = $.ajax({
+		type:"POST",
+		url:window.site_url + '/?json=store.hide',
+		statusCode:{
+			200:function () {
+				//doSomething();
+			},
+			307:function () {
+				$.post(window.site_url + '/?json=store.hide');
+			}
+		}
+	});
+}
       </script>
   </body>
 </html>
