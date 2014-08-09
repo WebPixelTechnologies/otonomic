@@ -47,6 +47,7 @@
                         </div>
                         <div class="bottom_logo"><img src="images/bottom_logo.png" alt=" " /></div>
                 </div>
+
                 <?php include_once('../../../shared/fanpages/fanpage_autoload.php');?>
             </div>
         </div>

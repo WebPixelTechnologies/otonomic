@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Hero';
+    src: url("fonts/hero.eot");
+    src: url("fonts/hero.eot?#iefix") format("embedded-opentype"), url("fonts/hero.woff") format("woff"), url("fonts/hero.ttf") format("truetype"), url("fonts/hero.svg#hero") format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hero';
+    src: url("./fonts/hero-light.eot");
+    src: url("./fonts/hero-light.eot?#iefix") format("embedded-opentype"), url("./fonts/hero-light.woff") format("woff"), url("./fonts/hero-light.ttf") format("truetype"), url("./fonts/hero-light.svg#hero") format("svg");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url("./fonts/proxima-novar-regular.eot");
+    src: url("./fonts/proxima-novar-regular.eot?#iefix") format("embedded-opentype"), url("./fonts/proxima-novar-regular.woff") format("woff"), url("./fonts/proxima-novar-regular.ttf") format("truetype"), url("./fonts/proxima-novar-regular.svg#proxima-nova") format("svg");
+    font-weight: 400;
+    font-style: normal;
+}

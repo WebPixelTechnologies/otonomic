@@ -164,7 +164,7 @@ function create_wp_site(page_id){
 
 }(window.jQuery, window, document));
 
-$(document).ready(function($){
+jQuery(document).ready(function($){
 
     $(document).on('click','#how_do_i',function(event){
         event.preventDefault();
@@ -177,6 +177,11 @@ $(document).ready(function($){
         }
         //return false;
     });
+
+    $(document).on('click','.search-results-item',function(event){
+        trackFBConnect("Search Marketing Website", "Click", $(this).attr('href'));
+    });
+
 
 });
 

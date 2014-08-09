@@ -295,6 +295,172 @@
         blog_created();
     };
 
+    function blog_created() {
+        if (window.is_contact_saved == 1) {
+            send_contact_data();
+        }
+
+        if (window.i_need_store == 1) {
+            send_need_store();
+        }
+
+        return;
+    }
+
+
+    function send_contact_data() {
+
+        if (window.users_contacts != undefined) {
+            var _phone = window.users_contacts.phone;
+            var _email = window.users_contacts.email;
+            var _address = window.users_contacts.address;
+        } else {
+            var _phone = $('#phone').val();
+            var _email = $('#email').val();
+            var _address = $('#address').val();
+        }
+
+        var values_changes = { phone:_phone, address:_address, email:_email}
+        // $.post( window.site_url + '/?json=settings.set_many', { values: values_changes });
+
+        request = $.ajax({
+            type:"POST",
+            url:window.site_url + '/?json=settings.set_many',
+            data:{ values:values_changes },
+            statusCode:{
+                200:function () {
+                    return;
+                },
+                307:function () {
+                    $.post(window.site_url + '/?json=settings.set_many', { values:values_changes });
+                }
+            }
+        });
+    }
+
+    function send_need_store() {
+        track_event('Loading Page', 'Online Store', 'Yes');
+        request = $.ajax({
+            type:"POST",
+            url:window.site_url + '/?json=store.create',
+            statusCode:{
+                200:function () {
+                    //doSomething();
+                },
+                307:function () {
+                    $.post(window.site_url + '/?json=store.create');
+                }
+            }
+        });
+    }
+
+    function send_dont_need_store() {
+        track_event('Loading Page', 'Online Store', 'No');
+        request = $.ajax({
+            type:"POST",
+            url:window.site_url + '/?json=store.hide',
+            statusCode:{
+                200:function () {
+                    //doSomething();
+                },
+                307:function () {
+                    $.post(window.site_url + '/?json=store.hide');
+                }
+            }
+        });
+    }
+
+    function getFacebookPageAddress(page_id) {
+        var facebook_query_page_url = "https://graph.facebook.com/" + page_id;
+        $.get(facebook_query_page_url, function (data) {
+            console.log("the page:" + page_id);
+            console.log(data);
+
+            if (data.location != undefined && data.location.latitude != undefined && data.location.longitude != undefined) {
+                delete data.location.latitude;
+                delete data.location.longitude;
+            }
+            var address_parts = [];
+
+            for (var x in data.location) {
+                address_parts.push(data.location[x]);
+            }
+
+            var phone = (data.phone) ? data.phone : "";
+            var address = (address_parts.join(", ")) ? address_parts.join(", ") : "";
+            var email = (data.email) ? (data.email) : "";
+
+            if (data.likes != undefined) {
+                window.page_type = 'Fan Page';
+            } else {
+                window.page_type = 'Personal Page';
+            }
+            window.parsed_page_data = {
+                'phone':phone,
+                'address':address,
+                'email':email
+            }
+
+
+            $('#address').val(address);
+            $('#email').val(email);
+            $('#phone').val(phone);
+
+            jQuery('#address').geocomplete('find', jQuery('#address').val());
+
+        }, "json");
+    }
+
+    function is_localhost() {
+        if( location.host == 'otonomic.test' || location.host == 'localhost') {
+            return true;
+        }
+
+        return false;
+    }
+
+    function createWebsiteUsingAjax(page_id) {
+        var request_data = {};
+        request_data.theme = "parallax";
+        request_data.facebook_id = encodeURIComponent(page_id);
+
+        // var request_url = "http://wp.otonomic.com/migration/index.php?" + $.param(request_data);
+        localhost = is_localhost();
+
+        var request_url;
+        if(localhost) {
+            request_url = "http://wp.test/migration/index.php";
+        } else {
+            request_url = "http://wp.otonomic.com/migration/index.php";
+        }
+
+        $.ajax({
+            url: request_url,
+            type: "GET",
+            dataType: "jsonp",
+            data: request_data,
+            jsonp : "callback",
+            jsonpCallback: "callback"
+        });
+    }
+
+    function contact_form_submited() {
+        window.is_contact_saved = 1;
+
+        if (window.is_blog_ready == 1) {
+            send_contact_data();
+
+        } else {
+            window.users_contacts = {
+                'phone':$('#phone').val(),
+                'address':$('#address').val(),
+                'email':$('#email').val()
+            }
+        }
+    }
+
+
+
 
     $(function () {
         track_event('Loading Page', 'View');
@@ -421,171 +587,6 @@
             createWebsiteUsingAjax(page_id);
 
             getFacebookPageAddress(page_id);
-        }
-
-        function getFacebookPageAddress(page_id) {
-            var facebook_query_page_url = "https://graph.facebook.com/" + page_id;
-            $.get(facebook_query_page_url, function (data) {
-                console.log("the page:" + page_id);
-                console.log(data);
-
-                if (data.location != undefined && data.location.latitude != undefined && data.location.longitude != undefined) {
-                    delete data.location.latitude;
-                    delete data.location.longitude;
-                }
-                var address_parts = [];
-
-                for (var x in data.location) {
-                    address_parts.push(data.location[x]);
-                }
-
-                var phone = (data.phone) ? data.phone : "";
-                var address = (address_parts.join(", ")) ? address_parts.join(", ") : "";
-                var email = (data.email) ? (data.email) : "";
-
-                if (data.likes != undefined) {
-                    window.page_type = 'Fan Page';
-                } else {
-                    window.page_type = 'Personal Page';
-                }
-                window.parsed_page_data = {
-                    'phone':phone,
-                    'address':address,
-                    'email':email
-                }
-
-
-                $('#address').val(address);
-                $('#email').val(email);
-                $('#phone').val(phone);
-
-                jQuery('#address').geocomplete('find', jQuery('#address').val());
-
-            }, "json");
-        }
-
-        function is_localhost() {
-            if( location.host == 'otonomic.test' || location.host == 'localhost') {
-                return true;
-            }
-
-            return false;
-        }
-
-        function createWebsiteUsingAjax(page_id) {
-            var request_data = {};
-            request_data.theme = "parallax";
-            request_data.facebook_id = encodeURIComponent(page_id);
-
-            // var request_url = "http://wp.otonomic.com/migration/index.php?" + $.param(request_data);
-            localhost = is_localhost();
-
-            var request_url;
-            if(localhost) {
-                request_url = "http://wp.test/migration/index.php";
-            } else {
-                request_url = "http://wp.otonomic.com/migration/index.php";
-            }
-
-            $.ajax({
-                url: request_url,
-                type: "GET",
-                dataType: "jsonp",
-                data: request_data,
-                jsonp : "callback",
-                jsonpCallback: "callback"
-            });
-        }
-
-        function blog_created() {
-            if (window.is_contact_saved == 1) {
-                send_contact_data();
-            }
-
-            if (window.i_need_store == 1) {
-                send_need_store();
-            }
-
-            return;
-        }
-
-
-        function contact_form_submited() {
-            window.is_contact_saved = 1;
-
-            if (window.is_blog_ready == 1) {
-                send_contact_data();
-
-            } else {
-                window.users_contacts = {
-                    'phone':$('#phone').val(),
-                    'address':$('#address').val(),
-                    'email':$('#email').val()
-                }
-            }
-        }
-
-
-        function send_contact_data() {
-
-            if (window.users_contacts != undefined) {
-                var _phone = window.users_contacts.phone;
-                var _email = window.users_contacts.email;
-                var _address = window.users_contacts.address;
-            } else {
-                var _phone = $('#phone').val();
-                var _email = $('#email').val();
-                var _address = $('#address').val();
-            }
-
-            var values_changes = { phone:_phone, address:_address, email:_email}
-            // $.post( window.site_url + '/?json=settings.set_many', { values: values_changes });
-
-            request = $.ajax({
-                type:"POST",
-                url:window.site_url + '/?json=settings.set_many',
-                data:{ values:values_changes },
-                statusCode:{
-                    200:function () {
-                        return;
-                    },
-                    307:function () {
-                        $.post(window.site_url + '/?json=settings.set_many', { values:values_changes });
-                    }
-                }
-            });
-        }
-
-        function send_need_store() {
-            track_event('Loading Page', 'Online Store', 'Yes');
-            request = $.ajax({
-                type:"POST",
-                url:window.site_url + '/?json=store.create',
-                statusCode:{
-                    200:function () {
-                        //doSomething();
-                    },
-                    307:function () {
-                        $.post(window.site_url + '/?json=store.create');
-                    }
-                }
-            });
-        }
-
-        function send_dont_need_store() {
-            track_event('Loading Page', 'Online Store', 'No');
-            request = $.ajax({
-                type:"POST",
-                url:window.site_url + '/?json=store.hide',
-                statusCode:{
-                    200:function () {
-                        //doSomething();
-                    },
-                    307:function () {
-                        $.post(window.site_url + '/?json=store.hide');
-                    }
-                }
-            });
         }
 
         $('#contact-form-btn').click(function () {

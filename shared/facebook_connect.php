@@ -22,7 +22,8 @@
 </script>
 
 <link rel="stylesheet" href="/shared/css/tb.bootstrap.css">
-<link rel="stylesheet" href="/shared/css/style.admin_panel.css"
+<link rel="stylesheet" href="/shared/css/style.admin_panel.css">
+
 
 <div class="tb">
     <div id="publishModal" class="publish-modal modal fade step-modal-box in animateIn" role="dialog" aria-hidden="false">
@@ -32,7 +33,7 @@
                 <div class="">
                     <!-- Header -->
                     <div class="modal-header">
-                        <iframe src="//www.facebook.com/plugins/facepile.php?href=https%3A%2F%2Fwww.facebook.com%2Fpage2site&amp;action&amp;width=530&amp;height=60&amp;max_rows=1&amp;colorscheme=dark&amp;size=medium&amp;show_count=true&amp;appId=575528525876858" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:530px; height:60px;" allowTransparency="true"></iframe>
+                        <iframe src="//www.facebook.com/plugins/facepile.php?href=https%3A%2F%2Fwww.facebook.com%2Fotonomic&amp;action&amp;width=530&amp;height=60&amp;max_rows=1&amp;colorscheme=dark&amp;size=medium&amp;show_count=true&amp;appId=575528525876858" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:530px; height:60px;" allowTransparency="true"></iframe>
                     </div>
                     <!-- Content -->
                     <div id="publish-modal" class="modal-body">
@@ -69,7 +70,7 @@
                     <div class="">
                         <!-- Header -->
                         <div class="modal-header">
-                            <iframe src="//www.facebook.com/plugins/facepile.php?href=https%3A%2F%2Fwww.facebook.com%2Fpage2site&amp;action&amp;width=530&amp;height=60&amp;max_rows=1&amp;colorscheme=dark&amp;size=medium&amp;show_count=true&amp;appId=575528525876858" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:530px; height:60px;" allowTransparency="true"></iframe>
+                            <iframe src="//www.facebook.com/plugins/facepile.php?href=https%3A%2F%2Fwww.facebook.com%2Fotonomic&amp;action&amp;width=530&amp;height=60&amp;max_rows=1&amp;colorscheme=dark&amp;size=medium&amp;show_count=true&amp;appId=575528525876858" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:530px; height:60px;" allowTransparency="true"></iframe>
                         </div>
                         <!-- Content -->
                         <div id="fbCancel-modal" class="modal-body">
@@ -105,7 +106,7 @@
                 <div class="">
                     <!-- Header -->
                     <div class="modal-header">
-                        <iframe src="//www.facebook.com/plugins/facepile.php?href=https%3A%2F%2Fwww.facebook.com%2Fpage2site&amp;action&amp;width=530&amp;height=60&amp;max_rows=1&amp;colorscheme=dark&amp;size=medium&amp;show_count=true&amp;appId=575528525876858" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:530px; height:60px;" allowTransparency="true"></iframe>
+                        <iframe src="//www.facebook.com/plugins/facepile.php?href=https%3A%2F%2Fwww.facebook.com%2Fotonomic&amp;action&amp;width=530&amp;height=60&amp;max_rows=1&amp;colorscheme=dark&amp;size=medium&amp;show_count=true&amp;appId=575528525876858" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:530px; height:60px;" allowTransparency="true"></iframe>
                     </div>
                     <!-- Content -->
                     <div id="fbCancel-modal" class="modal-body">
@@ -142,7 +143,7 @@
                 <div class="">
                     <!-- Header -->
                     <div class="modal-header">
-                        <iframe src="//www.facebook.com/plugins/facepile.php?href=https%3A%2F%2Fwww.facebook.com%2Fpage2site&amp;action&amp;width=530&amp;height=60&amp;max_rows=1&amp;colorscheme=dark&amp;size=medium&amp;show_count=true&amp;appId=575528525876858" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:530px; height:60px;" allowTransparency="true"></iframe>
+                        <iframe src="//www.facebook.com/plugins/facepile.php?href=https%3A%2F%2Fwww.facebook.com%2Fotonomic&amp;action&amp;width=530&amp;height=60&amp;max_rows=1&amp;colorscheme=dark&amp;size=medium&amp;show_count=true&amp;appId=575528525876858" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:530px; height:60px;" allowTransparency="true"></iframe>
                     </div>
                     <!-- Content -->
                     <div id="fbConnected-modal" class="modal-body">
@@ -153,28 +154,30 @@
                             <ul>
                                 <li>
                                     <!-- Google+ share -->
-                                    <div class="g-plus" data-action="share" data-href="<?php echo "http://" . $_SERVER['HTTP_HOST']; ?>" data-annotation="vertical-bubble" data-height="60" data-width="56"></div>
+                                    <div class="g-plus" data-action="share" data-href="http://otonomic.com" data-annotation="vertical-bubble" data-height="60" data-width="56"></div>
                                 </li>
                                 <li>
                                     <!-- Facebook share -->
-                                    <div class="fb-share-button" data-href="<?php echo "http://" . $_SERVER['HTTP_HOST']; ?>" data-type="box_count" style="font-size: 1px;"></div>
+                                    <div class="fb-share-button" data-href="http://otonomic.com" data-type="box_count" style="font-size: 1px;"></div>
                                 </li>
                                 <li>
                                     <!-- twitter share -->
-                                   <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo "http://" . $_SERVER['HTTP_HOST']; ?>" data-via="your_screen_name" data-lang="en" data-related="anywhereTheJavascriptAPI" data-count="vertical">Tweet</a> 
+                                   <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://otonomic.com" data-via="your_screen_name" data-lang="en" data-related="anywhereTheJavascriptAPI" data-count="vertical">Tweet</a>
                                 </li>
+                                <!--
                                 <li class="linkedin">
-                                    <!-- Linkedin -->
-                                    <script type="IN/Share" data-url="<?php echo "http://" . $_SERVER['HTTP_HOST']; ?>" data-counter="top"></script>
+                                    <script type="IN/Share" data-url="http://otonomic.com" data-counter="top"></script>
                                 </li>
+                                -->
+                                <!--
                                 <li>
-                                    <!-- Pinterest -->
-                                    <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2F<?php echo $_SERVER['HTTP_HOST']; ?>&media=http%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg&description=I%20am%20launching%20a%20new%20website%20where%20you%20can%20see%20my%20work%20and%20regular%20updates%20%20%20about%20what%20I%20do.%20Please%20visit%20my%20site%20at%20%5Blink%5D%20and%20share%20it%20with%20your%20friends.%20Thank%20you%20%20%20www.otonomic.com%20for%20building%20my%20website." data-pin-do="buttonPin" data-pin-config="above" data-pin-color="white" data-pin-height="28"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_white_28.png" /></a>
+                                    <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fotonomic.com&media=http%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg&description=I%20am%20launching%20a%20new%20website%20where%20you%20can%20see%20my%20work%20and%20regular%20updates%20%20%20about%20what%20I%20do.%20Please%20visit%20my%20site%20at%20%5Blink%5D%20and%20share%20it%20with%20your%20friends.%20Thank%20you%20%20%20www.otonomic.com%20for%20building%20my%20website." data-pin-do="buttonPin" data-pin-config="above" data-pin-color="white" data-pin-height="28"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_white_28.png" /></a>
                                 </li>
+                                -->
                             </ul>
                         </div>
                         <div class="modal-btns text-right">
-                            <div id="close-btn" class="btn btn-default close-btn modal_close_btn" onClick='window.open("/pricing/reason:domain/","_self");'>
+                            <div id="close-btn" class="btn btn-default close-btn modal_close_btn" onClick='window.open("/pricing?reason=domain/","_self");'>
                                 <img src="/shared/images/close_btn_x.png">Return to site</div>
                         </div>
                     </div>
@@ -184,7 +187,7 @@
                             <img class="footer-logo" src="/shared/images/footer_logo.png">
                         </div>
                         <div class="footer-text pull-left">
-                            <p><strong>Otonomic</strong> users that share their site get 63 times more visits - sounds like a good decision!</p>
+                            <p><strong>Otonomic</strong> users that share their site get 6.3 times more visits - sounds like a good decision!</p>
                         </div>
                     </div>
                 </div>
@@ -218,9 +221,13 @@
 </div>
 
 <!-- pintrest -->
+<!--
 <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
+-->
+
 <!-- twitter -->
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
 <!-- google+ -->
 <script type="text/javascript">
   (function() {
@@ -229,7 +236,10 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
   })();
 </script>
+
 <!-- Linkedin -->
+<!--
 <script src="//platform.linkedin.com/in.js" type="text/javascript">
   lang: en_US
 </script>
+-->

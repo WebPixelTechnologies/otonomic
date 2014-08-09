@@ -36,7 +36,3 @@ var FACEBOOK_APP_ID = '<?= FACEBOOK_APP_ID?>';
 var LOCALHOST = <?= LOCALHOST?>;
 var MAIN_DOMAIN = '<?= MAIN_DOMAIN?>';
 </script>
-
-<script type="text/javascript" src="/shared/js/jquery-1.10.1.min.js"></script>
-<script type="text/javascript" src="/shared/js/functions.js"></script>
-<script type="text/javascript" src="/shared/js/ga_tracking.js"></script>

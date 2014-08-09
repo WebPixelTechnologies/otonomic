@@ -1,3 +1,15 @@
+var facebook_site_created_pixel_id = '6008636103630';
+
+
+function is_localhost() {
+    if( location.host == 'otonomic.test' || location.host == 'localhost') {
+        return true;
+    }
+
+    return false;
+}
+
+
 /* Google Analytics */
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -28,7 +40,13 @@ var _paq = _paq || [];
 _paq.push(['trackPageView']);
 _paq.push(['enableLinkTracking']);
 (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://a.otonomic.com/";
+    if(is_localhost()) {
+        var piwik_url = "localhost/piwik/";
+    } else {
+        var piwik_url = "a.otonomic.com/";
+    }
+
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://" + piwik_url;
     _paq.push(['setTrackerUrl', u+'piwik.php']);
     _paq.push(['setSiteId', 1]);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
