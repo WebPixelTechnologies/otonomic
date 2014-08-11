@@ -102,7 +102,8 @@
 								<div class="g-plus" data-action="share" data-annotation="vertical-bubble" data-height="60" data-href="http://www.facebook.com/otonomic/"></div>
 							</li>
 							<li class="facebook">
-								<div class="fb-share-button" data-href="http://www.facebook.com/otonomic/"></div>
+								<!-- div class="fb-share-button" data-href="http://www.facebook.com/otonomic/"></div -->
+								<a name="fb_share" type="box_count" share_url="http://www.facebook.com/otonomic/" href="http://www.facebook.com/sharer.php">Share</a>
 							</li>
 							<li class="tweeter">
 								<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.facebook.com/otonomic/" data-count="vertical">Tweet</a>
@@ -143,5 +144,6 @@
 	<script>
 		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 	</script>
+	<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
   </body>
 </html>
