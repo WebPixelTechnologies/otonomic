@@ -108,8 +108,9 @@ function create_wp_site(page_id){
 
     $('.btn_go').click(function (event) {
         event.preventDefault();
+        var $this = $(this);
 
-        var targetID = $(this).data('target-field');
+        var targetID = $this.data('target-field');
 
         var $searchField = $('#'+targetID);
         var $page_url = $searchField.val();
@@ -119,12 +120,12 @@ function create_wp_site(page_id){
         }
         // Can't select one result - cancel the click on Go.
         if (found_result > 1 && ($page_url.indexOf("facebook.com") == -1)) {
-            $(this).tipsy("show");
+            $this.tipsy("show");
             return false;
         }
 
-        $(this).tipsy("hide");
-        trackFBConnect("Search Marketing Website", "Go", $(this).attr('data-attr')+","+$page_url);
+        $this.tipsy("hide");
+        trackFBConnect("Search Marketing Website", "Go", $this.attr('data-attr')+","+$page_url);
 
         if ($page_url.indexOf("facebook.com") > -1) {
             // var url = p2s_site_url + 'sites/add/?u=' + encodeURIComponent($page_url);
@@ -142,7 +143,7 @@ function create_wp_site(page_id){
 
 
         if (found_result == 1 && $.trim(found_only_result_url) != '') {
-            trackFBConnect("Search Marketing Website", "Choose Url", $(this).attr('data-attr')+","+found_only_result_url);
+            trackFBConnect("Search Marketing Website", "Choose Url", $this.attr('data-attr')+","+found_only_result_url);
             setTimeout(function () { // now wait 300 milliseconds...
                 window.location = found_only_result_url;
             }, 300);
@@ -155,10 +156,10 @@ function create_wp_site(page_id){
 
         if ($page_url.indexOf("facebook.com") > -1 || $.trim($page_url) == '') {
             //input box is empty
-            show_empty_message($('.p2s_fanpages'));
+            show_empty_message($this.parents('.p2s_fanpages'));
         } else {
             //page not found
-            show_page_not_found_message($('.p2s_fanpages'));
+            show_page_not_found_message($this.parents('.p2s_fanpages'));
         }
     });
 
@@ -334,6 +335,7 @@ function show_searching_message(){
 function show_empty_message(inputField){
     console.log(inputField);
     closeHowDoISteps();
+
     if($(inputField).val() == ''){
         var $tbox = $(".t_box").clone();
         $(".msg_info" , $tbox).html('Search for your Facebook Business Page above');
@@ -341,6 +343,7 @@ function show_empty_message(inputField){
         $(".first_msg_desc" , $tbox).html('e.g. Jessica\'s Pastries');
         $(inputField).parent().find('.search-wrapper').html('').html($tbox).show();
         $(".close_btn").show();
+
     } else {
         show_page_not_found_message();
     }

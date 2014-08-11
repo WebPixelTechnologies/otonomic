@@ -45,30 +45,40 @@
       <div id="sidebar-wrapper">
           <ul class="sidebar-nav">
               <li class="sidebar-login">
-                <a href="/shared/facebook_login.php" class="facebook_connect sidebar-link track_event" data-target="" data-ga-category="Marketing Website" data-ga-event="Menu Usage" data-ga-label="Login" data-ajax-track="1">
+                <a href="/shared/facebook_login.php" class="facebook_connect sidebar-link track_event" data-target="" data-ga-category="Marketing Website" data-ga-event="Menu Usage" data-ga-label="Login">
                   <div class="sidebar-icon"><span class="glyphicon glyphicon-user"></span></div>Login
                 </a>
               </li>
               <li>
-                <a href="#" class="sidebar-link track_event" data-target="features" data-ga-category="Marketing Website" data-ga-event="Menu Usage" data-ga-label="Features" data-ajax-track="1">
+                <a href="#" class="sidebar-link track_event" data-target="features" data-ga-category="Marketing Website" data-ga-event="Menu Usage" data-ga-label="Features">
                   <div class="sidebar-icon"><img src="images/sidebar-icon1.png" alt="Features"></div>Features
                 </a>
               </li>
               <li>
-                <a href="#" class="sidebar-link track_event" data-target="reviews" data-ga-category="Marketing Website" data-ga-event="Menu Usage" data-ga-label="Reviews" data-ajax-track="1">
+                <a href="#" class="sidebar-link track_event" data-target="reviews" data-ga-category="Marketing Website" data-ga-event="Menu Usage" data-ga-label="Reviews">
                   <div class="sidebar-icon"><img src="images/sidebar-icon2.png" alt="Reviews"></div>Reviews
                 </a>
               </li>
               <!-- <li>
-                <a href="#" class="sidebar-link track_event" data-target="media-links" data-ga-category="Marketing Website" data-ga-event="Menu Usage" data-ga-label="Media" data-ajax-track="1">
+                <a href="#" class="sidebar-link track_event" data-target="media-links" data-ga-category="Marketing Website" data-ga-event="Menu Usage" data-ga-label="Media">
                   <div class="sidebar-icon"><img src="images/sidebar-icon3.png" alt="In the media"></div>In the media
                 </a>
               </li> -->
               <li>
-                <a href="#" class="sidebar-link track_event" data-target="about" data-ga-category="Marketing Website" data-ga-event="Menu Usage" data-ga-label="About" data-ajax-track="1">
+                <a href="#" class="sidebar-link track_event" data-target="about" data-ga-category="Marketing Website" data-ga-event="Menu Usage" data-ga-label="About">
                   <div class="sidebar-icon about"><img src="images/sidebar-icon4.png" alt="About"></div>About
                 </a>
-              </li> 
+              </li>
+              <li>
+                  <a href="http://blog.otonomic.com" target="_blank" class="sidebar-link track_event" data-ga-category="Marketing Website" data-ga-event="Menu Usage" data-ga-label="Blog">
+                      <div class="sidebar-icon blog"><img src="images/sidebar-icon4.png" alt="Blog"></div>Blog
+                  </a>
+              </li>
+              <li>
+                  <a href="http://blog.otonomic.com/jobs" target="_blank" class="sidebar-link track_event" data-ga-category="Marketing Website" data-ga-event="Menu Usage" data-ga-label="Jobs">
+                      <div class="sidebar-icon blog"><img src="images/sidebar-icon4.png" alt="Jobs"></div>Jobs
+                  </a>
+              </li>
           </ul>
       </div>
       <!-- Main Content -->
@@ -78,7 +88,7 @@
              <!-- top navbar -->
               <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                   <div class="navbar-header">
-                       <button type="button" class="navbar-toggle track_event track_hover" id="menu-toggle" data-toggle="offcanvas" data-target=".sidebar-nav" data-ga-category="Marketing Website"  data-ga-event="Menu Click" data-ga-event-hover="Menu Hover" data-ajax-track="1">
+                       <button type="button" class="navbar-toggle track_event track_hover" id="menu-toggle" data-toggle="offcanvas" data-target=".sidebar-nav" data-ga-category="Marketing Website"  data-ga-event="Menu Click" data-ga-event-hover="Menu Hover">
                          <span class="icon-bar"></span>
                          <span class="icon-bar"></span>
                          <span class="icon-bar"></span>
@@ -92,25 +102,27 @@
                     </div>
                   </div>
                   <div class="form-inline facebook-input-holder">
-                    <div id="main_search_holder2" class="form-group header-search-input p2s_fanpages">
-                      <label class="sr-only LoNotSensitive" for="main_search_box2">Simply enter the name of your business Facebook page here</label>
+                      <div class="p2s_fanpages">
+                        <div id="main_search_holder2" class="form-group header-search-input">
+                          <label class="sr-only LoNotSensitive" for="main_search_box2">Simply enter the name of your business Facebook page here</label>
 
-                      <input type="text" id="main_search_box2" data-attr="top" 
-                      onClick="searchBoxClick('#main_search_box2');"
-                      onKeyup="searchBoxKeyUp('#main_search_box2','#search_wrapper_floater','.close-search-floater');"
-                      class="form-control main_search_box mobile-header-placeholder" autocomplete="off" placeholder="Simply enter the name of your business Facebook page here">
-                      
-                      <div class="tb search-wrapper search-wrapper-floater" id="search_wrapper_floater" data-attr="top"></div>
-                      <div style="position:relative;">
-                        <span class="icon_clear close-search close-search-floater" onClick="closeSearch('#search_wrapper_floater','top')" style="display: none;">
-                          <span class="glyphicon glyphicon-remove"></span>
-                        </span>
+                          <input type="text" id="main_search_box2" data-attr="top"
+                          onClick="searchBoxClick('#main_search_box2');"
+                          onKeyup="searchBoxKeyUp('#main_search_box2','#search_wrapper_floater','.close-search-floater');"
+                          class="form-control main_search_box mobile-header-placeholder" autocomplete="off" placeholder="Simply enter the name of your business Facebook page here">
+
+                          <div class="tb search-wrapper search-wrapper-floater" id="search_wrapper_floater" data-attr="top"></div>
+                          <div style="position:relative;">
+                            <span class="icon_clear close-search close-search-floater" onClick="closeSearch('#search_wrapper_floater','top')" style="display: none;">
+                              <span class="glyphicon glyphicon-remove"></span>
+                            </span>
+                          </div>
+
+                        </div>
+                        <div class="form-group header-search-button">
+                          <button id="btn_go2" data-attr="top" class="btn_go btn btn-ttc track_event" data-target-field="main_search_box2">See <span class="hidden-xs">Your</span> Website</button>
+                        </div>
                       </div>
-
-                    </div>
-                    <div class="form-group header-search-button">
-                      <button id="btn_go2" data-attr="top" class="btn_go btn btn-ttc track_event">See <span class="hidden-xs">Your</span> Website</button>
-                    </div>
                   </div>
               </div>
             </div>
@@ -121,26 +133,28 @@
                         <h1>Give your business the website it deserves!</h1>
                         <p>In under 20 seconds , we will turn your Facebook page into a professional website</p>
                         <form class="form-inline" role="form">
-                          <div id="main_search_holder" class="form-group form-group-mobile p2s_fanpages">
-                            <label class="sr-only" for="main_search_box">Simply enter the name of your business Facebook page here</label>
-                            
-                            <input type="text" id="main_search_box" data-attr="center" 
-                            onClick="searchBoxClick('#main_search_box');" 
-                            onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
-                            class="form-control main_search_box mobile-placeholder2 LoNotSensitive" 
-                            autocomplete="off" placeholder="Simply enter the name of your business Facebook page here">
+                            <div class="p2s_fanpages">
+                              <div id="main_search_holder" class="form-group form-group-mobile">
+                                <label class="sr-only" for="main_search_box">Simply enter the name of your business Facebook page here</label>
 
-                            <div class="tb search-wrapper" id="search_wrapper_main" data-attr="center"></div>
-                            <div style="position:relative;">
-                              <span class="icon_clear close-search" onClick="closeSearch('#search_wrapper_main','center')" style="display: none;">
-                                <span class="glyphicon glyphicon-remove"></span>
-                              </span>
+                                <input type="text" id="main_search_box" data-attr="center"
+                                onClick="searchBoxClick('#main_search_box');"
+                                onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
+                                class="form-control main_search_box mobile-placeholder2 LoNotSensitive"
+                                autocomplete="off" placeholder="Simply enter the name of your business Facebook page here">
+
+                                <div class="tb search-wrapper" id="search_wrapper_main" data-attr="center"></div>
+                                <div style="position:relative;">
+                                  <span class="icon_clear close-search" onClick="closeSearch('#search_wrapper_main','center')" style="display: none;">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                  </span>
+                                </div>
+
+                              </div>
+                              <div class="form-group form-group-mobile">
+                                <button id="btn_go" data-attr="center" title='Choose your page from the suggestions below' class="btn_go btn btn-ttc" data-target-field="main_search_box">See Your Website</button>
+                              </div>
                             </div>
-
-                          </div>
-                          <div class="form-group form-group-mobile">
-                            <button id="btn_go" data-attr="center" title='Choose your page from the suggestions below' class="btn_go btn btn-ttc ">See Your Website</button>
-                          </div>
                         </form>
                         <div class="bg-image">
                           <img src="images/section-home-bg.png" class="">
@@ -202,27 +216,27 @@
                             <h1>The Perfect Website for All Your Business Needs</h1>
                           </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 feature track_event track_hover" data-ga-category="Marketing Website" data-ga-event-hover="Features Hover" data-ga-label="Gorgeous" data-ajax-track="1">
+                        <div class="col-xs-12 col-sm-6 col-md-4 feature track_event track_hover" data-ga-category="Marketing Website" data-ga-event-hover="Features Hover" data-ga-label="Gorgeous">
                           <img class="feature-icon" src="images/feature-icon1.png">
                           <h3>Gorgeous site in 1 click</h3>
                           <p>Not a techie? Not a problem! With our new technology, creating your own fabulous website from your Facebook page literally takes one click. You don’t have to know anything about programming or design.</p>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 feature track_event track_hover" data-ga-category="Marketing Website" data-ga-event-hover="Features Hover" data-ga-label="Auto" data-ajax-track="1">
+                        <div class="col-xs-12 col-sm-6 col-md-4 feature track_event track_hover" data-ga-category="Marketing Website" data-ga-event-hover="Features Hover" data-ga-label="Auto">
                           <img class="feature-icon" src="images/feature-icon2.png">
                           <h3>Self-updating</h3>
                           <p>Whenever you post something on your Facebook page, it immediately appears on your Otonomic site. You can just kick back, enjoy sharing news, pictures and whatever else you feel like on Facebook, and ta-da - it’s on your site!</p>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 feature track_event track_hover" data-ga-category="Marketing Website" data-ga-event-hover="Features Hover" data-ga-label="Mobile" data-ajax-track="1">
+                        <div class="col-xs-12 col-sm-6 col-md-4 feature track_event track_hover" data-ga-category="Marketing Website" data-ga-event-hover="Features Hover" data-ga-label="Mobile">
                           <img class="feature-icon" src="images/feature-icon3.png">
                           <h3>Web, tablet and mobile ready</h3>
                           <p>You know you must cater to all digital tastes. With Otonomic, you get web, mobile and tablet sites right away! So you can reach clients wherever they go, on all platforms and all devices in all sizes.</p>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 feature track_event track_hover" data-ga-category="Marketing Website" data-ga-event-hover="Features Hover" data-ga-label="Domain" data-ajax-track="1">
+                        <div class="col-xs-12 col-sm-6 col-md-4 feature track_event track_hover" data-ga-category="Marketing Website" data-ga-event-hover="Features Hover" data-ga-label="Domain">
                           <img class="feature-icon" src="images/feature-icon4.png">
                           <h3>Your domain, your brand</h3>
                           <p>In today's world, brand name is everything. With us you get your own domain, which means your own fully-branded web, mobile and tablet sites. Don’t settle for less— get the best combo for your business.</p>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 feature track_event track_hover" data-ga-category="Marketing Website" data-ga-event-hover="Features Hover" data-ga-label="Growth" data-ajax-track="1">
+                        <div class="col-xs-12 col-sm-6 col-md-4 feature track_event track_hover" data-ga-category="Marketing Website" data-ga-event-hover="Features Hover" data-ga-label="Growth">
                           <img class="feature-icon" src="images/feature-icon5.png">
                           <h3>Business Growth Made Easy</h3>
                           <p>With features like a blog, video player, and photo gallery, every one of your clients is engaged. With your chic online store, you can easily capitalize on these warm leads. Your clients are happy, so are you.</p>
@@ -299,7 +313,7 @@
                         <div class="col-xs-12 text-center">
                           <h1>Small business owners love us</h1>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-3 track_hover" data-ga-category="Marketing Website" data-ga-event="Testimonials Click" data-ga-event-hover="Testimonials Hover" data-ga-label="Grymm" data-ajax-track="1">
+                        <div class="col-xs-12 col-sm-6 col-md-3 track_hover" data-ga-category="Marketing Website" data-ga-event="Testimonials Click" data-ga-event-hover="Testimonials Hover" data-ga-label="Grymm">
                           <div class="ch-item">       
                             <div class="ch-info">
                               <div class="ch-info-front">
@@ -312,12 +326,12 @@
                             </div>
                             <div class="ch-text">
                               <h3>Grymm</h3>
-                              <h4><a href="http://artisticembracetattoo.com/" target="_blank" class="track_event" data-ga-category="Marketing Website" data-ga-event="Testimonials Site Click" data-ga-label="Grymm" data-ajax-track="1">artisticembracetattoo.com</a></h4>
+                              <h4><a href="http://artisticembracetattoo.com/" target="_blank" class="track_event" data-ga-category="Marketing Website" data-ga-event="Testimonials Site Click" data-ga-label="Grymm">artisticembracetattoo.com</a></h4>
                               <p>I've had my website for a little over a month now and my clients absolutely love it!!! They have told me that it's extremely easy to navigate and it looks awesome! I couldn't have had a better website!</p>
                             </div>
                           </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-3 track_hover" data-ga-category="Marketing Website" data-ga-event="Testimonials Click" data-ga-event-hover="Testimonials Hover" data-ga-label="Shawna Todd" data-ajax-track="1">
+                        <div class="col-xs-12 col-sm-6 col-md-3 track_hover" data-ga-category="Marketing Website" data-ga-event="Testimonials Click" data-ga-event-hover="Testimonials Hover" data-ga-label="Shawna Todd">
                           <div class="ch-item">       
                             <div class="ch-info">
                               <div class="ch-info-front">
@@ -330,13 +344,13 @@
                             </div>
                             <div class="ch-text">
                               <h3>Shawna Todd</h3>
-                              <h4><a href="http://boulderacupuncture.me/" target="_blank" class="track_event" data-ga-category="Marketing Website" data-ga-event="Testimonials Site Click" data-ga-label="Shawna Todd" data-ajax-track="1">boulderacupuncture.me</a></h4>
+                              <h4><a href="http://boulderacupuncture.me/" target="_blank" class="track_event" data-ga-category="Marketing Website" data-ga-event="Testimonials Site Click" data-ga-label="Shawna Todd">boulderacupuncture.me</a></h4>
                               <p>I had been wanting a website for my small business for too long. I never found the time or energy to get it done. I'm so grateful, I wish I had done it sooner.
                               </p>
                             </div>
                           </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-3 track_hover" data-ga-category="Marketing Website" data-ga-event="Testimonials Click" data-ga-event-hover="Testimonials Hover" data-ga-label="Steve Bross" data-ajax-track="1">
+                        <div class="col-xs-12 col-sm-6 col-md-3 track_hover" data-ga-category="Marketing Website" data-ga-event="Testimonials Click" data-ga-event-hover="Testimonials Hover" data-ga-label="Steve Bross">
                           <div class="ch-item">       
                             <div class="ch-info">
                               <div class="ch-info-front">
@@ -349,13 +363,13 @@
                             </div>
                             <div class="ch-text">
                               <h3>Steve Bross</h3>
-                              <h4><a href="http://thehawkmobile.com/" target="_blank"  target="_blank" class="track_event" data-ga-category="Marketing Website" data-ga-event="Testimonials Site Click" data-ga-label="Steve Bross" data-ajax-track="1">thehawkmobile.com</a></h4>
+                              <h4><a href="http://thehawkmobile.com/" target="_blank"  target="_blank" class="track_event" data-ga-category="Marketing Website" data-ga-event="Testimonials Site Click" data-ga-label="Steve Bross">thehawkmobile.com</a></h4>
                               <p>Since I do a lot of daily updates, I like the fact that the page updates on it's own. Otonomic have been very helpful in working with me to get the site just the way I wanted it. Glad I found them!
                               </p>
                             </div>
                           </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-3 track_hover" data-ga-category="Marketing Website" data-ga-event="Testimonials Click" data-ga-event-hover="Testimonials Hover" data-ga-label="Fanny May" data-ajax-track="1">
+                        <div class="col-xs-12 col-sm-6 col-md-3 track_hover" data-ga-category="Marketing Website" data-ga-event="Testimonials Click" data-ga-event-hover="Testimonials Hover" data-ga-label="Fanny May">
                           <div class="ch-item">       
                             <div class="ch-info">
                               <div class="ch-info-front">
@@ -368,7 +382,7 @@
                             </div>
                             <div class="ch-text">
                               <h3>Brian O'Callaghan</h3>
-                              <h4><a href="http://www.dublinacupunctureclinic.com/" target="_blank" class="track_event" data-ga-category="Marketing Website" data-ga-event="Testimonials Site Click" data-ga-label="Brian O'Callaghan" data-ajax-track="1">dublinacupunctureclinic.com</a></h4>
+                              <h4><a href="http://www.dublinacupunctureclinic.com/" target="_blank" class="track_event" data-ga-category="Marketing Website" data-ga-event="Testimonials Site Click" data-ga-label="Brian O'Callaghan">dublinacupunctureclinic.com</a></h4>
                               <p>Otonomic offered me what I need at the time I needed it, a well designed, informative website that I update effortlessly wherever I travel.</p>
                             </div>
                           </div>
@@ -567,22 +581,22 @@
                       </div>
                       <div class="social-links center-block">
                         <div class="social-link-holder google-plus">
-                          <a href="https://plus.google.com/+Otonomic/" target="_blank" class="social-link track_event" data-ga-category="Marketing Website" data-ga-event="Share Click" data-ga-label="Google Plus" data-ajax-track="1"><img src="images/social-icon-1.png" class="img-responsive"></a>
+                          <a href="https://plus.google.com/+Otonomic/" target="_blank" class="social-link track_event" data-ga-category="Marketing Website" data-ga-event="Share Click" data-ga-label="Google Plus"><img src="images/social-icon-1.png" class="img-responsive"></a>
                         </div>
                         <div class="social-link-holder facebook">
-                          <a href="https://www.facebook.com/otonomic" target="_blank" class="social-link track_event" data-ga-category="Marketing Website" data-ga-event="Share Click" data-ga-label="Facebook" data-ajax-track="1"><img src="images/social-icon-2.png" class="img-responsive"></a>
+                          <a href="https://www.facebook.com/otonomic" target="_blank" class="social-link track_event" data-ga-category="Marketing Website" data-ga-event="Share Click" data-ga-label="Facebook"><img src="images/social-icon-2.png" class="img-responsive"></a>
                         </div>
                         <div class="social-link-holder twitter">
-                          <a href="https://twitter.com/otonomic/" target="_blank" class="social-link track_event" data-ga-category="Marketing Website" data-ga-event="Share Click" data-ga-label="Twitter" data-ajax-track="1"><img src="images/social-icon-3.png" class="img-responsive"></a>
+                          <a href="https://twitter.com/otonomic/" target="_blank" class="social-link track_event" data-ga-category="Marketing Website" data-ga-event="Share Click" data-ga-label="Twitter"><img src="images/social-icon-3.png" class="img-responsive"></a>
                         </div>
                         <div class="social-link-holder email">
-                          <a href="http://www.linkedin.com/company/otonomic" target="_blank" class="social-link track_event" data-ga-category="Marketing Website" data-ga-event="Share Click" data-ga-label="Linkedin" data-ajax-track="1"><img src="images/social-icon-4.png" class="img-responsive"></a>
+                          <a href="http://www.linkedin.com/company/otonomic" target="_blank" class="social-link track_event" data-ga-category="Marketing Website" data-ga-event="Share Click" data-ga-label="Linkedin"><img src="images/social-icon-4.png" class="img-responsive"></a>
                         </div>
                       </div>
                       <div class="footer-links center-block">
-                        <div class="footer-link"><a href="pdfs/Otonomic_Terms_of_Service.pdf" target="_blank"class="track_event" data-ga-category="Marketing Website" data-ga-event="Footer" data-ga-label="ToU" data-ajax-track="1">Terms of Use</a></div>
-                        <div class="footer-link"><a href="pdfs/Otonomic_Privacy_Policy.pdf" target="_blank" class="track_event" data-ga-category="Marketing Website" data-ga-event="Footer" data-ga-label="PP" data-ajax-track="1">Privacy Policy</a></div>
-                        <div class="footer-link"><a href="http://support.otonomic.com" target="_blank" class="track_event" data-ga-category="Marketing Website" data-ga-event="Footer" data-ga-label="FAQ" data-ajax-track="1">FAQ</a></div>
+                        <div class="footer-link"><a href="pdfs/Otonomic_Terms_of_Service.pdf" target="_blank"class="track_event" data-ga-category="Marketing Website" data-ga-event="Footer" data-ga-label="ToU">Terms of Use</a></div>
+                        <div class="footer-link"><a href="pdfs/Otonomic_Privacy_Policy.pdf" target="_blank" class="track_event" data-ga-category="Marketing Website" data-ga-event="Footer" data-ga-label="PP">Privacy Policy</a></div>
+                        <div class="footer-link"><a href="http://support.otonomic.com" target="_blank" class="track_event" data-ga-category="Marketing Website" data-ga-event="Footer" data-ga-label="FAQ">FAQ</a></div>
                       </div>
                       <div class="powered-by">© 2014 <img src="images/otonomic-logo.png" alt="otonomic logo"></div>
                     </div>
@@ -610,7 +624,7 @@
                 <p style="display: inline-block;">e.g.: "https://www.facebook.com/pages/Jessicas-Pastries"</p>
                 <a href="#" id="how_do_i">How do I do that?</a>
                 <p class="or_msg">Or</p>
-                <a href="/shared/facebook_login.php" class="facebook_connect track_event measure_time" id="fb_connector" data-ga-category="LandingPage" data-ga-event="Connect with Facebook" data-ga-label="Search explanation box" data-ajax-track="1">Connect
+                <a href="/shared/facebook_login.php" class="facebook_connect track_event measure_time" id="fb_connector" data-ga-category="LandingPage" data-ga-event="Connect with Facebook" data-ga-label="Search explanation box">Connect
                 </a>
                 <h1 style="line-height: 34px; float:left;">So we can find your page for you.</h1>
                 
@@ -730,6 +744,7 @@
     <script type="text/javascript" src="/js/jquery.tipsy.js"></script>
     <script type="text/javascript" src="/js/otonomicv1.0.4.js"></script>
     <script type="text/javascript">
+        /*
     $.preloadImages = function(){
        for(var i = 0; i<arguments.length; i++){
           $("<img />").attr("src", arguments[i]);
@@ -742,6 +757,7 @@
         });
         $.preloadImages("backscreen.png");
     });
+    */
     </script>
     <script type="text/javascript" src="js/functions.js"></script>
   </body>
