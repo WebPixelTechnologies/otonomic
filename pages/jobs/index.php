@@ -2,7 +2,17 @@
 <html>
   <head>
     <title>Otonomic Jobs - Head of Online Media</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<meta name="description" content="Otonomic is looking for a new Head of Online Marketing. Please help by sharing!" />
+	<!-- Open Graph data --> 
+	<meta property="og:title" content="Otonomic Jobs - Head of Online Media" /> 
+	<meta property="og:type" content="article" /> 
+	<meta property="og:image" content="assets/img/jobs-banner.jpg" />
+	<meta property="og:description" content="Otonomic is looking for a new Head of Online Marketing. Please help by sharing!" />
+
+	
 	<link href="assets/css/fonts.css" rel="stylesheet" media="screen">
     <!-- Bootstrap -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -99,17 +109,17 @@
 					<div id="share">
 						<ul class="social-share">
 							<li class="google-plus">
-								<div class="g-plus" data-action="share" data-annotation="vertical-bubble" data-height="60" data-href="http://www.facebook.com/otonomic/"></div>
+								<div class="g-plus" data-action="share" data-annotation="vertical-bubble" data-height="60"></div>
 							</li>
 							<li class="facebook">
 								<!-- div class="fb-share-button" data-href="http://www.facebook.com/otonomic/"></div -->
-								<a name="fb_share" type="box_count" share_url="http://www.facebook.com/otonomic/" href="http://www.facebook.com/sharer.php">Share</a>
+								<a name="fb_share" type="box_count">Share</a>
 							</li>
 							<li class="tweeter">
-								<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.facebook.com/otonomic/" data-count="vertical">Tweet</a>
+								<a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical">Tweet</a>
 							</li>
 							<li class="linkedin">
-								<script type="IN/Share" data-url="http://www.facebook.com/otonomic/" data-counter="top"></script>
+								<script type="IN/Share" data-counter="top"></script>
 							</li>
 						</ul>
 					</div>
