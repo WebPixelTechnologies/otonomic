@@ -83,26 +83,26 @@
 						<strong>Marketing Budget and control</strong>: Develop and manage the marketing budget whilst tracking KPI's and ROI for all marketing activities.
 					</p>
 					<p>
-						<strong>Build, manage and motivate</strong> the company's marketing team
+						<strong>Build, manage and motivate</strong> the company's marketing team.
 					</p>
 					<p>
 						<strong>Reporting directly to CEO</strong>
 					</p>
 					<h2>Requirements</h2>
 					<p>
-						<strong>4+ years</strong> of hands-on experience in online marketing
+						<strong>4+ years</strong> of hands-on experience in online marketing.
 					</p>
 					<p>
-						<strong>English</strong> at mother tongue level. Working Hebrew
+						<strong>English</strong> at mother tongue level. Working Hebrew.
 					</p>
 					<p>
-						<strong>Deep familiarity with the American market</strong>
+						<strong>Deep familiarity with the American market</strong>.
 					</p>
 					<p>
-						<strong>Entrepreneurial spirit</strong> with motivation and passion to build and lead a global
+						<strong>Entrepreneurial spirit</strong> with motivation and passion to build and lead a global brand.
 					</p>
 					<p>
-						<strong>Managerial experience</strong> - a big plus
+						<strong>Managerial experience</strong> - a big plus.
 					</p>
 				</div>
 				<div class="span4">

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Otonomic </title>
+    <title>Otonomic - turn your Facebook page into a professional website</title>
     <link rel="stylesheet" type="text/css" href="../css/fancybox.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css?v=0.0.1">
     <style>
@@ -47,7 +47,7 @@
             </div>
             <div style="clear:both"></div>
 
-            <a href="http://www.youtube.com/watch?v=c9HlSITDejc&fs=1&autoplay=1&vq=hd1080" target="_blank" id="btn_video" class="video tracking_enabled" data-ga-category="Search LP" data-ga-event="Video" data-ga-label="v=c9HlSITDejc" data-ajax-track="1">
+            <a href="http://www.youtube.com/watch?v=c9HlSITDejc&fs=1&autoplay=1&vq=hd1080" id="btn_video" class="video tracking_enabled" data-ga-category="Search LP" data-ga-event="Video" data-ga-label="v=c9HlSITDejc" data-ajax-track="1">
                 <span id="video-placeholder">
                 </span>
             </a>

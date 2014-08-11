@@ -1,13 +1,13 @@
 <?php
 $campaign_id = 'clickr';
 $main_image_options = array(
-    '<img src="../options_images/Depositphotos_4876746_xs.jpg" alt="Page2site" id="main_image" style="margin-top:0px">',
-    '<img src="../options_images/Depositphotos_3340512_xs.jpg" alt="Page2site" id="main_image" height="460" style="margin-top:0px">',
-    '<img src="../options_images/Depositphotos_3855384_xs.jpg" alt="Page2site" id="main_image" style="margin-top:20px">',
-    '<img src="../options_images/Depositphotos_5721598_s.jpg" alt="Page2site" id="main_image" height="460" style="margin-top:0px">',
-    '<img src="../options_images/Depositphotos_6467121_s.jpg" alt="Page2site" id="main_image" height="460" style="margin-top:0px">',
-    '<img src="../options_images/Depositphotos_7267553_s.jpg" alt="Page2site" id="main_image" height="460" style="margin-top:0px">',
-    '<img src="../options_images/Depositphotos_7692657_s.jpg" alt="Page2site" id="main_image" height="460" style="margin-top:0px">',
+    '<img src="../options_images/Depositphotos_4876746_xs.jpg" alt="Otonomic" id="main_image" style="margin-top:0px">',
+    '<img src="../options_images/Depositphotos_3340512_xs.jpg" alt="Otonomic" id="main_image" height="460" style="margin-top:0px">',
+    '<img src="../options_images/Depositphotos_3855384_xs.jpg" alt="Otonomic" id="main_image" style="margin-top:20px">',
+    '<img src="../options_images/Depositphotos_5721598_s.jpg" alt="Otonomic" id="main_image" height="460" style="margin-top:0px">',
+    '<img src="../options_images/Depositphotos_6467121_s.jpg" alt="Otonomic" id="main_image" height="460" style="margin-top:0px">',
+    '<img src="../options_images/Depositphotos_7267553_s.jpg" alt="Otonomic" id="main_image" height="460" style="margin-top:0px">',
+    '<img src="../options_images/Depositphotos_7692657_s.jpg" alt="Otonomic" id="main_image" height="460" style="margin-top:0px">',
 );
 
 $main_button_options = array(
@@ -54,7 +54,7 @@ $main_button_text = $main_button_options[$mvt_options_arr[1]];
             .center {text-align:center;margin-right:auto;margin-left:auto;}
             #main_image {border: 6px solid white;max-width: 94%;box-shadow: 1px 1px 11px #aaa;}
         </style>
-        <title>Page2site</title>
+        <title>Otonomic</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
         <script type="text/javascript" src="js/cufon-yui.js"></script>
@@ -62,8 +62,6 @@ $main_button_text = $main_button_options[$mvt_options_arr[1]];
         <script type="text/javascript">
             Cufon.replace('h2');       
         </script>
-
-<?php include('../shared/google_analytics_head_end.php') ?>
 
         <!-- fancybox js/css start -->
         <link rel="stylesheet" type="text/css" href="../shared/css/fancybox/jquery.fancybox.css" />
@@ -87,16 +85,17 @@ $main_button_text = $main_button_options[$mvt_options_arr[1]];
             });
             */
         </script>
+        <script type="text/javascript" src="/js/otonomic-analytics.js"></script>
     </head>
+
     <body>
-    	<?php //include('../shared/clicktale_body_start.php')?>
     	<?php require_once '../../shared/facebook_connect.php'; ?>
 
         <div class="header">
         </div><!-- .header -->
         <div class="featured">
             <div class="half">
-                <div class="center" style="margin-bottom:10px"><img src="../shared/images/logo-transparent-150px.png" alt="Page2site"></div>
+                <div class="center" style="margin-bottom:10px"><img src="../shared/images/logo-transparent-150px.png" alt="Otonomic"></div>
 
                 <h2 style="line-height:1.4em">Got a Facebook Page? <br/>Get a <span style="color:#a3238e">FREE</span> Website with <span style="color:#a3238e">just 1 click!</span></h2>
                 <p>Turn the content of your Facebook page into a beautiful, professional website!<br/>
@@ -122,19 +121,16 @@ $main_button_text = $main_button_options[$mvt_options_arr[1]];
             <div class="half notes">                
 <?php if (false): ?>                
                     <ul class="social nofloat">
-                        <li><a class="twitter" target="_blank" href="https://twitter.com/page2site" title="Twitter"></a></li>
-                        <li><a class="facebook" target="_blank" href="http://www.facebook.com/page2site" title="Facebook"></a></li>
+                        <li><a class="twitter" target="_blank" href="https://twitter.com/otonomic" title="Twitter"></a></li>
+                        <li><a class="facebook" target="_blank" href="http://www.facebook.com/otonomic" title="Facebook"></a></li>
                     </ul>
 <?php endif; ?>
-                &copy; 2013 <a href="http://www.page2site.com" target="_blank">Page2site - Create a free website with just 1 click</a>.
+                &copy; 2013 <a href="http://www.otonomic.com" target="_blank">Otonomic - Create a free website with just 1 click</a>.
             </div><!-- .notes -->
             <div class="half brand last">
-                <img src="images/logo.png" alt="Page2site">
+                <img src="images/logo.png" alt="Otonomic">
             </div><!-- .brand -->
         </div><!-- .primary -->
 
-<?php //include('../shared/uservoice_body_end.php') ?>
-        <?php include('../shared/google_analytics_body_end.php') ?>
-        <?php //include('../shared/clicktale_body_end.php')?>   
     </body>
 </html>

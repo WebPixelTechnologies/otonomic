@@ -3,7 +3,7 @@
 	<head>
         <!-- <script src="//cdn.optimizely.com/js/326727683.js"></script> -->
         <script src="//wwwstatic.verisites.com/lp/creative/script/jquery-1.10.1.min.js" type="text/javascript"></script>
-        <?php include_once('../../shared/shared_code_head.php');?>
+        <?php include_once('../../shared/v1/shared_code_head.php');?>
 
         <script type="text/javascript">
             try {
@@ -257,7 +257,7 @@
 				</div>
 				<div class="t-statement">I would like to thank the Page2site team for their great service and their extraordinary patience. Thanks to them, my site looks even better than I envisioned it and I had 3 new customers asking for a price proposal in the first week alone!</div>
 				<div class="t-author"><p>- Karl Loupec, France </p><a href="http://sklcosmetiques973.com" class="website">http://sklcosmetiques973.com</a></div>
-			</section>			
+			</section>
 		</section>
         <div class="clear"></div>
     </article>
@@ -352,6 +352,6 @@ Feel free to visit our <a target="_blank" href="/faq">FAQ</a> for more informati
 	<br />
 	<br />
 
-    <?php require_once('../../shared/shared_code_closing_body_tag.php');?>
+    <?php require_once('../../shared/v1/shared_code_closing_body_tag.php');?>
 </body>
 </html>

@@ -1,13 +1,13 @@
 <?php
 $campaign_id = 'landomania';
 $main_image_options = array(
-    '<img src="../options_images/Depositphotos_4876746_xs.jpg" alt="Page2site" id="main_image" height="460" style="margin-top:0px">',
-    '<img src="../options_images/Depositphotos_3340512_xs.jpg" alt="Page2site" id="main_image" height="460" style="margin-top:0px">',
-    '<img src="../options_images/Depositphotos_3855384_xs.jpg" alt="Page2site" id="main_image" style="margin-top:20px">',
-    '<img src="../options_images/Depositphotos_5721598_s.jpg" alt="Page2site" id="main_image" height="460" style="margin-top:0px">',
-    '<img src="../options_images/Depositphotos_6467121_s.jpg" alt="Page2site" id="main_image" height="460" style="margin-top:0px">',
-    '<img src="../options_images/Depositphotos_7267553_s.jpg" alt="Page2site" id="main_image" height="460" style="margin-top:0px">',
-    '<img src="../options_images/Depositphotos_7692657_s.jpg" alt="Page2site" id="main_image" height="460" style="margin-top:0px">',
+    '<img src="../options_images/Depositphotos_4876746_xs.jpg" alt="Otonomic" id="main_image" height="460" style="margin-top:0px">',
+    '<img src="../options_images/Depositphotos_3340512_xs.jpg" alt="Otonomic" id="main_image" height="460" style="margin-top:0px">',
+    '<img src="../options_images/Depositphotos_3855384_xs.jpg" alt="Otonomic" id="main_image" style="margin-top:20px">',
+    '<img src="../options_images/Depositphotos_5721598_s.jpg" alt="Otonomic" id="main_image" height="460" style="margin-top:0px">',
+    '<img src="../options_images/Depositphotos_6467121_s.jpg" alt="Otonomic" id="main_image" height="460" style="margin-top:0px">',
+    '<img src="../options_images/Depositphotos_7267553_s.jpg" alt="Otonomic" id="main_image" height="460" style="margin-top:0px">',
+    '<img src="../options_images/Depositphotos_7692657_s.jpg" alt="Otonomic" id="main_image" height="460" style="margin-top:0px">',
 );
 
 $main_button_options = array(
@@ -95,7 +95,9 @@ $main_button_text = $main_button_options[$mvt_options_arr[1]];
         <script type="text/javascript" src="js/jquery.cycle.js"></script>
         <script type="text/javascript" src="js/cufon-yui.js"></script>
         <script type="text/javascript" src="js/PTSans.js"></script>
-        <script type="text/javascript" src="js/custom.js"></script><title>Page2site</title>
+        <script type="text/javascript" src="js/custom.js"></script>
+
+        <title>Otonomic</title>
 
         <!-- fancybox js/css start -->
         <link rel="stylesheet" type="text/css" href="../shared/css/fancybox/jquery.fancybox.css" />
@@ -126,8 +128,7 @@ $main_button_text = $main_button_options[$mvt_options_arr[1]];
     <noscript><link rel="stylesheet" href="css/noscript.css"
                     type="text/css" /></noscript>
 
-    <?php include('../shared/google_analytics_head_end.php') ?>
-
+        <script type="text/javascript" src="/js/otonomic-analytics.js"></script>
 </head>
 
 <noscript><link rel="stylesheet" href="css/noscript.css" type="text/css" /></noscript>
@@ -135,14 +136,13 @@ $main_button_text = $main_button_options[$mvt_options_arr[1]];
 
 <body>
     <?php require_once '../../shared/facebook_connect.php'; ?>
-    <?php include('../shared/clicktale_body_start.php') ?>
 
     <div id="header">
         <div class="container">
             <div id="logo"> 
-                <a href="http://www.page2site.com" target="_blank"><img src="../shared/images/logo-transparent-150px.png" alt="Page2site logo" height="70"/></a>
+                <a href="http://www.Otonomic.com" target="_blank"><img src="../shared/images/logo-transparent-150px.png" alt="Otonomic logo" height="70"/></a>
             </div>
-            <div id="topcontacts"> <br/>Email Us: <span><a href="mailto:info@page2site.com" style="color:#a3238e">info@page2site.com</a></span> </div>
+            <div id="topcontacts"> <br/>Email Us: <span><a href="mailto:info@otonomic.com" style="color:#a3238e">info@otonomic.com</a></span> </div>
         </div>
     </div>
     <div class="container">
@@ -171,7 +171,7 @@ $main_button_text = $main_button_options[$mvt_options_arr[1]];
                 <div id="offerright">
                     <div id="offerstatic" class="center"> 
                             <!-- <iframe src="http://player.vimeo.com/video/7449107" frameborder="0" height="290" width="420"></iframe>  -->
-                            <!-- <img src="images/Depositphotos_3340512_xs.jpg" alt="Page2site" style="margin-left: 40px;margin-top: -22px;width: 365px;" /> -->
+                            <!-- <img src="images/Depositphotos_3340512_xs.jpg" alt="otonomic" style="margin-left: 40px;margin-top: -22px;width: 365px;" /> -->
                         <?php echo $main_image_tag; ?> 
                     </div>
                 </div>
@@ -180,18 +180,16 @@ $main_button_text = $main_button_options[$mvt_options_arr[1]];
     </div>
     <div id="footer">
         <div class="container">
-            <div id="copyrights"> <a href="http://www.page2site.com" target="_blank">Page2site</a> © 2013</div>
+            <div id="copyrights"> <a href="http://www.otonomic.com" target="_blank">Otonomic</a> © <?= date('Y')?></div>
             <?php if (false): ?>
                 <ul id="fsocial">
-                    <li><a href="http://www.facebook.com/page2site" class="ntip" title="Facebook"><img src="images/icons/facebook.png" alt="Facebook"></a></li>
-                    <li><a href="https://twitter.com/page2site" class="ntip" title="Twitter"><img src="images/icons/twitter.png" alt="Twitter"></a></li>
-                    <li><a href="mailto:info@page2site.com" class="ntip" title="Email Subscription"><img src="images/icons/email.png" alt="Email Subscription"></a></li>
+                    <li><a href="http://www.facebook.com/otonomic" class="ntip" title="Facebook"><img src="images/icons/facebook.png" alt="Facebook"></a></li>
+                    <li><a href="https://twitter.com/otonomic" class="ntip" title="Twitter"><img src="images/icons/twitter.png" alt="Twitter"></a></li>
+                    <li><a href="mailto:info@otonomic.com" class="ntip" title="Email Subscription"><img src="images/icons/email.png" alt="Email Subscription"></a></li>
                 </ul>
             <?php endif; ?>
         </div>
     </div>
 
     <?php //include('../shared/uservoice_body_end.php') ?>
-    <?php include('../shared/google_analytics_body_end.php') ?>    
-    <?php include('../shared/clicktale_body_end.php') ?>    
 </body></html>

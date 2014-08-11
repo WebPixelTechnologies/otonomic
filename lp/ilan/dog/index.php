@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Otonomic </title>
+    <title>Otonomic - turn your Facebook page into a professional website</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <style>
         body{background: #201717;}
@@ -16,11 +16,11 @@
 <body>
     <div class="csszoom" id="dog">
         <div class="wrapper">
-            <div id="main" class="tb">
+            <div id="main">
                 <div class="container">
                     <div class="top_wraper">
-                        <h1 class="slogan">If only I had a website...</h1>
-                        <div class="make_my_website">
+                        <h1 class="slogan" id="slogan">If only I had a website...</h1>
+                        <div class="make_my_website" id="make_my_website">
                             <table class="table_form">
                             <tr class="form_input2">
                                 <td>
@@ -40,9 +40,9 @@
                     </div>
                         <div class="social">
                             <ul>
-                                <li><a href="#" ><img src="images/twt.png" alt=" " /> </a></li>
-                                <li><a href="#" ><img src="images/fb2.png" alt=" " /></a></li>
-                                <li><a href="#" ><img src="images/in.png" alt=" " /></a></li>
+                                <li><a target="_blank" href="http://twitter.com/otonomic" ><img src="images/twt.png" alt=" " /> </a></li>
+                                <li><a target="_blank" href="http://facebook.com/otonomic" ><img src="images/fb2.png" alt=" " /></a></li>
+                                <li><a target="_blank" href="https://www.linkedin.com/company/3104980" ><img src="images/in.png" alt=" " /></a></li>
                             </ul>
                         </div>
                         <div class="bottom_logo"><img src="images/bottom_logo.png" alt=" " /></div>

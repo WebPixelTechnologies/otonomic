@@ -30,14 +30,14 @@ body {
     float: left;
     padding: 0 30px;
 }
-.slogan{
+.slogan,#slogan{
     color: #fff;
     font-family: 'Exo-Light';
     font-weight: normal;
     font-size: 36px;
     margin-bottom: 0;
 }
-.make_my_website{
+.make_my_website,#make_my_website{
     clear: both;
     text-align: right;
 }
@@ -94,7 +94,7 @@ body {
 .social li img{
     margin-left: 6px;
 }
-.bottom_logo{
+.bottom_logo,#bottom_logo{
     width: 100px;
     height: 45px;
     position: absolute;
