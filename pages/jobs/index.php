@@ -22,7 +22,9 @@
 				</div>
 			</div>
 			<div class="pull-right">
-				Like
+				<div id="page-like">
+					<div class="fb-like" data-href="http://www.facebook.com/otonomic/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+				</div>
 			</div>
 		</div>
 	</div><!-- #header-ends -->
@@ -105,5 +107,13 @@
 			</div>
 		</div>
 	</div><!-- #footer ends -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=373931652687761&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
   </body>
 </html>

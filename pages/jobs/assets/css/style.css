@@ -28,6 +28,10 @@ h2
 	background:#1f1a18;
 	color:#fcf8f5;
 }
+#header #page-like
+{
+	padding-top:8px;
+}
 #page-heading
 {
 	background:#3d3531;
@@ -53,4 +57,17 @@ h2
 	margin-top:-30%;
 	z-index: -1;
 	position: relative;
+}
+@media (max-width: 767px)
+{
+	body
+	{
+		padding-left:0;
+		padding-right:0;
+	}
+	.container
+	{
+		padding-left:20px;
+		padding-right:20px;
+	}
 }
