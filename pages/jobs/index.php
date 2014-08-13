@@ -106,6 +106,7 @@
 					<p>
 						<strong>Managerial experience</strong> - a big plus.
 					</p>
+                    <p>Please email your CV to <a href="mailto:jobs@otonomic.com">jobs@otonomic.com</a>.</p>
 				</div>
 				<div class="span4">
 					<div id="share">
