@@ -7,7 +7,7 @@
 	
 	<meta name="description" content="Otonomic is looking for a new Head of Online Marketing. Please help by sharing!" />
 	<!-- Open Graph data --> 
-	<meta property="og:title" content="Otonomic Jobs - Head of Online Media" /> 
+	<meta property="og:title" content="Otonomic Jobs - Head of Online Marketing" />
 	<meta property="og:type" content="article" /> 
 	<meta property="og:image" content="assets/img/jobs-banner.jpg" />
 	<meta property="og:description" content="Otonomic is looking for a new Head of Online Marketing. Please help by sharing!" />
@@ -63,6 +63,8 @@
 					<p>
 						We're looking for a dedicated, motivated, creative, data-driven and resourceful head of online marketing to build the global brand and its global online marketing strategy. The selected candidate will be responsible for initiating, coordinating and implementing the company's marketing activities, including brand management and online marketing (SEM, SEO, ads, etc.).
 					</p>
+                    <p>Please email your CV to <a href="mailto:jobs@otonomic.com">jobs@otonomic.com</a>.</p>
+
 					<h2>Responsibilities</h2>
 					<p>
 						<strong>Strategic Planning</strong>: Take part in shaping and building an effective online marketing plan that will reach freelancers and small business owners, and help them grow their business.
