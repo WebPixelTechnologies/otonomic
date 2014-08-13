@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Otonomic Jobs - Head of Online Media</title>
+    <title>Otonomic Jobs - Head of Online Marketing</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
