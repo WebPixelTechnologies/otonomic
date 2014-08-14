@@ -9,7 +9,7 @@
 	<!-- Open Graph data --> 
 	<meta property="og:title" content="Otonomic Jobs - Head of Online Marketing" />
 	<meta property="og:type" content="article" /> 
-	<meta property="og:image" content="http://otonomic.com/pages/jobs/assets/img/jobs-banner-head-of-online-marketing.jpg" />
+	<meta property="og:image" content="http://otonomic.com/pages/jobs/assets/img/Jobs-Banner-head-of-online-marketing.jpg" />
 	<meta property="og:description" content="Otonomic is looking for a new Head of Online Marketing. Please help by sharing!" />
 
 	
