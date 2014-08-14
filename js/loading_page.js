@@ -1,4 +1,4 @@
-$(function () {
+(function ($, window, undefined) {
 
 	var page_id = getParameterByName('page_id');
 	var page_name = getParameterByName('page_name');
@@ -26,7 +26,7 @@ $(function () {
 
 	// Progress timer
 	var nprogressSpeed = 0.0123;
-	var timer = $.timer(function () {debugger;
+	var timer = $.timer(function () {
 
 		// Start Progress
 		NProgress.inc(nprogressSpeed);
@@ -500,10 +500,13 @@ $(function () {
 		});
 
 
-});
+})(jQuery, window);
+
 
 /* required functions */
+
 function callback(data) {
+	debugger;
 	window.is_blog_ready = 1;
 
 	if (data.redirect.indexOf("http://") < 0) {
@@ -537,12 +540,14 @@ function callback(data) {
 
 	blog_created();
 }
+
 function getParameterByName(name) {
 	name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
 	var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
 		results = regex.exec(location.search);
 	return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
+
 function getFacebookPageAddress(page_id) {
 	var facebook_query_page_url = "https://graph.facebook.com/" + page_id;
 	$.get(facebook_query_page_url, function (data) {
@@ -583,6 +588,7 @@ function getFacebookPageAddress(page_id) {
 
 	}, "json");
 }
+
 function is_localhost() {
 	if (location.host == 'otonomic.test' || location.host == 'localhost') {
 		return true;
@@ -631,7 +637,6 @@ function blog_created() {
 	return;
 }
 
-
 function contact_form_submited() {
 	window.is_contact_saved = 1;
 
@@ -646,7 +651,6 @@ function contact_form_submited() {
 		}
 	}
 }
-
 
 function send_contact_data() {
 
