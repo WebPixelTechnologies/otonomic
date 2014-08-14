@@ -69,6 +69,23 @@ ul.social-share li
 {
 	margin:5px 0;
 }
+ul.social-share {
+    margin-left: 15px;
+}
+div#nav-menu {
+    float: right;
+    margin-top: 14px;
+    margin-right:45px;
+    color:white;
+}
+#header #page-like {
+    float:right;
+}
+#nav-menu li {
+    list-style: none;
+}
+
+
 @media (max-width: 767px)
 {
 	body

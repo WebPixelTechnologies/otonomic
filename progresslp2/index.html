@@ -402,11 +402,18 @@
           });
           $('#progress-text').html('Adding personalization options…');
         }
-		
+
+
+
+
+
+
+
+
+
+
 		if (page_id) {
-
             createWebsiteUsingAjax(page_id);
-
             getFacebookPageAddress(page_id);
         }
 		
@@ -762,12 +769,14 @@ function callback(data) {
 
 	blog_created();
 }
+
 function getParameterByName(name) {
 	name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
 	var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
 			results = regex.exec(location.search);
 	return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
+
 function getFacebookPageAddress(page_id) {
 	var facebook_query_page_url = "https://graph.facebook.com/" + page_id;
 	$.get(facebook_query_page_url, function (data) {
@@ -808,6 +817,7 @@ function getFacebookPageAddress(page_id) {
 
 	}, "json");
 }
+
 function is_localhost() {
 	if( location.host == 'otonomic.test' || location.host == 'localhost') {
 		return true;
