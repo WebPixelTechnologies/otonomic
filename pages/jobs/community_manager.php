@@ -10,7 +10,8 @@
 	<meta name="description" content="Otonomic is looking for a new <?= $position?>. Please help by sharing!" />
 	<!-- Open Graph data --> 
 	<meta property="og:title" content="Otonomic Jobs - <?= $position?>" />
-	<meta property="og:type" content="article" /> 
+	<meta property="og:type" content="article" />
+    <meta property="og:url" content="http://otonomic.com/pages/jobs/community_manager.php" />
 	<meta property="og:image" content="http://otonomic.com/pages/jobs/assets/img/Jobs-Banner-community-manager.jpg" />
 	<meta property="og:description" content="Otonomic is looking for a new <?= $position?>. Please help by sharing!" />
     <meta property="fb:admins" content="19717048">
