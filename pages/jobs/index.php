@@ -11,6 +11,8 @@
 	<meta property="og:type" content="article" /> 
 	<meta property="og:image" content="http://otonomic.com/pages/jobs/assets/img/Jobs-Banner-head-of-online-marketing.jpg" />
 	<meta property="og:description" content="Otonomic is looking for a new Head of Online Marketing. Please help by sharing!" />
+    <meta property="fb:admins" content="19717048">
+    <meta property="fb:app_id" content="334469486646650">
 
 	
 	<link href="assets/css/fonts.css" rel="stylesheet" media="screen">
