@@ -72,6 +72,7 @@ _paq.push(['enableLinkTracking']);
 
 
 function track_event(category, action, label, value){
+	// console.log('track_envent: ' + category + ' - ' + action + ' - ' + label + ' - ' + value); // DEBUG
     if(label == undefined)
         label = '';
 

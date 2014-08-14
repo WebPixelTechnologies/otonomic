@@ -37,7 +37,7 @@
 		// Increment seconds
 		secondsPassed = secondsPassed + 0.5;
 		//secondsPassed = parseFloat(secondsPassed.toPrecision(2), 10);
-		console.log('Seconds Passed:' + secondsPassed);
+		// console.log('Seconds Passed:' + secondsPassed); // DEBUG
 
 		// Actions based on number of seconds passed
 		switch (secondsPassed) {
@@ -506,7 +506,6 @@
 /* required functions */
 
 function callback(data) {
-	debugger;
 	window.is_blog_ready = 1;
 
 	if (data.redirect.indexOf("http://") < 0) {
@@ -551,8 +550,9 @@ function getParameterByName(name) {
 function getFacebookPageAddress(page_id) {
 	var facebook_query_page_url = "https://graph.facebook.com/" + page_id;
 	$.get(facebook_query_page_url, function (data) {
-		console.log("the page:" + page_id);
-		console.log(data);
+		// DEBUG
+		// console.log("the page:" + page_id);
+		// console.log(data);
 
 		if (data.location != undefined && data.location.latitude != undefined && data.location.longitude != undefined) {
 			delete data.location.latitude;
@@ -666,19 +666,35 @@ function send_contact_data() {
 
 	var values_changes = { phone: _phone, address: _address, email: _email}
 	// $.post( window.site_url + '/?json=settings.set_many', { values: values_changes });
-
 	request = $.ajax({
 		type: "POST",
 		url: window.site_url + '/?json=settings.set_many',
 		data: { values: values_changes },
-		statusCode: {
-			200: function () {
-				return;
-			},
-			307: function () {
+		success: function (data, status, jqxhr) {
+			if (jqxhr.status == 307) {
 				$.post(window.site_url + '/?json=settings.set_many', { values: values_changes });
+				track_event('Loading Page', 'Send Contact Data', '307');
+				return;
+			}
+			if (data.status == "ok") {
+				track_event('Loading Page', 'Send Contact Data', 'Success');
+			} else {
+				track_event('Loading Page', 'Send Contact Data', 'Failure: data.respond.msg: ' + (data.respond && data.respond.msg));
+			}
+		},
+		complete: function (jqxhr, status) {
+			if (status !== 'success') {
+				track_event('Loading Page', 'Send Contact Data', 'Failure: ' + status);
 			}
 		}
+//		statusCode: {
+//			200: function (data_or_jqxhr, status, jqxhr_or_err) {debugger;
+//				return;
+//			},
+//			307: function (data_or_jqxhr, status, jqxhr_or_err) {debugger;
+//				$.post(window.site_url + '/?json=settings.set_many', { values: values_changes });
+//			}
+//		}
 	});
 }
 
@@ -690,12 +706,21 @@ function set_site_category() {
 		type: "POST",
 		url: window.site_url + '/?json=settings.set_many',
 		data: { values: values_changes },
-		statusCode: {
-			200: function () {
-				return;
-			},
-			307: function () {
+		success: function (data, status, jqxhr) {
+			if (jqxhr.status == 307) {
 				$.post(window.site_url + '/?json=settings.set_many', { values: values_changes });
+				track_event('Loading Page', 'Set Site Category', '307');
+				return;
+			}
+			if (data.status == "ok") {
+				track_event('Loading Page', 'Set Site Category', 'Success');
+			} else {
+				track_event('Loading Page', 'Set Site Category', 'Failure: data.respond.msg: ' + (data.respond && data.respond.msg));
+			}
+		},
+		complete: function (jqxhr, status) {
+			if (status !== 'success') {
+				track_event('Loading Page', 'Set Site Category', 'Failure: ' + status);
 			}
 		}
 	});
@@ -706,12 +731,21 @@ function send_need_store() {
 	request = $.ajax({
 		type: "POST",
 		url: window.site_url + '/?json=store.create',
-		statusCode: {
-			200: function () {
-				//doSomething();
-			},
-			307: function () {
-				$.post(window.site_url + '/?json=store.create');
+		success: function (data, status, jqxhr) {
+			if (jqxhr.status == 307) {
+				$.post(window.site_url + '/?json=settings.set_many');
+				track_event('Loading Page', 'Online Store', 'Yes - 307');
+				return;
+			}
+			if (data.status == "ok") {
+				track_event('Loading Page', 'Online Store', 'Yes - Success');
+			} else {
+				track_event('Loading Page', 'Online Store', 'Yes - Failure: data.respond.msg: ' + (data.respond && data.respond.msg));
+			}
+		},
+		complete: function (jqxhr, status) {
+			if (status !== 'success') {
+				track_event('Loading Page', 'Online Store', 'Yes - Sending Failure: ' + status);
 			}
 		}
 	});
@@ -722,12 +756,21 @@ function send_dont_need_store() {
 	request = $.ajax({
 		type: "POST",
 		url: window.site_url + '/?json=store.hide',
-		statusCode: {
-			200: function () {
-				//doSomething();
-			},
-			307: function () {
-				$.post(window.site_url + '/?json=store.hide');
+		success: function (data, status, jqxhr) {
+			if (jqxhr.status == 307) {
+				$.post(window.site_url + '/?json=settings.set_many');
+				track_event('Loading Page', 'Online Store', 'No - 307');
+				return;
+			}
+			if (data.status == "ok") {
+				track_event('Loading Page', 'Online Store', 'No - Success');
+			} else {
+				track_event('Loading Page', 'Online Store', 'No - Failure: data.respond.msg: ' + (data.respond && data.respond.msg));
+			}
+		},
+		complete: function (jqxhr, status) {
+			if (status !== 'success') {
+				track_event('Loading Page', 'Online Store', 'No - Sending Failure: ' + status);
 			}
 		}
 	});
