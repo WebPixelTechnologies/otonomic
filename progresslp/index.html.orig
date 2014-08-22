@@ -261,6 +261,10 @@
     <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
     <script src="js/jquery.geocomplete.min.js"></script>
 
-    <script type="text/javascript" src="/js/loading_page.old.js"></script>
+<<<<<<< HEAD
+    <script type="text/javascript" src="/js/loading_page.js"></script>
+=======
+    <script src="../js/loading_page.old.js"></script>
+>>>>>>> origin/andrei_progresslp2
   </body>
 </html>
