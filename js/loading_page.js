@@ -2,6 +2,8 @@
 
 	var page_id = getParameterByName('page_id');
 	var page_name = getParameterByName('page_name');
+    var category = getParameterByName('category');
+    var category_list = getParameterByName('category_list');
 
 	track_event('Loading Page', 'View');
 	jQuery('input[type=text]').addClass('LoNotSensitive');
@@ -123,7 +125,6 @@
 
 	// owl-carousel init
 	$("#owl-slider1").owlCarousel({
-
 		navigation: false,
 		singleItem: true,
 		transitionStyle: "fade",
@@ -135,8 +136,7 @@
 		mouseDrag: false,
 		touchDrag: false,
 		//Basic Speeds
-		slideSpeed: 200,
-
+		slideSpeed: 200
 	});
 
 	//get carousel instance data and store it in variable owl
@@ -156,8 +156,7 @@
 		mouseDrag: false,
 		touchDrag: false,
 		//Basic Speeds
-		slideSpeed: 200,
-
+		slideSpeed: 200
 	});
 
 	//get carousel instance data and store it in variable owl
@@ -182,15 +181,19 @@
 	}
 
 	if (page_id) {
-
+        var newsite_url = 'http://wp.otonomic.com/wp-admin/admin-ajax.php?action=check_page&page_id='+page_id;
+        $('#oto-web-url').html('<a href="'+newsite_url+'">'+newsite_url+'</a>');
 		createWebsiteUsingAjax(page_id);
-
 		getFacebookPageAddress(page_id);
 	}
 
 	if (page_name) {
 		$('#ot-fb-name').html(page_name);
 	}
+
+    if(category) {
+        $('#fb_category').val(category);
+    }
 
 	// Contact details submit
 	$('.submit').click(function (e) {

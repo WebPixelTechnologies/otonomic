@@ -4,7 +4,7 @@ var p2s_site_url = 'http://builder.otonomic.com/';
 var p2s_site_creation_base_url = 'http://wp.otonomic.com/migration/';
 
 var ot_wp_site_creation_url = "http://wp.otonomic.com/migration/index.php?theme=parallax";
-var ot_loading_page_url     = "http://otonomic.com/progresslp";
+var ot_loading_page_url     = "/progresslp2";
 if(typeof (query_tags) == 'undefined') {
     query_tags = {};
 }
@@ -254,7 +254,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
         url: 'https://graph.facebook.com/search',
         context: document.body,
         callbackParameter: "callback",
-        data: {'q': value, type: 'page', fields: 'id,name,category,cover,likes', limit: 9, access_token: '389314351133865|O4FgcprDMY0k6rxRUO-KOkWuVoU'},
+        data: {'q': value, type: 'page', fields: 'id,name,category,category_list,cover,likes', limit: 9, access_token: '389314351133865|O4FgcprDMY0k6rxRUO-KOkWuVoU'},
         success: function (json, textStatus, xOptions) {
             found_only_result_url = '';
             found_result = json.data.length;
@@ -266,6 +266,9 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
 
             jQuery.each(json.data, function (key, val) {
                 query_tags.page_id = val.id;
+                query_tags.page_name = val.name;
+                if(typeof(val.category) !== 'undefined')         { query_tags.category = val.category; }
+                if(typeof(val.category_list) !== 'undefined')    { query_tags.category_list = val.category_list; }
                 current_site_creation_link = ot_loading_page_url + '?' + $.param(query_tags);
 
                 if (found_result == 1) {
