@@ -12,7 +12,16 @@ if (is_localhost()) {
     var category = getParameterByName('category');
     var category_list = getParameterByName('category_list');
 
-	track_event('Loading Page', 'View');
+    if (page_name) {
+        $('#ot-fb-name').html(page_name);
+    }
+
+    if(category) {
+        $('#fb_category').val(category);
+    }
+
+
+    track_event('Loading Page', 'View');
 	jQuery('input[type=text]').addClass('LoNotSensitive');
 
 
@@ -193,14 +202,6 @@ if (is_localhost()) {
 		createWebsiteUsingAjax(page_id);
 		getFacebookPageAddress(page_id);
 	}
-
-	if (page_name) {
-		$('#ot-fb-name').html(page_name);
-	}
-
-    if(category) {
-        $('#fb_category').val(category);
-    }
 
 	// Contact details submit
 	$('.submit').click(function (e) {
