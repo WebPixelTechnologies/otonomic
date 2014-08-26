@@ -493,10 +493,12 @@ function callback(data) {
 	if (data.status == 'fail') {
 		window.location = data.site_url;
 		track_event('Account Manage', 'Site Exists', data.message);
+        track_virtual_pageview('site_exists')
 
 	} else {
 		var page_type = window.page_type || 'Fan Page';
 		track_event('Account Manage', 'Create Success', page_type);
+        track_virtual_pageview('site_created')
 	}
 
 	// Site created, facebook fixel
@@ -509,7 +511,7 @@ function callback(data) {
 	window.token = data.token;
 
 	jQuery('#see-my-website-btn').attr('href', data.redirect);
-	jQuery('#oto-web-url').html(data.site_url);
+	jQuery('#oto-web-url').html('<a href="'+data.site_url+'">'+data.site_url+'</a>');
 
 	blog_created();
 }

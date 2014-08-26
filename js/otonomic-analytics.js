@@ -80,7 +80,23 @@ function track_event(category, action, label, value){
         value = null;
     }
 
-    ga('send', 'event', category, action, label,value);
+    if(typeof(ga) !== 'undefined') {
+        ga('send', 'event', category, action, label,value);
+    }
+
     // jQuery.post('http://otonomic.com/code/sites/track_click/', { category: category, event: action , label: label, value: value });
-    _paq.push(['trackEvent', category, action, label, value ]);
+    if(typeof(_paq) !== 'undefined') {
+        _paq.push(['trackEvent', category, action, label, value ]);
+    }
+}
+
+function track_virtual_pageview(url) {
+
+    if(typeof(ga) !== 'undefined') {
+        ga('send', 'pageview', url);
+    }
+    if(typeof(_paq) !== 'undefined') {
+        var piwikTracker = Piwik.getTracker();
+        PiwikTracker.trackPageView([url]);
+    }
 }

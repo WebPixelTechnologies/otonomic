@@ -125,11 +125,11 @@ function create_wp_site(page_id){
         }
 
         $this.tipsy("hide");
-        trackFBConnect("Search Marketing Website", "Go", $this.attr('data-attr')+","+$page_url);
+        track_event("Search Marketing Website", "Go", $this.attr('data-attr')+","+$page_url);
 
         if ($page_url.indexOf("facebook.com") > -1) {
             // var url = p2s_site_url + 'sites/add/?u=' + encodeURIComponent($page_url);
-            trackFBConnect("Search Marketing Website", "Choose Url", $page_url);
+            track_event("Search Marketing Website", "Choose Url", $page_url);
 
             query_tags.page_id = $page_url;
             current_site_creation_link = ot_loading_page_url + '?' + $.param(query_tags);
@@ -143,7 +143,7 @@ function create_wp_site(page_id){
 
 
         if (found_result == 1 && $.trim(found_only_result_url) != '') {
-            trackFBConnect("Search Marketing Website", "Choose Url", $this.attr('data-attr')+","+found_only_result_url);
+            track_event("Search Marketing Website", "Choose Url", $this.attr('data-attr')+","+found_only_result_url);
             setTimeout(function () { // now wait 300 milliseconds...
                 window.location = found_only_result_url;
             }, 300);
@@ -180,7 +180,7 @@ jQuery(document).ready(function($){
     });
 
     $(document).on('click','.search-results-item',function(event){
-        trackFBConnect("Search Marketing Website", "Click", $(this).attr('href'));
+        track_event("Search Marketing Website", "Click", $(this).attr('href'));
     });
 
 
@@ -228,7 +228,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
             return;
         }
         p2strack++;
-        trackFBConnect("Search Marketing Website", "Query", $(InputField).attr('data-attr')+","+value, p2strack);
+        track_event("Search Marketing Website", "Query", $(InputField).attr('data-attr')+","+value, p2strack);
 
         window._fbq = window._fbq || [];
         window._fbq.push(['track', '6016621432630', {'value':'0.00','currency':'USD'}]);
@@ -314,7 +314,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
 }
 function closeSearch(targetContainer,from){
         found_result = 0;
-        trackFBConnect('Search Marketing Website','Close',from);
+        track_event('Search Marketing Website','Close',from);
 
         var wrapper = $(targetContainer);
         wrapper.html($('<div/>', {}));

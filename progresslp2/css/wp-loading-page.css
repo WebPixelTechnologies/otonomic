@@ -528,3 +528,6 @@ select {
 :-ms-input-placeholder { /* Internet Explorer 10+ */
     color:    #999;
 }
+h3#oto-web-url {
+    text-transform: lowercase;
+}
