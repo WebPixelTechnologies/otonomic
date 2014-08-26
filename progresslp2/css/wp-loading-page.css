@@ -446,6 +446,12 @@ select {
   border-radius: 10px;
 }
 
+.btn-ttc-clear {
+	background: transparent;
+	color: #333;
+	box-shadow: none;
+}
+
 /* Apply the custom-colored gradients */
 /* Note: you'll need to include all the appropriate gradients for various browsers and standards. */
 .btn-ttc-orange {
@@ -469,7 +475,8 @@ select {
 .btn-ttc-orange.disabled >{
 	display: none;
 }
-.btn-ttc-orange .glyphicon{
+.btn-ttc-orange .glyphicon,
+.btn-ttc-clear .glyphicon{
 	margin-right: 10px;
 }
 
