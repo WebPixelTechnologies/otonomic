@@ -280,6 +280,22 @@ if (is_localhost()) {
 
 	});
 
+	// Skip category
+	$('.submit-skip-category').click(function (e) {
+		e.preventDefault();
+		// Resume timer
+		timer.play();
+		// Increment progress bar a little
+		NProgress.set(NProgress.status + 0.01);
+		// Display precentage
+		$('.peg').html(Math.ceil(NProgress.status * 100) + '%');
+		// Resume progress bar
+		NProgress.inc(nprogressSpeed);
+		// Next silde
+		owl2.next();
+
+	});
+
 	// typeahead (auto-complete)
 	var substringMatcher = function (strs) {
 		return function findMatches(q, cb) {
