@@ -204,9 +204,20 @@ if (is_localhost()) {
 	}
 
 	// Contact details submit
-	$('.submit').click(function (e) {
+	$('.submit-contact').click(function (e) {
 		e.preventDefault();
 		contact_form_submited();
+		// Increment progress bar a little
+		NProgress.set(NProgress.status + 0.01);
+		// Display precentage
+		$('.peg').html(Math.ceil(NProgress.status * 100) + '%');
+		// Switch stage
+		switchToStage4();
+	});
+
+	// Contact Details Skip
+	$('.submit-skip-contact').click(function (e) {
+		e.preventDefault();
 		// Increment progress bar a little
 		NProgress.set(NProgress.status + 0.01);
 		// Display precentage
@@ -232,8 +243,8 @@ if (is_localhost()) {
 		$('.peg').html(Math.ceil(NProgress.status * 100) + '%');
 	});
 
-	// Skip Submit
-	$('.submit-skip').click(function (e) {
+	// Skip Store
+	$('.submit-skip-store').click(function (e) {
 		e.preventDefault();
 		send_dont_need_store();
 		// Switch stage
@@ -256,6 +267,22 @@ if (is_localhost()) {
 		} else {
 			window.set_site_category_pending = 1;
 		}
+		// Resume timer
+		timer.play();
+		// Increment progress bar a little
+		NProgress.set(NProgress.status + 0.01);
+		// Display precentage
+		$('.peg').html(Math.ceil(NProgress.status * 100) + '%');
+		// Resume progress bar
+		NProgress.inc(nprogressSpeed);
+		// Next silde
+		owl2.next();
+
+	});
+
+	// Skip category
+	$('.submit-skip-category').click(function (e) {
+		e.preventDefault();
 		// Resume timer
 		timer.play();
 		// Increment progress bar a little
