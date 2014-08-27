@@ -298,13 +298,17 @@ select {
 	text-transform: uppercase;
 }
 #congratz h3{
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 #congratz .btn{
 	padding: 16px 30px;
 }
 #congratz .tos{
 	margin-top: 15%;
+}
+#congratz .fb-like{
+	display: block;
+	margin-bottom: 20px;
 }
 /* typeahead
 -----------------------------------*/

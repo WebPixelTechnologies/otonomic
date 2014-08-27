@@ -35,6 +35,18 @@
   </head>
 
   <body class="wp-lp">
+
+  <!-- Facebook SDK -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=575528525876858&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <!-- /Facebook SDK -->
+
     <div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -207,6 +219,7 @@
             <h1 class="congratz-title">Congratulations!</h1>
             <h2>Your new website is ready at</h2>
             <h3 id="oto-web-url">http://wp.otonomic.com/newsite</h3>
+            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
             <a href="javascript:void(0)" class=" btn btn-ttc-orange btn-lg" id="see-my-website-btn">Take me to my website!</a>
             <p class="tos">By clicking the button, you approve the Otonomic <a href="/pdfs/Otonomic_Terms_of_Service.pdf">Terms of Service</a></p>
           </div>
