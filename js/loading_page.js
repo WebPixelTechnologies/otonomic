@@ -520,12 +520,12 @@ function callback(data) {
 	if (data.status == 'fail') {
 		window.location = data.site_url;
 		track_event('Account Manage', 'Site Exists', data.message);
-        track_virtual_pageview('site_exists')
+        track_virtual_pageview('site_exists');
 
 	} else {
 		var page_type = window.page_type || 'Fan Page';
 		track_event('Account Manage', 'Create Success', page_type);
-        track_virtual_pageview('site_created')
+        track_virtual_pageview('site_created');
 	}
 
 	// Site created, facebook fixel

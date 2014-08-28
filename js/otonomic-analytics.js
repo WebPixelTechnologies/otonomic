@@ -91,7 +91,6 @@ function track_event(category, action, label, value){
 }
 
 function track_virtual_pageview(url) {
-
     if(typeof(ga) !== 'undefined') {
         ga('send', 'pageview', url);
     }
