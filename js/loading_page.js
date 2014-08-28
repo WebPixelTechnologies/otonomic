@@ -89,7 +89,7 @@ if (is_localhost()) {
 					// init google maps
 					var options = {
 						map: ".map_canvas",
-						location: "New york"
+						location: jQuery('#address').val()
 					};
 					$("#address").trigger("geocode");
 					$("#address").geocomplete(options)
@@ -586,9 +586,6 @@ function getFacebookPageAddress(page_id) {
 		$('#address').val(address);
 		$('#email').val(email);
 		$('#phone').val(phone);
-
-		jQuery('#address').geocomplete('find', jQuery('#address').val());
-
 	}, "json");
 }
 
