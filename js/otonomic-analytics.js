@@ -90,12 +90,21 @@ function track_event(category, action, label, value){
     }
 }
 
-function track_virtual_pageview(url) {
-    if(typeof(ga) !== 'undefined') {
-        ga('send', 'pageview', url);
+function track_virtual_pageview(url, title) {
+    var options = {
+        'hitType': 'pageview',
+        'page': '/virtual_pageviews/' + url
+    };
+    if(typeof(title) !== 'undefined') {
+        options.title = title;
     }
+
+    if(typeof(ga) !== 'undefined') {
+        ga('send', options);
+    }
+
     if(typeof(_paq) !== 'undefined') {
-        var piwikTracker = Piwik.getTracker();
+        var PiwikTracker = Piwik.getTracker();
         PiwikTracker.trackPageView([url]);
     }
 }

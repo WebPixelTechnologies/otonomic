@@ -5,6 +5,7 @@ if (is_localhost()) {
     builder_domain = 'http://wp.verisites.com/';
 }
 
+
 (function ($, window, undefined) {
 
 	var page_id = getParameterByName('page_id');
@@ -197,8 +198,8 @@ if (is_localhost()) {
 	}
 
 	if (page_id) {
-        var newsite_url = builder_domain+'/wp-admin/admin-ajax.php?action=check_page&page_id='+page_id;
-        $('#oto-web-url').html('<a href="'+newsite_url+'">'+newsite_url+'</a>');
+        window.site_url = builder_domain+'/wp-admin/admin-ajax.php?action=check_page&page_id='+page_id;
+        $('#oto-web-url').html('<a href="'+window.site_url+'">'+window.site_url+'</a>');
 		createWebsiteUsingAjax(page_id);
 		getFacebookPageAddress(page_id);
 	}
@@ -661,7 +662,7 @@ function send_contact_data() {
 	}
 
 	var values_changes = { phone: _phone, address: _address, email: _email}
-	// $.post( window.site_url + '/?json=settings.set_many', { values: values_changes });
+
 	request = $.ajax({
 		type: "POST",
 		url: window.site_url + '/?json=settings.set_many',
