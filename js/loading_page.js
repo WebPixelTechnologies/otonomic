@@ -112,6 +112,9 @@ if (is_localhost()) {
 						.bind("geocode:multiple", function (event, results) {
 							//$.log("Multiple: " + results.length + " results found");
 						});
+					// Blink first input field that empty
+					blinkContactDetails();
+
 				});
 				$('#stage-3').css('opacity',0).removeClass('hidden').animate({opacity: 1}, 'slow');
 				$('#progress-text').html('Adding contact details…');
@@ -120,6 +123,8 @@ if (is_localhost()) {
 				timer.pause();
 				// pause progress bar
 				NProgress.set(NProgress.status);
+				// pulse precentage value
+				$(".peg").toggleClass("pulse");
 				break;
 			case 32:
 				owl2.next();
@@ -163,7 +168,7 @@ if (is_localhost()) {
 		mouseDrag: false,
 		touchDrag: false,
 		//Basic Speeds
-		slideSpeed: 200
+		slideSpeed: 100
 	});
 
 	//get carousel instance data and store it in variable owl
@@ -174,7 +179,7 @@ if (is_localhost()) {
 
 		navigation: false,
 		singleItem: true,
-		transitionStyle: "fade",
+		transitionStyle: "backSlide",
 		//Pagination
 		pagination: false,
 		paginationNumbers: false,
@@ -183,28 +188,76 @@ if (is_localhost()) {
 		mouseDrag: false,
 		touchDrag: false,
 		//Basic Speeds
-		slideSpeed: 200
+		slideSpeed: 100
 	});
 
 	//get carousel instance data and store it in variable owl
 	var owl2 = $("#owl-slider2").data('owlCarousel');
 
+	// #see-my-website-btn Click
+	$('#see-my-website-btn').click(function (event) {
+		event.preventDefault();
+	    var btn = $(this);
+	    btn.button('loading');
+	});
+
+
+	// Blink first input field that empty 
+	// if value entered switch blink to the next empty field
+	function blinkContactDetails(){
+		var address=$.trim($('#address').val());
+		var email=$.trim($('#email').val());
+		var phone=$.trim($('#phone').val());
+		if(address.length==0) {
+			$('#address').addClass('pulse-background');
+		}
+		else if(email.length==0) {
+			$('#email').addClass('pulse-background');
+		}
+		else if(phone.length==0) {
+			$('#phone').addClass('pulse-background');
+		}
+		$('#business-details .form-control').change(function(){
+			$(this).removeClass('pulse-background');
+			blinkContactDetails();
+		});
+		$('#business-details .form-control').focus(function(){
+			$(this).removeClass('pulse-background');
+			//blinkContactDetails();
+		});
+	}
+
 	// function that switched to stage-4 from stage-3
 	function switchToStage4() {
+		// Start pulsing
+		$(".peg").toggleClass("pulse");
+		// fade stage
 		$('#stage-3').fadeOut('slow', function () {
 			$(this).addClass('hidden');
 		});
 		$('#stage-4').css('opacity',0).removeClass('hidden').animate({opacity: 1}, 'slow');
 		$('#progress-text').html('Creating online store…');
+		// Start Title animation
+		var titleBounce = $.timer(function () {
+			$('#stage-4 h1.title').toggleClass('bounce animated');
+		});
+		titleBounce.set({ time: 1500, autostart: true });
 	}
 
 	// function that switched to stage-5 from stage-4
 	function switchToStage5() {
+		// Start pulsing
+		$(".peg").toggleClass("pulse");
+		// fade stage
 		$('#stage-4').fadeOut('slow', function () {
 			$(this).addClass('hidden');
 		});
 		$('#stage-5').css('opacity',0).removeClass('hidden').animate({opacity: 1}, 'slow');
 		$('#progress-text').html('Adding personalization options…');
+		$('#stage-5 .form-control').focus();
+		$('#stage-5 .form-control').keydown(function() {
+		  $('#stage-5 .form-control').removeClass('pulse-background');
+		});
 	}
 
 	if (page_id) {
@@ -218,6 +271,8 @@ if (is_localhost()) {
 	$('.submit-contact').click(function (e) {
 		e.preventDefault();
 		contact_form_submited();
+		// Stop pulsing
+		$(".peg").toggleClass("pulse");
 		// Increment progress bar a little
 		NProgress.set(NProgress.status + 0.01);
 		// Display precentage
@@ -229,6 +284,8 @@ if (is_localhost()) {
 	// Contact Details Skip
 	$('.submit-skip-contact').click(function (e) {
 		e.preventDefault();
+		// Stop pulsing
+		$(".peg").toggleClass("pulse");
 		// Increment progress bar a little
 		NProgress.set(NProgress.status + 0.01);
 		// Display precentage
@@ -252,6 +309,8 @@ if (is_localhost()) {
 		NProgress.set(NProgress.status + 0.02);
 		// Display precentage
 		$('.peg').html(Math.ceil(NProgress.status * 100) + '%');
+		// Stop pulsing
+		$(".peg").toggleClass("pulse");
 	});
 
 	// Skip Store
@@ -264,6 +323,8 @@ if (is_localhost()) {
 		NProgress.set(NProgress.status + 0.02);
 		// Display precentage
 		$('.peg').html(Math.ceil(NProgress.status * 100) + '%');
+		// Stop pulsing
+		$(".peg").toggleClass("pulse");
 	});
 
 
@@ -284,6 +345,8 @@ if (is_localhost()) {
 		NProgress.set(NProgress.status + 0.01);
 		// Display precentage
 		$('.peg').html(Math.ceil(NProgress.status * 100) + '%');
+		// Stop pulsing
+		$(".peg").toggleClass("pulse");
 		// Resume progress bar
 		NProgress.inc(nprogressSpeed);
 		// Next silde
@@ -300,6 +363,8 @@ if (is_localhost()) {
 		NProgress.set(NProgress.status + 0.01);
 		// Display precentage
 		$('.peg').html(Math.ceil(NProgress.status * 100) + '%');
+		// Stop pulsing
+		$(".peg").toggleClass("pulse");
 		// Resume progress bar
 		NProgress.inc(nprogressSpeed);
 		// Next silde
@@ -549,6 +614,7 @@ function callback(data) {
 	window.token = data.token;
 
 	jQuery('#see-my-website-btn').attr('href', data.redirect);
+
 	jQuery('#oto-web-url').html('<a href="'+data.site_url+'">'+data.site_url+'</a>');
 
 	blog_created();

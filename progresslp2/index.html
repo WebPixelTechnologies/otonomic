@@ -65,7 +65,7 @@
       </div>
     </div>
     <div class="container-fluid full-height">
-      <div id="intro" class="row">
+      <div id="intro" class="row hidden">
         <div class="bg-image"><img src="images/bg1.jpg"></div>
         <div class="col-xs-12">
           <div class="content text-center">
@@ -185,8 +185,9 @@
 
               <div class="item">
                 <h3>What’s your business category?</h3>
-                <div id="cat-selector" class="forum-group">
-                  <input class="typeahead form-control" type="text" placeholder="Select category" id="fb_category">
+                <div id="cat-selector" class="forum-group has-feedback">
+                  <input class="typeahead form-control pulse-background" type="text" placeholder="Search for your category" id="fb_category">
+                  <span class="glyphicon glyphicon-search form-control-feedback"></span>
                 </div>
                 <div class="form-group category-submit text-right">
 					<a href="#" onclick="return false;" class="submit-skip-category btn btn-ttc-clear btn-lg"><span class="glyphicon glyphicon-share-alt"></span>Skip</a>
@@ -212,15 +213,15 @@
           </div>
         </div>
       </div>
-      <div id="congratz" class="row hidden">
+      <div id="congratz" class="row">
         <div class="bg-image"><img src="images/bg6.png"></div>
         <div class="col-xs-12">
           <div class="content">
             <h1 class="congratz-title">Congratulations!</h1>
             <h2>Your new website is ready at</h2>
             <h3 id="oto-web-url">http://wp.otonomic.com/newsite</h3>
+            <a href="javascript:void(0)" class=" btn btn-ttc-orange btn-lg" id="see-my-website-btn" data-loading-text="<img src='images/loader.gif'> Taking you to your website...">Take me to my website!</a>
             <div class="fb-like" data-href="https://www.facebook.com/otonomic" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
-            <a href="javascript:void(0)" class=" btn btn-ttc-orange btn-lg" id="see-my-website-btn">Take me to my website!</a>
             <p class="tos">By clicking the button, you approve the Otonomic <a href="/pdfs/Otonomic_Terms_of_Service.pdf">Terms of Service</a></p>
           </div>
         </div>

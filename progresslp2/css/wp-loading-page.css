@@ -81,8 +81,125 @@ a.btn img{
 select {
 	font-family: arial, sans-serif;
 }
+textarea {
+    resize: none;
+}
 
+/* Pulse animation (progress bar paused)
+----------------------------------*/
+@-webkit-keyframes pulse {
+  50% { opacity: 0;}
+}
+.pulse {  
+  -webkit-animation: pulse 2s infinite;
+  		  animation: pulse 2s infinite;
+  -webkit-animation-timing-function: ease-in-out;
+    	  animation-timing-function: ease-in-out;
+}
 
+/* Input field animation 
+-----------------------------------*/
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes pulse-background {
+    /*from {background: #f5ece6;}
+    to {background: #c9f2da;}*/
+    50% { background: #c9f2da;}
+}
+
+/* Standard syntax */
+@keyframes pulse-background {
+    /*from {background: #f5ece6;}
+    to {background: #c9f2da;}*/
+    50% { background: #c9f2da;}
+}
+.pulse-background {
+    -webkit-animation: pulse-background 2s infinite; /* Chrome, Safari, Opera */
+    		animation: pulse-background 2s infinite;
+
+    -webkit-animation-timing-function: cubic-bezier(.15,.8,.85,.99);
+    		animation-timing-function: cubic-bezier(.15,.8,.85,.99);
+}
+/* .bounce */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0,-4px,0);
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -30px, 0);
+    -ms-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -15px, 0);
+    -ms-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0,-4px,0);
+    -ms-transform: translate3d(0,-4px,0);
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  -ms-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
 /* Header
 ----------------------------------*/
 .navbar {
@@ -190,7 +307,7 @@ select {
 	background-color: #f5ece6;
 }
 #stage-1 img.oto-gif{
-	margin:0 -40px;
+	margin:0 -20px;
 }
 #stage-1 .bg-image img{
 	float: right;
@@ -277,9 +394,17 @@ select {
 #stage-5 .form-control{
 	background-color: #fff;
 }
+#stage-5 .form-control-feedback {
+	top: 0px;
+	width: 44px;
+	height: 44px;
+	line-height: 44px;
+	font-size: 18px;
+	color: #777;
+}
 #stage-5 .category-submit{
 	margin-right: 2px;
-	margin-top: 220px;
+	margin-top: 20px;
 }
 @media (max-height: 650px) {
 	#stage-5 .category-submit {
@@ -326,11 +451,12 @@ select {
 }
 #congratz .fb-like{
 	display: block;
-	margin-bottom: 20px;
+	margin-top: 20px;
 }
 /* typeahead
 -----------------------------------*/
 #cat-selector .tt-dropdown-menu {
+  position: static!important;
   max-height: 200px;
   overflow-y: auto;
 }
