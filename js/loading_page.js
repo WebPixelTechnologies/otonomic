@@ -61,17 +61,17 @@ if (is_localhost()) {
 		// Actions based on number of seconds passed
 		switch (secondsPassed) {
 			case 5:
-				$('#intro').fadeOut('fast', function () {
+				$('#intro').fadeOut('slow', function () {
 					$(this).addClass('hidden');
-					$('#stage-1').fadeIn('fast').removeClass('hidden');
 				});
+				$('#stage-1').css('opacity',0).removeClass('hidden').animate({opacity: 1}, 'slow');
 				$('#progress-text').html('Copying your Photos, Posts and Videos from Facebook…');
 				break;
 			case 13:
-				$('#stage-1').fadeOut('fast', function () {
+				$('#stage-1').fadeOut('slow', function () {
 					$(this).addClass('hidden');
-					$('#stage-2').fadeIn('fast').removeClass('hidden');
 				});
+				$('#stage-2').css('opacity',0).removeClass('hidden').animate({opacity: 1}, 'slow');
 				$('#progress-text').html('Building the site…');
 				break;
 			case 18:
@@ -84,13 +84,22 @@ if (is_localhost()) {
 				owl.next();
 				break;
 			case 27:
-				$('#stage-2').fadeOut('fast', function () {
+				$('#stage-2').fadeOut('slow', function () {
 					$(this).addClass('hidden');
-					$('#stage-3').fadeIn('fast').removeClass('hidden');
 					// init google maps
+
+					if (jQuery('#address').val()) {
+						var defaultLocation = jQuery('#address').val();
+					} else{
+						var defaultLocation = [26,-41];
+					};
+
 					var options = {
 						map: ".map_canvas",
-						location: jQuery('#address').val()
+						location: defaultLocation,
+						mapOptions: {
+							zoom: 3
+						}
 					};
 					$("#address").trigger("geocode");
 					$("#address").geocomplete(options)
@@ -104,6 +113,7 @@ if (is_localhost()) {
 							//$.log("Multiple: " + results.length + " results found");
 						});
 				});
+				$('#stage-3').css('opacity',0).removeClass('hidden').animate({opacity: 1}, 'slow');
 				$('#progress-text').html('Adding contact details…');
 
 				// pause timer and wait for contact details submit
@@ -123,10 +133,10 @@ if (is_localhost()) {
 				timer.stop();
 				$('.bg-image').delay(1300).animate({top: 63}, 150);
 
-				$('#stage-5').fadeOut('fast', function () {
+				$('#stage-5').fadeOut('slow', function () {
 					$(this).addClass('hidden');
-					$('#congratz').fadeIn('fast').removeClass('hidden');
 				});
+				$('#congratz').css('opacity',0).removeClass('hidden').animate({opacity: 1}, 'slow');
 				$('#progress-text').html('Building the site…');
 
 				break;
@@ -144,7 +154,7 @@ if (is_localhost()) {
 	$("#owl-slider1").owlCarousel({
 		navigation: false,
 		singleItem: true,
-		transitionStyle: "fade",
+		transitionStyle: "backSlide",
 		//Pagination
 		pagination: false,
 		paginationNumbers: false,
@@ -181,19 +191,19 @@ if (is_localhost()) {
 
 	// function that switched to stage-4 from stage-3
 	function switchToStage4() {
-		$('#stage-3').fadeOut('fast', function () {
+		$('#stage-3').fadeOut('slow', function () {
 			$(this).addClass('hidden');
-			$('#stage-4').fadeIn('fast').removeClass('hidden');
 		});
+		$('#stage-4').css('opacity',0).removeClass('hidden').animate({opacity: 1}, 'slow');
 		$('#progress-text').html('Creating online store…');
 	}
 
 	// function that switched to stage-5 from stage-4
 	function switchToStage5() {
-		$('#stage-4').fadeOut('fast', function () {
+		$('#stage-4').fadeOut('slow', function () {
 			$(this).addClass('hidden');
-			$('#stage-5').fadeIn('fast').removeClass('hidden');
 		});
+		$('#stage-5').css('opacity',0).removeClass('hidden').animate({opacity: 1}, 'slow');
 		$('#progress-text').html('Adding personalization options…');
 	}
 

@@ -156,7 +156,7 @@ select {
 	padding: 40px;
 	box-shadow: 3px 0px 0px 0px rgba(0,0,0,0.2);
 	min-height: 100%;
-	min-height: calc(100% - 93px);
+	/*min-height: calc(100% - 93px);*/
 }
 .content-panel h1.title{
 	margin-bottom: 30px;
@@ -178,7 +178,11 @@ select {
 /* STAGE-1
 -----------------------------------*/
 #stage-1{
-	height: 100%;
+	/*height: 100%;*/
+	position: absolute;
+	top: 93px;
+	width: 100%;
+	min-height: calc(100% - 93px);
 }
 #stage-1 .content-panel{
 	margin-left: 18%;
@@ -195,7 +199,11 @@ select {
 /* STAGE-2
 ----------------------------------*/
 #stage-2{
-	height: 100%;
+	/*height: 100%;*/
+	position: absolute;
+	top: 93px;
+	width: 100%;
+	min-height: calc(100% - 93px);
 }
 #stage-2 .content-panel{
 	right: 18%;
@@ -207,7 +215,11 @@ select {
 /* STAGE-3
 ----------------------------------*/
 #stage-3{
-	height: 100%;
+	/*height: 100%;*/
+	position: absolute;
+	top: 93px;
+	width: 100%;
+	min-height: calc(100% - 93px);
 }
 #stage-3 .content-panel{
 	margin-left: 18%;
@@ -230,7 +242,11 @@ select {
 /* STAGE-4
 ----------------------------------*/
 #stage-4{
-	height: 100%;
+	/*height: 100%;*/
+	position: absolute;
+	top: 93px;
+	width: 100%;
+	min-height: calc(100% - 93px);
 }
 #stage-4 .content-panel{
 	right: 18%;
@@ -245,7 +261,11 @@ select {
 /* STAGE-5
 ----------------------------------*/
 #stage-5{
-	height: 100%;
+	/*height: 100%;*/
+	position: absolute;
+	top: 93px;
+	width: 100%;
+	min-height: calc(100% - 93px);
 }
 #stage-5 .content-panel{
 	margin-left: 18%;
