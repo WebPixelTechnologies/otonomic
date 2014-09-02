@@ -303,7 +303,7 @@ textarea {
 .content-panel .owl-item h3{
 	margin-top: 0px;
 }
-.content-panel .owl-item p{
+.content-panel .owl-item .item>p{
 	margin-bottom: 60px;
 }
 /* STAGE-1
