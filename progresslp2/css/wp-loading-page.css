@@ -35,7 +35,7 @@ html {
 	height: 100%;
 }
 body {
-	padding-top: 93px;
+	padding-top: 89px;
   	
   	height: 100%;
   	background-color: #3d3632;
@@ -63,8 +63,8 @@ a.btn img{
 }
 .wp-lp #progress-bar{
 	position: fixed;
-	top: 63px;
-	height: 30px;
+	top: 60px;
+	height: 29px;
 	z-index: 1;
 	background-color: #3d3632;
 	width: 100%;
@@ -76,7 +76,7 @@ a.btn img{
 	font-size: 16px;
 }
 .full-height{
-	height: calc( 100% - 93px );
+	height: calc( 100% - 89px );
 }
 select {
 	font-family: arial, sans-serif;
@@ -203,7 +203,7 @@ textarea {
 /* Header
 ----------------------------------*/
 .navbar {
-	min-height: 63px;
+	min-height: 60px;
 	margin-bottom: 0;
 	border-radius: 0;
 	background-color: #231f20;
@@ -214,14 +214,19 @@ textarea {
 	width: 100%;
 }
 .center-logo {
+	margin-top: 10px;
 	width: 150px;
 	display: inline-block;
+}
+.logo-img{
+	width: 138px;
+	height: 40px;
 }
 /* BG image 
 ----------------------------------*/
 .bg-image{
 	position: fixed;
-	top: 93px;
+	top: 89px;
 	right: 0;
 	left: 0;
 	bottom: 0;
@@ -270,13 +275,14 @@ textarea {
 .content-panel{
 	position: absolute;
 	width: 470px;
-	padding: 40px;
+	padding: 18px 40px 0 40px;
 	box-shadow: 3px 0px 0px 0px rgba(0,0,0,0.2);
 	min-height: 100%;
-	/*min-height: calc(100% - 93px);*/
+	/*min-height: calc(100% - 89px);*/
 }
 .content-panel h1.title{
-	margin-bottom: 30px;
+	margin-left: -3px;
+	margin-bottom: 35px;
 	color: #f54500;
 	font-size: 42px;
 	font-weight: normal;
@@ -284,6 +290,8 @@ textarea {
 	text-transform: uppercase;
 }
 .content-panel h3{
+	margin-top: 30px;
+	margin-bottom: 1px;
 	font-weight: bold;
 }
 .content-panel p{
@@ -292,14 +300,20 @@ textarea {
 	margin-bottom: 30px;
 }
 
+.content-panel .owl-item h3{
+	margin-top: 0px;
+}
+.content-panel .owl-item p{
+	margin-bottom: 60px;
+}
 /* STAGE-1
 -----------------------------------*/
 #stage-1{
 	/*height: 100%;*/
 	position: absolute;
-	top: 93px;
+	top: 89px;
 	width: 100%;
-	min-height: calc(100% - 93px);
+	min-height: calc(100% - 89px);
 }
 #stage-1 .content-panel{
 	margin-left: 18%;
@@ -307,7 +321,7 @@ textarea {
 	background-color: #f5ece6;
 }
 #stage-1 img.oto-gif{
-	margin:0 -20px;
+	margin: 40px -20px;
 }
 #stage-1 .bg-image img{
 	float: right;
@@ -318,9 +332,9 @@ textarea {
 #stage-2{
 	/*height: 100%;*/
 	position: absolute;
-	top: 93px;
+	top: 89px;
 	width: 100%;
-	min-height: calc(100% - 93px);
+	min-height: calc(100% - 89px);
 }
 #stage-2 .content-panel{
 	right: 18%;
@@ -334,15 +348,16 @@ textarea {
 #stage-3{
 	/*height: 100%;*/
 	position: absolute;
-	top: 93px;
+	top: 89px;
 	width: 100%;
-	min-height: calc(100% - 93px);
+	min-height: calc(100% - 89px);
 }
 #stage-3 .content-panel{
 	margin-left: 18%;
 	background-color: #fff;
 }
 #stage-3 h3{
+	margin-bottom: 30px;
 	line-height: 32px;
 	font-weight: normal;
 }
@@ -361,9 +376,9 @@ textarea {
 #stage-4{
 	/*height: 100%;*/
 	position: absolute;
-	top: 93px;
+	top: 89px;
 	width: 100%;
-	min-height: calc(100% - 93px);
+	min-height: calc(100% - 89px);
 }
 #stage-4 .content-panel{
 	right: 18%;
@@ -380,16 +395,16 @@ textarea {
 #stage-5{
 	/*height: 100%;*/
 	position: absolute;
-	top: 93px;
+	top: 89px;
 	width: 100%;
-	min-height: calc(100% - 93px);
+	min-height: calc(100% - 89px);
 }
 #stage-5 .content-panel{
 	margin-left: 18%;
 	background-color: #f5ece6;
 }
 #stage-5 .content-panel h3{
-	margin-bottom: 60px;
+	margin-bottom: 40px;
 }
 #stage-5 .form-control{
 	background-color: #fff;
@@ -607,6 +622,7 @@ textarea {
 	background: transparent;
 	color: #333;
 	box-shadow: none;
+	font-weight: normal!important;
 }
 
 /* Apply the custom-colored gradients */
@@ -623,7 +639,7 @@ textarea {
   background-position: 0 -15px;
 }
 
-.btn-ttc-orange.disabled{
+.btn-ttc-orange.disabled {
 	color: #f54500;
 	background-color: #a62f00;
 	opacity: 1;
@@ -633,10 +649,20 @@ textarea {
 	display: none;
 }
 .btn-ttc-orange .glyphicon,
-.btn-ttc-clear .glyphicon{
+.btn-ttc-clear .glyphicon {
 	margin-right: 10px;
 }
 
+#see-my-website-btn {
+	background-color: #29abe2;
+}
+#see-my-website-btn:hover {
+	background-color: #228ebd;
+}
+#see-my-website-btn.disabled {
+	background-color: #228ebd;
+	color: white;
+}
 /* Owl-Carousel
 -------------------------------------------------*/
 #owl-slider .item p{

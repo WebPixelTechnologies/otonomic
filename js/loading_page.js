@@ -136,7 +136,7 @@ if (is_localhost()) {
 				NProgress.done(true);
 				$('.peg').html('100%');
 				timer.stop();
-				$('.bg-image').delay(1300).animate({top: 63}, 150);
+				$('.bg-image').delay(1300).animate({top: 60}, 150);
 
 				$('#stage-5').fadeOut('slow', function () {
 					$(this).addClass('hidden');
@@ -153,7 +153,7 @@ if (is_localhost()) {
 
 
 	// init timer
-	timer.set({ time: 500, autostart: true });
+	//timer.set({ time: 500, autostart: true });
 
 	// owl-carousel init
 	$("#owl-slider1").owlCarousel({
