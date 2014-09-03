@@ -200,6 +200,129 @@ textarea {
   -ms-transform-origin: center bottom;
   transform-origin: center bottom;
 }
+
+/* Buzz Out */
+@-webkit-keyframes buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+@keyframes buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+.buzz-out {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.buzz-out{
+  -webkit-animation-name: buzz-out;
+  animation-name: buzz-out;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+.buzz-out:hover, .buzz-out:focus, .buzz-out:active{}
 /* Header
 ----------------------------------*/
 .navbar {
@@ -431,7 +554,13 @@ textarea {
 /* Congratz
 ----------------------------------*/
 #congratz{
-
+}
+#congratz #confetti{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #e8b400;
 }
 #congratz .bg-image{
 	background-color: #e8b400;
@@ -466,7 +595,7 @@ textarea {
 }
 #congratz .fb-like{
 	display: block;
-	margin-top: 20px;
+	margin-bottom: 40px;
 }
 /* typeahead
 -----------------------------------*/
@@ -568,6 +697,11 @@ textarea {
 	color: #325942;
 	font-size: 50px;
 }
+/* Button Loader
+-------------------------------------------------- */
+.btn-loader{
+	margin-right: 15px;
+}
 /* Custom button
 -------------------------------------------------- */
 
@@ -614,8 +748,8 @@ textarea {
   color: white;
   text-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
   background-color: #f54500;
-  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
 }
 
 .btn-ttc-clear {
@@ -624,7 +758,10 @@ textarea {
 	box-shadow: none;
 	font-weight: normal!important;
 }
-
+.btn-ttc-clear:hover,
+.btn-ttc-clear:active{
+	box-shadow: none;
+}
 /* Apply the custom-colored gradients */
 /* Note: you'll need to include all the appropriate gradients for various browsers and standards. */
 .btn-ttc-orange {
@@ -654,13 +791,13 @@ textarea {
 }
 
 #see-my-website-btn {
-	background-color: #29abe2;
+	background-color: #228ebd;
 }
 #see-my-website-btn:hover {
-	background-color: #228ebd;
+	background-color: #0980b2;
 }
 #see-my-website-btn.disabled {
-	background-color: #228ebd;
+	background-color: #0980b2;
 	color: white;
 }
 /* Owl-Carousel
