@@ -214,15 +214,18 @@
         </div>
       </div>
       <div id="congratz" class="row hidden">
-        <div class="bg-image"><img src="images/bg6.png"></div>
+        <!-- <div class="bg-image"><img src="images/bg6.png"></div> -->
+        <canvas id="confetti"></canvas>
         <div class="col-xs-12">
           <div class="content">
             <h1 class="congratz-title">Congratulations!</h1>
             <h2>Your new website is ready at</h2>
             <h3 id="oto-web-url">http://wp.otonomic.com/newsite</h3>
-            <a href="javascript:void(0)" class=" btn btn-ttc-orange btn-lg" id="see-my-website-btn" data-loading-text="<img src='images/loader.gif'> Taking you to your website...">Take me to my website!</a>
-            <div class="fb-like" data-href="https://www.facebook.com/otonomic" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
-            <p class="tos">By clicking the button, you approve the Otonomic <a href="/pdfs/Otonomic_Terms_of_Service.pdf">Terms of Service</a></p>
+            <a href="javascript:void(0)" class=" btn btn-ttc-orange btn-lg buzz-out" id="see-my-website-btn" data-loading-text="<img class='btn-loader' src='images/loader.gif'> Taking you to your website...">Take me to my website!</a>
+            <p class="tos">
+              <div class="fb-like" data-href="https://www.facebook.com/otonomic" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+              By clicking the button, you approve the Otonomic <a href="/pdfs/Otonomic_Terms_of_Service.pdf">Terms of Service</a>
+            </p>
           </div>
         </div>
       </div>
@@ -238,6 +241,7 @@
     <script src="js/jquery.geocomplete.min.js"></script>
     <script src="js/typeahead.jquery.min.js"></script>
     <script src="js/jquery.timer.js"></script>
+    <script src="js/fallingConfetti.js"></script>
 
     <script src="/js/loading_page.js"></script>
 

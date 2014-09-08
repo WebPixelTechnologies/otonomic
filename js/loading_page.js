@@ -135,6 +135,7 @@ if (is_localhost()) {
 			case 38:
 				NProgress.done(true);
 				$('.peg').html('100%');
+				$('#progress-bar').slideUp();
 				timer.stop();
 				$('.bg-image').delay(1300).animate({top: 60}, 150);
 
@@ -142,8 +143,12 @@ if (is_localhost()) {
 					$(this).addClass('hidden');
 				});
 				$('#congratz').css('opacity',0).removeClass('hidden').animate({opacity: 1}, 'slow');
-				$('#progress-text').html('Building the site…');
-
+				$('#progress-text').html('');
+				// Shake the button
+				var shakeBTN = $.timer(function () {
+					$('#see-my-website-btn').toggleClass('buzz-out');
+				});
+				shakeBTN.set({ time: 1500, autostart: true });
 				break;
 		}
 		/* End Switch*/
