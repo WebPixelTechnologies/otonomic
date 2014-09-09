@@ -620,7 +620,7 @@ function callback(data) {
 
 	jQuery('#see-my-website-btn').attr('href', data.redirect);
 
-	jQuery('#oto-web-url').html('<a href="'+data.site_url+'">'+data.site_url+'</a>');
+	jQuery('#oto-web-url').html('<a href="'+data.redirect+'">'+data.site_url+'</a>');
 
 	blog_created();
 }
