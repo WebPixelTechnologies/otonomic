@@ -2,7 +2,7 @@ var builder_domain;
 if (is_localhost()) {
     builder_domain = "http://wp.test";
 } else {
-    builder_domain = 'http://wp.verisites.com/';
+    builder_domain = 'http://wp.otonomic.com/';
 }
 
 
