@@ -40,6 +40,9 @@ if (is_localhost()) {
 	// start progress
 	NProgress.start();
 
+	// for testing
+	//NProgress.set(0.4);
+
 	// seconds counter
 	var secondsPassed = 0;
 
@@ -200,13 +203,13 @@ if (is_localhost()) {
 	var owl2 = $("#owl-slider2").data('owlCarousel');
 
 	// #see-my-website-btn Click
-    /*
+    
 	$('#see-my-website-btn').click(function (event) {
-		event.preventDefault();
+		//event.preventDefault();
 	    var btn = $(this);
 	    btn.button('loading');
 	});
-	*/
+	
 
 
 	// Blink first input field that empty 
