@@ -269,7 +269,7 @@ if (is_localhost()) {
 
 	if (page_id) {
         window.site_url = builder_domain+'/wp-admin/admin-ajax.php?action=check_page&page_id='+page_id;
-        $('#oto-web-url').html('<a href="'+window.site_url+'">'+window.site_url+'</a>');
+        $('#oto-web-url').html('<a href="'+window.site_url+'">this link</a>');
 		createWebsiteUsingAjax(page_id);
 		getFacebookPageAddress(page_id);
 	}
