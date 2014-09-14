@@ -392,7 +392,7 @@ textarea {
 /* STAGE
 ----------------------------------*/
 .content{
- 	width: 960px;
+ 	width: 930px;
  	margin: 0 auto;
 }
 .content-panel{
@@ -899,7 +899,130 @@ h3#oto-web-url {
 
   /* Medium Devices, Desktops */
   @media only screen and (max-width : 992px) {
+    body {
+      padding-top: 60px;
+    }
+    .wp-lp #progress-bar {
+      top: 59px;
+      height: 15px;
+    }
+    #nprogress ,#nprogress .bar{
+      height: 15px;
+    }
+    #nprogress .peg {
+      font-size: 0.8em;
+      line-height: 15px;
+      right: 5px;
+    }
+    .bg-image {
+      position: fixed;
+      top: 59px;
+    }
+    .content-panel {
+      position: absolute;
+      width: 380px;
+    }
+    .content-panel h1.title {
+      font-size: 27px;
+      line-height: 30px;
+    }
+    .content-panel h3 {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+    .content-panel p {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    .content-panel .owl-item > .item img {
+      width: 100%;
+    }
+    .btn-ttc-orange, .btn-ttc-orange:hover, .btn-ttc-orange:active ,.btn-lg {
+      padding-right: 15px;
+      padding-left: 15px;
+      font-size: 14px;
+    }
+    .wp-lp label {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    .wp-lp .form-group {
+      margin-bottom: 15px;
+    }
+    #intro .bg-image {
+      top: -50px;
+    }
+    #intro h1.intro-title {
+      margin-top: 80px;
+      font-size: 2.4em;
+    }
+    #intro p.site-name {
+      margin-bottom: 0px;
+      font-size: 3.688em;
+    }
+    #intro h3{
+      margin-top: 0;
+      font-size: 1.3em;
+    }
+    #stage-1, #stage-2, #stage-3, #stage-4, #stage-5{
+      top: 59px;
+      min-height: calc(100% - 59px);
+    }
+    .content-panel h1.title{
+      margin-left: 0;
+      margin-bottom: 15px;
+    }
+    #stage-1 .content-panel {
+      margin-left: 0;
+    }
+    #stage-1 img.oto-gif {
+      margin: 0;
+      width: 100%;
+    }
+    #stage-2 .content-panel {
+      right: 0;
+    }
+    #stage-3 .content-panel {
+      margin-left: 0;
+    }
+    #stage-3 h3 {
+      margin-bottom: 10px;
+      line-height: 22px;
+    }
+    #stage-3 textarea.form-control {
+      height: 60px;
+      line-height: 24px;
 
+    }
+    #stage-4 .content-panel {
+      right: 0;
+      box-shadow: -3px 0px 0px 0px rgba(0,0,0,0.2);
+    }
+    #stage-4 h1.title {
+      margin-bottom: 30px;
+    }
+
+    #stage-5 .content-panel {
+      margin-left: 0;
+    }
+    #congratz h1.congratz-title {
+      margin-top: 100px;
+      margin-bottom: 40px;
+      font-size: 50px;
+    }
+    #congratz h2 {
+      font-size: 27px;
+    }
+    #congratz .content {
+      width: auto;
+      margin-left: 210px;
+    }
+    #congratz .tos {
+      margin-top: 10%;
+    }
+    #congratz h3 {
+      font-size: 18px;
+    }
   }
 
   /* Small Devices, Tablets */
@@ -934,12 +1057,20 @@ h3#oto-web-url {
     .content {
       width: auto;
     }
+    .full-height{
+      height: 100%;
+    }
+    #intro {
+      height: auto;
+      min-height: 100%;
+      background-color: #f5ece6;
+    }
     #intro h1.intro-title {
       margin-top: 40px;
       font-size: 32px;
     }
     #intro p.site-name {
-      font-size: 40px;
+      font-size: 2.6em;
       margin-bottom: 0px;
     }
     #intro h3 {
@@ -957,6 +1088,9 @@ h3#oto-web-url {
       height: 100%;
       min-height: 100%;
       min-width: 100%;
+    }
+    #intro .oto-gif{
+      margin-top: -15px;
     }
     .content-panel {
       width: 100%;

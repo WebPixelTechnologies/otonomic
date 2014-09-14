@@ -41,7 +41,7 @@ if (is_localhost()) {
 	NProgress.start();
 
 	// for testing
-	//NProgress.set(0.4);
+	NProgress.set(0.4);
 
 	// seconds counter
 	var secondsPassed = 0;
@@ -161,7 +161,7 @@ if (is_localhost()) {
 
 
 	// init timer
-	timer.set({ time: 500, autostart: true });
+	//timer.set({ time: 500, autostart: true });
 
 	// owl-carousel init
 	$("#owl-slider1").owlCarousel({
