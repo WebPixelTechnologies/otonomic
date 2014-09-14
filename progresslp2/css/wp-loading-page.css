@@ -422,7 +422,6 @@ textarea {
 	font-weight: 300;
 	margin-bottom: 30px;
 }
-
 .content-panel .owl-item h3{
 	margin-top: 0px;
 }
@@ -544,11 +543,7 @@ textarea {
 	margin-right: 2px;
 	margin-top: 20px;
 }
-@media (max-height: 650px) {
-	#stage-5 .category-submit {
-		margin-top: 130px;
-	}
-}
+
 
 
 /* Congratz
@@ -858,3 +853,217 @@ textarea {
 h3#oto-web-url {
     text-transform: lowercase;
 }
+
+
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+
+
+
+  /*==========  Mobile First Method  ==========*/
+
+  /* Custom, iPhone Retina */ 
+  @media only screen and (min-width : 320px) {
+
+  }
+  /* Extra Small Devices, Phones */ 
+  @media only screen and (min-width : 480px) {
+
+  }
+
+  /* Small Devices, Tablets */
+  @media only screen and (min-width : 768px) {
+
+  }
+
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width : 992px) {
+
+  }
+
+  /* Large Devices, Wide Screens */
+  @media only screen and (min-width : 1200px) {
+
+  }
+
+
+
+  /*==========  Non-Mobile First Method  ==========*/
+
+  /* Large Devices, Wide Screens */
+  @media only screen and (max-width : 1200px) {
+
+  }
+
+  /* Medium Devices, Desktops */
+  @media only screen and (max-width : 992px) {
+
+  }
+
+  /* Small Devices, Tablets */
+  @media only screen and (max-width : 768px) {
+
+  }
+
+  /* Extra Small Devices, Phones */ 
+  @media only screen and (max-width : 480px) {
+    body {
+      padding-top: 40px;
+    }
+    .logo-img {
+      width: 99px;
+      height: auto;
+    }
+    .center-logo {
+      margin-top: 5px;
+      margin-left: 10px;      
+      width: 100%;
+    }
+    .navbar {
+      min-height: 40px;
+    }
+    .wp-lp #progress-bar {
+      top: 40px;
+      height: 19px;
+    }
+    .bg-image {
+      top: 49px;
+    }
+    .content {
+      width: auto;
+    }
+    #intro h1.intro-title {
+      margin-top: 40px;
+      font-size: 32px;
+    }
+    #intro p.site-name {
+      font-size: 40px;
+      margin-bottom: 0px;
+    }
+    #intro h3 {
+      position: relative;
+      overflow: hidden;
+    }
+    #intro .bg-image img {
+      display: block;
+      position: absolute;
+      top: -9999px;
+      bottom: -9999px;
+      left: -9999px;
+      right: -9999px;
+      margin: auto;
+      height: 100%;
+      min-height: 100%;
+      min-width: 100%;
+    }
+    .content-panel {
+      width: 100%;
+      padding: 18px 25px 0 25px;
+    }
+    .content-panel h1.title {
+      margin: 15px 0 0 0;
+      font-size: 27px;
+      line-height: 35px;
+    }
+    .content-panel h3 {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+    .content-panel p {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    .content-panel .tt-suggestion p {
+      font-size: 16px;
+    }
+    .content-panel .owl-item h3 {
+      margin-top: 10px;
+    }
+    .content-panel .owl-item > .item img {
+      width: 100%;
+    }
+    .wp-lp label {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    .btn-ttc-orange, .btn-ttc-orange:hover, .btn-ttc-orange:active ,.btn-lg {
+      padding-right: 15px;
+      padding-left: 15px;
+      font-size: 14px;
+    }
+    #nprogress ,#nprogress .bar{
+      height: 19px;
+    }
+    #nprogress .peg {
+      font-size: 0.8em;
+      line-height: 20px;
+      right: 5px;
+    }
+    #stage-1, #stage-2, #stage-3, #stage-4, #stage-5{
+      top: 49px;
+      min-height: calc(100% - 49px);
+    }
+    #stage-1 .content-panel {
+      margin-left: 0;
+    }
+    #stage-1 img.oto-gif {
+      margin: 0;
+      width: 100%;
+    }
+    #stage-2 .content-panel {
+      right: 0;
+    }
+    #stage-3 .content-panel {
+      margin-left: 0;
+    }
+    #stage-3 h3 {
+      margin-bottom: 10px;
+      line-height: 26px;
+    }
+    #stage-3 textarea.form-control {
+      height: 60px;
+      line-height: 24px;
+    }
+    #stage-4 .content-panel {
+      right: 0;
+    }
+    #stage-4 h1.title {
+      margin-bottom: 25px;
+    }
+    #stage-5 .content-panel {
+      margin-left: 0;
+    }
+    #congratz h1.congratz-title {
+      margin-top: 100px;
+      margin-bottom: 30px;
+      font-size: 2em;
+    }
+    #congratz {
+      
+    }
+    #congratz > div{
+      padding: 18px 25px 0 25px;
+    }
+    #congratz h2 {
+      font-size: 1.3em;
+    }
+    #congratz h3#oto-web-url {
+      font-size: 1em;
+    }
+    #congratz #see-my-website-btn{
+      width: 100%;
+      padding: 16px;
+    }
+    #congratz #see-my-website-btn .btn-loader {
+      margin-right: 5px;
+    }
+    #congratz #confetti {
+      position: fixed;
+    }
+  }
+  /* Custom, iPhone Retina */ 
+  @media only screen and (max-width : 320px) {
+    
+  }
