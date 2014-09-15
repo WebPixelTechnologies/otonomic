@@ -1,0 +1,307 @@
+/* Otonomic App market popup custom styling */
+
+
+//  colorbox related
+////////////////////////////////////////////////////////////////////////////////
+
+#cboxWrapper {
+    background: #f3ede9;
+}
+#cboxContent {
+    margin-top: 0;
+    background: #f3ede9;
+}
+#cboxLoadedContent {
+    background: #f3ede9;
+}
+#cboxClose {
+    top: 30px;
+    right: 30px;
+    outline: none;
+    background: url(../images/close_btn.png) no-repeat 0 0;
+    &:hover {
+        background-position: 0 0;
+    }
+}
+
+
+//  header
+////////////////////////////////////////////////////////////////////////////////
+
+#appmarket-header{
+    margin-top: 25px;
+
+    h1.title{
+        margin-bottom: 20px;
+    }
+}
+
+
+//  #appmarket-carousel
+////////////////////////////////////////////////////////////////////////////////
+
+#appmarket-carousel,
+#app-carousel {
+    .carousel-inner {
+        border: 15px solid #fff; 
+        @include border-radius($border-radius-base);
+    }
+    margin-bottom: 70px;
+}
+#appmarket-carousel {
+
+    .carousel-inner {
+        height: 274px;
+        background-color: #fff;
+
+        .item{
+           height: 492px;
+        }
+    }
+    .carousel-caption {
+        bottom: 0;
+        top: 244px;
+        left: 0;
+        right: 0;
+        padding: 15px 45px;
+        text-align: left;
+        color: $gray-darker;
+
+        h1{
+            margin-bottom: 25px;
+            font-size: 21px;
+            font-weight: bold;
+        }
+        .media{
+            margin-bottom: 10px;
+            & > img{
+                width: 109px;
+                max-height: 109px;
+            }
+            .media-body{
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;  
+                max-height: 74px;
+                color: $gray-darker;
+                font-size: $font-size-large;
+                line-height: 26px;
+            }
+            a {
+                display: block;
+                padding-top: 4px;
+                font-size: $font-size-large;
+                line-height: 26px;
+            }
+        }
+        .oto-app-count {
+            margin: 20px 0 0 0;
+            color: $text-color;
+            text-align: right;
+            .glyphicons {
+                display: inline;
+                &:before {
+                    color: $gray;
+                    font-size: $font-size-base;
+                }
+            }
+        }
+    }
+    .carousel-control {
+        z-index: 99;
+    }
+}
+#app-carousel {
+
+    margin-top: 15px;
+    height: 410px;
+
+    .carousel-inner {
+        background-color: #ebe1d5;
+    }
+    .item {
+        height: 380px;
+        img{
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+    }
+}
+
+//  Appmarket Global
+////////////////////////////////////////////////////////////////////////////////
+
+.btn-price{
+    color: $oto-orange;
+    font-size: $font-size-large;
+    &:hover{
+        color: $oto-orange;
+        text-decoration: none;
+    }
+}
+
+#appmarket-content {
+    h4.sub-title{
+        margin-bottom: 30px;
+        line-height: 26px;
+    }
+}
+
+//  App box
+////////////////////////////////////////////////////////////////////////////////
+
+#appmarket-side-menu {
+    margin-top: 100px;
+}
+
+//  App box
+////////////////////////////////////////////////////////////////////////////////
+
+#oto-apps-container { 
+
+    margin-right: -10px;
+    margin-left: -10px;
+
+    .oto-app-holder {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .oto-app {
+        height: 310px;
+        padding: 0 15px;
+        curser: pointer;
+        overflow: hidden;
+        border: 0;
+        border-top: 15px solid #fff;
+        p {
+            color: $gray-dark;
+            line-height: 22px;
+        }
+        .caption {
+            overflow: hidden;
+        }
+
+        .line-clamp {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;  
+          max-height: 55px;
+        }
+
+        .price-tag {
+            margin-top: 5px;
+            margin-bottom: 10px;
+            color: $oto-orange; 
+        }
+        .oto-app-count {
+            margin: 15px 0 0 0;
+            color: $text-color;
+            text-align: right;
+            font-size: $font-size-small;
+
+            .glyphicons {
+                display: inline;
+                padding-left: 20px;
+                &:before {
+                    color: $gray;
+                    font-size: $font-size-small;
+                }
+            }
+        }
+        .layer-1 {
+            height: 300px;
+            img {
+                width: 100%;
+            }
+        }
+        .layer-2 {
+            position: relative;
+            height: 305px;
+
+            .btn-cornered{
+                right: -15px;
+            }
+        }
+
+    }
+}
+
+
+//  App Content
+////////////////////////////////////////////////////////////////////////////////
+
+#app-content{
+    display: none;
+    position: absolute;
+    top: 0;
+    margin-right: 25px;
+    
+    h2.app-name {
+        font-size: 28px;
+    }
+
+    p{
+        font-size: 15px;
+    }
+    .oto-app-count {
+        margin: 21px 0 0 0;
+        color: $text-color;
+        font-size: 15px;
+
+        .glyphicons {
+            display: inline;
+            &:before {
+                color: $gray;
+                font-size: $font-size-large;
+            }
+        }
+    }
+}
+
+
+//  App suggest
+////////////////////////////////////////////////////////////////////////////////
+
+#oto-app-suggest {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .input-group-btn {
+
+        .btn {
+            padding: 6px 30px;
+            color: #8c8277;
+            background-color: $gray-lighter;
+
+            &:hover{
+                border-left: none;
+            }
+        }
+    }
+
+    // on focus 
+    .focused {
+
+        .form-control{
+            background-color: $yellow-bright;
+        }
+        .input-group-btn {
+
+            .btn {
+                padding: 6px 30px;
+                color: #fff;
+                background-color: $blue;
+                @include box-shadow(inset 0px -1px 0px 0px rgba(0,0,0,0.2));
+
+                &:hover{
+                    border-left: none;
+                    background-color: $blue-dark;
+                }
+            }
+        }
+    }
+}

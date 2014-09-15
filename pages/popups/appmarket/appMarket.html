@@ -1,0 +1,266 @@
+<link rel="stylesheet" href="css/appmarket-popup.css" />
+<div class="appmarket-popup">
+    <div id="appmarket-popup">
+        <div class="container">
+            <div class="row">
+                <div id="appmarket-header" class="col-md-9 col-md-offset-3">
+                    <h1 class="title">Otonomic's App Market</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div id="appmarket-side-menu" class="col-md-3">
+                    <div class="form-group has-feedback">
+                        <label class="control-label sr-only" for="inputSuccess5">Search Apps...</label>
+                        <input type="text" class="form-control typeahead" placeholder="Search Apps...">
+                        <span class="glyphicon glyphicon-search form-control-feedback js-search-icon"></span>
+                    </div>
+                    <ul class="nav nav-pills nav-stacked">
+                      <li class="active"><a href="#">All</a></li>
+                      <li><a href="#">Themes</a></li>
+                      <li><a href="#">Social</a></li>
+                      <li><a href="#">SOE</a></li>
+                      <li><a href="#">Business Tools</a></li>
+                      <li><a href="#">Widgets</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9">
+                    <div id="appmarket-content">
+                        <h4 class="sub-title">Take your website to the next level by adding popular Apps and services Grow your business with a simple click</h4>
+                        <!-- Carousel  -->
+                        <div id="appmarket-carousel" class="carousel slide">
+                        <!-- Dynamic content -->
+                        </div>
+                        <div id="oto-apps-container" class="clearfix">
+                        <!-- Dynamic content -->   
+                        </div>
+                        <div id="oto-app-suggest" class="row">
+                            <div class="col-xs-12">
+                                <p>Can't find a proper widget up there?...Please Suggest</p>
+                                <div class="input-group">
+                                  <input type="text" class="form-control" placeholder="e.g. An Espresso Machine">
+                                  <span class="input-group-btn">
+                                    <button class="btn" type="button">Let us know</button>
+                                  </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="app-content">
+                    <!-- Dynamic content -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/typeahead.bundle.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/dust-full.min.js"></script>
+<script type="text/javascript" src="js/dust-helpers.min.js"></script>
+<script type="text/javascript" src="js/apps-json.js"></script>
+<script type="text/javascript" src="js/app-store-templates.min.js"></script>
+
+<script>
+jQuery(document).ready(function ($){
+
+    $('#appmarket-carousel').carousel('pause');
+    $('#appmarket-carousel').carousel(0);
+
+    var appNames = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
+      'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
+      'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
+      'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
+      'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
+      'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
+      'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
+      'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
+      'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+    ];
+    // constructs the suggestion engine
+    var appNames = new Bloodhound({
+      datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
+      queryTokenizer: Bloodhound.tokenizers.whitespace,
+      // `apps` is an array of state names defined in "The Basics"
+      local: $.map(appNames, function(state) { return { value: state }; })
+    });
+     
+    // kicks off the loading/processing of `local` and `prefetch`
+    appNames.initialize();
+     
+    $('.typeahead').typeahead({
+      hint: true,
+      highlight: true,
+      minLength: 1
+    },
+    {
+      name: 'appNames',
+      displayKey: 'value',
+      // `ttAdapter` wraps the suggestion engine in an adapter that
+      // is compatible with the typeahead jQuery plugin
+      source: appNames.ttAdapter()
+    })
+    .on('typeahead:opened', onOpened)
+    .on('typeahead:closed', onClosed)
+    .on('typeahead:selected', onAutocompleted)
+    .on('typeahead:autocompleted', onSelected);
+
+    function onOpened($e) {
+      console.log('opened');
+      $('.tt-hint').css('background-color', '#fcf9e6');
+      $('.tt-input').css('background-color', 'transparent');
+      //$('.js-search-icon').hide();
+      //$('.typeahead').css('padding-left','20px');
+    }
+    function onClosed($e) {
+      console.log('closed');
+      $('.tt-hint').css('background-color', 'transparent');
+      $('.tt-input').css('background-color', '#fff');
+      //$('.js-search-icon').show();
+      //$('.typeahead').css('padding-left','45px');
+    }
+
+    function onAutocompleted($e, datum) {
+      console.log('autocompleted');
+      console.log(datum);
+    }
+
+    function onSelected($e, datum) {
+      console.log('selected');
+      console.log(datum);
+    }
+
+    // App suggest focus class toggle
+    $('#oto-app-suggest input').focus(function(){
+        $('#oto-app-suggest .input-group').addClass('focused');
+    });
+    $('#oto-app-suggest input').blur(function(){
+        $('#oto-app-suggest .input-group').removeClass('focused');
+    });
+
+    // App fade in
+    $("#appmarket-content").on( "click", ".js-oto-app-fade-in", function() {
+        showAppPage($(this));
+        return false;
+    });
+    // App fade out
+    $("#app-content").on( "click", ".js-oto-app-fade-out", function() {
+        $( "#appmarket-content" ).fadeIn( "fast" );
+        $( "#app-content" ).fadeOut( "fast" );
+        return false;
+    });
+    $("#appmarket-content").delegate( ".btn-cornered", "click", function(event) {
+        event.stopPropagation();
+    });
+
+    // init tooltips
+    $('button').tooltip({
+        trigger: 'click'
+    });
+
+    // Templating code
+    ///////////////////////////////////////////////
+
+    // Render main slider
+    var mainSlider = dust.compile(mainCarousel,'oto-mainSlider');
+    dust.loadSource(mainSlider);
+    dust.render("oto-mainSlider", apps, function(err, output) {
+
+        //console.log(output);
+        $('#appmarket-carousel').html(output);
+        // init #appmarket-carousel
+        $('#appmarket-carousel').carousel();
+    });
+
+    // Render apps
+    var allApps = dust.compile(appBox,'oto-allApps');
+    dust.loadSource(allApps);
+    dust.render("oto-allApps", apps, function(err, output) {
+
+        //console.log(output);
+        $('#oto-apps-container').html(output);
+    });
+
+
+
+    // Show app details page
+    function showAppPage(thisApp){
+
+        // get app id
+        appID = thisApp.data('app-id');
+
+        apps['currentApp'] = appID;
+
+        console.log(apps);
+        var appTemplate = dust.compile(appPage,'oto-app');
+        dust.loadSource(appTemplate);
+        dust.render("oto-app", apps, function(err, output) {
+
+            //console.log(output);
+            $("#app-content").html(output);
+            // Tooltip Init
+            $('button').tooltip({
+                trigger: 'hover'
+            });
+
+            $( "#app-content" ).fadeIn( "fast" );
+            $( "#appmarket-content" ).fadeOut( "fast" );
+            console.log(appID);
+        });
+    }
+    // Animations
+    /////////////////////////////////////////////////
+
+    $('#oto-apps-container').on('mouseenter mouseleave', '.js-oto-app-fade-in', function(event){
+        appSlideUPToggle($(this),event);
+    });
+
+    function appSlideUPToggle(target, e){
+        console.log('appSlideUPToggle');
+        if (e.type === 'mouseenter') {
+            target.find('.layer-1').animate({
+                opacity: 0,
+                marginTop: "-=310",
+                //height: "toggle"
+            }, 500, 'swing', function() {
+                // Animation complete.
+            });
+        } else{
+            target.find('.layer-1').animate({
+                opacity: 1,
+                marginTop: "+=310",
+                //height: "toggle"
+            }, 500, 'swing', function() {
+                // Animation complete.
+            });
+        };
+    }
+
+    $('#appmarket-carousel').on('mouseenter mouseleave', '.js-carousel-item', function(event){
+        carouselCaptionToggle($(this),event);
+    });
+
+    function carouselCaptionToggle(target, e){
+        console.log('appSlideUPToggle');
+        if (e.type === 'mouseenter') {
+            target.find('.js-carousel-image').animate({
+                opacity: 0,
+                marginTop: "-=244"
+                }, 500, 'swing', function() {
+                    // Animation complete.
+            });
+        } else{
+            target.find('.js-carousel-image').animate({
+                opacity: 1,
+                marginTop: "+=244"
+                }, 500, 'swing', function() {
+                    // Animation complete.
+            });
+        };
+    }
+
+});
+</script>
