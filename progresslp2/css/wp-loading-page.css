@@ -1199,5 +1199,35 @@ h3#oto-web-url {
   }
   /* Custom, iPhone Retina */ 
   @media only screen and (max-width : 320px) {
-    
+    .content-panel h1.title {
+      margin: 15px 0 0 0;
+      font-size: 20px;
+      line-height: 24px;
+    }
+    .content-panel h3 ,
+    .content-panel p {
+      font-size: 15px;
+    }
+    .content-panel .owl-item .item>p {
+      margin-bottom: 20px;
+    }
+    #stage-1 img.oto-gif {
+      margin-top: -15px;
+    }
+    #intro h1.intro-title {
+      margin-top: 40px;
+      font-size: 22px;
+    }
+    #stage-3 h3 {
+      line-height: 22px;
+    }
+    #congratz .content {
+      margin-left: 0;
+    }
+    #congratz h1.congratz-title {
+      margin-top: 20px;
+    }
+    #congratz .fb-like {
+      margin-bottom: 10px;
+    }
   }

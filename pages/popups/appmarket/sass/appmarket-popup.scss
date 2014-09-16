@@ -1,0 +1,15 @@
+@import "compass";
+@import "glyphicons/css/glyphicons";
+
+/* Otonomic App market styling */
+
+/* prefix to avoid conflicts */
+.appmarket-popup {
+    @import "otonomic-bootstrap-sass/bootstrap";
+    @import "appmarket-popup-custom";
+    @import "typeahead";
+	position: absolute;
+    font-family: 'aller','Open Sans', sans-serif;
+    color: $oto-black;
+    font-size: 15px;
+}
