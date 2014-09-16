@@ -264,7 +264,7 @@ if (is_localhost()) {
 		});
 		$('#stage-5').css('opacity',0).removeClass('hidden').animate({opacity: 1}, 'slow');
 		$('#progress-text').html('Adding personalization options…');
-		$('#stage-5 .form-control').focus();
+		//$('#stage-5 .form-control').focus();
 		$('#stage-5 .form-control').keydown(function() {
 		  $('#stage-5 .form-control').removeClass('pulse-background');
 		});
