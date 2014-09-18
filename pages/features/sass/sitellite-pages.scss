@@ -1,0 +1,145 @@
+@import "compass";
+@import "glyphicons/css/glyphicons";
+@import "aller_font";
+
+/* Otonomic Satellite Pages styling */
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/* prefix to avoid conflicts */
+.satellite-page {
+    @import "otonomic-bootstrap-sass/bootstrap";
+    @import "features";
+    @import "side-menu";
+    @import "rrssb";
+
+    margin: 0;
+
+    color: $gray-darker;
+    background-color: $bright;
+    font-family: 'aller','Open Sans', sans-serif;
+
+    /* Header
+    -------------------------------------------------- */
+    .navbar {
+        background-color: transparent;
+    }
+    .navbar.scrolled {
+        background-color: $bright-dark;
+        @include box-shadow(rgba(0,0,0,0.25) 0px 3px 0px);
+    }
+    .container-fluid > .navbar-header{
+        float: none;
+        margin-right: -10px;
+        margin-left: -10px;
+
+        .navbar-btn {
+            margin-top: 20px;
+        }
+    }
+    .navbar-toggle {
+        border: 0px solid transparent;
+        display: block;
+        margin-right: 0;
+        padding: 14px 19px 8px 19px;
+
+        .icon-bar {
+            height: 4px;
+            background-color: $gray-darker;
+        }
+    }
+
+    /* Sticky footer styles
+    -------------------------------------------------- */
+    /* Margin bottom by footer height */
+      margin-bottom: 540px;
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      /* Set the fixed height of the footer here */
+      height: 540px;
+      background-color: $bright-darker;
+      background-image: url('../images/footer.png');
+      background-repeat: no-repeat;
+      background-position: center bottom;
+
+      h3 {
+        color: $oto-orange;
+        font-size: 27px;
+        font-weight: bold;
+      }
+
+        ul {
+            li {
+                padding: 6px 0;
+                a {
+                    color: $gray-dark;
+                    font-size: $font-size-base;
+                    line-height: 22px;
+                }
+            }
+        }
+        .lower-part{
+            position: absolute;
+            bottom: 40px;
+            font-size: 12px;
+            img {
+                height: 24px;
+                padding: 0 10px 0 5px;
+                vertical-align: baseline;
+            }
+
+            a {
+                color: $gray-dark;
+            }
+            
+        }
+        .social-btns {
+            margin-bottom: 30px;
+            width: 225px;
+
+            .rrssb-buttons li a{
+                background-color: $gray-light;
+                &:hover {
+                    background-color: $gray;
+                }
+            }
+        }
+    }
+
+    /* Jumbotron
+    -------------------------------------------------- */
+    .jumbotron {
+        height: 400px; 
+        padding-top: 88px;
+        background-color: $blue-light;
+        background-image: url('../images/header.png');
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .social-btns {
+            width: 225px;
+        }
+    }
+
+    /* Big Glyphicon
+    -------------------------------------------------- */
+    .big-icon {
+        &:before {
+            color: $blue;
+            font-size: 50px;
+        }
+    }
+}
+
