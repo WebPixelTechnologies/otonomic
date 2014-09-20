@@ -2,7 +2,7 @@ var builder_domain;
 if (is_localhost()) {
     builder_domain = "http://wp.test";
 } else {
-	builder_domain = 'http://wp.'+window.location.host;
+	builder_domain = 'http://wp.'+window.location.hostname.replace('www.', '');
 }
 
 
