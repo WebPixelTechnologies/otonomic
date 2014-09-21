@@ -94,8 +94,9 @@ img {
   padding: $thumbnail-padding;
   line-height: $line-height-base;
   background-color: $thumbnail-bg;
-  border: 1px solid $thumbnail-border;
+  border: 0px solid $thumbnail-border;
   border-radius: $thumbnail-border-radius;
+  @include box-shadow(0px 2px 0px $shadow-color);
   @include transition(all .2s ease-in-out);
 
   // Keep them at most 100% wide

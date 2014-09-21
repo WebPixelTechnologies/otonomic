@@ -1,0 +1,64 @@
+
+.about-us {
+    .text-block {
+        font-size: $font-size-large;
+        line-height: 28px;
+    }
+    .jumbotron {
+        background-image: url('../images/header2.png');
+    }
+    .management {
+
+        .thumbnail {
+            padding: 10px;
+        }
+
+        .details {
+            padding-top: 10px;
+            margin-left: -5px;
+        }
+        .name {
+            font-size: 18px;
+        }
+    }
+
+    .media-images {
+
+        margin-bottom: 30px;
+
+        img{
+
+            width: 168px;
+            margin: 0 9px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+    }
+
+    .thumbnail {
+        .btn-cornered {
+            @include box-shadow(none);
+        }
+        .glyphicons:before {
+            padding: 0 4px;
+            margin: 0 -5px 0 0;
+        }
+
+        .caption {
+            overflow: hidden;
+        }
+
+        .line-clamp {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;  
+          max-height: 75px;
+        }
+    }
+}

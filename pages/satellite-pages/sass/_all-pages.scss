@@ -1,0 +1,142 @@
+/* Header
+-------------------------------------------------- */
+.navbar {
+    background-color: transparent;
+}
+.navbar.scrolled {
+    background-color: $bright-dark;
+    @include box-shadow(rgba(0,0,0,0.25) 0px 3px 0px);
+}
+.container-fluid > .navbar-header{
+    float: none;
+    margin-right: -10px;
+    margin-left: -10px;
+
+    .navbar-btn {
+        margin-top: 20px;
+    }
+}
+.navbar-toggle {
+    border: 0px solid transparent;
+    display: block;
+    margin-right: 0;
+    padding: 14px 19px 8px 19px;
+
+    .icon-bar {
+        height: 4px;
+        background-color: $gray-darker;
+    }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 540px;
+  background-color: $bright-darker;
+  background-image: url('../images/footer.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+
+  h3 {
+    color: $oto-orange;
+    font-size: 27px;
+  }
+
+    ul {
+        li {
+            padding: 6px 0;
+            a {
+                color: $gray-dark;
+                font-size: $font-size-base;
+                line-height: 22px;
+            }
+        }
+    }
+    .lower-part{
+        position: absolute;
+        bottom: 40px;
+        font-size: 12px;
+        img {
+            height: 24px;
+            padding: 0 10px 0 5px;
+            vertical-align: baseline;
+        }
+
+        a {
+            color: $gray-dark;
+        }
+        
+    }
+    .social-btns {
+        margin-bottom: 30px;
+        width: 225px;
+
+        .rrssb-buttons li a{
+            background-color: $gray-light;
+            &:hover {
+                background-color: $gray;
+            }
+        }
+    }
+}
+
+/* Jumbotron
+-------------------------------------------------- */
+.jumbotron {
+    height: 400px; 
+    padding-top: 88px;
+    background-color: $blue-light;
+    background-image: url('../images/header.png');
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .social-btns {
+        width: 225px;
+    }
+}
+
+/* Big Glyphicon
+-------------------------------------------------- */
+.big-icon {
+    &:before {
+        color: $blue;
+        font-size: 50px;
+    }
+}
+
+/* Thumbnail box
+-------------------------------------------------- */
+.thumbnail {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    &:hover {
+        .btn-cornered {
+            bottom: 0;
+        }
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    .btn-cornered {
+        bottom: -50px;
+        @include transition(all .2s ease-in-out);
+    }
+}
+
+/* Buttons
+-------------------------------------------------- */
+.btn-xlarge {
+    padding: 14px 25px;
+    font-size: $font-size-large;
+    text-align: left;
+    .glyphicons:before {
+        font-size: 24px;
+    }
+}

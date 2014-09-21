@@ -14,7 +14,10 @@
 
 // Panel contents
 .panel-body {
-  padding: $panel-body-padding;
+  padding: 0 80px 20px 80px;
+  font-size: $font-size-large;
+  font-weight: lighter;
+  line-height: 28px;
   @include clearfix();
 }
 
@@ -33,10 +36,13 @@
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: ceil(($font-size-base * 1.125));
+  font-size: ceil(($font-size-base * 1.14));
   color: inherit;
 
   > a {
+    display: block;
+    padding: 25px 15px;
+    text-decoration: none;
     color: inherit;
   }
 }
@@ -241,3 +247,7 @@
 .panel-danger {
   @include panel-variant($panel-danger-border, $panel-danger-text, $panel-danger-heading-bg, $panel-danger-border);
 }
+.panel-oto {
+  @include panel-variant($panel-oto-border, $panel-oto-text, $panel-oto-heading-bg, $panel-oto-border);
+}
+

@@ -66,7 +66,7 @@ $brand-danger:          #d9534f !default;
 //** Background color for `<body>`.
 $body-bg:               #fff !default;
 //** Global text color on `<body>`.
-$text-color:            $oto-black !default;
+$text-color:            $gray-darker !default;
 $shadow-color:          rgba(208,199,182,1) !default;
 //** Global textual link color.
 $link-color:            $brand-primary !default;
@@ -90,7 +90,7 @@ $font-size-small:         ceil(($font-size-base * 0.90)) !default; // ~13px
 
 $font-size-h1:            floor(($font-size-base * 2.4)) !default; // ~36px
 $font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
-$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h3:            ceil(($font-size-base * 1.6)) !default; // ~24px
 $font-size-h4:            ceil(($font-size-base * 1.20)) !default; // ~18px
 $font-size-h5:            $font-size-base !default;
 $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
@@ -102,9 +102,9 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    'aller','Open Sans', sans-serif !default;
-$headings-font-weight:    500 !default;
+$headings-font-weight:    bold !default;
 $headings-line-height:    1.1 !default;
-$headings-color:          $oto-black !default;
+$headings-color:          $gray-darker !default;
 
 
 //== Iconography
@@ -215,6 +215,7 @@ $btn-oto-orange-color:           #fff;
 $btn-oto-orange-bg:              $oto-orange;
 $btn-oto-orange-bg-hover:        $oto-orange-darker;
 $btn-oto-orange-border:          $oto-orange;
+
 
 
 
@@ -731,7 +732,7 @@ $list-group-link-heading-color: #333 !default;
 
 $panel-bg:                    #fff !default;
 $panel-body-padding:          15px !default;
-$panel-heading-padding:       10px 15px !default;
+$panel-heading-padding:       0 !default;
 $panel-footer-padding:        $panel-heading-padding !default;
 $panel-border-radius:         $border-radius-base !default;
 
@@ -762,6 +763,10 @@ $panel-warning-heading-bg:    $state-warning-bg !default;
 $panel-danger-text:           $state-danger-text !default;
 $panel-danger-border:         $state-danger-border !default;
 $panel-danger-heading-bg:     $state-danger-bg !default;
+
+$panel-oto-text:              $text-color !default;
+$panel-oto-border:            transparent !default;
+$panel-oto-heading-bg:        #fff !default;
 
 
 //== Thumbnails

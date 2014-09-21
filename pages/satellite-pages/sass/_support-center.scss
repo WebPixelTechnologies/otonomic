@@ -1,0 +1,66 @@
+.support-center {
+
+    .panel-heading {
+
+        .num {
+            display: inline-block;
+            margin-left: -5px;
+            width: 70px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 36px;
+            font-weight: bold;
+            color: $blue-lighter;
+
+            
+        }
+        .yellow .num{
+            color: $yellow-darkest;
+        }
+        .accordion-toggle {
+            font-weight: bold;
+        }
+        .accordion-toggle.collapsed {
+            font-weight: normal;
+        }
+
+    }
+    .panel-heading .accordion-toggle:after {
+        /* symbol for "opening" panels */
+        padding-top: 12px;
+        font-family: 'Glyphicons Halflings Regular';  /* essential for enabling glyphicon */
+        content: "\e113";    /* adjust as needed, taken from bootstrap.css */
+        float: right;        /* adjust as needed */
+        color: $blue-lighter;         /* adjust as needed */
+        font-size: 15px;
+    }
+    .yellow.accordion-toggle:after {
+        color: $yellow-darkest;
+    }
+    .panel-heading .accordion-toggle.collapsed:after {
+        /* symbol for "collapsed" panels */
+        content: "\e114";    /* adjust as needed, taken from bootstrap.css */  
+    }
+
+    .contact-title {
+        margin-top: 26.5px;
+        margin-bottom: 36.5px;
+    }
+
+    /* Search FAQ field */
+    #search-faq-field {
+        margin-top: 25px;
+        outline: 0;
+    }
+    /* Search icon */
+    .glyphicons.search:before {
+        color: $input-color-placeholder;
+        font-size: $font-size-base;
+    }
+
+    /* Buttons */
+
+    .btn-oto-white {
+        margin: 0 5px 7px 0;
+    }
+}
