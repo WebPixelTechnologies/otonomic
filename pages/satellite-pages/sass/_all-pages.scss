@@ -253,6 +253,26 @@
 
 }
 
+/* Lists
+------------------------------------------------ */
+ul {
+    li {
+        padding-bottom: 15px;
+        color: $blue;
+        font-weight: lighter;
+
+        span {
+            color: $gray-dark;
+        }
+        ul {
+            padding-top: 15px;
+            li {
+                color: $gray-dark;
+            }
+        }
+    }
+}
+
 /*==================================================
 =            Bootstrap 3 Media Queries             =
 ==================================================*/
@@ -309,7 +329,7 @@
         .panel-body {
             padding: 0 10px 20px 10px;
         }
-        
+
         /* Footer */
         .footer {
             ul li {

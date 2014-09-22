@@ -5562,6 +5562,8 @@ html {
   -------------------------------------------------- */
   /* Panels
   -------------------------------------------------- */
+  /* Lists
+  ------------------------------------------------ */
   /*==================================================
   =            Bootstrap 3 Media Queries             =
   ==================================================*/
@@ -11518,6 +11520,20 @@ a.list-group-item.active > .satellite-page .badge, .nav-pills > .active > a > .s
 }
 .satellite-page .panel-blue .panel-body .form-control {
   background-color: #fcf8f5;
+}
+.satellite-page ul li {
+  padding-bottom: 15px;
+  color: #29abe2;
+  font-weight: lighter;
+}
+.satellite-page ul li span {
+  color: #524843;
+}
+.satellite-page ul li ul {
+  padding-top: 15px;
+}
+.satellite-page ul li ul li {
+  color: #524843;
 }
 @media only screen and (max-width: 768px) {
   .satellite-page {
