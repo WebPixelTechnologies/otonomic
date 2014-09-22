@@ -12,7 +12,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-xs-9">
+            <div class="col-xs-12 col-md-9">
                 <h3>What This Privacy Policy Covers</h3>
                 <p>This policy covers how Otonomic, Inc., aIsraeli corporation ("Otonomic," "we," "us," or "our") treats personal information that it collects and receives on www.otonomic.com. We are not in the business of selling information about you: we use information shared with us for the sole purpose of running and improving our services. This notice tells you what information we collect, steps we take to protect and secure it, how we use and share information, and finally, how you can contact us with questions or concerns.</p>
                 <h3>Information We Gather</h3>
