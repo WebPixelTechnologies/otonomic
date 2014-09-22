@@ -9731,7 +9731,7 @@ a.list-group-item.active > .satellite-page .badge, .nav-pills > .active > a > .s
   line-height: 1.3;
 }
 .satellite-page .panel {
-  margin-bottom: 33px;
+  margin-bottom: 10px;
   background-color: white;
   border: 1px solid transparent;
   border-radius: 6px;
@@ -9926,7 +9926,7 @@ a.list-group-item.active > .satellite-page .badge, .nav-pills > .active > a > .s
   margin-bottom: 33px;
 }
 .satellite-page .panel-group .panel {
-  margin-bottom: 0;
+  margin-bottom: 10px;
   border-radius: 6px;
 }
 .satellite-page .panel-group .panel + .panel {
@@ -11540,8 +11540,8 @@ a.list-group-item.active > .satellite-page .badge, .nav-pills > .active > a > .s
 }
 .satellite-page .support-center .panel-blue .panel-heading .panel-title .accordion-toggle.collapsed:hover {
   background-color: #29abe2;
-  -webkit-box-shadow: #0980b2 0px -2px 0px inset;
-  box-shadow: #0980b2 0px -2px 0px inset;
+  -webkit-box-shadow: #228ebd 0px -2px 0px inset;
+  box-shadow: #228ebd 0px -2px 0px inset;
 }
 .satellite-page .support-center .panel-blue .panel-heading .panel-title .accordion-toggle.collapsed:after {
   color: inherit;
