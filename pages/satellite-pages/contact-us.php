@@ -13,10 +13,10 @@
     <div class="container">
       <section>
         <div class="row office-images">
-          <div class="col-md-3"><img class="img-thumbnail" src="images/office1.jpg"></div>
-          <div class="col-md-3"><img class="img-thumbnail" src="images/office2.jpg"></div>
-          <div class="col-md-3"><img class="img-thumbnail" src="images/office3.jpg"></div>
-          <div class="col-md-3"><img class="img-thumbnail" src="images/office4.jpg"></div>
+          <div class="col-xs-6 col-sm-3"><img class="img-thumbnail img-responsive" src="images/office1.jpg"></div>
+          <div class="col-xs-6 col-sm-3"><img class="img-thumbnail img-responsive" src="images/office2.jpg"></div>
+          <div class="col-xs-6 col-sm-3"><img class="img-thumbnail img-responsive" src="images/office3.jpg"></div>
+          <div class="col-xs-6 col-sm-3"><img class="img-thumbnail img-responsive" src="images/office4.jpg"></div>
         </div>
         <div class="row">
           <div class="col-md-3">
@@ -40,10 +40,10 @@
           </div>
           <div class="col-md-9">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <a href="mailto:support@otonomic.com" class="btn btn-block btn-oto-blue btn-xlarge"><span class="glyphicons message_full"></span> support@otonomic.com</a>
               </div>
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <div class="panel-group" id="contactAccordion">
                         <div class="panel panel-oto panel-blue">
                           <div class="panel-heading">

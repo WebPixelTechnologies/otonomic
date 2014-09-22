@@ -1,7 +1,7 @@
     <div class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-xs12 col-sm-3 hidden-xs">
             <h3>Otonomic</h3>
             <ul class="list-unstyled">
               <li><a href="#">Features</a></li>
@@ -13,7 +13,7 @@
               <li><a href="#">Blog</a></li>
             </ul>
           </div>
-          <div class="col-md-5">
+          <div class="col-xs12 col-sm-5 hidden-xs">
             <h3>People Ask Us</h3>
             <ul class="list-unstyled">
               <li><a href="#">How to make a website for free <br>and also get paid money just for <br>the kicks?</a></li>
@@ -22,7 +22,7 @@
               <li><a href="#">How to setup a personal website?</a></li>
             </ul>
           </div>
-          <div class="col-md-4">
+          <div class="col-xs12 col-sm-4 hidden-xs">
             <h3>Our Services</h3>
             <ul class="list-unstyled">
               <li><a href="#">Facebook to Website</a></li>

@@ -22,12 +22,12 @@
                 <div class="col-md-9">
                     <h3>Management</h3>
                     <div class="row management">
-                        <div class="col-md-4">
+                        <div class="col-xs-4">
                             <div class="thumbnail">
                               <img src="images/ceo-omri.png" alt="Omri Allouche  Founder & CEO" style="width:210px;">
                             </div>
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-xs-8">
                             <div class="details">
                                 <p><b class="name">Omri Allouche</b> Founder & CEO</p>
                                 <p>An experienced entrepreneur, formerly the founder of social marketing platform Zink.</p>
@@ -35,12 +35,12 @@
                         </div>
                     </div>
                     <div class="row management">
-                        <div class="col-md-4">
+                        <div class="col-xs-4">
                             <div class="thumbnail">
                               <img src="images/vp-products-edik.png" alt="Edik Mitelman VP Products">
                             </div>
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-xs-8">
                             <div class="details">
                                 <p><b class="name">Edik Mitelman</b> VP Products</p>
                                 <p>An experienced entrepreneur, formerly the founder of social marketing platform Zink.</p>
@@ -48,12 +48,12 @@
                         </div>
                     </div>
                     <div class="row management">
-                        <div class="col-md-4">
+                        <div class="col-xs-4">
                             <div class="thumbnail">
                               <img src="images/vp-design-ilan.png" alt="Ilan Lichtnaier VP Design">
                             </div>
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-xs-8">
                             <div class="details">
                                 <p><b class="name">Ilan Lichtnaier</b> VP Design</p>
                                 <p>Formerly of Conduit, HP and Netcraft.</p>
@@ -91,11 +91,23 @@
                         <h3>In the media</h3>
                     </div>
                     <div class="col-md-12 media-images">
-                        <img src="images/forbes.png" alt="..." class="img-thumbnail">
-                        <img src="images/parade.png" alt="..." class="img-thumbnail">
-                        <img src="images/inc.png" alt="..." class="img-thumbnail">
-                        <img src="images/allfacebook.png" alt="..." class="img-thumbnail">
-                        <img src="images/fox.png" alt="..." class="img-thumbnail">
+                        <div class="row">
+                            <div class="thumbnail col-xs-6 col-md-2">
+                                <img src="images/forbes.png" alt="...">
+                            </div>
+                            <div class="thumbnail col-xs-6 col-md-2">
+                                <img src="images/parade.png" alt="...">
+                            </div>
+                            <div class="thumbnail col-xs-6 col-md-2">
+                                <img src="images/inc.png" alt="...">
+                            </div>
+                            <div class="thumbnail col-xs-6 col-md-2">
+                                <img src="images/allfacebook.png" alt="...">
+                            </div>
+                            <div class="thumbnail col-xs-6 col-md-2">
+                                <img src="images/fox.png" alt="...">
+                            </div>
+                        </div>
                     </div>
                 </div>
           </section>
@@ -104,7 +116,7 @@
                     <div class="col-md-12">
                         <h3>Press releases</h3>
                     </div>
-                    <div class="col-xs-12 col-md-6 oto-app-holder">
+                    <div class="col-xs-12 col-sm-6 oto-app-holder">
                       <div class="thumbnail">
                         <a href="#">
                             <img src="images/press1.jpg" alt="Press 1">
@@ -116,7 +128,7 @@
                         </a>
                       </div>
                     </div>
-                    <div class="col-xs-12 col-md-6 oto-app-holder">
+                    <div class="col-xs-12 col-sm-6 oto-app-holder">
                       <div class="thumbnail">
                         <a href="#">
                             <img src="images/press2.jpg" alt="Press 1">
@@ -128,7 +140,7 @@
                         </a>
                       </div>
                     </div>
-                    <div class="col-xs-12 col-md-6 oto-app-holder">
+                    <div class="col-xs-12 col-sm-6 oto-app-holder">
                       <div class="thumbnail">
                         <a href="#">
                             <img src="images/press3.jpg" alt="Press 1">
@@ -140,7 +152,7 @@
                         </a>
                       </div>
                     </div>
-                    <div class="col-xs-12 col-md-6 oto-app-holder">
+                    <div class="col-xs-12 col-sm-6 oto-app-holder">
                       <div class="thumbnail">
                         <a href="#">
                             <img src="images/press3.jpg" alt="Press 1">

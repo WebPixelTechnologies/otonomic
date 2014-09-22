@@ -14,10 +14,10 @@
     <div class="container">
       <section class="feature">
         <div class="row">
-          <div class="col-md-1">
+          <div class="col-xs-1 hidden-xs">
             <span class="glyphicons kiosk big-icon"></span>
           </div>
-          <div class="col-md-11">
+          <div class="col-xs-11">
             <h3>A Category this is</h3>
           </div>
         </div>
@@ -50,10 +50,10 @@
       </div>
       <section class="feature">
         <div class="row">
-          <div class="col-md-1">
+          <div class="col-xs-1 hidden-xs">
             <span class="glyphicons crown big-icon"></span>
           </div>
-          <div class="col-md-5">
+          <div class="col-xs-11">
             <h3>This is a different category and a really short one</h3>
           </div>
         </div>

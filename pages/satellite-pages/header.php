@@ -34,7 +34,7 @@
           </button>
           <a class="navbar-brand" href="htttp://otonomic.com"><img src="images/logo.png" alt="otonomic.com"></a>
           <div class="navbar-right" >
-            <a href="#" class="btn btn-sm navbar-btn btn-oto-orange">Create Your Website Now</a>
+            <a href="#" class="btn btn-sm navbar-btn btn-oto-orange hidden-xs">Create Your Website Now</a>
           </div>
         </div>
       </div>

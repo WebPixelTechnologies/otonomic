@@ -18,7 +18,7 @@ $(function() {
     function openCloseMenu(){
         //if open then close
           if ($("#menu-toggle").hasClass('active')) {
-            $(".navbar").animate({paddingRight:"0"}, 300,"swing");
+            $(".navbar").animate({marginRight:"0",marginLeft:"0"}, 300,"swing");
             $("#sidebar-wrapper").animate({right: "-250", opacity:"0"}, 300,"swing", function() {
                 // Animation complete.
                 $("#menu-toggle").toggleClass("active");
@@ -26,7 +26,7 @@ $(function() {
           }
           // else open
           else{
-            $(".navbar").animate({paddingRight:"250"}, 300,"swing");
+            $(".navbar").animate({marginRight:"250",marginLeft:"-250"}, 300,"swing");
             $("#sidebar-wrapper").animate({right: "0",opacity:"1"}, 300,"swing", function() {
                 // Animation complete.
                 $("#menu-toggle").toggleClass("active");
