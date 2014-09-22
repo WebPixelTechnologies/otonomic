@@ -20,15 +20,15 @@
 
 // config settings
 $rrssb-txt: #fff !default;
-$rrssb-email: #0a88ff !default;
-$rrssb-facebook: #306199 !default;
+$rrssb-email: #e8b400 !default;
+$rrssb-facebook: #3c599b !default;
 $rrssb-tumblr: #32506d !default;
-$rrssb-linkedin: #007bb6 !default;
-$rrssb-twitter: #26c4f1 !default;
-$rrssb-googleplus: #e93f2e !default;
+$rrssb-linkedin: #1884bb !default;
+$rrssb-twitter: #55acee !default;
+$rrssb-googleplus: #d73d32 !default;
 $rrssb-reddit: #8bbbe3 !default;
 $rrssb-youtube: #df1c31 !default;
-$rrssb-pinterest: #b81621 !default;
+$rrssb-pinterest: #d13e44 !default;
 $rrssb-pocket: #ED4054 !default;
 $rrssb-github: #444 !default;
 
@@ -106,6 +106,13 @@ $social-list: (
 
 			&.#{nth($s-name, 1)} {
 				a {
+					background-color: nth($s-name, 2);
+
+					&:hover {
+						background-color: darken(nth($s-name, 2), 10%);
+					}
+				}
+				a.single-color {
 					background-color: #228ebd;//nth($s-name, 2);
 
 					&:hover {

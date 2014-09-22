@@ -1,0 +1,32 @@
+.contact-us {
+    
+    .jumbotron {
+        background-image: url('../images/header2.png');
+    }
+
+    .office-images {
+        margin-top:  40px;
+        margin-bottom: 40px;
+    }
+    .map-fold {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .google-map {
+        padding: 15px;
+        height: 500px;
+    }
+    .social-channels {
+        margin-top: 40px;
+        margin-bottom: 80px;
+    }
+    .rrssb-buttons.contact-buttons {
+        height: 45px;
+        width: 330px;
+
+        li a .icon svg{
+            top: 11px;
+        }
+    }
+}

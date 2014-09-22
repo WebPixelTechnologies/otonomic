@@ -140,3 +140,115 @@
         font-size: 24px;
     }
 }
+
+/* Panels
+-------------------------------------------------- */
+.panel-heading {
+
+    .num {
+        display: inline-block;
+        margin-left: -5px;
+        width: 70px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 36px;
+        font-weight: bold;
+        color: $blue-lighter;
+
+        
+    }
+    .yellow .num{
+        color: $yellow-darkest;
+    }
+    .accordion-toggle {
+        font-weight: bold;
+    }
+    .accordion-toggle.collapsed {
+        font-weight: normal;
+    }
+
+}
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    padding-top: 12px;
+    font-family: 'Glyphicons Halflings Regular';  /* essential for enabling glyphicon */
+    content: "\e113";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: $blue-lighter;         /* adjust as needed */
+    font-size: 15px;
+}
+.yellow.accordion-toggle:after {
+    color: $yellow-darkest;
+}
+.panel-heading .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e114";    /* adjust as needed, taken from bootstrap.css */  
+}
+
+.panel-blue{
+
+    border: none;
+    @include box-shadow(none);
+    .panel-heading {
+
+        border-radius: 6px;
+        color: #fff;
+        /* background-color: $blue; */
+
+        .panel-title {
+            a { 
+                padding: 23px 25px;
+            }
+
+            .accordion-toggle {
+                @include border-radius(($panel-border-radius - 1));
+                color: $gray-dark;
+                background-color: #fff;
+
+                &:after {
+                    padding-top: 6px;
+                    color: inherit;
+                }
+                .glyphicons {
+
+                    &:before {
+                        color: $gray-dark;
+                    } 
+                }
+            }
+            .accordion-toggle.collapsed {
+                color: #fff;
+                background-color: $blue-lighter;
+                @include box-shadow( $blue 0px -2px 0px inset);
+
+                &:hover {
+                    background-color: $blue;
+                    @include box-shadow( $blue-dark 0px -2px 0px inset);
+                }
+                &:after {
+                    color: inherit;
+                }
+                .glyphicons {
+
+                    &:before {
+                        color: #fff;
+                    } 
+                }
+            }
+        }
+    }
+
+    .panel-body {
+        position: relative;
+        padding: 0 25px 60px 25px;
+
+        label {
+            font-size: $font-size-base;
+            font-weight: normal;
+        }
+        .form-control {
+            background-color: $bright;
+        }
+    }
+
+}

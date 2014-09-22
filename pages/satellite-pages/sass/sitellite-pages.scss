@@ -17,12 +17,13 @@ html {
 /* prefix to avoid conflicts */
 .satellite-page {
     @import "otonomic-bootstrap-sass/bootstrap";
+    @import "rrssb";
     @import "all-pages";
     @import "side-menu";
-    @import "rrssb";
     @import "features";
     @import "about";
     @import "support-center";
+    @import "contact-us";
 
     margin: 0;
     color: $gray-darker;
