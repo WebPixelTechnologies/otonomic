@@ -84,16 +84,16 @@
   @include oto-button-variant($btn-oto-orange-color, $btn-oto-orange-bg, $btn-oto-orange-bg-hover, $btn-oto-orange-border);
 }
 .btn-oto-blue {
-  @include oto-button-variant( #fff, $blue, $blue-dark, $blue);
+  @include oto-button-variant( #fff, $blue-lighter, $blue, $blue-lighter);
 }
 .btn-oto-white {
   @include oto-button-variant( $blue-dark, #fff, #fff, #fff);
   @include box-shadow(rgba(0,0,0,0.25) 0px 2px 0px);
   &:hover{
     color: #fff;
-    border-color: $blue;
-    background-color: $blue;
-    @include box-shadow($blue-darker 0px 2px 0px);
+    border-color: $blue-lighter ;
+    background-color: $blue-lighter;
+    @include box-shadow($blue 0px 2px 0px);
   }
 }
 .btn-cornered {

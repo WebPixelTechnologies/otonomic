@@ -295,7 +295,39 @@
                   <h4 class="contact-title">Or fill a contact form</h4>
                 </div>
                 <div class="col-md-7">
-                  <a href="#" class="btn btn-block btn-oto-blue btn-xlarge"><span class="glyphicons notes_2"></span> Fill out this form</a>
+                  <!-- <a href="#" class="btn btn-block btn-oto-blue btn-xlarge"><span class="glyphicons notes_2"></span> Fill out this form</a> -->
+                    <div class="panel-group" id="contactAccordion">
+                        <div class="panel panel-oto panel-blue">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#contactAccordion" href="#contactAccordion1">
+                                <span class="glyphicons notes_2"></span> Fill out this form
+                              </a>
+                            </h4>
+                          </div>
+                          <div id="contactAccordion1" class="panel-collapse collapse">
+                            <div class="panel-body">
+                              <form role="form">
+                                    <div class="form-group">
+                                        <label for="inputName">Name</label>
+                                        <input type="text" class="form-control" id="inputName" placeholder="e.g John Doe">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputEmail">Email</label>
+                                        <input type="email" class="form-control" id="inputEmail" placeholder="e.g johndoe@gmail.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputMessage">What's on your mind</label>
+                                        <textarea name="inputMessage" class="form-control" rows="3" placeholder="Tell us what's bothering you"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-oto-blue btn-cornered">
+                                        Let us know
+                                    </button>
+                                </form>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
                 </div>
               </div>
             </div>
