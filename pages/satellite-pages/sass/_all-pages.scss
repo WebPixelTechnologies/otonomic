@@ -1,3 +1,9 @@
+/* Typography
+-------------------------------------------------- */
+.orange-text {
+    color: $oto-orange;
+}
+
 /* Header
 -------------------------------------------------- */
 .navbar {
@@ -28,6 +34,14 @@
     }
 }
 
+/* Container
+-------------------------------------------------- */
+.container {
+    padding-bottom: 40px;
+}
+
+/* Footer
+-------------------------------------------------- */
 .footer {
   position: absolute;
   bottom: 0;
@@ -102,10 +116,20 @@
 /* Big Glyphicon
 -------------------------------------------------- */
 .big-icon {
+
     &:before {
         color: $blue;
         font-size: 50px;
     }
+}
+
+/* Big Letter
+-------------------------------------------------- */
+.big-letter {
+    margin-top: 26px;
+    margin-bottom: 16.5px;
+    color: $blue;
+    font-size: 50px;
 }
 
 /* Thumbnail box
