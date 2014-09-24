@@ -11847,3 +11847,6 @@ a.list-group-item.active > .satellite-page .badge, .nav-pills > .active > a > .s
 .satellite-page .domain .feature .big-icon {
   margin-top: 32px;
 }
+.satellite-page .sample-websites .thumbnail {
+  padding: 15px;
+}
