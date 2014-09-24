@@ -11850,3 +11850,32 @@ a.list-group-item.active > .satellite-page .badge, .nav-pills > .active > a > .s
 .satellite-page .sample-websites .thumbnail {
   padding: 15px;
 }
+.satellite-page .stories .story {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+.satellite-page .stories .name {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.satellite-page .stories .thumbnail {
+  margin-right: 30px;
+}
+.satellite-page .stories .quote {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 28px;
+}
+.satellite-page .stories .fold {
+  position: absolute;
+  top: 0;
+}
+.satellite-page .stories .fold.right {
+  right: 0;
+}
+.satellite-page .stories .fold.left {
+  left: 0;
+}
+.satellite-page .stories .thumbnail:hover .btn-cornered {
+  bottom: -2px;
+}

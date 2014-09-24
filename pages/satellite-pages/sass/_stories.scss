@@ -1,0 +1,33 @@
+.stories {
+
+	.story {
+		margin-top: 60px;
+		margin-bottom: 20px;
+	}
+	.name {
+		margin-top: 0;
+		margin-bottom: 5px;
+	}
+	.thumbnail {
+		margin-right: 30px;
+	}
+	.quote {
+		margin-top: 20px;
+		font-size: $font-size-large;
+		line-height: 28px;
+	}
+	.fold {
+        position: absolute;
+        top: 0;
+        &.right {
+        	right:0;
+        }
+        &.left {
+        	left: 0;
+        }
+    }
+
+    .thumbnail:hover .btn-cornered {
+		bottom: -2px;
+	}
+}
