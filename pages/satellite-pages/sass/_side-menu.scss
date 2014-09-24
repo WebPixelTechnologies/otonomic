@@ -8,7 +8,7 @@
   opacity: 0;
   position: fixed;
   height: 100%;
-  overflow-y: auto;
+  overflow-y: hidden;
   z-index: 1031;
 }
 
@@ -20,8 +20,13 @@
   margin: 0;
   padding: 0;
 }
+
 #sidebar-wrapper .sidebar-nav li{
-    border-bottom:1px solid #595657;
+  padding: 0;
+  border-bottom:1px solid #595657;
+}
+#sidebar-wrapper .sidebar-nav .hidden-option {
+  display: none;
 }
 #sidebar-wrapper .sidebar-nav li a{
     display: block;

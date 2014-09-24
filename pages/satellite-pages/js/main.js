@@ -53,4 +53,12 @@ $(function() {
           closeMenu();
         }
     });
+
+    $('#sidebar-wrapper').perfectScrollbar();
+
+    $('#more').click(function(e){
+      e.preventDefault();
+      $(this).parent().hide();
+      $('.hidden-option').removeClass('hidden-option');
+    });
 });
