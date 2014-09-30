@@ -71,6 +71,7 @@
                         <li>
                         Be in charge of the company's content assets, including our site, newsletter, blog, and social media
                         </li> <li>Create value-driven, remarkable content
+                        </li> <li>Lead a team of freelance content writers
                         </li> <li>Build relationships with the community by engaging with small business owners and influencers on blogs, social media, webinars etc.
                         </li> <li>Identify trends, user needs and new content opportunities and ways to repurpose content created by our community
                         </li> <li>Analyze key metrics of user engagement and implement improvements
