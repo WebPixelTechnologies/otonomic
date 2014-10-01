@@ -161,7 +161,7 @@ if (is_localhost()) {
 
 
 	// init timer
-	timer.set({ time: 500, autostart: true });
+	//timer.set({ time: 500, autostart: true });
 
 	// owl-carousel init
 	$("#owl-slider1").owlCarousel({
