@@ -254,7 +254,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
         url: 'https://graph.facebook.com/search',
         context: document.body,
         callbackParameter: "callback",
-        data: {'q': value, type: 'page', fields: 'id,name,category,category_list,cover,likes', limit: 9, access_token: '389314351133865|O4FgcprDMY0k6rxRUO-KOkWuVoU'},
+        data: {'q': value, type: 'page', fields: 'id,name,category,category_list,cover,likes,is_community_page', limit: 9, access_token: '389314351133865|O4FgcprDMY0k6rxRUO-KOkWuVoU'},
         success: function (json, textStatus, xOptions) {
             found_only_result_url = '';
             found_result = json.data.length;
@@ -265,6 +265,8 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
             var current_site_creation_link;
 
             jQuery.each(json.data, function (key, val) {
+                if(val.is_community_page) { return; }
+
                 query_tags.page_id = val.id;
                 query_tags.page_name = val.name;
                 if(typeof(val.category) !== 'undefined')         { query_tags.category = val.category; }

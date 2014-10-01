@@ -69,23 +69,30 @@
 					<h2>Responsibilities</h2>
 					<ul>
                         <li>
-                        Be in charge of the company's content assets, including our site, newsletter, blog, and social media
-                        </li> <li>Create value-driven, remarkable content
-                        </li> <li>Build relationships with the community by engaging with small business owners and influencers on blogs, social media, webinars etc.
-                        </li> <li>Identify trends, user needs and new content opportunities and ways to repurpose content created by our community
-                        </li> <li>Analyze key metrics of user engagement and implement improvements
-                        </li> <li>Provide basic customer service
+                            Oversee all marketing content initiatives, both internal and external, across multiple platforms and formats to drive sales, engagement, retention, leads and positive customer behavior
+                            </li> <li>Be in charge of the company's content assets, including our site, newsletter, blog, and social media
+                            </li> <li>Lead the development of content initiatives in all forms to drive new and current business. This includes ensuring all content is on-brand, consistent in terms of style, quality and tone of voice, and optimized for search and user experience for all channels of content including online, social media, email, mobile, video, print and in-person
+                            </li> <li>Supervise writers, editors, content strategists; be an arbiter of best practices in grammar, messaging, writing, and style
+                            </li> <li>Build relationships with the community by engaging with small business owners and influencers on blogs, social media and webinars
+                            </li> <li>Identify trends, user needs and new content opportunities and ways to repurpose content created by our community
+                            </li> <li>Conduct ongoing usability tests to gauge content effectiveness. Gather data, handle analytics and make recommendations based on those results
+                            </li> <li>Analyze key metrics of user engagement and implement improvements
+                            </li> <li>Leverage market data to develop content themes, topics and execute a plan to develop the assets that support a point of view and educate customers that leads to critical behavioral metrics
+                            </li> <li>Provide basic customer service
+                            </li> <li>Establishing work flow for requesting, creating, editing, publishing, and retiring content
                         </li>
                     </ul>
 
 					<h2>Requirements</h2>
                     <ul>
                         <li>
-                        Native English speaker. Familiarity with American culture a plus
-                        </li> <li> 2+ years of work experience as a marketing specialist, copywriter, social media manager or a similar position for an international brand
-                        </li> <li> Superb writing skills. Able to effectively communicate ideas in our brand voice
-                        </li> <li> High energy, can-do attitude with willingness to do what it takes to get things done
-                        </li> <li> Must be self-directed, able to work independently, as well as work in a team-oriented and fast paced environment as an individual contributor
+                            Native English speaker. Familiarity with American culture a plus
+                            </li><li>2+ years of work experience as a marketing specialist, copywriter, social media manager or a similar position for an international brand
+                            </li><li>Superb writing skills. Able to effectively communicate ideas in our brand voice
+                            </li><li>Experience with creating compelling messages for different target demographics. Crisis communications experience a plus
+                            </li><li>Expertise in all things related to content and channel optimization, brand consistency, segmentation and localization, analytics and meaningful measurement
+                            </li><li>High energy, can-do attitude with willingness to do what it takes to get things done
+                            </li><li>Must be self-directed, able to work independently, as well as work in a team-oriented and fast paced environment as an individual contributor
                         </li>
                     </ul>
                     <p>Please email your CV and two writing samples to <a href="mailto:jobs@otonomic.com">jobs@otonomic.com</a>.</p>
