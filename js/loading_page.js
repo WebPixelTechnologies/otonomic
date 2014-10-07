@@ -12,6 +12,14 @@ if (is_localhost()) {
 	var page_name = getParameterByName('page_name');
     var category = getParameterByName('category');
     var category_list = getParameterByName('category_list');
+	
+	var page_load_timestamp;
+	
+	var contact_load_timestamp;
+	var store_load_timestamp;
+	var category_load_timestamp;
+	
+	page_load_timestamp = new Date();
 
     if (page_name) {
         $('#ot-fb-name').html(page_name);
@@ -22,7 +30,7 @@ if (is_localhost()) {
     }
 
 
-    track_event('Loading Page', 'View');
+    track_event('Loading Page', 'Start');
 	jQuery('input[type=text]').addClass('LoNotSensitive');
 
 
@@ -87,6 +95,7 @@ if (is_localhost()) {
 				owl.next();
 				break;
 			case 27:
+				contact_load_timestamp = new Date();
 				$('#stage-2').fadeOut('slow', function () {
 					$(this).addClass('hidden');
 					// init google maps
@@ -201,11 +210,21 @@ if (is_localhost()) {
 
 	//get carousel instance data and store it in variable owl
 	var owl2 = $("#owl-slider2").data('owlCarousel');
+	
+	jQuery('#link-tos').click(function (e){
+		track_event('Loading Page', 'ToS', '');
+	});
 
 	// #see-my-website-btn Click
-    
+	
 	$('#see-my-website-btn').click(function (event) {
 		//event.preventDefault();
+		
+		var cdate = new Date();
+		var time_difff = cdate - page_load_timestamp;
+		
+		track_event('Loading Page', 'Take to website', 'button', time_difff);
+		
 	    var btn = $(this);
 	    btn.button('loading');
 	});
@@ -239,6 +258,7 @@ if (is_localhost()) {
 
 	// function that switched to stage-4 from stage-3
 	function switchToStage4() {
+		store_load_timestamp = new Date();
 		// Start pulsing
 		$(".peg").toggleClass("pulse");
 		// fade stage
@@ -256,6 +276,9 @@ if (is_localhost()) {
 
 	// function that switched to stage-5 from stage-4
 	function switchToStage5() {
+		
+		category_load_timestamp = new Date();
+		
 		// Start pulsing
 		$(".peg").toggleClass("pulse");
 		// fade stage
@@ -281,6 +304,14 @@ if (is_localhost()) {
 	$('.submit-contact').click(function (e) {
 		e.preventDefault();
 		contact_form_submited();
+		
+		var cdate = new Date();
+		var time_difff = cdate - contact_load_timestamp;
+		
+		var updated_fields = get_updated_contact_fields();
+		
+		track_event('Loading Page', 'Contact Done', updated_fields, time_difff);
+		
 		// Stop pulsing
 		$(".peg").toggleClass("pulse");
 		// Increment progress bar a little
@@ -294,6 +325,14 @@ if (is_localhost()) {
 	// Contact Details Skip
 	$('.submit-skip-contact').click(function (e) {
 		e.preventDefault();
+		
+		var cdate = new Date();
+		var time_difff = cdate - contact_load_timestamp;
+		
+		var empty_fields = get_empty_contact_fields();
+		
+		track_event('Loading Page', 'Contact Skip', empty_fields, time_difff);
+		
 		// Stop pulsing
 		$(".peg").toggleClass("pulse");
 		// Increment progress bar a little
@@ -307,6 +346,12 @@ if (is_localhost()) {
 	// Submit Store
 	$('.submit-store').click(function (e) {
 		e.preventDefault();
+		
+		var cdate = new Date();
+		var time_difff = cdate - store_load_timestamp;
+		
+		track_event('Loading Page', 'Store Yes', '', time_difff);
+		
 		if (window.is_blog_ready == 1) {
 			send_need_store();
 		}
@@ -326,6 +371,12 @@ if (is_localhost()) {
 	// Skip Store
 	$('.submit-skip-store').click(function (e) {
 		e.preventDefault();
+		
+		var cdate = new Date();
+		var time_difff = cdate - store_load_timestamp;
+		
+		track_event('Loading Page', 'Store No', '', time_difff);
+		
 		send_dont_need_store();
 		// Switch stage
 		switchToStage5();
@@ -342,6 +393,13 @@ if (is_localhost()) {
 	$('.submit-category-btn').click(function (e) {
 		e.preventDefault();
 		window.facebook_category = jQuery('#fb_category').val();
+		
+		var cdate = new Date();
+		var time_difff = cdate - category_load_timestamp;
+		
+		track_event('Loading Page', 'Category Done', window.facebook_category, time_difff);
+		
+		
 		if (window.is_blog_ready == 1) {
 
 			set_site_category();
@@ -367,6 +425,12 @@ if (is_localhost()) {
 	// Skip category
 	$('.submit-skip-category').click(function (e) {
 		e.preventDefault();
+		
+		var cdate = new Date();
+		var time_difff = cdate - category_load_timestamp;
+		
+		track_event('Loading Page', 'Category Skip', window.facebook_category, time_difff);
+		
 		// Resume timer
 		timer.play();
 		// Increment progress bar a little
@@ -857,4 +921,49 @@ function send_dont_need_store() {
 			}
 		}
 	});
+}
+
+function get_updated_contact_fields()
+{
+	var fields = '';
+	window.parsed_page_data = {
+		'phone': phone,
+		'address': address,
+		'email': email
+	}
+	if( window.parsed_page_data.phone !=  $('#phone').val())
+	{
+		fields+='phone,';
+	}
+	if( window.parsed_page_data.email !=  $('#email').val())
+	{
+		fields+='email,';
+	}
+	if( window.parsed_page_data.address !=  $('#address').val())
+	{
+		fields+='address,';
+	}
+	return fields;
+}
+function get_empty_contact_fields()
+{
+	var fields = '';
+	window.parsed_page_data = {
+		'phone': phone,
+		'address': address,
+		'email': email
+	}
+	if( $('#phone').val() == '' )
+	{
+		fields+='phone,';
+	}
+	if( $('#email').val() == '')
+	{
+		fields+='email,';
+	}
+	if( $('#address').val() == '')
+	{
+		fields+='address,';
+	}
+	return fields;
 }
