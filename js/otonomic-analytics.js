@@ -81,13 +81,47 @@ function track_event(category, action, label, value){
     }
 
     if(typeof(ga) !== 'undefined') {
-        ga('send', 'event', category, action, label,value);
+        //ga('send', 'event', category, action, label,value);
+		ga('send', {
+			'hitType': 'event',
+			'eventCategory': category,
+			'eventAction': action,
+			'eventLabel': label,
+			'value':value
+		});
     }
 
     // jQuery.post('http://otonomic.com/code/sites/track_click/', { category: category, event: action , label: label, value: value });
     if(typeof(_paq) !== 'undefined') {
-        _paq.push(['trackEvent', category, action, label, value ]);
+        //_paq.push(['trackEvent', category, action, label, value ]);
+		_paq.push(['trackEvent', category, action, label, value]);
     }
+	submit_options = {
+			'event': action,
+			'category': category,
+			'action': action,
+			'label': label,
+			'value':value
+		}
+	trackOtonomic(submit_options);
+}
+function trackOtonomic( submit_options )
+{
+	if( is_localhost ) 
+	{
+		
+		otonomic_db_analytics_url = "http://p2s.test/sites/track_click";
+	} 
+	else 
+	{
+		otonomic_db_analytics_url = "http://builder.otonomic.com/sites/track_click";
+	}
+	$.ajax({
+		type: 'GET',
+		url: otonomic_db_analytics_url,
+		data: submit_options
+	});
+	
 }
 
 function track_virtual_pageview(url, title) {
