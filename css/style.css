@@ -50,6 +50,18 @@ p{line-height: 23px;}
 .btn-ttc:focus {
   color: white;
 }
+
+.btn-facebook-connect {
+	color: #146aa7;
+	line-height: 2.33;
+	font-weight: normal;
+	background-color: white;
+
+}
+.btn-facebook-connect img {
+	margin-right: 10px;
+	width: 28px;
+}
 /* NavBar */
 .navbar{
 	border-radius: 0;
