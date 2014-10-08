@@ -548,7 +548,11 @@ textarea {
 
 /* Congratz
 ----------------------------------*/
-#congratz{
+#congratz{}
+
+#congratz .content-container{
+  position: absolute;
+  top: 0;
 }
 #congratz #confetti{
 	position: absolute;
