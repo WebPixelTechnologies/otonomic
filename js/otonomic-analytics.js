@@ -112,7 +112,7 @@ function track_event(category, action, label, value){
 }
 function trackOtonomic( submit_options )
 {
-	if( is_localhost ) 
+	if( is_localhost() ) 
 	{
 		
 		otonomic_db_analytics_url = "http://p2s.test/sites/track_click";
