@@ -144,8 +144,8 @@
 			var event_data = 'Page id:'+getParameterByName('page_id')+', Page name:'+getParameterByName('page_name')+', Category:'+getParameterByName('category');
             track_event("Lead Generation Website", "Lead Generated", event_data);
 			track_event("Lead Generation Website", "Lead Generated", "Page ID: "+getParameterByName('page_id'));
-			track_event("Lead Generation Website", "Lead Generated", "Page name"+getParameterByName('page_name'));
-			track_event("Lead Generation Website", "Lead Generated", "Category"+getParameterByName('category'));
+			track_event("Lead Generation Website", "Lead Generated", "Page name:"+getParameterByName('page_name'));
+			track_event("Lead Generation Website", "Lead Generated", "Category:"+getParameterByName('category'));
         });
     </script>
   </body>
