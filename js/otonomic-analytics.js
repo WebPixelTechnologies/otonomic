@@ -84,7 +84,11 @@ function track_event(category, action, label, value){
         ga('send', 'event', category, action, label,value);
     }
 
-    // jQuery.post('http://otonomic.com/code/sites/track_click/', { category: category, event: action , label: label, value: value });
+    jQuery.post(
+        'http://otonomic.com/code/sites/track_click/',
+        { category: category, event: action , label: label, value: value }
+    );
+
     if(typeof(_paq) !== 'undefined') {
         _paq.push(['trackEvent', category, action, label, value ]);
     }
