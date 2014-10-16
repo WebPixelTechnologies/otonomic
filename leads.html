@@ -708,7 +708,9 @@
     <!-- // Facebook -->
     <div id="fb-root"></div>
     <script type="text/javascript">
-		p2sTrack('Lead Page', 'Page Loaded', '0 seconds');
+		jQuery(document).ready(function($) {
+			p2sTrack('Lead Page', 'Page Loaded', '0 seconds');
+		});
         window.fbAsyncInit = function() {
             FB.init({ appId: "373931652687761",status: true,cookie: true,xfbml: true});
 
