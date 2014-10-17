@@ -1,3 +1,23 @@
+<?php
+/* send email with lead details */
+$mail_to = 'project.tester24x7@gmail.com';
+
+$headers = 'From: leads@otonomic.com' . "\r\n" .
+    'Reply-To: leads@otonomic.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+$ip = $_SERVER['REMOTE_ADDR']?:($_SERVER['HTTP_X_FORWARDED_FOR']?:$_SERVER['HTTP_CLIENT_IP']);
+
+$server = isset($_SERVER['HTTP_HOST'])?$_SERVER['HTTP_HOST']:$_SERVER['SERVER_NAME'];
+$mail_subject = 'New lead generated on '.$server;
+$mail_content = "Page Name: ".$_REQUEST['page_name'];
+$mail_content .= "\nPage ID: ".$_REQUEST['page_id'];
+$mail_content .= "\nPage Category: ".$_REQUEST['category'];
+$mail_content .= "\nIP: ".$ip;
+
+@mail($mail_to, $mail_subject, $mail_content, $headers);
+
+?>
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/Organization">
   <head>
