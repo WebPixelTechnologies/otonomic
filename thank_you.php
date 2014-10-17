@@ -1,6 +1,6 @@
 <?php
 /* send email with lead details */
-$mail_to = 'project.tester24x7@gmail.com';
+$mail_to = 'edik@otonomic.com';
 
 $headers = 'From: leads@otonomic.com' . "\r\n" .
     'Reply-To: leads@otonomic.com' . "\r\n" .
