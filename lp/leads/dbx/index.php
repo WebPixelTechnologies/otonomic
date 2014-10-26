@@ -231,12 +231,12 @@
             </div>
 
 
-            <div class="try-today-row subheader">
+            <!-- <div class="try-today-row subheader">
                 <p>Over 30,000 businesses trust Otonomic to supercharge their web presence.</p>
                 <a href="/business/try" class="btn btn-oto-orange">Get a site from Otonomic today</a>
-            </div>
+            </div> -->
             <!-- Option 2 ================================================================ -->
-            <hr>
+            <!-- <hr>
             <div class="try-today-row subheader option-2">
                 <p style="text-align: center;">Over 30,000 businesses trust Otonomic to supercharge their web presence.</p>
                 <form name="1161" id="1161" method="POST" novalidate=""
@@ -268,9 +268,9 @@
                     </div>
                     <input type="submit" class="btn btn-oto-orange" value="Create My Site" tabindex="5">
                 </form>
-            </div>
+            </div> -->
             <!-- Option 3 ================================================================ -->
-            <hr>
+            <!-- <hr>
             <div class="try-today-row subheader option-3">
                 <p style="text-align: center;">Over 30,000 businesses trust Otonomic to supercharge their web presence.</p>
                 <form name="1161" id="1161" method="POST" novalidate=""
@@ -302,9 +302,9 @@
                     </div>
                     <input type="submit" class="btn btn-oto-orange" value="Create My Site" tabindex="5">
                 </form>
-            </div>
+            </div> -->
             <!-- Option 4 ================================================================ -->
-            <hr>
+            <!-- <hr>
             <div class="try-today-row subheader option-4">
                 <p style="text-align: center;">Over 30,000 businesses trust Otonomic to supercharge their web presence.</p>
                 <form name="1161" id="1161" method="POST" novalidate=""
@@ -328,7 +328,7 @@
                     </div>
                     <input type="submit" class="btn btn-oto-orange" value="Create My Site" tabindex="5">
                 </form>
-            </div>
+            </div> -->
 
             <div class="subheader">
                 As seen on:
