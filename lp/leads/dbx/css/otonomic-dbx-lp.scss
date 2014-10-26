@@ -12,6 +12,19 @@ $font-size-large : 18px;
 
 $gray: #8d8277;
 
+a {
+    color: #29abe2;
+}
+.orange-text {
+
+    color: #f54500;
+    text-align: left;
+    small {
+        color: gray;
+        margin-left: 40px;
+        font-size: $font-size-small;
+    }
+}
 #header {
     background-color: #f5eee9;
     border: 0;
@@ -38,7 +51,7 @@ $gray: #8d8277;
     margin: 0;
     background: #fcf8f5;
 
-    .left-side {
+    .main-content {
         h1 {
             color: #3d3531;
             font-size: 36px;
@@ -52,10 +65,12 @@ $gray: #8d8277;
             font-size: $font-size-large;
             font-weight: normal;
 
-            .features-table td{
-                font-size: $font-size-normal;
+            .features-table td {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-size: $font-size-large;
                 font-weight: normal;
-                line-height: 1.4;
+                line-height: 24px;
                 small {
                     color: $gray;
                 }
@@ -117,6 +132,19 @@ $gray: #8d8277;
             background-position: 83% center;
         }
     }
+
+    // Flipped Sides 
+    .flipped {
+        .left-side {
+            float: right;
+            padding-left: 50px;
+            width: 560px;
+        }
+        .right-side {
+            float: left;
+            margin-left: 30px;
+        }
+    }
     .features-table {
         margin-left: 0;
 
@@ -171,6 +199,12 @@ $gray: #8d8277;
             }
             img {
                 width: initial !important;
+            }
+        }
+
+        &.testimonials {
+            .description {
+                margin-top: 10px;
             }
         }
     }

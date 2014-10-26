@@ -131,9 +131,9 @@
 <div id="outer-frame">
     <div id="page-content">
         <div class="business-2013-style">
-            <div class="clearfix">
-                <div class="left-side"><h1>Let us create a site for you!</h1>
-
+            <!-- Main Content ============================================================ -->
+            <div class="clearfix ">
+                <div class="left-side main-content"><h1>Let us create a site for you!</h1>
                     <div class="subheader">Easily get more customers with your own professional site. <br/>
                         We'll create a site using content from your Facebook page.</div>
                     <div class="body">You get:
@@ -202,41 +202,186 @@
                     </form>
                 </div>
             </div>
+            <!-- Option 2 ================================================================ -->
+            <hr>
+            <div class="clearfix flipped">
+                <div class="left-side main-content"><h1>Let us create a site for you!</h1>
+                    <div class="subheader">Easily get more customers with your own professional site. <br/>
+                        We'll create a site using content from your Facebook page.</div>
+                    <div class="body">You get:
+                        <table class="features-table">
+                            <tr>
+                                <td><img src="images/cup-icon.svg"/></td>
+                                <td>Professional Developer that works on your site</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/nameplate-icon.svg"/></td>
+                                <td>Your own .com domain + email address <br/>
+                                    <small>e.g. http://mybusiness.com and me@mybusiness.com</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/store-icon.svg"/></td>
+                                <td>Custom setup of an Online Store, Appointments Scheduling tool and other useful tools</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/lifesaver-wheel-icon.svg"/></td>
+                                <td>Our top notch support</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="right-side inline-form">
+                    <div class="body-headline">
+                        <span class="colored-text">Leave your details and we'll create your site for you.</span> <br/>
+                        You only pay if you wish to keep it.
+                        <div id="alternatives">Offer valid until Nov. 1, 2014</div>
+                    </div>
+                    <form name="1161" id="1161" method="POST" novalidate=""
+                          action="http://otonomic.com/thank_you.php"
+                          class="contact_form salesforce-form clearfix">
+
+                        <input type="hidden" name="page_id" id="frm_facebook_page_id"/>
+
+                        <div id="Email-field" class="sick-input half">
+                            <input tabindex="2" required="1" type="text" name="email" id="Email" placeholder="Email"/>
+                        </div>
+
+                        <div id="Phone-field" class="sick-input half">
+                            <input tabindex="3" required="1" type="text" name="phone" id="Phone" placeholder="Phone number"/>
+                        </div>
+
+                        <div id="Fanpage-field" class="sick-input half">
+                            <input type="text" id="main_search_box" data-attr="center" name="page_name"
+                                   onClick="searchBoxClick('#main_search_box');"
+                                   onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
+                                   class="form-control main_search_box mobile-placeholder2 LoNotSensitive"
+                                   autocomplete="off" placeholder="Your Facebook page name">
+                        </div>
+
+                        <div class="tb search-wrapper  p2s_fanpages" id="search_wrapper_main" data-attr="center"></div>
+                        <div style="position:relative;">
+                                  <span class="icon_clear close-search" onClick="closeSearch('#search_wrapper_main','center')" style="display: none;">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                  </span>
+                        </div>
+
+                        <input type="submit" class="btn btn-oto-orange" value="Create My Site" tabindex="5">
+                        <div class="small-text">
+                            By entering your contact information, you agree to Otonomic's 
+                            <a href="http://otonomic.com/terms" target="_blank">privacy policy and terms</a>.
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Option 3 ================================================================ -->
+            <hr>
+            <div class="clearfix ">
+                <div class="left-side main-content"><h1>Let us create a site for you!</h1>
+                    <div class="subheader">Easily get more customers with your own professional site. <br/>
+                        We'll create a site using content from your Facebook page.</div>
+                    <div class="body">You get:
+                        <table class="features-table">
+                            <tr>
+                                <td><img src="images/cup-icon.svg"/></td>
+                                <td>Professional Developer that works on your site</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/nameplate-icon.svg"/></td>
+                                <td>Your own .com domain + email address <br/>
+                                    <small>e.g. http://mybusiness.com and me@mybusiness.com</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/store-icon.svg"/></td>
+                                <td>Custom setup of an Online Store, Appointments Scheduling tool and other useful tools</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <img src="images/mobile-laptop.png" style="margin-left: -40px;">
+                </div>
+            </div>
+            <div class="try-today-row subheader option-3">
+                <form name="1161" id="1161" method="POST" novalidate=""
+                      action="http://otonomic.com/thank_you.php"
+                      class="contact_form salesforce-form clearfix">
+                    <p class="orange-text">Leave your details and we’ll create your site for you. You only pay if you wish to keep it. <small>Offer valid until Nov. 1, 2014</small></p>
+                    <input type="hidden" name="page_id" id="frm_facebook_page_id"/>
+
+                    <div id="Email-field" class="sick-input half">
+                        <input tabindex="2" required="1" type="text" name="email" id="Email" placeholder="Email"/>
+                    </div>
+
+                    <div id="Phone-field" class="sick-input half">
+                        <input tabindex="3" required="1" type="text" name="phone" id="Phone" placeholder="Phone number"/>
+                    </div>
+
+                    <div id="Fanpage-field" class="sick-input half">
+                        <input type="text" id="main_search_box" data-attr="center" name="page_name"
+                               onClick="searchBoxClick('#main_search_box');"
+                               onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
+                               class="form-control main_search_box mobile-placeholder2 LoNotSensitive"
+                               autocomplete="off" placeholder="Your Facebook page name">
+                        <div class="tb search-wrapper  p2s_fanpages" id="search_wrapper_main" data-attr="center"></div>
+                        <div style="position:relative;">
+                            <span class="icon_clear close-search" onClick="closeSearch('#search_wrapper_main','center')" style="display: none;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn btn-oto-orange" value="Create My Site" tabindex="5">
+                </form>
+            </div>
+            <!-- Testimonials ============================================================ -->
             <div class="quote"><img src="images/quote.png"/>
                 Otonomic offered me what I need at the time I needed it, a well designed, informative website that I update effortlessly wherever I travel.
                 <img src="images/quote_right.png"/>
 
-                <div class="author"><img src="images/brian.png">Brian O'Callaghan, <a href="dublinacupunctureclinic.com" target="_blank">dublinacupunctureclinic.com</a></div>
+                <div class="author"><img src="images/brian.png">Brian O'Callaghan, <a href="http://dublinacupunctureclinic.com" target="_blank">dublinacupunctureclinic.com</a></div>
             </div>
-
+            <!-- Testimonials Option 2 =================================================== -->
+            <hr><!-- Remove after choosing an option -->
+            <div class="feature-row testimonials">
+                <div class="subfeature"><img src="images/testi-brian.png"/>
+                    <div class="body-headline">Brian O’Callaghan</div>
+                    <a href="http://dublinacupunctureclinic.com" target="_blank">dublinacupunctureclinic.com</a>
+                    <p class="description">Otonomic offered me what I need at the time I needed it, a well designed, informative website that I update effortlessly wherever I travel.</p>
+                </div>
+                <div class="subfeature"><img src="images/testi-grymm.png"/>
+                    <div class="body-headline">Grymm</div>
+                    <a href="http://artisticembracetattoo.com" target="_blank">artisticembracetattoo.com</a>
+                    <p class="description">I've had my website for a little over a month now and my clients absolutely love it!!! They have told me that it's extremely easy to navigate and it looks awesome! I couldn't have had a better website!</p>
+                </div>
+                <div class="subfeature"><img src="images/testi-shwna.png"/>
+                    <div class="body-headline">Shawna Todd</div>
+                    <a href="http://boulderacupuncture.me" target="_blank">boulderacupuncture.me</a>
+                    <p class="description">I had been wanting a website for my small business for too long. I never found the time or energy to get it done. I'm so grateful, I wish I had done it sooner.</p>
+                </div>
+            </div>
+            <!-- Features ================================================================ -->
             <div class="feature-row">
                 <div class="subfeature"><img src="images/feature1.png"/>
-
                     <div class="body-headline">Stunning Templates</div>
-                    <p class="description">
-                        Select a beautiful template for you site from one of our beautiful designs.
-                    </p></div>
+                    <p class="description">Select a beautiful template for you site from one of our beautiful designs.</p>
+                </div>
                 <div class="subfeature"><img src="images/feature2.png"/>
-
                     <div class="body-headline">Self Updating</div>
-                    <p class="description">
-                        Whenever you post something on your Facebook page, it immediately appears on your Otonomic site.
-                    </p></div>
+                    <p class="description">Whenever you post something on your Facebook page, it immediately appears on your Otonomic site.</p>
+                </div>
                 <div class="subfeature"><img src="images/feature3.png"/>
-
                     <div class="body-headline">Desktop, tablet and mobile ready</div>
-                    <p class="description">
-                        Reach clients wherever they go, on all platforms and all devices in all sizes.
-                    </p></div>
+                    <p class="description">Reach clients wherever they go, on all platforms and all devices in all sizes.</p>
+                </div>
             </div>
-
-
-            <!-- <div class="try-today-row subheader">
+            <!-- Try Today =============================================================== -->
+            <div class="try-today-row subheader">
                 <p>Over 30,000 businesses trust Otonomic to supercharge their web presence.</p>
                 <a href="/business/try" class="btn btn-oto-orange">Get a site from Otonomic today</a>
-            </div> -->
+            </div>
             <!-- Option 2 ================================================================ -->
-            <!-- <hr>
+            <hr><!-- Remove after choosing an option -->
             <div class="try-today-row subheader option-2">
                 <p style="text-align: center;">Over 30,000 businesses trust Otonomic to supercharge their web presence.</p>
                 <form name="1161" id="1161" method="POST" novalidate=""
@@ -268,9 +413,9 @@
                     </div>
                     <input type="submit" class="btn btn-oto-orange" value="Create My Site" tabindex="5">
                 </form>
-            </div> -->
+            </div>
             <!-- Option 3 ================================================================ -->
-            <!-- <hr>
+            <hr><!-- Remove after choosing an option -->
             <div class="try-today-row subheader option-3">
                 <p style="text-align: center;">Over 30,000 businesses trust Otonomic to supercharge their web presence.</p>
                 <form name="1161" id="1161" method="POST" novalidate=""
@@ -302,9 +447,9 @@
                     </div>
                     <input type="submit" class="btn btn-oto-orange" value="Create My Site" tabindex="5">
                 </form>
-            </div> -->
+            </div>
             <!-- Option 4 ================================================================ -->
-            <!-- <hr>
+            <hr><!-- Remove after choosing an option -->
             <div class="try-today-row subheader option-4">
                 <p style="text-align: center;">Over 30,000 businesses trust Otonomic to supercharge their web presence.</p>
                 <form name="1161" id="1161" method="POST" novalidate=""
@@ -328,7 +473,7 @@
                     </div>
                     <input type="submit" class="btn btn-oto-orange" value="Create My Site" tabindex="5">
                 </form>
-            </div> -->
+            </div>
 
             <div class="subheader">
                 As seen on:
