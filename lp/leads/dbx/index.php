@@ -50,6 +50,7 @@
     <link href="https://dt8kf6553cww8.cloudfront.net/static/css/video-js-vfl5P6KCK.css" type="text/css"
           rel="stylesheet"/>
     <link href="/css/searchResults.css" rel="stylesheet">
+    <link href="css/otonomic-dbx-lp.css" rel="stylesheet">
     <script src="/js/otonomic-analytics.js"></script>
     <!-- START Facebook Pixel Tracking -->
     <!-- Facebook Conversion Code for User visited homepage -->
@@ -84,10 +85,10 @@
         }
         .p2s_fanpages .media p {
             font-size: 1.1em;
-            line-height: 1em;
+            line-height: 1.1em;
         }
         p.media-address {
-            font-size: 0.8em !important;
+            font-size: 12px !important;
             padding-left: 0 !important;
             margin-left: 0 !important;
         }
@@ -101,8 +102,10 @@
 
 
         .p2s_fanpages .search_results {
-            width: 270px;
-            border: 1px #BDC4C9 solid;;
+            width: 260px;
+            margin-bottom: 10px;
+            border: 1px #BDC4C9 solid;
+            overflow-x: hidden;
         }
 
         .p2s_fanpages .media {
@@ -111,30 +114,26 @@
     </style>
 </head>
 
-<body class="en business-2013-style " dir="ltr">
-
-<div id="outer-frame">
-    <div class="header">
-        <ul class="actionables right"><span style="display: none;" data-snap-engage-visibility="online"
-                                            class="item sidebar-item" id="chat-with-us-container"><a href="#"
-                                                                                                     class="sidebar-action"
-                                                                                                     onclick="analytics.TeamsWebActionsLogger.log('chat_initiated'); SnapEngage.setWidgetId('aac361ec-f445-43be-a7c8-a6d25df31ced'); SnapEngage.setStartChat(''); SnapEngage.startLink(); return false;"><img
-                src="https://dt8kf6553cww8.cloudfront.net/static/images/icons/icon_spacer-vflN3BYt2.gif"
-                alt="Chat with the Dropbox for Business Sales team" class=" sprite sprite_web s_web_icon_chat"/><span
-                class="text-with-icon">Chat with sales</span></a></span>
-            <li class="contact-item"><img data-js-component-id="component8199524723667623277"
-                                          src="https://dt8kf6553cww8.cloudfront.net/static/images/icons/actions_phone-vflHgwSfI.png"/>Call
-                us at<span class="phone-number">+1 844 otonomic</span></li>
+<body class="en business-2013-style otonomic-styling" dir="ltr">
+<div id="header" class="header">
+    <div class="header-inner">
+        <ul class="actionables right">
+            <li class="contact-item">
+                <img src="images/header-phone-icon.svg"/>
+                Call us at <span class="phone-number">+1•844•otonomic</span>
+            </li>
         </ul>
         <div class="bizlogo">
-            <div class="lr-container"><a href="/business" class="lfloat"><img
-                    data-js-component-id="component4912758526807313941"
-                    src="http://otonomic.com/images/otonomic-logo.png"
-                    alt="Otonomic Website Building" id="db-logo"/></a> <a href="/business">
-                <div class="dfbtext">Otonomic</div>
-            </a></div>
+            <div class="lr-container">
+                <a href="/business" class="lfloat"><img
+                    src="images/otonomic-logo-dark.png"
+                    alt="Otonomic Website Building" id="db-logo"/>
+                </a> 
+            </div>
         </div>
     </div>
+</div>
+<div id="outer-frame">
     <div id="page-content">
         <div class="business-2013-style">
             <div class="clearfix">
@@ -145,29 +144,21 @@
                     <div class="body">You get:
                         <table class="features-table">
                             <tr>
-                                <td><img data-js-component-id="component3199301999988003690"
-                                         src="https://dt8kf6553cww8.cloudfront.net/static/images/teams/sem/icon-sharing-vflrzshsw.png"/>
-                                </td>
+                                <td><img src="images/cup-icon.svg"/></td>
                                 <td>Professional Developer that works on your site</td>
                             </tr>
                             <tr>
-                                <td><img data-js-component-id="component3615556776499034731"
-                                         src="https://dt8kf6553cww8.cloudfront.net/static/images/teams/sem/icon-infinity-vflEMifQv.png"/>
-                                </td>
+                                <td><img src="images/nameplate-icon.svg"/></td>
                                 <td>Your own .com domain + email address <br/>
                                     <small>e.g. http://mybusiness.com and me@mybusiness.com</small>
                                 </td>
                             </tr>
                             <tr>
-                                <td><img data-js-component-id="component2104430948613720288"
-                                         src="https://dt8kf6553cww8.cloudfront.net/static/images/teams/sem/icon-mobile-vflgI8MbZ.png"/>
-                                </td>
+                                <td><img src="images/store-icon.svg"/></td>
                                 <td>Custom setup of an Online Store, Appointments Scheduling tool and other useful tools</td>
                             </tr>
                             <tr>
-                                <td><img data-js-component-id="component6286531879357238350"
-                                         src="https://dt8kf6553cww8.cloudfront.net/static/images/teams/sem/icon-security-vflKI5_Cy.png"/>
-                                </td>
+                                <td><img src="images/lifesaver-wheel-icon.svg"/></td>
                                 <td>Our top notch support</td>
                             </tr>
                         </table>
@@ -175,7 +166,7 @@
                 </div>
                 <div class="right-side inline-form">
                     <div class="body-headline">
-                        Leave your details and we'll create your site for you. <br/>
+                        <span class="colored-text">Leave your details and we'll create your site for you.</span> <br/>
                         You only pay if you wish to keep it.
                         <div id="alternatives">Offer valid until Nov. 1, 2014</div>
                     </div>
@@ -198,7 +189,7 @@
                                    onClick="searchBoxClick('#main_search_box');"
                                    onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
                                    class="form-control main_search_box mobile-placeholder2 LoNotSensitive"
-                                   autocomplete="off" placeholder="Simply enter the name of your business Facebook page here">
+                                   autocomplete="off" placeholder="Your Facebook page name">
                         </div>
 
                         <div class="tb search-wrapper  p2s_fanpages" id="search_wrapper_main" data-attr="center"></div>
@@ -208,8 +199,7 @@
                                   </span>
                         </div>
 
-                        <input type="submit" class="freshbutton-blue fb-big" value="Create My Site" tabindex="5">
-
+                        <input type="submit" class="btn btn-oto-orange" value="Create My Site" tabindex="5">
                         <div class="small-text">By entering your contact information, you agree to Otonomic's <a
                             href="http://otonomic.com/terms" target="_blank">privacy policy and terms</a>.
                     </div>
@@ -219,23 +209,23 @@
                 Otonomic offered me what I need at the time I needed it, a well designed, informative website that I update effortlessly wherever I travel.
                 <img src="images/quote_right.png"/>
 
-                <div class="author">Brian O'Callaghan, dublinacupunctureclinic.com</div>
+                <div class="author"><img src="images/brian.png">Brian O'Callaghan, <a href="dublinacupunctureclinic.com" target="_blank">dublinacupunctureclinic.com</a></div>
             </div>
 
             <div class="feature-row">
-                <div class="subfeature"><img src="images/share-send.png"/>
+                <div class="subfeature"><img src="images/feature1.png"/>
 
                     <div class="body-headline">Stunning Templates</div>
                     <p class="description">
                         Select a beautiful template for you site from one of our beautiful designs.
                     </p></div>
-                <div class="subfeature"><img src="images/share-send.png"/>
+                <div class="subfeature"><img src="images/feature2.png"/>
 
                     <div class="body-headline">Self Updating</div>
                     <p class="description">
                         Whenever you post something on your Facebook page, it immediately appears on your Otonomic site.
                     </p></div>
-                <div class="subfeature"><img src="images/share-send.png"/>
+                <div class="subfeature"><img src="images/feature3.png"/>
 
                     <div class="body-headline">Desktop, tablet and mobile ready</div>
                     <p class="description">
@@ -245,39 +235,19 @@
 
 
             <div class="try-today-row subheader">
-                Over 30,000 businesses trust Otonomic to supercharge their web presence.
-                <a href="/business/try">Get a site from Otonomic today</a></div>
+                <p>Over 30,000 businesses trust Otonomic to supercharge their web presence.</p>
+                <a href="/business/try" class="btn btn-oto-orange">Get a site from Otonomic today</a>
+            </div>
 
-            <div class="subheader" style="text-align: left;margin-left: 74px;">
+            <div class="subheader">
                 As seen on:
             </div>
             <div class="business-customers">
-                <ul class="customer-list">
-                    <li class="logo-only" title="">
-                        <img src="http://otonomic.com/images/media1.png" alt="" class=""/>
-                    </li>
-                    <li class="logo-only" title="">
-                        <img src="http://otonomic.com/images/media2.png" alt="" class=""/>
-                    </li>
-                    <li class="logo-only" title="">
-                        <img src="http://otonomic.com/images/media3.png" alt="" class=""/>
-                    </li>
-                    <li class="logo-only" title="">
-                        <img src="http://otonomic.com/images/media4.png" alt="" class=""/>
-                    </li>
-                    <li class="logo-only" title="">
-                        <img src="http://otonomic.com/images/media5.png" alt="" class=""/>
-                    </li>
-                </ul>
+                <img src="images/seen-on.jpg">
             </div>
-            <div id="locale-container-sem" class="ui-button"><span id="locale-link" class="link-span"></span></div>
         </div>
     </div>
 </div>
-<div style="display:none;" id="notice-container" class="clearfix"></div>
-
-
-
 
 
 <noscript><p><img src="http://a.otonomic.com/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>

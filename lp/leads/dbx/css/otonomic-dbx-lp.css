@@ -1,0 +1,328 @@
+/* DBX LANDING PAGE 
+------------------------------------------------------------------------------*/
+@font-face {
+  font-family: 'aller';
+  src: url("../fonts/aller_bd-webfont.eot");
+  src: url("../fonts/aller_bd-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/aller_bd-webfont.svg") format("svg"), url("../fonts/aller_bd-webfont.woff") format("woff"), url("../fonts/aller_bd-webfont.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'aller';
+  src: url("../fonts/aller_lt-webfont.eot");
+  src: url("../fonts/aller_lt-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/aller_lt-webfont.svg") format("svg"), url("../fonts/aller_lt-webfont.woff") format("woff"), url("../fonts/aller_lt-webfont.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'aller';
+  src: url("../fonts/aller_rg-webfont.eot");
+  src: url("../fonts/aller_rg-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/aller_rg-webfont.svg") format("svg"), url("../fonts/aller_rg-webfont.woff") format("woff"), url("../fonts/aller_rg-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'aller';
+  src: url("../fonts/aller_bdit-webfont.eot");
+  src: url("../fonts/aller_bdit-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/aller_bdit-webfont.svg") format("svg"), url("../fonts/aller_bdit-webfont.woff") format("woff"), url("../fonts/aller_bdit-webfont.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'aller';
+  src: url("../fonts/aller_ltit-webfont.eot");
+  src: url("../fonts/aller_ltit-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/aller_ltit-webfont.svg") format("svg"), url("../fonts/aller_ltit-webfont.woff") format("woff"), url("../fonts/aller_ltit-webfont.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'aller';
+  src: url("../fonts/aller_it-webfont.eot");
+  src: url("../fonts/aller_it-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/aller_it-webfont.svg") format("svg"), url("../fonts/aller_it-webfont.woff") format("woff"), url("../fonts/aller_it-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+#header {
+  background-color: #f5eee9;
+  border: 0;
+}
+#header .header-inner {
+  width: 990px;
+  margin: 0 auto;
+  padding-left: 30px;
+}
+#header .header-inner .actionables {
+  padding-top: 28px;
+}
+#header .header-inner .actionables .contact-item,
+#header .header-inner .actionables .phone-number {
+  color: #8d8277;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.otonomic-styling {
+  font-family: 'aller','Open Sans', sans-serif;
+  margin: 0;
+  background: #fcf8f5;
+}
+.otonomic-styling .left-side h1 {
+  color: #3d3531;
+  font-size: 36px;
+  font-weight: bold;
+}
+.otonomic-styling .left-side .subheader {
+  margin: 0;
+  font-weight: normal;
+}
+.otonomic-styling .left-side .body {
+  font-size: 18px;
+  font-weight: normal;
+}
+.otonomic-styling .left-side .body .features-table td {
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.4;
+}
+.otonomic-styling .left-side .body .features-table td small {
+  color: #8d8277;
+}
+.otonomic-styling .right-side.inline-form {
+  width: 290px;
+  margin-top: 15px;
+  margin-right: 0;
+  padding: 5px 15px 20px 15px;
+  background-color: white;
+  border: 15px solid #f5eee9;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+.otonomic-styling .right-side.inline-form .body-headline {
+  font-size: 18px;
+  font-weight: lighter;
+}
+.otonomic-styling .right-side.inline-form .body-headline .colored-text {
+  color: #F54500;
+  font-weight: normal;
+}
+.otonomic-styling .right-side.inline-form .body-headline #alternatives {
+  margin: 0;
+  color: #8d8277;
+}
+.otonomic-styling .right-side.inline-form .small-text {
+  margin: 15px 0 0 0;
+  color: #8d8277;
+}
+.otonomic-styling .right-side.inline-form .sick-input input {
+  width: 242px;
+  background-color: #f5eee9;
+  border: 0;
+  -moz-box-shadow: inset 1px 1px 0px 0px #d1c7b6;
+  -webkit-box-shadow: inset 1px 1px 0px 0px #d1c7b6;
+  box-shadow: inset 1px 1px 0px 0px #d1c7b6;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+.otonomic-styling .right-side.inline-form #main_search_box {
+  width: 220px;
+  padding-left: 35px;
+  background-image: url("../images/search-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 5% center;
+}
+.otonomic-styling .right-side.inline-form .btn-oto-orange {
+  width: 260px;
+  padding-left: 45px;
+  font-size: 21px;
+  font-weight: normal;
+  text-align: left;
+  background-image: url("../images/btn-arrow-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 83% center;
+}
+.otonomic-styling .features-table {
+  margin-left: 0;
+}
+.otonomic-styling .features-table td img {
+  width: initial;
+}
+.otonomic-styling .features-table td:first-child {
+  padding: 5px 30px 5px 0;
+  text-align: center;
+}
+.otonomic-styling .quote {
+  padding-right: 75px;
+  padding-left: 75px;
+  color: #3d3531;
+  font-size: 18px;
+  line-height: 28px;
+}
+.otonomic-styling .quote img {
+  margin-top: 7px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.otonomic-styling .quote .author {
+  padding-top: 5px;
+  color: #3d3531;
+  font-size: 15px;
+}
+.otonomic-styling .quote .author img {
+  vertical-align: bottom;
+}
+.otonomic-styling .feature-row {
+  width: 930px;
+}
+.otonomic-styling .feature-row .subfeature {
+  width: 280px !important;
+  text-align: left;
+}
+.otonomic-styling .feature-row .subfeature .body-headline {
+  padding-top: 0;
+  margin-bottom: 0;
+  color: #3d3531;
+  font-size: 18px;
+  line-height: 28px;
+}
+.otonomic-styling .feature-row .subfeature .description {
+  color: #3d3531;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 22px;
+}
+.otonomic-styling .feature-row .subfeature img {
+  width: initial !important;
+}
+.otonomic-styling .try-today-row {
+  padding-bottom: 35px;
+  color: #3d3531;
+  font-size: 18px;
+}
+.otonomic-styling .try-today-row .btn-oto-orange {
+  font-weight: normal;
+  padding-right: 50px;
+  text-align: left;
+  background-image: url("../images/btn-arrow-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 93% center;
+}
+.otonomic-styling .subheader {
+  margin: 50px 0 0 0;
+  padding: 0;
+  color: #3d3531;
+  font-size: 18px;
+}
+.otonomic-styling .business-customers {
+  margin: -5px 0 0 0;
+}
+.otonomic-styling .btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 0px solid transparent;
+  white-space: nowrap;
+  padding: 5px 20px;
+  font-size: 15px;
+  line-height: 2.25;
+  border-radius: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.otonomic-styling .btn:focus,
+.otonomic-styling .btn:active:focus,
+.otonomic-styling .btn.active:focus {
+  outline: none;
+}
+.otonomic-styling .btn:hover,
+.otonomic-styling .btn:focus {
+  color: #333333;
+  text-decoration: none;
+}
+.otonomic-styling .btn:active,
+.otonomic-styling .btn.active {
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.otonomic-styling .btn.disabled,
+.otonomic-styling .btn[disabled], .otonomic-styling fieldset[disabled]
+.btn {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.otonomic-styling .btn-block {
+  display: block;
+  width: 100%;
+}
+.otonomic-styling .btn-block + .btn-block {
+  margin-top: 5px;
+}
+.otonomic-styling input[type="submit"].btn-block,
+.otonomic-styling input[type="reset"].btn-block,
+.otonomic-styling input[type="button"].btn-block {
+  width: 100%;
+}
+.otonomic-styling .btn-oto-orange {
+  color: white;
+  background-color: #f54500;
+  border-color: #f54500;
+  -webkit-box-shadow: inset 0px -2px 0px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px -2px 0px 0px rgba(0, 0, 0, 0.2);
+}
+.otonomic-styling .btn-oto-orange:hover,
+.otonomic-styling .btn-oto-orange:focus,
+.otonomic-styling .btn-oto-orange:active,
+.otonomic-styling .btn-oto-orange.active, .otonomic-styling .open >
+.btn-oto-orange.dropdown-toggle {
+  color: white;
+  background-color: #d63d00;
+  border-color: #d63d00;
+}
+.otonomic-styling .btn-oto-orange:active,
+.otonomic-styling .btn-oto-orange.active, .otonomic-styling .open >
+.btn-oto-orange.dropdown-toggle {
+  background-image: none;
+}
+.otonomic-styling .btn-oto-orange.disabled,
+.otonomic-styling .btn-oto-orange.disabled:hover,
+.otonomic-styling .btn-oto-orange.disabled:focus,
+.otonomic-styling .btn-oto-orange.disabled:active,
+.otonomic-styling .btn-oto-orange.disabled.active,
+.otonomic-styling .btn-oto-orange[disabled],
+.otonomic-styling .btn-oto-orange[disabled]:hover,
+.otonomic-styling .btn-oto-orange[disabled]:focus,
+.otonomic-styling .btn-oto-orange[disabled]:active,
+.otonomic-styling .btn-oto-orange[disabled].active, .otonomic-styling fieldset[disabled]
+.btn-oto-orange, .otonomic-styling fieldset[disabled]
+.btn-oto-orange:hover, .otonomic-styling fieldset[disabled]
+.btn-oto-orange:focus, .otonomic-styling fieldset[disabled]
+.btn-oto-orange:active, .otonomic-styling fieldset[disabled]
+.btn-oto-orange.active {
+  background-color: #f54500;
+  border-color: #f54500;
+}
+.otonomic-styling .btn-oto-orange .badge {
+  color: #f54500;
+  background-color: white;
+}
+.otonomic-styling .btn-oto-orange .glyphicons:before,
+.otonomic-styling .btn-oto-orange .halflings:before,
+.otonomic-styling .btn-oto-orange .social:before {
+  margin-top: -5px;
+  color: white;
+  font-size: 18px;
+}
+
+/*# sourceMappingURL=otonomic-dbx-lp.css.map */
