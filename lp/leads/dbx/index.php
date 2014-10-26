@@ -31,26 +31,21 @@
     <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"/>
     <link href="http://otonomic.com/images/favicon.ico" rel="shortcut icon"/>
 
-    <link href="https://dt8kf6553cww8.cloudfront.net/static/css/main-vfloRqmSW.css" type="text/css" rel="stylesheet"/>
-    <link href="https://dt8kf6553cww8.cloudfront.net/static/css/web_sprites-vflcIFCiJ.css" type="text/css"
-          rel="stylesheet"/>
+    <!-- dbx original css -->
+    <link href="css/main.css" type="text/css" rel="stylesheet"/>
+    <link href="css/business_marketing.css" type="text/css" rel="stylesheet"/>
+
     <link href="/w3c/p3p.xml" rel="P3Pv1"/>
 
-    <style type="text/css">.hny-okjeu {
-        display: none;
-    }</style>
     <!--[if lt IE 9]>
     <script src="/static/javascript/external/html5shiv.js"></script>
     <script src="/static/javascript/external/es5-shim.min.js"></script>
     <script src="/static/javascript/external/es5-sham.min.js"></script><![endif]-->
-    <link href="https://dt8kf6553cww8.cloudfront.net/static/css/business_customer_list-vflWa_Ssz.css" type="text/css"
-          rel="stylesheet"/>
-    <link href="https://dt8kf6553cww8.cloudfront.net/static/css/business_marketing-vflJ1chJO.css" type="text/css"
-          rel="stylesheet"/>
-    <link href="https://dt8kf6553cww8.cloudfront.net/static/css/video-js-vfl5P6KCK.css" type="text/css"
-          rel="stylesheet"/>
+
+
     <link href="/css/searchResults.css" rel="stylesheet">
     <link href="css/otonomic-dbx-lp.css" rel="stylesheet">
+
     <script src="/js/otonomic-analytics.js"></script>
     <!-- START Facebook Pixel Tracking -->
     <!-- Facebook Conversion Code for User visited homepage -->
@@ -200,9 +195,11 @@
                         </div>
 
                         <input type="submit" class="btn btn-oto-orange" value="Create My Site" tabindex="5">
-                        <div class="small-text">By entering your contact information, you agree to Otonomic's <a
-                            href="http://otonomic.com/terms" target="_blank">privacy policy and terms</a>.
-                    </div>
+                        <div class="small-text">
+                            By entering your contact information, you agree to Otonomic's 
+                            <a href="http://otonomic.com/terms" target="_blank">privacy policy and terms</a>.
+                        </div>
+                    </form>
                 </div>
             </div>
             <div class="quote"><img src="images/quote.png"/>
@@ -237,6 +234,100 @@
             <div class="try-today-row subheader">
                 <p>Over 30,000 businesses trust Otonomic to supercharge their web presence.</p>
                 <a href="/business/try" class="btn btn-oto-orange">Get a site from Otonomic today</a>
+            </div>
+            <!-- Option 2 ================================================================ -->
+            <hr>
+            <div class="try-today-row subheader option-2">
+                <p style="text-align: center;">Over 30,000 businesses trust Otonomic to supercharge their web presence.</p>
+                <form name="1161" id="1161" method="POST" novalidate=""
+                      action="http://otonomic.com/thank_you.php"
+                      class="contact_form salesforce-form clearfix">
+
+                    <input type="hidden" name="page_id" id="frm_facebook_page_id"/>
+
+                    <div id="Email-field" class="sick-input half">
+                        <input tabindex="2" required="1" type="text" name="email" id="Email" placeholder="Email"/>
+                    </div>
+
+                    <div id="Phone-field" class="sick-input half">
+                        <input tabindex="3" required="1" type="text" name="phone" id="Phone" placeholder="Phone number"/>
+                    </div>
+
+                    <div id="Fanpage-field" class="sick-input half">
+                        <input type="text" id="main_search_box" data-attr="center" name="page_name"
+                               onClick="searchBoxClick('#main_search_box');"
+                               onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
+                               class="form-control main_search_box mobile-placeholder2 LoNotSensitive"
+                               autocomplete="off" placeholder="Your Facebook page name">
+                        <div class="tb search-wrapper  p2s_fanpages" id="search_wrapper_main" data-attr="center"></div>
+                        <div style="position:relative;">
+                            <span class="icon_clear close-search" onClick="closeSearch('#search_wrapper_main','center')" style="display: none;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn btn-oto-orange" value="Create My Site" tabindex="5">
+                </form>
+            </div>
+            <!-- Option 3 ================================================================ -->
+            <hr>
+            <div class="try-today-row subheader option-3">
+                <p style="text-align: center;">Over 30,000 businesses trust Otonomic to supercharge their web presence.</p>
+                <form name="1161" id="1161" method="POST" novalidate=""
+                      action="http://otonomic.com/thank_you.php"
+                      class="contact_form salesforce-form clearfix">
+
+                    <input type="hidden" name="page_id" id="frm_facebook_page_id"/>
+
+                    <div id="Email-field" class="sick-input half">
+                        <input tabindex="2" required="1" type="text" name="email" id="Email" placeholder="Email"/>
+                    </div>
+
+                    <div id="Phone-field" class="sick-input half">
+                        <input tabindex="3" required="1" type="text" name="phone" id="Phone" placeholder="Phone number"/>
+                    </div>
+
+                    <div id="Fanpage-field" class="sick-input half">
+                        <input type="text" id="main_search_box" data-attr="center" name="page_name"
+                               onClick="searchBoxClick('#main_search_box');"
+                               onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
+                               class="form-control main_search_box mobile-placeholder2 LoNotSensitive"
+                               autocomplete="off" placeholder="Your Facebook page name">
+                        <div class="tb search-wrapper  p2s_fanpages" id="search_wrapper_main" data-attr="center"></div>
+                        <div style="position:relative;">
+                            <span class="icon_clear close-search" onClick="closeSearch('#search_wrapper_main','center')" style="display: none;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn btn-oto-orange" value="Create My Site" tabindex="5">
+                </form>
+            </div>
+            <!-- Option 4 ================================================================ -->
+            <hr>
+            <div class="try-today-row subheader option-4">
+                <p style="text-align: center;">Over 30,000 businesses trust Otonomic to supercharge their web presence.</p>
+                <form name="1161" id="1161" method="POST" novalidate=""
+                      action="http://otonomic.com/thank_you.php"
+                      class="contact_form salesforce-form clearfix">
+
+                    <input type="hidden" name="page_id" id="frm_facebook_page_id"/>
+
+                    <div id="Fanpage-field" class="sick-input half">
+                        <input type="text" id="main_search_box" data-attr="center" name="page_name"
+                               onClick="searchBoxClick('#main_search_box');"
+                               onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
+                               class="form-control main_search_box mobile-placeholder2 LoNotSensitive"
+                               autocomplete="off" placeholder="Your Facebook page name">
+                        <div class="tb search-wrapper  p2s_fanpages" id="search_wrapper_main" data-attr="center"></div>
+                        <div style="position:relative;">
+                            <span class="icon_clear close-search" onClick="closeSearch('#search_wrapper_main','center')" style="display: none;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn btn-oto-orange" value="Create My Site" tabindex="5">
+                </form>
             </div>
 
             <div class="subheader">
