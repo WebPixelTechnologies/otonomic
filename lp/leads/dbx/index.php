@@ -434,6 +434,15 @@
             $('#main_search_box').val( $(this).attr('data-facebook-page-name') );
             $('.search_results').hide();
         });
+
+        $('input[type=submit]').click(function(event){
+
+            var search_box = $(this).parent().find('.main_search_box');
+            if (search_box.val().length < 3) {
+                event.preventDefault();
+                search_box.focus();
+            }
+        });
     });
 </script>
 
