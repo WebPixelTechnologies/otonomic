@@ -11441,7 +11441,6 @@ a.list-group-item.active > .satellite-page .badge, .nav-pills > .active > a > .s
 .satellite-page .btn-xlarge {
   padding: 14px 25px;
   font-size: 18px;
-  text-align: left;
 }
 .satellite-page .btn-xlarge .glyphicons:before {
   font-size: 24px;

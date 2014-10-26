@@ -1,8 +1,33 @@
+<?php
+/* send email with lead details */
+$mail_to = 'edik@otonomic.com';
+
+$headers = 'From: omri@otonomic.com' . "\r\n" .
+    'Reply-To: omri@otonomic.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+$ip = $_SERVER['REMOTE_ADDR']?:($_SERVER['HTTP_X_FORWARDED_FOR']?:$_SERVER['HTTP_CLIENT_IP']);
+
+$server = isset($_SERVER['HTTP_HOST'])?$_SERVER['HTTP_HOST']:$_SERVER['SERVER_NAME'];
+$mail_subject = 'New lead generated on '.$server;
+
+foreach($_REQUEST as $key=>$value) {
+    $mail_content = ucfirst(str_replace("_", " ", $key)).": ".$value."\n";
+}
+
+/*
+$mail_content = "Page Name: ".$_REQUEST['page_name'];
+$mail_content .= "\nPage ID: ".$_REQUEST['page_id'];
+$mail_content .= "\nPage Category: ".$_REQUEST['category'];
+*/
+$mail_content .= "IP: ".$ip;
+
+@mail($mail_to, $mail_subject, $mail_content, $headers);
+
+?>
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/Organization">
   <head>
-      <script src="//cdn.optimizely.com/js/326727683.js"></script>
-
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,18 +66,30 @@
 
       <script src="/js/otonomic-analytics.js"></script>
       <!-- START Facebook Pixel Tracking -->
-      <!-- Facebook Conversion Code for User visited homepage -->
+      <!-- Facebook Conversion Code for Lead Generated -->
       <script>
+	  
+	  (function() {
+          var _fbq = window._fbq || (window._fbq = []);
+          if (!_fbq.loaded) {
+              var fbds = document.createElement('script');
+              fbds.async = true;
+              fbds.src = '//connect.facebook.net/en_US/fbds.js';
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(fbds, s);
+              _fbq.loaded = true;
+          }
+      })();
       window._fbq = window._fbq || [];
-      window._fbq.push(['track', '6016621317030', {'value':'0.00','currency':'USD'}]);
+      window._fbq.push(['track', '6019480665030', {'value':'0.00','currency':'USD'}]);
       </script>
-      <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6016621317030&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
+      <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6019480665030&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
       <!-- END Facebook Pixel Tracking -->
   </head>
 
   <body>
   <div id="wrapper">
-      <!-- Side Navbar -->
+  		<!-- Side Navbar -->
       <div id="sidebar-wrapper">
           <ul class="sidebar-nav">
               <li class="sidebar-login">
@@ -98,7 +135,7 @@
             <div class="container-fluid">
              <!-- top navbar -->
               <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-                  <div class="navbar-header">
+			  		<div class="navbar-header">
                        <button type="button" class="navbar-toggle track_event track_hover" id="menu-toggle" data-toggle="offcanvas" data-target=".sidebar-nav" data-ga-category="Marketing Website"  data-ga-event="Menu Click" data-ga-event-hover="Menu Hover">
                          <span class="icon-bar"></span>
                          <span class="icon-bar"></span>
@@ -112,69 +149,26 @@
                       <img src="images/blue-arrow.png" alt="otonomic logo">
                     </div>
                   </div>
-                  <div class="form-inline facebook-input-holder">
-                      <div class="p2s_fanpages">
-                        <div id="main_search_holder2" class="form-group header-search-input">
-                          <label class="sr-only LoNotSensitive" for="main_search_box2">Simply enter the name of your business Facebook page here</label>
-
-                          <input type="text" id="main_search_box2" data-attr="top"
-                          onClick="searchBoxClick('#main_search_box2');"
-                          onKeyup="searchBoxKeyUp('#main_search_box2','#search_wrapper_floater','.close-search-floater');"
-                          class="form-control main_search_box mobile-header-placeholder" autocomplete="off" placeholder="Simply enter the name of your business Facebook page here">
-
-                          <div class="tb search-wrapper search-wrapper-floater" id="search_wrapper_floater" data-attr="top"></div>
-                          <div style="position:relative;">
-                            <span class="icon_clear close-search close-search-floater" onClick="closeSearch('#search_wrapper_floater','top')" style="display: none;">
-                              <span class="glyphicon glyphicon-remove"></span>
-                            </span>
-                          </div>
-
-                        </div>
-                        <div class="form-group header-search-button">
-                          <button id="btn_go2" data-attr="top" class="btn_go btn btn-ttc track_event" data-target-field="main_search_box2">See <span class="hidden-xs">Your</span> Website</button>
-                        </div>
-                      </div>
-                  </div>
               </div>
             </div>
+
               <div class="container-fluid">
                   <section class="home"><!-- Section Home -->
                     <div class="row section-home">
                         <div class="col-xs-12 text-center">
-                        <h1>Give your business the website it deserves!</h1>
-                        <h2>In under 20 seconds , we will turn your Facebook page into a professional website</h2>
-                        <form class="form-inline hidden-xs hidden-sm" role="form">
-                            <div class="p2s_fanpages">
-                              <div id="main_search_holder" class="form-group form-group-mobile">
-                                <label class="sr-only" for="main_search_box">Simply enter the name of your business Facebook page here</label>
+                        <h1>Congratulations!</br>
+                        We've started building your new website</h1>
+                        <h2>We will contact you in 72 hours with a draft of your site.</br>
+                        If you have any qestion, please contact <a href="mailto:support@otonomic.com" style="color:pink">support@otonomic.com</a>.</h2>
 
-                                <input type="text" id="main_search_box" data-attr="center"
-                                onClick="searchBoxClick('#main_search_box');"
-                                onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
-                                class="form-control main_search_box mobile-placeholder2 LoNotSensitive"
-                                autocomplete="off" placeholder="Simply enter the name of your business Facebook page here">
-
-                                <div class="tb search-wrapper" id="search_wrapper_main" data-attr="center"></div>
-                                <div style="position:relative;">
-                                  <span class="icon_clear close-search" onClick="closeSearch('#search_wrapper_main','center')" style="display: none;">
-                                    <span class="glyphicon glyphicon-remove"></span>
-                                  </span>
-                                </div>
-
-                              </div>
-                              <div class="form-group form-group-mobile">
-                                <button id="btn_go" data-attr="center" title='Choose your page from the suggestions below' class="btn_go btn btn-ttc" data-target-field="main_search_box">See Your Website</button>
-                              </div>
-                            </div>
-                        </form>
-                        <a href="/shared/facebook_login.php" id="fb_connector" class="btn btn-lg btn-facebook-connect visible-xs visible-sm facebook_connect track_event measure_time" data-ga-category="LandingPage" data-ga-event="Connect with Facebook" data-ga-label="Search explanation box"><img src="images/fb-icon.png"> Connect with Facebook</a>
                         <div class="bg-image">
                           <img src="images/section-home-bg.png" class="" alt="build your own free website">
                         </div>
                       </div><!-- /.col-xs-12 main -->
                     </div>
                   </section>
-                  <section class="likes">
+				  
+				  <section class="likes">
                     <div class="row section-likes">
                       <div class="hidden-xs col-xs-12 text-center">
                         <div class="likes-div">
@@ -613,79 +607,11 @@
                       <div class="powered-by">© 2014 <img src="images/otonomic-logo.png" alt="otonomic logo"></div>
                     </div>
                   </section>
+				  
               </div>
           </div>
       </div>
   </div>
-
-
-
-  <div style="display: none">
-    <div class="t_box">
-        <div class="msgbox">
-            <div class="header">
-                <a href="#" class="close_btn close-search" onClick="closeSearch('.search-wrapper'); return false;"><span class="glyphicon glyphicon-remove"></span></a>
-                <span class="msg_info">We weren't able to find this page on Facebook</span>
-            </div>
-
-            <div class="body_info">
-                <h1 class="first_msg">Refine your search</h1>
-                <p class="first_msg_desc">e.g. "my business" instead of "mybusiness"</p>
-                <p class="or_msg">Or</p>
-                <h1>Enter the full Facebook address of your business</h1>
-                <p style="display: inline-block;">e.g.: "https://www.facebook.com/pages/Jessicas-Pastries"</p>
-                <a href="#" id="how_do_i">How do I do that?</a>
-                <p class="or_msg">Or</p>
-                <a href="/shared/facebook_login.php" class="facebook_connect track_event measure_time" id="fb_connector" data-ga-category="LandingPage" data-ga-event="Connect with Facebook" data-ga-label="Search explanation box">Connect
-                </a>
-                <h1 style="line-height: 34px; float:left;">So we can find your page for you.</h1>
-                
-            </div>
-        </div>
-
-        <div class="steps">
-            <ul>
-                <li>
-                    <h1>Step 1 </h1> | <span>Go to your Facebook business page</span>
-                </li>
-                <li>
-                    <h1>Step 2 </h1> | <span>Copy the address shown in your browser</span>
-                    <p>(starts with "https://www.facebook.com")</p>
-                </li>
-                <li>
-                    <h1>Step 3 </h1> | <span>Paste the address in the search box above.</span>
-                </li>
-                <li>
-                    <h1>Step 4 </h1> | <span>Click "See my website"</span>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="search_progress" style="position: absolute; left: -35px;">
-        <span class="msg_info">Search in progress, please wait...!!!</span>
-    </div>
-  </div>
-  <link rel="stylesheet" href="css/loadingStyle.css">
-
-
-  <div class="loading-box">
-  <div class="masking">
-       <div class="loading-page">
-           <div class="loading-content">
-               <p>We're building <strong>your new website</strong> now.</p>
-               <p class="loading-counter-text">It will be ready in... <label id='loaderCounter'></label> seconds  </p>
-               <span>So don't close this tab</span>
-           </div>
-           <div class="loading-image" >
-               <img src="images/loading/oto-loading.gif"/>
-           </div>
-           <div class="fb-like" data-href="https://www.facebook.com/otonomic" data-width="86" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-       </div>
-   </div>
-</div>
-
-
 
   <noscript><p><img src="http://a.otonomic.com/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
 
@@ -704,14 +630,11 @@
     
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
     <link href="http://d2zxr4ixkv1lwq.cloudfront.net/lp/css/tipsy.css" rel="stylesheet" type="text/css" />
-
-    <!-- Social  -->
+	
+	<!-- Social  -->
     <!-- // Facebook -->
     <div id="fb-root"></div>
     <script type="text/javascript">
-		jQuery(document).ready(function($) {
-			p2sTrack('Landing Page', 'Page Loaded', '0 seconds');
-		});
         window.fbAsyncInit = function() {
             FB.init({ appId: "373931652687761",status: true,cookie: true,xfbml: true});
 
@@ -754,26 +677,11 @@
   <link href="css/tipsy.css" rel="stylesheet" type="text/css">
     <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="/js/jquery.fancybox.pack.js"></script>
-    <script type="text/javascript" src="/js/search_filterv1.0.4-wp.js"></script>
+    <script type="text/javascript" src="/js/search_filter_lead_gen.js"></script>
     <script type="text/javascript" src="/js/jquery.jsonp-2.4.0.min.js"></script>
     <script type="text/javascript" src="/js/jquery.tipsy.js"></script>
     <script type="text/javascript" src="/js/otonomicv1.0.4.js?v=1"></script>
-    <script type="text/javascript">
-        /*
-    $.preloadImages = function(){
-       for(var i = 0; i<arguments.length; i++){
-          $("<img />").attr("src", arguments[i]);
-       }
-    }
-    jQuery(document).ready(function($){
-        jQuery('.btn_go').tipsy({
-            gravity:  'se',//jQuery.fn.tipsy.autoNS,
-            trigger: 'manual'
-        });
-        $.preloadImages("backscreen.png");
-    });
-    */
-    </script>
+
 	<script>
 	function getParameterByName(name) 
 	{
@@ -788,5 +696,16 @@
 	}
     </script>
     <script type="text/javascript" src="js/functions.js"></script>
+
+    <script>
+        jQuery(document).ready(function($) {
+			p2sTrack('Thank you Page', 'Page Loaded', '0 seconds');
+			var event_data = 'Page id:'+getParameterByName('page_id')+', Page name:'+getParameterByName('page_name')+', Category:'+getParameterByName('category');
+            track_event("Lead Generation Website", "Lead Generated", event_data);
+			track_event("Lead Generation Website", "Lead Generated", "Page ID: "+getParameterByName('page_id'));
+			track_event("Lead Generation Website", "Lead Generated", "Page name:"+getParameterByName('page_name'));
+			track_event("Lead Generation Website", "Lead Generated", "Category:"+getParameterByName('category'));
+        });
+    </script>
   </body>
 </html>

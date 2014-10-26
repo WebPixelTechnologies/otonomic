@@ -1,4 +1,9 @@
 var facebook_site_created_pixel_id = '6008636103630';
+var piwik_site_id = 1;
+if(window.location.hostname.replace('www.', '') == 'verisites.com')
+{
+	piwik_site_id = 2;
+}
 
 
 function is_localhost() {
@@ -48,7 +53,7 @@ _paq.push(['enableLinkTracking']);
 
     var u=(("https:" == document.location.protocol) ? "https" : "http") + "://" + piwik_url;
     _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 1]);
+    _paq.push(['setSiteId', piwik_site_id]);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
     g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
 })();
@@ -81,13 +86,51 @@ function track_event(category, action, label, value){
     }
 
     if(typeof(ga) !== 'undefined') {
-        ga('send', 'event', category, action, label,value);
+        //ga('send', 'event', category, action, label,value);
+		ga('send', {
+			'hitType': 'event',
+			'eventCategory': category,
+			'eventAction': action,
+			'eventLabel': label,
+			'value':value
+		});
     }
 
-    // jQuery.post('http://otonomic.com/code/sites/track_click/', { category: category, event: action , label: label, value: value });
+    jQuery.post(
+        'http://otonomic.com/code/sites/track_click/',
+        { category: category, event: action , label: label, value: value }
+    );
+
     if(typeof(_paq) !== 'undefined') {
-        _paq.push(['trackEvent', category, action, label, value ]);
+        //_paq.push(['trackEvent', category, action, label, value ]);
+		_paq.push(['trackEvent', category, action, label, value]);
     }
+	submit_options = {
+			'event': action,
+			'category': category,
+			'action': action,
+			'label': label,
+			'value':value
+		}
+	trackOtonomic(submit_options);
+}
+function trackOtonomic( submit_options )
+{
+	if( is_localhost() ) 
+	{
+		
+		otonomic_db_analytics_url = "http://p2s.test/sites/track_click";
+	} 
+	else 
+	{
+		otonomic_db_analytics_url = "http://builder.otonomic.com/sites/track_click";
+	}
+	$.ajax({
+		type: 'GET',
+		url: otonomic_db_analytics_url,
+		data: submit_options
+	});
+	
 }
 
 function track_virtual_pageview(url, title) {

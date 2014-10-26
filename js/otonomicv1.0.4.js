@@ -58,7 +58,7 @@
         // Track time since the page is loaded in the P2S database
         var time_counter = 0;
         var next_record_time = 1;
-        p2sTrack('LandingPage', 'Page Loaded', '0 seconds');
+        //p2sTrack('', 'Page Loaded', '0 seconds');
 
         /*
         var page_loaded_interval_func = setInterval(function() {

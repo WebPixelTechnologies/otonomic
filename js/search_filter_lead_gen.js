@@ -4,7 +4,7 @@ var p2s_site_url = 'http://builder.otonomic.com/';
 var p2s_site_creation_base_url = 'http://wp.otonomic.com/migration/';
 
 var ot_wp_site_creation_url = "http://wp.otonomic.com/migration/index.php?theme=parallax";
-var ot_loading_page_url     = "/progresslp2";
+var ot_loading_page_url     = "/thank_you.html";
 if(typeof (query_tags) == 'undefined') {
     query_tags = {};
 }
@@ -125,11 +125,11 @@ function create_wp_site(page_id){
         }
 
         $this.tipsy("hide");
-        track_event("Search Marketing Website", "Go", $this.attr('data-attr')+","+$page_url);
+        track_event("Lead Generation Website", "Go", $this.attr('data-attr')+","+$page_url);
 
         if ($page_url.indexOf("facebook.com") > -1) {
             // var url = p2s_site_url + 'sites/add/?u=' + encodeURIComponent($page_url);
-            track_event("Search Marketing Website", "Choose Url", $page_url);
+            track_event("Lead Generation Website", "Choose Url", $page_url);
 
             query_tags.page_id = $page_url;
             current_site_creation_link = ot_loading_page_url + '?' + $.param(query_tags);
@@ -143,7 +143,7 @@ function create_wp_site(page_id){
 
 
         if (found_result == 1 && $.trim(found_only_result_url) != '') {
-            track_event("Search Marketing Website", "Choose Url", $this.attr('data-attr')+","+found_only_result_url);
+            track_event("Lead Generation Website", "Choose Url", $this.attr('data-attr')+","+found_only_result_url);
             setTimeout(function () { // now wait 300 milliseconds...
                 window.location = found_only_result_url;
             }, 300);
@@ -180,7 +180,7 @@ jQuery(document).ready(function($){
     });
 
     $(document).on('click','.search-results-item',function(event){
-        track_event("Search Marketing Website", "Click", $(this).attr('href'));
+        track_event("Lead Generation Website", "Click", $(this).attr('href'));
     });
 
 
@@ -228,7 +228,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
             return;
         }
         p2strack++;
-        track_event("Search Marketing Website", "Query", $(InputField).attr('data-attr')+","+value, p2strack);
+        track_event("Lead Generation Website", "Query", $(InputField).attr('data-attr')+","+value, p2strack);
 
         window._fbq = window._fbq || [];
         window._fbq.push(['track', '6016621432630', {'value':'0.00','currency':'USD'}]);
@@ -284,7 +284,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
                     var simage = 'http://graph.facebook.com/' + val.id + '/picture?height=' + SEARCH_PICTURE_SIZE +'&width=' + SEARCH_PICTURE_SIZE;
                 }
 
-                items.push('<a class="media search-results-item" data-attr="'+$(InputField).attr('data-attr')+'" href="' + current_site_creation_link + '" title="Click to view site" data-facebook-page-id="'+val.id+'" data-facebook-page-name="'+val.name+'" data-result-number="' + ind + '" >' +
+                items.push('<a class="media search-results-item" data-attr="'+$(InputField).attr('data-attr')+'" href="' + current_site_creation_link + '" title="Click to view site" data-result-number="' + ind + '" >' +
                     '<div >' +
                     '<div class="pull-left fanpage">' +
                     '<img class="media-object" src="'+ simage +'">' +
@@ -316,7 +316,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
 }
 function closeSearch(targetContainer,from){
         found_result = 0;
-        track_event('Search Marketing Website','Close',from);
+        track_event('Lead Generation Website','Close',from);
 
         var wrapper = $(targetContainer);
         wrapper.html($('<div/>', {}));
