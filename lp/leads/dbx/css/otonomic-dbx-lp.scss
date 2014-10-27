@@ -20,20 +20,38 @@ a {
     color: #f54500;
     text-align: left;
     small {
-        color: gray;
+        color: $gray;
         margin-left: 40px;
         font-size: $font-size-small;
     }
+
+    .option-2 & {
+        small { 
+            margin-left: 90px;
+        }
+    }
+}
+
+.zero-margin {
+    margin: 0!important;
+}
+
+.small-gray-text {
+    padding-top: 15px;
+    color: $gray;
+    font-size: $font-size-small;
+    text-align: left; 
 }
 #header {
     background-color: #f5eee9;
     border: 0;
-
     .header-inner {
         width: 990px;
         margin: 0 auto;
-        padding-left: 30px;
 
+        .bizlogo {
+            padding: 10px 0 5px 0;
+        }
         .actionables {
             padding-top: 28px;
 
@@ -64,6 +82,7 @@ a {
         .body {
             font-size: $font-size-large;
             font-weight: normal;
+            padding-top: 0;
 
             .features-table td {
                 padding-top: 10px;
@@ -77,7 +96,12 @@ a {
             }
         }
     }
-
+    .left-side {
+        padding-left: 0;
+    }
+    .right-side {
+        padding: 5px 20px 0 20px;
+    }
     .right-side.inline-form {
         width: 290px;
         margin-top: 15px;
@@ -142,7 +166,6 @@ a {
         }
         .right-side {
             float: left;
-            margin-left: 30px;
         }
     }
     .features-table {
@@ -230,9 +253,9 @@ a {
                 display: inline-block;
 
                 input{
-                    margin-right: 5px;
+                    margin-right: 10px;
                     padding: 10px 5px 10px 13px;
-                    width: 235px;
+                    width: 230px;
                     background-color: white;
                     border: 0;
                     @include box-shadow (inset 1px 1px 0px 0px #d1c7b6);
@@ -241,7 +264,7 @@ a {
             }
 
             input.main_search_box {
-                width: 222px;
+                width: 217px;
                 padding-left: 35px;
                 background-image: url('../images/search-icon.svg');
                 background-repeat: no-repeat;
@@ -257,6 +280,12 @@ a {
                 text-align: center;
                 background-position: 83% center;
             }
+            &.single-field {
+                input.main_search_box {
+                    width: 740px;
+                    background-position: 10px center;
+                }
+            }
         }
 
         &.option-3 {
@@ -271,9 +300,9 @@ a {
                 display: inline-block;
 
                 input{
-                    margin-right: 5px;
+                    margin-right: 10px;
                     padding: 10px 5px 10px 13px;
-                    width: 215px;
+                    width: 210px;
                     background-color: #fcf8f5;
                     border: 0;
                     @include box-shadow (inset 1px 1px 0px 0px #d1c7b6);
@@ -282,7 +311,7 @@ a {
             }
 
             input.main_search_box {
-                width: 222px;
+                width: 217px;
                 padding-left: 35px;
                 background-image: url('../images/search-icon.svg');
                 background-repeat: no-repeat;
@@ -297,6 +326,13 @@ a {
                 width: 174px;
                 text-align: center;
                 background-position: 83% center;
+            }
+
+            &.single-field {
+                input.main_search_box {
+                    width: 700px;
+                    background-position: 10px center;
+                }
             }
         }
 

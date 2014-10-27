@@ -296,6 +296,10 @@
                                 <td><img src="images/store-icon.svg"/></td>
                                 <td>Custom setup of an Online Store, Appointments Scheduling tool and other useful tools</td>
                             </tr>
+                            <tr>
+                                <td><img src="images/lifesaver-wheel-icon.svg"/></td>
+                                <td>Our top notch support</td>
+                            </tr>
                         </table>
                     </div>
                 </div>
@@ -303,7 +307,7 @@
                     <img src="images/mobile-laptop.png" style="margin-left: -40px;">
                 </div>
             </div>
-            <div class="try-today-row subheader option-3">
+            <div class="try-today-row subheader option-3 zero-margin">
                 <form name="1161" id="1161" method="POST" novalidate=""
                       action="http://otonomic.com/thank_you.php"
                       class="contact_form salesforce-form clearfix">
@@ -332,6 +336,122 @@
                         </div>
                     </div>
                     <input type="submit" class="btn btn-oto-orange" value="Create My Site" tabindex="5">
+                    <p class="small-gray-text">By entering your contact information, you agreeto Otonomic’s <a href="#">Privacy Policy and Terms.</a></p>
+                </form>
+            </div>
+            <!-- Option 4 ================================================================ -->
+            <hr>
+            <div class="clearfix ">
+                <div class="left-side main-content"><h1>Let us create a site for you!</h1>
+                    <div class="subheader">Easily get more customers with your own professional site. <br/>
+                        We'll create a site using content from your Facebook page.</div>
+                    <div class="body">You get:
+                        <table class="features-table">
+                            <tr>
+                                <td><img src="images/cup-icon.svg"/></td>
+                                <td>Professional Developer that works on your site</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/nameplate-icon.svg"/></td>
+                                <td>Your own .com domain + email address <br/>
+                                    <small>e.g. http://mybusiness.com and me@mybusiness.com</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/store-icon.svg"/></td>
+                                <td>Custom setup of an Online Store, Appointments Scheduling tool and other useful tools</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/lifesaver-wheel-icon.svg"/></td>
+                                <td>Our top notch support</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <img src="images/mobile-laptop2.png" style="margin-left: -60px;">
+                </div>
+            </div>
+            <div class="try-today-row subheader option-3 single-field zero-margin">
+                <form name="1161" id="1161" method="POST" novalidate=""
+                      action="http://otonomic.com/thank_you.php"
+                      class="contact_form salesforce-form clearfix">
+                    <p class="orange-text">Leave your details and we’ll create your site for you. You only pay if you wish to keep it. <small>Offer valid until Nov. 1, 2014</small></p>
+                    <input type="hidden" name="page_id" id="frm_facebook_page_id"/>
+                    <div id="Fanpage-field" class="sick-input half">
+                        <input type="text" id="main_search_box" data-attr="center" name="page_name"
+                               onClick="searchBoxClick('#main_search_box');"
+                               onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
+                               class="form-control main_search_box mobile-placeholder2 LoNotSensitive"
+                               autocomplete="off" placeholder="Your Facebook page name">
+                        <div class="tb search-wrapper  p2s_fanpages" id="search_wrapper_main" data-attr="center"></div>
+                        <div style="position:relative;">
+                            <span class="icon_clear close-search" onClick="closeSearch('#search_wrapper_main','center')" style="display: none;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn btn-oto-orange" value="Create My Site" tabindex="5">
+                    <p class="small-gray-text">By entering your contact information, you agreeto Otonomic’s <a href="#">Privacy Policy and Terms.</a></p>
+                </form>
+            </div>
+            <!-- Option 5 ================================================================ -->
+            <hr>
+            <div class="try-today-row subheader option-2 zero-margin">
+                <form name="1161" id="1161" method="POST" novalidate=""
+                      action="http://otonomic.com/thank_you.php"
+                      class="contact_form salesforce-form clearfix">
+                    <p class="orange-text">Leave your details and we’ll create your site for you. You only pay if you wish to keep it. <small>Offer valid until Nov. 1, 2014</small></p>
+                    <input type="hidden" name="page_id" id="frm_facebook_page_id"/>
+
+                    <div id="Email-field" class="sick-input half">
+                        <input tabindex="2" required="1" type="text" name="email" id="Email" placeholder="Email"/>
+                    </div>
+
+                    <div id="Phone-field" class="sick-input half">
+                        <input tabindex="3" required="1" type="text" name="phone" id="Phone" placeholder="Phone number"/>
+                    </div>
+
+                    <div id="Fanpage-field" class="sick-input half">
+                        <input type="text" id="main_search_box" data-attr="center" name="page_name"
+                               onClick="searchBoxClick('#main_search_box');"
+                               onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
+                               class="form-control main_search_box mobile-placeholder2 LoNotSensitive"
+                               autocomplete="off" placeholder="Your Facebook page name">
+                        <div class="tb search-wrapper  p2s_fanpages" id="search_wrapper_main" data-attr="center"></div>
+                        <div style="position:relative;">
+                            <span class="icon_clear close-search" onClick="closeSearch('#search_wrapper_main','center')" style="display: none;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn btn-oto-orange" value="Create My Site" tabindex="5">
+                    <p class="small-gray-text">By entering your contact information, you agreeto Otonomic’s <a href="#">Privacy Policy and Terms.</a></p>
+                </form>
+            </div>
+            <!-- Option 6 ================================================================ -->
+            <hr>
+            <div class="try-today-row subheader option-2 single-field zero-margin">
+                <form name="1161" id="1161" method="POST" novalidate=""
+                      action="http://otonomic.com/thank_you.php"
+                      class="contact_form salesforce-form clearfix">
+                    <p class="orange-text">Leave your details and we’ll create your site for you. You only pay if you wish to keep it. <small>Offer valid until Nov. 1, 2014</small></p>
+                    <input type="hidden" name="page_id" id="frm_facebook_page_id"/>
+                    <div id="Fanpage-field" class="sick-input half">
+                        <input type="text" id="main_search_box" data-attr="center" name="page_name"
+                               onClick="searchBoxClick('#main_search_box');"
+                               onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
+                               class="form-control main_search_box mobile-placeholder2 LoNotSensitive"
+                               autocomplete="off" placeholder="Your Facebook page name">
+                        <div class="tb search-wrapper  p2s_fanpages" id="search_wrapper_main" data-attr="center"></div>
+                        <div style="position:relative;">
+                            <span class="icon_clear close-search" onClick="closeSearch('#search_wrapper_main','center')" style="display: none;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn btn-oto-orange" value="Create My Site" tabindex="5">
+                    <p class="small-gray-text">By entering your contact information, you agreeto Otonomic’s <a href="#">Privacy Policy and Terms.</a></p>
                 </form>
             </div>
             <!-- Testimonials ============================================================ -->
