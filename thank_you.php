@@ -22,9 +22,6 @@ $mail_content .= "\nPage Category: ".$_REQUEST['category'];
 */
 $mail_content .= "IP: ".$ip;
 
-echo $mail_content;
-die();
-
 @mail($mail_to, $mail_subject, $mail_content, $headers);
 
 ?>
