@@ -165,18 +165,18 @@
                         You only pay if you wish to keep it.
                         <div id="alternatives">Offer valid until Nov. 1, 2014</div>
                     </div>
-                    <form name="1161" id="1161" method="POST" novalidate=""
-                          action="http://otonomic.com/thank_you.php"
+                    <form name="1161" id="1161" method="POST" novalidate
+                          action="/thank_you.php"
                           class="contact_form salesforce-form clearfix">
 
                         <input type="hidden" name="page_id" id="frm_facebook_page_id"/>
 
                         <div id="Email-field" class="sick-input half">
-                            <input tabindex="2" required="1" type="text" name="email" id="Email" placeholder="Email"/>
+                            <input tabindex="2" required type="text" name="email" id="Email" placeholder="Email"/>
                         </div>
 
                         <div id="Phone-field" class="sick-input half">
-                            <input tabindex="3" required="1" type="text" name="phone" id="Phone" placeholder="Phone number"/>
+                            <input tabindex="3" required type="text" name="phone" id="Phone" placeholder="Phone number"/>
                         </div>
 
                         <div id="Fanpage-field" class="sick-input half">
@@ -237,18 +237,18 @@
                         You only pay if you wish to keep it.
                         <div id="alternatives">Offer valid until Nov. 1, 2014</div>
                     </div>
-                    <form name="1161" id="1161" method="POST" novalidate=""
-                          action="http://otonomic.com/thank_you.php"
+                    <form name="1161" id="1161" method="POST" novalidate
+                          action="/thank_you.php"
                           class="contact_form salesforce-form clearfix">
 
                         <input type="hidden" name="page_id" id="frm_facebook_page_id"/>
 
                         <div id="Email-field" class="sick-input half">
-                            <input tabindex="2" required="1" type="text" name="email" id="Email" placeholder="Email"/>
+                            <input tabindex="2" required type="text" name="email" id="Email" placeholder="Email"/>
                         </div>
 
                         <div id="Phone-field" class="sick-input half">
-                            <input tabindex="3" required="1" type="text" name="phone" id="Phone" placeholder="Phone number"/>
+                            <input tabindex="3" required type="text" name="phone" id="Phone" placeholder="Phone number"/>
                         </div>
 
                         <div id="Fanpage-field" class="sick-input half">
@@ -308,18 +308,18 @@
                 </div>
             </div>
             <div class="try-today-row subheader option-3 zero-margin">
-                <form name="1161" id="1161" method="POST" novalidate=""
-                      action="http://otonomic.com/thank_you.php"
+                <form name="1161" id="1161" method="POST" novalidate
+                      action="/thank_you.php"
                       class="contact_form salesforce-form clearfix">
                     <p class="orange-text">Leave your details and we’ll create your site for you. You only pay if you wish to keep it. <small>Offer valid until Nov. 1, 2014</small></p>
                     <input type="hidden" name="page_id" id="frm_facebook_page_id"/>
 
                     <div id="Email-field" class="sick-input half">
-                        <input tabindex="2" required="1" type="text" name="email" id="Email" placeholder="Email"/>
+                        <input tabindex="2" required type="text" name="email" id="Email" placeholder="Email"/>
                     </div>
 
                     <div id="Phone-field" class="sick-input half">
-                        <input tabindex="3" required="1" type="text" name="phone" id="Phone" placeholder="Phone number"/>
+                        <input tabindex="3" required type="text" name="phone" id="Phone" placeholder="Phone number"/>
                     </div>
 
                     <div id="Fanpage-field" class="sick-input half">
@@ -373,8 +373,8 @@
                 </div>
             </div>
             <div class="try-today-row subheader option-3 single-field zero-margin">
-                <form name="1161" id="1161" method="POST" novalidate=""
-                      action="http://otonomic.com/thank_you.php"
+                <form name="1161" id="1161" method="POST" novalidate
+                      action="/thank_you.php"
                       class="contact_form salesforce-form clearfix">
                     <p class="orange-text">Leave your details and we’ll create your site for you. You only pay if you wish to keep it. <small>Offer valid until Nov. 1, 2014</small></p>
                     <input type="hidden" name="page_id" id="frm_facebook_page_id"/>
@@ -398,18 +398,18 @@
             <!-- Option 5 ================================================================ -->
             <hr>
             <div class="try-today-row subheader option-2 zero-margin">
-                <form name="1161" id="1161" method="POST" novalidate=""
-                      action="http://otonomic.com/thank_you.php"
+                <form name="1161" id="1161" method="POST" novalidate
+                      action="/thank_you.php"
                       class="contact_form salesforce-form clearfix">
                     <p class="orange-text">Leave your details and we’ll create your site for you. You only pay if you wish to keep it. <small>Offer valid until Nov. 1, 2014</small></p>
                     <input type="hidden" name="page_id" id="frm_facebook_page_id"/>
 
                     <div id="Email-field" class="sick-input half">
-                        <input tabindex="2" required="1" type="text" name="email" id="Email" placeholder="Email"/>
+                        <input tabindex="2" required type="text" name="email" id="Email" placeholder="Email"/>
                     </div>
 
                     <div id="Phone-field" class="sick-input half">
-                        <input tabindex="3" required="1" type="text" name="phone" id="Phone" placeholder="Phone number"/>
+                        <input tabindex="3" required type="text" name="phone" id="Phone" placeholder="Phone number"/>
                     </div>
 
                     <div id="Fanpage-field" class="sick-input half">
@@ -432,8 +432,8 @@
             <!-- Option 6 ================================================================ -->
             <hr>
             <div class="try-today-row subheader option-2 single-field zero-margin">
-                <form name="1161" id="1161" method="POST" novalidate=""
-                      action="http://otonomic.com/thank_you.php"
+                <form name="1161" id="1161" method="POST" novalidate
+                      action="/thank_you.php"
                       class="contact_form salesforce-form clearfix">
                     <p class="orange-text">Leave your details and we’ll create your site for you. You only pay if you wish to keep it. <small>Offer valid until Nov. 1, 2014</small></p>
                     <input type="hidden" name="page_id" id="frm_facebook_page_id"/>
@@ -504,18 +504,18 @@
             <hr><!-- Remove after choosing an option -->
             <div class="try-today-row subheader option-2">
                 <p style="text-align: center;">Over 30,000 businesses trust Otonomic to supercharge their web presence.</p>
-                <form name="1161" id="1161" method="POST" novalidate=""
-                      action="http://otonomic.com/thank_you.php"
+                <form name="1161" id="1161" method="POST" novalidate
+                      action="/thank_you.php"
                       class="contact_form salesforce-form clearfix">
 
                     <input type="hidden" name="page_id" id="frm_facebook_page_id"/>
 
                     <div id="Email-field" class="sick-input half">
-                        <input tabindex="2" required="1" type="text" name="email" id="Email" placeholder="Email"/>
+                        <input tabindex="2" required type="text" name="email" id="Email" placeholder="Email"/>
                     </div>
 
                     <div id="Phone-field" class="sick-input half">
-                        <input tabindex="3" required="1" type="text" name="phone" id="Phone" placeholder="Phone number"/>
+                        <input tabindex="3" required type="text" name="phone" id="Phone" placeholder="Phone number"/>
                     </div>
 
                     <div id="Fanpage-field" class="sick-input half">
@@ -538,18 +538,18 @@
             <hr><!-- Remove after choosing an option -->
             <div class="try-today-row subheader option-3">
                 <p style="text-align: center;">Over 30,000 businesses trust Otonomic to supercharge their web presence.</p>
-                <form name="1161" id="1161" method="POST" novalidate=""
-                      action="http://otonomic.com/thank_you.php"
+                <form name="1161" id="1161" method="POST" novalidate
+                      action="/thank_you.php"
                       class="contact_form salesforce-form clearfix">
 
                     <input type="hidden" name="page_id" id="frm_facebook_page_id"/>
 
                     <div id="Email-field" class="sick-input half">
-                        <input tabindex="2" required="1" type="text" name="email" id="Email" placeholder="Email"/>
+                        <input tabindex="2" required type="text" name="email" id="Email" placeholder="Email"/>
                     </div>
 
                     <div id="Phone-field" class="sick-input half">
-                        <input tabindex="3" required="1" type="text" name="phone" id="Phone" placeholder="Phone number"/>
+                        <input tabindex="3" required type="text" name="phone" id="Phone" placeholder="Phone number"/>
                     </div>
 
                     <div id="Fanpage-field" class="sick-input half">
@@ -572,8 +572,8 @@
             <hr><!-- Remove after choosing an option -->
             <div class="try-today-row subheader option-4">
                 <p style="text-align: center;">Over 30,000 businesses trust Otonomic to supercharge their web presence.</p>
-                <form name="1161" id="1161" method="POST" novalidate=""
-                      action="http://otonomic.com/thank_you.php"
+                <form name="1161" id="1161" method="POST" novalidate
+                      action="/thank_you.php"
                       class="contact_form salesforce-form clearfix">
 
                     <input type="hidden" name="page_id" id="frm_facebook_page_id"/>

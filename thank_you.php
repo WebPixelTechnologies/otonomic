@@ -10,9 +10,9 @@ $ip = $_SERVER['REMOTE_ADDR']?:($_SERVER['HTTP_X_FORWARDED_FOR']?:$_SERVER['HTTP
 
 $server = isset($_SERVER['HTTP_HOST'])?$_SERVER['HTTP_HOST']:$_SERVER['SERVER_NAME'];
 $mail_subject = 'New lead generated on '.$server;
-
+$mail_content = '';
 foreach($_REQUEST as $key=>$value) {
-    $mail_content = ucfirst(str_replace("_", " ", $key)).": ".$value."\n";
+    $mail_content .= ucfirst(str_replace("_", " ", $key)).": ".$value."\n";
 }
 
 /*
@@ -21,6 +21,9 @@ $mail_content .= "\nPage ID: ".$_REQUEST['page_id'];
 $mail_content .= "\nPage Category: ".$_REQUEST['category'];
 */
 $mail_content .= "IP: ".$ip;
+
+echo $mail_content;
+die();
 
 @mail($mail_to, $mail_subject, $mail_content, $headers);
 
