@@ -1,0 +1,1073 @@
+@font-face {
+    font-family: 'aller';
+    src: url('../fonts/aller_bd-webfont.eot');
+    src: url('../fonts/aller_bd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aller_bd-webfont.svg#allerbold') format('svg'),
+         url('../fonts/aller_bd-webfont.woff') format('woff'),
+         url('../fonts/aller_bd-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'aller';
+    src: url('../fonts/aller_lt-webfont.eot');
+    src: url('../fonts/aller_lt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aller_lt-webfont.svg#aller_lightregular') format('svg'),
+         url('../fonts/aller_lt-webfont.woff') format('woff'),
+         url('../fonts/aller_lt-webfont.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'aller';
+    src: url('../fonts/aller_rg-webfont.eot');
+    src: url('../fonts/aller_rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aller_rg-webfont.svg#allerregular') format('svg'),
+         url('../fonts/aller_rg-webfont.woff') format('woff'),
+         url('../fonts/aller_rg-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html {
+	height: 100%;
+}
+body {
+  	height: 100%;
+  	background-color: #3d3632;
+  	color: #3d3632;
+  	font-family: 'aller', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'aller', sans-serif;
+	font-weight: lighter;
+}
+h1{
+	font-size: 62px;
+}
+a{
+	color: #29abe2;
+}
+a:hover{
+	color: #0980b2;
+}
+
+a.btn img{
+	margin-top: -2px!important;
+}
+select {
+	font-family: arial, sans-serif;
+}
+textarea {
+    resize: none;
+}
+
+/* BG image 
+----------------------------------*/
+.bg-image{
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 465px;
+	bottom: 0;
+	overflow: hidden;
+}
+.bg-image img{
+	height: 100%;
+	min-width: 100%;
+}
+
+/* INTRO 
+----------------------------------*/
+#intro{
+
+}
+#intro .logo{
+  margin-top: 20px;
+}
+#intro h1.intro-title{
+	margin-top: 70px;
+	font-size: 36px;
+	font-weight: bold;
+}
+#intro h4 {
+  margin-bottom: 40px;
+  font-weight: normal;
+}
+#intro p.site-name{
+	margin-bottom: 20px;
+	color: #f54500;
+	font-size: 50px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+#intro .bg-image{
+  background-image: url(../images/bg1.jpg);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  left: 0;
+}
+/* STAGE
+----------------------------------*/
+.content{
+ 	width: 930px;
+ 	margin: 0 auto;
+}
+.content-panel{
+	position: absolute;
+	width: 470px;
+	padding: 18px 40px 0 40px;
+	box-shadow: 3px 0px 0px 0px rgba(0,0,0,0.2);
+	min-height: 100%;
+	/*min-height: calc(100% - 89px);*/
+}
+.content-panel h1.title{
+	margin-top: 70px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 42px;
+}
+.content-panel h3{
+	margin-top: 30px;
+  color: #f54500;
+  font-size: 18px;
+	font-weight: bold;
+}
+.content-panel p{
+	font-size: 20px;
+	font-weight: lighter;
+	margin-bottom: 30px;
+}
+.content-panel .stage-img {
+  margin: 40px 0;
+}
+
+/* STAGE-1
+-----------------------------------*/
+#stage-1{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+#stage-1 .content-panel{
+	padding-right: 20px;
+	background-color: #f5ece6;
+}
+#stage-1 img.oto-gif{
+	margin: 40px -20px;
+}
+#stage-1 .bg-image img{
+	float: left;
+}
+
+/* STAGE-2
+----------------------------------*/
+#stage-2{
+	position: absolute;
+	top: 0px;
+	width: 100%;
+  height: 100%;
+}
+#stage-2 .content-panel{
+	background-color: #f5ece6;
+}
+#stage-2 .bg-image img{
+	float: left;
+}
+/* STAGE-3
+----------------------------------*/
+#stage-3{
+	position: absolute;
+	top: 0;
+	width: 100%;
+  height: 100%;
+}
+#stage-3 .content-panel{
+	background-color: #f5ece6;
+}
+#stage-3 h3{
+	margin-bottom: 30px;
+	line-height: 32px;
+	font-weight: normal;
+}
+#stage-3 h4{
+	margin-top: 60px;
+	font-size: 16px;
+	font-weight: normal;
+}
+#stage-3 h4 img{
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+/* STAGE-4
+----------------------------------*/
+#stage-4{
+  position: absolute;
+  top: 0;
+  width: 100%;
+	height: 100%;
+}
+#stage-4 .content-panel{
+	background-color: #f5ece6;
+}
+#stage-4 h1.title{
+  margin-bottom: 40px;
+	color: #3d3531;
+}
+#stage-4 .bg-image img{
+	float: left;
+}
+
+/* Congratz
+----------------------------------*/
+#congratz{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fcf8f5;
+}
+#congratz .logo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 0 0 40px;
+}
+#congratz .upper-content{
+  min-height: 50%;
+  background-color: #ebded2;
+}
+#congratz .lower-content{
+  padding-top: 10px;
+}
+#congratz h1.congratz-title{
+  margin-top: 0;
+	margin-bottom: 40px;
+  padding-top: 40px;
+  font-size: 36px;
+  font-weight: bold;
+}
+#congratz #counter {
+  color: #f54500;
+}
+#congratz .tos {
+  font-size: 16px;
+}
+#congratz .tos a{
+  font-weight: bold;
+}
+#congratz .fb-like{
+	display: block;
+  height: 20px;
+	margin-bottom: 40px;
+}
+
+
+/* glyphicons*/
+.wp-lp p span.glyphicon-thumbs-up, 
+.wp-lp p span.glyphicon-ok {
+	color: #325942;
+	font-size: 50px;
+}
+/* Button Loader
+-------------------------------------------------- */
+.btn-loader{
+	margin-right: 15px;
+}
+/* Custom button
+-------------------------------------------------- */
+.btn {
+  font-size: 15px;
+  font-weight: normal;
+}
+/* Override base .btn styles */
+/* Apply text and background changes to three key states: default, hover, and active (click). */
+.btn-ttc,
+.btn-ttc:hover,
+.btn-ttc:active {
+  color: white;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+  background-color: #64b285;
+  box-shadow: 2px 2px 0px #325942;
+  border-radius: 2px;
+}
+
+/* Apply the custom-colored gradients */
+/* Note: you'll need to include all the appropriate gradients for various browsers and standards. */
+.btn-ttc {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(top, #009ED2 0%, #64b285 100%);
+}
+
+/* Set the hover state */
+/* An easy hover state is just to move the gradient up a small amount. Add other embellishments as you see fit. */
+.btn-ttc:hover {
+  background-color: #6aba8c;
+  background-position: 0 -15px;
+}
+
+.btn-ttc.disabled{
+	color: #f54500;
+	background-color: #a62f00;
+	opacity: 1;
+	box-shadow: none;
+}
+.btn-ttc.disabled >{
+	display: none;
+}
+.btn-ttc-orange,
+.btn-ttc-orange:hover,
+.btn-ttc-orange:active {
+  line-height: 33px;
+  padding-right: 20px;
+  padding-left: 20px;
+  color: white;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+  background-color: #f54500;
+  box-shadow: inset 0px -2px 0px #ab3000;
+  border-radius: 6px;
+  border: 0;
+}
+
+.btn-ttc-clear {
+	background: transparent;
+	color: #333;
+	box-shadow: none;
+	font-weight: normal!important;
+}
+.btn-ttc-clear:hover,
+.btn-ttc-clear:active{
+	box-shadow: none;
+}
+/* Apply the custom-colored gradients */
+/* Note: you'll need to include all the appropriate gradients for various browsers and standards. */
+.btn-ttc-orange {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(top, #a62f00 0%, #f54500 100%);
+}
+
+/* Set the hover state */
+/* An easy hover state is just to move the gradient up a small amount. Add other embellishments as you see fit. */
+.btn-ttc-orange:hover {
+  background-color: #f65b1f;
+  background-position: 0 -15px;
+}
+
+.btn-ttc-orange.disabled {
+	color: #f54500;
+	background-color: #a62f00;
+	opacity: 1;
+	box-shadow: none;
+}
+.btn-ttc-orange.disabled >{
+	display: none;
+}
+.btn-ttc-orange .glyphicon,
+.btn-ttc-clear .glyphicon {
+  top: 2px;
+	margin-left: 10px;
+}
+.btn-ttc-orange.glyph-on-left .glyphicon {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+/* Blue Button */
+.btn-ttc-blue,
+.btn-ttc-blue:hover,
+.btn-ttc-blue:active {
+  line-height: 35px;
+  padding-right: 20px;
+  padding-left: 20px;
+  color: white;
+  text-shadow: none;
+  background-color: #28aae1;
+  box-shadow: inset 0px -2px 0px #1c779d;
+  border: 0;
+  border-radius: 6px;
+}
+
+/* Apply the custom-colored gradients */
+/* Note: you'll need to include all the appropriate gradients for various browsers and standards. */
+.btn-ttc-blue {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(top, #0980b2 0%, #28aae1 100%);
+}
+
+/* Set the hover state */
+/* An easy hover state is just to move the gradient up a small amount. Add other embellishments as you see fit. */
+.btn-ttc-blue:hover {
+  background-color: #228ebd;
+  background-position: 0 -15px;
+}
+
+.btn-ttc-blue.disabled {
+  color: #28aae1;
+  background-color: #0980b2;
+  opacity: 1;
+  box-shadow: none;
+}
+.btn-ttc-blue.disabled >{
+  display: none;
+}
+.btn-ttc-blue .glyphicon {
+  margin-left: 10px;
+}
+
+#see-my-website-btn {
+	background-color: #228ebd;
+}
+#see-my-website-btn:hover {
+	background-color: #0980b2;
+}
+#see-my-website-btn.disabled {
+	background-color: #0980b2;
+	color: white;
+}
+
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #999;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #999;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #999;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #999;
+}
+h3#oto-web-url {
+    text-transform: lowercase;
+}
+
+
+
+/* Pulse animation (progress bar paused)
+----------------------------------*/
+@-webkit-keyframes pulse {
+  50% { opacity: 0;}
+}
+.pulse {  
+  -webkit-animation: pulse 2s infinite;
+        animation: pulse 2s infinite;
+  -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+}
+
+/* Input field animation 
+-----------------------------------*/
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes pulse-background {
+    /*from {background: #f5ece6;}
+    to {background: #c9f2da;}*/
+    50% { background: #c9f2da;}
+}
+
+/* Standard syntax */
+@keyframes pulse-background {
+    /*from {background: #f5ece6;}
+    to {background: #c9f2da;}*/
+    50% { background: #c9f2da;}
+}
+.pulse-background {
+    -webkit-animation: pulse-background 2s infinite; /* Chrome, Safari, Opera */
+        animation: pulse-background 2s infinite;
+
+    -webkit-animation-timing-function: cubic-bezier(.15,.8,.85,.99);
+        animation-timing-function: cubic-bezier(.15,.8,.85,.99);
+}
+/* .bounce */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0,-4px,0);
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -30px, 0);
+    -ms-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -15px, 0);
+    -ms-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0,-4px,0);
+    -ms-transform: translate3d(0,-4px,0);
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  -ms-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+/* Buzz Out */
+@-webkit-keyframes buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+@keyframes buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+.buzz-out {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.buzz-out{
+  -webkit-animation-name: buzz-out;
+  animation-name: buzz-out;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+.buzz-out:hover, .buzz-out:focus, .buzz-out:active{}
+
+
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+
+
+
+  /*==========  Mobile First Method  ==========*/
+
+  /* Custom, iPhone Retina */ 
+  @media only screen and (min-width : 320px) {
+
+  }
+  /* Extra Small Devices, Phones */ 
+  @media only screen and (min-width : 480px) {
+
+  }
+
+  /* Small Devices, Tablets */
+  @media only screen and (min-width : 768px) {
+
+  }
+
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width : 992px) {
+
+  }
+
+  /* Large Devices, Wide Screens */
+  @media only screen and (min-width : 1200px) {
+
+  }
+
+
+
+  /*==========  Non-Mobile First Method  ==========*/
+
+  /* Large Devices, Wide Screens */
+  @media only screen and (max-width : 1200px) {
+
+  }
+
+  /* Medium Devices, Desktops */
+  @media only screen and (max-width : 992px) {
+    body {
+      padding-top: 60px;
+    }
+    .wp-lp #progress-bar {
+      top: 59px;
+      height: 15px;
+    }
+    #nprogress ,#nprogress .bar{
+      height: 15px;
+    }
+    #nprogress .peg {
+      font-size: 0.8em;
+      line-height: 15px;
+      right: 5px;
+    }
+    .bg-image {
+      position: fixed;
+      top: 59px;
+    }
+    .content-panel {
+      position: absolute;
+      width: 380px;
+    }
+    .content-panel h1.title {
+      font-size: 27px;
+      line-height: 30px;
+    }
+    .content-panel h3 {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+    .content-panel p {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    .content-panel .owl-item > .item img {
+      width: 100%;
+    }
+    .btn-ttc-orange, .btn-ttc-orange:hover, .btn-ttc-orange:active ,.btn-lg {
+      padding-right: 15px;
+      padding-left: 15px;
+      font-size: 14px;
+    }
+    .wp-lp label {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    .wp-lp .form-group {
+      margin-bottom: 15px;
+    }
+    #intro .bg-image {
+      top: -50px;
+    }
+    #intro h1.intro-title {
+      margin-top: 80px;
+      font-size: 2.4em;
+    }
+    #intro p.site-name {
+      margin-bottom: 0px;
+      font-size: 3.688em;
+    }
+    #intro h3{
+      margin-top: 0;
+      font-size: 1.3em;
+    }
+    #stage-1, #stage-2, #stage-3, #stage-4, #stage-5{
+      top: 59px;
+      min-height: calc(100% - 59px);
+    }
+    .content-panel h1.title{
+      margin-left: 0;
+      margin-bottom: 15px;
+    }
+    #stage-1 .content-panel {
+      margin-left: 0;
+    }
+    #stage-1 img.oto-gif {
+      margin: 0;
+      width: 100%;
+    }
+    #stage-2 .content-panel {
+      right: 0;
+    }
+    #stage-3 .content-panel {
+      margin-left: 0;
+    }
+    #stage-3 h3 {
+      margin-bottom: 10px;
+      line-height: 22px;
+    }
+    #stage-3 textarea.form-control {
+      height: 60px;
+      line-height: 24px;
+
+    }
+    #stage-4 .content-panel {
+      right: 0;
+      box-shadow: -3px 0px 0px 0px rgba(0,0,0,0.2);
+    }
+    #stage-4 h1.title {
+      margin-bottom: 30px;
+    }
+
+    #stage-5 .content-panel {
+      margin-left: 0;
+    }
+    #congratz h1.congratz-title {
+      margin-top: 100px;
+      margin-bottom: 40px;
+      font-size: 50px;
+    }
+    #congratz h2 {
+      font-size: 27px;
+    }
+    #congratz .content {
+      width: auto;
+      margin-left: 210px;
+    }
+    #congratz .tos {
+      margin-top: 10%;
+    }
+    #congratz h3 {
+      font-size: 18px;
+    }
+  }
+
+  /* Small Devices, Tablets */
+  @media only screen and (max-width : 768px) {
+    #congratz .content {
+      margin-left: 0;
+    }
+  }
+
+  /* Extra Small Devices, Phones */ 
+  @media only screen and (max-width : 480px) {
+    body {
+      padding-top: 40px;
+    }
+    .logo-img {
+      width: 99px;
+      height: auto;
+    }
+    .center-logo {
+      margin-top: 5px;
+      margin-left: 10px;      
+      width: 100%;
+    }
+    .navbar {
+      min-height: 40px;
+    }
+    .wp-lp #progress-bar {
+      top: 40px;
+      height: 19px;
+    }
+    .bg-image {
+      top: 49px;
+    }
+    .content {
+      width: auto;
+    }
+    .full-height{
+      height: 100%;
+    }
+    #intro {
+      height: auto;
+      min-height: 100%;
+      background-color: #f5ece6;
+    }
+    #intro h1.intro-title {
+      margin-top: 40px;
+      font-size: 32px;
+    }
+    #intro p.site-name {
+      font-size: 2.6em;
+      margin-bottom: 0px;
+    }
+    #intro h3 {
+      position: relative;
+      overflow: hidden;
+    }
+    #intro .bg-image img {
+      display: block;
+      position: absolute;
+      top: -9999px;
+      bottom: -9999px;
+      left: -9999px;
+      right: -9999px;
+      margin: auto;
+      height: 100%;
+      min-height: 100%;
+      min-width: 100%;
+    }
+    #intro .oto-gif{
+      margin-top: -15px;
+    }
+    .content-panel {
+      width: 100%;
+      padding: 18px 25px 0 25px;
+    }
+    .content-panel h1.title {
+      margin: 15px 0 0 0;
+      font-size: 27px;
+      line-height: 35px;
+    }
+    .content-panel h3 {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+    .content-panel p {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    .content-panel .tt-suggestion p {
+      font-size: 16px;
+    }
+    .content-panel .owl-item h3 {
+      margin-top: 10px;
+    }
+    .content-panel .owl-item > .item img {
+      width: 100%;
+    }
+    .wp-lp label {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    .btn-ttc-orange, .btn-ttc-orange:hover, .btn-ttc-orange:active ,.btn-lg {
+      padding-right: 15px;
+      padding-left: 15px;
+      font-size: 14px;
+    }
+    #nprogress ,#nprogress .bar{
+      height: 19px;
+    }
+    #nprogress .peg {
+      font-size: 0.8em;
+      line-height: 20px;
+      right: 5px;
+    }
+    #stage-1, #stage-2, #stage-3, #stage-4, #stage-5{
+      top: 49px;
+      min-height: calc(100% - 49px);
+    }
+    #stage-1 .content-panel {
+      margin-left: 0;
+    }
+    #stage-1 img.oto-gif {
+      margin: 0;
+      width: 100%;
+    }
+    #stage-2 .content-panel {
+      right: 0;
+    }
+    #stage-3 .content-panel {
+      margin-left: 0;
+    }
+    #stage-3 h3 {
+      margin-bottom: 10px;
+      line-height: 26px;
+    }
+    #stage-3 textarea.form-control {
+      height: 60px;
+      line-height: 24px;
+    }
+    #stage-4 .content-panel {
+      right: 0;
+    }
+    #stage-4 h1.title {
+      margin-bottom: 25px;
+    }
+    #stage-5 .content-panel {
+      margin-left: 0;
+    }
+    #congratz h1.congratz-title {
+      margin-top: 100px;
+      margin-bottom: 30px;
+      font-size: 2em;
+    }
+    #congratz {
+      
+    }
+    #congratz > div{
+      padding: 18px 25px 0 25px;
+    }
+    #congratz h2 {
+      font-size: 1.3em;
+    }
+    #congratz h3#oto-web-url {
+      font-size: 1em;
+    }
+    #congratz #see-my-website-btn{
+      width: 100%;
+      padding: 16px;
+    }
+    #congratz #see-my-website-btn .btn-loader {
+      margin-right: 5px;
+    }
+    #congratz #confetti {
+      position: fixed;
+    }
+  }
+  /* Custom, iPhone Retina */ 
+  @media only screen and (max-width : 320px) {
+    .content-panel h1.title {
+      margin: 15px 0 0 0;
+      font-size: 20px;
+      line-height: 24px;
+    }
+    .content-panel h3 ,
+    .content-panel p {
+      font-size: 15px;
+    }
+    .content-panel .owl-item .item>p {
+      margin-bottom: 20px;
+    }
+    #stage-1 img.oto-gif {
+      margin-top: -15px;
+    }
+    #intro h1.intro-title {
+      margin-top: 40px;
+      font-size: 22px;
+    }
+    #stage-3 h3 {
+      line-height: 22px;
+    }
+    #congratz .content {
+      margin-left: 0;
+    }
+    #congratz h1.congratz-title {
+      margin-top: 20px;
+    }
+    #congratz .fb-like {
+      margin-bottom: 10px;
+    }
+  }
