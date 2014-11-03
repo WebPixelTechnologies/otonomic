@@ -927,9 +927,9 @@ function get_updated_contact_fields()
 {
 	var fields = '';
 	window.parsed_page_data = {
-		'phone': phone,
-		'address': address,
-		'email': email
+		'phone': $('phone').val(),
+		'address': $('address').val(),
+		'email': $('email').val()
 	}
 	if( window.parsed_page_data.phone !=  $('#phone').val())
 	{
@@ -949,9 +949,9 @@ function get_empty_contact_fields()
 {
 	var fields = '';
 	window.parsed_page_data = {
-		'phone': phone,
-		'address': address,
-		'email': email
+		'phone': $('phone').val(),
+		'address': $('address').val(),
+		'email': $('email').val()
 	}
 	if( $('#phone').val() == '' )
 	{
