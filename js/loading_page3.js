@@ -113,14 +113,15 @@ if (is_localhost()) {
 
 				$('#congratz #counter').text(--sec+' second');
 				if (sec == 0) {
-					$('#congratz #counter').text('0 seconds');
+					$('#congratz .congratz-title').text('Taking you to your website.');
 					// now redirect
+
 				    clearInterval(timer);
 				} 
 			}
 		}, 1000);
 		// redirect
-		window.location.replace(window.site_url);
+		//window.location.replace(window.site_url);
 	}
 
 
