@@ -121,7 +121,7 @@ if (is_localhost()) {
 			}
 		}, 1000);
 		// redirect
-		//window.location.replace(window.site_url);
+		window.location.replace(window.site_url);
 	}
 
 
