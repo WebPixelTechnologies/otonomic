@@ -314,6 +314,9 @@ section.features .row{
 .section-features{
 	margin: 0 auto;
 }
+.section-features .title h2{
+	font-size: 41px;
+}
 .section-features h3{
 	font-family: 'Dosis', sans-serif;
 }
@@ -346,9 +349,6 @@ section.features .row{
     width: 100%;
     margin: 0 auto;
     text-align: left;
-}
-.section-features .title h1{
-	font-size: 41px;
 }
 .section-features .feature-icon{
 	margin-top: 50px;
@@ -389,7 +389,7 @@ section.features .row{
 	padding-bottom: 150px;
 }
 .section-reviews-inner{}
-.section-reviews h1{
+.section-reviews h2{
 	margin-top: 42px;
 	margin-bottom: 80px;
 	color: white;
@@ -590,7 +590,7 @@ section.features .row{
 .section-about .drop-screen .drop-screen-inner img{
 	margin-left: 36px;
 }
-.section-about .drop-screen h1{
+.section-about .drop-screen h2{
 	margin-top: 10px;
 	margin-bottom: 30px;
 	font-size: 42px;
@@ -786,7 +786,7 @@ section.features .row{
 section.features .features-mobile{
 	background-color: #ffc430;
 }
-.features-mobile h1{
+.features-mobile h2{
 	color: #fff;
 	font-size: 25px;
 	text-align: center;
@@ -893,7 +893,7 @@ section.features .features-mobile{
 .reviews-mobile{
 	background-color: #29abe3;
 }
-.reviews-mobile h1{
+.reviews-mobile h2{
 	color: #fff;
 	font-size: 25px;
 	text-align: center;
@@ -990,7 +990,7 @@ section.features .features-mobile{
 .about-mobile{
 	background-color: white;
 }
-.about-mobile h1{
+.about-mobile h2{
 	color: #fff;
 	font-size: 25px;
 	text-align: center;
@@ -1183,8 +1183,8 @@ img.grayscale.disabled {
 		width: 120px;
 	}
   .section-home h1,
-  .section-social h1,
-  .section-reviews h1{
+  .section-social h2,
+  .section-reviews h2{
   	font-size: 24px;
   }
 	.section-home p{
