@@ -1,0 +1,252 @@
+<html>
+<head>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="jquery.js"></script>
+    <!-- <script src="angular.js"></script> -->
+    <script src="modal.js"></script>
+
+</head>
+
+<body>
+<a id="link_reviews_modal" href="#">Reviews modal</a>    
+<a id="link_welcome_modal" href="#">Welcome modal</a>
+
+<a id="link_publish_modal" href="#">Publish modal</a>
+<a id="link_fb_cancel_modal" href="#">FB_Cancel modal</a>
+<a id="link_fb_manage_pages_cancel_modal" href="#">FB_manage_pages_cancel modal</a>
+
+<div id="reviewsModal" class="modal fade step-modal-box ng-scope in animateIn" role="dialog" aria-hidden="false" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- ngInclude: templatePath --><div ng-include="templatePath" class="ng-scope">
+            <div class="modal-header testimonals ng-scope">
+                <img src="/plugins/admin_panel/images/chat-white.png">
+                Add customer reviews to your site
+                <span class="modal-step ng-binding">Step 2 of 5</span>
+            </div>
+            <div id="testimonals-modal" class="modal-body ng-scope">
+                <div class="">
+                    <div class="">
+                        <div class="">
+                            <div class="input-group searchBox">
+                                <input type="search" class="form-control ng-pristine ng-valid" ng-model="reviewFilter" ng-change="doSearch(socialSearchKey.pinterest, 'pinterest')" placeholder="Search your reviews">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-blue" type="">&nbsp;&nbsp;&nbsp;&nbsp;<i class="glyphicon glyphicon-search"></i>&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="clearfix"></div>-->
+
+                        <div style="" class="media-list">
+                            <div ng-show="reviewsStatus.length != 0" class="ng-binding ng-hide"></div>
+                            <!-- ngRepeat: review in reviews | filter:reviewFilter --><div class="review media selectable ng-scope selected" ng-class="{'selected': review.isSelected}" ng-click="selectReview(review)" ng-repeat="review in reviews | filter:reviewFilter">
+                                <a style="height:80px; text-decoration:none" class="pull-left" target="_blank">
+                                    <img class="media-object" ng-src="/files/special/betsy/anthony_w200px.jpg" width="85px" height="80px" src="/files/special/betsy/anthony_w200px.jpg">
+                                    <div class="image-select-flag" style="width: 85px"><img src="/plugins/admin_panel/images/right-white.png">ADDED</div>
+                                    <!--<div class=""><span>{{review.from.name}}</span></br><span>{{review.date}}</span></div>-->
+                                </a>
+
+                                <div class="media-body">
+                                    <div><h4 class="media-heading ng-binding">Anthony Neste <small class="ng-binding">  </small></h4></div>
+                                    <p class="ng-binding">Working with Betsy as a Model was one of the easiest shoots any photographer could ask for ,needs very little direction and knows how to stay in the moment and will give you some amazing natural posing . Working with Betsy as my MUA on set is another talent that will just blow you away. She knows how to bring the model to just the right look for any shoot ,from High end MU looks to the natural lifestyle feel that a lot of agencies look for ...You can't go wrong working with this talented Lady, in front of the camera or behind she will bring a lot to any shoot.</p>
+                                </div>
+                            </div><!-- end ngRepeat: review in reviews | filter:reviewFilter --><div class="review media selectable ng-scope selected" ng-class="{'selected': review.isSelected}" ng-click="selectReview(review)" ng-repeat="review in reviews | filter:reviewFilter">
+                                <a style="height:80px; text-decoration:none" class="pull-left" target="_blank">
+                                    <img class="media-object" ng-src="/files/special/betsy/kelly_w200px.jpg" width="85px" height="80px" src="/files/special/betsy/kelly_w200px.jpg">
+                                    <div class="image-select-flag" style="width: 85px"><img src="/plugins/admin_panel/images/right-white.png">ADDED</div>
+                                    <!--<div class=""><span>{{review.from.name}}</span></br><span>{{review.date}}</span></div>-->
+                                </a>
+
+                                <div class="media-body">
+                                    <div><h4 class="media-heading ng-binding">Kelly Kiah <small class="ng-binding">  </small></h4></div>
+                                    <p class="ng-binding">A big thank you to Betsy Smith for makeup on my big day. Betsy has an amazing eye; and I thought my trial was good-- wedding day makeup was nothing less than fantastic! As some who generally wears very basic make-up, I wanted to look more dramatic on my wedding day, but still like "me". I initially wasn't even going to have my makeup done; but wanted a trial, after seeing pictures of her work. Betsy did amazing with color and the wow factor, giving me a special look for my wedding day ! I got so many compliments on my makeup. She is such a sweet person to work with, which also helps wedding day jitters! Under budgeting on my timeline meant we had to squeeze more people in less time, and still everyone got in, and came out amazing. My bridesmaid who prefers a more dramatic look looked stunning, and mother-of-the bride was perfect !! :o) Best part-- the make up lasted, and lasted! My eyes looked amazing until the time my exhausted head hit pillow, which was a good 16+ hrs AFTER our morning makeup session! Lasted through hugs, tears, and a few light rain showers. I would work with Betsy again , so glad I decided to have our make up professionally done. I highly recommend her !!! Thank you Betsy!!</p>
+                                </div>
+                            </div><!-- end ngRepeat: review in reviews | filter:reviewFilter -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer ng-scope">
+                <div class="pull-left">
+                    <div id="continue-btn" class="btn btn-default" ng-click="closeModal()">
+                        <img src="/plugins/admin_panel/images/timer-black.png">Continue Later</div>
+                </div>
+                <div class="pull-right">
+                    <div id="update-btn" class="btn btn-success" ng-click="saveAndMoveNext()">
+                        <img src="/plugins/admin_panel/images/right-white.png">Update</div>
+                    <div id="skip-btn" class="btn btn-default" ng-click="skip()">
+                        <img src="/plugins/admin_panel/images/skip-black.png">Skip</div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="welcomeModal" class="modal welcome-fade ng-scope in animateIn" role="dialog" aria-hidden="false" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="left-bar"></div>
+            <div class="right-content" style="">
+                <div class="modal-body">
+                    <h2>
+                        Welcome to your new website!
+                    </h2>
+                    <div class="welcome-content">
+                        <p>
+                            We took the data from your Facebook business page, and turn it into this beautiful creation. Take a look around. We hope you like it, cause it's yours now.
+                        </p>
+                        <h5>
+                            You can use the panel on the left to start a quick guided tour of content tweaking, so that you have a perfect fit.
+                        </h5>
+                        <p>
+                            Congratulations and good luck!
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="pull-left footer-logo">
+                        <img src="/plugins/admin_panel/images/logo2.png">
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn btn-success" ng-click="closeWelcomeModal()">
+                            <img src="/plugins/admin_panel/images/thumbup-white.png" style="margin-bottom: 3px;">OK, Let me see</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="publishModal" class="modal fade step-modal-box ng-scope in animateIn" role="dialog" aria-hidden="false" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- ngInclude: templatePath -->
+            <div ng-include="templatePath" class="ng-scope">
+                <!-- Header -->
+                <div class="modal-header ng-scope">
+                    <iframe src="//www.facebook.com/plugins/facepile.php?app_id=575528525876858&amp;href=https%3A%2F%2Fwww.facebook.com%2Fpage2site&amp;action&amp;width=530&amp;height=60&amp;max_rows=1&amp;colorscheme=dark&amp;size=medium&amp;show_count=true&amp;appId=575528525876858" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:530px; height:60px;" allowTransparency="true"></iframe>
+                </div>
+                <!-- Content -->
+                <div id="publish-modal" class="modal-body ng-scope">
+                    <h3>Show your new website to the world!</h3>
+                    <p>To publish your website, we need to make sure you are the administrator of the Facebook business page. It's a quick and simple process.</p>
+                    <p>Click below to show your new website to the world!</p>
+                    <div class="modal-btns text-right">
+                        <div id="close-btn" class="btn btn-default" ng-click="closeModal()">
+                            <img src="images/close_btn.png">It's not mine</div>
+                        <div id="yes-btn" class="btn btn-success" ng-click="saveAndMoveNext()">
+                            <img src="images/fb_ico.png">Yes, this page is mine</div>
+                    </div>
+                </div>
+                <!-- Footer -->
+                <div class="modal-footer ng-scope">
+                    <div class="pull-left">
+                        <img class="footer-logo" src="images/footer_logo.png">
+                    </div>
+                    <div class="footer-text pull-left">
+                       <p><strong>otonomic</strong> will not use your personal Facebook data under any circumstances without your permission. We just need to confirm you own the page.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="fbCancelModal" class="modal fade step-modal-box ng-scope in animateIn" role="dialog" aria-hidden="false" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- ngInclude: templatePath -->
+            <div ng-include="templatePath" class="ng-scope">
+                <!-- Header -->
+                <div class="modal-header ng-scope">
+                    <iframe src="//www.facebook.com/plugins/facepile.php?app_id=575528525876858&amp;href=https%3A%2F%2Fwww.facebook.com%2Fpage2site&amp;action&amp;width=530&amp;height=60&amp;max_rows=1&amp;colorscheme=dark&amp;size=medium&amp;show_count=true&amp;appId=575528525876858" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:530px; height:60px;" allowTransparency="true"></iframe>
+                </div>
+                <!-- Content -->
+                <div id="fbCancel-modal" class="modal-body ng-scope">
+                    <h3>We're sorry, but...</h3>
+                    <p>In order to publish your website it's really important for us to verify that you are the owner of this Facebook page.</p>
+                    <div class="modal-btns text-right">
+                        <div id="close-btn" class="btn btn-default" ng-click="closeModal()">
+                            <img src="images/close_btn.png">It's not mine</div>
+                        <div id="yes-btn" class="btn btn-success" ng-click="saveAndMoveNext()">
+                            <img src="images/fb_ico.png">Yes, this page is mine</div>
+                    </div>
+                </div>
+                <!-- Footer -->
+                <div class="modal-footer ng-scope">
+                    <div class="pull-left">
+                        <img class="footer-logo" src="images/footer_logo.png">
+                    </div>
+                    <div class="footer-text pull-left">
+                       <p><strong>otonomic</strong> will not use your personal Facebook data under any circumstances without your permission. We just need to confirm you own the page.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="fbManagePagesModal" class="modal fade step-modal-box ng-scope in animateIn" role="dialog" aria-hidden="false" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- ngInclude: templatePath -->
+            <div ng-include="templatePath" class="ng-scope">
+                <!-- Header -->
+                <div class="modal-header ng-scope">
+                    <iframe src="//www.facebook.com/plugins/facepile.php?app_id=575528525876858&amp;href=https%3A%2F%2Fwww.facebook.com%2Fpage2site&amp;action&amp;width=530&amp;height=60&amp;max_rows=1&amp;colorscheme=dark&amp;size=medium&amp;show_count=true&amp;appId=575528525876858" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:530px; height:60px;" allowTransparency="true"></iframe>
+                </div>
+                <!-- Content -->
+                <div id="fbCancel-modal" class="modal-body ng-scope">
+                    <h3>As we said before...</h3>
+                    <p>In order to publish your website it's important to verify that you are the owner of this Facebook page.</p>
+                    <p><strong>Don't worry!</strong> We won't misuse this priviledge in any way.</p>
+                    <div class="modal-btns text-right">
+                        <div id="close-btn" class="btn btn-default" ng-click="closeModal()">
+                            <img src="images/fb_no.png">Don't publish my site</div>
+                        <div id="yes-btn" class="btn btn-success" ng-click="saveAndMoveNext()">
+                            <img src="images/fb_yes.png">OK! Publish my site</div>
+                    </div>
+                </div>
+                <!-- Footer -->
+                <div class="modal-footer ng-scope">
+                    <div class="pull-left">
+                        <img class="footer-logo" src="images/footer_logo.png">
+                    </div>
+                    <div class="footer-text pull-left">
+                       <p><strong>otonomic</strong> will not use your personal Facebook data under any circumstances without your permission. We just need to confirm you own the page.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+$('#link_welcome_modal').on('click', function() {
+	$('#welcomeModal').modal('show');
+});
+$('#link_reviews_modal').on('click', function() {
+	$('#reviewsModal').modal('show');
+});
+$('#link_publish_modal').on('click', function() {
+    $('#publishModal').modal('show');
+});
+$('#link_fb_cancel_modal').on('click', function() {
+    $('#fbCancelModal').modal('show');
+});
+$('#link_fb_manage_pages_cancel_modal').on('click', function() {
+    $('#fbManagePagesModal').modal('show');
+});
+
+$('#fbManagePagesModal').modal('show');
+</script>
+
+</body>
+</html>
