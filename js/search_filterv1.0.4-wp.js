@@ -254,7 +254,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
         url: 'https://graph.facebook.com/search',
         context: document.body,
         callbackParameter: "callback",
-        data: {'q': value, type: 'page', fields: 'id,name,category,category_list,cover,likes,is_community_page', limit: 9, access_token: '389314351133865|O4FgcprDMY0k6rxRUO-KOkWuVoU'},
+        data: {'q': value, type: 'page', fields: 'id,name,category,category_list,cover,likes,phone,is_community_page', limit: 9, access_token: '389314351133865|O4FgcprDMY0k6rxRUO-KOkWuVoU'},
         success: function (json, textStatus, xOptions) {
             found_only_result_url = '';
             found_result = json.data.length;
@@ -271,6 +271,8 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
                 query_tags.page_name = val.name;
                 if(typeof(val.category) !== 'undefined')         { query_tags.category = val.category; }
                 if(typeof(val.category_list) !== 'undefined')    { query_tags.category_list = val.category_list; }
+                if(typeof(val.email) === 'undefined')         { val.email = ""; }
+                if(typeof(val.phone) === 'undefined')         { val.phone = ""; }
                 current_site_creation_link = ot_loading_page_url + '?' + $.param(query_tags);
 
                 if (found_result == 1) {
@@ -284,7 +286,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
                     var simage = 'http://graph.facebook.com/' + val.id + '/picture?height=' + SEARCH_PICTURE_SIZE +'&width=' + SEARCH_PICTURE_SIZE;
                 }
 
-                items.push('<a class="media search-results-item" data-attr="'+$(InputField).attr('data-attr')+'" href="' + current_site_creation_link + '" title="Click to view site" data-facebook-page-id="'+val.id+'" data-facebook-page-name="'+val.name+'" data-result-number="' + ind + '" >' +
+                items.push('<a class="media search-results-item" data-attr="'+$(InputField).attr('data-attr')+'" href="' + current_site_creation_link + '" title="Click to view site" data-facebook-page-id="'+val.id+'" data-facebook-page-name="'+val.name+'" data-facebook-page-email="'+val.email+'" data-facebook-page-phone="'+val.phone+'" data-result-number="' + ind + '" >' +
                     '<div >' +
                     '<div class="pull-left fanpage">' +
                     '<img class="media-object" src="'+ simage +'">' +

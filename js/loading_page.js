@@ -931,22 +931,19 @@ function get_updated_contact_fields()
 		'address': $('address').val(),
 		'email': $('email').val()
 	}
-	if( window.parsed_page_data.phone !=  $('#phone').val())
-	{
+	if( window.parsed_page_data.phone !=  $('#phone').val()) {
 		fields+='phone,';
 	}
-	if( window.parsed_page_data.email !=  $('#email').val())
-	{
+	if( window.parsed_page_data.email !=  $('#email').val()) {
 		fields+='email,';
 	}
-	if( window.parsed_page_data.address !=  $('#address').val())
-	{
+	if( window.parsed_page_data.address !=  $('#address').val()) {
 		fields+='address,';
 	}
 	return fields;
 }
-function get_empty_contact_fields()
-{
+
+function get_empty_contact_fields() {
 	var fields = '';
 	window.parsed_page_data = {
 		'phone': $('phone').val(),

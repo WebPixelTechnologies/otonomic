@@ -1,7 +1,6 @@
 var facebook_site_created_pixel_id = '6008636103630';
 var piwik_site_id = 1;
-if(window.location.hostname.replace('www.', '') == 'verisites.com')
-{
+if(window.location.hostname.replace('www.', '') == 'verisites.com') {
 	piwik_site_id = 2;
 }
 
@@ -116,13 +115,10 @@ function track_event(category, action, label, value){
 }
 function trackOtonomic( submit_options )
 {
-	if( is_localhost() ) 
-	{
-		
+	if( is_localhost() ) {	
 		otonomic_db_analytics_url = "http://p2s.test/sites/track_click";
-	} 
-	else 
-	{
+	
+	} else {
 		otonomic_db_analytics_url = "http://builder.otonomic.com/sites/track_click";
 	}
 	$.ajax({
