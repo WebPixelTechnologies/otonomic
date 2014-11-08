@@ -1,6 +1,30 @@
 <?php
 // define('FB_APP_ID', '214447575282892');
-define('FB_APP_ID', '160571960685147');
+switch($_SERVER['HTTP_HOST']) {
+    case "localhost":
+        $fb_app_id = '160571960685147';
+        break;
+
+    case "otonomic.test":
+        $fb_app_id = '286934271328156';
+        break;
+
+    case "otonomic.com":
+        define('FB_APP_ID', '');
+        break;
+}
+
+if(isset($_GET['FB_APP_ID'])) {
+    $fb_app_id = $_GET['FB_APP_ID'];
+}
+
+define('FB_APP_ID', $fb_app_id);
+
+
+/*
+ * This code gets a list of URLs of Facebook fan pages, and queries them to extract relevant stats, e.g. # of posts, # of photos, posting frequency etc.
+ * The code makes Javascript Ajax calls for each facebook page, and outputs the results as a text string that can then be copied and read as a CSV file.
+ */
 ?>
 
 <html>
@@ -16,14 +40,20 @@ define('FB_APP_ID', '160571960685147');
 
 <form>
     <textarea id="fb_page_ids" name="fb_page_ids"rows="15" cols="140">
-        https://www.facebook.com/ManoloMendezDressage
-        https://www.facebook.com/aqha1
-    </textarea>
+https://www.facebook.com/ManoloMendezDressage
+https://www.facebook.com/aqha1</textarea>
     <br />
     <input type="button" name="getdata" id="getdata" value="Get Information" />
+    <div id="queries-left-div"></div>
+    <div id="queries-errors-div"></div>
+    <div id="queries-left-list-div"></div>
 </form>
 
 <script type="text/javascript">
+    var query_status;
+    var keywords;
+    var queries_left;
+    var queries_errors = 0;
 
     function download_file(data_array) {
         // var fname = "IJGResults";
@@ -61,6 +91,13 @@ define('FB_APP_ID', '160571960685147');
 
     function get_total_posts(response) {
         if(x = response.posts) {
+            return x.data.length;
+        }
+        return 0;
+    }
+
+    function get_total_notes(response) {
+        if(x = response.notes) {
             return x.data.length;
         }
         return 0;
@@ -222,6 +259,8 @@ define('FB_APP_ID', '160571960685147');
         stats.total_likes = 0;
         stats.total_shares = 0;
         stats.total_comments = 0;
+
+        stats.post_type['note'] = init_empty_stat('note');
         stats.post_type['status'] = init_empty_stat('status');
         stats.post_type['photo'] = init_empty_stat('photo');
         stats.post_type['link'] = init_empty_stat('link');
@@ -231,15 +270,19 @@ define('FB_APP_ID', '160571960685147');
         stats.total_albums = get_total_albums(response);
         stats.total_pictures = get_total_pictures(response);
         stats.total_posts = get_total_posts(response);
+        stats.total_notes = get_total_notes(response);
+
         stats.last_post_date = get_last_post_date(response);
 
         if(stats.total_posts > 0)
         {
             posts = response.posts.data;
 
-            var first_post_time = new Date(posts[0].created_time);
-            var last_post_time = new Date(posts[posts.length-1].created_time);
-            stats.posting_period_in_weeks = diff_weeks(first_post_time, last_post_time);
+            var last_post_time = new Date(posts[0].created_time);
+            var first_post_time = new Date(posts[posts.length-1].created_time);
+            stats.posting_period_in_days = diff_days(last_post_time, first_post_time);
+            stats.posting_period_in_weeks = diff_weeks(last_post_time, first_post_time);
+            stats.last_post_time_days_ago = diff_days(new Date(), first_post_time);
 
             for(var i = 0; i<stats.total_posts; i++)
             {
@@ -266,50 +309,138 @@ define('FB_APP_ID', '160571960685147');
         stats.post_type['photo'] = calc_post_type_stats(stats.post_type['photo'], stats.posting_period_in_weeks);
         stats.post_type['link'] = calc_post_type_stats(stats.post_type['link'], stats.posting_period_in_weeks);
 
+        if(stats.total_notes > 0)
+        {
+            notes = response.notes.data;
+
+            var first_note_time = new Date(notes[0].created_time);
+            var last_note_time = new Date(notes[notes.length-1].created_time);
+            stats.notes_posting_period_in_days = diff_days(first_note_time, last_note_time);
+            stats.notes_posting_period_in_weeks = diff_weeks(first_note_time, last_note_time);
+
+            for(var i = 0; i<stats.total_notes; i++)
+            {
+                post = parse_post(notes[i]);
+
+                stats.total_likes += post.likes;
+                stats.post_type["note"].total_likes += post.likes;
+
+                stats.total_shares += post.shares;
+                stats.post_type["note"].total_shares += post.shares;
+
+                stats.total_comments += post.comments;
+                stats.post_type["note"].total_comments += post.comments;
+
+                stats.post_type["note"].count += 1;
+            }
+        }
+        stats.post_type['note'] = calc_post_type_stats(stats.post_type['note'], stats.notes_posting_period_in_weeks);
+
         return stats;
+    }
+
+    function csvencode(str) {
+        return '"' + str + '"';
     }
 
     function get_post_type_stats_array(data) {
         return output = [data.count, data.posts_per_week.toFixed(2), data.likes_per_post.toFixed(2), data.shares_per_post.toFixed(2), data.comments_per_post.toFixed(2)];
     }
 
-    function get_and_parse_facebook_data(page_graph_url) {
+    function get_and_parse_facebook_data(page_graph_url, index) {
+
         page_graph_url = page_graph_url.replace('http:', 'https:');
-        FB.api(page_graph_url+"?fields=name,category,category_list,likes,talking_about_count,link,location,albums.fields(name,count, photos.fields(name, picture)),posts.limit(100).fields(id,message,created_time,likes,comments,shares,type),videos,events",
+
+        (function(index2) {
+            FB.api(page_graph_url+"?fields=name,category,category_list,likes,is_community_page,talking_about_count,link,phone,location,parent_page,website,albums.fields(name,count, photos.fields(name, picture)),posts.limit(100).fields(id,message,created_time,likes,comments,shares,type),videos,events,notes.fields(id,subject,created_time)",
                 'GET',
                 { access_token: access_token_active },
-                function(response)
-                {
+
+                function(response) {
                     var currDate = new Date();
                     var today = currDate.getFullYear() +'/' + (currDate.getMonth()+1) + '/' + currDate.getDate();
                     var category_list;
                     var category_list_names;
 
-                    if(response.id) {
+                    if(response.id && !response.is_community_page) {
                         stats = calc_page_stats(response);
                         category_list = JSON.stringify(response.category_list);
-                        category_list_names = '"' + response.category_list.map(function(elem) { return elem.name; }).join(" ||| ") + '"';
+                        if(typeof(response.category_list) !== 'undefined') {
+                            category_list_names = csvencode(response.category_list.map(function(elem) { return elem.name; }).join(" ||| "));
+                        } else {
+                            category_list_names = '';
+                        }
                         if(typeof(category_list)!=='undefined') {
-                            category_list = '"' + category_list.replace(/"/g, "'") + '"';
+                            category_list = csvencode(category_list.replace(/"/g, "'"));
                         }
 
-                        output = [today, '"'+response.name+'"', response.id, response.category, category_list, category_list_names, response.likes, response.talking_about_count, response.link];
-                        output = output.concat(stats.total_albums, stats.total_pictures, stats.total_events, stats.total_videos, stats.total_posts, stats.posting_period_in_weeks, stats.last_post_date);
+                        temp_location = { country:"", city:"", street:""};
+                        if(typeof(response.location)!=="undefined" && typeof(response.location.country)!=="undefined") {
+                            temp_location.country = csvencode(response.location.country);
+                        }
+                        if(typeof(response.location)!=="undefined" && typeof(response.location.city)!=="undefined") {
+                            temp_location.city = csvencode(response.location.city);
+                        }
+                        if(typeof(response.location)!=="undefined" && typeof(response.location.street)!=="undefined") {
+                            temp_location.street = csvencode(response.location.street);
+                        }
+                        response.location = temp_location;
 
-                        output = output.concat(response.location.country,response.location.city,response.location.street);
+                        if(typeof(response.parent_page)!=='undefined') {
+                            response.parent_page = response.parent_page.id;
+                        } else {
+                            response.parent_page = "";
+                        }
+                        if(typeof(response.website)==='undefined') {
+                            response.website = "";
+                        }
+                        response.website = response.website.replace("<>", "").trim();
 
+                        output = [today, csvencode(keywords[index2]), response.category, category_list_names, csvencode(response.website), csvencode(response.name), response.id, category_list, response.likes, response.talking_about_count, response.parent_page, response.link];
+                        output = output.concat(stats.total_posts, stats.total_notes, stats.total_albums, stats.total_pictures, stats.total_events, stats.total_videos, stats.posting_period_in_days, stats.last_post_date, stats.last_post_time_days_ago);
+
+                        output = output.concat(response.phone, response.location.country, response.location.city, response.location.street);
+
+                        output = output.concat(get_post_type_stats_array(stats.post_type['note']));
                         output = output.concat(get_post_type_stats_array(stats.post_type['status']));
                         output = output.concat(get_post_type_stats_array(stats.post_type['photo']));
                         output = output.concat(get_post_type_stats_array(stats.post_type['link']));
 
                         write_output(output);
+
+                        query_status[index2] = 2;
+
+                    } else {
+                        query_status[index2] = 3;
+
+                        if(typeof(response.error)!=="undefined" && typeof(response.error.code)!=="undefined" && response.error.code>600) {
+                            alert(response.error.message);
+                        }
+
+                    }
+
+                    queries_left--;
+                    $('#queries-left-div').html(queries_left + ' queries left.');
+
+                    if(typeof(query_status)!=="undefined") {
+                        $('#queries-left-list-div').html(
+                            query_status.map(function(elem, idx) {
+                                return (elem<2) ? idx : null;
+                            }).join(', ')
+                        );
+                    } else {
+                        queries_errors++;
+                        $('#queries-errors-div').html(queries_errors + " errors.");
+                        console.log('Error setting query status for element #'+index2);
+                        console.log(response);
                     }
                 }
-        );
+            );
+        }) (index);
     }
 
     function write_output(data) {
-        console.log(data);
+        // console.log(data);
         appendtodiv(data+"\n");
     }
 
@@ -325,48 +456,52 @@ define('FB_APP_ID', '160571960685147');
 
     function run(j) {
         setTimeout(function() { run_inner(j); },
-                j*300);
+            Math.floor(j/590)*600*1000 + j*100); // Limit rate according to FB regulations
     }
 
     function run_inner(j) {
-        page_graph_url = get_graph_url(res[j]);
-        get_and_parse_facebook_data(page_graph_url);
+        record = res[j].split(",");
+        keywords[j] = record[0];
+        page_graph_url = get_graph_url(record[1]);
+        query_status[j] = 1;
+        get_and_parse_facebook_data(page_graph_url, j);
     }
 
     $(document).on('click',"#getdata",function(){
         var str = $("#fb_page_ids").val();
         res = str.split("\n");
 
-        FB.login(function(response){
-            if (response.authResponse)
-            {
+        FB.login(function(response) {
+            if (response.authResponse) {
                 var access_token =   FB.getAuthResponse()['accessToken'];
                 access_token_active =  access_token;
 
-                if(res.length>0)
-                {
+                if(res.length > 0) {
+                    query_status = Array.apply(null, Array(res.length)).map(Number.prototype.valueOf,0);
+                    keywords = Array.apply(null, Array(res.length)).map(String.prototype.valueOf,"");
+                    queries_left = res.length;
+                    $('#queries-left-div').html(queries_left + ' queries left.');
+
                     $("#append_div").empty();
                     $("#append_div_all").empty();
 
-                    var fields = 'Report_Date,Name,Facebook_id,Category,Category List,Category List Names,Fans,Talking_About_It,Link,Total_Albums,Total_Pictures,Total_Events,Total_Videos,Total_Posts,Posting period [weeks],Last Post Date,'
-                            + 'Country,City,Street,'
+                    var fields = 'Report_Date,Keyword,Category,Category List Names,Website,Name,Facebook_id,Category List,Fans,Talking_About_It,Link,Total_Posts,Total_Notes,Total_Albums,Total_Pictures,Total_Events,Total_Videos,Posting period [days],Last Post Date,Days since last post,'
+                            + 'Phone,Country,City,Street,'
+                            + 'Total_Notes,Notes_weekly_posts,[incorrect] Notes_likes/post,[incorrect] Notes_shares/post,[incorrect] Notes_comments/post,'
                             + 'Total_Posts_Status,Status_weekly_posts,Status_likes/post,Status_shares/post,Status_comments/post,'
                             + 'Total_Posts_Photo,Photo_weekly_posts,Photo_likes/post,Photo_shares/post,Photo_comments/post,'
-                            + 'Total_Posts_Status,Link_weekly_posts,Link_likes/post,Link_shares/post,Link_comments/post';
+                            + 'Total_Posts_Link,Link_weekly_posts,Link_likes/post,Link_shares/post,Link_comments/post';
                     appendtodiv(fields);
 
-                    for(j = 0; j<res.length; j++)
-                    {
+                    for(j = 0; j<res.length; j++) {
                         run(j);
                     }
-                }
-                else
-                {
+
+                } else {
                     alert('Please enter page id');
                 }
-            }
-            else
-            {
+
+            } else {
                 console.log('User cancelled login or did not fully authorize.');
             }
         });

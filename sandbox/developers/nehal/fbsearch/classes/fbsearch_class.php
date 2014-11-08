@@ -273,7 +273,7 @@ Class FbSearch {
         'Facebook ID',
         'Facebook Url',
         'Facebook Page Link',
-        'P2S Website'
+        'Oto Website'
     );
 
     var $csv_file;
@@ -353,16 +353,19 @@ Class FbSearch {
 
 
     public function initialize(){
-        $this->clearDataFolder();
+        // $this->clearDataFolder();
     }
 
-    public function createBatchFiles($keywords){
+    public function createBatchFiles($keywords, $filename = null){
         try{
             foreach($keywords as $key => $keyword) {
                 if(!trim($keyword)) { continue;}
                 $result = $this->return_keyword_results($keyword);
 
-                $filename = $this->generateCSVFile($key, $keyword);
+                if(!$filename) {
+                    $filename = $this->generateCSVFile($key, $keyword);
+                }
+
                 foreach($result as $record) {
                     $this->writeToFile($filename, $record);
                 }
@@ -372,11 +375,12 @@ Class FbSearch {
         }
     }
 
-    public function createBatchFile($keyword, $synonym){
+    public function createBatchFile($keyword, $synonym, $filename = null){
         try{
 
-            $filename = $this->generateCSVFile($keyword, $synonym);
-            //return array('file' => $filename, 'data_count' => 0);
+            if(!$filename) {
+                $filename = $this->generateCSVFile($keyword, $synonym);
+            }
 
             $result = $this->return_keyword_results($synonym);
 
@@ -386,8 +390,8 @@ Class FbSearch {
 
             return array('file' => $filename, 'data_count' => count($result));
 
-        }catch (Exception $ex){
-            echo $ex->getMessage();die();
+        } catch (Exception $ex) {
+            echo $ex->getMessage(); die();
         }
     }
 
@@ -481,6 +485,7 @@ Class FbSearch {
             $temp->city = '';
             $data->location = $temp;
         }
+
         if(empty($data->likes)) {
             $data->likes = '';
         }
@@ -499,11 +504,12 @@ Class FbSearch {
         if(empty($data->website)) {
             $data->website = '';
         }
+        $data->parent_page = empty($data->parent_page) ? "" : $data->parent_page->id;
 
         return array(
             $data->name,
             $data->phone,
-            $data->website,
+            makeclickable($data->website),
             $data->location->country,
             $this->get_country_phone_prefix($data->location->country),
             $data->location->city,
@@ -514,7 +520,9 @@ Class FbSearch {
             $data->id,
             "http://www.facebook.com/".$data->id,
             '=HYPERLINK("http://www.facebook.com/'.$data->id.'/?sk=info", "'.$data->id.'")',
-            '=HYPERLINK("http://builder.page2site.com/sites/add/fbid:'.$data->id.'", "Create")'
+            '=HYPERLINK("http://wp.otonomic.com/migration/index?page_id='.$data->id.'", "Create")',
+            isset($data->is_community_page) ? $data->is_community_page : -1,
+            $data->parent_page
         );
     }
 
@@ -526,7 +534,7 @@ Class FbSearch {
         $access_token = '389314351133865|O4FgcprDMY0k6rxRUO-KOkWuVoU';
         $limit = 100;
         $url = 'https://graph.facebook.com/search/?q='.urlencode($keyword).'&type=page&access_token='.$access_token.
-            '&fields=id,name,username,category,category_list,likes,website,phone,location,talking_about_count&limit='.$limit;
+            '&fields=id,name,username,category,category_list,likes,website,phone,location,talking_about_count,is_community_page,parent_page&limit='.$limit;
         $response = json_decode(file_get_contents($url));
         $result = $response->data;
 
@@ -535,9 +543,13 @@ Class FbSearch {
             $url = $response->paging->next;
             $response = json_decode(file_get_contents($url));
             $result = array_merge($result, $response->data);
-
         }
         return $result;
     }
+}
+
+function makeclickable($str, $link_text = null) {
+    if(!$link_text) { $link_text = $str; }
+    return '=HYPERLINK("'.$str.'", "'.$link_text.'")';
 }
 ?>

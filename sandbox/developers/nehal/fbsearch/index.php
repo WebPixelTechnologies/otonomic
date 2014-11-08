@@ -5,6 +5,10 @@
     <body>
         <table width="600">
             <form action="word_lists.php" method="post" enctype="multipart/form-data">
+                <tr>
+                    <td>Filename:</td>
+                    <td><input type="text" name="filename" value=""/></td>
+                </tr>
 
                 <tr>
                     <td width="20%">Select file</td>

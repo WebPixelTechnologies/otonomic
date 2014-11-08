@@ -35,6 +35,7 @@ if ($_FILES["file"]["error"] > 0) {
         table { border-collapse:collapse;}
         table, th, td{ border: 1px solid black;}
         td{padding: 0 10px}
+        tr:hover {background-color: #CFF;}
     </style>
 </head>
 
@@ -173,6 +174,11 @@ if ($_FILES["file"]["error"] > 0) {
                     $(".loader").hide();
                     return false;
                 }
+
+                <?php if(isset($_REQUEST['filename'])): ?>
+                    data.filename = "<?= $_REQUEST['filename']?>";
+                <?php endif; ?>
+
                 $.ajax({
                     url : 'get_data.php',
                     data : data,

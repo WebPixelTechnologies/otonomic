@@ -15,15 +15,17 @@ if(isset($_POST['action']) && $_POST['action'] == 'zip'){
     echo json_encode(array('file' => $destination));exit;
 
 } else {
+    $filename = isset($_POST['filename']) ? $_POST['filename'] : null;
 
     if(isset($_POST['index']) && $_POST['index'] == 0){
         $fbs->initialize();
     }
+
     if(isset($_POST['keyword']) && isset($_POST['synonym'])):
         $keyword = $_POST['keyword'];
         $synonym = $_POST['synonym'];
 
-        $result = $fbs->createBatchFile($keyword, $synonym);
+        $result = $fbs->createBatchFile($keyword, $synonym, $filename);
 
         echo json_encode($result);
         exit;
