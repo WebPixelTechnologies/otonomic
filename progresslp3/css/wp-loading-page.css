@@ -118,12 +118,19 @@ textarea {
 
 }
 #intro .logo{
-  margin-top: 20px;
+  position: absolute;
+  top: 18px;
+  left: 40px;
 }
 #intro h1.title{
 	margin-top: 70px;
 	font-size: 36px;
 	font-weight: bold;
+}
+#intro h2{
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: normal;
 }
 #intro h4 {
   margin-bottom: 40px;
@@ -155,25 +162,31 @@ textarea {
 	/*min-height: calc(100% - 89px);*/
 }
 .content-panel h1.title{
-	margin-top: 70px;
-  margin-bottom: 10px;
-  font-size: 30px;
+  margin-top: 70px;
+  margin-bottom: 24px;
+  font-size: 40px;
   font-weight: bold;
-  line-height: 42px;
+  line-height: 52px;
 }
 .content-panel h3{
-	margin-top: 30px;
-  color: #f54500;
+	margin: 20px 0;
   font-size: 18px;
 	font-weight: bold;
+  line-height: 28px;
 }
 .content-panel p{
-	font-size: 20px;
+	font-size: 24px;
 	font-weight: lighter;
 	margin-bottom: 30px;
 }
+
+.content-panel .btn-p {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: lighter;
+}
 .content-panel .stage-img {
-  margin: 40px 0;
+  margin: 0 0 40px 0;
 }
 
 /* STAGE-1
@@ -185,7 +198,6 @@ textarea {
 	height: 100%;
 }
 #stage-1 .content-panel{
-	padding-right: 20px;
 	background-color: #f5ece6;
 }
 #stage-1 img.oto-gif{
@@ -194,6 +206,7 @@ textarea {
 #stage-1 .bg-image img{
 	float: left;
 }
+
 
 /* STAGE-2
 ----------------------------------*/
@@ -247,7 +260,6 @@ textarea {
 	background-color: #f5ece6;
 }
 #stage-4 h1.title{
-  margin-bottom: 40px;
 	color: #3d3531;
 }
 #stage-4 .bg-image img{
@@ -279,9 +291,16 @@ textarea {
 #congratz h1.congratz-title{
   margin-top: 0;
 	margin-bottom: 40px;
-  padding-top: 40px;
+  padding-top: 0;
   font-size: 36px;
   font-weight: bold;
+  line-height: 50px;
+}
+#congratz p.site-name {
+  padding-top: 55px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 #congratz #counter {
   color: #f54500;
@@ -313,8 +332,11 @@ textarea {
 /* Custom button
 -------------------------------------------------- */
 .btn {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: normal;
+}
+.btn .glyphicon:before {
+  font-size: 16px;
 }
 /* Override base .btn styles */
 /* Apply text and background changes to three key states: default, hover, and active (click). */
@@ -477,6 +499,7 @@ textarea {
     color:    #999;
 }
 h3#oto-web-url {
+    font-weight: normal;
     text-transform: lowercase;
 }
 
@@ -821,7 +844,7 @@ h3#oto-web-url {
     .content-panel .stage-img {
       display: block;
       margin: 20px auto;
-      max-width: 80%;
+      max-width: 70%;
     }
     /* Intro
     --------------------------------*/
@@ -875,6 +898,32 @@ h3#oto-web-url {
 
   /* Extra Small Devices, Phones */ 
   @media only screen and (max-width : 480px) {
+    #intro .logo {
+      position: static;
+      margin-top: 10px;
+
+    }
+    #intro h1.title {
+      margin-top: 50px;
+    }
+    #congratz p.site-name {
+      padding-top: 70px;
+      font-size: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    #congratz h1.congratz-title {
+      margin-top: 10px;
+      margin-bottom: 28px;
+      padding-top: 0;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 30px;
+    }
+    #congratz .tos {
+      font-size: 14px;
+      line-height: 16px;
+    }
 
   }
   /* Custom, iPhone Retina */ 
