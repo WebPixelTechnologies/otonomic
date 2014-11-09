@@ -106,7 +106,7 @@ if (is_localhost()) {
 
 		// CountDown
 		var sec = 7;
-		/*var timer = setInterval(function() { 
+		var timer = setInterval(function() { 
 			if (sec > 1) {
 				$('#congratz #counter').text(--sec+' seconds');
 			} else {
@@ -119,9 +119,9 @@ if (is_localhost()) {
 				    clearInterval(timer);
 				} 
 			}
-		}, 1000);*/
+		}, 1000);
 		// redirect
-		//window.location.replace(window.site_url);
+		window.location.replace(window.site_url);
 	}
 
 
