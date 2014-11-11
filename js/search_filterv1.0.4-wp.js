@@ -4,7 +4,7 @@ var p2s_site_url = 'http://builder.otonomic.com/';
 var p2s_site_creation_base_url = 'http://wp.otonomic.com/migration/';
 
 var ot_wp_site_creation_url = "http://wp.otonomic.com/migration/index.php?theme=parallax";
-var ot_loading_page_url     = "/progresslp2";
+var ot_loading_page_url     = "/progresslp3";
 if(typeof (query_tags) == 'undefined') {
     query_tags = {};
 }

@@ -8,6 +8,7 @@ if (is_localhost()) {
 
 (function ($, window, undefined) {
 
+	window.do_redirect = 0;
 	var page_id = getParameterByName('page_id');
 	var page_name = getParameterByName('page_name');
     var category = getParameterByName('category');
@@ -120,8 +121,8 @@ if (is_localhost()) {
 				} 
 			}
 		}, 1000);
-		// redirect
-		window.location.replace(window.site_url);
+		window.do_redirect = 1;
+		redirect_to_website();
 	}
 
 
@@ -161,8 +162,14 @@ if (is_localhost()) {
 		var time_difff = cdate - store_load_timestamp;
 		
 		track_event('Loading Page', 'Store No', '', time_difff);
-		
-		send_dont_need_store();
+		if (window.is_blog_ready == 1)
+		{
+			send_dont_need_store();
+		}
+		else
+		{
+			window.i_dont_need_store = 1;
+		}
 
 		// Switch stage
 		switchToCongratz();
@@ -187,12 +194,12 @@ function callback(data) {
 	if (data.status == 'fail') {
 		window.location = data.site_url;
 		track_event('Account Manage', 'Site Exists', data.message);
-        track_virtual_pageview('site_exists');
+        //track_virtual_pageview('site_exists');
 
 	} else {
 		var page_type = window.page_type || 'Fan Page';
 		track_event('Account Manage', 'Create Success', page_type);
-        track_virtual_pageview('site_created');
+        //track_virtual_pageview('site_created');
 	}
 
 	// Site created, facebook fixel
@@ -207,6 +214,8 @@ function callback(data) {
 	jQuery('#oto-web-url').html('<a href="'+data.redirect+'">'+data.site_url+'</a>');
 
 	blog_created();
+	
+	redirect_to_website();
 }
 
 function getParameterByName(name) {
@@ -280,6 +289,7 @@ function createWebsiteUsingAjax(page_id) {
 }
 
 function blog_created() {
+	//alert('blog created');
 	if (window.is_contact_saved == 1) {
 		send_contact_data();
 	}
@@ -287,13 +297,26 @@ function blog_created() {
 	if (window.i_need_store == 1) {
 		send_need_store();
 	}
+	else if(window.i_dont_need_store == 1)
+	{
+		send_dont_need_store();
+	}
 	if (window.set_site_category_pending == 1) {
 		set_site_category();
 	}
-
 	return;
 }
-
+function redirect_to_website()
+{
+	if(window.do_redirect == 1 && window.is_blog_ready == 1)
+	{
+		//alert('redirect scheduled');
+		window.setTimeout(function (e){
+			//alert('redirecting to site...');
+			window.location.replace(window.site_url);
+		}, 11000);
+	}
+}
 function contact_form_submited() {
 	window.is_contact_saved = 1;
 
@@ -387,6 +410,7 @@ function send_need_store() {
 	track_event('Loading Page', 'Online Store', 'Yes');
 	request = $.ajax({
 		type: "POST",
+		async: "false",
 		url: window.site_url + '/?json=store.create',
 		success: function (data, status, jqxhr) {
 			if (jqxhr.status == 307) {
@@ -412,6 +436,7 @@ function send_dont_need_store() {
 	track_event('Loading Page', 'Online Store', 'No');
 	request = $.ajax({
 		type: "POST",
+		async: "false",
 		url: window.site_url + '/?json=store.hide',
 		success: function (data, status, jqxhr) {
 			if (jqxhr.status == 307) {
