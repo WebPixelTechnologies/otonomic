@@ -87,11 +87,11 @@ if (is_localhost()) {
 
 	// Social connect buttons
 	////////////////////////////////////////
-	$('.social-btn').click(function(event){
-		event.preventDefault();
-		$(this).addClass('active');
-		$(this).append('<img class="social-check" src="images/social-check.png">');
-	});
+//	$('.social-btn').click(function(event){
+//		event.preventDefault();
+//		$(this).addClass('active');
+//		$(this).append('<img class="social-check" src="images/social-check.png">');
+//	});
 
 	// #see-my-website-btn Click
 	////////////////////////////////////////
