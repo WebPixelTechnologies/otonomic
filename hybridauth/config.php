@@ -11,7 +11,7 @@
 
 return 
 	array(
-		"base_url" => "http://otonomic.test/hybridauth/index.php", 
+		"base_url" => "http://".$_SERVER['HTTP_HOST']."/hybridauth/index.php", 
 
 		"providers" => array ( 
 			// openid providers
@@ -35,7 +35,7 @@ return
 
 			"Facebook" => array ( 
 				"enabled" => true,
-				"keys"    => array ( "id" => "922540841107442", "secret" => "96f9a017d277fd2b7442f5f42f2d7cb3" ),
+				"keys"    => array ( "id" => "286934271328156", "secret" => "55bf8f49cd5030ba6d6fecb50b896a77" ),
 				"trustForwarded" => false,
                                 "display" => 'popup'
 			),
@@ -62,7 +62,7 @@ return
 			),
                         "Instagram" => array(
                             "enabled" => true,
-                            "keys"    => array ( "id" => "", "secret" => "" )
+                            "keys"    => array ( "id" => "ef4ef97d5bda4b51b575e22b2d179d1a", "secret" => "3497f47d336a4704a5851eb11e688586" )
                         )
 		),
 
