@@ -61,11 +61,11 @@
           <h1 class="title">Automatic updates, faster than a buzzcut.</h1>
           <p>Otonomic uses your existing Facebook page to build your website.</p>
           <p>You can instantly integrate other social media networks to your site by clicking below:</p>
-          <div>
-            <a class="js-connect-facebook social-btn facebook-btn" href="#"><img src="images/facebook-icon.svg"></a>
-            <a class="js-connect-twitter social-btn twitter-btn" href="#"><img src="images/twitter-icon.svg"></a>
-            <a class="js-connect-instagram social-btn instagram-btn" href="#"><img src="images/instagram-icon.svg"></a>
-            <a class="js-connect-tumbler social-btn yelp-btn" href="#"><img src="images/yelp-icon.svg"></a>
+          <div id="social_connect_hybrid">
+            <a id="authorize_Facebook" class="js-connect-facebook social-btn facebook-btn" href="#"><img src="images/facebook-icon.svg"></a>
+            <a id="authorize_Twitter" class="js-connect-twitter social-btn twitter-btn" href="#"><img src="images/twitter-icon.svg"></a>
+            <a id="authorize_Instagram" class="js-connect-instagram social-btn instagram-btn" href="#"><img src="images/instagram-icon.svg"></a>
+            <a id="authorize_LinkedIn" class="js-connect-tumbler social-btn yelp-btn" href="#"><img src="images/yelp-icon.svg"></a>
           </div>
           <a href="#" onclick="return false;" class="btn btn-ttc-orange pull-right js-stage1-next">
             Continue
@@ -136,5 +136,20 @@
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="/js/loading_page4.js"></script>
+    <script type="text/javascript">
+    var base_url = 'http://otonomic.test/hybridauth/twitter.php';
+        $(document).ready(function(){
+            $('#social_connect_hybrid a').click(function(){
+                var type = $(this).attr('id').split('_');
+                var url = base_url+"?social="+type[1];
+                window.open(
+                    url, 
+                    "hybridauth_social_sing_on", 
+                    "location=0,status=0,scrollbars=1,width=800,height=500"
+                );
+                return false;
+            })
+        })
+    </script>
   </body>
 </html>
