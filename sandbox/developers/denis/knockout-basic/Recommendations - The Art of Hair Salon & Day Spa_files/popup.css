@@ -1,0 +1,74 @@
+/* share popup */
+#colorbox.share-popup #cboxWrapper {
+	background: rgba(240, 241, 239, 0.95);
+}
+
+#colorbox.share-popup #cboxLoadedContent,
+#colorbox.share-popup #cboxContent,
+#colorbox.share-popup .cboxIframe,
+#colorbox.appmarket-popup #cboxLoadedContent,
+#colorbox.appmarket-popup #cboxContent,
+#colorbox.appmarket-popup .cboxIframe,
+
+#colorbox.deletesite-confirmation-popup #cboxLoadedContent,
+#colorbox.deletesite-confirmation-popup #cboxContent,
+#colorbox.deletesite-confirmation-popup .cboxIframe,
+
+#colorbox.fbpopup #cboxLoadedContent,
+#colorbox.fbpopup #cboxContent,
+#colorbox.fbpopup .cboxIframe
+{
+	background: transparent;
+}
+#colorbox.appmarket-popup #cboxLoadedContent,
+#cboxOverlay.appmarket-popup{
+	background: #f3ede9;
+}
+#colorbox.appmarket-popup #cboxContent,
+#colorbox.deletesite-confirmation-popup #cboxContent,
+#colorbox.fbpopup #cboxContent{
+	margin:0;
+}
+#colorbox.share-popup #cboxLoadingOverlay,
+#colorbox.share-popup #cboxLoadingGraphic /*,
+#colorbox.appmarket-popup #cboxLoadingOverlay,
+#colorbox.appmarket-popup #cboxLoadingGraphic*/
+{
+	display: none;
+}
+#colorbox.share-popup #cboxClose,
+#colorbox.appmarket-popup #cboxClose
+{
+	outline: none;
+	background: url(images/close_btn.png) no-repeat 0 0;
+}
+#colorbox.appmarket-popup #cboxClose,
+#colorbox.fbpopup #cboxClose
+{
+	top: 23px;
+	right: 15px;
+	outline: none;
+	background: url(../images/close_btn.png) no-repeat 0 0;
+}
+
+
+
+#fancybox-wrap {
+    z-index: 100000 !important;
+}
+#colorbox.deletesite-confirmation-popup #cboxContent
+{
+	background: #1f1c1a;
+	background: rgba(31, 28, 26, 0.95);
+}
+#cboxOverlay.deletesite-confirmation-popup {
+	background: #1f1c1a;
+}
+
+#colorbox.deletesite-confirmation-popup #cboxClose {
+	top: 15px;
+	right: 15px;
+	outline: none;
+	background: url(../deletesite-popup/images/close_btn.png) no-repeat 0 0;
+	background-position: 0;
+}

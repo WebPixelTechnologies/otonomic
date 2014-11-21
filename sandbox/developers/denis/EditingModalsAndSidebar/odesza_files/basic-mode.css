@@ -1,0 +1,52 @@
+#wpadminbar .ab-top-menu > li:not(.otonomic-adminbar-item) {display:none;}
+
+#wpadminbar #wp-admin-bar-my-account {display:inline-block;}
+
+
+
+.wp-menu-separator,
+
+ul#adminmenu > li,
+ul#adminmenu li:after,
+/* ul#adminmenu li .wp-submenu, */
+#misc-publishing-actions,
+#minor-publishing-actions,
+#post-status-info,
+#delete-action,
+#submitdiv h3,
+
+#titlediv .inside,
+#wp-content-media-buttons,
+
+#section-categorydiv,
+
+#postbox-container-2,
+
+#postcustom,
+
+#authordiv
+{
+    display:none !important;
+}
+
+/* Now display only selected menus */
+ul#adminmenu li#toplevel_page_ot-fs-business-profile, ul#adminmenu li#toplevel_page_ot-fs-business-profile-ajax,
+ul#adminmenu li#toplevel_page_ot-fs-contact-details, ul#adminmenu li#toplevel_page_ot-fs-contact-details-ajax,
+ul#adminmenu li#toplevel_page_ot-fs-recommendations, ul#adminmenu li#toplevel_page_ot-fs-customer-reviews-ajax,
+ul#adminmenu li#toplevel_page_ot-fs-social-media, ul#adminmenu li#toplevel_page_ot-fs-social-media-ajax,
+ul#adminmenu li#toplevel_page_ot-fs-services,
+ul#adminmenu li#toplevel_page_ot-fs-store,
+ul#adminmenu li#toplevel_page_ot-fs-domain,
+ul#adminmenu li#toplevel_page_ot-fs-team,
+ul#adminmenu li#toplevel_page_ot-fs-manage-posts,
+ul#adminmenu li#toplevel_page_ot-fs-newsletter-registration,
+ul#adminmenu li#toplevel_page_themes,
+ul#adminmenu li#toplevel_page_post-new-post_type-page,
+ul#adminmenu li#toplevel_page_ot-fs-service,
+
+
+ul#adminmenu li#toplevel_page_ot-fs-manage-pages,
+#collapse-menu
+{
+    display: list-item !important;
+}

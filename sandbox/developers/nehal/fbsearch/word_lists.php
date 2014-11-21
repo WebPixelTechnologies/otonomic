@@ -1,4 +1,6 @@
 <?php
+ini_set('max_execution_time', 600000); //increase max_execution_time to 10 min if data set is very large
+
 if(!isset($_POST["submit"]) || !isset($_FILES["file"])) {
     header('location:index.php');exit;
 }
@@ -120,7 +122,7 @@ if ($_FILES["file"]["error"] > 0) {
 
                     var obj = new Object();
                     obj.index = $this.data('index');
-                    obj.synonym = $this.data('synonym');
+                    // obj.synonym = $this.data('synonym');
                     obj.keyword = $this.data('keyword');
 
                     ajaxes.push(obj);
@@ -129,7 +131,7 @@ if ($_FILES["file"]["error"] > 0) {
 
                 //console.log(ajaxes);
                 isPause = false;
-                getbetchFile();
+                setInterval(function() { getbetchFile(); }, 400);
                 $("#fetch_data").hide();
                 $("#pause").show().val("Pause");
 
@@ -174,25 +176,26 @@ if ($_FILES["file"]["error"] > 0) {
                     $(".loader").hide();
                     return false;
                 }
-
                 <?php if(isset($_REQUEST['filename'])): ?>
                     data.filename = "<?= $_REQUEST['filename']?>";
                 <?php endif; ?>
 
-                $.ajax({
-                    url : 'get_data.php',
-                    data : data,
-                    dataType: 'json',
-                    method : 'post',
-                    success:function(response){
-                        $("#status_"+current).html("<img src='img/success.png'>");
-                        $("#file_"+current).html(response.file);
-                        $("#records_"+current).html(response.data_count);
-                        $("#index_"+current).addClass('success');
-                        current++;
-                        getbetchFile();
-                    }
-                });
+                (function(data, index) {
+                    $.ajax({
+                        url : 'get_data.php',
+                        data : data,
+                        dataType: 'json',
+                        method : 'post',
+                        success:function(response){
+                            $("#status_"+index).html("<img src='img/success.png'>");
+                            $("#file_"+index).html(response.file);
+                            $("#records_"+index).html(response.data_count);
+                            $("#index_"+index).addClass('success');
+                        }
+                    });
+                }) (data, current);
+
+                current++;
             }
         });
     </script>

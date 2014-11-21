@@ -264,16 +264,19 @@ Class FbSearch {
         'Phone',
         'Website',
         'Country',
-        'Country code',
+        'Phone code',
         'City',
         'Category',
-        'Category List',
+        'Sub Category',
         'Likes',
         'Talking about',
         'Facebook ID',
         'Facebook Url',
         'Facebook Page Link',
-        'Oto Website'
+        'Oto Website',
+        'Community Page',
+        'Parent Page',
+        'Has Website'
     );
 
     var $csv_file;
@@ -303,7 +306,8 @@ Class FbSearch {
 
         $this->csv_file = fopen('php://output', 'a');
 
-        fputcsv($this->csv_file, $this->columns, ',', '"');
+        // fputcsv($this->csv_file, $this->columns, ',', '"');
+        fputcsv($this->csv_file, $this->columns, "\t", '"');
 
         foreach($keywords as $keyword) {
             if(!trim($keyword)) { continue;}
@@ -329,7 +333,8 @@ Class FbSearch {
                 $fh = fopen('tmp\\data\\' .$filename, 'a');
             else{
                 $fh = fopen('tmp\\data\\' .$filename, 'w');
-                fputcsv($fh, $this->columns, ',', '"');
+                // fputcsv($fh, $this->columns, ',', '"');
+                fputcsv($fh, $this->columns, "\t", '"');
             }
             fclose($fh);
 
@@ -343,7 +348,7 @@ Class FbSearch {
     private function writeToFile($filename, $words){
         try{
             $fh = fopen('tmp\\data\\' .$filename, 'a');
-            fputcsv($fh, $words);
+            fputcsv($fh, $words, "\t");
             fclose($fh);
         } catch(Exception $ex){
             fclose($fh);
@@ -356,11 +361,11 @@ Class FbSearch {
         // $this->clearDataFolder();
     }
 
-    public function createBatchFiles($keywords, $filename = null){
+    public function createBatchFiles($keywords, $filename = null, $additional_fields = []){
         try{
             foreach($keywords as $key => $keyword) {
                 if(!trim($keyword)) { continue;}
-                $result = $this->return_keyword_results($keyword);
+                $result = $this->return_keyword_results($keyword, $additional_fields);
 
                 if(!$filename) {
                     $filename = $this->generateCSVFile($key, $keyword);
@@ -375,14 +380,14 @@ Class FbSearch {
         }
     }
 
-    public function createBatchFile($keyword, $synonym, $filename = null){
+    public function createBatchFile($keyword, $synonym, $filename = null, $additional_fields = []){
         try{
 
             if(!$filename) {
                 $filename = $this->generateCSVFile($keyword, $synonym);
             }
 
-            $result = $this->return_keyword_results($synonym);
+            $result = $this->return_keyword_results($synonym, $additional_fields);
 
             foreach($result as $record) {
                 $this->writeToFile($filename, $record);
@@ -446,11 +451,13 @@ Class FbSearch {
     function append_data_to_csv($data) {
         if(!$data) { return; }
         foreach($data as $record) {
-            fputcsv($this->csv_file, $record, ',', '"');
+            $record = array_map( "nl2br", $record);
+            // fputcsv($this->csv_file, $record, ',', '"');
+            fputcsv($this->csv_file, $record, "\t", '"');
         }
     }
 
-    function return_keyword_results($keyword) {
+    function return_keyword_results($keyword, $additional_fields = []) {
         $max_num_results = 2000;
         $fb_results = $this->get_fb_results($keyword, $max_num_results);
         if(!is_array($fb_results)) { return false;}
@@ -460,11 +467,15 @@ Class FbSearch {
 
         foreach($fb_results as $page):
             $arr = array($keyword, $ii);
+            $arr = array_merge($arr, $additional_fields);
 //            if(empty($page->website) && !empty($page->phone)) {
-            if(true) {
+
+            $record_arr = $this->get_record($page);
+
+            if($record_arr) {
                 $arr = array_merge(
                     $arr,
-                    $this->get_record($page)
+                    $record_arr
                 );
 
                 $result[] = $arr;
@@ -504,12 +515,26 @@ Class FbSearch {
         if(empty($data->website)) {
             $data->website = '';
         }
-        $data->parent_page = empty($data->parent_page) ? "" : $data->parent_page->id;
+        if(!empty($data->cover)) {
+            $data->cover = json_encode($data->cover);
+        } else {
+            $data->cover = "";
+        }
+        $data->parent_page = empty($data->parent_page) ? "" : json_encode($data->parent_page->id);
+
+        // Ignore community pages
+        if(!empty($data->is_community_page)) {
+            return false;
+        }
+        // Ignore pages with a parent page
+        if($data->parent_page) {
+            return false;
+        }
 
         return array(
             $data->name,
             $data->phone,
-            makeclickable($data->website),
+            str_replace(array("\r", "\n"), ' ', $data->website),
             $data->location->country,
             $this->get_country_phone_prefix($data->location->country),
             $data->location->city,
@@ -521,8 +546,10 @@ Class FbSearch {
             "http://www.facebook.com/".$data->id,
             '=HYPERLINK("http://www.facebook.com/'.$data->id.'/?sk=info", "'.$data->id.'")',
             '=HYPERLINK("http://wp.otonomic.com/migration/index?page_id='.$data->id.'", "Create")',
-            isset($data->is_community_page) ? $data->is_community_page : -1,
-            $data->parent_page
+            isset($data->is_community_page) ? $data->is_community_page : 0,
+            $data->parent_page,
+            empty($data->website) ? "" : 1,
+            $data->cover
         );
     }
 
@@ -532,9 +559,9 @@ Class FbSearch {
 
     function get_fb_results($keyword, $num_results = 0) {
         $access_token = '389314351133865|O4FgcprDMY0k6rxRUO-KOkWuVoU';
-        $limit = 100;
+        $limit = 200;
         $url = 'https://graph.facebook.com/search/?q='.urlencode($keyword).'&type=page&access_token='.$access_token.
-            '&fields=id,name,username,category,category_list,likes,website,phone,location,talking_about_count,is_community_page,parent_page&limit='.$limit;
+            '&fields=id,name,username,category,category_list,likes,website,phone,location,talking_about_count,is_community_page,parent_page,cover&limit='.$limit;
         $response = json_decode(file_get_contents($url));
         $result = $response->data;
 

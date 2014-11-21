@@ -461,8 +461,15 @@ https://www.facebook.com/aqha1</textarea>
 
     function run_inner(j) {
         record = res[j].split(",");
-        keywords[j] = record[0];
-        page_graph_url = get_graph_url(record[1]);
+
+        if(record.length == 2) {
+            keywords[j] = record[0];
+            page_graph_url = get_graph_url(record[1]);
+
+        } else {
+            keywords[j] = '-';
+            page_graph_url = get_graph_url(record[0]);
+        }
         query_status[j] = 1;
         get_and_parse_facebook_data(page_graph_url, j);
     }

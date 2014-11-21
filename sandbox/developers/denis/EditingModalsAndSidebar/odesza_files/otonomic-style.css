@@ -1,0 +1,41 @@
+
+.leanbiz #blog-details {
+    max-width: 960px;
+    position: relative;
+    right: 0;
+    left: 0;
+    bottom: 10px;
+    margin: 15px auto;
+    text-align: center;
+}
+.leanbiz #blog-details h1.title {
+    font-size: 38px;
+}
+.leanbiz #blog-details h2.sub-title {
+    margin-bottom: 15px;
+    color: #678e8d;
+    font-family: 'Kreon', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+}
+.leanbiz #blog-details img{
+    width: 16px;
+}
+.leanbiz #blog-details span{
+    vertical-align: super;
+    margin: 0 25px 0 10px;
+    font-size: 12px;
+    color: #678e8d;
+}
+
+#leanbiz_contact_sidebar input[type=text], #leanbiz_contact_sidebar textarea, #leanbiz_contact_sidebar input[type=email]{
+    width: 200px;
+}
+
+#footer-widgets{
+    padding: 55px 0px 55px;
+}
+
+#leanbiz_quote_links, #leanbiz_quote_links:hover{
+    text-decoration: none;
+}
