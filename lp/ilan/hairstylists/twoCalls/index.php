@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Otonomic - turn your Facebook page into a professional website</title>
-    <link rel="stylesheet" type="text/css" href="../css/fancybox.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css?v=0.0.1">
     <style>
         body{
@@ -14,9 +13,31 @@
         .search_results .close-search{ display: block !important;}
     </style>
     <link rel="stylesheet" type="text/css" href="css/media-queries.css?v=0.0.3" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="/js/otonomic-analytics.js"></script>
+
 </head>
 
 <body>
+				<!-- <center>
+					<div id="tweet_results">
+					<p>Content is locked! Please tweet it & unlock the content</p>					
+						<a class="twitter-share-button" href="https://twitter.com/share"
+						data-via="otonomic" data-text="We take your Facebook page and automatically turn it into a Web & Mobile website! " data-size="medium" data-url="http://otonomic.com/" data-count="vertical">
+						Tweet
+						</a>					
+					</div>
+				</center>				
+				<div style="clear:both"></div>
+				<center>
+					<div id="fb_results">
+						<p>Content is locked! Please share it & unlock the content</p>					
+						<img onclick="shareOnFB();" style="cursor:pointer" src="https://d1wofkmqsniyp0.cloudfront.net/public/v2.0/imgs/fbshare.png">					
+					</div>
+				</center> -->
+
 <div class="csszoom" id="smartphone-guy">
 <div class="wrapper">
     <div id="main">
@@ -26,32 +47,45 @@
                 <div class="top_text">We take your Facebook page and automatically turn it into a Web & Mobile website!</div>
             </header>
             <div class="top_wraper2">
-                <h2 class="heading_text">It's free, effortless,<br/>instant and beautiful.<br/>
-                    <span style="font-weight: bold;">It's Your Website!</span></h2>
-                <p class="text2">Let's enforce your brand and spread your presence. Let's get more customers and make more money. Let's do it now!</p>
-                <p class="text3">Get your website now! It's instant and free </p>
-                <div class="make_my_website wraps">
-                    <table class="table_form search_table">
-                        <tr class="form_input2">
-                            <td>
-                                <div style="position: relative" class="p2s_fanpages">
-                                    <input id="main_search_box" type="text" class="input_type input_field LoNotSensitive" value="" name="fName" placeholder="Enter your Facebook page name (or URL)">
-                                    <div class="tb search-wrapper" id="search_wrapper_main"></div>
-                                    <span class="icon_clear close-search"><img class="close-search" src="/shared/fanpages/images/close.png" width="32" height="32"/></span>
-                                </div>
-                            </td>
-                            <td id="btn_go" title='Choose your page from the suggestions below' class="input_title submit_btn">Get my Website</td>
-                        </tr>
-                    </table>
+                <h2 class="js-heading-text heading_text">Get your free <br>and beautiful website!</h2>
+                <p class="text2">How? it’s easy!</p>
+                <ul>
+                    <li class="active"><span id="step-1" class="step">1</span> Sign up with your Facebook page</li>
+                    <li><span id="step-2" class="step">2</span> Share it with your friends</li>
+                    <li><span id="step-3" class="step">3</span> Sit tight while we get your website ready.</li>
+                </ul>
+                <p class="js-text3 text3">Sign up and Spread the word</p>
+                <!-- Search input field -->
+                <div class="p2s_fanpages">
+                  <div class="search-field form-search">
+                    <input id="main_search_box" type="text" 
+                    class="form-control main_search_box LoNotSensitive"
+                    data-attr="center"
+                    onClick="searchBoxClick('#main_search_box');" 
+                    onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
+                    placeholder="Enter your Facebook page name (or URL)">
+                    <span class="input-group-btn">
+                      <button id="btn_go" class="btn btn_go" data-attr="center" data-target-field="main_search_box" type="button">Get my website</button>
+                    </span>
+                    <span class="close-search" onClick="closeSearch('#search_wrapper_main','center')" style="display: none;">
+                      <img src="/shared/fanpages/images/close.png" width="32" height="32">
+                    </span>
+                  </div>
+                  <div class="tb search-wrapper" id="search_wrapper_main" data-attr="center"></div>
+                </div>
+                <!-- Share Buttons -->
+                <div class="js-social-shares social-shares-container" style="display:none;">
+                    <a href="javascript:void(0)" class="fb-share" onclick="shareOnFB();">
+                        <img src="images/facebook-icon.svg">
+                        Share on facebook
+                    </a>
+                    <a class="tweet" href="https://twitter.com/intent/tweet?url=http://otonomic.com/&via=@otonomic.com&text=We take your Facebook page and automatically turn it into a Web & Mobile website!">
+                        <img src="images/twitter-icon.svg">
+                        Share on twitter
+                    </a>             
                 </div>
             </div>
             <div style="clear:both"></div>
-
-            <a href="http://www.youtube.com/watch?v=c9HlSITDejc&fs=1&autoplay=1&vq=hd1080" id="btn_video" class="video tracking_enabled" data-ga-category="Search LP" data-ga-event="Video" data-ga-label="v=c9HlSITDejc" data-ajax-track="1">
-                <span id="video-placeholder">
-                </span>
-            </a>
-
             <div class="testimonial">
                 <div class="no_of_website_counting"><span class="counting_no">1,091,485</span><span>website created, and counting...</span></div>
                 <div class="testimonials_wrap">
@@ -69,13 +103,68 @@
                     </div>
                 </div>
             </div>
-            <div class="footer_text">Brought to you by <span style="font-family:Myriad Pro;font-size: 14px; font-weight: bold; color: #f54703;">OTONOMIC</span></div>
+            <div class="footer_text"><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a> | <a href="#">FAQ</a>   |   <a href="#">Contact</a>     © 2014</div>
         </div>
     </div>
 </div>
 </div>
 
-<?php include_once('../../../../shared/fanpages/fanpage_autoload.php');?>
+    <!-- Search box template -->
+    <div style="display: none">
+      <div class="t_box">
+          <div class="msgbox">
+              <div class="header">
+                  <a href="#" class="close_btn close-search" onclick="closeSearch('.search-wrapper'); return false;"><span class="glyphicon glyphicon-remove"></span></a>
+                  <span class="msg_info">We weren't able to find this page on Facebook</span>
+              </div>
+
+              <div class="body_info">
+                  <h1 class="first_msg">Refine your search</h1>
+                  <p class="first_msg_desc">e.g. "my business" instead of "mybusiness"</p>
+                  <p class="or_msg">Or</p>
+                  <h1>Enter the full Facebook address of your business</h1>
+                  <p style="display: inline-block;">e.g.: "https://www.facebook.com/pages/Jessicas-Pastries"</p>
+                  <a href="#" id="how_do_i">How do I do that?</a>
+                  <p class="or_msg">Or</p>
+                  <a href="/shared/facebook_login.php" class="facebook_connect track_event measure_time" id="fb_connector" data-ga-category="LandingPage" data-ga-event="Connect with Facebook" data-ga-label="Search explanation box" data-ajax-track="1">Connect
+                  </a>
+                <h1 style="line-height: 34px; float:left;">So we can find your page for you.</h1>
+              </div>
+          </div>
+
+          <div class="steps">
+              <ul>
+                  <li>
+                      <h1>Step 1 </h1> | <span>Go to your Facebook business page</span>
+                  </li>
+                  <li>
+                      <h1>Step 2 </h1> | <span>Copy the address shown in your browser</span>
+                      <p>(starts with "https://www.facebook.com")</p>
+                  </li>
+                  <li>
+                      <h1>Step 3 </h1> | <span>Paste the address in the search box above.</span>
+                  </li>
+                  <li>
+                      <h1>Step 4 </h1> | <span>Click "See my website"</span>
+                  </li>
+              </ul>
+          </div>
+      </div>
+
+      <div class="search_progress hidden" style="position: absolute; left: -35px;">
+          <span class="msg_info">Search in progress, please wait...!!!</span>
+      </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+    <script type="text/javascript" src="https://d2zxr4ixkv1lwq.cloudfront.net/lp/js/jquery.jsonp-2.4.0.min.js" defer></script>
+
+    <link rel="stylesheet" type="text/css" href="css/searchResults.css">
+    <script type="text/javascript" src="/js/search_filterv1.0.4-wp.js"></script>
+    <link href="http://d2zxr4ixkv1lwq.cloudfront.net/lp/css/tipsy.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://d2zxr4ixkv1lwq.cloudfront.net/lp/js/jquery.tipsy.js" defer></script>
+    <script type="text/javascript" src="/js/otonomicv1.0.4.js"></script>
+
+    <script type="text/javascript" src="/js/functions.js"></script>
 
 </body>
 </html>

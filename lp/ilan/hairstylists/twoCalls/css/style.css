@@ -1,15 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Arial';
-    /*    background: #828282;  Old browsers
-        background: -moz-linear-gradient(top,  #828282 0%, #111111 87%);  FF3.6+
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#828282), color-stop(87%,#111111));  Chrome,Safari4+
-        background: -webkit-linear-gradient(top,  #828282 0%,#111111 87%);  Chrome10+,Safari5.1+
-        background: -o-linear-gradient(top,  #828282 0%,#111111 87%);  Opera 11.10+
-        background: -ms-linear-gradient(top,  #828282 0%,#111111 87%);  IE10+
-        background: linear-gradient(to bottom,  #828282 0%,#111111 87%);  W3C
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#828282', endColorstr='#111111',GradientType=0 );  IE6-9
-        background-repeat: no-repeat;*/
+    font-family: 'Aller', sans-serif;
     overflow-x: hidden;
 }
 #main {
@@ -32,7 +23,7 @@ body {
 }
 .slogan{
     color: #fff;
-    font-family: 'Exo-Light';
+    font-family: 'Aller', sans-serif;
     font-weight: normal;
     font-size: 36px;
     margin-bottom: 0;
@@ -46,24 +37,7 @@ body {
     padding-top: 10px;
 }
 
-.input_type{
-    width: 250px;
-    height: 35px;
-    box-shadow: inset 2px 3px 3px #B7B7B9;
-    border: none;
-    padding-left: 33px;
-    font-family: 'Exo-Light';
-    background: #fff;
-}
-.input_title{
-    background: #ff3d5a;
-    font-size: 14px;
-    color: #fff;
-    font-family: 'Exo-Light';
-    padding: 0 8px;
-    margin: 2px;
-    cursor: pointer;
-}
+
 .facebook_icon {
     background: url("../images/fb.png") no-repeat;
     position: absolute;
@@ -106,7 +80,7 @@ body {
     color: white;
     text-align: center;
     margin-top: 35px;
-    font-family: 'Exo-Light';
+    font-family: 'Aller', sans-serif;
     font-size: 14px;
 }
 
@@ -121,7 +95,7 @@ body {
     background-size: 100%;
     margin: 0 auto;
     position: relative;
-    font-family: 'Exo-Light';
+    font-family: 'Aller', sans-serif;
 }
 header{
     width: 100%;
@@ -156,20 +130,40 @@ header{
     margin: 70px 0 0 60px;
     float: left;
     padding: 0;
+    font-weight: bold;
     text-align: left;
+}
+.top_wraper2 ul{
+    padding-left: 0;
+    list-style: none;
+    list-style-position: outside;
+}
+.top_wraper2 ul li {
+    font-weight: normal;
+    line-height: 1.4;
+}
+.top_wraper2 ul li.active {
+    color: #ff3d5a;
+}
+
+.step {
+    display: inline-block;
+    width: 20px;
+    margin-right: 20px;
 }
 .heading_text{
     font-size: 30px;
-    font-weight: bold;
-    color: #252525;
-    line-height: 34px;
+    font-weight: lighter;
+    color: #ff3d5a;
+    line-height: 38px;
 }
 .text2{
+    margin: 0;
     font-size: 17px;
     color: #202020;
 }
 .text3{
-    font-size: 15px;
+    font-size: 14px;
     color: #202020;
     margin-bottom: 10px;
     font-weight: normal;
@@ -177,24 +171,73 @@ header{
 .wraps{
     text-align: left;
 }
-.search_table{
-    padding: 0 !important;
-    border-spacing: 0;
+.search-field {
+    position: relative;
 }
-.input_field{
-    padding: 5px 10px !important;
-    border: 1px solid #4b4b4b;
-    box-shadow: inset 2px 3px 3px #eee !important;
-    width: 240px !important;
+.main_search_box{
+    height: 35px;
+    width: 200px !important;
+    padding:0 33px 0 10px;
+    font-size: 11px;
+    border: 1px solid #000;
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,.3);
+    font-family: 'Aller', sans-serif;
+    background: #fff;
 }
-.submit_btn{
-    font-size: 11px !important;
+.btn_go{
+    margin: 0;
+    padding: 0 15px;
+    height: 37px;
+    text-align: center;
+    color: #fff;
+    font-size: 11px;
+    font-weight: normal;
+    font-family: 'Aller', sans-serif;
+    border: 1px solid #ff3d5a;
+    background: #ff3d5a;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    cursor: pointer;
+}
+.close-search {
+    padding: 0!important;
+    position: absolute;
+    top: 6px;
+    left: 212px;
+}
+/* Share buttons */
+.social-shares-container {
+    margin-bottom: 1px;
+}
+.tweet,
+.fb-share {
+    display: inline-block;
+    padding: 8px 15px;
+    text-align: center;
+    color: #fff;
+    font-size: 11px;
+    font-weight: normal;
+    font-family: 'Aller', sans-serif;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    cursor: pointer;
+    text-decoration: none;
+}
+.tweet img,
+.fb-share img {
+    height: 20px;
+    vertical-align: middle;
+}
+.tweet {
+    background-color: #57adef;
+}
+.fb-share {
+    margin-right: 10px;
+    background-color: #3c599a;
 }
 .testimonial{
     margin: 0;
     padding: 0 60px;
     height: 100px;
-    margin-top: 70px;
+    margin-top: 60px;
     text-align: left;
 }
 .no_of_website_counting{
@@ -209,7 +252,7 @@ header{
 .testimonials_wrap{
     width: 100%;
     height: 64px;
-    margin: 12px 0 0 0;
+    margin: 17px 0 0 0;
 }
 .testimonail_list{
     width: 31%;
@@ -238,17 +281,25 @@ blockquote {
 blockquote:before {
     display: block;
     content: "\201C";
-    font-size: 60px;
+    font-size: 40px;
     position: absolute;
-    left: -15px;
-    top: -20px;
+    left: -10px;
+    top: -5px;
     color: #ff3b58;
 }
 .footer_text{
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 12px;
-    /*font-family: 'ScriptMTBoldRegular';*/
+    color: #1f1a18;
+}
+.footer_text a {
+    margin: 5px;
+    color: #1f1a18;
+    text-decoration: none;
+}
+.footer_text a:hover {
+    text-decoration: underline;
 }
 
 .p2s_fanpages #search_wrapper_main {
@@ -262,16 +313,39 @@ blockquote:before {
 /*-----------------------------------------------------------*/
 
 @font-face {
-    /*font-family: 'Exo-Light';
-    src: url('../fonts/Exo-Light.eot');
-    src: url('../fonts/Exo-Light.eot') format('embedded-opentype'),
-         url('../fonts/myriadpro-regular.woff') format('woff'),
-         url('../fonts/myriadpro-regular.ttf') format('truetype'),
-         url('../fonts/myriadpro-regular.svg#MyriadProRegular') format('svg');
-		 font-family: GraublauWeb;*/
-    font-family: 'Exo-Light';
-    src: url("../fonts/Exo-Light.otf") format("opentype");
+    font-family: 'aller';
+    src: url('../fonts/aller_bd-webfont.eot');
+    src: url('../fonts/aller_bd-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/aller_bd-webfont.svg') format('svg'),
+    url('../fonts/aller_bd-webfont.woff') format('woff'),
+    url('../fonts/aller_bd-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+
 }
+@font-face {
+    font-family: 'aller';
+    src: url('../fonts/aller_lt-webfont.eot');
+    src: url('../fonts/aller_lt-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/aller_lt-webfont.svg') format('svg'),
+    url('../fonts/aller_lt-webfont.woff') format('woff'),
+    url('../fonts/aller_lt-webfont.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'aller';
+    src: url('../fonts/aller_rg-webfont.eot');
+    src: url('../fonts/aller_rg-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/aller_rg-webfont.svg') format('svg'),
+    url('../fonts/aller_rg-webfont.woff') format('woff'),
+    url('../fonts/aller_rg-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 @font-face {
     font-family: 'ScriptMTBoldRegular';
     src: url("../fonts/scriptbl.eot");
