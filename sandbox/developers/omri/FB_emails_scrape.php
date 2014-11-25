@@ -10,40 +10,6 @@ class Scrape {
     private $respond;
 
      public function __construct(){
-         // $url = str_replace('www.facebook.com', 'm.facebook.com', $url);
-
-         // $this->respond = $this->getDomObject();
-
-
-         /*
-         foreach($this->respond as $key=>$node){
-
-             $html = $node->c14n();
-
-
-             $this->results[$key]['from']['name'] = $this->getname($html);
-             $this->results[$key]['from']['id'] = $this->getuserid($html);
-             $this->results[$key]['from']['picture'] = $this->getuserimage($this->results[$key]['from']['id']);
-             $this->results[$key]['message'] = $this->getreview($html);
-
-             if(!$this->results[$key]['message'] || empty($this->results[$key]['message'])){
-                 unset($this->results[$key]);
-                 continue;
-             }
-
-             $this->results[$key]['timestamp'] = $this->gettimestamp($html);
-             $this->results[$key]['date'] = date("F j, Y, g:i a", $this->results[$key]['timestamp']);
-             $this->results[$key]['date_short'] = date("F j, Y", $this->results[$key]['timestamp']);
-
-             $this->results[$key]['rating'] = $this->getstars($html);
-
-
-             if($this->results[$key]['rating'] && (int) $this->results[$key]['rating'] < 4){
-                 unset($this->results[$key]);
-             }
-
-         }
-         */
      }
 
      public function getResults($url){
@@ -317,4 +283,8 @@ class Scrape {
 $page_id = $_GET['page_id'];
 $scraper = new Scrape();
 $url = "https://m.facebook.com/page/about.php?id={$page_id}&refid=17";
-var_dump($scraper->getResults($url));
+$result = $scraper->getResults($url);
+echo json_encode([
+    'page_id' => $page_id,
+    'result' => $result ? $result : "-"
+]);

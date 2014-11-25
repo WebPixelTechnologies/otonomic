@@ -2,21 +2,6 @@
 
 $cities = [
 
-'New York',
-'Los Angeles',
-'Chicago',
-'Houston',
-'Philadelphia',
-'Phoenix',
-'San Antonio',
-'San Diego',
-'Dallas',
-'San Jose',
-
-
-
-
-
 'Austin',
 'Indianapolis',
 
@@ -627,22 +612,30 @@ $cities = [
 ];
 
 $keywords = [
-'Workout trainer',
-'Fitness trainer',
-'Personal trainer',
-'Instructor',
-'Athletic trainer',
-'Fitness professional',
-'Body trainer',
-'aerobics trainer',
-'flexibility trainer',
-'cross training',
-'cross trainer',
-'fitness coach',
-'Fitness Instructor',
-'Workout Instructor',
-'Sports Instructor',
-'aerobics Instructor',
+'Life coach' => 'Coach',
+'ADHD coach' => 'Coach',
+'Business coach' => 'Coach',
+'Executive coach' => 'Coach',
+'Career coach' => 'Coach',
+'Financial coach' => 'Coach',
+'Personal coach' => 'Coach',
+'Systemic coach' => 'Coach',
+'Health coach' => 'Coach',
+'Dating coach' => 'Coach',
+'Conflict coach' => 'Coach',
+'Victimization coach' => 'Coach',
+'Christian coach' => 'Coach',
+'Relationship Coach' => 'Coach',
+'Family Coach' => 'Coach',
+'mental health coach' => 'Coach',
+'Religious coach' => 'Coach',
+'performance coach' => 'Coach',
+'career coach' => 'Coach',
+'team facilitation' => 'Coach',
+'parent coach' => 'Coach',
+'life change coach' => 'Coach',
+'life purpose coach' => 'Coach',
+'confidence coach' => 'Coach',
 ];
 
 foreach($cities as $city) {
@@ -650,10 +643,6 @@ foreach($cities as $city) {
     if(!$city) { continue; }
     $i = 0;
     foreach($keywords as $keyword => $group) {
-        if(is_numeric($keyword)) {
-            $keyword = $group;
-            $group = "-";
-        }
         echo "{$keyword} ||| {$city} >>> {$group}\n";
         $i++;
     }

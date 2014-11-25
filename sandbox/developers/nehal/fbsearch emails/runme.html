@@ -1,0 +1,40 @@
+<html>
+<head></head>
+<body>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<textarea id="input" rows="20" cols="20"></textarea>
+<button id="go">Go</button>
+
+<div>Results:</div>
+<div id="results"></div>
+
+<script>
+    var list;
+
+    $('#go').click(function() {
+        list = $('#input').val().split('\n');
+
+        for(var i=0; i<list.length; i++) {
+            setTimeoutGetEmail(i);
+        }
+    });
+
+    function getEmail(page_id) {
+        if(page_id === "") { return; }
+
+        url = "http://localhost/sandbox/FB_emails_scrape.php?page_id="+page_id;
+        jQuery.getJSON(url, function(data) {
+            $('#results').append(data.page_id + "\t" + data.result + "<br/>");
+        });
+        // alert(url);
+    }
+
+    function setTimeoutGetEmail(i) {
+        return setTimeout(function() {
+            getEmail(list[i]);
+        }, 100*i);
+    }
+</script>
+</body>
+</html>
