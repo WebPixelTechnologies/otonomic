@@ -1,4 +1,5 @@
 // JavaScript Document
+
 var domain = window.location.host.replace("www.", "");
 var facebook_app_id;
 
@@ -23,7 +24,8 @@ switch(domain) {
         facebook_app_id = "160571960685147";
 }
 
-(function(d, s, id) 
+
+(function(d, s, id)
 {
 	var js, fjs = d.getElementsByTagName(s)[0];
 	if (d.getElementById(id)) return;
@@ -33,19 +35,19 @@ switch(domain) {
 }
 (document, 'script', 'facebook-jssdk'));
 
-function shareOnFB() 
+function shareOnFB()
 {
 	var e = {
 		method: "feed",
-		link: "http://otonomic.com/",
+		link: "",
 		picture: "http://otonomic.com/images/hairstyleWebsite-theme-154x113_4x.jpg",
 		name: "Free website for your hair salon - only 45 Hours left!",
 		caption: 'Otonomic.com',
 		description: "Otonomic turns your Facebook business page into a website."
 	};
-	FB.ui(e, function(t) 
+	FB.ui(e, function(t)
 	{
-		if (t["post_id"]) 
+		if (t["post_id"])
 		{
           //your download content goes here
           // Do something there
@@ -66,7 +68,7 @@ function showStep3(){
     //Change #step-2 content to icon
     $('#step-2').html('<img src="images/icon-check.png">')
     $('#step-2').parent().removeClass('active');
-    // Make #step-3 active 
+    // Make #step-3 active
     $('#step-3').parent().addClass('active');
     // Change texts
     $('.js-heading-text').html('Thank you!').css('fontSize','50px');
@@ -87,7 +89,7 @@ $(function(){
 		track_event("Hair Stylists Lead", "Lead Generated", "Page ID: "+fb_page_id);
 		track_event("Hair Stylists Lead", "Lead Generated", "Page name:"+fb_page_name);
 		track_event("Hair Stylists Lead", "Lead Generated", "Category:"+fb_page_category);
-			
+
 		//alert(fb_page_id);
         // Hide search form
         $('.p2s_fanpages').click(function(){
@@ -98,7 +100,7 @@ $(function(){
         // Change #step-1 content to icon
         $('#step-1').html('<img src="images/icon-check.png">')
         $('#step-1').parent().removeClass('active');
-        // Make #step-2 active 
+        // Make #step-2 active
         $('#step-2').parent().addClass('active');
         $('.text3').css('opacity', 1);
     });
