@@ -1,28 +1,53 @@
 // JavaScript Document
 
-(function(d, s, id) 
+var domain = window.location.host.replace("www.", "");
+var facebook_app_id;
+
+switch(domain) {
+    case "otonomic.com":
+        facebook_app_id = "373931652687761";
+        break;
+
+    case "verisites.com":
+        facebook_app_id = "202562333264809";
+        break;
+
+    case "otonomic.test":
+        facebook_app_id = "286934271328156";
+        break;
+
+    case "wp.test":
+        facebook_app_id = "264315953610090";
+        break;
+
+    default:
+        facebook_app_id = "160571960685147";
+}
+
+
+(function(d, s, id)
 {
 	var js, fjs = d.getElementsByTagName(s)[0];
 	if (d.getElementById(id)) return;
 	js = d.createElement(s); js.id = id;
-	js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=264315953610090&version=v2.0";
+	js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId="+facebook_app_id+"&version=v2.0";
 	fjs.parentNode.insertBefore(js, fjs);
 }
 (document, 'script', 'facebook-jssdk'));
 
-function shareOnFB() 
+function shareOnFB()
 {
 	var e = {
 		method: "feed",
-		link: "http://otonomic.com/",
+		link: "",
 		picture: "http://otonomic.com/images/otonomic-logo.png",
-		name: "Otonomic-We take your Facebook page and automatically turn it into a Web & Mobile website!",
+		name: "Otonomic - We take your Facebook page and automatically turn it into a Web & Mobile website!",
 		caption: 'Otonomic.info',
-		description: "We take your Facebook page and automatically turn it into a Web & Mobile website! its free ,effortless,instanse and beautiful."
+		description: "We take your Facebook page and automatically turn it into a Web & Mobile website! its free, effortless, instanse and beautiful."
 	};
-	FB.ui(e, function(t) 
+	FB.ui(e, function(t)
 	{
-		if (t["post_id"]) 
+		if (t["post_id"])
 		{
           //your download content goes here
           // Do something there
@@ -43,7 +68,7 @@ function showStep3(){
     //Change #step-2 content to icon
     $('#step-2').html('<img src="images/icon-check.png">')
     $('#step-2').parent().removeClass('active');
-    // Make #step-3 active 
+    // Make #step-3 active
     $('#step-3').parent().addClass('active');
     // Change texts
     $('.js-heading-text').html('Thank you').css('fontSize','50px');
@@ -64,7 +89,7 @@ $(function(){
 		track_event("Hair Stylists Lead", "Lead Generated", "Page ID: "+fb_page_id);
 		track_event("Hair Stylists Lead", "Lead Generated", "Page name:"+fb_page_name);
 		track_event("Hair Stylists Lead", "Lead Generated", "Category:"+fb_page_category);
-			
+
 		//alert(fb_page_id);
         // Hide search form
         $('.p2s_fanpages').click(function(){
@@ -75,7 +100,7 @@ $(function(){
         // Change #step-1 content to icon
         $('#step-1').html('<img src="images/icon-check.png">')
         $('#step-1').parent().removeClass('active');
-        // Make #step-2 active 
+        // Make #step-2 active
         $('#step-2').parent().addClass('active');
     });
 });
