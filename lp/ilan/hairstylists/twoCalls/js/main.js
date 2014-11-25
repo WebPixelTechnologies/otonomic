@@ -65,7 +65,7 @@ $(function(){
 		track_event("Hair Stylists Lead", "Lead Generated", "Page name:"+fb_page_name);
 		track_event("Hair Stylists Lead", "Lead Generated", "Category:"+fb_page_category);
 			
-		alert(fb_page_id);
+		//alert(fb_page_id);
         // Hide search form
         $('.p2s_fanpages').click(function(){
             $(this).hide();
