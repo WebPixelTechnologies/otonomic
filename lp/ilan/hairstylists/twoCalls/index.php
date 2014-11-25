@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/media-queries.css?v=0.0.3" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/main.js?v=1.0"></script>
     <script src="/js/otonomic-analytics.js"></script>
 
 </head>
@@ -159,7 +159,7 @@
     <script type="text/javascript" src="https://d2zxr4ixkv1lwq.cloudfront.net/lp/js/jquery.jsonp-2.4.0.min.js" defer></script>
 
     <link rel="stylesheet" type="text/css" href="css/searchResults.css">
-    <script type="text/javascript" src="/js/search_filterv1.0.4-wp.js"></script>
+    <script type="text/javascript" src="/js/search_filterv1.0.4-wp.js?v=1.0.4"></script>
     <link href="http://d2zxr4ixkv1lwq.cloudfront.net/lp/css/tipsy.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="http://d2zxr4ixkv1lwq.cloudfront.net/lp/js/jquery.tipsy.js" defer></script>
     <script type="text/javascript" src="/js/otonomicv1.0.4.js"></script>

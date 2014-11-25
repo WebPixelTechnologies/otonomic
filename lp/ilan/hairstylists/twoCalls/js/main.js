@@ -56,6 +56,16 @@ $(function(){
     // On search result click
     $('#search_wrapper_main').on('click', '.search-results-item', function(event){
         event.preventDefault();
+		fb_page_id = jQuery(this).attr('data-facebook-page-id');
+		fb_page_name = jQuery(this).attr('data-facebook-page-name');
+		fb_page_category = jQuery(this).attr('data-facebook-page-category');
+		var event_data = 'Page id:'+fb_page_id+', Page name:'+fb_page_name+', Category:'+fb_page_category;
+		track_event("Hair Stylists Lead", "Lead Generated", event_data);
+		track_event("Hair Stylists Lead", "Lead Generated", "Page ID: "+fb_page_id);
+		track_event("Hair Stylists Lead", "Lead Generated", "Page name:"+fb_page_name);
+		track_event("Hair Stylists Lead", "Lead Generated", "Category:"+fb_page_category);
+			
+		alert(fb_page_id);
         // Hide search form
         $('.p2s_fanpages').click(function(){
             $(this).hide();
