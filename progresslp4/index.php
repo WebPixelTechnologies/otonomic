@@ -41,7 +41,7 @@
   <!-- /Facebook SDK -->
     <!-- Intro    ========================================================== -->
     <div class="container-fluid">
-      <div id="intro" class="row">
+      <div id="intro" class="row hidden">
         <div class="bg-image hidden-xs"></div>
         <div class="col-xs-12">
           <div class="text-center">
@@ -54,7 +54,7 @@
         </div>
       </div>
       <!-- Stage 1 ========================================================== -->
-      <div id="stage-1" class="row hidden">
+      <div id="stage-1" class="row">
         <div class="bg-image hidden-xs "><img src="images/bg6.jpg"></div>
         <div class="content-panel">
           <img class="logo" src="images/otonomic-logo-dark.png">
@@ -62,10 +62,10 @@
           <p>Otonomic uses your existing Facebook page to build your website.</p>
           <p>You can instantly integrate other social media networks to your site by clicking below:</p>
           <div id="social_connect_hybrid">
-            <a id="authorize_Facebook" class="js-connect-facebook social-btn facebook-btn" href="#"><img src="images/facebook-icon.svg"></a>
-            <a id="authorize_Twitter" class="js-connect-twitter social-btn twitter-btn" href="#"><img src="images/twitter-icon.svg"></a>
-            <a id="authorize_Instagram" class="js-connect-instagram social-btn instagram-btn" href="#"><img src="images/instagram-icon.svg"></a>
-            <a id="authorize_LinkedIn" class="js-connect-tumbler social-btn yelp-btn" href="#"><img src="images/yelp-icon.svg"></a>
+            <a id="authorize_Facebook" class="js-connect-facebook social-btn facebook-btn" href="#"><img src="images/facebook-icon.svg"> Connect with facebook</a>
+            <a id="authorize_Twitter" class="js-connect-twitter social-btn twitter-btn" href="#"><img src="images/twitter-icon.svg"> Connect with Twitter</a>
+            <a id="authorize_Instagram" class="js-connect-instagram social-btn instagram-btn" href="#"><img src="images/instagram-icon.svg"> Connect with Instagram</a>
+            <!-- <a id="authorize_LinkedIn" class="js-connect-tumbler social-btn yelp-btn" href="#"><img src="images/yelp-icon.svg"></a> -->
           </div>
           <a href="#" onclick="return false;" class="btn btn-ttc-orange pull-right js-stage1-next">
             Continue

@@ -2,6 +2,7 @@
 <!--[if lte IE 8]> <html class="ie8" lang="en"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en">             <!--<![endif]-->
 <head>
+    <script src="//cdn.optimizely.com/js/326727683.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Otonomic - turn your Facebook page into a professional website</title>
@@ -13,6 +14,7 @@
         .search_results .close-search{ display: block !important;}
     </style>
     <link rel="stylesheet" type="text/css" href="css/media-queries.css?v=0.0.3" />
+    <script type="text/javascript" async="" src="http://cdn.luckyorange.com/w.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
     <script type="text/javascript" src="js/main.js?v=1.0"></script>
@@ -21,23 +23,6 @@
 </head>
 
 <body>
-				<!-- <center>
-					<div id="tweet_results">
-					<p>Content is locked! Please tweet it & unlock the content</p>					
-						<a class="twitter-share-button" href="https://twitter.com/share"
-						data-via="otonomic" data-text="We take your Facebook page and automatically turn it into a Web & Mobile website! " data-size="medium" data-url="http://otonomic.com/" data-count="vertical">
-						Tweet
-						</a>					
-					</div>
-				</center>				
-				<div style="clear:both"></div>
-				<center>
-					<div id="fb_results">
-						<p>Content is locked! Please share it & unlock the content</p>					
-						<img onclick="shareOnFB();" style="cursor:pointer" src="https://d1wofkmqsniyp0.cloudfront.net/public/v2.0/imgs/fbshare.png">					
-					</div>
-				</center> -->
-
 <div class="csszoom" id="smartphone-guy">
 <div class="wrapper">
     <div id="main">
@@ -50,11 +35,11 @@
                 <h2 class="js-heading-text heading_text">Get your free <br>and beautiful website!</h2>
                 <p class="text2">How? it’s easy!</p>
                 <ul>
-                    <li class="active"><span id="step-1" class="step">1</span> Sign up with your Facebook page</li>
-                    <li><span id="step-2" class="step">2</span> Share it with your friends</li>
+                    <li class="active"><span id="step-1" class="step">1</span> Enter with your Facebook business page</li>
+                    <li><span id="step-2" class="step">2</span> Share this promotion with your friends</li>
                     <li><span id="step-3" class="step">3</span> Sit tight while we get your website ready.</li>
                 </ul>
-                <p class="js-text3 text3">Sign up and Spread the word</p>
+                <p class="js-text3 text3" style="opacity: 0;">Spread the word</p>
                 <!-- Search input field -->
                 <div class="p2s_fanpages">
                   <div class="search-field form-search">
@@ -63,7 +48,7 @@
                     data-attr="center"
                     onClick="searchBoxClick('#main_search_box');" 
                     onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
-                    placeholder="Enter your Facebook page name (or URL)">
+                    placeholder="Type your Facebook page name (or URL)">
                     <span class="input-group-btn">
                       <button id="btn_go" class="btn btn_go" data-attr="center" data-target-field="main_search_box" type="button">Get my website</button>
                     </span>
@@ -79,7 +64,7 @@
                         <img src="images/facebook-icon.svg">
                         Share on facebook
                     </a>
-                    <a class="tweet" href="https://twitter.com/intent/tweet?url=http://otonomic.com/&via=@otonomic.com&text=We take your Facebook page and automatically turn it into a Web & Mobile website!">
+                    <a class="tweet" href="https://twitter.com/intent/tweet?url=http://otonomic.com/&via=otonomic.com&text=Only 45 Hours: FREE website for your hair salon: Otonomic turns your Facebook business page into a website">
                         <img src="images/twitter-icon.svg">
                         Share on twitter
                     </a>             
@@ -87,7 +72,7 @@
             </div>
             <div style="clear:both"></div>
             <div class="testimonial">
-                <div class="no_of_website_counting"><span class="counting_no">1,091,485</span><span>website created, and counting...</span></div>
+                <div class="no_of_website_counting"><span class="counting_no">30,218</span><span>website created, and counting...</span></div>
                 <div class="testimonials_wrap">
                     <div class="testimonail_list">
                         <div class="user_image"><img src="images/user1.png" alt=" " /></div>
@@ -99,7 +84,7 @@
                     </div>
                     <div class="testimonail_list">
                         <div class="user_image"><img src="images/user3.png" alt=" " /></div>
-                        <blockquote><span>My website looks amazing. it changed my business...clients keep raving about it.</span></blockquote>
+                        <blockquote><span>Updating my website is a breeze. Love how every post appears on my site immediately.</span></blockquote>
                     </div>
                 </div>
             </div>

@@ -40,10 +40,10 @@ function shareOnFB()
 	var e = {
 		method: "feed",
 		link: "",
-		picture: "http://otonomic.com/images/otonomic-logo.png",
-		name: "Otonomic - We take your Facebook page and automatically turn it into a Web & Mobile website!",
-		caption: 'Otonomic.info',
-		description: "We take your Facebook page and automatically turn it into a Web & Mobile website! its free, effortless, instanse and beautiful."
+		picture: "http://otonomic.com/images/hairstyleWebsite-theme-154x113_4x.jpg",
+		name: "Free website for your hair salon - only 45 Hours left!",
+		caption: 'Otonomic.com',
+		description: "Otonomic turns your Facebook business page into a website."
 	};
 	FB.ui(e, function(t)
 	{
@@ -71,7 +71,7 @@ function showStep3(){
     // Make #step-3 active
     $('#step-3').parent().addClass('active');
     // Change texts
-    $('.js-heading-text').html('Thank you').css('fontSize','50px');
+    $('.js-heading-text').html('Thank you!').css('fontSize','50px');
     $('.text3').html("When your website is ready, we'll contact you via Facebook.");
     $('.testimonial').css('marginTop','103px');
 }
@@ -102,5 +102,6 @@ $(function(){
         $('#step-1').parent().removeClass('active');
         // Make #step-2 active
         $('#step-2').parent().addClass('active');
+        $('.text3').css('opacity', 1);
     });
 });
