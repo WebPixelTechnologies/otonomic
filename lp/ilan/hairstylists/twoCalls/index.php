@@ -2,6 +2,7 @@
 <!--[if lte IE 8]> <html class="ie8" lang="en"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en">             <!--<![endif]-->
 <head>
+    <script src="//cdn.optimizely.com/js/326727683.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Otonomic - turn your Facebook page into a professional website</title>
@@ -22,23 +23,6 @@
 </head>
 
 <body>
-				<!-- <center>
-					<div id="tweet_results">
-					<p>Content is locked! Please tweet it & unlock the content</p>					
-						<a class="twitter-share-button" href="https://twitter.com/share"
-						data-via="otonomic" data-text="We take your Facebook page and automatically turn it into a Web & Mobile website! " data-size="medium" data-url="http://otonomic.com/" data-count="vertical">
-						Tweet
-						</a>					
-					</div>
-				</center>				
-				<div style="clear:both"></div>
-				<center>
-					<div id="fb_results">
-						<p>Content is locked! Please share it & unlock the content</p>					
-						<img onclick="shareOnFB();" style="cursor:pointer" src="https://d1wofkmqsniyp0.cloudfront.net/public/v2.0/imgs/fbshare.png">					
-					</div>
-				</center> -->
-
 <div class="csszoom" id="smartphone-guy">
 <div class="wrapper">
     <div id="main">
