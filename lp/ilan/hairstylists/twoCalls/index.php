@@ -99,11 +99,11 @@
                     </div>
                     <div class="testimonail_list">
                         <div class="user_image"><img src="images/user3.png" alt=" " /></div>
-                        <blockquote><span>I was surprised by after years of putting off building a site, I finally have one.</span></blockquote>
+                        <blockquote><span>My website looks amazing. it changed my business...clients keep raving about it.</span></blockquote>
                     </div>
                 </div>
             </div>
-            <div class="footer_text"><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a> | <a href="#">FAQ</a>   |   <a href="#">Contact</a>     © 2014
+            <div class="footer_text"><a href="http://otonomic.com/terms" target="_blank">Terms of Use</a> | <a href="http://otonomic.com/pdfs/Otonomic_Privacy_Policy.pdf" target="_blank">Privacy Policy</a> | <a href="http://support.otonomic.com/" target="_blank">FAQ</a>   |   <a href="mailto:info@otonomic.com" target="_blank">Contact</a>     © 2014
                 <div class="social-channels">
                     <a class="social-btn facebook-btn" target="_blank" href="https://www.facebook.com/otonomic"><img src="images/facebook-icon.svg"></a>
                     <a class="social-btn twitter-btn" target="_blank" href="https://twitter.com/otonomic"><img src="images/twitter-icon.svg"></a>
