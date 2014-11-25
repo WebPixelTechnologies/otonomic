@@ -103,7 +103,14 @@
                     </div>
                 </div>
             </div>
-            <div class="footer_text"><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a> | <a href="#">FAQ</a>   |   <a href="#">Contact</a>     © 2014</div>
+            <div class="footer_text"><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a> | <a href="#">FAQ</a>   |   <a href="#">Contact</a>     © 2014
+                <div class="social-channels">
+                    <a class="social-btn facebook-btn" target="_blank" href="https://www.facebook.com/otonomic"><img src="images/facebook-icon.svg"></a>
+                    <a class="social-btn twitter-btn" target="_blank" href="https://twitter.com/otonomic"><img src="images/twitter-icon.svg"></a>
+                    <a class="social-btn linkedin-btn" target="_blank" href="https://www.linkedin.com/company/otonomic"><img src="images/linkedin-icon.svg"></a>
+                    <a class="social-btn googleplus-btn" target="_blank" href="https://plus.google.com/+Otonomic/about"><img src="images/googleplus-icon.svg"></a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
