@@ -40,9 +40,9 @@ function shareOnFB()
 	var e = {
 		method: "feed",
 		link: "http://www.otonomic.com/lp/ilan/hairstylists/twoCalls/",
-		picture: "http://www.otonomic.com/images/hairstyleWebsite-theme-154x113_4x.jpg",
+		// picture: "http://www.otonomic.com/images/hairstyleWebsite-theme-154x113_4x.jpg",
 		name: "Free website for your hair salon - only 45 Hours left!",
-		caption: 'Otonomic.com',
+		caption: 'otonomic.com',
 		description: "Otonomic turns your Facebook business page into a website."
 	};
 	FB.ui(e, function(t)

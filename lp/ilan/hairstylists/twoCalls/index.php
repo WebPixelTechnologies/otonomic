@@ -13,6 +13,16 @@
         }
         .search_results .close-search{ display: block !important;}
     </style>
+
+    <meta property="og:title" content="Free website for your hair salon - only 45 Hours left!"/>
+    <meta property="og:site_name" content="Otonomic"/>
+    <meta property="og:description"
+          content="Otonomic turns your Facebook business page into a website."/>
+    <meta property="og:url" content="http://www.otonomic.com/lp/ilan/hairstylists/twoCalls/"/>
+    <meta property="og:image" content="http://www.otonomic.com/images/hairstyleWebsite-theme-154x113_4x.jpg"/>
+
+
+
     <link rel="stylesheet" type="text/css" href="css/media-queries.css?v=0.0.3" />
     <script type="text/javascript" async="" src="http://cdn.luckyorange.com/w.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
