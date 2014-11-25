@@ -334,11 +334,9 @@ blockquote:before {
   box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.3);
 }
 .social-btn:hover{
-  opacity: 0.9;
 }
 .social-btn:active,
 .social-btn.active{
-  opacity: 0.9;
   box-shadow: inset 0 1px 1px 1px rgba(0,0,0,0.2);
 }
 .social-btn img {
