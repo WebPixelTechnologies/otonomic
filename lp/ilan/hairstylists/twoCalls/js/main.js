@@ -53,7 +53,7 @@ function shareOnFB()
           // Do something there
 		  showStep3();
         }
-    })
+    });
 }
 
 
@@ -63,6 +63,9 @@ twttr.events.bind('tweet', function (event) {
 });
 
 function showStep3(){
+    track_virtual_pageview('/virtual_pageview/lp/ilan/hairstylists/step3/', 'LP Hairstylists promotion - step 3 - thank you');
+    trackFacebookPixel('shared_promotion');
+
     // hide share buttons
     $('.js-social-shares').hide();
     //Change #step-2 content to icon
@@ -80,12 +83,19 @@ $(function(){
 
     // On search result click
     $('#search_wrapper_main').on('click', '.search-results-item', function(event){
+
+        // Show step 2
         event.preventDefault();
-		fb_page_id = jQuery(this).attr('data-facebook-page-id');
+
+        track_virtual_pageview('/virtual_pageview/lp/ilan/hairstylists/step2/', 'LP Hairstylists promotion - step 2 - share the promotion');
+        trackFacebookPixel('registered_to_promotion');
+
+        fb_page_id = jQuery(this).attr('data-facebook-page-id');
 		fb_page_name = jQuery(this).attr('data-facebook-page-name');
 		fb_page_category = jQuery(this).attr('data-facebook-page-category');
 		var event_data = 'Page id:'+fb_page_id+', Page name:'+fb_page_name+', Category:'+fb_page_category;
-		track_event("Hair Stylists Lead", "Lead Generated", event_data);
+
+        track_event("Hair Stylists Lead", "Lead Generated", event_data);
 		track_event("Hair Stylists Lead", "Lead Generated", "Page ID: "+fb_page_id);
 		track_event("Hair Stylists Lead", "Lead Generated", "Page name:"+fb_page_name);
 		track_event("Hair Stylists Lead", "Lead Generated", "Category:"+fb_page_category);
@@ -95,6 +105,7 @@ $(function(){
         $('.p2s_fanpages').click(function(){
             $(this).hide();
         })
+
         // Show Share buttons
         $('.js-social-shares').show();
         // Change #step-1 content to icon

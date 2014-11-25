@@ -3,15 +3,14 @@ var piwik_site_id = 1;
 if(window.location.hostname.replace('www.', '') == 'verisites.com') {
 	piwik_site_id = 2;
 }
-
-
-function is_localhost() {
-    if( location.host == 'otonomic.test' || location.host == 'localhost') {
-        return true;
-    }
-
-    return false;
-}
+var pixel_values = {
+    visited_editor: '6020069195630',
+    added_product: '6020069233430',
+    visited_domain_page: '6020069257230',
+    created_site: '6008636103630',
+    shared_promotion: '6020812900230',
+    registered_to_promotion: '6020812953830'
+};
 
 
 /* Google Analytics */
@@ -111,7 +110,8 @@ function track_event(category, action, label, value){
 			'label': label,
 			'value':value
 		}
-	trackOtonomic(submit_options);
+
+	// trackOtonomic(submit_options);
 }
 function trackOtonomic( submit_options )
 {
@@ -146,4 +146,12 @@ function track_virtual_pageview(url, title) {
         var PiwikTracker = Piwik.getTracker();
         PiwikTracker.trackPageView([url]);
     }
+}
+
+function trackFacebookPixel(pixel_id) {
+    if(typeof(pixel_values[pixel_id]) == "undefined") {
+        pixel_id = pixel_values[pixel_id];
+    }
+    window._fbq = window._fbq || [];
+    window._fbq.push(['track', pixel_id, {'value':'0.00','currency':'USD'}]);
 }
