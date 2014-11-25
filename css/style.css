@@ -547,15 +547,17 @@ section.features .row{
 .media-links .row{
 	background-color: #fff;
 }
-.section-media{
-	margin-top: 48px;
-	padding-bottom: 91px;
+.section-media {
+	margin-top: 20px;
+	padding-bottom: 60px;
+	text-align: center;
 }
 .section-media .media-item{
+	display: inline-block;
 	border-right: 1px solid #cccccc;
 }
 .section-media .media-item img{
-	margin: 0 auto;
+	margin: 0 10px;
 }
 /* ## Section About ## */
 .section-about{

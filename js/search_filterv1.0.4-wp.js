@@ -287,7 +287,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
                     var simage = 'http://graph.facebook.com/' + val.id + '/picture?height=' + SEARCH_PICTURE_SIZE +'&width=' + SEARCH_PICTURE_SIZE;
                 }
 
-                items.push('<a class="media search-results-item" data-attr="'+$(InputField).attr('data-attr')+'" href="' + current_site_creation_link + '" title="Click to view site" data-facebook-page-id="'+val.id+'" data-facebook-page-name="'+val.name+'" data-facebook-page-email="'+val.email+'" data-facebook-page-phone="'+val.phone+'" data-result-number="' + ind + '" >' +
+                items.push('<a class="media search-results-item" data-attr="'+$(InputField).attr('data-attr')+'" href="' + current_site_creation_link + '" title="Click to view site" data-facebook-page-id="'+val.id+'" data-facebook-page-name="'+val.name+'" data-facebook-page-category="'+val.category+'" data-facebook-page-email="'+val.email+'" data-facebook-page-phone="'+val.phone+'" data-result-number="' + ind + '" >' +
                     '<div >' +
                     '<div class="pull-left fanpage">' +
                     '<img class="media-object" src="'+ simage +'">' +

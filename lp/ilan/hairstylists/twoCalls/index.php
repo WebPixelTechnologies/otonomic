@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/media-queries.css?v=0.0.3" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/main.js?v=1.0"></script>
     <script src="/js/otonomic-analytics.js"></script>
 
 </head>
@@ -99,11 +99,18 @@
                     </div>
                     <div class="testimonail_list">
                         <div class="user_image"><img src="images/user3.png" alt=" " /></div>
-                        <blockquote><span>I was surprised by after years of putting off building a site, I finally have one.</span></blockquote>
+                        <blockquote><span>My website looks amazing. it changed my business...clients keep raving about it.</span></blockquote>
                     </div>
                 </div>
             </div>
-            <div class="footer_text"><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a> | <a href="#">FAQ</a>   |   <a href="#">Contact</a>     © 2014</div>
+            <div class="footer_text"><a href="http://otonomic.com/terms" target="_blank">Terms of Use</a> | <a href="http://otonomic.com/pdfs/Otonomic_Privacy_Policy.pdf" target="_blank">Privacy Policy</a> | <a href="http://support.otonomic.com/" target="_blank">FAQ</a>   |   <a href="mailto:info@otonomic.com" target="_blank">Contact</a>     © 2014
+                <div class="social-channels">
+                    <a class="social-btn facebook-btn" target="_blank" href="https://www.facebook.com/otonomic"><img src="images/facebook-icon.svg"></a>
+                    <a class="social-btn twitter-btn" target="_blank" href="https://twitter.com/otonomic"><img src="images/twitter-icon.svg"></a>
+                    <a class="social-btn linkedin-btn" target="_blank" href="https://www.linkedin.com/company/otonomic"><img src="images/linkedin-icon.svg"></a>
+                    <a class="social-btn googleplus-btn" target="_blank" href="https://plus.google.com/+Otonomic/about"><img src="images/googleplus-icon.svg"></a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -159,7 +166,7 @@
     <script type="text/javascript" src="https://d2zxr4ixkv1lwq.cloudfront.net/lp/js/jquery.jsonp-2.4.0.min.js" defer></script>
 
     <link rel="stylesheet" type="text/css" href="css/searchResults.css">
-    <script type="text/javascript" src="/js/search_filterv1.0.4-wp.js"></script>
+    <script type="text/javascript" src="/js/search_filterv1.0.4-wp.js?v=1.0.4"></script>
     <link href="http://d2zxr4ixkv1lwq.cloudfront.net/lp/css/tipsy.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="http://d2zxr4ixkv1lwq.cloudfront.net/lp/js/jquery.tipsy.js" defer></script>
     <script type="text/javascript" src="/js/otonomicv1.0.4.js"></script>
