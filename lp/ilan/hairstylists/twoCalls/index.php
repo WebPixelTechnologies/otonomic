@@ -64,7 +64,7 @@
                         <img src="images/facebook-icon.svg">
                         Share on facebook
                     </a>
-                    <a class="tweet" href="https://twitter.com/intent/tweet?url=http://otonomic.com/&via=otonomic.com&text=Only 45 Hours: FREE website for your hair salon: Otonomic turns your Facebook business page into a website">
+                    <a class="tweet" href="https://twitter.com/intent/tweet?url=http://otonomic.com/&via=otonomic&text=Only 45 Hours: FREE website for your hair salon: Otonomic turns your Facebook business page into a website">
                         <img src="images/twitter-icon.svg">
                         Share on twitter
                     </a>             

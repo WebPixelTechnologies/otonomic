@@ -1,4 +1,27 @@
 // JavaScript Document
+var domain = window.location.host.replace("www.", "");
+var facebook_app_id;
+
+switch(domain) {
+    case "otonomic.com":
+        facebook_app_id = "373931652687761";
+        break;
+
+    case "verisites.com":
+        facebook_app_id = "202562333264809";
+        break;
+
+    case "otonomic.test":
+        facebook_app_id = "286934271328156";
+        break;
+
+    case "wp.test":
+        facebook_app_id = "264315953610090";
+        break;
+
+    default:
+        facebook_app_id = "160571960685147";
+}
 
 var domain = window.location.host.replace("www.", "");
 var facebook_app_id;
@@ -39,11 +62,19 @@ function shareOnFB()
 {
 	var e = {
 		method: "feed",
+<<<<<<< HEAD
 		link: "",
-		picture: "/images/hairstyleWebsite-theme-154x113_4x.jpg",
+		picture: "http://otonomic.com/images/otonomic-logo.png",
+		name: "Otonomic - We take your Facebook page and automatically turn it into a Web & Mobile website!",
+		caption: 'Otonomic.info',
+		description: "We take your Facebook page and automatically turn it into a Web & Mobile website! its free, effortless, instanse and beautiful."
+=======
+		link: "http://otonomic.com/",
+		picture: "http://otonomic.com/images/hairstyleWebsite-theme-154x113_4x.jpg",
 		name: "Free website for your hair salon - only 45 Hours left!",
 		caption: 'Otonomic.com',
 		description: "Otonomic turns your Facebook business page into a website."
+>>>>>>> origin/development
 	};
 	FB.ui(e, function(t)
 	{
