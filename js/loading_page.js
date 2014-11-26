@@ -992,9 +992,7 @@ function getFacebookPageAddress(page_id) {
 		}
 
 		var phone = (data.phone) ? data.phone : "";
-		var address = (address_parts.join(", 
-")) ? address_parts.join(", 
-") : "";
+		var address = (address_parts.join(", ")) ? address_parts.join(", ") : "";
 		var email = (data.email) ? (data.email) : "";
 
 		if (data.likes != undefined) {
