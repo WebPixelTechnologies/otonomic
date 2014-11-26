@@ -1,0 +1,205 @@
+@import "bootstrap-compass";
+@import "bootstrap-variables";
+@import "bootstrap";
+
+@import "../fonts/open-sans-fontfacekit/stylesheet.sass";
+@import "../fonts/open-sans-condensed-fontfacekit/stylesheet.sass";
+
+// font-family
+//@include OpenSansLight
+//@include OpenSansLightItalic
+//@include OpenSansRegular
+//@include OpenSansItalic
+//@include OpenSansSemibold
+//@include OpenSansSemiboldItalic
+//@include OpenSansBold
+//@include OpenSansBoldItalic
+//@include OpenSansExtrabold
+//@include OpenSansExtraboldItalic
+
+//@include OpenSansCondensedLight
+//@include OpenSansCondensedLightItalic
+//@include OpenSansCondensedBold
+
+
+// Colors 
+$green: #43bb58;
+body {
+	@include OpenSansRegular;
+}
+
+header {
+	height: 70px;
+	background-color: #000;
+
+	.logo-img {
+		margin: 12.5px 20px;
+	}
+	.fb-like {
+		margin: 23.5px 20px;
+	}
+}
+.green-text {
+	color: $green;
+}
+.splash {
+	position: relative;
+
+	.splash-title-container {
+		position: absolute;
+		height: 115px;
+		width: 100%;
+		text-align: center;
+		background-color: rgba(0,0,0,.8);
+		@include box-shadow( 0 5px 0 rgba(0,0,0,.3));
+	}
+	.splash-title {
+		@include OpenSansCondensedBold;
+		color: white;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+	.splash-sub-title {
+		@include OpenSansRegular;
+		color: white;
+		font-size: 15px;
+		list-style-type:decimal;
+		li {
+			display: inline-block;
+			margin-right: 10px;
+		}
+	}
+	.search-container {
+		position: absolute;
+		top: calc(50% - -25px);
+		left: 0;
+		right: 0;
+		text-align: center;
+		.form-group {
+			@include box-shadow(0 0 25px 5px rgba(0,0,0,.8));
+		}
+		.form-control {
+			width: 380px;
+			height: 55px;
+			text-align: center;
+			@include box-shadow(0 0 0 5px rgba($green, 0.8));
+			border-radius: 6px;
+		}
+		.btn {
+			@include OpenSansBold;
+			margin-left: 10px;
+			padding: 6px 30px;
+			height: 65px;
+			font-size: 16px;
+			border: 0;
+			border-radius: 12px;
+			@include box-shadow(0 0 25px 5px rgba(0,0,0,.8));
+		}
+	}
+	.splash-bottom-text {
+		@include OpenSansBold;
+		position: absolute;
+		margin-bottom: 30px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		font-size: 18px;
+		text-align: center;
+		color: white;
+		
+		span {
+			@include OpenSansExtrabold;
+		}
+	}
+	.splash-img {
+		width: 100%;
+	}
+}
+
+.splash2 {
+	@extend .splash;
+
+	.splash-title-container {
+		padding: 70px 0;
+		background-color: transparent;
+		@include box-shadow(none);
+	}
+	.splash-bottom-text {
+		top: calc(50% + 110px);
+	}
+	
+}
+
+.features {
+	background-color: #333333;
+	color: white;
+
+	.feature {
+
+		padding: 50px 30px;
+
+		img {
+			display: inline-block;
+			width: 72px;
+			vertical-align: text-bottom;
+		}
+		h3 {
+			@include OpenSansCondensedBold;
+			display: inline-block;
+			padding-left: 20px;
+			width: calc(100% - 85px);
+		}
+		p {
+			@include OpenSansLight;
+			color: #cccccc;
+			line-height: 22px;
+		}
+	}
+}
+
+.testimonials {
+	padding: 50px 0;
+	background-color: #212121;
+	.media-left, .media>.pull-left {
+		padding-right: 20px;
+	}
+	h4 {
+		@include OpenSansCondensedBold;
+		font-size: 22px;
+		line-height: 28px;
+		color: white;
+	}
+	p {
+		@include OpenSansLightItalic;
+		padding-top: 10px;
+		color: #aaaaaa;
+		font-size: 15px;
+		line-height: 24px;
+	}
+	img {
+		border: 3px solid #666666;
+		border-radius: 3px;
+	}
+	.glyphicon {
+		color: #675c58;
+		font-size: 18px;
+		&.active {
+			color: $green;
+		}
+	}
+}
+
+footer {
+	height: 70px;
+	padding-top: 30px;
+	color: white;
+	text-align: center;
+	background-color: #000;
+
+	a {
+		color: white;
+		&:last-child {
+			margin-right: 40px;
+		}
+	}
+}
