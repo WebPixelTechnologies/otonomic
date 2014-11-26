@@ -1,3 +1,10 @@
+function is_localhost() {
+    if (location.host == 'otonomic.test' || location.host == 'localhost') {
+        return true;
+    }
+    return false;
+}
+
 var facebook_site_created_pixel_id = '6008636103630';
 var piwik_site_id = 1;
 if(window.location.hostname.replace('www.', '') == 'verisites.com') {
