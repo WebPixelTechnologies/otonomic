@@ -143,8 +143,15 @@ function track_virtual_pageview(url, title) {
     }
 
     if(typeof(_paq) !== 'undefined') {
-        var PiwikTracker = Piwik.getTracker();
-        PiwikTracker.trackPageView([url]);
+        try {
+            var PiwikTracker = Piwik.getTracker();
+            PiwikTracker.setCustomUrl(url);
+            PiwikTracker.trackPageView([title]);
+
+        } catch(e) {
+            _paq.push(['setCustomUrl', url]);
+            _paq.push(['trackPageView', title]);
+        }
     }
 }
 
