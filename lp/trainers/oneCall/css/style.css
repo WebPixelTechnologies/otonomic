@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: 'Aller', sans-serif;
     overflow-x: hidden;
+    background-color: #333333;
 }
 #main {
     position: relative;
@@ -12,6 +13,7 @@ body {
     text-align: center;
     /*background: url("../images/bg.jpg") no-repeat;*/
     background-size: 100%;
+    background-color: #333333;
     margin: 0 auto;
     position: relative;
 }
@@ -102,7 +104,7 @@ header{
     width: 100%;
     height: 70px;
     text-align: center;
-    background-color: #1f1a18;
+    background-color: #000;
     background-size: 100%;
     position: absolute;
 }
@@ -136,6 +138,7 @@ header{
 }
 .top_wraper2 ul{
     padding-left: 0;
+    color: #cccccc;
     list-style: none;
     list-style-position: outside;
 }
@@ -144,7 +147,7 @@ header{
     line-height: 1.4;
 }
 .top_wraper2 ul li.active {
-    color: #ff3d5a;
+    color: #43bb58;
 }
 
 .step {
@@ -155,17 +158,17 @@ header{
 .heading_text{
     font-size: 30px;
     font-weight: lighter;
-    color: #ff3d5a;
+    color: #43bb58;
     line-height: 38px;
 }
 .text2{
     margin: 0;
     font-size: 17px;
-    color: #202020;
+    color: #fff;
 }
 .text3{
     font-size: 14px;
-    color: #202020;
+    color: #fff;
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -194,8 +197,8 @@ header{
     font-size: 11px;
     font-weight: normal;
     font-family: 'Aller', sans-serif;
-    border: 1px solid #ff3d5a;
-    background: #ff3d5a;
+    border: 1px solid #43bb58;
+    background: #43bb58;
     box-shadow: 1px 1px 1px rgba(0,0,0,.3);
     cursor: pointer;
 }
@@ -243,7 +246,7 @@ header{
 }
 .no_of_website_counting{
     font-size: 12px;
-    color: #fff;
+    color: #000;
 }
 .counting_no{
     font-size: 18px;
@@ -253,7 +256,7 @@ header{
 .testimonials_wrap{
     width: 100%;
     height: 64px;
-    margin: 17px 0 0 0;
+    margin: 25px 0 0 0;
 }
 .testimonail_list{
     width: 31%;
@@ -286,18 +289,18 @@ blockquote:before {
     position: absolute;
     left: -10px;
     top: -5px;
-    color: #ff3b58;
+    color: #43bb58;
 }
 .footer_text{
     position: relative;
     text-align: center;
     margin-top: 40px;
     font-size: 12px;
-    color: #1f1a18;
+    color: #fff;
 }
 .footer_text a {
     margin: 5px;
-    color: #1f1a18;
+    color: #fff;
     text-decoration: none;
 }
 .footer_text a:hover {
