@@ -35,10 +35,10 @@
             <div class="splash-title-container">
               <h1 class="splash-title">Big ass call to action title</h1>
               <ul class="splash-sub-title">
-                <li>1 Enter your business name</li>
-                <li>2 Get your website</li>
-                <li>3 Edit your website’s content</li>
-                <li>4 Publish your awsome website</li>
+                <li><span class="pink-text">1.</span> Enter your business name</li>
+                <li><span class="pink-text">2.</span> Get your website</li>
+                <li><span class="pink-text">3.</span> Edit your website’s content</li>
+                <li><span class="pink-text">4.</span> Publish your awsome website</li>
               </ul>
             </div>
             <img class="splash-img" src="images/splash-img.jpg">
@@ -51,7 +51,7 @@
                 <button type="submit" class="btn btn-success">Get my Website!</button>
               </form>
             </div>
-            <div class="splash-bottom-text">Join <span class="green-text"
+            <div class="splash-bottom-text">Join <span class="pink-text"
             >123500</span> hair salons all over the world</div>
           </div>
       </div>
@@ -92,13 +92,13 @@
                 <img src="images/testi-img-1.jpg" alt="Ashley Millsaps ">
               </div>
               <div class="media-body">
-                <h4 class="media-heading">Clare Cosinsky</h4>
+                <h4 class="media-heading">Grymm</h4>
                 <div class="media-rating">
                   <span class="glyphicon glyphicon-star active"></span>
                   <span class="glyphicon glyphicon-star active"></span>
                   <span class="glyphicon glyphicon-star active"></span>
-                  <span class="glyphicon glyphicon-star"></span>
-                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star active"></span>
+                  <span class="glyphicon glyphicon-star active"></span>
                 </div>
                 <p>I've had my website for a little over a month now and my clients absolutely love it!!! They have told me that it's extremely easy to navigate and it looks awesome! I couldn't have had a better website!</p>
               </div>
@@ -110,7 +110,7 @@
                 <img src="images/testi-img-2.jpg" alt="Jasmine A. Cox">
               </div>
               <div class="media-body">
-                <h4 class="media-heading">Stuart Ronson</h4>
+                <h4 class="media-heading">Shawna Todd</h4>
                 <div class="media-rating">
                   <span class="glyphicon glyphicon-star active"></span>
                   <span class="glyphicon glyphicon-star active"></span>
@@ -141,7 +141,7 @@
                 <button type="submit" class="btn btn-success">Get my Website!</button>
               </form>
             </div>
-            <div class="splash-bottom-text">Trusted by more than <span class="green-text"
+            <div class="splash-bottom-text">Trusted by more than <span class="pink-text"
             >30000</span> small Businesses in the U.S</div>
           </div>
       </div>

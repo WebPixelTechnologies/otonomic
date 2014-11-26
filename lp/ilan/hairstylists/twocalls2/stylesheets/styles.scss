@@ -1,31 +1,15 @@
 @import "bootstrap-compass";
 @import "bootstrap-variables";
 @import "bootstrap";
+@import "alef_webfont";
 
-@import "../fonts/open-sans-fontfacekit/stylesheet.sass";
-@import "../fonts/open-sans-condensed-fontfacekit/stylesheet.sass";
 
-// font-family
-//@include OpenSansLight
-//@include OpenSansLightItalic
-//@include OpenSansRegular
-//@include OpenSansItalic
-//@include OpenSansSemibold
-//@include OpenSansSemiboldItalic
-//@include OpenSansBold
-//@include OpenSansBoldItalic
-//@include OpenSansExtrabold
-//@include OpenSansExtraboldItalic
-
-//@include OpenSansCondensedLight
-//@include OpenSansCondensedLightItalic
-//@include OpenSansCondensedBold
 
 
 // Colors 
-$green: #43bb58;
+$pink: #ff3b58;
 body {
-	@include OpenSansRegular;
+	font-family: 'Alef', Helvetica, Arial, sans-serif;
 }
 
 header {
@@ -39,8 +23,8 @@ header {
 		margin: 23.5px 20px;
 	}
 }
-.green-text {
-	color: $green;
+.pink-text {
+	color: $pink;
 }
 .splash {
 	position: relative;
@@ -54,18 +38,18 @@ header {
 		@include box-shadow( 0 5px 0 rgba(0,0,0,.3));
 	}
 	.splash-title {
-		@include OpenSansCondensedBold;
-		color: white;
-		letter-spacing: 2px;
-		text-transform: uppercase;
+		color: $pink;
 	}
 	.splash-sub-title {
-		@include OpenSansRegular;
 		color: white;
-		font-size: 16px;
+		font-size: 17px;
 		li {
 			display: inline-block;
 			margin-right: 10px;
+			.pink-text {
+				margin-right: 10px;
+				font-size: 20px;
+			}
 		}
 	}
 	.search-container {
@@ -75,40 +59,39 @@ header {
 		right: 0;
 		text-align: center;
 		.form-group {
-			@include box-shadow(0 0 25px 0 rgba(0,0,0,.8));
 			border-radius: 12px;
+			@include box-shadow(0 0 25px 0 rgba(0,0,0,.8));
 		}
 		.form-control {
 			width: 380px;
 			height: 55px;
 			text-align: center;
-			@include box-shadow(0 0 0 5px rgba($green, 0.8));
+			@include box-shadow(0 0 0 5px rgba(0,0,0, 0.2));
 			border-radius: 12px;
 		}
 		.btn {
-			@include OpenSansBold;
 			margin-left: 10px;
 			padding: 6px 30px;
 			height: 65px;
 			font-size: 16px;
+			font-weight: bold;
 			border: 0;
 			border-radius: 12px;
 			@include box-shadow(0 0 25px 0 rgba(0,0,0,.8));
 		}
 	}
 	.splash-bottom-text {
-		@include OpenSansBold;
 		position: absolute;
 		margin-bottom: 30px;
-		bottom: 0;
+		top: calc(50% + 125px);
 		left: 0;
 		right: 0;
 		font-size: 18px;
 		text-align: center;
-		color: white;
+		color: #000;
 		
 		span {
-			@include OpenSansExtrabold;
+			font-weight: bold;
 		}
 	}
 	.splash-img {
@@ -120,19 +103,25 @@ header {
 	@extend .splash;
 
 	.splash-title-container {
-		padding: 70px 0;
+		padding: 90px 0 0 0;
 		background-color: transparent;
 		@include box-shadow(none);
 	}
+	.splash-title {
+		color: #000;
+	}
+	.search-container {
+		top: calc(50% + 5px);
+	}
 	.splash-bottom-text {
-		top: calc(50% + 110px);
+		top: calc(50% + 90px);
 	}
 	
 }
 
 .features {
-	background-color: #333333;
-	color: white;
+	background-color: #f4f4f4;
+	color: #3d3531;
 
 	.feature {
 
@@ -144,14 +133,13 @@ header {
 			vertical-align: text-bottom;
 		}
 		h3 {
-			@include OpenSansCondensedBold;
 			display: inline-block;
+			font-weight: bold;
 			padding-left: 20px;
 			width: calc(100% - 85px);
 		}
 		p {
-			@include OpenSansLight;
-			color: #cccccc;
+			color: #3d3531;
 			line-height: 22px;
 		}
 	}
@@ -159,32 +147,32 @@ header {
 
 .testimonials {
 	padding: 50px 0;
-	background-color: #212121;
+	background-color: #fff;
 	.media-left, .media>.pull-left {
 		padding-right: 20px;
 	}
 	h4 {
-		@include OpenSansCondensedBold;
+		font-weight: bold;
 		font-size: 22px;
 		line-height: 28px;
-		color: white;
+		color: #3d3531;
+		text-transform: uppercase;
 	}
 	p {
-		@include OpenSansLightItalic;
 		padding-top: 10px;
-		color: #aaaaaa;
+		color: #3d3531;
 		font-size: 15px;
 		line-height: 24px;
 	}
 	img {
-		border: 3px solid #666666;
-		border-radius: 3px;
+		//border: 3px solid #666666;
+		//border-radius: 3px;
 	}
 	.glyphicon {
 		color: #675c58;
 		font-size: 18px;
 		&.active {
-			color: $green;
+			color: $pink;
 		}
 	}
 }
@@ -208,6 +196,7 @@ footer {
 		}
 	}
 }
+
 // Social buttons
 //////////////////////////////////////////////////
 .social-channels {
@@ -221,7 +210,7 @@ footer {
   width: 36px;
   height: 36px;
   margin: 0 5px 5px 0!important;
-  line-height: 34px;
+  line-height: 38px;
   text-align: center;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
