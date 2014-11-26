@@ -1,3 +1,10 @@
+function is_localhost() {
+    if (location.host == 'otonomic.test' || location.host == 'localhost') {
+        return true;
+    }
+    return false;
+}
+
 var found_result = 0;
 var found_only_result_url = '';
 var p2s_site_url = 'http://builder.otonomic.com/';
