@@ -3,6 +3,7 @@
 <!--[if !IE]><!--> <html lang="en">             <!--<![endif]-->
 <head>
     <script src="//cdn.optimizely.com/js/326727683.js"></script>
+
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Otonomic - turn your Facebook page into a professional website</title>
@@ -22,14 +23,20 @@
     <meta property="og:url" content="http://www.otonomic.com/lp/ilan/hairstylists/twoCalls/"/>
     <meta property="og:image" content="http://www.otonomic.com/images/hairstyleWebsite-theme-154x113_4x.jpg"/>
 
-    <link rel="stylesheet" type="text/css" href="css/media-queries.css?v=0.0.3" />
-    <script type="text/javascript" async="" src="http://cdn.luckyorange.com/w.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
-    <script type="text/javascript" src="js/main.js?v=1.0"></script>
-    <script src="/js/otonomic-analytics.js"></script>
-    <script type="text/javascript" async="" src="http://cdn.luckyorange.com/w.js"></script>
-    <script src="/js/otonomic-analytics.js"></script>
+    <!-- Google Analytics Content Experiment code -->
+    <script>function utmx_section(){}function utmx(){}(function(){var
+            k='71111072-6',d=document,l=d.location,c=d.cookie;
+            if(l.search.indexOf('utm_expid='+k)>0)return;
+            function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+                indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+                length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+                '<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+                    '://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+                    '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+                    valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+                    '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+    </script><script>utmx('url','A/B');</script>
+    <!-- End of Google Analytics Content Experiment code -->
 
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -41,20 +48,14 @@
         ga('send', 'pageview');
     </script>
 
-    <!-- Google Analytics Content Experiment code -->
-    <script>function utmx_section(){}function utmx(){}(function(){var
-    k='71111072-6',d=document,l=d.location,c=d.cookie;
-    if(l.search.indexOf('utm_expid='+k)>0)return;
-    function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-    indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-    length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-    '<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-    '://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-    '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-    valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-    '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-    </script><script>utmx('url','A/B');</script>
-    <!-- End of Google Analytics Content Experiment code -->
+    <link rel="stylesheet" type="text/css" href="css/media-queries.css?v=0.0.3" />
+    <script type="text/javascript" async="" src="http://cdn.luckyorange.com/w.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+    <script type="text/javascript" src="js/main.js?v=1.0"></script>
+    <script src="/js/otonomic-analytics.js"></script>
+    <script type="text/javascript" async="" src="http://cdn.luckyorange.com/w.js"></script>
+    <script src="/js/otonomic-analytics.js"></script>
 </head>
 
 <body>
