@@ -58,11 +58,15 @@
     }
 
     .top_wraper2 {
-        /* width: 100%;*//
+        width: 100%;
         margin: 25px 0 15px 0;
         padding: 0 15px;
         float: none;
+
+        padding: 0 20px;
+        margin: 10px;
     }
+
     .top_wraper2 ul{font-size:14px;}
 
     .heading_text {
