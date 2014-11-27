@@ -49,11 +49,11 @@
                 <div class="p2s_fanpages">
                   <div class="search-field form-search">
                     <input id="main_search_box" type="text" 
-                    class="form-control main_search_box LoNotSensitive"
-                    data-attr="center"
-                    onClick="searchBoxClick('#main_search_box');" 
-                    onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
-                    placeholder="Type your Facebook page name (or URL)">
+                        class="form-control main_search_box LoNotSensitive"
+                        data-attr="center"
+                        onClick="searchBoxClick('#main_search_box');"
+                        onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
+                        placeholder="Type your Facebook page name (or URL)">
                     <span class="input-group-btn">
                       <button id="btn_go" class="btn btn_go" data-attr="center" data-target-field="main_search_box" type="button">Get my website</button>
                     </span>
