@@ -49,9 +49,11 @@ function shareOnFB()
 	{
 		if (t["post_id"])
 		{
-          //your download content goes here
-          // Do something there
-		  showStep3();
+            //your download content goes here
+            // Do something there
+            track_event("Hair LandingPage TwoCol", "Share FB");
+
+            showStep3();
         }
     });
 }
@@ -59,7 +61,9 @@ function shareOnFB()
 
 twttr.events.bind('tweet', function (event) {
       // Do something there
-      showStep3();
+    track_event("Hair LandingPage TwoCol", "Share Twitter");
+
+    showStep3();
 });
 
 function showStep3(){
@@ -88,6 +92,9 @@ $(function(){
         event.preventDefault();
 
         track_virtual_pageview('/virtual_pageview/lp/ilan/hairstylists/step2/', 'LP Hairstylists promotion - step 2 - share the promotion');
+
+        track_virtual_pageview('/virtual_pageview/lp/ilan/hairstylists/registered_to_promotion/', 'LP Hairstylists promotion - user registered to promotion');
+
         trackFacebookPixel('registered_to_promotion');
 
         fb_page_id = jQuery(this).attr('data-facebook-page-id');
@@ -99,7 +106,7 @@ $(function(){
 		track_event("Hair Stylists Lead", "Lead Generated", "Page ID: "+fb_page_id);
 		track_event("Hair Stylists Lead", "Lead Generated", "Page name:"+fb_page_name);
 		track_event("Hair Stylists Lead", "Lead Generated", "Category:"+fb_page_category);
-		
+
 		/* lets also send email */
 		jQuery.post(
 			'/send-mail.php',

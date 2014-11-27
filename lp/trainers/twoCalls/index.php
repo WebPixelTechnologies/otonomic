@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Otonomic - Trainers</title>
+
     <link rel="shortcut icon" href="favicon.ico">
     <meta property="og:title" content="Free website for your hair salon - only 45 Hours left!"/>
     <meta property="og:site_name" content="Otonomic"/>
@@ -15,7 +16,6 @@
 
     <!-- Bootstrap -->
     <link href="css/styles.css" rel="stylesheet">
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -69,9 +69,20 @@
             <div class="search-container">
               <form class="form-inline" role="form">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Enter your Facebook page name (or URL)">
+                    <input id="main_search_box" type="text"
+                           class="form-control main_search_box LoNotSensitive"
+                           data-attr="center"
+                           onClick="searchBoxClick('#main_search_box');"
+                           onKeyup="searchBoxKeyUp('#main_search_box','#search_wrapper_main','.close-search');"
+                           placeholder="Type your Facebook page name (or URL)">
+                    <div class="tb search-wrapper" id="search_wrapper_main" data-attr="center"></div>
+                    <div style="position:relative;">
+                                  <span class="icon_clear close-search" onClick="closeSearch('#search_wrapper_main','center')" style="display: none;">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                  </span>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-success">Get my Website!</button>
+                  <button id="btn_go" class="btn btn-success btn_go" data-attr="center" data-target-field="main_search_box" type="button">Get my Website!</button>
               </form>
             </div>
             <div class="splash-bottom-text">Join <span class="green-text"
@@ -159,7 +170,10 @@
             <div class="search-container">
               <form class="form-inline" role="form">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Enter your Facebook page name (or URL)">
+                    <input type="text" id="main_search_box2" data-attr="top"
+                           onClick="searchBoxClick('#main_search_box2');"
+                           onKeyup="searchBoxKeyUp('#main_search_box2');"
+                           class="form-control main_search_box mobile-header-placeholder" autocomplete="off" placeholder="Type the name of your business Facebook page here">
                 </div>
                 <button type="submit" class="btn btn-success">Get my Website!</button>
               </form>
