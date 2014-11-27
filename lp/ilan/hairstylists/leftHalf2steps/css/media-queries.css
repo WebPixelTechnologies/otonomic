@@ -151,6 +151,21 @@
         height: 35px;
         font-size: 13px;
     }
+
+    .main_search_box {
+        height: 2.5em;
+        font-size: 1.4em;
+    }
+    .top_wraper2 ul li {
+        font-weight: normal;
+        line-height: 1.4;
+    }
+    .text2 {
+        font-size: 1.6em;
+    }
+    .heading_text {
+        font-size: 2em;
+    }
 }
 
 @media(min-width:768px){
