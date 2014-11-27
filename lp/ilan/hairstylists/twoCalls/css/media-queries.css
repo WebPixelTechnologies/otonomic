@@ -48,6 +48,9 @@
     .top_text {
         display: none;
     }
+    blockquote:before {
+        left: 0px;
+    }
 
     .container2 {
         width: 100%;
@@ -66,18 +69,20 @@
         padding: 0 20px;
         margin: 10px;
     }
-
     .top_wraper2 ul{font-size:14px;}
 
     .heading_text {
         margin: 0;
         text-align: center;
+        margin-bottom: 15px;
     }
     .text2 {
         text-align: center;
     }
     .main_search_box {
-        width: calc(100% - 75px)!important;
+        width: calc(100% - 100px)!important;
+        /*width: calc(85%) !important;*/
+        min-width: 70%;
     }
     .btn_go {
         display: none;
@@ -100,6 +105,7 @@
         margin: 0 -15px;
         text-align: center;
         background-color: #ff3d5a;
+        padding: 10px;
     }
     .testimonail_list {
         width: 100%;
@@ -111,7 +117,7 @@
         display: inline-block;
     }
     blockquote {
-        font-size: 12px;
+        font-size: 14px;
         margin: 0;
         padding: 10px 0 0 20px;
         position: relative;
@@ -140,8 +146,31 @@
     .p2s_fanpages .close-search {
         display: none!important;
     }
-    .step {font-size:50px;}
+    .step {
+        /*font-size:14px;*/
+        margin-right:0px;
+    }
+    .main_search_box {
+        height: 35px;
+        font-size: 13px;
+    }
+
+    .main_search_box {
+        height: 2.5em;
+        font-size: 1.4em;
+    }
+    .top_wraper2 ul li {
+        font-weight: normal;
+        line-height: 1.4;
+    }
+    .text2 {
+        font-size: 1.6em;
+    }
+    .heading_text {
+        font-size: 2em;
+    }
 }
+
 @media(min-width:768px){
 
 }
