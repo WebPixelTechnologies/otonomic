@@ -12,7 +12,7 @@
     <meta property="og:description"
           content="Otonomic turns your Facebook business page into a website."/>
     <meta property="og:url" content="http://www.otonomic.com/lp/ilan/hairstylists/twoCalls/"/>
-    <meta property="og:image" content="http://www.otonomic.com/images/hairstyleWebsite-theme-154x113_4x.jpg"/>
+    <meta property="og:image" content="http://www.otonomic.com/images/personalTrainersWebsite-theme-154x113_4x.jpg"/>
 
     <!-- Bootstrap -->
     <link href="css/styles.css" rel="stylesheet">
