@@ -27,26 +27,26 @@
 
 @media (min-width: 1200px) {
     .csszoom{
-        -ms-transform: scale(1.255); /* IE 9 */
-        -moz-transform: scale(1.255); /* Firefox */
-        -o-transform: scale(1.255); /* Opera */
-        -webkit-transform: scale(1.255); /* Safari And Chrome */
-        transform: scale(1.255); /* Standard Property */
+        -ms-transform: scale(1.1); /* IE 9 */
+        -moz-transform: scale(1.1); /* Firefox */
+        -o-transform: scale(1.1); /* Opera */
+        -webkit-transform: scale(1.1); /* Safari And Chrome */
+        transform: scale(1.1); /* Standard Property */
     }
     .ie8 .csszoom{
         zoom:1.255;
     }
     .fancybox-wrap.fancybox-type-swf {
-        -webkit-transform: scale(.9) !important;
+        -webkit-transform: scale(.8) !important;
     }}
 
 @media (min-width: 1440px) {
     .csszoom{
-        -ms-transform: scale(1.5); /* IE 9 */
-        -moz-transform: scale(1.5); /* Firefox */
-        -o-transform: scale(1.5); /* Opera */
-        -webkit-transform: scale(1.5); /* Safari And Chrome */
-        transform: scale(1.5); /* Standard Property */
+        -ms-transform: scale(1.4); /* IE 9 */
+        -moz-transform: scale(1.4); /* Firefox */
+        -o-transform: scale(1.4); /* Opera */
+        -webkit-transform: scale(1.4); /* Safari And Chrome */
+        transform: scale(1.4); /* Standard Property */
     }
     .ie8 .csszoom{
         zoom:1.5;
@@ -63,6 +63,21 @@
 
 @media (min-width: 1600px) {
     .csszoom{
+        -ms-transform: scale(1.5); /* IE 9 */
+        -moz-transform: scale(1.5); /* Firefox */
+        -o-transform: scale(1.5); /* Opera */
+        -webkit-transform: scale(1.5); /* Safari And Chrome */
+        transform: scale(1.5); /* Standard Property */
+    }
+    .ie8 .csszoom{
+        zoom:1.5;
+    }
+    .fancybox-wrap.fancybox-type-swf {
+        -webkit-transform: scale(.75) !important;
+    }}
+
+@media (min-width: 1901px) {
+    .csszoom{
         -ms-transform: scale(1.7); /* IE 9 */
         -moz-transform: scale(1.7); /* Firefox */
         -o-transform: scale(1.7); /* Opera */
@@ -71,21 +86,6 @@
     }
     .ie8 .csszoom{
         zoom:1.7;
-    }
-    .fancybox-wrap.fancybox-type-swf {
-        -webkit-transform: scale(.75) !important;
-    }}
-
-@media (min-width: 1901px) {
-    .csszoom{
-        -ms-transform: scale(1.85); /* IE 9 */
-        -moz-transform: scale(1.85); /* Firefox */
-        -o-transform: scale(1.85); /* Opera */
-        -webkit-transform: scale(1.85); /* Safari And Chrome */
-        transform: scale(1.85); /* Standard Property */
-    }
-    .ie8 .csszoom{
-        zoom:1.85;
     }
     .fancybox-wrap.fancybox-type-swf {
         -webkit-transform: scale(.7) !important;
