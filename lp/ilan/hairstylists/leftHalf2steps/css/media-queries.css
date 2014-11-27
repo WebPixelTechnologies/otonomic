@@ -74,13 +74,15 @@
     .heading_text {
         margin: 0;
         text-align: center;
+        margin-bottom: 15px;
     }
     .text2 {
         text-align: center;
     }
     .main_search_box {
-        /*width: calc(100% - 75px)!important;*/
-        width: calc(85%)!important;
+        width: calc(100% - 100px)!important;
+        /*width: calc(85%) !important;*/
+        min-width: 70%;
     }
     .btn_go {
         display: none;
@@ -103,6 +105,7 @@
         margin: 0 -15px;
         text-align: center;
         background-color: #ff3d5a;
+        padding: 10px;
     }
     .testimonail_list {
         width: 100%;
