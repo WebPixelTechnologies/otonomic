@@ -24,7 +24,7 @@
     }
 }
 
-@media(max-width:767px){
+@media (max-device-width:767px){
         body {
         background: none;
     }
@@ -58,11 +58,12 @@
     }
 
     .top_wraper2 {
-        width: 100%;
+        /* width: 100%;*//
         margin: 25px 0 15px 0;
         padding: 0 15px;
         float: none;
     }
+    .top_wraper2 ul{font-size:14px;}
 
     .heading_text {
         margin: 0;
@@ -106,13 +107,13 @@
         display: inline-block;
     }
     blockquote {
-        font-size: 10px;
+        font-size: 12px;
         margin: 0;
-        padding: 10px 0 0 10px;
+        padding: 10px 0 0 20px;
         position: relative;
         color: #fff;
         display: inline-block;
-        width: calc(100% - 70px);
+        width: calc(100% - 80px);
         vertical-align: top;
     }
     .footer_text {
@@ -135,6 +136,7 @@
     .p2s_fanpages .close-search {
         display: none!important;
     }
+    .step {font-size:50px;}
 }
 @media(min-width:768px){
 
