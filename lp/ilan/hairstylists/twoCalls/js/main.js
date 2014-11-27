@@ -92,6 +92,9 @@ $(function(){
         event.preventDefault();
 
         track_virtual_pageview('/virtual_pageview/lp/ilan/hairstylists/step2/', 'LP Hairstylists promotion - step 2 - share the promotion');
+
+        track_virtual_pageview('/virtual_pageview/lp/ilan/hairstylists/registered_to_promotion/', 'LP Hairstylists promotion - user registered to promotion');
+
         trackFacebookPixel('registered_to_promotion');
 
         fb_page_id = jQuery(this).attr('data-facebook-page-id');
