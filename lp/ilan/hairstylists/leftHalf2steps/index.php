@@ -22,6 +22,16 @@
     <meta property="og:url" content="http://www.otonomic.com/lp/ilan/hairstylists/twoCalls/"/>
     <meta property="og:image" content="http://www.otonomic.com/images/hairstyleWebsite-theme-154x113_4x.jpg"/>
 
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-37736198-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
     <link rel="stylesheet" type="text/css" href="css/media-queries.css?v=0.0.3" />
     <script type="text/javascript" async="" src="http://cdn.luckyorange.com/w.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
