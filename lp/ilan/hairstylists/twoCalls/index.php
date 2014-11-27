@@ -21,7 +21,7 @@
           content="Otonomic turns your Facebook business page into a website."/>
     <meta property="og:url" content="http://www.otonomic.com/lp/ilan/hairstylists/twoCalls/"/>
     <meta property="og:image" content="http://www.otonomic.com/images/hairstyleWebsite-theme-154x113_4x.jpg"/>
-
+    <link rel="stylesheet" type="text/css" href="css/searchResults.css">
     <link rel="stylesheet" type="text/css" href="css/media-queries.css?v=0.0.3" />
     <script type="text/javascript" async="" src="http://cdn.luckyorange.com/w.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -29,7 +29,6 @@
     <script type="text/javascript" src="js/main.js?v=1.0"></script>
     <script src="/js/otonomic-analytics.js"></script>
     <script type="text/javascript" async="" src="http://cdn.luckyorange.com/w.js"></script>
-    <script src="/js/otonomic-analytics.js"></script>
     <!-- Google Analytics Content Experiment code -->
     <script>function utmx_section(){}function utmx(){}(function(){var
     k='71111072-6',d=document,l=d.location,c=d.cookie;
@@ -88,7 +87,7 @@
                         <img src="images/facebook-icon.svg">
                         Share on facebook
                     </a>
-                    <a class="tweet" href="https://twitter.com/intent/tweet?url=http://otonomic.com/&via=otonomic&text=Only 45 Hours: FREE website for your hair salon: Otonomic turns your Facebook business page into a website">
+                    <a class="tweet" href="https://twitter.com/intent/tweet?url=http://bit.ly/hsalon&text=Only for 45 Hours! FREE website for your hair salon: @Otonomic turns your Facebook biz page into an amazing website">
                         <img src="images/twitter-icon.svg">
                         Share on twitter
                     </a>             
@@ -124,7 +123,6 @@
     </div>
 </div>
 </div>
-
     <!-- Search box template -->
     <div style="display: none">
       <div class="t_box">
@@ -173,8 +171,6 @@
     </div>
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
     <script type="text/javascript" src="https://d2zxr4ixkv1lwq.cloudfront.net/lp/js/jquery.jsonp-2.4.0.min.js" defer></script>
-
-    <link rel="stylesheet" type="text/css" href="css/searchResults.css">
     <script type="text/javascript" src="/js/search_filterv1.0.4-wp.js?v=1.0.4"></script>
     <link href="http://d2zxr4ixkv1lwq.cloudfront.net/lp/css/tipsy.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="http://d2zxr4ixkv1lwq.cloudfront.net/lp/js/jquery.tipsy.js" defer></script>
