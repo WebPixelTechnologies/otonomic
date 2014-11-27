@@ -1,0 +1,93 @@
+.csszoom{
+    overflow-x: hidden;
+   transform-origin: center top 0;
+   -ms-transform-origin: center top 0;
+   -mos-transform-origin: center top 0;
+   -webkit-transform-origin: center top 0;
+   -o-transform-origin: center top 0;
+    -ms-transform-origin-y: 0;
+    -moz-transform-origin-y: 0;
+    -o-transform-origin-y:0;
+    -webkit-transform-origin-y:0;
+}
+
+@media (max-width: 801px) {
+    .csszoom{
+        -ms-transform: scale(.75); /* IE 9 */
+        -moz-transform: scale(.75); /* Firefox */
+        -o-transform: scale(.75); /* Opera */
+        -webkit-transform: scale(.75); /* Safari And Chrome */
+        transform: scale(.75); /* Standard Property */
+    }
+    .ie8 .csszoom{
+        zoom:.75;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .csszoom{
+        -ms-transform: scale(1.255); /* IE 9 */
+        -moz-transform: scale(1.255); /* Firefox */
+        -o-transform: scale(1.255); /* Opera */
+        -webkit-transform: scale(1.255); /* Safari And Chrome */
+        transform: scale(1.255); /* Standard Property */
+    }
+    .ie8 .csszoom{
+        zoom:1.255;
+    }
+    .fancybox-wrap.fancybox-type-swf {
+        -webkit-transform: scale(.9) !important;
+    }}
+
+@media (min-width: 1440px) {
+    .csszoom{
+        -ms-transform: scale(1.5); /* IE 9 */
+        -moz-transform: scale(1.5); /* Firefox */
+        -o-transform: scale(1.5); /* Opera */
+        -webkit-transform: scale(1.5); /* Safari And Chrome */
+        transform: scale(1.5); /* Standard Property */
+    }
+    .ie8 .csszoom{
+        zoom:1.5;
+    }
+    .fancybox-wrap.fancybox-type-swf {
+        -webkit-transform: scale(.8) !important;
+    }
+
+    #search_wrapper_main {
+        -webkit-transform: scale(0.8);
+        -webkit-transform-origin: 0% 0% 0px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .csszoom{
+        -ms-transform: scale(1.7); /* IE 9 */
+        -moz-transform: scale(1.7); /* Firefox */
+        -o-transform: scale(1.7); /* Opera */
+        -webkit-transform: scale(1.7); /* Safari And Chrome */
+        transform: scale(1.7); /* Standard Property */
+    }
+    .ie8 .csszoom{
+        zoom:1.7;
+    }
+    .fancybox-wrap.fancybox-type-swf {
+        -webkit-transform: scale(.75) !important;
+    }}
+
+@media (min-width: 1901px) {
+    .csszoom{
+        -ms-transform: scale(1.85); /* IE 9 */
+        -moz-transform: scale(1.85); /* Firefox */
+        -o-transform: scale(1.85); /* Opera */
+        -webkit-transform: scale(1.85); /* Safari And Chrome */
+        transform: scale(1.85); /* Standard Property */
+    }
+    .ie8 .csszoom{
+        zoom:1.85;
+    }
+    .fancybox-wrap.fancybox-type-swf {
+        -webkit-transform: scale(.7) !important;
+    }}
+

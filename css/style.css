@@ -556,6 +556,9 @@ section.features .row{
 	display: inline-block;
 	border-right: 1px solid #cccccc;
 }
+.section-media .media-item:last-child{
+	border: 0;
+}
 .section-media .media-item img{
 	margin: 0 10px;
 }
