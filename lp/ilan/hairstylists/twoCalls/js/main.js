@@ -99,6 +99,12 @@ $(function(){
 		track_event("Hair Stylists Lead", "Lead Generated", "Page ID: "+fb_page_id);
 		track_event("Hair Stylists Lead", "Lead Generated", "Page name:"+fb_page_name);
 		track_event("Hair Stylists Lead", "Lead Generated", "Category:"+fb_page_category);
+		
+		/* lets also send email */
+		jQuery.post(
+			'/send-mail.php',
+			{ category: fb_page_category, page_id: fb_page_id , page_name: fb_page_name }
+		);
 
 		//alert(fb_page_id);
         // Hide search form
