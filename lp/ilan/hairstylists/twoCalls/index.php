@@ -81,7 +81,7 @@
             </div>
             <div style="clear:both"></div>
             <div class="testimonial">
-                <div class="no_of_website_counting"><span class="counting_no">30,218</span><span>website created, and counting...</span></div>
+                <div class="no_of_website_counting"><span class="counting_no">30,218</span><span>Websites created, and counting...</span></div>
                 <div class="testimonials_wrap">
                     <div class="testimonail_list">
                         <div class="user_image"><img src="images/user1.png" alt=" " /></div>

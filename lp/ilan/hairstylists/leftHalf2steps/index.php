@@ -7,9 +7,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Otonomic - turn your Facebook page into a professional website</title>
     <link rel="shortcut icon" href="favicon.ico">
-
     <link rel="stylesheet" type="text/css" href="css/style.css?v=0.0.1">
     <style>
+        body{
+            background: #fcf8f5 url(images/smartphone-bg-pattern.png);
+        }
         .search_results .close-search{ display: block !important;}
     </style>
 
@@ -25,7 +27,7 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
     <script type="text/javascript" src="js/main.js?v=1.0"></script>
-    <script src="/js/otonomic-analytics.js"></script>
+    <script src="http://otonomic.com/js/otonomic-analytics.js"></script>
 
 </head>
 
@@ -39,14 +41,14 @@
                 <div class="top_text">We take your Facebook page and automatically turn it into a Web & Mobile website!</div>
             </header>
             <div class="top_wraper2">
-                <h2 class="js-heading-text heading_text">Get your free <br>and beautiful website!</h2>
-                <p class="text2">How? it’s easy!</p>
-                <ul>
+                <h2 class="js-heading-text heading_text">Get a free and beautiful <br>website in 3 easy steps!</h2>
+                <p class="js-text2 text2">How? it’s easy!</p>
+                <ul class="js-steps-list">
                     <li class="active"><span id="step-1" class="step">1</span> Enter your Facebook business page</li>
-                    <li><span id="step-2" class="step">2</span> Share this promotion with your friends</li>
-                    <li><span id="step-3" class="step">3</span> Sit tight while we get your website ready.</li>
+                    <li><span id="step-2" class="step">2</span> Sit tight while we work on your website</li>
+                    <li><span id="step-3" class="step">3</span> We’ll contact you when your site is ready</li>
                 </ul>
-                <p class="js-text3 text3" style="opacity: 0;">Spread the word</p>
+                <p class="js-text3 text3" style="opacity: 0;">Share this promotion with your friends</p>
                 <!-- Search input field -->
                 <div class="p2s_fanpages">
                   <div class="search-field form-search">
@@ -60,7 +62,7 @@
                       <button id="btn_go" class="btn btn_go" data-attr="center" data-target-field="main_search_box" type="button">Get my website</button>
                     </span>
                     <span class="close-search" onClick="closeSearch('#search_wrapper_main','center')" style="display: none;">
-                      <img src="/shared/fanpages/images/close.png" width="32" height="32">
+                      <img src="http://otonomic.com/shared/fanpages/images/close.png" width="32" height="32">
                     </span>
                   </div>
                   <div class="tb search-wrapper" id="search_wrapper_main" data-attr="center"></div>
@@ -76,6 +78,7 @@
                         Share on twitter
                     </a>             
                 </div>
+                <p class="js-text3 text3" style="opacity: 0;">Now, we’ll take care of the rest and send you an email when your website is ready.</p>
             </div>
             <div style="clear:both"></div>
             <div class="testimonial">
@@ -158,12 +161,12 @@
     <script type="text/javascript" src="https://d2zxr4ixkv1lwq.cloudfront.net/lp/js/jquery.jsonp-2.4.0.min.js" defer></script>
 
     <link rel="stylesheet" type="text/css" href="css/searchResults.css">
-    <script type="text/javascript" src="/js/search_filterv1.0.4-wp.js?v=1.0.4"></script>
+    <script type="text/javascript" src="http://otonomic.com/js/search_filterv1.0.4-wp.js?v=1.0.4"></script>
     <link href="http://d2zxr4ixkv1lwq.cloudfront.net/lp/css/tipsy.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="http://d2zxr4ixkv1lwq.cloudfront.net/lp/js/jquery.tipsy.js" defer></script>
-    <script type="text/javascript" src="/js/otonomicv1.0.4.js"></script>
+    <script type="text/javascript" src="http://otonomic.com/js/otonomicv1.0.4.js"></script>
 
-    <script type="text/javascript" src="/js/functions.js"></script>
+    <script type="text/javascript" src="http://otonomic.com/js/functions.js"></script>
 
 </body>
 </html>
