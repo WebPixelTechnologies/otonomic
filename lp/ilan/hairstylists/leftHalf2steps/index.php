@@ -27,7 +27,7 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
     <script type="text/javascript" src="js/main.js?v=1.0"></script>
-    <script src="http://otonomic.com/js/otonomic-analytics.js"></script>
+    <script src="/js/otonomic-analytics.js"></script>
 
 </head>
 
@@ -62,7 +62,7 @@
                       <button id="btn_go" class="btn btn_go" data-attr="center" data-target-field="main_search_box" type="button">Get my website</button>
                     </span>
                     <span class="close-search" onClick="closeSearch('#search_wrapper_main','center')" style="display: none;">
-                      <img src="http://otonomic.com/shared/fanpages/images/close.png" width="32" height="32">
+                      <img src="/shared/fanpages/images/close.png" width="32" height="32">
                     </span>
                   </div>
                   <div class="tb search-wrapper" id="search_wrapper_main" data-attr="center"></div>
@@ -161,12 +161,12 @@
     <script type="text/javascript" src="https://d2zxr4ixkv1lwq.cloudfront.net/lp/js/jquery.jsonp-2.4.0.min.js" defer></script>
 
     <link rel="stylesheet" type="text/css" href="css/searchResults.css">
-    <script type="text/javascript" src="http://otonomic.com/js/search_filterv1.0.4-wp.js?v=1.0.4"></script>
+    <script type="text/javascript" src="/js/search_filterv1.0.4-wp.js?v=1.0.4"></script>
     <link href="http://d2zxr4ixkv1lwq.cloudfront.net/lp/css/tipsy.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="http://d2zxr4ixkv1lwq.cloudfront.net/lp/js/jquery.tipsy.js" defer></script>
-    <script type="text/javascript" src="http://otonomic.com/js/otonomicv1.0.4.js"></script>
+    <script type="text/javascript" src="/js/otonomicv1.0.4.js"></script>
 
-    <script type="text/javascript" src="http://otonomic.com/js/functions.js"></script>
+    <script type="text/javascript" src="/js/functions.js"></script>
 
 </body>
 </html>
