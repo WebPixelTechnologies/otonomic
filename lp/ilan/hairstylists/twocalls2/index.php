@@ -5,16 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Otonomic - Trainers</title>
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <meta property="og:title" content="Free website for your hair salon - only 45 Hours left!"/>
+    <meta property="og:site_name" content="Otonomic"/>
+    <meta property="og:description"
+          content="Otonomic turns your Facebook business page into a website."/>
+    <meta property="og:url" content="http://www.otonomic.com/lp/ilan/hairstylists/twoCalls/"/>
+    <meta property="og:image" content="http://www.otonomic.com/images/hairstyleWebsite-theme-154x113_4x.jpg"/>
 
     <!-- Bootstrap -->
     <link href="css/styles.css" rel="stylesheet">
-
+    
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="/js/otonomic-analytics.js"></script>
   </head>
   <body>
     <div id="fb-root"></div>

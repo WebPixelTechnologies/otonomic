@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Otonomic - turn your Facebook page into a professional website</title>
+    <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/style.css?v=0.0.1">
     <style>
         body{
@@ -43,7 +44,7 @@
                 <h2 class="js-heading-text heading_text">Get your free <br>and beautiful website!</h2>
                 <p class="text2">How? it’s easy!</p>
                 <ul>
-                    <li class="active"><span id="step-1" class="step">1</span> Enter with your Facebook business page</li>
+                    <li class="active"><span id="step-1" class="step">1</span> Enter your Facebook business page</li>
                     <li><span id="step-2" class="step">2</span> Share this promotion with your friends</li>
                     <li><span id="step-3" class="step">3</span> Sit tight while we get your website ready.</li>
                 </ul>
