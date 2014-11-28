@@ -19,7 +19,7 @@
     <meta property="og:site_name" content="Otonomic"/>
     <meta property="og:description"
           content="Otonomic turns your Facebook business page into a website."/>
-    <meta property="og:url" content="http://www.otonomic.com/lp/ilan/hairstylists/twoCalls/"/>
+    <meta property="og:url" content="http://bit.ly/hsalon6"/>
     <meta property="og:image" content="http://www.otonomic.com/images/hairstyleWebsite-theme-154x113_4x.jpg"/>
 
     <link rel="stylesheet" type="text/css" href="css/searchResults.css">
