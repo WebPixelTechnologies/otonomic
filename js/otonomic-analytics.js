@@ -97,7 +97,7 @@ function track_event(category, action, label, value){
 			'eventCategory': category,
 			'eventAction': action,
 			'eventLabel': label,
-			'value':value
+			'eventValue':value
 		});
     }
 

@@ -49,15 +49,14 @@ function shareOnFB()
 	{
 		if (t["post_id"])
 		{
-          //your download content goes here
-          // Do something there
+            track_event("Hair LandingPage TwoCol", "Share FB");
         }
     });
 }
 
 
 twttr.events.bind('tweet', function (event) {
-      // Do something there
+    track_event("Hair LandingPage TwoCol", "Share Twitter");
 });
 
 
@@ -83,9 +82,9 @@ $(function(){
     $('#search_wrapper_main').on('click', '.search-results-item', function(event){
         event.preventDefault();
 
-        track_virtual_pageview('/virtual_pageview/lp/ilan/hairstylists/step2/', 'LP Hairstylists promotion - step 2 - share the promotion');
+        track_virtual_pageview('lp/ilan/hairstylists/step2/', 'LP Hairstylists promotion - step 2 - share the promotion');
 
-        track_virtual_pageview('/virtual_pageview/lp/ilan/hairstylists/registered_to_promotion/', 'LP Hairstylists promotion - user registered to promotion');
+        track_virtual_pageview('lp/ilan/hairstylists/registered_to_promotion/', 'LP Hairstylists promotion - user registered to promotion');
 
         trackFacebookPixel('registered_to_promotion');
 
