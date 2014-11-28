@@ -84,7 +84,7 @@
                         <img src="images/facebook-icon.svg">
                         Share on facebook
                     </a>
-                    <a class="tweet" href="https://twitter.com/intent/tweet?url=http://bit.ly/hsalon&text=Only for 45 Hours! FREE website for your hair salon: @Otonomic turns your Facebook biz page into an amazing website">
+                    <a class="tweet" href="https://twitter.com/intent/tweet?url=http://bit.ly/hsalon2&text=Only for 45 Hours! FREE website for your hair salon: @Otonomic turns your Facebook biz page into an amazing website">
                         <img src="images/twitter-icon.svg">
                         Share on twitter
                     </a>             
