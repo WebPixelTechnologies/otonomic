@@ -7,6 +7,13 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Otonomic - turn your Facebook page into a professional website</title>
+    <meta property="og:title" content="Free website for your hair salon - only 45 Hours left!"/>
+    <meta property="og:site_name" content="Otonomic"/>
+    <meta property="og:description"
+          content="Otonomic turns your Facebook business page into a website."/>
+    <meta property="og:url" content="http://bit.ly/hsalon6/"/>
+    <meta property="og:image" content="http://www.otonomic.com/images/hairstyleWebsite-theme-154x113_4x.jpg"/>
+
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/style.css?v=0.0.1">
     <style>
@@ -15,13 +22,6 @@
         }
         .search_results .close-search{ display: block !important;}
     </style>
-
-    <meta property="og:title" content="Free website for your hair salon - only 45 Hours left!"/>
-    <meta property="og:site_name" content="Otonomic"/>
-    <meta property="og:description"
-          content="Otonomic turns your Facebook business page into a website."/>
-    <meta property="og:url" content="http://bit.ly/hsalon6/"/>
-    <meta property="og:image" content="http://www.otonomic.com/images/hairstyleWebsite-theme-154x113_4x.jpg"/>
 
     <link rel="stylesheet" type="text/css" href="css/searchResults.css">
     <link rel="stylesheet" type="text/css" href="css/media-queries.css?v=0.0.3" />
