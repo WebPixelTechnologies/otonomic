@@ -1,7 +1,7 @@
 @import "bootstrap-compass";
 @import "bootstrap-variables";
 @import "bootstrap";
-@import "alef_webfont";
+@import "../fonts/alef/alef_webfont";
 
 
 
@@ -9,200 +9,200 @@
 // Colors 
 $pink: #ff3b58;
 body {
-	font-family: 'Alef', Helvetica, Arial, sans-serif;
+    font-family: 'Alef', Helvetica, Arial, sans-serif;
 }
 
 header {
-	height: 70px;
-	background-color: #000;
+    height: 70px;
+    background-color: #000;
 
-	.logo-img {
-		margin: 12.5px 20px;
-	}
-	.fb-like {
-		margin: 23.5px 20px;
-	}
+    .logo-img {
+        margin: 12.5px 20px;
+    }
+    .fb-like {
+        margin: 23.5px 20px;
+    }
 }
 .pink-text {
-	color: $pink;
+    color: $pink;
 }
 .splash {
-	position: relative;
+    position: relative;
 
-	.splash-title-container {
-		position: absolute;
-		height: 115px;
-		width: 100%;
-		text-align: center;
-		background-color: rgba(0,0,0,.8);
-		@include box-shadow( 0 5px 0 rgba(0,0,0,.3));
-	}
-	.splash-title {
-		color: $pink;
-	}
-	.splash-sub-title {
-		color: white;
-		font-size: 17px;
-		li {
-			display: inline-block;
-			margin-right: 10px;
-			.pink-text {
-				margin-right: 10px;
-				font-size: 20px;
-			}
-		}
-	}
-	.search-container {
-		position: absolute;
-		top: calc(50% - -25px);
-		left: 0;
-		right: 0;
-		text-align: center;
-		.form-group {
-			border-radius: 12px;
-			@include box-shadow(0 0 25px 0 rgba(0,0,0,.8));
-		}
-		.form-control {
-			width: 380px;
-			height: 55px;
-			text-align: center;
-			@include box-shadow(0 0 0 5px rgba(0,0,0, 0.2));
-			border-radius: 12px;
-		}
-		.btn {
-			margin-left: 10px;
-			padding: 6px 30px;
-			height: 65px;
-			font-size: 16px;
-			font-weight: bold;
-			border: 0;
-			border-radius: 12px;
-			@include box-shadow(0 0 25px 0 rgba(0,0,0,.8));
-		}
-	}
-	.splash-bottom-text {
-		position: absolute;
-		margin-bottom: 30px;
-		top: calc(50% + 125px);
-		left: 0;
-		right: 0;
-		font-size: 18px;
-		text-align: center;
-		color: #000;
-		
-		span {
-			font-weight: bold;
-		}
-	}
-	.splash-img {
-		width: 100%;
-	}
+    .splash-title-container {
+        position: absolute;
+        height: 115px;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(0,0,0,.8);
+        @include box-shadow( 0 5px 0 rgba(0,0,0,.3));
+    }
+    .splash-title {
+        color: $pink;
+    }
+    .splash-sub-title {
+        color: white;
+        font-size: 17px;
+        li {
+            display: inline-block;
+            margin-right: 10px;
+            .pink-text {
+                margin-right: 10px;
+                font-size: 20px;
+            }
+        }
+    }
+    .search-container {
+        position: absolute;
+        top: calc(50% - -25px);
+        left: 0;
+        right: 0;
+        text-align: center;
+        .form-group {
+            border-radius: 12px;
+            @include box-shadow(0 0 25px 0 rgba(0,0,0,.8));
+        }
+        .form-control {
+            width: 380px;
+            height: 55px;
+            text-align: center;
+            @include box-shadow(0 0 0 5px rgba(0,0,0, 0.2));
+            border-radius: 12px;
+        }
+        .btn {
+            margin-left: 10px;
+            padding: 6px 30px;
+            height: 65px;
+            font-size: 16px;
+            font-weight: bold;
+            border: 0;
+            border-radius: 12px;
+            @include box-shadow(0 0 25px 0 rgba(0,0,0,.8));
+        }
+    }
+    .splash-bottom-text {
+        position: absolute;
+        margin-bottom: 30px;
+        top: calc(50% + 125px);
+        left: 0;
+        right: 0;
+        font-size: 18px;
+        text-align: center;
+        color: #000;
+        
+        span {
+            font-weight: bold;
+        }
+    }
+    .splash-img {
+        width: 100%;
+    }
 }
 
 .splash2 {
-	@extend .splash;
+    @extend .splash;
 
-	.splash-title-container {
-		padding: 90px 0 0 0;
-		background-color: transparent;
-		@include box-shadow(none);
-	}
-	.splash-title {
-		color: #000;
-	}
-	.search-container {
-		top: calc(50% + 5px);
-	}
-	.splash-bottom-text {
-		top: calc(50% + 90px);
-	}
-	
+    .splash-title-container {
+        padding: 90px 0 0 0;
+        background-color: transparent;
+        @include box-shadow(none);
+    }
+    .splash-title {
+        color: #000;
+    }
+    .search-container {
+        top: calc(50% + 5px);
+    }
+    .splash-bottom-text {
+        top: calc(50% + 90px);
+    }
+    
 }
 
 .features {
-	background-color: #f4f4f4;
-	color: #3d3531;
+    background-color: #f4f4f4;
+    color: #3d3531;
 
-	.feature {
+    .feature {
 
-		padding: 50px 30px;
+        padding: 50px 30px;
 
-		img {
-			display: inline-block;
-			width: 72px;
-			vertical-align: text-bottom;
-		}
-		h3 {
-			display: inline-block;
-			font-weight: bold;
-			padding-left: 20px;
-			width: calc(100% - 85px);
-		}
-		p {
-			color: #3d3531;
-			line-height: 22px;
-		}
-	}
+        img {
+            display: inline-block;
+            width: 72px;
+            vertical-align: text-bottom;
+        }
+        h3 {
+            display: inline-block;
+            font-weight: bold;
+            padding-left: 20px;
+            width: calc(100% - 85px);
+        }
+        p {
+            color: #3d3531;
+            line-height: 22px;
+        }
+    }
 }
 
 .testimonials {
-	padding: 50px 0;
-	background-color: #fff;
-	.media-left, .media>.pull-left {
-		padding-right: 20px;
-	}
-	h4 {
-		font-weight: bold;
-		font-size: 22px;
-		line-height: 28px;
-		color: #3d3531;
-		text-transform: uppercase;
-	}
-	p {
-		padding-top: 10px;
-		color: #3d3531;
-		font-size: 15px;
-		line-height: 24px;
-	}
-	img {
-		//border: 3px solid #666666;
-		//border-radius: 3px;
-	}
-	.glyphicon {
-		color: #675c58;
-		font-size: 18px;
-		&.active {
-			color: $pink;
-		}
-	}
+    padding: 50px 0;
+    background-color: #fff;
+    .media-left, .media>.pull-left {
+        padding-right: 20px;
+    }
+    h4 {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 28px;
+        color: #3d3531;
+        text-transform: uppercase;
+    }
+    p {
+        padding-top: 10px;
+        color: #3d3531;
+        font-size: 15px;
+        line-height: 24px;
+    }
+    img {
+        //border: 3px solid #666666;
+        //border-radius: 3px;
+    }
+    .glyphicon {
+        color: #675c58;
+        font-size: 18px;
+        &.active {
+            color: $pink;
+        }
+    }
 }
 
 footer {
-	position: relative;
-	height: 70px;
-	padding-top: 30px;
-	color: white;
-	text-align: center;
-	background-color: #000;
+    position: relative;
+    height: 70px;
+    padding-top: 30px;
+    color: white;
+    text-align: center;
+    background-color: #000;
 
-	a {
-		padding: 0 5px;
-		color: white;
-		&:last-child {
-			margin-right: 40px;
-		}
-		&:hover {
-			color: white;
-		}
-	}
+    a {
+        padding: 0 5px;
+        color: white;
+        &:last-child {
+            margin-right: 40px;
+        }
+        &:hover {
+            color: white;
+        }
+    }
 }
 
 // Social buttons
 //////////////////////////////////////////////////
 .social-channels {
-	position: absolute;
-	top: 20px;
-	right: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 .social-btn {
   display: inline-block;
@@ -238,3 +238,138 @@ footer {
 .linkedin-btn{
   background-color: #1884bb;
 }
+
+
+/*==========  Mobile First Method  ==========*/
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+        
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+        
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+        
+    }
+
+/*==========  Non-Mobile First Method  ==========*/
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+        .splash2 .splash-title-container {
+            padding: 30px 0 0 0;
+        }
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+        
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+        .splash,
+        .splash2 {
+
+            .splash-title-container {
+                position: initial;
+                height: auto;
+                padding: 20px 15px;
+                @include box-shadow(none);
+            }
+            .splash-sub-title {
+                padding: 0;
+                text-align: left;
+            }
+            .search-container {
+                position: initial;
+                padding: 0 10px;
+                background-color: rgba(0,0,0,0.8);
+                .form-control {
+                    width: 100%;
+                }
+                .form-group {
+                    display: inline-block;
+                    width: calc(100% - 65px);
+                }
+                .btn {
+                    display: inline-block;
+                    width: 50px;
+                    height: 55px;
+                    padding: 6px 17px;
+                    color: transparent;
+                    font-family: 'Glyphicons Halflings';
+                    &:before {
+                        content: "\e080";
+                        color: white;
+                    }
+                }
+            }
+
+            .splash-bottom-text {
+                position: initial;
+                padding: 20px;
+                margin-bottom: 0;
+                color: white;
+                background-color: rgba(0,0,0,0.8);
+                @include box-shadow( 0 5px 0 rgba(0,0,0,.3));
+            }
+        }
+
+        .splash2 {
+            background-color: rgba(0,0,0,0.8);
+            @include box-shadow( 0 5px 0 rgba(0,0,0,.3));
+            .splash-title-container h1{
+                color: white;
+            }
+            .search-container,
+            .splash-bottom-text {
+                background-color: transparent;
+            }
+        }
+        .features{ 
+            padding: 20px 0 0 0;
+            .feature {
+                padding: 0;
+                img {
+                    vertical-align: top;
+                }
+                h3 {
+                    margin-top: 0;
+                }
+            }
+        }
+        // Footer
+        footer {
+            height: auto;
+            .social-channels {
+                position: initial;
+                margin-top: 15px;
+            }
+        }
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+       
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+        
+    }

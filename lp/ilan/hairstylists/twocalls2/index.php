@@ -51,12 +51,12 @@
                 <li><span class="pink-text">4.</span> Publish your awsome website</li>
               </ul>
             </div>
-            <img class="splash-img" src="images/splash-img.jpg">
+            <img class="splash-img hidden-xs hidden-sm" src="images/splash-img.jpg">
             <!-- Search -->
             <div class="search-container">
               <form class="form-inline" role="form">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Enter your Facebook page name (or URL)">
+                    <input type="text" class="form-control" placeholder="Type your Facebook page name (or URL)">
                 </div>
                 <button type="submit" class="btn btn-success">Get my Website!</button>
               </form>
@@ -141,7 +141,7 @@
             <div class="splash-title-container">
               <h1 class="splash-title">Big ass call to action title N0 2</h1>
             </div>
-            <img class="splash-img" src="images/splash-img-2.jpg">
+            <img class="splash-img hidden-xs hidden-sm" src="images/splash-img-2.jpg">
             <!-- Search -->
             <div class="search-container">
               <form class="form-inline" role="form">
