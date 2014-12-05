@@ -8,9 +8,11 @@
 	try{
                 if(isset($_GET['social']) && $_GET['social'] != ""){
                     $social_media_type = $_GET['social'];
+                    $channel = $social_media_type.'_user_auth';
                 }
                 else{
                     $social_media_type = 'Twitter';
+                    $channel = $social_media_type.'_user_auth';
                 }
                 
                 if($social_media_type == "OpenID"){
@@ -27,13 +29,18 @@
                 }
                 
 		$twitter = $hybridauth->authenticate($social_media_type);
+                
+                /* Searialized array containing session access token that can 
+                 be used to access user profile data from backend. 
+                  Use restoreSessionData() to restore that same user session
+                 */
+                $session_data = $hybridauth->getSessionData();
 
 		// return TRUE or False <= generally will be used to check if the user is connected to twitter before getting user profile, posting stuffs, etc..
 		$is_user_logged_in = $twitter->isUserConnected();
 
 		// get the user profile 
 		$user_profile = $twitter->getUserProfile();
-                
                 // $user_profile_data is the array that is to be saved in the database.
                 $user_profile_data = (array) $user_profile;
                 
@@ -41,8 +48,9 @@
                 ?>
 <script language="javascript"> 
 	if(  window.opener ){
-                window.opener.parent.$('#authorize_<?= $social_media_type; ?>').addClass('active');
+                window.opener.parent.$('#authorize_<?= $social_media_type; ?>').addClass('connected');
 		window.opener.parent.$('#authorize_<?= $social_media_type; ?>').append('<img class="social-check" src="images/social-check.png">');
+                window.opener.parent.userConnected('<?= $channel; ?>','<?= $session_data ?>');
 	}
 	window.self.close();
 </script>

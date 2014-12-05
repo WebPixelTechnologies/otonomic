@@ -87,11 +87,11 @@ if (is_localhost()) {
 
 	// Social connect buttons
 	////////////////////////////////////////
-	$('.social-btn').click(function(event){
-		event.preventDefault();
-		$(this).addClass('connected');
-		$(this).append('<img class="social-check" src="images/social-check.png">');
-	});
+//	$('.social-btn').click(function(event){
+//		event.preventDefault();
+//		$(this).addClass('connected');
+//		$(this).append('<img class="social-check" src="images/social-check.png">');
+//	});
 
 	// #see-my-website-btn Click
 	////////////////////////////////////////
@@ -337,7 +337,7 @@ function send_contact_data() {
 	}
 
 	var values_changes = { phone: _phone, address: _address, email: _email}
-
+        
 	request = $.ajax({
 		type: "POST",
 		url: window.site_url + '/?json=settings.set_many',
@@ -446,4 +446,31 @@ function send_dont_need_store() {
 			}
 		}
 	});
+}
+
+function userConnected(channel,auth_data){
+    console.log(window.site_url);
+    
+    request = $.ajax({
+		type: "POST",
+		url: window.site_url + '/?json=settings.set_many',
+		data: { 'test_channel': channel },
+		success: function (data, status, jqxhr) {
+			if (jqxhr.status == 307) {
+				$.post(window.site_url + '/?json=settings.set_many', { 'test_channel': channel });
+				track_event('Loading Page', 'Send Contact Data', '307');
+				return;
+			}
+//			if (data.status == "ok") {
+//				track_event('Loading Page', 'Send Contact Data', 'Success');
+//			} else {
+//				track_event('Loading Page', 'Send Contact Data', 'Failure: data.respond.msg: ' + (data.respond && data.respond.msg));
+//			}
+		},
+		complete: function (jqxhr, status) {
+			if (status !== 'success') {
+				track_event('Loading Page', 'Send Contact Data', 'Failure: ' + status);
+			}
+		}
+    });
 }
