@@ -7,15 +7,58 @@
 class Scrape {
 
     private $response;
+    private $xpath;
     private $respond;
 
      public function __construct(){
      }
 
+    function getResultsHtml($url) {
+        include('simple_html_dom.php');
+        $html = file_get_html($url);
+
+        $result = [];
+
+        // Find all links
+        foreach($html->find('div.review') as $element) {
+            $record = [];
+            $meta_elements = $element->find('meta');
+
+            foreach($meta_elements as $meta) {
+                $key = $meta->itemprop;
+                $value = $meta->content;
+                $record[$key] = $value;
+            }
+
+            $text_containers = $element->find('p');
+            foreach($text_containers as $text_container) {
+                if ($text_container->itemprop == "description") {
+                    $record['text'] = $text_container->innertext;
+                    break;
+                }
+            }
+
+            array_walk($record, 'addslashes_array');
+            $result[] = $record;
+        }
+
+        return ($result);
+    }
+
      public function getResults($url){
          $this->response = $this->getHTML($url);
 
-         $this->getDomObject();
+         $this->xpath = $this->getXpathObject();
+
+         $reviews = $this->getReviewsContainer();
+
+         foreach($reviews as $review) {
+             echo str_replace("\n", "", $review->C14N());
+             die;
+             // $author_name_node = $this->xpath->query("//meta[@itemprop='author']", $review);
+
+
+         }
      }
 
      /**
@@ -55,19 +98,26 @@ class Scrape {
          return $response;
      }
 
-    function getDomObject() {
+    function getXpathObject() {
         $dom = new DOMDocument();
         @$dom->loadHTML($this->response);
+        $dom->preserveWhiteSpace = false;
+
         $xpath     = new DOMXPath($dom);
+        return $xpath;
+    }
 
-        //1376899755889899
-        $results = $xpath->query("//meta[@itemprop]");
+    /**
+     * returns all reviews
+     * @return xpath object
+     */
+    private function getReviewsContainer(){
 
-        foreach ($results as $element) {
-            echo 1;
-        }
+        $xpath = $this->xpath;
+        $results = $xpath->query("//ul[contains(@class, 'ylist ylist-bordered reviews')]/li");
         return $results;
     }
+
 
     /**
       * returns User's name
@@ -226,10 +276,14 @@ class Scrape {
 
  }
 
-$page_id = $_GET['page_id'];
+$url = $_GET['url'];
 $scraper = new Scrape();
-$url = "http://www.yelp.com/biz/rouge-nails-and-spa-rego-park";
+// $url = "http://www.yelp.com/biz/rouge-nails-and-spa-rego-park";
 echo json_encode([
-    'page_id' => $page_id,
-    'result' => $scraper->getResults($url)
+    'url' => $url,
+    'result' => $scraper->getResultsHtml($url)
 ]);
+
+function addslashes_array($value, $key) {
+    return addslashes($value);
+}

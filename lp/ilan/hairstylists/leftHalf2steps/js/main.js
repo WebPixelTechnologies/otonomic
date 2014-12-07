@@ -94,10 +94,11 @@ $(function(){
 		var event_data = 'Page id:'+fb_page_id+', Page name:'+fb_page_name+', Category:'+fb_page_category;
 
         track_event("Hair Stylists Lead", "Lead Generated", event_data);
+        /*
 		track_event("Hair Stylists Lead", "Lead Generated", "Page ID: "+fb_page_id);
 		track_event("Hair Stylists Lead", "Lead Generated", "Page name:"+fb_page_name);
 		track_event("Hair Stylists Lead", "Lead Generated", "Category:"+fb_page_category);
-
+        */
 
         /* lets also send email */
         jQuery.post(

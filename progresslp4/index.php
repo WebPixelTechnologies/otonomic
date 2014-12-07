@@ -17,7 +17,18 @@
     <!-- Custom styles for this template -->
     <link href="css/wp-loading-page.css" rel="stylesheet">
 
-
+    <style>
+        .content-panel h1.title {
+            margin-top: 25px;
+        }
+        .content-panel p {
+            margin-bottom: 20px;
+        }
+        div#social_connect_hybrid {
+            margin-top: -5px;
+            margin-bottom: 25px;
+        }
+    </style>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -47,7 +58,7 @@
           <div class="text-center">
             <img class="logo" src="images/otonomic-logo-dark.png">
             <h1 class="title">Create a brand new website for </h1>
-            <p class="site-name" id="ot-fb-name">YOUR HAIR SALON</p>
+            <p class="site-name" id="ot-fb-name">YOUR BUSINESS</p>
             <h2 >in just 5 clicks!</h2>
             <a href="#" onclick="return false;" class="btn btn-ttc-blue js-intro-next">Let the magic begin!<span class="glyphicon glyphicon-chevron-right"></span></a>
           </div>
@@ -60,7 +71,7 @@
           <img class="logo" src="images/otonomic-logo-dark.png">
           <h1 class="title">Automatic updates, faster than a buzzcut.</h1>
           <p>Otonomic uses your existing Facebook page to build your website.</p>
-          <p>You can instantly integrate other social media networks to your site by clicking below:</p>
+          <p class="">You can instantly integrate other social media networks to your site by clicking below:</p>
           <div id="social_connect_hybrid">
             <a id="authorize_Facebook" class="js-connect-facebook social-btn facebook-btn" href="#"><img src="images/facebook-icon.svg"> Connect with facebook</a>
             <a id="authorize_Twitter" class="js-connect-twitter social-btn twitter-btn" href="#"><img src="images/twitter-icon.svg"> Connect with Twitter</a>
@@ -117,7 +128,7 @@
       <div id="congratz" class="row hidden text-center">
         <img class="logo" src="images/otonomic-logo-dark.png">
         <div class="upper-content">
-          <p class="site-name" id="ot-fb-name">YOUR HAIR SALON</p>
+          <p class="site-name" id="ot-fb-name">YOUR BUSINESS</p>
           <h1 class="congratz-title">website will be ready in <span id="counter">7 seconds</span></h1>
           <div class="fb-like" data-href="https://www.facebook.com/otonomic" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
           <img class="oto-anima" src="images/ottoHoverLoop.gif">
