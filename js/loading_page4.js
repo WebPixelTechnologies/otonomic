@@ -464,6 +464,30 @@ function send_dont_need_booking() {
 }
 
 function userConnected(channel,auth_data){
-    console.log(window.site_url);
+    social_network = channel+"_user_auth";
     
+    request = $.ajax({
+		type: "POST",
+		url: window.site_url + '/?json=settings.set_many',
+		data: { 'test_channel': channel },
+		success: function (data, status, jqxhr) {
+			if (jqxhr.status == 307) {
+				$.post(window.site_url + '/?json=settings.set_many', { 'test_channel': channel });
+                                track_event('Loading Page', 'Send Contact Data', '307');
+				return;
+			}
+                        $('#authorize_'+channel).addClass('connected');
+                        $('#authorize_'+channel).append('<img class="social-check" src="images/social-check.png">');     
+//			if (data.status == "ok") {
+//				track_event('Loading Page', 'Send Contact Data', 'Success');
+//			} else {
+//				track_event('Loading Page', 'Send Contact Data', 'Failure: data.respond.msg: ' + (data.respond && data.respond.msg));
+//			}
+		},
+		complete: function (jqxhr, status) {
+			if (status !== 'success') {
+				track_event('Loading Page', 'Send Contact Data', 'Failure: ' + status);
+			}
+		}
+    });
 }
