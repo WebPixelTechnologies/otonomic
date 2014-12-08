@@ -24,6 +24,7 @@ if (is_localhost()) {
 
     if (page_name) {
         $('.site-name').html(page_name);
+        $('.ot-fb-name').html(page_name);
     }
 
     if(category) {
@@ -106,7 +107,7 @@ if (is_localhost()) {
 		$('#congratz').css('opacity',0).removeClass('hidden').animate({opacity: 1}, 'slow');
 
 		// CountDown
-		var sec = 7;
+		var sec = 8;
 		var timer = setInterval(function() { 
 			if (sec > 1) {
 				$('#congratz #counter').text(--sec+' seconds');
@@ -115,6 +116,8 @@ if (is_localhost()) {
 				$('#congratz #counter').text(--sec+' second');
 				if (sec == 0) {
 					$('#congratz .congratz-title').text('Taking you to your website.');
+                    $('.ot-fb-name').html('');
+                    $('.site-name').html('');
 					// now redirect
 
 				    clearInterval(timer);
@@ -194,17 +197,19 @@ function callback(data) {
 	if (data.status == 'fail') {
 		window.location = data.site_url;
 		track_event('Account Manage', 'Site Exists', data.message);
-        //track_virtual_pageview('site_exists');
+        track_virtual_pageview('site_exists');
 
 	} else {
 		var page_type = window.page_type || 'Fan Page';
 		track_event('Account Manage', 'Create Success', page_type);
-        //track_virtual_pageview('site_created');
+        track_virtual_pageview('site_created');
 	}
 
 	// Site created, facebook fixel
 	window._fbq = window._fbq || [];
-	//window._fbq.push(['track', facebook_site_created_pixel_id, {'value':'0.00', 'currency':'USD'}]);
+    if(!is_localhost()) {
+	    window._fbq.push(['track', facebook_site_created_pixel_id, {'value':'0.00', 'currency':'USD'}]);
+    }
 
 	window.site_url = data.site_url;
 	window.blog_redirect = data.redirect;
@@ -228,10 +233,6 @@ function getParameterByName(name) {
 function getFacebookPageAddress(page_id) {
 	var facebook_query_page_url = "https://graph.facebook.com/" + page_id;
 	$.get(facebook_query_page_url, function (data) {
-		// DEBUG
-		// console.log("the page:" + page_id);
-		// console.log(data);
-
 		if (data.location != undefined && data.location.latitude != undefined && data.location.longitude != undefined) {
 			delete data.location.latitude;
 			delete data.location.longitude;
@@ -250,6 +251,7 @@ function getFacebookPageAddress(page_id) {
 			window.page_type = 'Fan Page';
 		} else {
 			window.page_type = 'Personal Page';
+
 		}
 		window.parsed_page_data = {
 			'phone': phone,
@@ -289,16 +291,13 @@ function createWebsiteUsingAjax(page_id) {
 }
 
 function blog_created() {
-	//alert('blog created');
 	if (window.is_contact_saved == 1) {
 		send_contact_data();
 	}
 
 	if (window.i_need_store == 1) {
 		send_need_store();
-	}
-	else if(window.i_dont_need_store == 1)
-	{
+	} else if(window.i_dont_need_store == 1) {
 		send_dont_need_store();
 	}
 	if (window.set_site_category_pending == 1) {
@@ -306,17 +305,16 @@ function blog_created() {
 	}
 	return;
 }
-function redirect_to_website()
-{
-	if(window.do_redirect == 1 && window.is_blog_ready == 1)
-	{
-		//alert('redirect scheduled');
+
+function redirect_to_website() {
+	if(window.do_redirect == 1 && window.is_blog_ready == 1) {
 		window.setTimeout(function (e){
-			//alert('redirecting to site...');
+			console.log('redirecting to site...');
 			window.location.replace(window.site_url);
-		}, 11000);
+		}, 1000);
 	}
 }
+
 function contact_form_submited() {
 	window.is_contact_saved = 1;
 
@@ -408,7 +406,7 @@ function set_site_category() {
 
 function send_need_store() {
 	track_event('Loading Page', 'Online Store', 'Yes');
-	request = $.ajax({
+	return request = $.ajax({
 		type: "POST",
 		async: "false",
 		url: window.site_url + '/?json=store.create',

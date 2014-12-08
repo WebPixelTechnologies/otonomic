@@ -8,6 +8,12 @@ if (is_localhost()) {
 
 (function ($, window, undefined) {
 
+    var settings = {
+        user_edits_contact: false,
+        user_edits_store: false,
+        user_edits_booking: true
+    };
+
 	var page_id = getParameterByName('page_id');
 	var page_name = getParameterByName('page_name');
     var category = getParameterByName('category');
@@ -23,12 +29,12 @@ if (is_localhost()) {
 
     if (page_name) {
         $('.site-name').html(page_name);
+        $('.ot-fb-name').html(page_name);
     }
 
     if(category) {
         $('#fb_category').val(category);
     }
-
 
     track_event('Loading Page', 'Start');
 	jQuery('input[type=text]').addClass('LoNotSensitive');
@@ -64,9 +70,6 @@ if (is_localhost()) {
 	// Stage-3 next btn
 	$('.js-stage3-next').click(function(event){
 		event.preventDefault();
-
-		store_load_timestamp = new Date();
-
 		$('#stage-3').fadeOut('slow', function () {
 			$(this).addClass('hidden');
 		});
@@ -97,12 +100,8 @@ if (is_localhost()) {
 	////////////////////////////////////////
 	$('#see-my-website-btn').click(function (event) {
 		//event.preventDefault();
-		
-		var cdate = new Date();
-		var time_difff = cdate - page_load_timestamp;
-		
-		track_event('Loading Page', 'Take to website', 'button', time_difff);
-		
+		var cdate = new Date(); var time_diff = cdate - page_load_timestamp;
+		track_event('Loading Page', 'Take to website', 'button', time_diff);
 	    var btn = $(this);
 	    btn.button('loading');
 	});
@@ -111,8 +110,6 @@ if (is_localhost()) {
 	/////////////////////////////////////////////////////
 	function switchToCongratz() {
 		
-		category_load_timestamp = new Date();
-		
 		// fade stage
 		$('#stage-4').fadeOut('slow', function () {
 			$(this).addClass('hidden');
@@ -120,23 +117,28 @@ if (is_localhost()) {
 		$('#congratz').css('opacity',0).removeClass('hidden').animate({opacity: 1}, 'slow');
 
 		// CountDown
-		var sec = 7;
+		var sec = 8;
 		var timer = setInterval(function() { 
 			if (sec > 1) {
 				$('#congratz #counter').text(--sec+' seconds');
-			} else {
 
+            } else {
 				$('#congratz #counter').text(--sec+' second');
 				if (sec == 0) {
-					$('#congratz .congratz-title').text('Taking you to your website.');
-					// now redirect
+					$('#congratz .congratz-title').text('Taking you to your website...');
+                    $('.ot-fb-name').html('');
+                    $('.site-name').html('');
 
-				    clearInterval(timer);
-				} 
+                    clearInterval(timer);
+
+					// now redirect
+                    window.do_redirect = 1;
+                    redirect_to_website();
+                    //window.location.replace(window.site_url);
+				}
 			}
 		}, 1000);
-		// redirect
-		//window.location.replace(window.site_url);
+
 	}
 
 
@@ -144,7 +146,9 @@ if (is_localhost()) {
         window.site_url = builder_domain+'/wp-admin/admin-ajax.php?action=check_page&page_id='+page_id;
         $('#oto-web-url').html('<a href="'+window.site_url+'">this link</a>');
 		createWebsiteUsingAjax(page_id);
-		getFacebookPageAddress(page_id);
+        if(settings.user_edits_address) {
+		    getFacebookPageAddress(page_id);
+        }
 	}
 
 	// Submit Store
@@ -152,19 +156,19 @@ if (is_localhost()) {
 	$('.submit-store').click(function (e) {
 		e.preventDefault();
 
-		var cdate = new Date();
-		var time_difff = cdate - store_load_timestamp;
+		var cdate = new Date(); var time_diff = cdate - page_load_timestamp;
 		
-		track_event('Loading Page', 'Booking Yes', '', time_difff);
-		
+		track_event('Loading Page', 'Store Yes', '', time_diff);
+
+        timed_submit(send_need_store, 'i_need_store');
+        /*
 		if (window.is_blog_ready == 1) {
 			send_need_store();
 		}
 		else {
 			window.i_need_store = 1;
 		}
-		// Switch stage
-		switchToCongratz();
+		*/
 	});
 
 	// Skip Store
@@ -173,20 +177,47 @@ if (is_localhost()) {
 		e.preventDefault();
 
 		var cdate = new Date();
-		var time_difff = cdate - store_load_timestamp;
+		var time_diff = cdate - page_load_timestamp;
 		
-		track_event('Loading Page', 'Boooking No', '', time_difff);
-		
-		send_dont_need_store();
-
-		// Switch stage
-		switchToCongratz();
+		track_event('Loading Page', 'Store No', '', time_diff);
+        timed_submit(send_dont_need_store, 'i_dont_need_store');
+        /*
+		if (window.is_blog_ready == 1) {
+		    send_dont_need_store();
+		} else {
+			window.i_dont_need_store = 1;
+		}
+		*/
 	});
+
+    // Submit Booking
+    $('.submit-booking').click(function (e) {
+        e.preventDefault();
+        var cdate = new Date(); var time_diff = cdate - page_load_timestamp;
+        track_event('Loading Page', 'Booking Yes', '', time_diff);
+        timed_submit(send_need_store, 'i_need_booking');
+    });
+
+    // Skip Booking
+    $('.submit-skip-booking').click(function (e) {
+        e.preventDefault();
+        var cdate = new Date(); var time_diff = cdate - page_load_timestamp;
+        track_event('Loading Page', 'Booking No', '', time_diff);
+        timed_submit(send_dont_need_booking, 'i_dont_need_booking');
+    });
 
 })(jQuery, window);
 
 
 /* required functions */
+function timed_submit(submit_function, submit_parameter) {
+    if (window.is_blog_ready == 1) {
+        submit_function();
+    } else {
+        window[submit_parameter] = 1;
+    }
+
+}
 
 function callback(data) {
 	window.is_blog_ready = 1;
@@ -212,7 +243,9 @@ function callback(data) {
 
 	// Site created, facebook fixel
 	window._fbq = window._fbq || [];
-	//window._fbq.push(['track', facebook_site_created_pixel_id, {'value':'0.00', 'currency':'USD'}]);
+    if(!is_localhost()) {
+	    window._fbq.push(['track', facebook_site_created_pixel_id, {'value':'0.00', 'currency':'USD'}]);
+    }
 
 	window.site_url = data.site_url;
 	window.blog_redirect = data.redirect;
@@ -222,6 +255,8 @@ function callback(data) {
 	jQuery('#oto-web-url').html('<a href="'+data.redirect+'">'+data.site_url+'</a>');
 
 	blog_created();
+
+    redirect_to_website();
 }
 
 function getParameterByName(name) {
@@ -275,7 +310,7 @@ function is_localhost() {
 
 function createWebsiteUsingAjax(page_id) {
 	var request_data = {};
-	request_data.theme = "parallax";
+	request_data.theme = "mycuisine";
 	request_data.facebook_id = encodeURIComponent(page_id);
 
 	// var request_url = "http://wp.otonomic.com/migration/index.php?" + $.param(request_data);
@@ -284,7 +319,7 @@ function createWebsiteUsingAjax(page_id) {
 	var request_url;
     request_url = builder_domain+"/migration/index.php";
 
-	$.ajax({
+	return $.ajax({
 		url: request_url,
 		type: "GET",
 		dataType: "jsonp",
@@ -301,13 +336,36 @@ function blog_created() {
 
 	if (window.i_need_store == 1) {
 		send_need_store();
+	} else if(window.i_dont_need_store == 1) {
+		send_dont_need_store();
 	}
-	if (window.set_site_category_pending == 1) {
-		set_site_category();
+
+    if (window.i_need_booking == 1) {
+        send_need_booking();
+    } else if(window.i_dont_need_booking == 1) {
+        send_dont_need_booking();
+    }
+
+    if (window.set_site_category_pending == 1) {
+		send_site_category();
 	}
 
 	return;
 }
+
+function redirect_to_website() {
+
+	if(window.do_redirect == 1 && window.is_blog_ready == 1) {
+        window.location.replace(window.site_url);
+        /*
+		window.setTimeout(function (e){
+			//alert('redirecting to site...');
+			window.location.replace(window.site_url);
+		}, 400);
+		*/
+	}
+}
+
 
 function contact_form_submited() {
 	window.is_contact_saved = 1;
@@ -324,41 +382,32 @@ function contact_form_submited() {
 	}
 }
 
-function send_contact_data() {
+function post_WP_settings(data, tracking_action, endpoint) {
+    endpoint = endpoint  || 'settings.set_many';
+    tracking_action = tracking_action  || data;
 
-	if (window.users_contacts != undefined) {
-		var _phone = window.users_contacts.phone;
-		var _email = window.users_contacts.email;
-		var _address = window.users_contacts.address;
-	} else {
-		var _phone = $('#phone').val();
-		var _email = $('#email').val();
-		var _address = $('#address').val();
-	}
+    return request = $.ajax({
+        type: "POST",
+        url: window.site_url + '/?json=' + endpoint,
+        data: { values: data },
+        success: function (data, status, jqxhr) {
+            if (jqxhr.status == 307) {
+                $.post(window.site_url + '/?json=settings.set_many', { values: values_changes });
+                track_event('Loading Page', tracking_action, '307');
+                return;
+            }
+            if (data.status == "ok") {
+                track_event('Loading Page', tracking_action, 'Success');
+            } else {
+                track_event('Loading Page', tracking_action, 'Failure: data.respond.msg: ' + (data.respond && data.respond.msg));
+            }
+        },
+        complete: function (jqxhr, status) {
+            if (status !== 'success') {
+                track_event('Loading Page', tracking_action, 'Failure: ' + status);
+            }
+        }
 
-	var values_changes = { phone: _phone, address: _address, email: _email}
-        
-	request = $.ajax({
-		type: "POST",
-		url: window.site_url + '/?json=settings.set_many',
-		data: { values: values_changes },
-		success: function (data, status, jqxhr) {
-			if (jqxhr.status == 307) {
-				$.post(window.site_url + '/?json=settings.set_many', { values: values_changes });
-				track_event('Loading Page', 'Send Contact Data', '307');
-				return;
-			}
-			if (data.status == "ok") {
-				track_event('Loading Page', 'Send Contact Data', 'Success');
-			} else {
-				track_event('Loading Page', 'Send Contact Data', 'Failure: data.respond.msg: ' + (data.respond && data.respond.msg));
-			}
-		},
-		complete: function (jqxhr, status) {
-			if (status !== 'success') {
-				track_event('Loading Page', 'Send Contact Data', 'Failure: ' + status);
-			}
-		}
 //		statusCode: {
 //			200: function (data_or_jqxhr, status, jqxhr_or_err) {debugger;
 //				return;
@@ -367,110 +416,54 @@ function send_contact_data() {
 //				$.post(window.site_url + '/?json=settings.set_many', { values: values_changes });
 //			}
 //		}
-	});
+    });
 }
 
-function set_site_category() {
-	_facebook_category = window.facebook_category;
+function send_contact_data() {
+    var _phone, _email, _address;
 
-	var values_changes = { facebook_category: _facebook_category }
-	request = $.ajax({
-		type: "POST",
-		url: window.site_url + '/?json=settings.set_many',
-		data: { values: values_changes },
-		success: function (data, status, jqxhr) {
-			if (jqxhr.status == 307) {
-				$.post(window.site_url + '/?json=settings.set_many', { values: values_changes });
-				track_event('Loading Page', 'Set Site Category', '307');
-				return;
-			}
-			if (data.status == "ok") {
-				track_event('Loading Page', 'Set Site Category', 'Success');
-			} else {
-				track_event('Loading Page', 'Set Site Category', 'Failure: data.respond.msg: ' + (data.respond && data.respond.msg));
-			}
-		},
-		complete: function (jqxhr, status) {
-			if (status !== 'success') {
-				track_event('Loading Page', 'Set Site Category', 'Failure: ' + status);
-			}
-		}
-	});
+    if (window.users_contacts != undefined) {
+        _phone = window.users_contacts.phone;
+        _email = window.users_contacts.email;
+        _address = window.users_contacts.address;
+
+    } else {
+        _phone = $('#phone').val();
+        _email = $('#email').val();
+        _address = $('#address').val();
+    }
+
+    var values_changes = { phone: _phone, address: _address, email: _email};
+    return post_WP_settings(values_changes, 'Send Contact Data');
+}
+
+function send_site_category() {
+	_facebook_category = window.facebook_category;
+	var values_changes = { facebook_category: _facebook_category };
+    return post_WP_settings(values_changes, 'Send Site Category');
 }
 
 function send_need_store() {
 	track_event('Loading Page', 'Online Store', 'Yes');
-	request = $.ajax({
-		type: "POST",
-		url: window.site_url + '/?json=store.create',
-		success: function (data, status, jqxhr) {
-			if (jqxhr.status == 307) {
-				$.post(window.site_url + '/?json=settings.set_many');
-				track_event('Loading Page', 'Online Store', 'Yes - 307');
-				return;
-			}
-			if (data.status == "ok") {
-				track_event('Loading Page', 'Online Store', 'Yes - Success');
-			} else {
-				track_event('Loading Page', 'Online Store', 'Yes - Failure: data.respond.msg: ' + (data.respond && data.respond.msg));
-			}
-		},
-		complete: function (jqxhr, status) {
-			if (status !== 'success') {
-				track_event('Loading Page', 'Online Store', 'Yes - Sending Failure: ' + status);
-			}
-		}
-	});
+    return post_WP_settings({}, 'Online Store', 'store.create');
 }
 
 function send_dont_need_store() {
-	track_event('Loading Page', 'Online Store', 'No');
-	request = $.ajax({
-		type: "POST",
-		url: window.site_url + '/?json=store.hide',
-		success: function (data, status, jqxhr) {
-			if (jqxhr.status == 307) {
-				$.post(window.site_url + '/?json=settings.set_many');
-				track_event('Loading Page', 'Online Store', 'No - 307');
-				return;
-			}
-			if (data.status == "ok") {
-				track_event('Loading Page', 'Online Store', 'No - Success');
-			} else {
-				track_event('Loading Page', 'Online Store', 'No - Failure: data.respond.msg: ' + (data.respond && data.respond.msg));
-			}
-		},
-		complete: function (jqxhr, status) {
-			if (status !== 'success') {
-				track_event('Loading Page', 'Online Store', 'No - Sending Failure: ' + status);
-			}
-		}
-	});
+    track_event('Loading Page', 'Online Store', 'No');
+    return post_WP_settings({}, 'Online Store', 'store.hide');
+}
+
+function send_need_booking() {
+    track_event('Loading Page', 'Booking', 'Yes');
+    return post_WP_settings({ show_booking: true }, 'Booking');
+}
+
+function send_dont_need_booking() {
+    track_event('Loading Page', 'Booking', 'No');
+    return post_WP_settings({ show_booking: false }, 'Booking');
 }
 
 function userConnected(channel,auth_data){
     console.log(window.site_url);
     
-    request = $.ajax({
-		type: "POST",
-		url: window.site_url + '/?json=settings.set_many',
-		data: { 'test_channel': channel },
-		success: function (data, status, jqxhr) {
-			if (jqxhr.status == 307) {
-				$.post(window.site_url + '/?json=settings.set_many', { 'test_channel': channel });
-				track_event('Loading Page', 'Send Contact Data', '307');
-				return;
-			}
-//			if (data.status == "ok") {
-//				track_event('Loading Page', 'Send Contact Data', 'Success');
-//			} else {
-//				track_event('Loading Page', 'Send Contact Data', 'Failure: data.respond.msg: ' + (data.respond && data.respond.msg));
-//			}
-		},
-		complete: function (jqxhr, status) {
-			if (status !== 'success') {
-				track_event('Loading Page', 'Send Contact Data', 'Failure: ' + status);
-			}
-		}
-    });
 }

@@ -50,22 +50,27 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
   <!-- /Facebook SDK -->
+
     <!-- Intro    ========================================================== -->
     <div class="container-fluid">
-      <div id="intro" class="row hidden">
+
+      <div id="intro" class="row installer-stage">
         <div class="bg-image hidden-xs"></div>
         <div class="col-xs-12">
           <div class="text-center">
             <img class="logo" src="images/otonomic-logo-dark.png">
             <h1 class="title">Create a brand new website for </h1>
-            <p class="site-name" id="ot-fb-name">YOUR BUSINESS</p>
+            <p class="site-name" class="ot-fb-name">YOUR BUSINESS</p>
             <h2 >in just 5 clicks!</h2>
-            <a href="#" onclick="return false;" class="btn btn-ttc-blue js-intro-next">Let the magic begin!<span class="glyphicon glyphicon-chevron-right"></span></a>
+            <a href="#" onclick="return false;" class="btn btn-ttc-blue js-intro-next">
+                Let the magic begin!<span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
           </div>
         </div>
       </div>
+
       <!-- Stage 1 ========================================================== -->
-      <div id="stage-1" class="row">
+      <div id="stage-1" class="row hidden installer-stage">
         <div class="bg-image hidden-xs "><img src="images/bg6.jpg"></div>
         <div class="content-panel">
           <img class="logo" src="images/otonomic-logo-dark.png">
@@ -84,8 +89,9 @@
           </a>
         </div>
       </div>
+
       <!-- Stage 2 ========================================================== -->
-      <div id="stage-2" class="row hidden">
+      <div id="stage-2" class="row hidden installer-stage">
         <div class="bg-image hidden-xs"><img src="images/bg3.jpg"></div>
         <div class="content-panel">
           <img class="logo" src="images/otonomic-logo-dark.png">
@@ -99,6 +105,7 @@
           </a>
         </div>
       </div>
+
       <!-- Stage 3 ========================================================== -->
       <div id="stage-3" class="row hidden">
         <div class="bg-image hidden-xs"><img src="images/bg4.jpg"></div>
@@ -113,22 +120,24 @@
           </a>
         </div>
       </div>
-      <!-- Stage 4 ========================================================== -->
-      <div id="stage-4" class="row hidden">
+
+        <!-- Stage 4 ========================================================== -->
+      <div id="stage-4" class="row hidden installer-stage">
         <div class="bg-image hidden-xs"><img src="images/bg5.jpg"></div>
         <div class="content-panel">
           <img class="logo" src="images/otonomic-logo-dark.png">
           <h1 class="title">Would you like to offer Online Booking?</h1>
           <p>(You can always change your mind)</p>
-              <a href="#" onclick="return false;" class="submit-store btn btn-ttc-orange pull-right glyph-on-left"><span class="glyphicon glyphicon-ok"></span>Yes</a>
-              <a href="#" onclick="return false;" style="margin-right: 10px;" class="submit-skip-store btn btn-ttc-orange pull-right glyph-on-left"><span class="glyphicon glyphicon-remove"></span>No</a>
+              <a href="#" onclick="return false;" class="js-stage4-next submit-booking btn btn-ttc-orange pull-right glyph-on-left"><span class="glyphicon glyphicon-ok"></span>Yes</a>
+              <a href="#" onclick="return false;" style="margin-right: 10px;" class="js-stage4-next submit-skip-booking btn btn-ttc-orange pull-right glyph-on-left"><span class="glyphicon glyphicon-remove"></span>No</a>
         </div>
       </div>
+
       <!-- Congratz ========================================================== -->
-      <div id="congratz" class="row hidden text-center">
+      <div id="congratz" class="row hidden text-center installer-stage">
         <img class="logo" src="images/otonomic-logo-dark.png">
         <div class="upper-content">
-          <p class="site-name" id="ot-fb-name">YOUR BUSINESS</p>
+          <p class="site-name" class="ot-fb-name">YOUR BUSINESS</p>
           <h1 class="congratz-title">website will be ready in <span id="counter">7 seconds</span></h1>
           <div class="fb-like" data-href="https://www.facebook.com/otonomic" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
           <img class="oto-anima" src="images/ottoHoverLoop.gif">
@@ -147,6 +156,8 @@
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="/js/loading_page4.js"></script>
+
+
     <script type="text/javascript">
     var base_url = 'http://otonomic.test/hybridauth/twitter.php';
         $(document).ready(function(){

@@ -12,6 +12,17 @@ class Scrape {
      public function __construct(){
      }
 
+    public function getEmail($page_id = null) {
+        if(!$page_id) { return false; }
+
+        $url = "https://m.facebook.com/page/about.php?id={$page_id}&refid=17";
+        $result = $this->getResults($url);
+        return json_encode([
+            'page_id' => $page_id,
+            'result' => $result ? $result : ""
+        ]);
+    }
+
      public function getResults($url){
          $this->response = $this->getHTML($url);
 
@@ -280,11 +291,9 @@ class Scrape {
 
  }
 
+// Example usage:
+/*
 $page_id = $_GET['page_id'];
 $scraper = new Scrape();
-$url = "https://m.facebook.com/page/about.php?id={$page_id}&refid=17";
-$result = $scraper->getResults($url);
-echo json_encode([
-    'page_id' => $page_id,
-    'result' => $result ? $result : "-"
-]);
+$result = $scraper->getEmail($page_id);
+*/

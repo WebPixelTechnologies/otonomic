@@ -22,7 +22,8 @@ if (is_localhost()) {
 	page_load_timestamp = new Date();
 
     if (page_name) {
-        $('#ot-fb-name').html(page_name);
+        $('.site-name').html(page_name);
+        $('.ot-fb-name').html(page_name);
     }
 
     if(category) {
