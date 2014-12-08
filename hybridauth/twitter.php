@@ -8,11 +8,9 @@
 	try{
                 if(isset($_GET['social']) && $_GET['social'] != ""){
                     $social_media_type = $_GET['social'];
-                    $channel = $social_media_type.'_user_auth';
                 }
                 else{
                     $social_media_type = 'Twitter';
-                    $channel = $social_media_type.'_user_auth';
                 }
                 
                 if($social_media_type == "OpenID"){
@@ -48,9 +46,9 @@
                 ?>
 <script language="javascript"> 
 	if(  window.opener ){
-                window.opener.parent.$('#authorize_<?= $social_media_type; ?>').addClass('connected');
-		window.opener.parent.$('#authorize_<?= $social_media_type; ?>').append('<img class="social-check" src="images/social-check.png">');
-                window.opener.parent.userConnected('<?= $channel; ?>','<?= $session_data ?>');
+//                window.opener.parent.$('#authorize_<?= $social_media_type; ?>').addClass('connected');
+//		window.opener.parent.$('#authorize_<?= $social_media_type; ?>').append('<img class="social-check" src="images/social-check.png">');
+                window.opener.parent.userConnected('<?= $social_media_type; ?>','<?= $session_data ?>');
 	}
 	window.self.close();
 </script>

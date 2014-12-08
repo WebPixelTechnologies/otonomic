@@ -449,7 +449,7 @@ function send_dont_need_store() {
 }
 
 function userConnected(channel,auth_data){
-    console.log(window.site_url);
+    social_network = channel+"_user_auth";
     
     request = $.ajax({
 		type: "POST",
@@ -458,9 +458,11 @@ function userConnected(channel,auth_data){
 		success: function (data, status, jqxhr) {
 			if (jqxhr.status == 307) {
 				$.post(window.site_url + '/?json=settings.set_many', { 'test_channel': channel });
-				track_event('Loading Page', 'Send Contact Data', '307');
+                                track_event('Loading Page', 'Send Contact Data', '307');
 				return;
 			}
+                        $('#authorize_'+channel).addClass('connected');
+                        $('#authorize_'+channel).append('<img class="social-check" src="images/social-check.png">');     
 //			if (data.status == "ok") {
 //				track_event('Loading Page', 'Send Contact Data', 'Success');
 //			} else {
