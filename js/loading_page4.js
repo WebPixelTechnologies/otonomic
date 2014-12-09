@@ -324,7 +324,10 @@ function blog_created() {
     if (window.set_site_category_pending == 1) {
 		send_site_category();
 	}
-
+	if (window.set_site_category_pending == 1) {
+		send_site_category();
+	}
+	send_user_authorized_channel();
 	return;
 }
 
@@ -437,11 +440,33 @@ function send_dont_need_booking() {
     track_event('Loading Page', 'Booking', 'No');
     return post_WP_settings({ show_booking: false }, 'Booking');
 }
-
+function send_user_authorized_channel()
+{
+	jQuery.each(window.authorized_channel, function(key, value) {
+		var channel = value['channel'];
+		var auth_data = value['auth_data'];
+		console.log(channel);
+		console.log(auth_data);
+		var settings_data = {};
+		settings_data[channel] = auth_data;
+		
+		post_WP_settings(settings_data, 'User authorized channel');
+		delete window.authorized_channel[channel];
+	});
+}
 function userConnected(channel,auth_data){
     social_network = channel+"_user_auth";
-    
-    request = $.ajax({
+	
+	window.authorized_channel.push({
+            'channel': channel, 
+            'auth_data':  auth_data
+	});
+	//send_user_authorized_channel();
+	timed_submit(send_user_authorized_channel, 'user_authorized_channel');
+    $('#authorize_'+channel).addClass('connected');
+	$('#authorize_'+channel).append('<img class="social-check" src="images/social-check.png">');
+	
+    /*request = $.ajax({
 		type: "POST",
 		url: window.site_url + '/?json=settings.set_many',
 		data: { 'test_channel': channel },
@@ -464,5 +489,5 @@ function userConnected(channel,auth_data){
 				track_event('Loading Page', 'Send Contact Data', 'Failure: ' + status);
 			}
 		}
-    });
+    });*/
 }
