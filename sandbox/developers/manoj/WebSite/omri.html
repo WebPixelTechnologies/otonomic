@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+
+<html lang="en-US" prefix="og: http://ogp.me/ns#" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" style="">
+<!--<![endif]-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+        <script type="text/javascript" src="MainFolder/jquery-2.0.2.min.js"></script>
+        <script type="text/javascript" src="MainFolder/bootstrap.min.js"></script>
+        <script src="MainFolder/knockoutmin.js"></script>
+
+        <script src="MainFolder/knockout-postbox.js"></script>
+
+        <link rel="stylesheet" id="su-media-shortcodes-css" href="./MainFolder/shortcodes.css" type="text/css" media="all">
+
+        <link rel="stylesheet" href="./modals/otonomic-admin-front.css" type="text/css" media="all">
+        <script src="KoModels/App.js"></script>
+</head>
+
+<body class="otonomic-core-style page page-id-624 page-template-default logged-in admin-bar dreamspa otonomic-site1 customize-support" 
+    data-bind="attr:{'style':'background-color:'+appearance.bgColor()}"
+    data-twttr-rendered="true" >
+
+    <addeditmodal></addeditmodal>
+
+    <testimonialsmodal></testimonialsmodal>
+
+    <div class="wrapper" >
+        <div class="inner-wrapper" >
+            <!-- **Header Wrapper** -->
+            <div id="header-wrapper">
+                <!-- **Header** -->
+                <header id="header" class="header2">
+                    <div class="container">
+                        <div id="logo">
+                            <button data-bind="showSideBar" >Show Side Bar</button>
+                            <img src="./MainFolder/img.php" 
+                                data-bind="attr:{title:title,alt:title}"                                
+                                >                            
+                            <h1 data-bind="popover: {template:'businessNameTemplate', popoverName:'popoverBusinessName', propName:'title'}, text:title"></h1>
+                            <h1 data-bind="popover: {template:'businessNameTemplate', popoverName:'popoverBusinessName', propName:'address'}, text:address"></h1>
+                        </div>
+                    </div>
+                </header>
+                <!-- **Header - End** -->
+            </div>
+            <!-- **Header Wrapper - End** -->
+
+            <!-- **Main** -->
+            <div id="main">
+                <div class="container">
+                    <section id="primary" class="page-with-sidebar with-right-sidebar">
+                        <div id="" class="post-624 page type-page status-publish hentry">
+                            <div data-bind="foreach: testimonials">
+                                <div class="dt-sc-testimonial" >
+                                    <blockquote>
+                                        <q>
+                                            <span style="color: #141823;" data-bind="text: review"></span>
+                                        </q>
+                                    </blockquote>
+                                    <h3 data-bind="text: name"></h3>
+                                    <div class="author">
+                                        <span>
+                                            <img data-bind="attr:{src: image}" alt="" />
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a class="post-edit-link" href="#">Edit Testimonials</a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        jQuery(function ($) {
+            $(document).ready(function () {
+
+                var vm = new MainModel(true);
+
+                var app = new App();
+                app.VM = vm;
+
+                window.MyApp = app;
+                MyApp.VM = vm;
+                ko.applyBindings(vm);
+            })
+        });
+    </script>
+   
+    <script src="KoModels/MainModel.js"></script>
+    <script src="KoModels/BusinessNameModel.js"></script>
+    <script src="KoBinders/BusinessNamePopover.js"></script>
+    <script src="KoBinders/TemplateLoader.js"></script>
+        
+</body>
+</html>

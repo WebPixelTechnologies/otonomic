@@ -14,6 +14,8 @@ if (is_localhost()) {
         user_edits_booking: true
     };
 
+	window.do_redirect = 0;
+
 	var page_id = getParameterByName('page_id');
 	var page_name = getParameterByName('page_name');
     var category = getParameterByName('category');
@@ -88,13 +90,6 @@ if (is_localhost()) {
 		track_event('Loading Page', 'ToS', '');
 	});
 
-	// Social connect buttons
-	////////////////////////////////////////
-//	$('.social-btn').click(function(event){
-//		event.preventDefault();
-//		$(this).addClass('connected');
-//		$(this).append('<img class="social-check" src="images/social-check.png">');
-//	});
 
 	// #see-my-website-btn Click
 	////////////////////////////////////////
@@ -161,15 +156,7 @@ if (is_localhost()) {
 		track_event('Loading Page', 'Store Yes', '', time_diff);
 
         timed_submit(send_need_store, 'i_need_store');
-        /*
-		if (window.is_blog_ready == 1) {
-			send_need_store();
-		}
-		else {
-			window.i_need_store = 1;
-		}
-		*/
-	});
+ 	});
 
 	// Skip Store
 	////////////////////////////////////////
@@ -181,13 +168,6 @@ if (is_localhost()) {
 		
 		track_event('Loading Page', 'Store No', '', time_diff);
         timed_submit(send_dont_need_store, 'i_dont_need_store');
-        /*
-		if (window.is_blog_ready == 1) {
-		    send_dont_need_store();
-		} else {
-			window.i_dont_need_store = 1;
-		}
-		*/
 	});
 
     // Submit Booking
@@ -216,7 +196,6 @@ function timed_submit(submit_function, submit_parameter) {
     } else {
         window[submit_parameter] = 1;
     }
-
 }
 
 function callback(data) {
@@ -269,10 +248,6 @@ function getParameterByName(name) {
 function getFacebookPageAddress(page_id) {
 	var facebook_query_page_url = "https://graph.facebook.com/" + page_id;
 	$.get(facebook_query_page_url, function (data) {
-		// DEBUG
-		// console.log("the page:" + page_id);
-		// console.log(data);
-
 		if (data.location != undefined && data.location.latitude != undefined && data.location.longitude != undefined) {
 			delete data.location.latitude;
 			delete data.location.longitude;

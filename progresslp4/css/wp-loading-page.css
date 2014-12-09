@@ -1003,3 +1003,16 @@ h3#oto-web-url {
   @media only screen and (max-width : 320px) {
 
   }
+
+
+
+.content-panel h1.title {
+    margin-top: 25px;
+}
+.content-panel p {
+    margin-bottom: 20px;
+}
+div#social_connect_hybrid {
+    margin-top: -5px;
+    margin-bottom: 25px;
+}

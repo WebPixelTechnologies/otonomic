@@ -1,0 +1,55 @@
+/*
+Theme Name:     dreamspa Child
+Theme URI: 		http://wedesignthemes.com/themes/dt-dreamspa
+Author: 		the DesignThemes team
+Author URI: 	http://themeforest.net/user/designthemes
+Description:    Child theme for the DreamSpa theme powered by DesignThemes
+Template:       dreamspa
+Version:        1.0
+*/
+@import url("../dreamspa/style.css");
+
+.widget h3.widgettitle
+{
+	float:none;
+}
+#header.header4 #main-menu ul.menu > li > a, #header.header2 #main-menu ul.menu > li > a
+{
+	padding: 0px 40px 0px 0px;
+}
+#main-menu ul.menu > li > a
+{
+	padding: 0px 23px;
+}
+#logo
+{
+	padding-left: 80px;
+	position: relative;
+}
+#logo img
+{
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+
+	position: absolute;
+	left: 0;
+}
+#logo h1
+{
+	margin: 0;
+	line-height: 60px;
+	/*font-family: 'Courgette', cursive;*/
+}
+@media only screen and (max-width: 767px)
+{
+	#logo
+	{
+		padding-left: 0px;
+	}
+	#logo img
+	{
+		position: relative;
+	}
+
+}

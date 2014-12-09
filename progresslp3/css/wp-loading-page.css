@@ -164,9 +164,9 @@ textarea {
 .content-panel h1.title{
   margin-top: 70px;
   margin-bottom: 24px;
-  font-size: 40px;
+  font-size: 38px;
   font-weight: bold;
-  line-height: 52px;
+  line-height: 42px;
 }
 .content-panel h3{
 	margin: 20px 0;
@@ -273,7 +273,7 @@ textarea {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #fcf8f5;
+  background-color: #ebded2;
 }
 #congratz .logo{
   position: absolute;
@@ -283,7 +283,7 @@ textarea {
 }
 #congratz .upper-content{
   min-height: calc(100% - 50px);
-  background-color: #ebded2;
+  /*background-color: #ebded2;*/
 }
 #congratz .lower-content{
   padding-top: 10px;
@@ -483,6 +483,78 @@ textarea {
 	color: white;
 }
 
+/* Social buttons
+============================*/
+.social-btn {
+  display: block;
+  position: relative;
+  margin: 0 0 15px 0;
+  padding-right: 20px;
+  padding-left: 20px;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  line-height: 45px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  box-shadow: inset 0px -2px 0px rgba(0,0,0,0.2);
+}
+.social-btn:hover,
+.social-btn:focus{
+  color: white;
+  text-decoration: none;
+}
+.social-btn:active,
+.social-btn.active{
+  color: white;
+  text-decoration: none;
+  box-shadow: inset 0px -2px 0px rgba(0,0,0,0.2);
+}
+.social-btn.connected {
+  box-shadow: inset 0px -2px 0px rgba(0,0,0,0.05);
+}
+.social-btn img {
+  height: 25px;
+}
+.facebook-btn{
+  background-color: #3c599b;
+}
+.facebook-btn:hover{
+  background-color: #36508b;
+}
+.facebook-btn.connected{
+  background-color: #bcbecb;
+}
+.twitter-btn{
+  background-color: #55acee;
+}
+.twitter-btn:hover{
+  background-color: #4c9ad6;
+}
+.twitter-btn.connected{
+  background-color: #c3d4e1;
+}
+.instagram-btn{
+  background-color: #3f729b;
+}
+.instagram-btn:hover{
+  background-color: #39668b;
+}
+.instagram-btn.connected{
+  background-color: #bdc4cb;
+}
+.tumbler-btn{
+  background-color: #35465c;
+}
+.yelp-btn {
+  background-color: #bf2519;
+}
+.social-check {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+}
 
 ::-webkit-input-placeholder { /* WebKit browsers */
     color:    #999;
@@ -930,3 +1002,19 @@ h3#oto-web-url {
   @media only screen and (max-width : 320px) {
 
   }
+
+
+
+
+
+
+.content-panel h1.title {
+    margin-top: 25px;
+}
+.content-panel p {
+    margin-bottom: 20px;
+}
+div#social_connect_hybrid {
+    margin-top: -5px;
+    margin-bottom: 25px;
+}

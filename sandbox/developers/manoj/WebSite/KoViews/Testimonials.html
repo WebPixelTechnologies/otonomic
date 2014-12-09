@@ -1,0 +1,64 @@
+﻿<div class="otonomic-core-style">
+    <!-- Modal -->
+    <div class="modal fade" id="editingModal" tabindex="-1" role="dialog" aria-labelledby="editingModalLabel" aria-hidden="true">
+        
+        
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <button type="button" class="help btn btn-oto-green btn-sm pull-right">?</button>
+                    <h4 class="modal-title" id="myModalLabel">Manage Testimonials</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button type="button" class="btn btn-oto-blue btn-sm" data-toggle="modal" data-target="#addEditModal" data-Bind="addItem" data-dismiss="modal"><span class="glyphicons plus" ></span>Add new testimonial</button>
+                            <div class="btn-group pull-right" role="group" data-toggle="buttons" aria-label="filter">
+                                <label class="btn btn-oto-gray-light btn-sm active">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" checked>All (12)
+                                </label>
+                                <label class="btn btn-oto-gray-light btn-sm">
+                                    <input type="radio" name="options" id="option2" autocomplete="off">Homepage (2)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-12" data-bind="foreach:testimonials"  style="height:300px;overflow-y:scroll;overflow-x:hidden;">
+                            <div class="item" data-bind="testimonialItem,css:{'hidden-item':hideItem()==true">
+                                <div class="media">
+                                    <a class="media-left" href="#">
+                                        <img class="media-image" data-bind="attr:{src: image},css:{grayscale:hideItem()==true}" alt="..." />
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading" data-bind="text:name"></h4>
+                                        <p class="text-ellipsis" data-bind="text:review"></p>
+                                    </div>
+                                </div>
+                                <!-- Actions -->
+                                <div id="actions-container-1" data-actions-container-id="1" class="js-actions-container actions-container">
+                                    <!-- homepage indication-->
+                                    <div class="js-homepage-indicator homepage-indicator "><span class="glyphicons home"></span></div>
+                                    <!-- Hidden bar indication-->
+                                    <div class="js-hidden-indicator hidden-indicator small-indicator " data-bind="css:{hidden:hideItem()!=true}"><span class="glyphicons eye_close"></span>Hidden</div>
+                                    <!-- Primary actions  -->
+                                    <div id="primary-btn-group-1" data-btn-group-id="1" class="btn-group js-primary-btn-group" data-bind="css:{up:showBtnGroup()==true}">
+                                        <button type="button" class="btn action-btn js-hide-btn primary-action-blue" data-toggle="tooltip" title="Hide" data-analytics-action="Show Product" data-bind="showEye,css:{hidden:hideItem()==true}"><span class="glyphicons eye_close"></span></button>
+                                        <button type="button" class="btn action-btn js-show-btn primary-action-blue " data-toggle="tooltip" title="Show" data-analytics-action="Hide Product" data-bind="hideEye,css:{hidden:hideItem()!=true}"><span class="glyphicons eye_open"></span></button>
+                                        <button type="button" class="btn action-btn js-edit-btn" data-dismiss="modal" data-analytics-action="Edit Product" data-target="#addEditModal" data-toggle="modal" data-bind="editItem,disable: hideItem"><span class="glyphicons edit"></span></button>
+                                        <button type="button" class="btn action-btn js-home-hide-btn" data-toggle="tooltip" title="Hide from homepage" data-analytics-action="Hide from homepage"><span class="glyphicons bin"></span></button>
+                                        <button type="button" class="btn action-btn js-home-show-btn hidden" data-toggle="tooltip" title="Show on homepage" data-analytics-action="Show on homepage"><span class="glyphicons home"></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link" data-dismiss="modal"><span class="glyphicons remove_2"></span>Cancel</button>
+                    <button type="button" class="btn btn-oto-green"  data-bind="click:saveAll"><span class="glyphicons ok_2"></span>Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

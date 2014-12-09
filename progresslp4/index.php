@@ -17,19 +17,6 @@
     <!-- Custom styles for this template -->
     <link href="css/wp-loading-page.css" rel="stylesheet">
 
-    <style>
-        .content-panel h1.title {
-            margin-top: 25px;
-        }
-        .content-panel p {
-            margin-bottom: 20px;
-        }
-        div#social_connect_hybrid {
-            margin-top: -5px;
-            margin-bottom: 25px;
-        }
-    </style>
-
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
