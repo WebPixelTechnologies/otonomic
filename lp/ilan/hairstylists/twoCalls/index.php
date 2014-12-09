@@ -1,3 +1,52 @@
+<?php
+$twitter_share_options = [
+    [   "url"  => "http://bit.ly/hsalon2",
+        "text" => "Only for 45 Hours! FREE website for your hair salon: @Otonomic turns your Facebook biz page into an amazing website"
+    ],
+    [   "url"  => "http://bit.ly/hsalon19",
+        "text" => "Got my #HairSalon #Free website @otonomic and all my social media synced in one place. Get yours #Free"
+    ],
+    [   "url"  => "http://bit.ly/hsalon20",
+        "text" => "#Hairsalon website #Giveaway! @Otonomic builds a website from my FB biz page. No more #hairstylistproblems"
+    ],
+    [   "url"  => "http://bit.ly/hsalon21",
+        "text" => "Thank you @Otonomic for my #HairSalon #Free website. Click and get yours #free"
+    ]
+];
+
+$i = rand(0, count($twitter_share_options)-1);
+$twitter_share = $twitter_share_options[$i];
+$twitter_share_text = $twitter_share['text'];
+$twitter_share_url = $twitter_share['url'];
+
+
+$opengraph_options = [
+    [   "url"  => "http://bit.ly/hsalon6",
+        "text" => "Free website for your hair salon - only 45 hours left!
+Otonomic turns your Facebook page into a website."
+    ],
+    [   "url"  => "http://bit.ly/hsalon16",
+        "text" => "Get your hair salon a Free website!
+Otonomic turns your Facebook page into a self updating website.
+"
+    ],
+    [   "url"  => "http://bit.ly/hsalon17",
+        "text" => "Transform your Facebook page into a beautiful website -Free!
+Otonomic creates a website synched with your Facebook content.
+"
+    ],
+    [   "url"  => "http://bit.ly/hsalon18",
+        "text" => "Your Hair Salon deserves a website.
+Otonomic turns your Facebook page into a beautiful website, synched with all your social media. "
+    ],
+];
+
+$i = rand(0, count($opengraph_options)-1);
+$og_variation = $opengraph_options[$i];
+$og_title = $og_variation['text'];
+$og_url = $og_variation['url'];
+?>
+
 <!DOCTYPE html>
 <!--[if lte IE 8]> <html class="ie8" lang="en"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en">             <!--<![endif]-->
@@ -8,11 +57,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Otonomic - turn your Facebook page into a professional website</title>
-    <meta property="og:title" content="Free website for your hair salon - only 45 Hours left!"/>
+    <meta property="og:title" content="<?= $og_title?>"/>
     <meta property="og:site_name" content="Otonomic"/>
     <meta property="og:description"
           content="Otonomic turns your Facebook business page into a website."/>
-    <meta property="og:url" content="http://bit.ly/hsalon6/"/>
+    <meta property="og:url" content="<?= $og_url?>"/>
     <meta property="og:image" content="http://www.otonomic.com/images/hairstyleWebsite-theme-154x113_4x.jpg"/>
 
     <link rel="shortcut icon" href="favicon.ico">
@@ -97,7 +146,7 @@
                   <img src="images/facebook-icon.svg">
                   Share on facebook
               </a>
-              <a class="tweet" href="https://twitter.com/intent/tweet?url=http://bit.ly/hsalon2&text=Only for 45 Hours! FREE website for your hair salon: @Otonomic turns your Facebook biz page into an amazing website">
+              <a class="tweet" href="https://twitter.com/intent/tweet?url=<?= $twitter_share_url?>&text=<?= $twitter_share_text?>">
                   <img src="images/twitter-icon.svg">
                   Share on twitter
               </a>             
