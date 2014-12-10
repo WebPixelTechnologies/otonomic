@@ -2,7 +2,7 @@
 /**
  *
  * This class scrapes the reviews from any facebook page that has review.
- * Class YelpScrape
+ * Class FacebookScrape
  */
 include('simple_html_dom.php');
 
@@ -10,7 +10,7 @@ function addslashes_array($value, $key) {
     return addslashes($value);
 }
 
-class YelpScrape {
+class FacebookScrape {
     public $url = null;
     public $html;
 
@@ -28,12 +28,10 @@ class YelpScrape {
         $this->html = file_get_html($url);
 
         $reviews = $this->getReviews();
-        $from_owner = $this->getTextFromOwner();
 
         return json_encode([
             'url' => $url,
             'reviews' => $reviews,
-            'from_owner' => $from_owner
         ]);
     }
 
@@ -43,14 +41,12 @@ class YelpScrape {
         if(!$this->html) { $this->html = file_get_html($this->url); }
 
         // Find all links
-        foreach($this->html->find('div.review') as $element) {
+        foreach($this->html->find('div.bw') as $element) {
             $record = [];
-            $meta_elements = $element->find('meta');
+            $review_images = $element->find('img');
 
-            foreach($meta_elements as $meta) {
-                $key = $meta->itemprop;
-                $value = $meta->content;
-                $record[$key] = $value;
+            foreach($review_images as $review_image) {
+                $stars = $review_image->alt;
             }
 
             $text_containers = $element->find('p');
@@ -66,24 +62,9 @@ class YelpScrape {
 
         return $result;
     }
-
-    private function getTextFromOwner() {
-        $result = [];
-
-        if(!$this->html) { $this->html = file_get_html($this->url); }
-
-        // Find all links
-        foreach($this->html->find('div.from-biz-owner-content') as $element) {
-            $record = trim($element->innertext);
-            $result[] = $record;
-        }
-        array_walk($result, 'addslashes_array');
-
-        return $result;
-    }
 }
 
 
 $url = $_GET['url'];
-$scraper = new YelpScrape();
+$scraper = new FacebookScrape();
 print_r($scraper->getData($url));
