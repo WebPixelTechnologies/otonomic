@@ -360,7 +360,7 @@ https://www.facebook.com/aqha1</textarea>
                     var currDate = new Date();
                     var today = currDate.getFullYear() +'/' + (currDate.getMonth()+1) + '/' + currDate.getDate();
                     var category_list;
-                    var category_list_names;
+                     var category_list_names;
 
                     if(response.id && !response.is_community_page) {
                         stats = calc_page_stats(response);
