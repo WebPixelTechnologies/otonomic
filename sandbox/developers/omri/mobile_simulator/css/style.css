@@ -19,12 +19,12 @@
     top: 132px;
     left: 38px;
     background: #FFF;
+    overflow: hidden;
 }
 iframe {
-    height: 395px;
+    height: 410px;
     width: 321px;
     border: 0;
-    overflow: hidden;
     margin-top: -5px;
 }
 img#otomobic-header {
