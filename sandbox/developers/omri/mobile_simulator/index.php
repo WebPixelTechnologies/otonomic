@@ -56,7 +56,7 @@
                     var url = $('#otomobic-settings-url').val();
                     url.replace('http://','').replace('https://','');
                     url = 'http://'+url;
-                    $('iframe').attr('src', );
+                    $('iframe').attr('src', url);
                 });
             });
         </script>
