@@ -1,0 +1,49 @@
+﻿<div class="otonomic-core-style" id="sideBar" data-bind="visible: app.edit_mode, with: app">
+        <!-- Side Navbar -->
+        <div id="sidebar-wrapper">
+            
+          <h4> Edit Site</h4>
+          <a onClick="javascript:goBack()"><i class="fa fa-arrow-left"></i>Back</a>
+
+          <div data-bind="template: { name: appearance_content}"></div>
+
+          <ul class="sidebar-nav">
+              <li>
+                <a href="#" class="btn btn-oto-white btn-block btn-lg sidebar-link" >
+                  <span class="glyphicons picture"></span> Appearance <span class="glyphicons chevron-right"></span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn btn-oto-white btn-block btn-lg sidebar-link" data-toggle="modal" data-target="#editingModal">
+                  <span class="glyphicons cogwheel"></span> Reviews <span class="glyphicons chevron-right"></span>
+                </a>
+              </li>
+          </ul>
+
+          <button type="button" class="back btn btn-link pull-left"><span class="glyphicons left_arrow"></span></button>
+          <h4>Testimonials Appearance</h4>
+          <p>Change background image</p>
+          <div id="fontSelect" class="fontSelect">
+            <div class="arrow-down"></div>
+          </div>
+          <br>
+          <p>Choose a feel</p>
+          <div id="colorSelector" ><div></div></div>
+            
+          <br>
+          <div class="text-right">
+              <a href="#preview">
+                  <button type="button" class="btn btn-link">
+                      <span class="glyphicons remove_2"></span>Cancel
+                  </button>
+              </a>
+
+              <a href="#">
+                  <button type="button" class="btn btn-oto-green">
+                      <span class="glyphicons ok_2"></span>Save
+                  </button>
+              </a>
+          </div>
+            
+        </div>
+    </div>
