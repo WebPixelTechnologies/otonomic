@@ -285,7 +285,7 @@ function is_localhost() {
 
 function createWebsiteUsingAjax(page_id) {
 	var request_data = {};
-	request_data.theme = "mycuisine";
+	request_data.theme = "dreamsalon";
 	request_data.facebook_id = encodeURIComponent(page_id);
 
 	// var request_url = "http://wp.otonomic.com/migration/index.php?" + $.param(request_data);
