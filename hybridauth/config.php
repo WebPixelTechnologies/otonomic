@@ -9,9 +9,24 @@
 //	HybridAuth Config file: http://hybridauth.sourceforge.net/userguide/Configuration.html
 // ----------------------------------------------------------------------------------------
 
+$host = $_SERVER['HTTP_HOST'];
+if(strpos('otonomic.com', $host) !== false) {
+    $facebook_app_id = "373931652687761";
+    $facebook_app_secret = "d154036467714f4ac4706e653a1211ad";
+}
+if(strpos('verisites.com', $host) !== false) {
+    $facebook_app_id = "202562333264809";
+    $facebook_app_secret = "62f41e56660ac8d5851ac8ac79be11b5";
+}
+if(strpos('otonomic.test', $host) !== false) {
+    $facebook_app_id = "286934271328156";
+    $facebook_app_secret = "55bf8f49cd5030ba6d6fecb50b896a77";
+}
+
+
 return 
 	array(
-		"base_url" => "http://".$_SERVER['HTTP_HOST']."/hybridauth/index.php", 
+		"base_url" => "http://".$host."/hybridauth/index.php",
 
 		"providers" => array ( 
 			// openid providers
@@ -35,14 +50,20 @@ return
 
 			"Facebook" => array ( 
 				"enabled" => true,
-				"keys"    => array ( "id" => "286934271328156", "secret" => "55bf8f49cd5030ba6d6fecb50b896a77" ),
+				"keys"    => array (
+                    "id" => $facebook_app_id,
+                    "secret" => $facebook_app_secret
+                ),
 				"trustForwarded" => false,
-                                "display" => 'popup'
+                    "display" => 'popup'
 			),
 
 			"Twitter" => array ( 
 				"enabled" => true,
-				"keys"    => array ( "key" => "9gtOE9PPyvhg4xUbl2BzL3UkK", "secret" => "2rIsVK9Z5cxEYOnlSTVuvTZP9iQExhjH84sp1Swsx8sQjVZELE" ) 
+				"keys"    => array (
+                    "key" => "9gtOE9PPyvhg4xUbl2BzL3UkK",
+                    "secret" => "2rIsVK9Z5cxEYOnlSTVuvTZP9iQExhjH84sp1Swsx8sQjVZELE"
+                )
 			),
 
 			// windows live
@@ -60,10 +81,14 @@ return
 				"enabled" => true,
 				"keys"    => array ( "id" => "", "secret" => "" ) 
 			),
-                        "Instagram" => array(
-                            "enabled" => true,
-                            "keys"    => array ( "id" => "ef4ef97d5bda4b51b575e22b2d179d1a", "secret" => "3497f47d336a4704a5851eb11e688586" )
-                        )
+
+            "Instagram" => array(
+                "enabled" => true,
+                "keys"    => array (
+                    "id" => "ef4ef97d5bda4b51b575e22b2d179d1a",
+                    "secret" => "3497f47d336a4704a5851eb11e688586"
+                )
+            )
 		),
 
 		// If you want to enable logging, set 'debug_mode' to true.

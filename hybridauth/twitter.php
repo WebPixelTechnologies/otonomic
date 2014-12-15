@@ -2,48 +2,49 @@
 	session_start(); 
 
 	// config and includes
-        require_once( "Hybrid/Auth.php" );
-        $config = 'config.php';
+    require_once( "Hybrid/Auth.php" );
+    $config = 'config.php';
         
 	try{
-                if(isset($_GET['social']) && $_GET['social'] != ""){
-                    $social_media_type = $_GET['social'];
-                }
-                else{
-                    $social_media_type = 'Twitter';
-                }
-                
-                if($social_media_type == "OpenID"){
-                    $parameters = array(
-                        "openid_identifier" => $_GET['openid_identifier']
-                    );
-                }
-                
-		// hybridauth EP
-                if(isset($parameters) && !empty($parameters)){
-                    $hybridauth = new Hybrid_Auth( $config, $parameters );
-                }else{
-                    $hybridauth = new Hybrid_Auth( $config );
-                }
-                
+        if(isset($_GET['social']) && $_GET['social'] != ""){
+            $social_media_type = $_GET['social'];
+        }
+        else{
+            $social_media_type = 'Twitter';
+        }
+
+        if($social_media_type == "OpenID"){
+            $parameters = array(
+                "openid_identifier" => $_GET['openid_identifier']
+            );
+        }
+
+        // hybridauth EP
+        if(isset($parameters) && !empty($parameters)){
+            $hybridauth = new Hybrid_Auth( $config, $parameters );
+        }else{
+            $hybridauth = new Hybrid_Auth( $config );
+        }
+
 		$twitter = $hybridauth->authenticate($social_media_type);
                 
-                /* Searialized array containing session access token that can 
-                 be used to access user profile data from backend. 
-                  Use restoreSessionData() to restore that same user session
-                 */
-                $session_data = $hybridauth->getSessionData();
+        /* Searialized array containing session access token that can
+         be used to access user profile data from backend.
+          Use restoreSessionData() to restore that same user session
+         */
+        $session_data = $hybridauth->getSessionData();
 
 		// return TRUE or False <= generally will be used to check if the user is connected to twitter before getting user profile, posting stuffs, etc..
 		$is_user_logged_in = $twitter->isUserConnected();
 
 		// get the user profile 
 		$user_profile = $twitter->getUserProfile();
-                // $user_profile_data is the array that is to be saved in the database.
-                $user_profile_data = (array) $user_profile;
+        // $user_profile_data is the array that is to be saved in the database.
+        $user_profile_data = (array) $user_profile;
                 
 		$twitter->logout(); 
-                ?>
+        ?>
+
 <script language="javascript"> 
 	if(  window.opener ){
 //                window.opener.parent.$('#authorize_<?= $social_media_type; ?>').addClass('connected');

@@ -1018,3 +1018,7 @@ div#social_connect_hybrid {
     margin-top: -5px;
     margin-bottom: 25px;
 }
+
+#authorize_Instagram {
+    display: none;
+}
