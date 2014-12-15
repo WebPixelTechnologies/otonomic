@@ -142,7 +142,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="/js/loading_page4.js"></script>
+    <script src="/js/loading_page4.js?v=0.51"></script>
 
 
     <script type="text/javascript">

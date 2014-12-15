@@ -137,5 +137,22 @@
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="/js/loading_page4.js?v=0.51"></script>
+
+    <script type="text/javascript">
+      var base_url = 'http://otonomic.test/hybridauth/twitter.php';
+      $(document).ready(function(){
+          $('#social_connect_hybrid a').click(function(){
+              var type = $(this).attr('id').split('_');
+              var url = base_url+"?social="+type[1];
+              window.open(
+                      url,
+                      "hybridauth_social_sing_on",
+                      "location=0,status=0,scrollbars=1,width=800,height=500"
+              );
+              return false;
+          })
+      })
+    </script>
+
   </body>
 </html>
