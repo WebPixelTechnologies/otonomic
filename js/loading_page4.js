@@ -127,11 +127,14 @@ if (is_localhost()) {
                     clearInterval(timer);
 
 					// now redirect
-                    window.do_redirect = 1;
-                    redirect_to_website();
                     //window.location.replace(window.site_url);
 				}
 			}
+
+            if(sec < 3) {
+                window.do_redirect = 1;
+                redirect_to_website();
+            }
 		}, 1000);
 
 	}
