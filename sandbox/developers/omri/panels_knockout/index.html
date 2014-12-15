@@ -22,11 +22,28 @@
         }
         .background_pattern_image { width:48%;}
         .contentdiv {background-repeat: repeat; }
-        div#facebook ul img {
+        div.image-gallery-content ul img {
             width: 150px;
         }
-        div#facebook li {
+        div.image-gallery-content li {
             display: inline;
+        }
+        div.image-gallery-content {
+            margin-top: 20px;
+        }
+        #editor_init {
+            position: absolute;
+            top: 20px;
+            left:0;
+        }
+        #editor_init {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            padding: 10px;
+            border: 1px solid #CCC;
+            z-index: 6;
+            background: #EEE;
         }
 
         .contentdiv { height:600px; border:1px solid #ccc}
@@ -125,7 +142,27 @@
     </script>
 </head>
 
+
+
 <body>
+    <script type="text/html" id="tpl-empty"></script>
+
+    <script type="text/html" id="tpl-sections">
+        <div class="list-group main" id="">
+            <a href="#edit/widgets/widgets-services" class="list-group-item" data-url="services">
+                <i class="fa fa-comment-o"></i> Services
+            </a>
+        </div>
+    </script>
+
+    <script type="text/html" id="tpl-widgets">
+        <div class="list-group main" id="" data-bind="forEach: widgets">
+            <a href="#edit/widgets/" class="list-group-item" data-url="">
+                <i class="fa fa-comment-o"></i> <span data-bind=""></span>
+            </a>
+        </div>
+    </script>
+
 
     <script type="text/html" id="tpl-appearance-top">
         <div class="list-group main" id="">
@@ -144,6 +181,7 @@
         </div>
     </script>
 
+
     <script type="text/html" id="tpl-appearance-templates">
         <div class="div-template list-group" id="template">
             <h2>Template</h2>
@@ -155,6 +193,7 @@
         </div>
     </script>
 
+
     <script type="text/html" id="tpl-appearance-backgrounds">
         <div class="div-background list-group" id="background">
             <h2>Background</h2>
@@ -162,6 +201,7 @@
             <a class="btn btn-small" id="" data-bind="click: showImageGallery">Choose A background image</a>
         </div>
     </script>
+
 
     <script type="text/html" id="tpl-appearance-colors">
         <div class="div-color list-group" id="color">
@@ -179,28 +219,62 @@
         </div>
     </script>
 
-    <script type="text/html" id="tpl-image-gallery">
 
-        <div role="tabpanel" id="modal-image-gallery">
+
+
+
+
+    <script type="text/html" id="tpl-widget">
+        <div role="tabpanel" id="modal-widget">
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active">
-                    <a href="#gallery" aria-controls="gallery" role="tab" data-toggle="tab" data-source="gallery">Gallery</a>
+                    <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab" data-source="settings">Settings</a>
                 </li>
                 <li role="presentation">
-                    <a href="#facebook" aria-controls="facebook" role="tab" data-toggle="tab" data-source="facebook">Facebook</a>
-                </li>
-                <li role="presentation">
-                    <a href="#instagram" aria-controls="instagram" role="tab" data-toggle="tab" data-source="instagram">Instagram</a>
-                </li>
-                <li role="presentation">
-                    <a href="#flickr" aria-controls="flickr" role="tab" data-toggle="tab" data-source="flickr">Flickr</a>
+                    <a href="#data" aria-controls="data" role="tab" data-toggle="tab" data-source="data">Data</a>
                 </li>
             </ul>
 
             <!-- Tab panes -->
             <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="gallery">
+                <div role="tabpanel" class="tab-pane active" id="settings">
+                    <div id="widget-settings">
+                        Widget settings
+                    </div>
+                </div>
+
+                <div role="tabpanel" class="tab-pane" id="data">
+                    <div id="widget-data">
+                        <img src="img/preloader.gif" alt="Loading..."/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+
+    <script type="text/html" id="tpl-image-gallery">
+        <div role="tabpanel" id="modal-image-gallery">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                    <a href="#image-gallery-modal-gallery" aria-controls="gallery" role="tab" data-toggle="tab" data-source="gallery">Gallery</a>
+                </li>
+                <li role="presentation">
+                    <a href="#image-gallery-modal-facebook" aria-controls="facebook" role="tab" data-toggle="tab" data-source="facebook">Facebook</a>
+                </li>
+                <li role="presentation">
+                    <a href="#image-gallery-modal-instagram" aria-controls="instagram" role="tab" data-toggle="tab" data-source="instagram">Instagram</a>
+                </li>
+                <li role="presentation">
+                    <a href="#image-gallery-modal-flickr" aria-controls="flickr" role="tab" data-toggle="tab" data-source="flickr">Flickr</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane image-gallery-content active" id="image-gallery-modal-gallery">
                     <div id="">
                         <ul data-bind="foreach: data.gallery">
                             <li data-bind="attr: {title: title}">
@@ -210,7 +284,7 @@
                     </div>
                 </div>
 
-                <div role="tabpanel" class="tab-pane" id="facebook">
+                <div role="tabpanel" class="tab-pane image-gallery-content" id="image-gallery-modal-facebook">
                     <div id="">
                         <ul data-bind="foreach: $root.data_facebook">
                             <li>
@@ -219,8 +293,8 @@
                         </ul>
                     </div>
                 </div>
-                <div role="tabpanel" class="tab-pane" id="instagram">...</div>
-                <div role="tabpanel" class="tab-pane" id="flickr">...</div>
+                <div role="tabpanel" class="tab-pane" id="image-gallery-modal-instagram">...</div>
+                <div role="tabpanel" class="tab-pane" id="image-gallery-modal-flickr">...</div>
             </div>
         </div>
     </script>
@@ -244,44 +318,81 @@
         </div><!-- /.modal -->
     </script>
 
+
+
+
+
+
+    <!-- START Modal window div -->
     <div data-bind="template: { name: 'tpl-modal', data: modal}"></div>
+    <!-- END Modal window div -->
 
-    <!-- Placeholder  Keep this element - KO will render Sidebar html here -->
-    <div class="otonomic-core-style">
-        <sidebar></sidebar>
+    <!-- START Sidebar div -->
+    <div id="edit_sidebar">
+        <div class="editor_panel" data-bind="visible: edit_mode">
+            <h1>Site Editor</h1>
+            <a onClick="javascript:goBack()"><i class="fa fa-arrow-left"></i>&nbsp;Back</a>
+
+            <div id="editor_main_panel_content" data-bind="template: { name: editor_main_panel_content}"></div>
+
+            <div><a data-bind="click: showSubPanel('appearance-backgrounds')" class="btn">Show Background Subpanel</a></div>
+            <div><a data-bind="click: showSubPanel('appearance-templates')" class="btn">Show Templates Subpanel</a></div>
+
+            <div class="actions">
+                <a href="#" class="btn btn-primary">Save</a>
+                <a href="#preview" class="btn">Cancel</a>
+            </div>
+        </div>
+
+        <div class="editor_panel" id="edit_sub_panel" data-bind="visible: edit_mode_sub_panel">
+            <h1>Sub Panel</h1>
+            <a data-bind="click: hideSubPanel"><i class="fa fa-arrow-left"></i>&nbsp;Back</a>
+
+            <div data-bind="template: { name: editor_sub_panel_content}"></div>
+
+            <div class="actions">
+                <a href="#" class="btn btn-primary">Save</a>
+                <a data-bind="click: hideSubPanel" class="btn">Cancel</a>
+            </div>
+        </div>
     </div>
-
-
-
+    <!-- END sidebar div -->
 
 
 
     <div class="container">
         <div class="row">
-            <!--
-            <div class="col-md-3" data-bind="visible: edit_mode">
-                <h1>Edit Appearance</h1>
-                <a onClick="javascript:goBack()"><i class="fa fa-arrow-left"></i>Back</a>
-
-                <div data-bind="template: { name: appearance_content}"></div>
-
-                <div class="actions">
-                    <a href="#" class="btn">Save</a>
-                    <a href="#preview">Cancel</a>
-                </div>
-            </div>
--->
-
-            <div class="col-md-9" id="main">
+            <div class="col-md-12" id="main">
                 <div class="contentdiv">
                     This is the main content. Lorem ipsum FTW.
+                    This is the main content. Lorem ipsum FTW.
+                    This is the main content. Lorem ipsum FTW.
+                    This is the main content. Lorem ipsum FTW.
+                    This is the main content. Lorem ipsum FTW.
+                    This is the main content. Lorem ipsum FTW.
+                    This is the main content. Lorem ipsum FTW.
+                    This is the main content. Lorem ipsum FTW.
+
                 </div>
-                <a href="#edit/appearance">Edit Appearance</a>
             </div>
         </div>
     </div>
 
-
+    <div id="editor_init" data-bind="visible: !(edit_mode())">
+        <div>Edit: </div>
+        <div>
+            <a class="btn" href="#edit/pages">Pages</a>
+        </div>
+        <div>
+            <a class="btn" href="#edit/widgets">Widgets</a>
+        </div>
+        <div>
+            <a class="btn" href="#edit/appearance">Appearance</a>
+        </div>
+        <div>
+            <a class="btn" href="#edit/widgets">Widgets</a>
+        </div>
+    </div>
 
 
 
@@ -310,8 +421,11 @@
             var self = this;
 
             self.edit_mode = ko.observable(false);
+            self.edit_mode_sub_panel = ko.observable(false);
 
-            self.appearance_content = ko.observable();
+            self.editor_main_panel_content = ko.observable('tpl-empty');
+            self.editor_sub_panel_content = ko.observable('tpl-empty');
+
             self.background_patterns = ko.observableArray([]);
 
             self.modal = ko.observable({
@@ -329,22 +443,6 @@
             self.modal_title = ko.observable();
             self.modal_template = ko.observable('tpl-image-gallery');
 
-
-            /*
-             self.panel1_template = ko.observable('fonts');
-             self.panel1_data = ko.observable([]);
-             self.panel1_afterRender = ko.observable(function() {});
-             */
-
-            /*
-            self.panel2_template = ko.observable('fonts');
-            self.panel2_data = ko.observable([]);
-            self.panel2_afterRender = ko.observable(function() {});
-            */
-
-            // Behaviours
-            // self.goToMail = function (mail) { location.hash = mail.folder + '/' + mail.id };
-
             self.editAppearance = function(screen) {
                 if(typeof(screen) !== 'undefined') {
                     location.hash = 'edit/appearance/'+screen;
@@ -353,12 +451,19 @@
                 }
             };
 
-            self.preview = function() { location.hash = 'preview/'};
+            self.preview = function() { location.hash = 'preview'};
 
             self.setBackgroundImage = function(attribute) {
                 // self.selectedBackgroundPattern();
                 $('.contentdiv').css( "background-image", "url("+this[attribute]+")");
             };
+
+            self.refresh = function() {
+                if(self.is_dirty) {
+                    confirm('')
+                }
+                location.reload(true); // Reload from server
+            }
 
             self.showImageGallery = function() {
                 self.modal({
@@ -380,6 +485,43 @@
                 $('#modal-window').modal('show');
             };
 
+            self.showWidgetSettings = function(widget_instance_id) {
+                self.modal({
+                    title: "Edit Widget",
+                    template_obj: {name: "tpl-widget"},
+                    data: {
+                        instance_id: "",
+                        data: ""
+                    }
+                });
+                $('#modal-window').modal('show');
+                // $('#widget-data').load('')
+
+                $.post(
+                        'http://wp.test/washingtonhair-charlenerapa/wp-admin/admin-ajax.php',
+                        {
+                            // page_class: 'ServicesAdminPage',
+                            wp_otonomic_cmd: 'wp_otonomic_apl',
+                            instance_id: widget_instance_id
+                        },
+                        function(response) {
+                            response = JSON.parse(response);
+                            $('#widget-data').html(response.content);
+                        }
+                );
+            }
+
+            self.hideSubPanel = function() {
+                self.edit_mode_sub_panel(false);
+            }
+
+            self.showSubPanel = function(screen) {
+                self.edit_mode(true);
+                self.edit_mode_sub_panel(true);
+
+                self.editor_sub_panel_content("tpl-"+screen);
+            }
+
             ko.components.register('sidebar', {
                 viewModel: function(params) {  },
                 template: {
@@ -395,6 +537,7 @@
             Sammy(function () {
                 this.get('#preview', function () {
                     self.edit_mode(false);
+                    self.edit_mode_sub_panel(false);
                 });
 
                 this.get('#edit/appearance', function () { this.app.runRoute('get', '#edit/appearance/appearance-top') });
@@ -402,9 +545,16 @@
                 this.get('#edit/appearance/:screen', function () {
                     self.edit_mode(true);
 
-                    // self.panel1_template('appearance');
-                    self.appearance_content("tpl-"+this.params.screen);
+                    self.editor_main_panel_content("tpl-"+this.params.screen);
                     initScreen(this.params.screen);
+                });
+
+                this.get('#edit/widgets', function () { this.app.runRoute('get', '#edit/widgets/widgets-top') });
+
+                this.get('#edit/widgets/:screen', function () {
+                    self.edit_mode(true);
+                    self.showWidgetSettings(this.params.screen);
+                    // initScreen(this.params.screen);
                 });
 
                 this.get('#', function () { return false; });

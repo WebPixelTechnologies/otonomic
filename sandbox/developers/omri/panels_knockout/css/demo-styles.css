@@ -44,3 +44,21 @@ body.fonts .sidebar #fonts {display:block;}
 	border-radius: 4px;
 	cursor: pointer;
 }
+
+
+div#edit_sidebar {
+    position: absolute;
+    z-index: 5;
+    background: #EEE;
+    padding: 0px;
+    border: 1px solid #CCC;
+    height: 100%;
+    margin: 0;
+}
+.editor_panel {
+    float: left;
+    /* margin-right: 20px; */
+    border-right: 1px solid #DDD;
+    height: 100%;
+    padding: 0px 15px 10px;
+}
