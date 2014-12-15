@@ -155,10 +155,20 @@
         </div>
     </script>
 
+    <script type="text/html" id="tpl-widget-areas">
+        <div class="list-group main" id="" data-bind="forEach: widget_area">
+            <a href="#edit/widget-areas/item-2" class="list-group-item" data-url="">
+                <i class="fa fa-comment-o"></i> <span data-bind="text: name"></span>
+                <span class="item-description" data-bind="text: description"></span>
+            </a>
+        </div>
+    </script>
+
     <script type="text/html" id="tpl-widgets">
         <div class="list-group main" id="" data-bind="forEach: widgets">
-            <a href="#edit/widgets/" class="list-group-item" data-url="">
-                <i class="fa fa-comment-o"></i> <span data-bind=""></span>
+            <a href="#edit/widgets/item-2" class="list-group-item" data-url="">
+                <i class="fa fa-comment-o"></i> <span data-bind="text: name"></span>
+                <span class="item-description" data-bind="text: description"></span>
             </a>
         </div>
     </script>
@@ -438,6 +448,9 @@
                     flickr: ""
                 }
             });
+
+            self.widgets = ko.observableArray();
+
             self.data_facebook = ko.observable();
 
             self.modal_title = ko.observable();
@@ -485,6 +498,28 @@
                 $('#modal-window').modal('show');
             };
 
+            self.showWidgetAreaSettings = function(widget_area_instance_id) {
+
+                /*
+                self.modal({
+                    title: "Edit Section",
+                    template_obj: {name: "tpl-widget-area"},
+                    data: {
+                        instance_id: "",
+                        data: ""
+                    }
+                });
+                $('#modal-window').modal('show');
+
+                $.getJSON(
+                        'http://wp.test/como/?json=widgets.get_widget_settings_form&widget_id='+widget_instance_id,
+                        function(response) {
+                            $('#widget-settings').html(response.respond.settings_form);
+                        }
+                );
+                */
+            }
+
             self.showWidgetSettings = function(widget_instance_id) {
                 self.modal({
                     title: "Edit Widget",
@@ -497,8 +532,9 @@
                 $('#modal-window').modal('show');
                 // $('#widget-data').load('')
 
+                /*
                 $.post(
-                        'http://wp.test/washingtonhair-charlenerapa/wp-admin/admin-ajax.php',
+                        'http://wp.test/como/wp-admin/admin-ajax.php',
                         {
                             // page_class: 'ServicesAdminPage',
                             wp_otonomic_cmd: 'wp_otonomic_apl',
@@ -508,6 +544,21 @@
                             response = JSON.parse(response);
                             $('#widget-data').html(response.content);
                         }
+                );
+                */
+                $.getJSON(
+                    'http://wp.test/como/?json=widgets.get_widget_settings_form&widget_id='+widget_instance_id,
+                    function(response) {
+                        $('#widget-settings').html(response.respond.settings_form);
+                    }
+                );
+            }
+
+            self.getWidgets = function() {
+                $.getJSON('http://wp.test/como/?json=widgets.get_sidebar_widgets').done(
+                    function(response) {
+                        self.widgets(response.respond.widgets);
+                    }
                 );
             }
 
@@ -549,12 +600,24 @@
                     initScreen(this.params.screen);
                 });
 
-                this.get('#edit/widgets', function () { this.app.runRoute('get', '#edit/widgets/widgets-top') });
+                this.get('#edit/widget-areas', function () {
+                    self.edit_mode(true);
+                    self.editor_main_panel_content('tpl-widget-areas');
+                });
+
+                this.get('#edit/widget-areas/:screen', function () {
+                    self.edit_mode(true);
+                    self.showWidgetAreaSettings(this.params.screen);
+                });
+
+                this.get('#edit/widgets', function () {
+                    self.edit_mode(true);
+                    self.editor_main_panel_content('tpl-widgets');
+                });
 
                 this.get('#edit/widgets/:screen', function () {
                     self.edit_mode(true);
                     self.showWidgetSettings(this.params.screen);
-                    // initScreen(this.params.screen);
                 });
 
                 this.get('#', function () { return false; });
