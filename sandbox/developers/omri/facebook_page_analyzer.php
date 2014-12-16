@@ -247,7 +247,9 @@ https://www.facebook.com/aqha1</textarea>
 
     function appendDataToDiv(div, data)
     {
-        return div.append(data+'<br/>');
+        // return div.append(data+'<br/>');
+
+        return div.append('<tr> <td>' + data.split(',').join('</td><td>') + '</td> </tr>');
     }
 
     function appendtodiv(data)
@@ -524,12 +526,9 @@ https://www.facebook.com/aqha1</textarea>
     });
 </script>
 
-<pre>
-    <div id="append_div_all">
-    </div>
-</pre>
-
-<div id="append_div">
-</div>
+    <table>
+        <tbody id="append_div">
+        </tbody>
+    </table>
 </body>
 </html>
