@@ -42,27 +42,35 @@ function kb_enabled()
 }
 function search_handle_keys( e )
 {
-	if( !kb_enabled() )
-	{
+	if( !kb_enabled() ) {
 		return true; // Exit and bubble
 	}
+
 	var move = false;
-	switch (e.keyCode) 
-	{
+	switch (e.keyCode) {
 		case 38:
 			active_element = jQuery('.search_results .search-results-item.hover').prev();
+            if(!(active_element.length)) {
+                jQuery('.search_results .search-results-item:last').focus();
+                jQuery('.search_results .search-results-item:last').addClass('hover');
+            }
 			move = true;
 		break; // Up
+
 		case 40:
 			active_element = jQuery('.search_results .search-results-item.hover').next();
+            if(!(active_element.length)) {
+                jQuery('.search_results .search-results-item:first').focus();
+                jQuery('.search_results .search-results-item:first').addClass('hover');
+            }
 			move = true;
 		break; // Down
 		default:
 			return true; // Exit and bubble
 		
 	}
-	if(move)
-	{
+
+	if(move) {
 		if(jQuery(active_element).length>0)
 		{
 			jQuery('.search_results .search-results-item.hover').removeClass('hover');
@@ -362,9 +370,8 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
 
             if (found_result > 0) {
                 wrapper.html($('<div/>', {'class': 'search_results', html: items.join('')}));
-				jQuery('.search_results .search-results-item:first').focus();
-				jQuery('.search_results .search-results-item:first').addClass('hover');
-				enable_kb_control();
+                enable_kb_control();
+
             } else {
                 show_page_not_found_message(InputField);
 				disable_kb_control();

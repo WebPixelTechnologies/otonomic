@@ -68,21 +68,6 @@ $og_url = $og_variation['url'];
     <link rel="stylesheet" type="text/css" href="css/styles.css?v=0.0.1">
     <link rel="stylesheet" type="text/css" href="css/searchResults.css">
 
-    <!-- Google Analytics Content Experiment code -->
-    <script>function utmx_section(){}function utmx(){}(function(){var
-            k='71111072-6',d=document,l=d.location,c=d.cookie;
-            if(l.search.indexOf('utm_expid='+k)>0)return;
-            function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-                indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-                length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-                '<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-                    '://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-                    '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-                    valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-                    '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-    </script><script>utmx('url','A/B');</script>
-    <!-- End of Google Analytics Content Experiment code -->
-
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -99,6 +84,25 @@ $og_url = $og_variation['url'];
     <script type="text/javascript" src="js/main.js?v=1.0"></script>
     <script type="text/javascript" async="" src="http://cdn.luckyorange.com/w.js"></script>
     <script src="/js/otonomic-analytics.js"></script>
+
+
+    <!-- Facebook Conversion Code for User visited hairstyling LP -->
+    <script>(function() {
+            var _fbq = window._fbq || (window._fbq = []);
+            if (!_fbq.loaded) {
+                var fbds = document.createElement('script');
+                fbds.async = true;
+                fbds.src = '//connect.facebook.net/en_US/fbds.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(fbds, s);
+                _fbq.loaded = true;
+            }
+        })();
+        window._fbq = window._fbq || [];
+        window._fbq.push(['track', '6021558542830', {'value':'0.00','currency':'USD'}]);
+    </script>
+    <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6021558542830&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
+    <!-- END Facebook Conversion Code for User visited hairstyling LP -->
 </head>
 
 <body>
