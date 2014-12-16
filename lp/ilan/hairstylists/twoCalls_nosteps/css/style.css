@@ -1,0 +1,430 @@
+body {
+    margin: 0;
+    font-family: 'Aller', sans-serif;
+    overflow-x: hidden;
+}
+#main {
+    position: relative;
+}
+.container{
+    width: 1010px;
+    height: 690px;
+    text-align: center;
+    /*background: url("../images/bg.jpg") no-repeat;*/
+    background-size: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.top_wraper{
+    width: 430px;
+    margin: 0;
+    float: left;
+    padding: 0 30px;
+}
+.slogan{
+    color: #fff;
+    font-family: 'Aller', sans-serif;
+    font-weight: normal;
+    font-size: 36px;
+    margin-bottom: 0;
+}
+.make_my_website{
+    clear: both;
+    text-align: right;
+}
+.table_form{
+    width: 100%;
+    padding-top: 10px;
+}
+
+
+.facebook_icon {
+    background: url("../images/fb.png") no-repeat;
+    position: absolute;
+    top: 9px;
+    width: 18px;
+    height: 18px;
+    left: 18px;
+}
+.social{
+    position: absolute;
+    bottom: 10px;
+}
+.social ul{
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+.social_icon{
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 8px;
+}
+.social li{
+    list-style-type: none;
+    display: inline;
+}
+.social li a{
+    color:transparent;
+}
+.social li img{
+    margin-left: 6px;
+}
+.bottom_logo{
+    width: 100px;
+    height: 45px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.txt{
+    color: white;
+    text-align: center;
+    margin-top: 35px;
+    font-family: 'Aller', sans-serif;
+    font-size: 14px;
+}
+
+/*---------------------------------page 2----------------------------*/
+
+.container2{
+    width: 1010px;
+    height: 650px;
+    text-align: center;
+    background: url("../images/bg2_old.jpg") no-repeat;
+    background-size: 100%;
+    background-position: 0 30px;
+    margin: 0 auto;
+    position: relative;
+    font-family: 'Aller', sans-serif;
+}
+header{
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    background-color: #1f1a18;
+    background-size: 100%;
+    position: absolute;
+}
+.logo{
+    margin: 0 0 0 30px;
+    width: 160px;
+    height: 60px;
+    float: left;
+    text-align: center;
+}
+.logo img{
+    width: 120px;
+    margin-top: 15px;
+}
+.top_text{
+    width: 750px;
+    height: 70px;
+    margin-left: 10px;
+    float: left;
+    color: #fff;
+    text-align: left;
+    line-height: 90px;
+}
+.top_wraper2{
+    width: 380px;
+    margin: 70px 0 0 80px;
+    float: left;
+    padding: 0;
+    font-weight: bold;
+    text-align: left;
+}
+.top_wraper2 ul{
+    padding-left: 0;
+    list-style: none;
+    list-style-position: outside;
+}
+.top_wraper2 ul li {
+    font-weight: normal;
+    line-height: 1.4;
+}
+.top_wraper2 ul li.active {
+    color: #ff3d5a;
+}
+
+.step {
+    display: inline-block;
+    width: 20px;
+    margin-right: 20px;
+}
+.heading_text{
+    font-size: 30px;
+    font-weight: lighter;
+    color: #ff3d5a;
+    line-height: 38px;
+}
+.text2{
+    margin: 0;
+    font-size: 17px;
+    color: #202020;
+}
+.text3{
+    font-size: 14px;
+    color: #202020;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.wraps{
+    text-align: left;
+}
+.search-field {
+    position: relative;
+}
+.main_search_box{
+    height: 35px;
+    width: 200px !important;
+    padding:0 33px 0 10px;
+    font-size: 11px;
+    border: 1px solid #000;
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,.3);
+    font-family: 'Aller', sans-serif;
+    background: #fff;
+}
+.btn_go{
+    margin: 0;
+    padding: 0 15px;
+    height: 37px;
+    text-align: center;
+    color: #fff;
+    font-size: 11px;
+    font-weight: normal;
+    font-family: 'Aller', sans-serif;
+    border: 1px solid #ff3d5a;
+    background: #ff3d5a;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    cursor: pointer;
+}
+.close-search {
+    padding: 0!important;
+    position: absolute;
+    top: 6px;
+    left: 212px;
+}
+/* Share buttons */
+.social-shares-container {
+    margin-bottom: 1px;
+}
+.tweet,
+.fb-share {
+    display: inline-block;
+    padding: 8px 15px;
+    text-align: center;
+    color: #fff;
+    font-size: 11px;
+    font-weight: normal;
+    font-family: 'Aller', sans-serif;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    cursor: pointer;
+    text-decoration: none;
+}
+.tweet img,
+.fb-share img {
+    height: 20px;
+    vertical-align: middle;
+}
+.tweet {
+    background-color: #57adef;
+}
+.fb-share {
+    margin-right: 10px;
+    background-color: #3c599a;
+}
+.testimonial{
+    margin: 0;
+    padding: 0 80px;
+    height: 100px;
+    margin-top: 85px;
+    text-align: left;
+}
+.no_of_website_counting{
+    font-size: 12px;
+    color: #fff;
+}
+.counting_no{
+    font-size: 18px;
+    padding-right: 5px;
+    font-weight: bold;
+}
+.testimonials_wrap{
+    width: 100%;
+    height: 64px;
+    margin: 17px 0 0 0;
+}
+.testimonail_list{
+    width: 31%;
+    float: left;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+.user_image{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 1px solid #fff;
+    float: left;
+    overflow: hidden;
+}
+.user_image img{
+    width: 100%;
+}
+blockquote {
+    font-size: 10px;
+    margin: 0 0 0 50px;
+    padding: 10px 0 0 10px;
+    position: relative;
+    color: #fff;
+}
+blockquote:before {
+    display: block;
+    content: "\201C";
+    font-size: 40px;
+    position: absolute;
+    left: -10px;
+    top: -5px;
+    color: #ff3b58;
+}
+.footer_text{
+    position: relative;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 12px;
+    color: #1f1a18;
+}
+.footer_text a {
+    margin: 5px;
+    color: #1f1a18;
+    text-decoration: none;
+}
+.footer_text a:hover {
+    text-decoration: underline;
+}
+
+.p2s_fanpages #search_wrapper_main {
+    z-index: 99;
+}
+.p2s_fanpages span.icon_clear {
+    position: absolute;
+    right: 20px!important;
+    top: 8px!important;
+}
+
+.social-channels {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+}
+
+/* Social buttons
+=============================================================*/
+.social-btn {
+  display: inline-block;
+  position: relative;
+  width: 36px;
+  height: 36px;
+  margin: 0 5px 5px 0!important;
+  line-height: 48px;
+  text-align: center;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.3);
+}
+.social-btn:hover{
+}
+.social-btn:active,
+.social-btn.active{
+  box-shadow: inset 0 1px 1px 1px rgba(0,0,0,0.2);
+}
+.social-btn img {
+    height: 20px;
+}
+.facebook-btn{
+  background-color: #3c599b;
+}
+.twitter-btn{
+  background-color: #55acee;
+}
+.googleplus-btn{
+  background-color: #d73d32;
+}
+.linkedin-btn{
+  background-color: #1884bb;
+}
+/*-----------------------------------------------------------*/
+
+@font-face {
+    font-family: 'aller';
+    src: url('../fonts/aller_bd-webfont.eot');
+    src: url('../fonts/aller_bd-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/aller_bd-webfont.svg') format('svg'),
+    url('../fonts/aller_bd-webfont.woff') format('woff'),
+    url('../fonts/aller_bd-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'aller';
+    src: url('../fonts/aller_lt-webfont.eot');
+    src: url('../fonts/aller_lt-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/aller_lt-webfont.svg') format('svg'),
+    url('../fonts/aller_lt-webfont.woff') format('woff'),
+    url('../fonts/aller_lt-webfont.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'aller';
+    src: url('../fonts/aller_rg-webfont.eot');
+    src: url('../fonts/aller_rg-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/aller_rg-webfont.svg') format('svg'),
+    url('../fonts/aller_rg-webfont.woff') format('woff'),
+    url('../fonts/aller_rg-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ScriptMTBoldRegular';
+    src: url("../fonts/scriptbl.eot");
+    src: url("../fonts/scriptbl.eot") format('embedded-opentype'),
+    url("../fonts/scriptbl.woff") format('woff'),
+    url("../fonts/scriptbl.ttf") format('truetype'),
+    url("../fonts/scriptbl.svg#ScriptMTBoldRegular") format('svg');
+}
+#video-placeholder {
+    width: 46%;
+    height: 50%;
+    position: absolute;
+    top: 15%;
+    right: 0;
+}
+#video-placeholder:hover {cursor: pointer;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
