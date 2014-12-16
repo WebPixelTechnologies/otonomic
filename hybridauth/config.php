@@ -42,7 +42,10 @@ return
 
 			"Twitter" => array ( 
 				"enabled" => true,
-				"keys"    => array ( "key" => "9gtOE9PPyvhg4xUbl2BzL3UkK", "secret" => "2rIsVK9Z5cxEYOnlSTVuvTZP9iQExhjH84sp1Swsx8sQjVZELE" ) 
+				"keys"    => array (
+                    "key" => "lHOHPqmwUsT6EikZHWqlg0MGJ",
+                    "secret" => "yglkHFRLkJ70xM0i0cSucFxNfqBxaJLpJhjqD5L62rxSgwZ4cu"
+                )
 			),
 
 			// windows live
@@ -62,7 +65,10 @@ return
 			),
                         "Instagram" => array(
                             "enabled" => true,
-                            "keys"    => array ( "id" => "ef4ef97d5bda4b51b575e22b2d179d1a", "secret" => "3497f47d336a4704a5851eb11e688586" )
+                            "keys"    => array (
+                                "id" => "ef4ef97d5bda4b51b575e22b2d179d1a",
+                                "secret" => "3497f47d336a4704a5851eb11e688586"
+                            )
                         )
 		),
 
