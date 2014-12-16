@@ -3,12 +3,16 @@ var found_only_result_url = '';
 var p2s_site_url = 'http://builder.otonomic.com/';
 var p2s_site_creation_base_url = 'http://wp.otonomic.com/migration/';
 
-var ot_wp_site_creation_url = "http://wp.otonomic.com/migration/index.php?theme=mycuisine";
-var ot_loading_page_url     = "/progresslp3";
-// var ot_loading_page_url     = "/progresslp4";
+var ot_wp_site_creation_url = "http://wp.otonomic.com/migration/index.php?theme=dreamspa";
+if(typeof(ot_loading_page_url)==="undefined") {
+    var ot_loading_page_url     = "/progresslp3";
+    // var ot_loading_page_url     = "/progresslp4";
+}
+
 if(typeof (query_tags) == 'undefined') {
     query_tags = {};
 }
+
 var total_req_no = 0;
 var sto;
 var p2strack = 0;
@@ -67,7 +71,6 @@ function search_handle_keys( e )
 		break; // Down
 		default:
 			return true; // Exit and bubble
-		
 	}
 
 	if(move) {

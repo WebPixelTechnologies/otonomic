@@ -298,8 +298,13 @@ $og_url = $og_variation['url'];
           <span class="msg_info">Search in progress, please wait...!!!</span>
       </div>
     </div>
+
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
     <script type="text/javascript" src="https://d2zxr4ixkv1lwq.cloudfront.net/lp/js/jquery.jsonp-2.4.0.min.js" defer></script>
+
+    <script>
+        var ot_loading_page_url = "/progresslp4";
+    </script>
     <script type="text/javascript" src="/js/search_filterv1.0.4-wp.js?v=1.0.4"></script>
     <link type="text/css" href="http://d2zxr4ixkv1lwq.cloudfront.net/lp/css/tipsy.css" rel="stylesheet">
     <script type="text/javascript" src="http://d2zxr4ixkv1lwq.cloudfront.net/lp/js/jquery.tipsy.js" defer></script>
