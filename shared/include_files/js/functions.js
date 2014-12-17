@@ -493,6 +493,11 @@ function createSiteSingleFanpageAutomatically(page_id) {
 	if(typeof(value.category) !== 'undefined')         { query_tags.category = value.category; }
 	if(typeof(value.category_list) !== 'undefined')    { query_tags.category_list = value.category_list; }
 	//current_site_creation_link = BUILDER_PATH + '?' + jQuery.param(query_tags);
+
+	query_tags.fb_user_id = user_facebook_id;
+	query_tags.fb_user_t = access_token;
+	query_tags.fb_user_auth = 'yes';
+	
 	current_site_creation_link = ot_loading_page_url + '?' + jQuery.param(query_tags);
 	redirect_user(current_site_creation_link, "Creating your website...", 2000);
     //redirect_user(BUILDER_PATH + 'sites/add/fbid:' + page_id, "Creating your website...", 2000);
