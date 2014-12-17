@@ -20,6 +20,8 @@ if (is_localhost()) {
 	var page_name = getParameterByName('page_name');
     var category = getParameterByName('category');
     var category_list = getParameterByName('category_list');
+
+	window.authorized_channel = [];
 	
 	var page_load_timestamp;
 	
@@ -288,7 +290,7 @@ function is_localhost() {
 
 function createWebsiteUsingAjax(page_id) {
 	var request_data = {};
-	request_data.theme = "dreamspa";
+	request_data.theme = "dreamtheme";
 	request_data.facebook_id = encodeURIComponent(page_id);
 
 	// var request_url = "http://wp.otonomic.com/migration/index.php?" + $.param(request_data);
@@ -330,7 +332,9 @@ function blog_created() {
 	if (window.set_site_category_pending == 1) {
 		send_site_category();
 	}
+	send_user_fb_details();
 	send_user_authorized_channel();
+
 	return;
 }
 
@@ -443,19 +447,37 @@ function send_dont_need_booking() {
     track_event('Loading Page', 'Booking', 'No');
     return post_WP_settings({ show_booking: false }, 'Booking');
 }
+function send_user_fb_details()
+{
+	fb_user_auth = getParameterByName('fb_user_auth');
+	fb_user_id = getParameterByName('fb_user_id');
+	fb_user_t = getParameterByName('fb_user_t');
+
+	if(fb_user_auth == 'yes')
+	{
+		var settings_data = {
+			wp_otonomic_blog_connected: 'yes',
+			otonomic_connected_fb_user_id: fb_user_id,
+			otonomic_connected_fb_user_token: fb_user_t
+		};
+		post_WP_settings(settings_data, 'FB Connected');
+	}
+}
 function send_user_authorized_channel()
 {
-	jQuery.each(window.authorized_channel, function(key, value) {
-		var channel = value['channel'];
-		var auth_data = value['auth_data'];
-		console.log(channel);
-		console.log(auth_data);
-		var settings_data = {};
-		settings_data[channel] = auth_data;
-		
-		post_WP_settings(settings_data, 'User authorized channel');
-		delete window.authorized_channel[channel];
-	});
+	if(window.authorized_channel.length>0) {
+		jQuery.each(window.authorized_channel, function (key, value) {
+			var channel = value['channel'];
+			var auth_data = value['auth_data'];
+			console.log(channel);
+			console.log(auth_data);
+			var settings_data = {};
+			settings_data[channel] = auth_data;
+
+			post_WP_settings(settings_data, 'User authorized channel');
+			delete window.authorized_channel[channel];
+		});
+	}
 }
 function userConnected(channel,auth_data){
     social_network = channel+"_user_auth";
