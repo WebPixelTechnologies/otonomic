@@ -124,7 +124,7 @@ $og_url = $og_variation['url'];
           <p class="text3">We take your Facebook page and turn it into a <br />beautiful mobile & desktop website.</p>
           <p class="js-text3 text3">Connect to your Facebook page</p>
           <!-- Search input field -->
-          <div class="p2s_fanpages">
+          <div class="p2s_fanpages hidden-xs">
             <div class="form-search form-inline">
               <input id="main_search_box" type="text" 
               class="form-control main_search_box LoNotSensitive"
@@ -139,6 +139,7 @@ $og_url = $og_variation['url'];
             </div>
             <div class="tb search-wrapper" id="search_wrapper_main" data-attr="center"></div>
           </div>
+          <a href="/shared/facebook_login.php" id="fb_connector" class="btn btn-lg btn-facebook-connect visible-xs facebook_connect track_event measure_time" data-ga-category="LandingPage" data-ga-event="Connect with Facebook" data-ga-label="Search explanation box"><img src="images/facebook-icon.svg" alt="Connect with Facebook"> Connect with Facebook</a>
           <!-- Share Buttons -->
           <div class="js-social-shares social-shares-container" style="display:none;">
               <a href="javascript:void(0)" class="fb-share" onclick="shareOnFB();">

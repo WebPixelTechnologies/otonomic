@@ -454,6 +454,8 @@ $coontet-bg-color: #fcf8f5;
             }
             .rr-left {
                 width: 100%;
+                height: auto;
+                margin-bottom: 20px;
                 &:after {
                     right: initial;
                     border: 0;
@@ -469,11 +471,24 @@ $coontet-bg-color: #fcf8f5;
                 width: 50px;
                 color: transparent;
                 font-family: 'Glyphicons Halflings';
-                &:before {
+                /* &:before {
                     content: "\e080";
                     color: white;
                     margin-left: 5px;
-                }
+                } */
+            }
+            .btn-facebook-connect {
+                font-family: 'Aller', Helvetica, Arial, sans-serif;
+                color: #fff;
+                width: auto;
+                height: auto;
+                line-height: 2.33;
+                font-weight: normal;
+                background-color: #146aa7;
+                border-radius: 6px;
+            }
+            .btn-facebook-connect img {
+                margin-top: -10px;
             }
             .p2s_fanpages{
                 .search_results {

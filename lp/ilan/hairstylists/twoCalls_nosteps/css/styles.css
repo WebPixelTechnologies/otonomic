@@ -7304,6 +7304,8 @@ footer a:hover {
   }
   .main-content .rr-left {
     width: 100%;
+    height: auto;
+    margin-bottom: 20px;
   }
   .main-content .rr-left:after {
     right: initial;
@@ -7319,11 +7321,24 @@ footer a:hover {
     width: 50px;
     color: transparent;
     font-family: 'Glyphicons Halflings';
+    /* &:before {
+        content: "\e080";
+        color: white;
+        margin-left: 5px;
+    } */
   }
-  .main-content .btn:before {
-    content: "\e080";
-    color: white;
-    margin-left: 5px;
+  .main-content .btn-facebook-connect {
+    font-family: 'Aller', Helvetica, Arial, sans-serif;
+    color: #fff;
+    width: auto;
+    height: auto;
+    line-height: 2.33;
+    font-weight: normal;
+    background-color: #146aa7;
+    border-radius: 6px;
+  }
+  .main-content .btn-facebook-connect img {
+    margin-top: -10px;
   }
   .main-content .p2s_fanpages .search_results {
     width: 100%;
