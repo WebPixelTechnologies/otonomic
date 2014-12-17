@@ -66,7 +66,7 @@
           <p class="">You can instantly integrate other social media networks to your site by clicking below:</p>
           <p class="visible-xs"><b>Connect With</b></p>
           <div id="social_connect_hybrid">
-            <a id="authorize_Facebook" class="js-connect-facebook social-btn facebook-btn" href="#"><img src="images/facebook-icon.svg"><span class="hidden-xs"> Connect with </span>Facebook</a>
+            <!-- <a id="authorize_Facebook" class="js-connect-facebook social-btn facebook-btn" href="#"><img src="images/facebook-icon.svg"><span class="hidden-xs"> Connect with </span>Facebook</a> -->
             <a id="authorize_Twitter" class="js-connect-twitter social-btn twitter-btn" href="#"><img src="images/twitter-icon.svg"><span class="hidden-xs"> Connect with </span>Twitter</a>
             <a id="authorize_Instagram" class="js-connect-instagram social-btn instagram-btn" href="#"><img src="images/instagram-icon.svg"><span class="hidden-xs"> Connect with </span>Instagram</a>
             <!-- <a id="authorize_LinkedIn" class="js-connect-tumbler social-btn yelp-btn" href="#"><img src="images/yelp-icon.svg"></a> -->
