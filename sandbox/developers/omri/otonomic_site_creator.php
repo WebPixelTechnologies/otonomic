@@ -29,6 +29,17 @@ define('FB_APP_ID', $fb_app_id);
 
 <html>
 <head>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid #CCC;
+            padding: 3px;
+            margin: 0;
+        }
+    </style>
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </head>
 
@@ -60,7 +71,8 @@ https://www.facebook.com/aqha1</textarea>
 
     function appendDataToDiv(div, data)
     {
-        return div.append(data+'<br/>');
+        // return div.append(data+'<br/>');
+        return div.append('<tr> <td>' + data.split(',').join('</td><td>') + '</td> </tr>');
     }
 
     function appendtodiv(data)
@@ -158,7 +170,7 @@ https://www.facebook.com/aqha1</textarea>
             $("#append_div").empty();
             $("#append_div_all").empty();
 
-            var fields = 'Fanpage Url,Site Url';
+            var fields = 'Index,Fanpage Url,Site Url';
             appendtodiv(fields);
 
             for(j = 0; j<res.length; j++) {
@@ -176,7 +188,10 @@ https://www.facebook.com/aqha1</textarea>
     </div>
 </pre>
 
-<div id="append_div">
-</div>
+<table>
+    <tbody id="append_div">
+    </tbody>
+</table>
+
 </body>
 </html>

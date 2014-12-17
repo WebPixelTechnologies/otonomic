@@ -124,10 +124,17 @@ https://www.facebook.com/aqha1</textarea>
     function get_last_post_date(response) {
         if(!(x = response.posts)) {
             return null;
-
         }
 
         return x.data[0].created_time;
+    }
+
+    function get_first_post_date(response) {
+        if(!(x = response.posts)) {
+            return null;
+        }
+
+        return x.data[(x.data.length)-1].created_time;
     }
 
     function calc_post_type_stats(data, posting_period_in_weeks) {
@@ -240,7 +247,9 @@ https://www.facebook.com/aqha1</textarea>
 
     function appendDataToDiv(div, data)
     {
-        return div.append(data+'<br/>');
+        // return div.append(data+'<br/>');
+
+        return div.append('<tr> <td>' + data.split(',').join('</td><td>') + '</td> </tr>');
     }
 
     function appendtodiv(data)
@@ -273,6 +282,7 @@ https://www.facebook.com/aqha1</textarea>
         stats.total_notes = get_total_notes(response);
 
         stats.last_post_date = get_last_post_date(response);
+        stats.first_post_date = get_first_post_date(response);
 
         if(stats.total_posts > 0)
         {
@@ -282,7 +292,8 @@ https://www.facebook.com/aqha1</textarea>
             var first_post_time = new Date(posts[posts.length-1].created_time);
             stats.posting_period_in_days = diff_days(last_post_time, first_post_time);
             stats.posting_period_in_weeks = diff_weeks(last_post_time, first_post_time);
-            stats.last_post_time_days_ago = diff_days(new Date(), first_post_time);
+            stats.first_post_time_days_ago = diff_days(new Date(), first_post_time);
+            stats.last_post_time_days_ago = diff_days(new Date(), last_post_time);
 
             for(var i = 0; i<stats.total_posts; i++)
             {
@@ -397,7 +408,7 @@ https://www.facebook.com/aqha1</textarea>
                         response.website = response.website.replace("<>", "").trim();
 
                         output = [today, csvencode(keywords[index2]), response.category, category_list_names, csvencode(response.website), csvencode(response.name), response.id, category_list, response.likes, response.talking_about_count, response.parent_page, response.link];
-                        output = output.concat(stats.total_posts, stats.total_notes, stats.total_albums, stats.total_pictures, stats.total_events, stats.total_videos, stats.posting_period_in_days, stats.last_post_date, stats.last_post_time_days_ago);
+                        output = output.concat(stats.total_posts, stats.total_notes, stats.total_albums, stats.total_pictures, stats.total_events, stats.total_videos, stats.posting_period_in_days, stats.last_post_date, stats.last_post_time_days_ago, stats.first_post_date, stats.first_post_time_days_ago);
 
                         output = output.concat(response.phone, response.location.country, response.location.city, response.location.street);
 
@@ -492,7 +503,7 @@ https://www.facebook.com/aqha1</textarea>
                     $("#append_div").empty();
                     $("#append_div_all").empty();
 
-                    var fields = 'Report_Date,Keyword,Category,Category List Names,Website,Name,Facebook_id,Category List,Fans,Talking_About_It,Link,Total_Posts,Total_Notes,Total_Albums,Total_Pictures,Total_Events,Total_Videos,Posting period [days],Last Post Date,Days since last post,'
+                    var fields = 'Report_Date,Keyword,Category,Category List Names,Website,Name,Facebook_id,Category List,Fans,Talking_About_It,Parent_Page,Link,Total_Posts,Total_Notes,Total_Albums,Total_Pictures,Total_Events,Total_Videos,Posting period [days],Last Post Date,Days since last post,First Post Date,Days since first post,'
                             + 'Phone,Country,City,Street,'
                             + 'Total_Notes,Notes_weekly_posts,[incorrect] Notes_likes/post,[incorrect] Notes_shares/post,[incorrect] Notes_comments/post,'
                             + 'Total_Posts_Status,Status_weekly_posts,Status_likes/post,Status_shares/post,Status_comments/post,'
@@ -515,12 +526,9 @@ https://www.facebook.com/aqha1</textarea>
     });
 </script>
 
-<pre>
-    <div id="append_div_all">
-    </div>
-</pre>
-
-<div id="append_div">
-</div>
+    <table>
+        <tbody id="append_div">
+        </tbody>
+    </table>
 </body>
 </html>
