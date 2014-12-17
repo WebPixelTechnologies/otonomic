@@ -65,33 +65,33 @@
 
 }
 html {
-	height: 100%;
+  height: 100%;
 }
 body {
-  	height: 100%;
-  	background-color: #f5ece6;
-  	color: #3d3632;
-  	font-family: 'aller', sans-serif;
+    height: 100%;
+    background-color: #f5ece6;
+    color: #3d3632;
+    font-family: 'aller', sans-serif;
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-	font-family: 'aller', sans-serif;
-	font-weight: lighter;
+  font-family: 'aller', sans-serif;
+  font-weight: lighter;
 }
 h1{
-	font-size: 62px;
+  font-size: 62px;
 }
 a{
-	color: #29abe2;
+  color: #29abe2;
 }
 a:hover{
-	color: #0980b2;
+  color: #0980b2;
 }
 
 a.btn img{
-	margin-top: -2px!important;
+  margin-top: -2px!important;
 }
 select {
-	font-family: arial, sans-serif;
+  font-family: arial, sans-serif;
 }
 textarea {
     resize: none;
@@ -100,16 +100,16 @@ textarea {
 /* BG image 
 ----------------------------------*/
 .bg-image{
-	position: fixed;
-	top: 0;
-	right: 0;
-	left: 465px;
-	bottom: 0;
-	overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 465px;
+  bottom: 0;
+  overflow: hidden;
 }
 .bg-image img{
-	height: 100%;
-	min-width: 100%;
+  height: 100%;
+  min-width: 100%;
 }
 
 /* INTRO 
@@ -123,9 +123,9 @@ textarea {
   left: 40px;
 }
 #intro h1.title{
-	margin-top: 70px;
-	font-size: 36px;
-	font-weight: bold;
+  margin-top: 70px;
+  font-size: 36px;
+  font-weight: bold;
 }
 #intro h2{
   font-size: 28px;
@@ -137,11 +137,11 @@ textarea {
   font-weight: normal;
 }
 #intro p.site-name{
-	margin-bottom: 20px;
-	color: #f54500;
-	font-size: 50px;
-	font-weight: bold;
-	text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #f54500;
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 #intro .bg-image{
   background-image: url(../images/bg1.jpg);
@@ -154,12 +154,12 @@ textarea {
 /* STAGE
 ----------------------------------*/
 .content-panel{
-	position: absolute;
-	width: 470px;
-	padding: 18px 40px 0 40px;
-	box-shadow: 3px 0px 0px 0px rgba(0,0,0,0.2);
-	min-height: 100%;
-	/*min-height: calc(100% - 89px);*/
+  position: absolute;
+  width: 470px;
+  padding: 18px 40px 0 40px;
+  box-shadow: 3px 0px 0px 0px rgba(0,0,0,0.2);
+  min-height: 100%;
+  /*min-height: calc(100% - 89px);*/
 }
 .content-panel h1.title{
   margin-top: 70px;
@@ -169,15 +169,15 @@ textarea {
   line-height: 42px;
 }
 .content-panel h3{
-	margin: 20px 0;
+  margin: 20px 0;
   font-size: 18px;
-	font-weight: bold;
+  font-weight: bold;
   line-height: 28px;
 }
 .content-panel p{
-	font-size: 24px;
-	font-weight: lighter;
-	margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: lighter;
+  margin-bottom: 30px;
 }
 
 .content-panel .btn-p {
@@ -192,60 +192,60 @@ textarea {
 /* STAGE-1
 -----------------------------------*/
 #stage-1{
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 #stage-1 .content-panel{
-	background-color: #f5ece6;
+  background-color: #f5ece6;
 }
 #stage-1 img.oto-gif{
-	margin: 40px -20px;
+  margin: 40px -20px;
 }
 #stage-1 .bg-image img{
-	float: left;
+  float: left;
 }
 
 
 /* STAGE-2
 ----------------------------------*/
 #stage-2{
-	position: absolute;
-	top: 0px;
-	width: 100%;
+  position: absolute;
+  top: 0px;
+  width: 100%;
   height: 100%;
 }
 #stage-2 .content-panel{
-	background-color: #f5ece6;
+  background-color: #f5ece6;
 }
 #stage-2 .bg-image img{
-	float: left;
+  float: left;
 }
 /* STAGE-3
 ----------------------------------*/
 #stage-3{
-	position: absolute;
-	top: 0;
-	width: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
   height: 100%;
 }
 #stage-3 .content-panel{
-	background-color: #f5ece6;
+  background-color: #f5ece6;
 }
 #stage-3 h3{
-	margin-bottom: 30px;
-	line-height: 32px;
-	font-weight: normal;
+  margin-bottom: 30px;
+  line-height: 32px;
+  font-weight: normal;
 }
 #stage-3 h4{
-	margin-top: 60px;
-	font-size: 16px;
-	font-weight: normal;
+  margin-top: 60px;
+  font-size: 16px;
+  font-weight: normal;
 }
 #stage-3 h4 img{
-	margin-right: 10px;
-	vertical-align: middle;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 
 /* STAGE-4
@@ -254,16 +254,16 @@ textarea {
   position: absolute;
   top: 0;
   width: 100%;
-	height: 100%;
+  height: 100%;
 }
 #stage-4 .content-panel{
-	background-color: #f5ece6;
+  background-color: #f5ece6;
 }
 #stage-4 h1.title{
-	color: #3d3531;
+  color: #3d3531;
 }
 #stage-4 .bg-image img{
-	float: left;
+  float: left;
 }
 
 /* Congratz
@@ -290,7 +290,7 @@ textarea {
 }
 #congratz h1.congratz-title{
   margin-top: 0;
-	margin-bottom: 40px;
+  margin-bottom: 40px;
   padding-top: 0;
   font-size: 36px;
   font-weight: bold;
@@ -312,22 +312,22 @@ textarea {
   font-weight: bold;
 }
 #congratz .fb-like{
-	display: block;
+  display: block;
   height: 20px;
-	margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 
 /* glyphicons*/
 .wp-lp p span.glyphicon-thumbs-up, 
 .wp-lp p span.glyphicon-ok {
-	color: #325942;
-	font-size: 50px;
+  color: #325942;
+  font-size: 50px;
 }
 /* Button Loader
 -------------------------------------------------- */
 .btn-loader{
-	margin-right: 15px;
+  margin-right: 15px;
 }
 /* Custom button
 -------------------------------------------------- */
@@ -365,13 +365,13 @@ textarea {
 }
 
 .btn-ttc.disabled{
-	color: #f54500;
-	background-color: #a62f00;
-	opacity: 1;
-	box-shadow: none;
+  color: #f54500;
+  background-color: #a62f00;
+  opacity: 1;
+  box-shadow: none;
 }
 .btn-ttc.disabled >{
-	display: none;
+  display: none;
 }
 .btn-ttc-orange,
 .btn-ttc-orange:hover,
@@ -388,14 +388,14 @@ textarea {
 }
 
 .btn-ttc-clear {
-	background: transparent;
-	color: #333;
-	box-shadow: none;
-	font-weight: normal!important;
+  background: transparent;
+  color: #333;
+  box-shadow: none;
+  font-weight: normal!important;
 }
 .btn-ttc-clear:hover,
 .btn-ttc-clear:active{
-	box-shadow: none;
+  box-shadow: none;
 }
 /* Apply the custom-colored gradients */
 /* Note: you'll need to include all the appropriate gradients for various browsers and standards. */
@@ -412,18 +412,18 @@ textarea {
 }
 
 .btn-ttc-orange.disabled {
-	color: #f54500;
-	background-color: #a62f00;
-	opacity: 1;
-	box-shadow: none;
+  color: #f54500;
+  background-color: #a62f00;
+  opacity: 1;
+  box-shadow: none;
 }
 .btn-ttc-orange.disabled >{
-	display: none;
+  display: none;
 }
 .btn-ttc-orange .glyphicon,
 .btn-ttc-clear .glyphicon {
   top: 2px;
-	margin-left: 10px;
+  margin-left: 10px;
 }
 .btn-ttc-orange.glyph-on-left .glyphicon {
   margin-right: 10px;
@@ -473,14 +473,14 @@ textarea {
 }
 
 #see-my-website-btn {
-	background-color: #228ebd;
+  background-color: #228ebd;
 }
 #see-my-website-btn:hover {
-	background-color: #0980b2;
+  background-color: #0980b2;
 }
 #see-my-website-btn.disabled {
-	background-color: #0980b2;
-	color: white;
+  background-color: #0980b2;
+  color: white;
 }
 
 /* Social buttons
@@ -978,6 +978,19 @@ h3#oto-web-url {
     #intro h1.title {
       margin-top: 50px;
     }
+    #stage-1 #social_connect_hybrid {
+      margin-bottom: 10px;
+    }
+    #stage-1 p.visible-xs {
+      margin-bottom: 10px;
+    }
+    #stage-1 #social_connect_hybrid .social-btn{
+      padding: 0 5px;
+      font-size: 13px;
+    }
+    #stage-1 #social_connect_hybrid .social-btn img {
+      height: 22px;
+    }
     #congratz p.site-name {
       padding-top: 70px;
       font-size: 24px;
@@ -991,6 +1004,9 @@ h3#oto-web-url {
       font-size: 24px;
       font-weight: bold;
       line-height: 30px;
+    }
+    #congratz h1.congratz-title #counter{
+      display: block;
     }
     #congratz .tos {
       font-size: 14px;
@@ -1017,8 +1033,4 @@ h3#oto-web-url {
 div#social_connect_hybrid {
     margin-top: -5px;
     margin-bottom: 25px;
-}
-
-#authorize_Instagram {
-    display: none;
 }
