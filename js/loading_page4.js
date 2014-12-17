@@ -474,6 +474,10 @@ function send_user_authorized_channel()
 			var settings_data = {};
 			settings_data[channel] = auth_data;
 
+			if(channel == 'Facebook')
+			{
+				post_WP_settings({wp_otonomic_blog_connected: 'yes'}, 'FB Connected');
+			}
 			post_WP_settings(settings_data, 'User authorized channel');
 			delete window.authorized_channel[channel];
 		});
