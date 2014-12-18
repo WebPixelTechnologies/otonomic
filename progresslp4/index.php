@@ -148,6 +148,7 @@
 
     <script type="text/javascript">
     var base_url = 'http://otonomic.com/hybridauth/twitter.php';
+    //var local_url = 'http://otonomic.test/hybridauth/twitter.php';
     $(document).ready(function(){
 
         trackFacebookPixel('viewed_installer');
