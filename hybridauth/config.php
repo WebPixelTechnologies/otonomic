@@ -61,8 +61,8 @@ return
 			"Twitter" => array ( 
 				"enabled" => true,
 				"keys"    => array (
-                    "key" => "9gtOE9PPyvhg4xUbl2BzL3UkK",
-                    "secret" => "2rIsVK9Z5cxEYOnlSTVuvTZP9iQExhjH84sp1Swsx8sQjVZELE"
+                    "key" => "lHOHPqmwUsT6EikZHWqlg0MGJ",
+                    "secret" => "yglkHFRLkJ70xM0i0cSucFxNfqBxaJLpJhjqD5L62rxSgwZ4cu"
                 )
 			),
 
