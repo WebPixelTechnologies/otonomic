@@ -150,6 +150,7 @@
     var base_url = 'http://otonomic.com/hybridauth/twitter.php';
     $(document).ready(function(){
         $('#social_connect_hybrid a').click(function(){
+            track_event('Loading Page', 'Social Connect', '1 > 2');
             var type = $(this).attr('id').split('_');
             var url = base_url+"?social="+type[1];
             window.open(

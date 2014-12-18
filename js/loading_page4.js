@@ -83,6 +83,7 @@ function checkConnectedWithFacebook() {
 
 	// Stage-1 next btn
 	$('.js-stage1-next').click(function(event){
+        track_event('Loading Page', 'Next', '1 > 2');
 		event.preventDefault();
 		$('#stage-1').fadeOut('slow', function () {
 			$(this).addClass('hidden');
@@ -92,6 +93,7 @@ function checkConnectedWithFacebook() {
 	
 	// Stage-2 next btn
 	$('.js-stage2-next').click(function(event){
+        track_event('Loading Page', 'Next', '2 > 3');
 		event.preventDefault();
 		$('#stage-2').fadeOut('slow', function () {
 			$(this).addClass('hidden');
@@ -101,6 +103,7 @@ function checkConnectedWithFacebook() {
 
 	// Stage-3 next btn
 	$('.js-stage3-next').click(function(event){
+        track_event('Loading Page', 'Next', '3 > 4');
 		event.preventDefault();
 		$('#stage-3').fadeOut('slow', function () {
 			$(this).addClass('hidden');
@@ -110,16 +113,14 @@ function checkConnectedWithFacebook() {
 
 	// Stage-4 next btn
 	$('.js-stage4-next').click(function(event){
+        track_event('Loading Page', 'Next', '4 > 5');
 		event.preventDefault();
 		switchToCongratz();
 	});
 
-
-
 	jQuery('#link-tos').click(function (e){
 		track_event('Loading Page', 'ToS', '');
 	});
-
 
 	// #see-my-website-btn Click
 	////////////////////////////////////////
@@ -162,6 +163,7 @@ function checkConnectedWithFacebook() {
 			}
 
             if(sec < 4) {
+                track_event('Loading Page', 'Redirect to website', '');
                 window.do_redirect = 1;
                 redirect_to_website();
             }
