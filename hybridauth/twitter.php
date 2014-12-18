@@ -41,15 +41,18 @@
 		$user_profile = $twitter->getUserProfile();
         // $user_profile_data is the array that is to be saved in the database.
         $user_profile_data = (array) $user_profile;
-                
-		$twitter->logout(); 
+        $user_data = array(
+            'authorization' => $session_data,
+            'user_profile' => $user_profile_data
+        );
+            $twitter->logout(); 
         ?>
 
 <script language="javascript"> 
 	if(  window.opener ){
 //                window.opener.parent.$('#authorize_<?= $social_media_type; ?>').addClass('connected');
 //		window.opener.parent.$('#authorize_<?= $social_media_type; ?>').append('<img class="social-check" src="images/social-check.png">');
-                window.opener.parent.userConnected('<?= $social_media_type; ?>','<?= $session_data ?>');
+                window.opener.parent.userConnected('<?= $social_media_type; ?>','<?= $user_data ?>');
 	}
 	window.self.close();
 </script>
