@@ -16,7 +16,8 @@ var pixel_values = {
     visited_domain_page: '6020069257230',
     created_site: '6008636103630',
     shared_promotion: '6020812900230',
-    registered_to_promotion: '6020812953830'
+    registered_to_promotion: '6020812953830',
+    viewed_installer: '6021618382030'
 };
 
 

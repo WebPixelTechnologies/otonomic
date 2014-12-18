@@ -143,12 +143,18 @@
     <!-- Bootstrap core JavaScript -->
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="/js/loading_page4.js?v=0.51"></script>
+    <script src="/js/loading_page4.js?v=0.52"></script>
 
 
     <script type="text/javascript">
     var base_url = 'http://otonomic.com/hybridauth/twitter.php';
     $(document).ready(function(){
+
+        trackFacebookPixel('viewed_installer');
+        window._fbq = window._fbq || [];
+        window._fbq.push(['track', '6021618382030', {'value':'0.00','currency':'USD'}]);
+
+
         $('#social_connect_hybrid a').click(function(){
             var type = $(this).attr('id').split('_');
 

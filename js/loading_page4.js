@@ -74,6 +74,7 @@ function checkConnectedWithFacebook() {
 
 	// Intro next btn
 	$('.js-intro-next').click(function(event){
+        track_event('Loading Page', 'Next', 'Start process');
 		event.preventDefault();
 		$('#intro').fadeOut('slow', function () {
 			$(this).addClass('hidden');

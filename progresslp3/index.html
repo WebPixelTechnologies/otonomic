@@ -175,6 +175,12 @@
     <script type="text/javascript">
       var base_url = 'http://otonomic.com/hybridauth/twitter.php';
       $(document).ready(function(){
+
+          trackFacebookPixel('viewed_installer');
+          window._fbq = window._fbq || [];
+          window._fbq.push(['track', '6021618382030', {'value':'0.00','currency':'USD'}]);
+
+
           $('#social_connect_hybrid a').click(function(){
               var type = $(this).attr('id').split('_');
 
