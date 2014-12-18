@@ -515,6 +515,8 @@ function send_user_authorized_channel()
 	}
 }
 function userConnected(channel,auth_data){
+    track_event('Loading Page', 'Social channel connected', channel);
+
     social_network = channel+"_user_auth";
 	
 	window.authorized_channel.push({
