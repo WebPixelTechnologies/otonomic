@@ -161,7 +161,7 @@ function checkConnectedWithFacebook() {
 				}
 			}
 
-            if(sec < 3) {
+            if(sec < 4) {
                 window.do_redirect = 1;
                 redirect_to_website();
             }
@@ -318,7 +318,7 @@ function is_localhost() {
 
 function createWebsiteUsingAjax(page_id) {
 	var request_data = {};
-	request_data.theme = "dreamtheme";
+	request_data.theme = "dreamspa";
 	request_data.facebook_id = encodeURIComponent(page_id);
 
 	// var request_url = "http://wp.otonomic.com/migration/index.php?" + $.param(request_data);
@@ -522,29 +522,4 @@ function userConnected(channel,auth_data){
 	timed_submit(send_user_authorized_channel, 'user_authorized_channel');
     $('#authorize_'+channel).addClass('connected');
 	$('#authorize_'+channel).append('<img class="social-check" src="images/social-check.png">');
-	
-    /*request = $.ajax({
-		type: "POST",
-		url: window.site_url + '/?json=settings.set_many',
-		data: { 'test_channel': channel },
-		success: function (data, status, jqxhr) {
-			if (jqxhr.status == 307) {
-				$.post(window.site_url + '/?json=settings.set_many', { 'test_channel': channel });
-                                track_event('Loading Page', 'Send Contact Data', '307');
-				return;
-			}
-                        $('#authorize_'+channel).addClass('connected');
-                        $('#authorize_'+channel).append('<img class="social-check" src="images/social-check.png">');     
-//			if (data.status == "ok") {
-//				track_event('Loading Page', 'Send Contact Data', 'Success');
-//			} else {
-//				track_event('Loading Page', 'Send Contact Data', 'Failure: data.respond.msg: ' + (data.respond && data.respond.msg));
-//			}
-		},
-		complete: function (jqxhr, status) {
-			if (status !== 'success') {
-				track_event('Loading Page', 'Send Contact Data', 'Failure: ' + status);
-			}
-		}
-    });*/
 }

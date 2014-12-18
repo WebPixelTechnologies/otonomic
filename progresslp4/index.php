@@ -148,31 +148,31 @@
 
     <script type="text/javascript">
     var base_url = 'http://otonomic.com/hybridauth/twitter.php';
-        $(document).ready(function(){
-            $('#social_connect_hybrid a').click(function(){
-                var type = $(this).attr('id').split('_');
-                var url = base_url+"?social="+type[1];
-                window.open(
-                    url, 
-                    "hybridauth_social_sing_on", 
-                    "location=0,status=0,scrollbars=1,width=800,height=500"
-                );
-                return false;
-            });
-
-            // Change social buttons apearance depending on screen width 
-            var changeWidth = function(){
-              console.log('Resized');
-              if ( $(window).width() < 480 ){
-                $('#social_connect_hybrid').addClass('btn-group-justified btn-group');
-                $('#social_connect_hybrid a').addClass('btn');
-              } else {
-                $('.btn-group-vertical').removeClass('btn-group-justified btn-group');
-                $('#social_connect_hybrid a').removeClass('btn');
-              }
-            };
-            $(window).resize(changeWidth());
+    $(document).ready(function(){
+        $('#social_connect_hybrid a').click(function(){
+            var type = $(this).attr('id').split('_');
+            var url = base_url+"?social="+type[1];
+            window.open(
+                url,
+                "hybridauth_social_sign_on",
+                "location=0,status=0,scrollbars=1,width=800,height=500"
+            );
+            return false;
         });
+
+        // Change social buttons appearance depending on screen width
+        var changeWidth = function(){
+          console.log('Resized');
+          if ( $(window).width() < 480 ){
+            $('#social_connect_hybrid').addClass('btn-group-justified btn-group');
+            $('#social_connect_hybrid a').addClass('btn');
+          } else {
+            $('.btn-group-vertical').removeClass('btn-group-justified btn-group');
+            $('#social_connect_hybrid a').removeClass('btn');
+          }
+        };
+        $(window).resize(changeWidth());
+    });
     </script>
   </body>
 </html>

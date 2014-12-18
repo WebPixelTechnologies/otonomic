@@ -110,7 +110,9 @@
           </a>
         </div>
       </div>
+
       <!-- Stage 4 ========================================================== -->
+      <!--
       <div id="stage-4" class="row hidden">
         <div class="bg-image hidden-xs"><img src="images/bg5.jpg"></div>
         <div class="content-panel">
@@ -121,7 +123,21 @@
               <a href="#" onclick="return false;" class="js-stage4-next submit-store btn btn-ttc-orange glyph-on-left"><span class="glyphicon glyphicon-ok"></span>Yes</a>
         </div>
       </div>
-      <!-- Congratz ========================================================== -->
+      -->
+        <div id="stage-4" class="row hidden installer-stage">
+            <div class="bg-image hidden-xs"><img src="images/bg5.jpg"></div>
+            <div class="content-panel">
+                <img class="logo" src="images/otonomic-logo-dark.png">
+                <h1 class="title">Would you like to offer Online Booking?</h1>
+                <p>(You can always change your mind)</p>
+                <a href="#" onclick="return false;" class="js-stage4-next submit-booking btn btn-ttc-orange pull-right glyph-on-left"><span class="glyphicon glyphicon-ok"></span>Yes</a>
+                <a href="#" onclick="return false;" style="margin-right: 10px;" class="js-stage4-next submit-skip-booking btn btn-ttc-orange pull-right glyph-on-left"><span class="glyphicon glyphicon-remove"></span>No</a>
+            </div>
+        </div>
+
+
+
+        <!-- Congratz ========================================================== -->
       <div id="congratz" class="row hidden text-center">
         <img class="logo" src="images/otonomic-logo-dark.png">
         <div class="upper-content">
@@ -164,7 +180,7 @@
               var url = base_url+"?social="+type[1];
               window.open(
                       url,
-                      "hybridauth_social_sing_on",
+                      "hybridauth_social_sign_on",
                       "location=0,status=0,scrollbars=1,width=800,height=500"
               );
               return false;
