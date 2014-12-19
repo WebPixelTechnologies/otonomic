@@ -163,7 +163,7 @@ function checkConnectedWithFacebook() {
 				}
 			}
 
-            if(sec < 4) {
+            if(sec == 4) {
                 track_event('Loading Page', 'Redirect to website', '');
                 window.do_redirect = 1;
                 redirect_to_website();
