@@ -372,7 +372,7 @@ function blog_created() {
 function redirect_to_website() {
 
 	if(window.do_redirect == 1 && window.is_blog_ready == 1) {
-        window.location.replace(window.redirect);
+        window.location.replace(window.blog_redirect);
         /*
 		window.setTimeout(function (e){
 			//alert('redirecting to site...');
