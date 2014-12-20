@@ -471,12 +471,12 @@ function send_dont_need_store() {
 
 function send_need_booking() {
     track_event('Loading Page', 'Booking', 'Yes');
-    return post_WP_settings({ show_booking: true }, 'Booking');
+    return post_WP_settings({ show_booking: 1 }, 'Booking');
 }
 
 function send_dont_need_booking() {
     track_event('Loading Page', 'Booking', 'No');
-    return post_WP_settings({ show_booking: false }, 'Booking');
+    return post_WP_settings({ show_booking: 0 }, 'Booking');
 }
 function send_user_fb_details()
 {
