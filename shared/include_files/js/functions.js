@@ -12,7 +12,7 @@ var num_reject_basic_permissions = 0;
 var num_reject_manage_pages = 0;
 var img_height, img_width = 0;
 
-var ot_wp_site_creation_url = "http://wp.otonomic.com/migration/index.php?theme=dreamspa";
+var ot_wp_site_creation_url = "http://wp.otonomic.com/migration/index.php?theme=dreamtheme";
 if(typeof(ot_loading_page_url)==="undefined") {
 	var ot_loading_page_url     = "/progresslp3";
 	// var ot_loading_page_url     = "/progresslp4";
