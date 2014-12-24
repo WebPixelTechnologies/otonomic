@@ -162,12 +162,13 @@ textarea {
 	/*min-height: calc(100% - 89px);*/
 }
 .content-panel h1.title{
-  margin-top: 70px;
+  margin-top: 25px;
   margin-bottom: 24px;
   font-size: 38px;
   font-weight: bold;
   line-height: 42px;
 }
+
 .content-panel h3{
 	margin: 20px 0;
   font-size: 18px;
@@ -177,7 +178,7 @@ textarea {
 .content-panel p{
 	font-size: 24px;
 	font-weight: lighter;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 
 .content-panel .btn-p {
@@ -282,7 +283,7 @@ textarea {
   padding: 20px 0 0 40px;
 }
 #congratz .upper-content{
-  min-height: calc(100% - 50px);
+  min-height: calc(100% - 60px);
   /*background-color: #ebded2;*/
 }
 #congratz .lower-content{
@@ -912,11 +913,11 @@ h3#oto-web-url {
     .content-panel p {
       font-size: 16px;
       font-weight: normal;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
     .content-panel .stage-img {
       display: block;
-      margin: 20px auto;
+      margin: 10px auto;
       max-width: 70%;
     }
     /* Intro
@@ -971,6 +972,13 @@ h3#oto-web-url {
 
   /* Extra Small Devices, Phones */ 
   @media only screen and (max-width : 480px) {
+    
+    .content-panel h1.title {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      line-height: 28px;
+    }
+
     #intro .logo {
       position: static;
       margin-top: 10px;
@@ -980,7 +988,8 @@ h3#oto-web-url {
       margin-top: 50px;
     }
     #stage-1 #social_connect_hybrid {
-      margin-bottom: 10px;
+      margin-top: -5px;
+      margin-bottom: 25px;
     }
     #stage-1 p.visible-xs {
       margin-bottom: 10px;
@@ -992,6 +1001,11 @@ h3#oto-web-url {
     #stage-1 #social_connect_hybrid .social-btn img {
       height: 22px;
     }
+
+    #stage-2 .content-panel .stage-img {
+      max-width: 65%;
+    }
+
     #congratz p.site-name {
       padding-top: 70px;
       font-size: 24px;
@@ -1019,16 +1033,3 @@ h3#oto-web-url {
   @media only screen and (max-width : 320px) {
 
   }
-
-
-
-.content-panel h1.title {
-    margin-top: 25px;
-}
-.content-panel p {
-    margin-bottom: 20px;
-}
-div#social_connect_hybrid {
-    margin-top: -5px;
-    margin-bottom: 25px;
-}
