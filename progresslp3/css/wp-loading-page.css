@@ -1029,5 +1029,29 @@ h3#oto-web-url {
   }
   /* Custom, iPhone Retina */ 
   @media only screen and (max-width : 320px) {
+    .content-panel .logo {
+      height: 28px;
+    }
 
+    .content-panel h1.title {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    .content-panel p {
+      margin-bottom: 0;
+    }
+    #stage-1 .content-panel p {
+      margin-bottom: 10px;
+    }
+    #stage-2 .content-panel .stage-img {
+      max-width: 50%;
+    }
+    #stage-2 .content-panel .btn,
+    #stage-3 .content-panel .btn {
+      margin-top: 10px;
+    }
+    #stage-4 .content-panel .btn {
+      float: none!important;
+      margin-top: 30px;
+    }
   }
