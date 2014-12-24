@@ -66,7 +66,7 @@
           <p class="">You can instantly integrate other social media networks to your site by clicking below:</p>
           <p class="visible-xs"><b>Connect With</b></p>
           <div id="social_connect_hybrid">
-            <!-- <a id="authorize_Facebook" class="js-connect-facebook social-btn facebook-btn" href="#"><img src="images/facebook-icon.svg"><span class="hidden-xs"> Connect with </span>Facebook</a> -->
+            <a id="authorize_Facebook" class="js-connect-facebook social-btn facebook-btn" href="#"><img src="images/facebook-icon.svg"><span class="hidden-xs"> Connect with </span>Facebook</a>
             <a id="authorize_Twitter" class="js-connect-twitter social-btn twitter-btn" href="#"><img src="images/twitter-icon.svg"><span class="hidden-xs"> Connect with </span>Twitter</a>
             <a id="authorize_Instagram" class="js-connect-instagram social-btn instagram-btn" href="#"><img src="images/instagram-icon.svg"><span class="hidden-xs"> Connect with </span>Instagram</a>
             <!-- <a id="authorize_LinkedIn" class="js-connect-tumbler social-btn yelp-btn" href="#"><img src="images/yelp-icon.svg"></a> -->
@@ -143,36 +143,46 @@
     <!-- Bootstrap core JavaScript -->
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="/js/loading_page4.js?v=0.51"></script>
+    <script src="/js/loading_page4.js?v=0.52"></script>
 
 
     <script type="text/javascript">
     var base_url = 'http://otonomic.com/hybridauth/twitter.php';
-        $(document).ready(function(){
-            $('#social_connect_hybrid a').click(function(){
-                var type = $(this).attr('id').split('_');
-                var url = base_url+"?social="+type[1];
-                window.open(
-                    url, 
-                    "hybridauth_social_sing_on", 
-                    "location=0,status=0,scrollbars=1,width=800,height=500"
-                );
-                return false;
-            });
+    //var local_url = 'http://otonomic.test/hybridauth/twitter.php';
+    $(document).ready(function(){
 
-            // Change social buttons apearance depending on screen width 
-            var changeWidth = function(){
-              console.log('Resized');
-              if ( $(window).width() < 480 ){
-                $('#social_connect_hybrid').addClass('btn-group-justified btn-group');
-                $('#social_connect_hybrid a').addClass('btn');
-              } else {
-                $('.btn-group-vertical').removeClass('btn-group-justified btn-group');
-                $('#social_connect_hybrid a').removeClass('btn');
-              }
-            };
-            $(window).resize(changeWidth());
+        trackFacebookPixel('viewed_installer');
+        window._fbq = window._fbq || [];
+        window._fbq.push(['track', '6021618382030', {'value':'0.00','currency':'USD'}]);
+
+
+        $('#social_connect_hybrid a').click(function(){
+            var type = $(this).attr('id').split('_');
+
+            track_event('Loading Page', 'Social Connect', type[1]);
+
+            var url = base_url+"?social="+type[1];
+            window.open(
+                url,
+                "hybridauth_social_sign_on",
+                "location=0,status=0,scrollbars=1,width=800,height=500"
+            );
+            return false;
         });
+
+        // Change social buttons appearance depending on screen width
+        var changeWidth = function(){
+          console.log('Resized');
+          if ( $(window).width() < 480 ){
+            $('#social_connect_hybrid').addClass('btn-group-justified btn-group');
+            $('#social_connect_hybrid a').addClass('btn');
+          } else {
+            $('.btn-group-vertical').removeClass('btn-group-justified btn-group');
+            $('#social_connect_hybrid a').removeClass('btn');
+          }
+        };
+        $(window).resize(changeWidth());
+    });
     </script>
   </body>
 </html>

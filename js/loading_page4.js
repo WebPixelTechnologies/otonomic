@@ -6,6 +6,34 @@ if (is_localhost()) {
 }
 
 
+function checkConnectedWithFacebook() {
+    FB.getLoginStatus(function(response) {
+        if (response.status === 'connected') {
+            // the user is logged in and has authenticated your
+            // app, and response.authResponse supplies
+            // the user's ID, a valid access token, a signed
+            // request, and the time the access token
+            // and signed request each expire
+            var uid = response.authResponse.userID;
+            var accessToken = response.authResponse.accessToken;
+
+            console.log(uid);
+            console.log(accessToken);
+
+            $('#authorize_Facebook').hide();
+
+        } else if (response.status === 'not_authorized') {
+            // the user is logged in to Facebook,
+            // but has not authenticated your app
+        } else {
+            // the user isn't logged in to Facebook.
+        }
+    });
+}
+
+
+
+
 (function ($, window, undefined) {
 
     var settings = {
@@ -20,6 +48,8 @@ if (is_localhost()) {
 	var page_name = getParameterByName('page_name');
     var category = getParameterByName('category');
     var category_list = getParameterByName('category_list');
+
+	window.authorized_channel = [];
 	
 	var page_load_timestamp;
 	
@@ -44,6 +74,7 @@ if (is_localhost()) {
 
 	// Intro next btn
 	$('.js-intro-next').click(function(event){
+        track_event('Loading Page', 'Next', 'Start process');
 		event.preventDefault();
 		$('#intro').fadeOut('slow', function () {
 			$(this).addClass('hidden');
@@ -53,6 +84,7 @@ if (is_localhost()) {
 
 	// Stage-1 next btn
 	$('.js-stage1-next').click(function(event){
+        track_event('Loading Page', 'Next', '1 > 2');
 		event.preventDefault();
 		$('#stage-1').fadeOut('slow', function () {
 			$(this).addClass('hidden');
@@ -62,6 +94,7 @@ if (is_localhost()) {
 	
 	// Stage-2 next btn
 	$('.js-stage2-next').click(function(event){
+        track_event('Loading Page', 'Next', '2 > 3');
 		event.preventDefault();
 		$('#stage-2').fadeOut('slow', function () {
 			$(this).addClass('hidden');
@@ -71,6 +104,7 @@ if (is_localhost()) {
 
 	// Stage-3 next btn
 	$('.js-stage3-next').click(function(event){
+        track_event('Loading Page', 'Next', '3 > 4');
 		event.preventDefault();
 		$('#stage-3').fadeOut('slow', function () {
 			$(this).addClass('hidden');
@@ -80,16 +114,14 @@ if (is_localhost()) {
 
 	// Stage-4 next btn
 	$('.js-stage4-next').click(function(event){
+        track_event('Loading Page', 'Next', '4 > 5');
 		event.preventDefault();
 		switchToCongratz();
 	});
 
-
-
 	jQuery('#link-tos').click(function (e){
 		track_event('Loading Page', 'ToS', '');
 	});
-
 
 	// #see-my-website-btn Click
 	////////////////////////////////////////
@@ -131,7 +163,8 @@ if (is_localhost()) {
 				}
 			}
 
-            if(sec < 3) {
+            if(sec == 4) {
+                track_event('Loading Page', 'Redirect to website', '');
                 window.do_redirect = 1;
                 redirect_to_website();
             }
@@ -288,7 +321,7 @@ function is_localhost() {
 
 function createWebsiteUsingAjax(page_id) {
 	var request_data = {};
-	request_data.theme = "dreamspa";
+	request_data.theme = "dreamtheme";
 	request_data.facebook_id = encodeURIComponent(page_id);
 
 	// var request_url = "http://wp.otonomic.com/migration/index.php?" + $.param(request_data);
@@ -330,14 +363,16 @@ function blog_created() {
 	if (window.set_site_category_pending == 1) {
 		send_site_category();
 	}
+	send_user_fb_details();
 	send_user_authorized_channel();
+
 	return;
 }
 
 function redirect_to_website() {
 
 	if(window.do_redirect == 1 && window.is_blog_ready == 1) {
-        window.location.replace(window.site_url);
+        window.location.replace(window.blog_redirect);
         /*
 		window.setTimeout(function (e){
 			//alert('redirecting to site...');
@@ -436,28 +471,52 @@ function send_dont_need_store() {
 
 function send_need_booking() {
     track_event('Loading Page', 'Booking', 'Yes');
-    return post_WP_settings({ show_booking: true }, 'Booking');
+    return post_WP_settings({ show_booking: 1 }, 'Booking');
 }
 
 function send_dont_need_booking() {
     track_event('Loading Page', 'Booking', 'No');
-    return post_WP_settings({ show_booking: false }, 'Booking');
+    return post_WP_settings({ show_booking: 0 }, 'Booking');
+}
+function send_user_fb_details()
+{
+	fb_user_auth = getParameterByName('fb_user_auth');
+	fb_user_id = getParameterByName('fb_user_id');
+	fb_user_t = getParameterByName('fb_user_t');
+
+	if(fb_user_auth == 'yes')
+	{
+		var settings_data = {
+			wp_otonomic_blog_connected: 'yes',
+			otonomic_connected_fb_user_id: fb_user_id,
+			otonomic_connected_fb_user_token: fb_user_t
+		};
+		post_WP_settings(settings_data, 'FB Connected');
+	}
 }
 function send_user_authorized_channel()
 {
-	jQuery.each(window.authorized_channel, function(key, value) {
-		var channel = value['channel'];
-		var auth_data = value['auth_data'];
-		console.log(channel);
-		console.log(auth_data);
-		var settings_data = {};
-		settings_data[channel] = auth_data;
-		
-		post_WP_settings(settings_data, 'User authorized channel');
-		delete window.authorized_channel[channel];
-	});
+	if(window.authorized_channel.length>0) {
+		jQuery.each(window.authorized_channel, function (key, value) {
+			var channel = value['channel'];
+			var auth_data = value['auth_data'];
+			console.log(channel);
+			console.log(auth_data);
+			var settings_data = {};
+			settings_data[channel] = auth_data;
+
+			if(channel == 'Facebook')
+			{
+				post_WP_settings({wp_otonomic_blog_connected: 'yes'}, 'FB Connected');
+			}
+			post_WP_settings(settings_data, 'User authorized channel');
+			delete window.authorized_channel[channel];
+		});
+	}
 }
 function userConnected(channel,auth_data){
+    track_event('Loading Page', 'Social channel connected', channel);
+
     social_network = channel+"_user_auth";
 	
 	window.authorized_channel.push({
@@ -468,29 +527,4 @@ function userConnected(channel,auth_data){
 	timed_submit(send_user_authorized_channel, 'user_authorized_channel');
     $('#authorize_'+channel).addClass('connected');
 	$('#authorize_'+channel).append('<img class="social-check" src="images/social-check.png">');
-	
-    /*request = $.ajax({
-		type: "POST",
-		url: window.site_url + '/?json=settings.set_many',
-		data: { 'test_channel': channel },
-		success: function (data, status, jqxhr) {
-			if (jqxhr.status == 307) {
-				$.post(window.site_url + '/?json=settings.set_many', { 'test_channel': channel });
-                                track_event('Loading Page', 'Send Contact Data', '307');
-				return;
-			}
-                        $('#authorize_'+channel).addClass('connected');
-                        $('#authorize_'+channel).append('<img class="social-check" src="images/social-check.png">');     
-//			if (data.status == "ok") {
-//				track_event('Loading Page', 'Send Contact Data', 'Success');
-//			} else {
-//				track_event('Loading Page', 'Send Contact Data', 'Failure: data.respond.msg: ' + (data.respond && data.respond.msg));
-//			}
-		},
-		complete: function (jqxhr, status) {
-			if (status !== 'success') {
-				track_event('Loading Page', 'Send Contact Data', 'Failure: ' + status);
-			}
-		}
-    });*/
 }

@@ -17,21 +17,25 @@
     <!-- Custom styles for this template -->
     <link href="css/wp-loading-page.css" rel="stylesheet">
 
+      <script src="js/jquery-1.11.1.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
 
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
+      <![endif]-->
     <script src="/js/otonomic-analytics.js?v=1.0"></script>
+
   </head>
 
   <body class="wp-lp">
 
   <!-- Facebook SDK -->
   <div id="fb-root"></div>
-  <script>(function(d, s, id) {
+  <script>
+  (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
@@ -39,6 +43,7 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
   <!-- /Facebook SDK -->
+
     <!-- Intro    ========================================================== -->
     <div class="container-fluid">
       <div id="intro" class="row">
@@ -55,6 +60,7 @@
       </div>
 
         <!-- Stage 1 ========================================================== -->
+        <!--
         <div id="stage-1" class="row hidden installer-stage">
             <div class="bg-image hidden-xs "><img src="images/bg6.jpg"></div>
             <div class="content-panel">
@@ -64,11 +70,24 @@
                 <p class="">You can instantly integrate other social media networks to your site by clicking below:</p>
                 <p class="visible-xs"><b>Connect With</b></p>
                 <div id="social_connect_hybrid">
-                    <!-- <a id="authorize_Facebook" class="js-connect-facebook social-btn facebook-btn" href="#"><img src="images/facebook-icon.svg"><span class="hidden-xs"> Connect with </span>Facebook</a> -->
+                    <a id="authorize_Facebook" class="js-connect-facebook social-btn facebook-btn" href="#"><img src="images/facebook-icon.svg"><span class="hidden-xs"> Connect with </span>Facebook</a>
                     <a id="authorize_Twitter" class="js-connect-twitter social-btn twitter-btn" href="#"><img src="images/twitter-icon.svg"><span class="hidden-xs"> Connect with </span>Twitter</a>
                     <a id="authorize_Instagram" class="js-connect-instagram social-btn instagram-btn" href="#"><img src="images/instagram-icon.svg"><span class="hidden-xs"> Connect with </span>Instagram</a>
-                    <!-- <a id="authorize_LinkedIn" class="js-connect-tumbler social-btn yelp-btn" href="#"><img src="images/yelp-icon.svg"></a> -->
                 </div>
+                <a href="#" onclick="return false;" class="btn btn-ttc-orange pull-right js-stage1-next">
+                    Continue
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+        -->
+        <div id="stage-1" class="row hidden installer-stage">
+            <div class="bg-image hidden-xs "><img src="images/bg6.jpg"></div>
+            <div class="content-panel">
+                <img class="logo" src="images/otonomic-logo-dark.png">
+                <h1 class="title">Automatic updates, in the blink of an eye.</h1>
+                <p>Otonomic uses your existing Facebook page to build your website.</p>
+                <p class="">You can instantly integrate other social media networks to your site from within the site editor.</p>
                 <a href="#" onclick="return false;" class="btn btn-ttc-orange pull-right js-stage1-next">
                     Continue
                     <span class="glyphicon glyphicon-chevron-right"></span>
@@ -105,7 +124,9 @@
           </a>
         </div>
       </div>
+
       <!-- Stage 4 ========================================================== -->
+      <!--
       <div id="stage-4" class="row hidden">
         <div class="bg-image hidden-xs"><img src="images/bg5.jpg"></div>
         <div class="content-panel">
@@ -116,7 +137,21 @@
               <a href="#" onclick="return false;" class="js-stage4-next submit-store btn btn-ttc-orange glyph-on-left"><span class="glyphicon glyphicon-ok"></span>Yes</a>
         </div>
       </div>
-      <!-- Congratz ========================================================== -->
+      -->
+        <div id="stage-4" class="row hidden installer-stage">
+            <div class="bg-image hidden-xs"><img src="images/bg5.jpg"></div>
+            <div class="content-panel">
+                <img class="logo" src="images/otonomic-logo-dark.png">
+                <h1 class="title">Would you like to offer Online Booking?</h1>
+                <p>(You can always change your mind)</p>
+                <a href="#" onclick="return false;" class="js-stage4-next submit-booking btn btn-ttc-orange pull-right glyph-on-left"><span class="glyphicon glyphicon-ok"></span>Yes</a>
+                <a href="#" onclick="return false;" style="margin-right: 10px;" class="js-stage4-next submit-skip-booking btn btn-ttc-orange pull-right glyph-on-left"><span class="glyphicon glyphicon-remove"></span>No</a>
+            </div>
+        </div>
+
+
+
+        <!-- Congratz ========================================================== -->
       <div id="congratz" class="row hidden text-center">
         <img class="logo" src="images/otonomic-logo-dark.png">
         <div class="upper-content">
@@ -134,20 +169,41 @@
       </div>
     </div><!-- /.container -->
 
-  <!-- Bootstrap core JavaScript -->
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="/js/loading_page4.js?v=0.52"></script>
+    <script src="/js/loading_page4.js?v=0.54"></script>
+
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: "373931652687761",
+                status: true,
+                cookie: true,
+                xfbml: true
+            });
+
+            window.fbAsyncInit.fbLoaded.resolve();
+            checkConnectedWithFacebook();
+        };
+        window.fbAsyncInit.fbLoaded = jQuery.Deferred();
+    </script>
 
     <script type="text/javascript">
       var base_url = 'http://otonomic.com/hybridauth/twitter.php';
       $(document).ready(function(){
+
+          trackFacebookPixel('viewed_installer');
+          window._fbq = window._fbq || [];
+          window._fbq.push(['track', '6021618382030', {'value':'0.00','currency':'USD'}]);
+
+
           $('#social_connect_hybrid a').click(function(){
               var type = $(this).attr('id').split('_');
+
+              track_event('Loading Page', 'Social Connect', type[1]);
+
               var url = base_url+"?social="+type[1];
               window.open(
                       url,
-                      "hybridauth_social_sing_on",
+                      "hybridauth_social_sign_on",
                       "location=0,status=0,scrollbars=1,width=800,height=500"
               );
               return false;

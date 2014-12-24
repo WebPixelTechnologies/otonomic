@@ -12,6 +12,12 @@ var num_reject_basic_permissions = 0;
 var num_reject_manage_pages = 0;
 var img_height, img_width = 0;
 
+var ot_wp_site_creation_url = "http://wp.otonomic.com/migration/index.php?theme=dreamtheme";
+if(typeof(ot_loading_page_url)==="undefined") {
+	var ot_loading_page_url     = "/progresslp3";
+	// var ot_loading_page_url     = "/progresslp4";
+}
+
 function openFacebookCancelModal() {
     // jQuery('#facebook_connector')[0].click();
     $('#fbCancelModal').modal({
@@ -410,7 +416,7 @@ function populatePages(pages) {
 
     if (pages.length == 1) {
         //jQuery("#facebook_fanpages").html("Creating website for your single Facebook fanpage...");
-        createSiteSingleFanpageAutomatically(pages[0].id, 2000);
+        createSiteSingleFanpageAutomatically(pages[0], 2000);
 
     } else if (pages.length > 1) {
         showFanpages(pages);
@@ -440,8 +446,20 @@ function showFanpages(pages) {
         if (value.category != 'Application') {
             var dummy_fanpage = jQuery(fanpage).clone();
             isAnyPageFound = true;
-            jQuery(".fanpage_name", dummy_fanpage).html(value.name).attr('href', BUILDER_PATH + 'sites/add/fbid:' + value.id).attr('page_id', value.id).attr('page_name', value.name).attr('title', value.name);
-            jQuery(".fanpage_link", dummy_fanpage).attr('href', BUILDER_PATH + 'sites/add/fbid:' + value.id).attr('page_id', value.id).attr('page_name', value.name).attr('title', value.name);
+			var query_tags={};
+			query_tags.page_id = value.id;
+			query_tags.page_name = value.name;
+			if(typeof(value.category) !== 'undefined')         { query_tags.category = value.category; }
+			if(typeof(value.category_list) !== 'undefined')    { query_tags.category_list = value.category_list; }
+			//current_site_creation_link = BUILDER_PATH + '?' + jQuery.param(query_tags);
+			query_tags.fb_user_id = user_facebook_id;
+			query_tags.fb_user_t = access_token;
+			query_tags.fb_user_auth = 'yes';
+
+			current_site_creation_link = ot_loading_page_url + '?' + jQuery.param(query_tags);
+
+            jQuery(".fanpage_name", dummy_fanpage).html(value.name).attr('href', current_site_creation_link).attr('page_id', value.id).attr('page_name', value.name).attr('title', value.name);
+            jQuery(".fanpage_link", dummy_fanpage).attr('href', current_site_creation_link).attr('page_id', value.id).attr('page_name', value.name).attr('title', value.name);
             jQuery(".fanpage_image", dummy_fanpage).attr('src', 'http://graph.facebook.com/' + value.id + '/picture?type=small').attr('title', value.name);
 
             if(img_height > 0 && img_width > 0 ){
@@ -469,8 +487,20 @@ function createPersonalSite() {
 function createSiteSingleFanpageAutomatically(page_id) {
     trackFBConnect('Facebook Connect', 'Single page automatically selected', page_id);
     //trackPageView('facebook_only_single_fanpage_auto_creation');
+	var query_tags={};
+	query_tags.page_id = value.id;
+	query_tags.page_name = value.name;
+	if(typeof(value.category) !== 'undefined')         { query_tags.category = value.category; }
+	if(typeof(value.category_list) !== 'undefined')    { query_tags.category_list = value.category_list; }
+	//current_site_creation_link = BUILDER_PATH + '?' + jQuery.param(query_tags);
 
-    redirect_user(BUILDER_PATH + 'sites/add/fbid:' + page_id, "Creating your website...", 2000);
+	query_tags.fb_user_id = user_facebook_id;
+	query_tags.fb_user_t = access_token;
+	query_tags.fb_user_auth = 'yes';
+
+	current_site_creation_link = ot_loading_page_url + '?' + jQuery.param(query_tags);
+	redirect_user(current_site_creation_link, "Creating your website...", 2000);
+    //redirect_user(BUILDER_PATH + 'sites/add/fbid:' + page_id, "Creating your website...", 2000);
 }
 
 
