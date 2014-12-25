@@ -58,13 +58,24 @@
             $('.bg-image>img').removeClass('disabled');
             $('.bg-image>img').addClass('grayscale');
           });
-          // Turn off grayscale onFocus on input field 
+          // Turn off grayscale onFocusOut on input field 
           $( "#main_search_box" ).focusout(function() {
             $('.bg-image>img').addClass('disabled');
           });
+
           $( "#main_search_box" ).click(function(event){
             event.stopPropagation();
-          })
+          });
+
+          // On focus scroll the fields to top
+          $( "#main_search_box" ).focus(function(event) {
+              if($(window).width() < 768) {
+                $('html,body').delay(300).animate({
+                  scrollTop: ($(this).offset().top)-75
+                }, 700);
+              }
+          });
+
           // Side menu button toggle
           function openCloseMenu(){
             //if open then close
@@ -164,21 +175,24 @@
           }
           // if scrolled to top change header
           $(window).on('scroll', function() {
-            var scrollTop = $(this).scrollTop();
-            var toggleFlag = $('.navbar').hasClass('active');
-            //console.log(scrollTop);
-            //console.log(toggleFlag);
-            if ( (scrollTop <= 290) && (toggleFlag) ) {
-              if($('#search_wrapper_floater > div').children().length == 0){
-                $('.navbar').removeClass('active');
-                $('#menu-toggle').removeClass('hidden-xs');
-                navBarToggle('up');
+            // if not MOBILE then do yhis
+            if ($(window).width() > 768) {
+              var scrollTop = $(this).scrollTop();
+              var toggleFlag = $('.navbar').hasClass('active');
+              //console.log(scrollTop);
+              //console.log(toggleFlag);
+              if ( (scrollTop <= 290) && (toggleFlag) ) {
+                if($('#search_wrapper_floater > div').children().length == 0){
+                  $('.navbar').removeClass('active');
+                  $('#menu-toggle').removeClass('hidden-xs');
+                  navBarToggle('up');
+                }
               }
-            }
-            else if((scrollTop > 290) && (!toggleFlag)){
-              $('.navbar').addClass('active');
-              $('#menu-toggle').addClass('hidden-xs');
-                navBarToggle('down');
+              else if((scrollTop > 290) && (!toggleFlag)){
+                $('.navbar').addClass('active');
+                $('#menu-toggle').addClass('hidden-xs');
+                  navBarToggle('down');
+              }
             }
           });
 

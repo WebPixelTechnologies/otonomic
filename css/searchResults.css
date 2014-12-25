@@ -211,6 +211,7 @@
   font-weight: 400;
   color: #757575;
   margin: 0;
+  word-break: break-all;
 }
 .t_box #how_do_i {
     display: block;
@@ -248,22 +249,33 @@
 .t_box.open .msgbox {border-right:2px solid #666161}
 .t_box.open .steps {display: inline-block;}
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 768px) {
     .p2s_fanpages .search-wrapper {
         position: relative;
-        background-color: #FFF;
         padding: 5px;
         width: 100%;
         border:0;
         padding: 0;
-        margin: 0;
+        margin: 3px 0 0 0;
     }
     .p2s_fanpages .search-wrapper .t_box{
-        left: 0;
+        position: static;
         width: 100%;
+        margin: 0;
+    }
+    .p2s_fanpages .search-wrapper  .t_box .steps {
+        margin: 0;
+        padding: 8px 18px 18px 18px;
+        width: initial;
+    }
+    .p2s_fanpages .search-wrapper  .t_box .steps ul{
+        margin: 0;
     }
     .p2s_fanpages .search-wrapper .t_box .msgbox{
         width: 100%;
+    }
+    .p2s_fanpages .search-wrapper .t_box.open .msgbox {
+        border: 0;
     }
     .p2s_fanpages .close-search {
         padding: 7px 10px 15px 22px;
@@ -272,5 +284,25 @@
         width: 100%;
         margin: 0;
         max-height: inherit;
+        border: 2px solid #666161;
+    }
+    .p2s_fanpages .media {
+        min-height: 50px;
+    }
+    .p2s_fanpages .media .media-body {
+        width: calc(100% - 55px);
+    }
+    .p2s_fanpages .media .media-heading {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .p2s_fanpages .media .media-address {
+        margin: 5px 5px 0 0;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .p2s_fanpages .fanpage img.media-object {
+        height: 50px;
+        width: 50px;
     }
 }

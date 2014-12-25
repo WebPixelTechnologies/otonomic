@@ -117,9 +117,7 @@
     display: none;
     color: #666161;
     font-size: 20px;
-    margin-top: -8px;
-    margin-right: -8px;
-    padding: 17px 20px 15px 22px;
+    padding: 10px 0 0 0;
 }
 .p2s_fanpages .close-search:hover{
     color: #f54500;
@@ -147,7 +145,6 @@
 }
 .t_box, .search_progress {
     border: 2px solid #000;
-    width: 655px;
     font-weight: normal;
     display: inline-block;
     background-color: #ffffff;
@@ -183,9 +180,10 @@
     display: inline-block;
 }
 .t_box .close_btn {
+    display: inline-block;
     position: absolute;
     right: 8px;
-    display: inline-block;
+    padding: 0;
 }
 .t_box .body_info {
     margin-top: 15px;

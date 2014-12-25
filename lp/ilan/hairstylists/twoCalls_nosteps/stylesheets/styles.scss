@@ -62,7 +62,7 @@ header {
             &.active {
                 color: $main-color;
             }
-            span {
+            .step {
                 margin-right: 15px;
                 margin-left: -25px;            
             }
@@ -93,7 +93,7 @@ header {
 
     .p2s_fanpages span.close-search {
         position: absolute;
-        left: 260px;
+        left: 285px;
     }
 }
 
