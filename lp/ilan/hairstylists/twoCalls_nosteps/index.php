@@ -1,7 +1,7 @@
 <?php
 $twitter_share_options = [
     [   "url"  => "http://bit.ly/hsalon2",
-        "text" => "Only for 45 Hours! FREE website for your hair salon: @Otonomic turns your Facebook biz page into an amazing website"
+        "text" => "FREE website for your hair salon: @Otonomic turns your Facebook biz page into an amazing website"
     ],
     [   "url"  => "http://bit.ly/hsalon19",
         "text" => "Got my #HairSalon #Free website @otonomic and all my social media synced in one place. Get yours #Free"
@@ -22,7 +22,7 @@ $twitter_share_url = $twitter_share['url'];
 
 $opengraph_options = [
     [   "url"  => "http://bit.ly/hsalon6",
-        "text" => "Free website for your hair salon - only 45 hours left!
+        "text" => "Free website for your hair salon!
 Otonomic turns your Facebook page into a website."
     ],
     [   "url"  => "http://bit.ly/hsalon16",
