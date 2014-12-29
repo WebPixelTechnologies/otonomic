@@ -252,7 +252,7 @@ function callback(data) {
 
 	} else {
 		var page_type = window.page_type || 'Fan Page';
-		track_event('Account Manage', 'Create Success', page_type);
+		track_event('Account Manage', 'Site Created', page_type);
         track_virtual_pageview('site_created');
 	}
 
