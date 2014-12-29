@@ -11,13 +11,19 @@ if(window.location.hostname.replace('www.', '') == 'verisites.com') {
 	piwik_site_id = 2;
 }
 var pixel_values = {
-    visited_editor: '6020069195630',
-    added_product: '6020069233430',
-    visited_domain_page: '6020069257230',
-    created_site: '6008636103630',
     shared_promotion: '6020812900230',
     registered_to_promotion: '6020812953830',
-    viewed_installer: '6021618382030'
+    viewed_installer: '6021618382030',
+    visited_editor: '6020069195630',
+    edited_site: '6020069221230',
+    added_product: '6020069233430',
+    edited_booking: '6021825259030',
+    visited_domain_page: '6020069257230',
+    visited_pricing_page: '6018983658230',
+    visited_checkout_page: '6018983585430',
+    shared_site: '6018983762230',
+    changed_theme: '6020069221230',
+    returned_to_site_on_a_different_day: '6020069294630'
 };
 
 
