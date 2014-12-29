@@ -188,11 +188,12 @@ function create_wp_site(page_id){
         }
 
         $this.tipsy("hide");
-        track_event("Search Marketing Website", "Go", $this.attr('data-attr')+","+$page_url);
+        track_event("Search Marketing Website", "Go", $page_url+","+$this.attr('data-attr'));
+		track_event("Search Marketing Website", "Creation Start", '');
 
         if ($page_url.indexOf("facebook.com") > -1) {
             // var url = p2s_site_url + 'sites/add/?u=' + encodeURIComponent($page_url);
-            track_event("Search Marketing Website", "Choose Url", $page_url);
+            track_event("Search Marketing Website", "Choose Url", $page_url+","+$this.attr('data-attr'));
 
             query_tags.page_id = $page_url;
             current_site_creation_link = ot_loading_page_url + '?' + $.param(query_tags);
@@ -206,7 +207,7 @@ function create_wp_site(page_id){
 
 
         if (found_result == 1 && $.trim(found_only_result_url) != '') {
-            track_event("Search Marketing Website", "Choose Url", $this.attr('data-attr')+","+found_only_result_url);
+            track_event("Search Marketing Website", "Choose Page", found_only_result_url+","+$this.attr('data-attr'));
             setTimeout(function () { // now wait 300 milliseconds...
                 window.location = found_only_result_url;
             }, 300);
@@ -243,8 +244,12 @@ jQuery(document).ready(function($){
     });
 
     $(document).on('click','.search-results-item',function(event){
-        track_event("Search Marketing Website", "Click", $(this).attr('href'));
+        track_event("Search Marketing Website", "Click", $(this).attr('href')+","+$this.attr('data-attr'));
+		track_event("Search Marketing Website", "Creation Start", '');
     });
+	$(document).on('click','#fb_connector',function(event) {
+		track_event("Search Marketing Website", "FB Connect", 'Help');
+	});
 
 
 });
@@ -291,7 +296,7 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
             return;
         }
         p2strack++;
-        track_event("Search Marketing Website", "Query", $(InputField).attr('data-attr')+","+value, p2strack);
+        track_event("Search Marketing Website", "Query", value+","+$(InputField).attr('data-attr'), p2strack);
 
         window._fbq = window._fbq || [];
         window._fbq.push(['track', '6016621432630', {'value':'0.00','currency':'USD'}]);
