@@ -252,7 +252,7 @@ function callback(data) {
 
 	} else {
 		var page_type = window.page_type || 'Fan Page';
-		track_event('Account Manage', 'Create Success', page_type);
+		track_event('Account Manage', 'Site Created', page_type);
         track_virtual_pageview('site_created');
 	}
 
@@ -268,6 +268,12 @@ function callback(data) {
 	window.token = data.token;
 
 	jQuery('#oto-web-url').html('<a href="'+data.redirect+'">'+data.site_url+'</a>');
+
+    if( data.status === 'fail') {
+        alert( data.message);
+        window.location.replace(data.redirect);
+        return;
+    }
 
 	blog_created();
 
@@ -478,6 +484,7 @@ function send_dont_need_booking() {
     track_event('Loading Page', 'Booking', 'No');
     return post_WP_settings({ show_booking: 0 }, 'Booking');
 }
+
 function send_user_fb_details()
 {
 	fb_user_auth = getParameterByName('fb_user_auth');
@@ -494,6 +501,7 @@ function send_user_fb_details()
 		post_WP_settings(settings_data, 'FB Connected');
 	}
 }
+
 function send_user_authorized_channel()
 {
 	if(window.authorized_channel.length>0) {
@@ -514,6 +522,7 @@ function send_user_authorized_channel()
 		});
 	}
 }
+
 function userConnected(channel,auth_data){
     track_event('Loading Page', 'Social channel connected', channel);
 
