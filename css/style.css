@@ -259,7 +259,7 @@ p{line-height: 23px;}
 	height: 100px;
 	padding-top: 0px;
 	padding-bottom: 20px;
-	background-color: #666666;
+	background-color: #231f20;
 }
 .section-likes h3{
 	color: #fff;
@@ -1098,7 +1098,7 @@ section.features .features-mobile{
 .mobile-media-item{
 }
 .mobile-media-item-holder.bottom:last-child .mobile-media-item {
-	margin-bottom: -1px;
+	/*margin-bottom: -1px;*/
 }
 
 
@@ -1265,6 +1265,9 @@ img.grayscale.disabled {
 		left: -70%;
 		width: 240%;
 		top: 50px;
+	}
+	.media-links .row {
+		background-color: #f2f0f1;
 	}
 
 }
