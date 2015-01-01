@@ -220,11 +220,11 @@ textarea {
 #choose-template .template-conrainer {
   position: relative;
   margin-bottom: 15px;
-  width: 435px;
 }
 #choose-template .template-conrainer .overlay {
   position: absolute;
   padding: 140px 120px;
+  width: 435px;
   top: 0;
   bottom: 0;
   left: 0;
@@ -704,6 +704,26 @@ h3#oto-web-url {
       padding-top: 60px;
       font-size: 26px;
     }
+    /* Choose-template
+    --------------------------------*/
+    #choose-template .template-conrainer {
+      position: relative;
+      margin-bottom: 50px;
+    }
+    #choose-template .template-conrainer > img {
+      padding-bottom: 50px;
+    }
+    #choose-template .template-conrainer .overlay {
+      position: absolute;
+      width: 100%;
+      padding: 0;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: transparent;
+      opacity: 1;
+    }
   }
 
   /* Medium Devices, Desktops */
@@ -768,13 +788,13 @@ h3#oto-web-url {
     #choose-template .template-conrainer {
       position: relative;
       margin-bottom: 50px;
-      width: 100%;
     }
     #choose-template .template-conrainer > img {
       padding-bottom: 50px;
     }
     #choose-template .template-conrainer .overlay {
       position: absolute;
+      width: 100%;
       padding: 0;
       top: auto;
       bottom: 0;
