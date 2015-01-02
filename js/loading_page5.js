@@ -114,7 +114,8 @@ function checkConnectedWithFacebook() {
         var values = {};
         values.show_store = $('#option-online-store').hasClass('checked') ? 'yes' : 'no';
         values.show_booking = $('#option-booking').hasClass('checked') ? 'yes' : 'no';
-        return post_WP_settings(values, 'Store/Booking');
+        enqueue_submit('show_store',   values.show_store,   'send_store');
+        return enqueue_submit('show_booking', values.show_booking, 'send_booking');
 	});
 
 	// Stage-4 next btn - Social Channels
@@ -134,8 +135,7 @@ function checkConnectedWithFacebook() {
         switchToCongratz();
 
         var skin = $(this).attr('data-option-value');
-        var values = { skin: skin };
-        return post_WP_settings(values, 'Selected template');
+        return enqueue_submit('skin', skin, 'send_template');
     });
 
     jQuery('#link-tos').click(function (e){
@@ -365,29 +365,46 @@ function createWebsiteUsingAjax(page_id) {
 	});
 }
 
-function blog_created() {
-	if (window.is_contact_saved == 1) {
-		send_contact_data();
-	}
+function send_store() {
+    if (window.show_store == "yes") {
+        send_need_store();
+    } else {
+        send_dont_need_store();
+    }
+}
 
-	if (window.i_need_store == 1) {
-		send_need_store();
-	} else if(window.i_dont_need_store == 1) {
-		send_dont_need_store();
-	}
-
-    if (window.i_need_booking == 1) {
+function send_booking() {
+    if (window.show_booking == "yes") {
         send_need_booking();
-    } else if(window.i_dont_need_booking == 1) {
+    } else {
         send_dont_need_booking();
     }
+}
 
-    if (window.set_site_category_pending == 1) {
-		send_site_category();
-	}
-	if (window.set_site_category_pending == 1) {
-		send_site_category();
-	}
+function send_template() {
+    var skin = window.skin || '';
+    track_event('Loading Page', 'Select Template', skin);
+    return post_WP_settings({ skin: skin }, 'Select Template');
+}
+
+function enqueue_submit(setting, value, callback_function) {
+    window[setting] = value;
+
+    if(window.is_blog_ready) {
+        window[callback_function]();
+
+    } else {
+        window.callbacks = window.callbacks || [];
+        window.callbacks.push(callback_function);
+    }
+}
+
+function blog_created() {
+    window.callbacks = window.callbacks || [];
+    $.each( window.callbacks, function(index, callback_function) {
+        window[callback_function]();
+    });
+
 	send_user_fb_details();
 	send_user_authorized_channel();
 
@@ -395,15 +412,8 @@ function blog_created() {
 }
 
 function redirect_to_website() {
-
 	if(window.do_redirect == 1 && window.is_blog_ready == 1) {
         window.location.replace(window.blog_redirect);
-        /*
-		window.setTimeout(function (e){
-			//alert('redirecting to site...');
-			window.location.replace(window.site_url);
-		}, 400);
-		*/
 	}
 }
 

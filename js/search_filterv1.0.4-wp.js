@@ -5,7 +5,7 @@ var p2s_site_creation_base_url = 'http://wp.otonomic.com/migration/';
 
 var ot_wp_site_creation_url = "http://wp.otonomic.com/migration/index.php?theme=dreamtheme";
 if(typeof(ot_loading_page_url)==="undefined") {
-    var ot_loading_page_url     = "/progresslp3";
+    var ot_loading_page_url     = "/progresslp5";
     // var ot_loading_page_url     = "/progresslp4";
 }
 
