@@ -1,0 +1,288 @@
+/*!
+ * Roots 6.5.2
+ */
+@import 'fontface';
+@include fontFace('Aller','../fonts/Aller_rg-webfont', normal, normal);
+@include fontFace('Aller','../fonts/Aller_lt-webfont', lighter, normal);
+@include fontFace('Aller','../fonts/Aller_bd-webfont', bold, normal);
+
+$bootstrap-sass-asset-helper: false;
+@import "bootstrap/bootstrap";
+
+
+$font-family-aller: "aller", Helvetica, Arial, sans-serif !default;
+
+/* ==========================================================================
+   My custom variables
+   ========================================================================== */
+   $thumbnail-height: 400px;
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+body { 
+   font-family: $font-family-aller;
+}
+
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.navbar-logo{
+   line-height: $navbar-height;
+}
+.facebook-search{
+   margin:15px 0;
+   text-align: right;
+   label{
+      margin-right: 10px;
+      font-size: 20px;
+      font-weight: normal;
+      color: #fff;
+      vertical-align: bottom;
+   }
+   input.form-control{
+      width: 335px;
+      border-radius: 0;
+      @include box-shadow(none);
+   }
+   .btn-orange{
+      height: 40px;
+      border: 0;
+      border-color: #f54500;
+      border-radius: 0;
+      color: #fff;
+      background-color: #f54500;
+      &:focus{
+         border: 0;
+         outline: 0;
+         @include box-shadow(none);
+      }
+   }
+   .p2s_fanpages{
+      display: inline-block;
+   }
+}
+.page-search{
+   margin-top: $line-height-computed;
+   margin-bottom: ($line-height-computed / 2);
+   margin-right: 5px;
+   text-align: right;
+}
+.search .page-header .btn-black{
+   margin-top: -8px;
+   text-align: center;
+   padding: 11px 9px;
+   width: 40px;
+   height: 40px;
+}
+.banner { }
+
+
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.content { }
+// fixed height for thubmnails
+.thumbnail-col,
+.thumbnail{
+   height: $thumbnail-height;
+}
+.thumbnail-col{
+   padding-left: 0px;
+   padding-right: 0px;
+}
+
+
+/* ==========================================================================
+   Primary Content
+   ========================================================================== */
+
+.main { }
+
+/* Gallery Shortcode */
+.gallery-row { padding: 15px 0; }
+
+/* ==========================================================================
+   Pagination
+   ========================================================================== */
+
+#nav-posts{
+   margin: $line-height-computed 0; 
+}
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar { }
+
+
+
+/* ==========================================================================
+   Posts
+   ========================================================================== */
+
+.hentry header {
+   margin-bottom: 20px;
+   span.glyphicon{
+      margin:0 10px 0 0;
+      color: #676061;
+   }
+   .categories{
+      font-size: $font-size-large;
+      display: inline-block;
+      a{
+         color: #8c8284;
+      }
+   }
+   .entry-title{
+      font-size: 50px;
+   }
+}
+.hentry time {
+   margin:0 10px 0 0;
+   font-size: $font-size-large;
+   color: #8c8284;
+}
+.hentry .byline { }
+.hentry .entry-content { 
+   p{
+      font-size: $font-size-large;
+   }
+   img{
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: $thumbnail-border-radius;
+   }
+}
+.hentry footer { }
+
+#single-page-sidebar{
+   margin-top: 26px;
+   a{
+      float: right;
+      margin-bottom: 20px;
+   }
+}
+#shareme{
+   float: right;
+   text-align: right;
+   width: 100%;
+   .buttons{
+      float: right;
+      width: 60px;
+      text-align: center;
+   }
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.content-info { }
+
+
+
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media (max-width: $screen-xs-max) {
+   body{
+      padding-top: $navbar-height;
+   }
+   .navbar{
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1030;
+      .navbar-header{
+         position: absolute;
+         top: 0;
+         width: 100%;
+      }
+   }
+   .navbar-logo{
+      display: block;
+      text-align: center;
+   }
+   .facebook-search{
+      position: relative;
+      top: -80px;
+      text-align: center;
+      input.form-control{
+         width: 100%;
+      }
+   }
+   .p2s_fanpages{
+      display: block;
+      .form-search{
+         display: inline-block;
+         width: 60%;
+         margin-bottom: 0;
+      }
+      .form-control{
+         // Placeholder
+         @include placeholder(transparent);
+      }
+      .mobile-placeholder{
+         background: #fff center center url('../img/mobile-search-ph.png') no-repeat;
+      }
+      span.icon_clear{
+         right: 40%!important;
+      }
+      .btn_go{
+         display: inline-block;
+         width: 38%;
+         margin-top: -1px;
+      }
+   }
+   .hentry header .entry-title{
+      font-size: 30px;
+   }
+   
+   #single-page-sidebar a {
+      float: left;
+      margin-bottom: 0;
+   }
+   .page-search .has-feedback .form-control-feedback{
+      top: 0;
+   }
+}
+@media (min-width: $screen-sm-min) {
+   .navbar-logo{
+      display: block;
+      text-align: center;
+   }
+   .hentry header .entry-title{
+      font-size: 30px;
+   }
+}
+
+@media (min-width: $screen-md-min) {
+   .facebook-search{
+      label{
+         font-size: 16px;
+      }
+   }
+
+}
+
+@media (min-width: $screen-lg-min) { }

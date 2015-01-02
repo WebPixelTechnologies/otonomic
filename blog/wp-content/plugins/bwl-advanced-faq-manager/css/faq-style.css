@@ -1,0 +1,309 @@
+/***********************************************************
+* @Description: BWL Advanced FAQ Manager Plugins Styles
+* @Created At: 28-02-2013
+* @Last Edited AT: 04-04-2014
+* @Created By: Mahbub
+* @Version: 1.4.9
+***********************************************************/
+
+/* --------------------------------- Accordion Styles --------------------------------- */
+
+.ac-container {
+    width: 100%;
+    text-align: left;
+    margin: 10px 0 0;
+}
+
+.ac-container a,
+.ac-container a:hover{
+    text-decoration: none;
+}
+
+/*------------------------------ Search Form Element ---------------------------------*/
+
+.ac-container fieldset{
+    border:0px solid #FFFFFF;
+}
+
+.ac-container .bwl-faq-search-panel input{
+    
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 0 0 0 0;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.075) inset;
+    height: 2em;
+    line-height: 1.5em;
+    text-shadow: none;     
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 11px;
+    
+}
+
+
+.ac-container .bwl-faq-search-panel input:focus{
+    
+    background-color: #FFFFFF;
+    border: 1px solid #C6E1EC;
+    border-radius: 0 0 0 0;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.075) inset;
+    height: 2em;
+    line-height: 1.5em;
+    text-shadow: none;
+    
+    
+}
+
+.ac-container .bwl-faq-search-panel .bwl-filter-message{
+    clear: both;
+    font-size: 15px;    
+    position: relative;    
+    display: block;    
+}
+
+
+.ac-container .bwl-faq-container{
+    margin: 0 0 11px 0;
+}
+
+.ac-container .bwl-faq-container article{
+  margin: 0;  
+  padding: 0; 
+  
+}
+
+
+.ac-container label{	
+	padding: 1px 10px;
+	position: relative;
+	z-index: 20;
+	display: block;
+	/*height: 2em;*/
+	cursor: pointer;
+	color: #777;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+	line-height: 1.8em;
+	font-size: 16px;
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff 1%, #eaeaea 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#ffffff), color-stop(100%,#eaeaea));
+	background: -webkit-linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+	background: -o-linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+	background: -ms-linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+	background: linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=0 );
+	box-shadow: 
+		0px 0px 0px 1px rgba(155,155,155,0.3), 
+		0px 0px 0px 0px rgba(255,255,255,0.9) inset, 
+		0px 1px 1px rgba(0,0,0,0.1);
+}
+.ac-container label:hover{
+	background: #fff;
+                color: #2c2c2c;
+}
+.ac-container input:checked + label,
+.ac-container input:checked + label:hover{
+	background: #c6e1ec;
+	color: #3d7489;
+	text-shadow: 0px 1px 1px rgba(255,255,255, 0.6);
+	box-shadow: 
+		0px 0px 0px 1px rgba(155,155,155,0.3), 
+		0px 2px 2px rgba(0,0,0,0.1);
+}
+.ac-container label:after,
+.ac-container input:checked + label:after{
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	right: 15px;
+	top: 31px;        	
+        background: transparent url(http://appstor.in/wp-content/uploads/2014/09/down-arrow.jpg) no-repeat center center;	
+}
+.ac-container input:checked + label:after{
+	background: transparent url(http://appstor.in/wp-content/uploads/2014/09/up-arrow.jpg) no-repeat center center;
+}
+.ac-container input[type=checkbox]{
+	display: none;
+}
+.ac-container article{
+	background: transparent;
+	margin-top: -1px;
+	overflow: hidden;
+	height: 0px;
+	position: relative;
+	z-index: 10; 
+                margin: 0px 0px 1px 0px;
+}
+
+.ac-container input:checked ~ article{
+	 
+	box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
+}
+
+.ac-container input:checked ~ article.ac-medium{
+        margin: 0px 0px 10px 0px;
+        height: auto;
+        visibility: visible;
+        padding: 10px;
+                
+}
+
+.ac-container article {
+    margin: 0 0 11px 0;    
+    visibility: hidden;
+    
+}
+
+.ac-container article li {
+    
+    padding-left: 15px;    
+    
+}
+
+.ac-container article li:before {
+    content: "- ";
+}
+
+
+/*------------------------------  According Shadow ---------------------------------*/
+
+.article-box-shadow{
+    -webkit-box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
+    -moz-box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
+    -o-box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);    
+    box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
+}
+
+/*------------------------------  Meta Info---------------------------------*/
+
+.ac-container p.bwl_meta_info{
+    display: block;
+}
+
+/* --------------------------------- Rating Styles --------------------------------- */
+
+.ac-container hr.ultra-fancy-hr {
+    
+  background-color: #ebebeb;
+  background-image: -moz-linear-gradient(left, #ffffff 0%, #ebebeb 50%, #ffffff 100%);
+  background-image: -o-linear-gradient(left, #ffffff 0%, #ebebeb 50%, #ffffff 100%);
+  background-image: -webkit-linear-gradient(left, #ffffff 0%, #ebebeb 50%, #ffffff 100%);
+  background-image: linear-gradient(left, #ffffff 0%, #ebebeb 50%, #ffffff 100%);
+  border: none;
+  height: 1px;
+  width: 100%;
+}
+
+.post-like{  
+    margin: 5px 0;    
+}  
+
+h4.post-like-status{  
+    line-height: 1.5em;
+    height: 1.5em;
+    margin: 5px 0 10px 0;
+}
+
+.like{ 
+    background:url('../images/sprite-faq-thumb.png') no-repeat;  
+     background-position:-24px 0;  
+    width: 24px;  
+    height: 24px;  
+    display: block;  
+    float:left;  
+    margin-right: 4px;  
+    -moz-transition: all 0.2s ease-out 0.1s;  
+    -webkit-transition: all 0.2s ease-out 0.1s;  
+    -o-transition: all 0.2s ease-out 0.1s  
+}  
+
+.post-like a:hover .like{  
+    background-position:0 0;  
+}  
+
+.voted .like, .post-like, .alreadyvoted{
+    background-position:-48px 0;  
+}
+
+.count {
+    position: relative;
+    top: 2px;
+    margin-left: 5px;
+}
+
+/*------------------------------  FAQ FORM---------------------------------*/
+
+.bwl-faq-form-container{
+    margin-top: 11px;
+    clear: both;
+    display: block;
+}
+
+.bwl-form-success-box{
+    background: #8ad088;
+    color: #FFFFFF;
+}
+
+.bwl-form-wait-box{
+    background: #ffffc1;
+    color: #000000;
+}
+
+.bwl-form-error-box{
+    background: #e63f37;
+    color: #FFFFFF;
+}
+
+.bwl-faq-form-container h2{
+    font-size: 22px;
+    margin: 11px 0px;
+    padding: 0;
+    border-bottom: 1px solid #EEEEEE;
+    padding-bottom: 5px;
+}
+
+.bwl-faq-form-container .bwl-faq-form-message-box{
+    width: 100%;
+    height: 32px;
+    border:1px solid #EEEEEE;
+    line-height: 2.4em;
+    text-indent: 2px;
+    display: none;
+    margin-bottom: 11px;
+}
+
+.bwl-faq-form-container form input[type=text]
+{
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.bwl-faq-form-container form select
+{    
+    margin-bottom: 0px;
+}
+
+.bwl-faq-form-container form p label{
+    display: block;
+    clear: both;
+    margin-bottom: 5px;
+}
+
+.bwl-faq-form-container form input.bwl_advanced_faq_disabled_field,
+.bwl-faq-form-container form select.bwl_advanced_faq_disabled_field,
+.bwl-faq-form-container form input[type=submit].bwl_advanced_faq_disabled_field{
+    background: #EEEEEE;
+}
+
+.bwl-faq-form-container form input.captcha, 
+.bwl-faq-form-container form input.sum {
+    display: inline;
+    text-align: center;
+    width: 40px;
+}
+
+.bwl-faq-form-container form span#spambot {
+    font-size: 11px;
+}
+.readmore_faq{ border:solid 1px !important; padding:0px 10px !important; float:right}

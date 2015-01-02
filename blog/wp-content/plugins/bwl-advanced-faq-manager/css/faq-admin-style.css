@@ -1,0 +1,17 @@
+.faq-sort-container{
+    height: 550px; 
+    width:  440px; 
+    overflow-x: hidden; 
+    border: 1px solid #EEEEEE; 
+    padding-left: 11px;
+     -moz-box-shadow: 0 1px 5px rgba(50, 50, 50, 0.3);
+   -webkit-box-shadow: 0 1px 5px rgba(50, 50, 50, 0.3);
+    box-shadow: 0 1px 5px rgba(50, 50, 50, 0.3);
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#sort-status{
+    display: none;
+}

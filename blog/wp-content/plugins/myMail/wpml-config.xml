@@ -1,0 +1,15 @@
+<wpml-config>
+	<custom-fields>
+		<custom-field action="ignore">mymail-campaign</custom-field>
+		<custom-field action="ignore">mymail-campaigns</custom-field>
+		<custom-field action="ignore">mymail-data</custom-field>
+		<custom-field action="ignore">mymail-userdata</custom-field>
+	</custom-fields>
+	<custom-types>
+		<custom-type translate="0">subscriber</custom-type>
+		<custom-type translate="0">newsletter</custom-type>
+	</custom-types>
+	<taxonomies>
+		<taxonomy translate="0" action="ignore">newsletter_lists</taxonomy>
+	</taxonomies>
+</wpml-config>

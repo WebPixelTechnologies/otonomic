@@ -1,0 +1,402 @@
+/* Typography
+-------------------------------------------------- */
+.orange-text {
+    color: $oto-orange;
+}
+
+/* Header
+-------------------------------------------------- */
+.navbar {
+    background-color: transparent;
+}
+.navbar.scrolled {
+    background-color: $bright-dark;
+    @include box-shadow(rgba(0,0,0,0.25) 0px 3px 0px);
+}
+.container-fluid > .navbar-header{
+    float: none;
+    margin-right: -10px;
+    margin-left: -10px;
+
+    .navbar-btn {
+        margin-top: 20px;
+    }
+}
+.navbar-toggle {
+    border: 0px solid transparent;
+    display: block;
+    margin-right: 0;
+    padding: 14px 19px 8px 19px;
+
+    .icon-bar {
+        height: 4px;
+        background-color: $gray-darker;
+    }
+}
+
+/* Container
+-------------------------------------------------- */
+.container {
+    padding-bottom: 40px;
+}
+
+/* Footer
+-------------------------------------------------- */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 540px;
+  background-color: $bright-darker;
+  background-image: url('../img/footer.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+
+  h3 {
+    color: $oto-orange;
+    font-size: 27px;
+  }
+
+    ul {
+        li {
+            padding: 6px 0;
+            a {
+                color: $gray-dark;
+                font-size: $font-size-base;
+                line-height: 22px;
+            }
+        }
+    }
+    .lower-part{
+        position: absolute;
+        bottom: 40px;
+        font-size: 12px;
+        img {
+            height: 24px;
+            padding: 0 10px 0 5px;
+            vertical-align: baseline;
+        }
+
+        a {
+            color: $gray-dark;
+        }
+        
+    }
+    .social-btns {
+        margin-bottom: 30px;
+        width: 225px;
+
+        .rrssb-buttons li a{
+            background-color: $gray-light;
+            &:hover {
+                background-color: $gray;
+            }
+        }
+    }
+}
+
+/* Jumbotron
+-------------------------------------------------- */
+.jumbotron {
+    height: 400px; 
+    padding-top: 88px;
+    background-color: $blue-light;
+    background-image: url('../img/header.png');
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .social-btns {
+        width: 225px;
+    }
+
+    .btn-back {
+        color: $blue-dark;
+        text-decoration: none;
+        .glyphicons {
+            color: inherit;
+            &:before {
+                color: inherit;
+                font-size: inherit;
+                line-height: 1.1;
+            }
+        }
+
+        &:hover {
+            color: $gray-darker;
+        }
+    }
+}
+
+/* White-holder
+-------------------------------------------------- */
+.white-holder {
+    padding: 15px;
+    background-color: white;
+
+    @include border-radius($border-radius-base);
+    @include box-shadow(0px 2px 0px $shadow-color);
+}
+/* Big Glyphicon
+-------------------------------------------------- */
+.big-icon {
+
+    &:before {
+        color: $blue;
+        font-size: 50px;
+    }
+}
+
+/* Big Letter
+-------------------------------------------------- */
+.big-letter {
+    margin-top: 26px;
+    margin-bottom: 16.5px;
+    color: $blue;
+    font-size: 50px;
+}
+
+/* Thumbnail box
+-------------------------------------------------- */
+.thumbnail {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    &:hover {
+        .btn-cornered {
+            bottom: 0;
+        }
+    }
+
+    a {
+        //color: inherit;
+        text-decoration: none;
+    }
+    .btn-cornered {
+        bottom: -50px;
+        @include transition(all .2s ease-in-out);
+    }
+}
+
+/* Buttons
+-------------------------------------------------- */
+.btn-xlarge {
+    padding: 14px 25px;
+    font-size: $font-size-large;
+    text-align: left;
+    .glyphicons:before {
+        font-size: 24px;
+    }
+}
+
+/* Panels
+-------------------------------------------------- */
+.panel-heading {
+
+    .num {
+        display: inline-block;
+        margin-left: -5px;
+        width: 70px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 36px;
+        font-weight: bold;
+        color: $blue-lighter;
+
+        
+    }
+    .yellow .num{
+        color: $yellow-darkest;
+    }
+    .accordion-toggle {
+        font-weight: bold;
+    }
+    .accordion-toggle.collapsed {
+        font-weight: normal;
+    }
+
+}
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    padding-top: 12px;
+    font-family: 'Glyphicons Halflings Regular';  /* essential for enabling glyphicon */
+    content: "\e113";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: $blue-lighter;         /* adjust as needed */
+    font-size: 15px;
+}
+.yellow.accordion-toggle:after {
+    color: $yellow-darkest;
+}
+.panel-heading .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e114";    /* adjust as needed, taken from bootstrap.css */  
+}
+
+.panel-blue{
+
+    border: none;
+    @include box-shadow(none);
+    .panel-heading {
+
+        border-radius: 6px;
+        color: #fff;
+        /* background-color: $blue; */
+
+        .panel-title {
+            a { 
+                padding: 23px 25px;
+            }
+
+            .accordion-toggle {
+                @include border-radius(($panel-border-radius - 1));
+                color: $gray-dark;
+                background-color: #fff;
+
+                &:after {
+                    padding-top: 6px;
+                    color: inherit;
+                }
+                .glyphicons {
+
+                    &:before {
+                        color: $gray-dark;
+                    } 
+                }
+            }
+            .accordion-toggle.collapsed {
+                color: #fff;
+                background-color: $blue-lighter;
+                @include box-shadow( $blue 0px -2px 0px inset);
+
+                &:hover {
+                    background-color: $blue;
+                    @include box-shadow( $blue-dark 0px -2px 0px inset);
+                }
+                &:after {
+                    color: inherit;
+                }
+                .glyphicons {
+
+                    &:before {
+                        color: #fff;
+                    } 
+                }
+            }
+        }
+    }
+
+    .panel-body {
+        position: relative;
+        padding: 0 25px 60px 25px;
+
+        label {
+            font-size: $font-size-base;
+            font-weight: normal;
+        }
+        .form-control {
+            background-color: $bright;
+        }
+    }
+
+}
+
+/* Lists
+------------------------------------------------ */
+ul {
+    li {
+        padding-bottom: 15px;
+        color: $blue;
+        font-weight: lighter;
+
+        span {
+            color: $gray-dark;
+        }
+        ul {
+            padding-top: 15px;
+            li {
+                color: $gray-dark;
+            }
+        }
+    }
+}
+
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+
+
+
+    /*==========  Mobile First Method  ==========*/
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+        
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    }
+
+
+
+    /*==========  Non-Mobile First Method  ==========*/
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+
+
+        /* Panels */
+        .panel-body {
+            padding: 0 10px 20px 10px;
+        }
+
+        /* Footer */
+        .footer {
+            ul li {
+                display: inline-block;
+            }
+            .lower-part {
+                bottom: 400px;
+            }
+        }
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+        
+    }

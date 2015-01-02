@@ -1,0 +1,197 @@
+@import "common-style.css";
+
+#mymail_templates{
+}
+#current-template img{
+	margin-left:0;
+	margin-right:10px;
+	width:200px;
+	border: 0;
+}
+.rtl #current-template img{
+	margin-left:10px;
+	margin-right:0;
+}
+.nav-tab-wrapper{
+	border-bottom:1px solid #ccc;
+}
+
+#current-template .preview{
+	width: 425px;
+	float:left;
+}
+.rtl #current-template .preview{
+	float:right;
+}
+
+.available-template{
+	float: left;
+	width: 300px;
+	height: 410px;
+}
+.available-template .action-links ul li{
+	float: left;
+	margin-right: 10px;
+}
+.available-template .action-links a{
+}
+.current-template{
+	position: relative;
+	width: 200px;
+	overflow: hidden;
+	float: left;
+	margin: 0 10px 10px 0;
+}
+.preview a{
+	display: block;
+	overflow: hidden;
+}
+.rtl .preview a{
+	margin: 0 0 10px 10px;
+	
+}
+.preview .caption{
+	position: absolute;
+	background: #333;
+	color: #ffffff;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	padding: 5px 7px;
+	display: none;
+}
+.preview a.remove-file{
+	position: absolute;
+	background: #333;
+	color: #ffffff;
+	top: 0;
+	right: 0;
+	padding: 5px 7px;
+	display: none;
+	text-align: center;
+}
+.preview a.remove-file{
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
+	cursor: pointer;
+}
+.current-template:hover .caption, .current-template:hover a.remove-file {
+	display: block;
+}
+.preview a.remove-file:hover{
+	color:#21759B;
+}
+#available-templates{
+	margin-right: 0;
+}
+h3 .version {
+	color: #888;
+	font-size: 0.8em;
+}
+#templateeditor .inner {
+	padding: 5px;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	overflow: hidden;
+}
+#templateeditor{
+	display: block;
+	display:none;
+	border: 1px solid #ccc;
+	top: -1px;
+	padding: 10px;
+	background: #fff;
+	clear: both;
+	position: relative;
+	z-index: 1;
+}
+
+#templateeditor .nav-tab-active{
+	background: #fff;
+	border-bottom: 1px solid #fff;
+}
+#templateeditor textarea.editor{
+	width:100%;
+	height:570px;
+	font-family:"Courier New", Courier, monospace;
+	background-image:url(../img/pre_bg.png);
+	background-attachment:scroll;
+	overflow:auto;
+	line-height:19px;
+	padding:0;
+	margin: 0;
+	resize:none;
+	outline: none;
+}
+#templateeditor .CodeMirror{
+	height: 600px;
+}
+#templateeditor .CodeMirror-scroll {
+  overflow: auto;
+  overflow-x: auto; overflow-y: auto;
+}
+
+#templateeditor .template-ajax-loading{
+	float: left;
+	display: block;
+	margin-right: 4px;
+}
+button.button-primary.duplicate{
+	margin:20px;
+	display: inline-block;
+}
+
+#templateeditor .edit-buttons{
+	float:right;
+	margin:20px;
+}
+#templateeditor .edit-buttons .message{
+	padding-right: 5px;
+	color: #f33;
+}
+.available-template{
+	position:relative;
+	margin:10px 10px 0 0;
+	padding: 11px;
+	z-index: 2;
+}
+.available-template:hover{
+	border: 1px solid #ccc;
+	padding: 10px;
+	background: #fff;
+}
+.available-template.edit{
+	border: 1px solid #ccc;
+	border-bottom: 1px solid #f3f3f3;
+	padding: 10px 10px 20px;
+	background: #fff;
+	border-bottom:1px solid #fff;
+}
+.available-template a.edit.disabled{
+	color: #ccc;
+	text-decoration: line-through;
+}
+.update-badge{
+	background:#464646;
+	border-radius:50%;
+	position:absolute;
+	right:5px;
+	top:4px;
+	padding:3px 5px;
+	text-align:center;
+	color:#fff;
+	font-size:9px;
+	font-weight:700;
+	-webkit-box-shadow:0 1px 0 0 rgba(255, 255, 255, 0.5);
+	-moz-box-shadow:0 1px 0 0 rgba(255, 255, 255, 0.5);
+	box-shadow:0 1px 0 0 rgba(255, 255, 255, 0.5);
+}

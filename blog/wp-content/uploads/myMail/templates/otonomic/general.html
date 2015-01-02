@@ -1,0 +1,233 @@
+<!--
+
+	Template Name: Otonomic
+	Template URI: http://otonomic.com
+	Description: This is the base Newsletter for Otonomic
+	Author: otonomic
+	Author URI: http://otonomic.com
+	Version: 1.0
+
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width" />
+<title>{subject}</title>
+</head>
+<body>
+
+<style type="text/css">
+
+	#outlook a{padding:0;}
+	body{width:100% !important;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;margin:0;padding:0;}
+	.ExternalClass{width:100%;}
+	.ExternalClass,.ExternalClass p,.ExternalClass span,.ExternalClass font,.ExternalClass td,.ExternalClass div{line-height:100%;}
+	.bodytbl{margin:0;padding:0;width:100% !important;}
+	img{outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;display:inline-block;max-width:100%;}
+	a img{border:none;}
+	p{margin:0;}
+	
+	table{border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;}
+	table td{border-collapse:collapse;}
+	.o-fix table,.o-fix td{mso-table-lspace:0pt;mso-table-rspace:0pt;}
+	
+	body{background-color:#F3F4F4/*Background Color*/;}
+	table{font-family:Helvetica,Arial,sans-serif;font-size:16px;color:#231f20;}
+	td,p{line-height:24px;color:#231f20/*Text*/;}
+	td,tr{padding:0;}
+	ul,ol{margin-top:24px;margin-bottom:24px;}
+	li{line-height:24px;}
+	
+	a{color:#231f20/*Contrast*/;text-decoration:none;padding:2px 0px;}
+	a:link{color:#231f20;}
+	a:visited{color:#231f20;}
+	a:hover{color:#231f20;}
+	
+	.h1{font-family:Helvetica,Arial,sans-serif;font-size:50px;letter-spacing:-1px;margin-bottom:25px;margin-top:25px;line-height:50px;}
+	.h2{font-family:Helvetica,Arial,sans-serif;font-size:20px;letter-spacing:0;margin-top:2px;line-height:24px;}
+	h1,h2,h3,h4,h5,h6{font-family:Helvetica,Arial,sans-serif;font-weight:bold;}
+	h1{font-size:30px;letter-spacing:-1px;margin-bottom:20px;margin-top:0px;line-height:34px;}
+	h2{font-size:22px;margin-bottom:12px;margin-top:0px;line-height:26px;}
+	h3{font-size:14px;margin-bottom:12px;margin-top:2px;line-height:24px;}
+	h4{font-size:14px;font-weight:bold;}
+	h5{font-size:12px;}
+	h6{font-size:12px;font-weight:bold;}
+	h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{color:#231f20;}
+	h1 a:active,h2 a:active,h3 a:active,h4 a:active,h5 a:active,h6 a:active{color:#231f20 !important;}
+	h1 a:visited,h2 a:visited,h3 a:visited,h4 a:visited,h5 a:visited,h6 a:visited{color:#231f20 !important;}
+	
+	.wrap.header{background-color:#231f20!important;}
+	.wrap.header .logo{margin-top: 10px;}
+	.wrap.footer{margin-top: 15px;border-radius: 5px;}
+	.wrap.body,.wrap.header,.wrap.footer{background-color:#FFFFFF/*Body Background*/;}
+	.padd{width:50px;}
+	
+	.wrap.body.last{
+		border-radius: 0 0 5px 5px;
+	}
+	table.thank-you img{
+		vertical-align: bottom;
+	}
+	.lower-footer img{display: inline-block; vertical-align: sub;}
+	.footer-logo{
+		line-height: 90px;
+	}
+	.footer-logo img{display: inline-block; vertical-align: baseline;}
+	.small{font-size:11px;line-height:18px;}
+	.separator{/*border-top:1px dotted #E1E1E1*//*Separator Line*/;}
+	.btn{display:block;}
+	.btn img{display:inline;}
+	.btn a{
+		display: inline-block;
+		width: 60px;
+		height: 24px;
+		padding: 18px 0;
+		margin: 0;
+		text-align: center;
+	}
+	.btn a.facebook:hover{ background-color: #3b5a99;}
+	.btn a.twitter:hover{ background-color: #25a8e0;}
+	.btn a.google-plus:hover{ background-color: #ce3633;}
+	.btn a.linkedin:hover{ background-color: #127bb7;}
+	.subline{line-height:18px;font-size:16px;letter-spacing:-1px;}
+
+	table.textbutton td{background:#efefef/*Text Button Background*/;padding:1px 14px 4px 14px;color:#231f20;display:block;height:22px;vertical-align:top;}
+	table.textbutton a{color:#231f20;font-size:13px;font-weight:normal;line-height:22px;width:100%;display:inline-block;}
+
+	div.preheader{line-height:0px;font-size:0px;height:0px;display:none !important;display:none;visibility:hidden;}
+	
+	@media only screen and (max-device-width: 480px) {
+		body{-webkit-text-size-adjust:120% !important;-ms-text-size-adjust:120% !important;}
+		table[class=bodytbl] .subline{float:left;}
+		table[class=bodytbl] .padd{width:12px !important;}
+		table[class=bodytbl] .wrap{width:470px !important;}
+		table[class=bodytbl] .wrap table{width:100% !important;}
+		table[class=bodytbl] .wrap img{max-width:100% !important;height:auto !important;}
+		table[class=bodytbl] .wrap .m-100{width:100% !important;}
+		table[class=bodytbl] .m-0{width:0;display:none;}
+		table[class=bodytbl] .m-b{display:block;width:100% !important;}
+		table[class=bodytbl] .m-b-b{margin-bottom:24px !important;}
+		table[class=bodytbl] .m-1-2{max-width:264px !important;}
+		table[class=bodytbl] .m-1-3{max-width:168px !important;}
+		table[class=bodytbl] .m-1-4{max-width:120px !important;}
+		table[class=bodytbl] .m-1-2 img{max-width:264px !important;}
+		table[class=bodytbl] .m-1-3 img{max-width:168px !important;}
+		table[class=bodytbl] .m-1-4 img{max-width:120px !important;}
+	}
+	
+	@media only screen and (max-device-width: 320px) {
+		table[class=bodytbl] .wrap{width:310px !important;}
+	}
+	
+</style>
+<table class="bodytbl" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+	<td background="" align="center">
+		
+		<table width="600" cellspacing="0" cellpadding="0" class="wrap header">
+		<tr>
+			<td width="20" class="">&nbsp;</td>
+			<td valign="top" align="center">
+				<table width="100%" cellpadding="0" cellspacing="0" class="o-fix">
+				<tr>
+					<td valign="top" align="left">
+						<table width="168" cellpadding="0" cellspacing="0" align="left" class="m-b">
+						<tr>
+							<td class="small m-b" align="left" valign="middle">
+								<img src="img/logo.png" alt="" title="" width="120"  class="logo" border="0" editable label="Logo" />
+							</td>
+						</tr>
+						</table>
+						<table width="320" cellpadding="0" cellspacing="0" align="right" class="m-b">
+						<tr>
+							<td align="right" valign="bottom">
+								<div class="btn"><buttons>
+									<a editable label="Social Media Button" class="facebook" href="http://facebook.com/otonomic"><img src="img/social/light/facebook.png" alt="" title="" width="24" height="24" border="0" /></a><a editable label="Social Media Button" class="twitter" href="https://twitter.com/otonomic"><img src="img/social/light/twitter.png" alt="" title="" width="24" height="24" border="0" /></a><a editable label="Social Media Button" class="google-plus" href="https://plus.google.com/+Otonomic/about"><img src="img/social/light/googleplus.png" alt="" title="" width="24" height="24" border="0" /></a><a editable label="Social Media Button" class="linkedin" href="http://www.linkedin.com/company/otonomic"><img src="img/social/light/linkedin.png" alt="" title="" width="24" height="24" border="0" /></a>
+								</buttons></div>
+							</td>
+						</tr>
+						</table>
+					</td>
+		
+				</tr>
+				</table>
+			</td>
+		</tr>
+		</table>
+
+		<module label="Intro">
+			<table width="600" cellspacing="0" cellpadding="0" class="wrap body">
+			<tr><td height="12" colspan="3"></td></tr>
+			<tr>
+				<td width="50" class="padd">&nbsp;</td>
+				<td valign="top" align="left">
+					<div class="h1">
+						<single label="Headline">{subject}</single>
+					</div>
+					<div class="h2">
+						<single label="Intro Sentence">
+							{content}
+						</single>
+					</div>
+				</td>
+				<td width="50" class="padd">&nbsp;</td>
+			</tr>
+			<tr><td height="12" colspan="3"></td></tr>
+			</table>
+		</module>
+
+		<!-- Go to website button -->
+		<module label="Go to website button">
+			<table width="600" cellspacing="0" cellpadding="0" class="wrap body last">
+				<tr><td height="12" colspan="3"></td></tr>
+				<td align="center">
+					<a editable label="Go to website Button" href="#"><img src="img/btn/go-to-website.png" alt="" title="" width="232" height="45" border="0" /></a>
+				</td>
+				<tr><td height="24" colspan="3"></td></tr>
+				</tr>
+			</table>
+		</module>
+
+		<!-- Thank You -->
+		<module label="Thank You">
+			<table width="600" cellspacing="0" cellpadding="0" class="wrap body thank-you footer" style="">
+				<tr><td height="12" colspan="3"></td></tr>
+				<td align="center">
+					<img src="img/thank-you.png" alt="" title="" width="600" height="92" border="0" />
+				</td>
+			</table>
+		</module>
+
+		<table width="600" cellspacing="0" cellpadding="0" class="wrap footer">
+		<tr>
+			<td width="50" class="padd">&nbsp;</td>
+			<td valign="top" align="center">
+				<table width="100%" cellpadding="0" cellspacing="0" class="o-fix">
+				<tr><td height="12" colspan="3"></td></tr>
+				<tr>
+					<td class="small m-b" align="left" valign="top">
+						<div><single label="CAN-SPAM">{can-spam}</single></div>
+						<div><single label="Copyright">{copyright}</single></div>
+					</td>
+				</tr>
+				<tr><td height="12" colspan="3"></td></tr>
+				</table>
+			</td>
+			<td width="50" class="padd">&nbsp;</td>
+		</tr>
+		</table>
+		<table width="600" cellpadding="15" cellspacing="" class="wrap m-b-b lower-footer" style="margin-top:25px;">
+			<tr>
+				<td valign="top" width="260" align="left"><img src="img/new-ico.png" class="m-100" width="23" height="23" alt="" border="0"/> <a href="#" style="font-size:12px; line-height: 12px;">Create another Otonomic website </a></td>
+				<td valign="top" width="125" align="left"><img src="img/friend-ico.png" class="m-100" width="23" height="23" alt="" border="0"/> <a href="#" style="font-size:12px; line-height: 12px;">Tell a friend</a></td>
+				<td valign="top" width="160" align="left"><img src="img/message-ico.png" class="m-100" width="23" height="23" alt="" border="0"/> <a href="#" style="font-size:12px; line-height: 12px;">Contact us for help</a></td>
+				<td valign="top" width="160" align="left" style="font-size:12px;"><img src="img/unsubscribe-ico.png" class="m-100" width="23" height="23" alt="" border="0"/> {unsub}</td>
+			</tr>
+			<tr><td valign="top" colspan="4" align="center" height="100" class="footer-logo">© 2014 <img src="img/logo2.png" class="m-100" width="119" height="35" alt="" border="0" style="display: inline-block; " /></td></tr>
+		</table>
+	</td>
+</tr>
+</table>
+</body>
+</html>

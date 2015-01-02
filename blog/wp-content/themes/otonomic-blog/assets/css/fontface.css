@@ -1,0 +1,10 @@
+/* FontFace embed */
+/*
+
+	Will import a new font named MyFont with the eot/woff/ttf/svg font files 
+	to be located/named as font/myfont.(eot|woff|ttf|svg).
+	
+	Usage:
+	@import 'fontface';
+	@include fontFace('MyFont','font/myfont', bold, italic);
+*/

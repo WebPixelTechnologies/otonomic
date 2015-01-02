@@ -1,0 +1,53 @@
+.admin_page_manage_ngg_pricelist .label_column {
+	height: 27px;;
+}
+
+.admin_page_manage_ngg_pricelist .label_column input[type=checkbox] {
+	position: relative;
+	bottom: 3px;
+}
+
+.admin_page_manage_ngg_pricelist table {
+	width: 100%;
+}
+
+.admin_page_manage_ngg_pricelist .label_column,
+.admin_page_manage_ngg_pricelist .title_column {
+	width: 325px;
+}
+
+.admin_page_manage_ngg_pricelist .price_column {
+	width: 100px;
+}
+
+.admin_page_manage_ngg_pricelist .delete_item_column {
+	width: 20px;
+}
+
+.admin_page_manage_ngg_pricelist th {
+	text-align: left;
+}
+
+.admin_page_manage_ngg_pricelist table input[type=text],
+.admin_page_manage_ngg_pricelist table input[type=number] {
+	width: 100%;
+}
+
+#no_pricelist_items {
+	display:none;
+}
+
+.admin_page_manage_ngg_pricelist table input.shipping_rate {
+	width: 60px;
+}
+
+#digital_downloads_licensing_page {
+	width: 315px;
+}
+
+.admin_page_manage_ngg_pricelist table .resolution_column {
+    width: 150px;
+}
+.admin_page_manage_ngg_pricelist table .resolution_column input {
+    width: 128px;
+}

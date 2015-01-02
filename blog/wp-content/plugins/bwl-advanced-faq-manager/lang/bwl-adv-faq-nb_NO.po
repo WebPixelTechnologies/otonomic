@@ -1,0 +1,300 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BWL FAQ Manager\n"
+"POT-Creation-Date: 2013-10-08 19:33+0600\n"
+"PO-Revision-Date: 2013-12-15 01:01+0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;__;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: bwl_advanced_faq_manager.php:43 bwl_advanced_faq_manager.php:49
+msgid "All FAQs"
+msgstr "Zibrish"
+
+#: bwl_advanced_faq_manager.php:44 bwl_advanced_faq_manager_widget.php:37
+#: bwl_advanced_faq_manager_widget.php:49
+msgid "FAQ"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:45 bwl_advanced_faq_manager.php:46
+msgid "Add New FAQ"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:47
+msgid "Edit FAQ"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:48
+msgid "New FAQ"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:50
+msgid "View FAQ"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:51
+msgid "Search FAQ"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:52
+msgid "No FAQ found"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:53
+msgid "No FAQ found in Trash"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:55
+msgid "Advanced FAQ"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:92
+msgid "FAQ Category"
+msgstr "SLSLJLDJLFJ"
+
+#: bwl_advanced_faq_manager.php:93
+msgid "Category"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:94
+msgid "Edit Category"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:95
+msgid "Update category"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:96
+msgid "Add Category"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:97
+msgid "Add New category"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:98
+msgid "All categories"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:99
+msgid "Search categories"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:100
+msgid "Popular categories"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:101
+msgid "Separate categories with commas"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:102
+msgid "Add or remove category"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:103
+msgid "Choose from most used categories"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:116
+msgid "FAQ Topics"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:117
+msgid "Topics"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:118
+msgid "Edit Topics"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:119
+msgid "Update Topics"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:120
+msgid "Add Topic"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:121
+msgid "Add New Topics"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:122
+msgid "All Topics"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:123
+msgid "Search Topics"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:124
+msgid "Popular Topics"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:125
+msgid "Separate Topics with commas"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:126
+msgid "Add or remove Topics"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:127
+msgid "Choose from most used Topics"
+msgstr ""
+
+#: bwl_advanced_faq_manager.php:385
+msgid "Read More"
+msgstr ""
+
+#: bwl_advanced_faq_manager_custom_column.php:13
+msgid "FAQ Title"
+msgstr ""
+
+#: bwl_advanced_faq_manager_custom_column.php:15
+msgid "Votes"
+msgstr ""
+
+#: bwl_advanced_faq_manager_custom_column.php:17
+msgid "Date"
+msgstr ""
+
+#: bwl_advanced_faq_manager_form_shortcode.php:60
+msgid "Add A New FAQ Question !"
+msgstr ""
+
+#: bwl_advanced_faq_manager_form_shortcode.php:67
+msgid "Question Title: "
+msgstr ""
+
+#: bwl_advanced_faq_manager_form_shortcode.php:71
+msgid "Category:"
+msgstr ""
+
+#: bwl_advanced_faq_manager_form_shortcode.php:76
+msgid "Submit FAQ"
+msgstr ""
+
+#: bwl_advanced_faq_manager_form_shortcode.php:91
+msgid "Log In is required for submitting new FAQ."
+msgstr ""
+
+#: bwl_advanced_faq_manager_rating.php:54
+#: bwl_advanced_faq_manager_rating.php:59
+msgid "I like this faq"
+msgstr ""
+
+#: bwl_advanced_faq_manager_rating.php:67
+msgid "people found this faq useful."
+msgstr ""
+
+#: bwl_advanced_faq_manager_rating.php:71
+msgid "Be the first person to like this faq."
+msgstr ""
+
+#: bwl_advanced_faq_manager_rating.php:128
+msgid " Thank For Your Rating!"
+msgstr ""
+
+#: bwl_advanced_faq_manager_rating.php:136
+msgid " You have already give rating!"
+msgstr ""
+
+#: bwl_advanced_faq_manager_settings.php:17
+msgid "Settings saved."
+msgstr ""
+
+#: bwl_advanced_faq_manager_settings.php:26
+msgid "Save Settings"
+msgstr ""
+
+#: bwl_advanced_faq_manager_settings.php:43
+msgid "Display Settings"
+msgstr ""
+
+#: bwl_advanced_faq_manager_settings.php:44
+msgid "FAQ Theme"
+msgstr ""
+
+#: bwl_advanced_faq_manager_settings.php:45
+msgid "Display Search Box"
+msgstr ""
+
+#: bwl_advanced_faq_manager_settings.php:46
+msgid "Required logged in to submit FAQ "
+msgstr ""
+
+#: bwl_advanced_faq_manager_settings.php:47
+msgid "Send email when submit a new FAQ "
+msgstr ""
+
+#: bwl_advanced_faq_manager_settings.php:50
+msgid "Reading Settings"
+msgstr ""
+
+#: bwl_advanced_faq_manager_settings.php:51
+msgid "Excerpt Status "
+msgstr ""
+
+#: bwl_advanced_faq_manager_settings.php:52
+msgid "Excerpt Length "
+msgstr ""
+
+#: bwl_advanced_faq_manager_settings.php:287
+msgid "BWL Advanced FAQ Manager Settings."
+msgstr ""
+
+#: bwl_advanced_faq_manager_settings.php:287
+msgid "FAQ Settings"
+msgstr ""
+
+#: bwl_advanced_faq_manager_shortcode.php:66
+msgid "Search..."
+msgstr ""
+
+#: bwl_advanced_faq_manager_shortcode.php:93
+msgid "Sorry, No FAQ Available!"
+msgstr ""
+
+#: bwl_advanced_faq_manager_shortcode.php:101
+msgid "Nothing Found!"
+msgstr ""
+
+#: bwl_advanced_faq_manager_shortcode.php:103
+msgid "Found"
+msgstr ""
+
+#: bwl_advanced_faq_manager_sorting.php:37
+msgid "FAQ Sorting"
+msgstr ""
+
+#: bwl_advanced_faq_manager_sorting.php:39
+msgid "Sorting FAQ by drag-n-drop. Items at the top will be appear in first."
+msgstr ""
+
+#: bwl_advanced_faq_manager_welcome.php:17
+msgid "Thanks for Installing BWL Advanced FAQ Manager."
+msgstr ""
+
+#: bwl_advanced_faq_manager_welcome.php:17
+msgid "Welcome"
+msgstr ""
+
+#: bwl_advanced_faq_manager_widget.php:25
+msgid "BWL Advanced FAQ Manager Widget"
+msgstr ""
+
+#: bwl_advanced_faq_manager_widget.php:28
+msgid "Display FAQ Lists In Main sidebar or footer sidebar"
+msgstr ""
+
+#: bwl_advanced_faq_manager_widget.php:58
+msgid "FAQ Shortcode"
+msgstr ""
