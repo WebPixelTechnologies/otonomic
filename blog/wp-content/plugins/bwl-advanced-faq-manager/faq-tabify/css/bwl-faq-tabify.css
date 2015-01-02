@@ -1,0 +1,145 @@
+/*
+*@Title: BWL FAQ Tabify Stylesheet
+*@Version: 1.0.0
+*@Created Date: 15-12-2013
+*@Last Edited Date: 17-12-2013
+*/
+
+div.bwl-faq-tab-content {
+    background-color:#ffffff;
+    box-sizing: border-box;
+    padding:3px; 	
+    width: 99%;
+    outline: none;    
+}
+
+.bwl-faq-content-wrapper{
+    clear:both;
+    border: 1px solid #ccc;
+    margin: 0 0 11px 0;
+    padding: 0;
+}
+
+.bwl-faq-wrapper{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.bwl-faq-wrapper ul.bwl-faq-tabs {
+    
+    position: relative;
+    z-index: 50;
+    padding: 0px;
+    margin: 0px 0px -1px 0px;
+}
+
+.bwl-faq-wrapper ul.bwl-faq-tabs li{
+    display: block;
+    background: none;
+    float:left;
+    margin: 0;
+    padding: 0;
+}
+
+.bwl-faq-wrapper ul.bwl-faq-tabs li a{
+    list-style:none;
+    display: block;
+    padding: 5px 11px ;
+    text-decoration: none;        
+    color: black;    
+    font-size: 17px;
+    background: #fff;
+    outline: none;
+}
+
+.bwl-faq-wrapper ul.bwl-faq-tabs li.active a{
+
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    margin-bottom: -1px;
+}
+
+.bwl-faq-wrapper ul.bwl-faq-tabs li.active{
+    border-top: 3px solid #2c2c2c;
+}
+
+/*------------------------------ Responsive Tab Section  ---------------------------------*/
+
+/***********************************************************************************************/
+/* MEDIA QUERIES */
+/***********************************************************************************************/
+
+/* Smaller than 1200 (devices and browsers) */
+@media only screen and (max-width: 1199px) {
+
+
+
+}
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+    .bwl-faq-wrapper ul.bwl-faq-tabs li{
+        clear: both;
+        width: 100%;
+        border-bottom: 1px solid #EEEEEE;
+    }
+    
+    .bwl-faq-wrapper ul.bwl-faq-tabs li.active a {
+       border-bottom: 1px solid #EEEEEE;
+    }
+  
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+ 
+    .bwl-faq-wrapper ul.bwl-faq-tabs li{
+        clear: both;
+        width: 100%;
+        border-bottom: 1px solid #EEEEEE;
+    }
+    
+    .bwl-faq-wrapper ul.bwl-faq-tabs li.active a {
+       border-bottom: 1px solid #EEEEEE;
+    }
+    
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+    .bwl-faq-wrapper ul.bwl-faq-tabs li{
+        clear: both;
+        width: 100%;
+        border-bottom: 1px solid #EEEEEE;
+    }
+    
+    .bwl-faq-wrapper ul.bwl-faq-tabs li.active a {
+       border-bottom: 1px solid #EEEEEE;
+    }
+    
+
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+
+    
+    .bwl-faq-wrapper ul.bwl-faq-tabs li{
+        clear: both;
+        width: 100%;
+        border-bottom: 1px solid #EEEEEE;
+    }
+    
+    .bwl-faq-wrapper ul.bwl-faq-tabs li.active a {
+       border-bottom: 1px solid #EEEEEE;
+    }
+    
+
+}

@@ -1,0 +1,33 @@
+@import "compass";
+@import "glyphicons/css/glyphicons";
+@import "glyphicons/css/halflings";
+@import "aller_font";
+
+/* Otonomic Satellite Pages styling */
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+
+@import "otonomic-bootstrap-sass/bootstrap";
+@import "rrssb";
+@import "all-pages";
+@import "side-menu";
+@import "otonomic-blog";
+
+body {
+    color: $gray-darker;
+    background-color: $bright-dark;
+    font-family: 'aller','Open Sans', sans-serif;
+
+    /* Sticky footer styles
+    -------------------------------------------------- */
+    /* Margin bottom by footer height */
+    margin-bottom: 540px;
+}
