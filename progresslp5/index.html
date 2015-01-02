@@ -51,7 +51,7 @@
 
     <!-- Intro    ========================================================== -->
     <div class="container-fluid">
-      <div id="intro" class="row hidden">
+      <div id="intro" class="row installer-stage">
         <div class="bg-image hidden-xs"></div>
         <div class="col-xs-12">
           <div class="text-center">
@@ -63,11 +63,13 @@
           </div>
         </div>
       </div>
+
       <!-- Stage 1 ========================================================== -->
         <div id="stage-1" class="row hidden installer-stage">
             <div class="bg-image hidden-xs "><img src="images/bg3.jpg"></div>
             <div class="content-panel">
                 <img class="logo" src="images/otonomic-logo-dark.png">
+
                 <div class="hidden-xs">
                   <h1 class="title">Get your business ready to be found</h1>
                   <h2>Do you want your website listed on the following search engines and directories?</h2>
@@ -92,10 +94,10 @@
                     Back
                   </a>
                 </div>
+
                 <div class="visible-xs">
-                  <h1 class="title">Every post added to your site, in real time.</h1>
-                  <p>We help you promote your website with every new post and picture.</p>
-                  <p>You can instantly integrate other social media networks to your site from within the site editor.</p>
+                  <h1 class="title">Get your business ready to be found.</h1>
+                  <p>We will get your website listed on Google, Yahoo, Bing and other search engines and directories.</p>
                   <a href="#" onclick="return false;" class="btn btn-ttc-orange pull-right js-stage1-next">
                       Continue
                       <span class="glyphicon glyphicon-chevron-right"></span>
@@ -103,8 +105,9 @@
                 </div>
             </div>
         </div>
+
       <!-- Stage 2 ========================================================== -->
-      <div id="stage-2" class="row hidden">
+      <div id="stage-2" class="row hidden installer-stage">
         <div class="bg-image hidden-xs"><img src="images/bg4.jpg"></div>
         <div class="content-panel">
           <img class="logo" src="images/otonomic-logo-dark.png">
@@ -125,7 +128,7 @@
               </div>
             </div>
             <hr>
-            <a href="#" class="btn btn-ttc-orange pull-right js-stage2-next disabled">
+            <a href="#" class="btn btn-ttc-orange pull-right js-stage2-next next-btn disabled">
               Select
               <span class="glyphicon glyphicon-chevron-right"></span>
             </a>
@@ -138,15 +141,17 @@
             <h1 class="title">Your website looks right on every screen.</h1>
             <img src="images/image2.png" style="width: 40%;">
             <p>Looking good on mobile, tablet and desktop, provides for easier navigation and puts your website above the rest.</p>
-            <a href="#" onclick="return false;" class="btn btn-ttc-orange pull-right js-stage2-next">
+            <a href="#" onclick="return false;" class="btn btn-ttc-orange pull-right next-btn js-stage2-next">
                 Continue
                 <span class="glyphicon glyphicon-chevron-right"></span>
             </a>
           </div>
         </div>
       </div>
+
+
       <!-- Stage 3 ========================================================== -->
-      <div id="stage-3" class="row hidden">
+      <div id="stage-3" class="row hidden installer-stage">
         <div class="bg-image hidden-xs"><img src="images/bg7.jpg"></div>
         <div class="content-panel">
           <div class="hidden-xs">
@@ -155,13 +160,13 @@
           <h2>Select add-ons to your website</h2>
           <div class="row">
             <div class="col-xs-12">
-              <button class="btn btn-block btn-ttc-white btn-checkbox btn-add-on"><span class="text-type-1">Online Store</span> sell products & services online <span class="glyphicons shop"></span></button>
+              <button id="option-online-store" class="btn btn-block btn-ttc-white btn-checkbox btn-add-on"><span class="text-type-1">Online Store</span> sell products & services online <span class="glyphicons shop"></span></button>
             </div>
             <div class="col-xs-12">
-              <button class="btn btn-block btn-ttc-white btn-checkbox btn-add-on"><span class="text-type-1">Online Booking</span> let your clients book online <span class="glyphicons calendar"></span></button>
+              <button id="option-booking" class="btn btn-block btn-ttc-white btn-checkbox btn-add-on"><span class="text-type-1">Online Booking</span> let your clients book online <span class="glyphicons calendar"></span></button>
             </div>
             <div class="col-xs-12">
-              <button class="btn btn-block btn-ttc-white btn-checkbox btn-add-on">
+              <button class="btn btn-block btn-ttc-white btn-checkbox btn-add-on btn-uncheck-others">
               I don’t need these features<br/>
               <small>You can always add them later</small>
               <span class="glyphicons remove"></span>
@@ -169,7 +174,7 @@
             </div>
           </div>
           <hr>
-          <a href="#" onclick="return false;" class="btn btn-ttc-orange pull-right js-stage3-next">
+          <a href="#" onclick="return false;" class="btn btn-ttc-orange pull-right disabled js-stage3-next next-btn">
             Select
             <span class="glyphicon glyphicon-chevron-right"></span>
           </a>
@@ -190,17 +195,7 @@
         </div>
       </div>
 
-      <!-- Stage 4 ========================================================== -->
-      <!-- <div id="stage-4" class="row hidden installer-stage">
-          <div class="bg-image hidden-xs"><img src="images/bg5.jpg"></div>
-          <div class="content-panel">
-              <img class="logo" src="images/otonomic-logo-dark.png">
-              <h1 class="title">Would you like to offer Online Booking?</h1>
-              <p>(You can always change your mind)</p>
-              <a href="#" onclick="return false;" class="js-stage4-next submit-booking btn btn-ttc-orange pull-right glyph-on-left"><span class="glyphicon glyphicon-ok"></span>Yes</a>
-              <a href="#" onclick="return false;" style="margin-right: 10px;" class="js-stage4-next submit-skip-booking btn btn-ttc-orange pull-right glyph-on-left"><span class="glyphicon glyphicon-remove"></span>No</a>
-          </div>
-      </div> -->
+
       <!-- Stage 4 ========================================================== -->
       <div id="stage-4" class="row hidden installer-stage">
           <div class="bg-image hidden-xs"><img src="images/bg3.jpg"></div>
@@ -227,8 +222,10 @@
               </a>
           </div>
       </div>
+
+
       <!-- Choose a template ================================================ -->
-      <div id="choose-template" class="row">
+      <div id="choose-template" class="row hidden installer-stage">
         <div class="content-panel">
           <img class="logo" src="images/otonomic-logo-dark.png">
           <div class="hidden-xs">
@@ -243,7 +240,7 @@
             <div class="col-xs-12 col-sm-6">
               <div class="template-conrainer pull-right">
                 <div class="overlay">
-                  <button class="btn btn-ttc-blue"><span class="glyphicons ok_2"></span>Choose Template</button>
+                  <button class="btn btn-ttc-blue btn-choose-template" data-option-value=""><span class="glyphicons ok_2"></span>Choose Template</button>
                 </div>
                 <img class="img-responsive" src="images/templates/dream-salon.png">
               </div>
@@ -251,7 +248,7 @@
             <div class="col-xs-12 col-sm-6">
               <div class="template-conrainer">
                 <div class="overlay">
-                  <button class="btn btn-ttc-blue"><span class="glyphicons ok_2"></span> Choose Template</button>
+                  <button class="btn btn-ttc-blue btn-choose-template" data-option-value="fluffy-strokes"><span class="glyphicons ok_2"></span> Choose Template</button>
                 </div>
                 <img class="img-responsive" src="images/templates/fluffy-strokes.png">
               </div>
@@ -259,7 +256,7 @@
             <div class="col-xs-12 col-sm-6">
               <div class="template-conrainer pull-right">
                 <div class="overlay">
-                    <button class="btn btn-ttc-blue"><span class="glyphicons ok_2"></span> Choose Template</button>
+                    <button class="btn btn-ttc-blue btn-choose-template" data-option-value="blonde-rays"><span class="glyphicons ok_2"></span> Choose Template</button>
                   </div>
                 <img class="img-responsive" src="images/templates/blonde-rays.png">
               </div>
@@ -267,7 +264,7 @@
             <div class="col-xs-12 col-sm-6">
               <div class="template-conrainer">
                 <div class="overlay">
-                    <button class="btn btn-ttc-blue"><span class="glyphicons ok_2"></span> Choose Template</button>
+                    <button class="btn btn-ttc-blue btn-choose-template" data-option-value="curly-beige"><span class="glyphicons ok_2"></span> Choose Template</button>
                   </div>
                 <img class="img-responsive" src="images/templates/curly-beige.png">
               </div>
@@ -289,13 +286,13 @@
         <div class="lower-content">
           <h3 id="oto-web-url" class="hidden">http://wp.otonomic.com/newsite</h3>
           <p class="tos">
-            By clicking the button, you accept the Otonomic <a href="/pdfs/Otonomic_Terms_of_Service.pdf" id="link-tos">Terms of Service</a>
+            By clicking the button, you accept the Otonomic <a target="_blank" href="/pdfs/Otonomic_Terms_of_Service.pdf" id="link-tos">Terms of Service</a>
           </p>
         </div>
       </div>
     </div><!-- /.container -->
 
-    <script src="/js/loading_page4.js?v=0.54"></script>
+    <script src="/js/loading_page5.js"></script>
 
     <script>
         window.fbAsyncInit = function() {
@@ -314,8 +311,8 @@
 
     <script type="text/javascript">
       var base_url = 'http://otonomic.com/hybridauth/twitter.php';
-      $(document).ready(function(){
 
+      jQuery(document).ready(function($) {
           trackFacebookPixel('viewed_installer');
           window._fbq = window._fbq || [];
           window._fbq.push(['track', '6021618382030', {'value':'0.00','currency':'USD'}]);
@@ -335,7 +332,7 @@
               return false;
           });
 
-          // Change social buttons apearance depending on screen width 
+          // Change social buttons appearance depending on screen width
             var changeWidth = function(){
             console.log('Resized');
             if ( $(window).width() < 480 ){
@@ -350,18 +347,35 @@
 
           // Search engine buttons
           $('.btn-search-engine').click(function(){
-            $('.btn-search-engine').removeClass('checked');
-            $(this).addClass('checked');
-            var engineName =$(this).data('engine');
-            $('.js-stage1-next').removeClass('disabled').html('1st on '+engineName+', got it!');
+            // $('.btn-search-engine').removeClass('checked');
+            $(this).toggleClass('checked');
+
+              var engineName =$(this).data('engine');
+            $('.js-stage1-next').removeClass('disabled').html('1st on search engines, got it!');
           });
 
-          // Search engine buttons
+          // Devices buttons
           $('.btn-device').click(function(){
-            $('.btn-device').removeClass('checked');
-            $(this).addClass('checked');
-            var engineName =$(this).data('engine');
-            $('.js-stage2-next').removeClass('disabled').html('Continue <span class="glyphicon glyphicon-chevron-right"></span>');
+            // $('.btn-device').removeClass('checked');
+            $(this).toggleClass('checked');
+            $(this).parents('.installer-stage').find('.next-btn').removeClass('disabled').html('Continue <span class="glyphicon glyphicon-chevron-right"></span>');
+          });
+
+          // Online store / booking buttons
+          $('.btn-add-on').click(function(){
+              var $this = $(this);
+              if($this.hasClass('btn-uncheck-others') && !$this.hasClass('checked')) {
+                $('.btn-add-on').removeClass('checked');
+              } else {
+                $('.btn-uncheck-others').removeClass('checked');
+              }
+              $this.toggleClass('checked');
+              $this.parents('.installer-stage').find('.next-btn').removeClass('disabled').html('Continue <span class="glyphicon glyphicon-chevron-right"></span>');
+          });
+
+          // Devices buttons
+          $('.social-btn').click(function(){
+              $(this).toggleClass('selected');
           });
       })
     </script>

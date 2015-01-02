@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<meta http-equiv="X-Frame-Options" content="ALLOW-FROM uri">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Otomobic - Make your site mobile-optimized</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet">
+	<link href="css/jRating.jquery.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="js/assets/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/assets/ie-emulation-modes-warning.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/assets/ie10-viewport-bug-workaround.js"></script>
+	<script src="js/jquery.min.js"></script>
+	
+	<script src="js/jRating.jquery.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/assets/html5shiv.min.js"></script>
+      <script src="js/assets/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="main_contaoner">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="home_wb_default">
+                      <div class="web_default_inner">
+                          <div class="mobile_image_wrapper">
+                              <img src="images/iphone4.png" class="mobile_image" alt="a">
+                              <div class="web_iframe_wrapper">
+                                  <img class="header_wrap tooltip-viewport-bottom" src="images/header1.png" alt="a" title="We added the actions your users need the most. click here to add your contact details">
+								  <!--<iframe src="https://www.facebook.com/viewstudio58" width="321" height="400"></iframe>-->
+								  <iframe id="iframe_d" name="iframe1" src="" width="321" height="400"></iframe>
+                                  <img class="header_wrap2" src="images/header1.png" alt="a">
+
+                                  <img class="footer_wrap tooltip-viewport-left" src="images/footer1.png" alt="a" title="Here your users can see your social content, including testimonials, images and more...Click to explore!">
+                                  <img class="footer_wrap2" id="show_social_content" src="images/footer1.png" alt="a">
+                                  <div class="mobile_tp tp_tips1" id="tp_tips_show1"><span>We added the actions your users need the most. Tap here to add your contact details</span></div>
+                                  <div class="mobile_tp tp_tips2" id="tp_tips_show2"><span>Here your users can see your social content, including testimonials, images and more... Click to explore!</span></div>
+                                  <div class="mobile_tp tp_tips3" id="tp_tips_show3"><span>You can always switch back to homepage here</span></div>
+
+                                  <div class="fb_open_frame_wrapper" id="fb_frame_content">
+                                      <div class="social_mobile_frame_content_wrapper">
+                                        <a href="screen2.html" class="home_icon tooltip-viewport-right" id="home_toolstip" title="You can always switch back to homepage here"><img src="images/home_btn.png" alt="a"></a>
+                                          <h2 class="smf_header">A header</h2>
+										  <div class="fb_user_pagelist_wrap" id = "page_list_div">
+											<ul class="fb_pagelist" id = "page_list_ul">
+												<!--<li class = "page_details"><a href="#">Bornoparichay</a></li>
+												<li class = "page_details"><a href="#">Salt Lake</a></li>-->
+											</ul>
+										  </div>
+                                          <div class="smf_default_section" id ="review_div">
+                                              <h3 class="smf_section_heading">Testimonials</h3>
+                                              <div class="testimonial_list_wrap">
+											  <div id="testimonial_list_wrap_id">
+                                                  <!--<div class="testimonial_list">
+                                                    <div class="testimonial_left_prfl_pic"></div>
+                                                    <div class="testimonial_details">
+                                                        <h4>Name <span>1 Month ago</span></h4>
+                                                        <div class="rating" data-average="10" data-id="2" id="rating-2"></div>
+                                                        <p>A real text of a testimonial by a user</p>
+                                                    </div>
+                                                  </div>-->
+                                                  </div>
+                                                  <div class="loadmore_wrap" id = "load_more_btn"></div>
+                                              </div>
+                                          </div>
+                                          <div class="smf_default_section" id ="photos_div">
+                                              <h3 class="smf_section_heading">Photos</h3>
+                                              <div class="photo_list_wrap">
+                                                  <ul class="photos_container" id = "photos_container_ul">
+                                                    <li><a href="#"></a></li>
+                                                    <li><a href="#"></a></li>
+                                                    <li><a href="#"></a></li>
+                                                    <li><a href="#"></a></li>
+                                                    <li><a href="#"></a></li>
+                                                    <li><a href="#"></a></li>
+                                                    <li><a href="#"></a></li>
+                                                    <li><a href="#"></a></li>
+                                                  </ul>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="d_panel_wrapper" id="slide_panel">
+                            <a href="#" class="open_panel_button" id="open_panel">Edit me!</a>
+                            <a href="#" class="close_panel" id="close_panel"></a>
+                            <div class="panel_content_wrapper">
+                                <div class="tab_container">
+                                    <ul class="tab_menu_wrap">
+                                        <li class="active"><a href="#tab1">Contact Details</a></li>
+                                        <li><a href="#tab2">Social Content</a></li>
+                                    </ul>
+                                    <div class="tab_conent_wrapper">
+                                      <div class="tab_content" id="tab1">
+                                        <a href="#" class="close_contact" id="close_contact"></a>
+                                        <div class="contact_section_wrap">
+                                            <p class="contact_sec_desc">Please insert your contact details so your customers can easily access your business from anywhere</p>
+                                            <form>
+                                                <div class="contact_field_wrap">
+                                                    <div class="contact_field_list">
+                                                        <div class="contact_field_left">
+                                                            <label>Phone</label>
+                                                            <input type="text" class="input_field">
+                                                        </div>
+                                                        <div class="contact_field_right">
+                                                            <label>label</label>
+                                                            <input type="checkbox"  name="1"><span>Hide</span>
+                                                        </div>
+                                                    </div>                                                    
+                                                    <div class="contact_field_list">
+                                                        <div class="contact_field_left">
+                                                            <label>Email</label>
+                                                            <input type="email" class="input_field">
+                                                        </div>
+                                                        <div class="contact_field_right">
+                                                            <label>label</label>
+                                                            <input type="checkbox"  name="1"><span>Hide</span>
+                                                        </div>
+                                                    </div>                                                   
+                                                    <div class="contact_field_list">
+                                                        <div class="contact_field_left">
+                                                            <label>Address</label>
+                                                            <textarea></textarea>
+                                                        </div>
+                                                        <div class="contact_field_right">
+                                                            <label>label</label>
+                                                            <input type="checkbox" name="1" ><span>Hide</span>
+                                                        </div>
+                                                    </div>                                                
+                                                    <div class="contact_field_list">
+                                                        <div class="contact_field_left">
+                                                            <div class="opening_hours_wrap">
+                                                              <a href="#" class="opening_hrs_text" id="open_hours">Opening Hours</a>
+                                                              <div class="hrs_arrow"><img src="images/arrow_down.png" alt="a"></div>
+                                                              
+                                                            </div>
+                                                        </div>
+                                                        <div class="contact_field_right">
+                                                            <input type="checkbox" ><span>Hide</span>
+                                                        </div>
+                                                    </div>  
+                                                      <div class="open_hrs_content_wrap">                             
+                                                                <div id="openCloseIdentifier"></div>
+                                                                <div class="open_hrs_content_inner">
+                                                                    <div class="hrs_list_wrap">
+                                                                        <div class="open_hrs_cnt_default">Monday</div>
+                                                                        <div class="open_hrs_cnt_default2"><input type="text" class="open_hrs_input"><span>-</span><input type="text" class="open_hrs_input"></div>
+                                                                        <div class="open_hrs_cnt_default right_close_check_wrap">
+                                                                          <input type="checkbox" name="closed" > <span>Closed</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="hrs_list_wrap">
+                                                                        <div class="open_hrs_cnt_default">Tuesday</div>
+                                                                        <div class="open_hrs_cnt_default2"><input type="text" class="open_hrs_input"><span>-</span><input type="text" class="open_hrs_input"></div>
+                                                                        <div class="open_hrs_cnt_default right_close_check_wrap">
+                                                                          <input type="checkbox" name="closed" > <span>Closed</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="hrs_list_wrap">
+                                                                        <div class="open_hrs_cnt_default">Wednesday</div>
+                                                                        <div class="open_hrs_cnt_default2"><input type="text" class="open_hrs_input"><span>-</span><input type="text" class="open_hrs_input"></div>
+                                                                        <div class="open_hrs_cnt_default right_close_check_wrap">
+                                                                          <input type="checkbox" name="closed" > <span>Closed</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="hrs_list_wrap">
+                                                                        <div class="open_hrs_cnt_default">Thursday</div>
+                                                                        <div class="open_hrs_cnt_default2"><input type="text" class="open_hrs_input"><span>-</span><input type="text" class="open_hrs_input"></div>
+                                                                        <div class="open_hrs_cnt_default right_close_check_wrap">
+                                                                          <input type="checkbox" name="closed" > <span>Closed</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="hrs_list_wrap">
+                                                                        <div class="open_hrs_cnt_default">Friday</div>
+                                                                        <div class="open_hrs_cnt_default2"><input type="text" class="open_hrs_input"><span>-</span><input type="text" class="open_hrs_input"></div>
+                                                                        <div class="open_hrs_cnt_default right_close_check_wrap">
+                                                                          <input type="checkbox" name="closed" > <span>Closed</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="hrs_list_wrap">
+                                                                        <div class="open_hrs_cnt_default">Saturday</div>
+                                                                        <div class="open_hrs_cnt_default2"><input type="text" class="open_hrs_input"><span>-</span><input type="text" class="open_hrs_input"></div>
+                                                                        <div class="open_hrs_cnt_default right_close_check_wrap">
+                                                                          <input type="checkbox" name="closed" > <span>Closed</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="hrs_list_wrap">
+                                                                        <div class="open_hrs_cnt_default">Sunday</div>
+                                                                        <div class="open_hrs_cnt_default2"><input type="text" class="open_hrs_input"><span>-</span><input type="text" class="open_hrs_input"></div>
+                                                                        <div class="open_hrs_cnt_default right_close_check_wrap">
+                                                                          <input type="checkbox" name="closed" > <span>Closed</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                              </div> 
+                                                    <div style="clear:both"></div>                                         
+                                                    <div class="contact_field_list">
+                                                        <div class="contact_field_left">
+                                                            <p class="contact_sec_desc">Or you can connect with Facebook to update it automatically</p>
+                                                        </div>
+                                                        <div class="contact_field_right">
+                                                            <a href="#"><img class="facebook_showit" src="images/showit.png" alt="a"></a>
+                                                        </div>
+                                                    </div>                                            
+                                                    <div class="contact_field_list">
+                                                      <div class="allset_btn_wrap">
+                                                        <input type="button" class="allset_button" onclick="location.href='screen2.html'" value="I'm all Set" >
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+
+                                        </div>
+                                      </div>
+                                      <div class="tab_content" id="tab2">
+                                          <div class="social_section_wrap" id="fb_first_v_content">
+                                              <p class="social_sec_desc">Please connect with Facebook to showcase the testimonials and your photos</p>                                              
+                                              <div class="allset_btn_wrap">
+                                                <!--<a href="#" id="fb_showit_btn"><img class="facebook_showit" src="images/showit.png" alt="a"></a>-->
+												<!--<fb:login-button scope="public_profile,email,manage_pages" onlogin="checkLoginState();">
+												</fb:login-button>-->
+												<fb:login-button scope="public_profile,email,manage_pages" size="large"
+																 onlogin="checkLoginState();">
+												  Show it!
+												</fb:login-button>
+                                              </div>
+                                          </div>
+                                            <div class="social_section_wrap" id="fb_first_v_content2">
+                                                <a href="screen2.html" class="home_icon tooltip-viewport-right" id="home_toolstip" title="You can always switch back to homepage here"><img src="images/home_btn.png" alt="a"></a>
+                                                  <h2 class="smf_header">A header</h2>
+                                                  <p class="social_sec_desc" style="margin:0;">Please connect with Facebook to showcase the testimonials and your photos</p>                                              
+                                                <div class="allset_btn_wrap">
+                                                  <a href="#" id="fb_showit_btn2"><img class="facebook_showit" src="images/showit.png" alt="a"></a>
+                                                </div>
+                                                  <p class="demo_text">This is how it will look like after you connect</p>
+                                                  <div class="smf_default_section">
+                                                      <h3 class="smf_section_heading">Testimonials</h3>
+                                                      <div class="testimonial_list_wrap">
+                                                          <div class="testimonial_list">
+                                                            <div class="testimonial_left_prfl_pic"></div>
+                                                            <div class="testimonial_details">
+                                                                <h4>Name <span>1 Month ago</span></h4>
+                                                                <div class="test_ratings_wrap"><img src="images/star-rating.png" alt="star"></div>
+                                                                <p>A real text of a testimonial by a user</p>
+                                                            </div>
+                                                          </div>
+                                                          <div class="testimonial_list">
+                                                            <div class="testimonial_left_prfl_pic"></div>
+                                                            <div class="testimonial_details">
+                                                                <h4>Name <span>1 Month ago</span></h4>
+                                                                <div class="test_ratings_wrap"><img src="images/star-rating.png" alt="star"></div>
+                                                                <p>A real text of a testimonial by a user, which is very long so we have to trucate it...</p>
+                                                            </div>
+                                                          </div>
+
+                                                          <div class="loadmore_wrap"><a href="#" class="detault_btn">Load More</a></div>
+                                                      </div>
+                                                  </div>
+                                                  <div class="smf_default_section">
+                                                      <h3 class="smf_section_heading">Photos</h3>
+                                                      <div class="photo_list_wrap">
+                                                          <ul class="photos_container">
+                                                            <li><a href="#"></a></li>
+                                                            <li><a href="#"></a></li>
+                                                            <li><a href="#"></a></li>
+                                                            <li><a href="#"></a></li>
+                                                          </ul>
+                                                      </div>
+                                                  </div>
+                                            </div>
+
+                                          <div class="social_section_wrap" id="social_showit_content">
+                                              <p class="social_sec_desc enter_shoit_desc">Great! Now all of your social content will be always up to speed and your visitors happy!</p> 
+                                              <p class="enter_shoit_desc2">Want to customize what to show a bit?</p>
+                                              <div class="allset_btn_wrap" style="text-align:left;">
+                                                <a href="#" class="detault_btn">Edit Testimonials</a>
+                                                <a href="#" class="detault_btn">Edit Photos</a>
+                                              </div>
+                                              <p class="enter_shoit_desc2">Disappointed with the result?</p>
+                                              <a href="#"><img class="facebook_showit" id = "facebook_disconnect_img" src="images/facebook_disconnect.png" alt="a"></a>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+      </div><!-- /.container -->
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+   
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/tooltip-viewport.js"></script>
+
+    <script type="text/javascript">
+
+    jQuery(document).ready(function ($) {
+        var fb_page_id;
+        var token;
+
+        var site_url = sessionStorage.fb_page_url;
+        if(site_url.indexOf('http') == -1) {
+            site_url = 'http://' + site_url;
+        }
+
+        $('#iframe_d').attr('src',site_url);
+
+        $('#load_more_btn').click(function(){
+            for(var i=0;i<3;i++){
+                    if($('.list_item:hidden').eq(0).length > 0) {
+                    $('.list_item:hidden').eq(0).css('display','block');
+            }
+		}
+		if($('.list_item:hidden').length == 0) {
+            $('#load_more_btn').css('display','none');
+        }
+	});
+
+
+
+      if ( $(window).width() < 780) {
+
+                $('#tp_tips_show1').fadeIn();
+                  setTimeout(function(){$('#tp_tips_show1').fadeOut();}, 5000);
+                  $('#tp_tips_show2').fadeIn();
+                  setTimeout(function(){$('#tp_tips_show2').fadeOut();}, 5000);
+
+                  $('#show_social_content').click(function(){
+                      $('#tab2').fadeIn(function(){                        
+                        $('#tp_tips_show3').fadeIn();
+                        setTimeout(function(){$('#tp_tips_show3').fadeOut();}, 5000);
+                      });
+                      $('#fb_first_v_content').hide();
+                      $('#fb_first_v_content2').fadeIn();
+                      $('#social_showit_content').fadeOut();
+                      $('#tp_tips_show1').fadeOut();
+                      $('#tp_tips_show2').fadeOut();
+                      
+                  });
+
+                  $('#fb_showit_btn2').click(function(){
+					  
+                    $('#fb_first_v_content').fadeOut();
+                     $('#tab2').fadeOut();
+                    $('#fb_frame_content').fadeIn(function(){                        
+                        $('#tp_tips_show3').fadeIn();
+                        setTimeout(function(){$('#tp_tips_show3').fadeOut();}, 5000);
+                    });
+                });
+
+                  $('#tab1').hide();
+
+                  $('.header_wrap2').click(function(){
+                      $('#tab1').fadeIn();                      
+                      $('#tp_tips_show1').fadeOut();
+                      $('#tp_tips_show2').fadeOut();
+                  });
+
+                  $('#close_contact').click(function(){
+                    $('#tab1').fadeOut();
+                });
+                  }
+
+                else {  
+                   $('#open_panel').click(function(event){
+                    event.preventDefault();
+                    $('#slide_panel').stop().animate({left:"0"}, 500);
+                });
+
+                $('#close_panel').click(function(event){
+                  event.preventDefault();
+                    $('#slide_panel').stop().animate({left:"-400px"}, 500);
+                });
+				
+				
+                $('#fb_showit_btn').click(function(){
+					checkLoginState();
+						
+                    //$('#fb_first_v_content').hide();
+                    //$('#social_showit_content').fadeIn();
+                    //$('#fb_frame_content').fadeIn();
+                });
+				//disconnect
+				$('#facebook_disconnect_img').click(function(){					
+					fbLogoutUser();
+                });
+
+
+         $(".tab_menu_wrap a").click(function(event){
+              event.preventDefault();
+              $(this).parent().addClass("active");
+              $(this).parent().siblings().removeClass("active");
+
+              var tab = $(this).attr("href");
+              $(".tab_content").not(tab).css("display", "none");
+              $(tab).fadeIn();
+            });
+
+
+                }
+
+        // Open or close the opening hours drop-down
+          $("#open_hours").click(function(){                           
+                if ($("#openCloseIdentifier").is(":hidden")) {
+                    $(".open_hrs_content_wrap").fadeIn();
+                    $(".hrs_arrow").html('<img src="images/arrow_up.png" alt="open" />');
+                    $("#openCloseIdentifier").show();
+          } else {
+                  $(".open_hrs_content_wrap").fadeOut();
+                  $(".hrs_arrow").html('<img src="images/arrow_down.png" alt="close" />');
+                  $("#openCloseIdentifier").hide();
+          }
+      });
+
+	 $(document).on('click','.page_details',function(){
+				  var selected_id = $(this).attr('id');
+				  selected_id=selected_id.split('_');
+				  var ppage_id = selected_id[0];
+				  var ppage_token = selected_id[1];
+				  console.log(ppage_id);
+
+				  $('#page_list_div').hide();
+				  $('#review_div').show();
+					$('#photos_div').show();
+					$('#page_list_div').hide();
+
+					//get images
+				  var url = "https://graph.facebook.com/v2.0/"+ppage_id+"/albums?access_token="+ppage_token+"&fields=id,name,count,photos.fields(id,picture,source,caption,width,height,created_time,updated_time,name)";			 
+				var div_data ='';
+
+		// Get reviews
+        $.ajax({
+				type:'GET',						
+				url:'test.php?fb_id='+ppage_id,															
+				dataType:'JSON',				
+				success:function(data){					
+					var review_data = JSON.parse(data);					
+					var review_data_length = review_data.facebook_reviews.length;
+					var review_cnt;
+					for(review_cnt=0;review_cnt<review_data_length;review_cnt++){
+						var img_split = review_data.facebook_reviews[review_cnt].user_picture.split('?');
+						img_split= img_split[0];						
+						if(div_data == ''){
+							div_data = "<div class='testimonial_list list_item'><div class='testimonial_left_prfl_pic'><img src="+img_split+" width ='58' height = '58'></div><div class='testimonial_details'><h4>"+review_data.facebook_reviews[review_cnt].user_name+"</h4><div class='rating' data-average='10' data-id="+review_cnt+" id='rating-"+review_cnt+"'></div><p>"+review_data.facebook_reviews[review_cnt].text+"</p></div></div>";
+						}else{
+							if(review_cnt > 2){
+							div_data = div_data + "<div class='testimonial_list list_item' style='display:none;'><div class='testimonial_left_prfl_pic'><img src="+img_split+" width ='58' height = '58'></div><div class='testimonial_details'><h4>"+review_data.facebook_reviews[review_cnt].user_name+"</h4><div class='rating' data-average='10' data-id="+review_cnt+" id='rating-"+review_cnt+"'></div><p>"+review_data.facebook_reviews[review_cnt].text+"</p></div></div>";
+							}else{
+								div_data = div_data + "<div class='testimonial_list list_item'><div class='testimonial_left_prfl_pic'><img src="+img_split+" width ='58' height = '58'></div><div class='testimonial_details'><h4>"+review_data.facebook_reviews[review_cnt].user_name+"</h4><div class='rating' data-average='10' data-id="+review_cnt+" id='rating-"+review_cnt+"'></div><p>"+review_data.facebook_reviews[review_cnt].text+"</p></div></div>";
+
+							}
+						}
+						
+					}
+					//console.log(div_data);
+					$('#testimonial_list_wrap_id').empty();
+					$('#testimonial_list_wrap_id').html(div_data);
+					showRatingg(review_data);
+					
+				},
+				error: function (error) {	
+					//console.log(error);
+					//alert(12)
+					
+				  }
+			}); 
+				 
+				
+         // Get images
+			  var url = "https://graph.facebook.com/v2.0/"+ppage_id+"/albums?access_token="+ppage_token+"&fields=id,name,count,photos.fields(id,picture,source,caption,width,height,created_time,updated_time,name)";
+			  $.ajax({
+					url:url,
+					type:'GET',							
+					success:function(response){
+						//console.log(response.data);
+						var li_data='';
+						var data_length = response.data.length;
+						//alert(data_length);
+						var i;
+						for(i=0;i<data_length;i++){
+							
+							var each_data = response.data[i];
+							//console.log(each_data);
+							var j;
+							for(j=0;j<each_data.photos.data.length;j++){
+								if(li_data == ''){
+									li_data = "<li><a href='#'><img src="+each_data.photos.data[j].source+" width ='66' height = '63'></a></li>";
+								}else{
+									li_data = li_data + "<li><a href='#'><img src="+each_data.photos.data[j].source+" width ='66' height = '63'></a></li>";
+								}
+							}
+						}						
+						$('#photos_container_ul').empty();
+						$('#photos_container_ul').html(li_data);
+					},
+					error: function (error) {
+						  
+					  }
+					 
+				});
+			});
+
+        });
+
+
+// for star rating
+function showRatingg(review_data) {
+	var review_data_length = review_data.facebook_reviews.length;
+	var review_cnt;
+	for(review_cnt=0;review_cnt<review_data_length;review_cnt++){
+	$("#rating-"+review_cnt).jRating({
+		bigStarsPath:'icons/stars.png',
+		smallStarsPath : 'icons/small.png',							
+		step:true,
+		length : 5, // nb of stars
+		decimalLength:0, // number of decimal in the rate,
+		active_star: 23 * review_data.facebook_reviews[review_cnt].rating,
+		isDisabled: true
+	});
+	}
+	if($('.list_item:hidden').length > 0){
+            //<img id="loadmore" src="img/load_more_button.png" alt="">
+                $('#load_more_btn').html("<a href='#' class='detault_btn'>Load More</a>");
+        }
+}
+
+		// This is called with the results from from FB.getLoginStatus().
+  function statusChangeCallback(response) {    
+	token = response.authResponse.accessToken;	
+    if (response.status === 'connected') {
+	
+      testAPI();
+
+    } else if (response.status === 'not_authorized') {
+      // The person is logged into Facebook, but not your app.
+      
+    } else {
+      // The person is not logged into Facebook, so we're not sure if
+      // they are logged into this app or not.
+     
+    }
+  }
+
+    // This function is called when someone finishes with the Login
+    // Button.  See the onlogin handler attached to it in the sample
+    // code below.
+    function checkLoginState() {
+        $('#review_div').hide();
+        $('#photos_div').hide();
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+            $('#fb_first_v_content').hide();
+            $('#social_showit_content').fadeIn();
+            $('#fb_frame_content').fadeIn();
+        });
+    }
+
+	//facebook logout
+  function fbLogoutUser() {
+    FB.getLoginStatus(function(response) {
+        if (response && response.status === 'connected') {
+            FB.logout(function(response) {
+                document.location="index.html";
+				sessionStorage.clear();
+            });
+        }
+    });
+  }
+
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '586308008181279',
+    cookie     : true,  // enable cookies to allow the server to access 
+                        // the session
+    xfbml      : true,  // parse social plugins on this page
+    version    : 'v2.1' // use version 2.1
+  });
+
+  // Now that we've initialized the JavaScript SDK, we call 
+  // FB.getLoginStatus().  This function gets the state of the
+  // person visiting this page and can return one of three states to
+  // the callback you provide.  They can be:
+  //
+  // 1. Logged into your app ('connected')
+  // 2. Logged into Facebook, but not your app ('not_authorized')
+  // 3. Not logged into Facebook and can't tell if they are logged into
+  //    your app or not.
+  //
+  // These three cases are handled in the callback function.
+
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+  function testAPI() {
+    //console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me/accounts', function(response) {		
+	  var page_list_details_length = response.data.length;
+	  var page_cnt;
+	  var page_div_content = '';
+	  if(page_list_details_length != 0){
+		  for(page_cnt=0; page_cnt<page_list_details_length; page_cnt++){
+			var page_access_token = response.data[page_cnt].access_token;
+			var page_id = response.data[page_cnt].id;
+			var page_name = response.data[page_cnt].name;			
+			if(page_div_content == ''){
+				page_div_content = "<li class = 'page_details' id ="+page_id+"_"+page_access_token+"><a href='#'>"+page_name+"</a></li>";
+			}else{
+				page_div_content = page_div_content+"<li class = 'page_details' id ="+page_id+"_"+page_access_token+"><a href='#'>"+page_name+"</a></li>";
+			}
+		  }
+	  }
+
+	  //page list
+	  $('#page_list_ul').empty();
+	  $('#page_list_ul').html(page_div_content);
+	  $('#review_div').hide();
+	  $('#photos_div').hide();	  
+    });
+  }
+    </script>
+	
+  </body>
+</html>
+

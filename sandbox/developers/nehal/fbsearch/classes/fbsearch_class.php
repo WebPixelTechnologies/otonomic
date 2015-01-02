@@ -559,7 +559,7 @@ Class FbSearch {
 
     function get_fb_results($keyword, $num_results = 0) {
         $access_token = '389314351133865|O4FgcprDMY0k6rxRUO-KOkWuVoU';
-        $limit = 200;
+        $limit = 2000;
         $url = 'https://graph.facebook.com/search/?q='.urlencode($keyword).'&type=page&access_token='.$access_token.
             '&fields=id,name,username,category,category_list,likes,website,phone,location,talking_about_count,is_community_page,parent_page,cover&limit='.$limit;
         $response = json_decode(file_get_contents($url));

@@ -363,10 +363,10 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
                     '<p class="media-heading">' +
                     val.name +
                     '</p>' +
-                    '<p class="media-address">' +
+                    '<p class="media-address page-category">' +
                     val.category +
                     '</p>' +
-                    '<p class="media-address" style="color:black;">' + val.likes + ' likes</p>' +
+                    '<p class="media-address page-likes" style="color:black;">' + val.likes + ' likes</p>' +
                     '</div>' +
                     '<div class="clearfix"></div>' +
                     '</div>' +

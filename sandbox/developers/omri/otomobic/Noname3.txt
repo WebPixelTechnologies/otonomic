@@ -1,0 +1,82 @@
+var token = "CAACEdEose0cBAIt8kjb2ni4HkbPTYaEbhFBbu2MUj3xjpi3U6ZAN5B4xT3myMxLIs8RTo3FE3H33IAxxqbxch0KIWwMwnliUuVDUNgSKoZBKEZB51IytZANdFsgRVQt3OZA9qN7AL8Jjwa6xqNjycDhQljxevMeoCWFQEQaZCnJNpMZBhcYsJcZC8soMCmvz6ixUgZCEIGBsYOUvScyyjxST4";
+					  var fb_id = "1478156079139581";
+					  var url = "https://graph.facebook.com/v2.0/"+fb_id+"/albums?access_token="+token+"&fields=id,name,count,photos.fields(id,picture,source,caption,width,height,created_time,updated_time,name)";
+					  //var encode_url = "https://m.facebook.com/page/reviews.php?"+ encodeURI("id=1478156079139581");
+					  //var test_url = "http://wp.otonomic.com/migration/helpers/FacebookReviews.php?"+ encodeURI("url="+encode_url);
+						var div_data ='';
+					  $.ajax({
+						type:'GET',						
+						url:'test.php?fb_id=1478156079139581',
+						//url:'http://graph.facebook.com/6261817190/reviews',						
+						//url:test_url,												
+						dataType:'JSON',
+						//jsonpCallback:'callback',
+						//crossDomain: true,
+						//processData: true,
+						//async:false,
+						success:function(data){
+							//console.log(JSON.parse(data));
+							var review_data = JSON.parse(data);
+							console.log(review_data);
+							var review_data_length = review_data.facebook_reviews.length;
+							var review_cnt;
+							for(review_cnt=0;review_cnt<review_data_length;review_cnt++){
+								var img_split = review_data.facebook_reviews[review_cnt].user_picture.split('?');
+								img_split= img_split[0];
+								//alert(img_split);
+								if(div_data == ''){
+									div_data = "<div class='testimonial_list'><div class='testimonial_left_prfl_pic'><img src="+img_split+" width ='58' height = '58'></div><div class='testimonial_details'><h4>"+review_data.facebook_reviews[review_cnt].user_name+"</h4><div class='test_ratings_wrap'><img src='images/star-rating.png' alt='star'></div><p>"+review_data.facebook_reviews[review_cnt].text+"</p></div></div>";
+								}else{
+									div_data = div_data + "<div class='testimonial_list'><div class='testimonial_left_prfl_pic'><img src="+img_split+" width ='58' height = '58'></div><div class='testimonial_details'><h4>"+review_data.facebook_reviews[review_cnt].user_name+"</h4><div class='test_ratings_wrap'><img src='images/star-rating.png' alt='star'></div><p>"+review_data.facebook_reviews[review_cnt].text+"</p></div></div>";
+								}
+							}
+							//console.log(div_data);
+							$('#testimonial_list_wrap_id').empty();
+							$('#testimonial_list_wrap_id').html(div_data);
+							
+						},
+						error: function (error) {	
+							console.log(error);
+							//alert(12)
+							
+						  }
+					}); 
+						 
+						
+					
+					  var url = "https://graph.facebook.com/v2.0/"+fb_id+"/albums?access_token="+token+"&fields=id,name,count,photos.fields(id,picture,source,caption,width,height,created_time,updated_time,name)";
+					  $.ajax({
+							url:url,
+							type:'GET',							
+							success:function(response){
+								//console.log(response.data);
+								var li_data='';
+								var data_length = response.data.length;
+								var i;
+								for(i=0;i<data_length;i++){
+									
+									var each_data = response.data[i];
+									//console.log(each_data);
+									var j;
+									for(j=0;j<each_data.count;j++){
+										if(li_data == ''){
+											li_data = "<li><a href='#'><img src="+each_data.photos.data[j].source+" width ='66' height = '63'></a></li>";
+										}else{
+											li_data = li_data + "<li><a href='#'><img src="+each_data.photos.data[j].source+" width ='66' height = '63'></a></li>";
+										}
+									}
+								}
+								//console.log(li_data);
+								$('#photos_container_ul').empty();
+								$('#photos_container_ul').html(li_data);
+							},
+							error: function (error) {
+								  
+							  }
+							  //console.log(li_data);
+						});
+
+
+
+
+						711599825627290

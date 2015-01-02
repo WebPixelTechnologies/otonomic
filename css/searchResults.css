@@ -250,6 +250,9 @@
 .t_box.open .steps {display: inline-block;}
 
 @media only screen and (max-width: 768px) {
+    .media-address.page-likes {
+        display: none;
+    }
     .p2s_fanpages .search-wrapper {
         position: relative;
         padding: 5px;
@@ -288,6 +291,8 @@
     }
     .p2s_fanpages .media {
         min-height: 50px;
+        border-bottom: 1px solid #888;
+        padding: 10px;
     }
     .p2s_fanpages .media .media-body {
         width: calc(100% - 55px);
