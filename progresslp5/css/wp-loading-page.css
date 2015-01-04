@@ -693,6 +693,22 @@ h3#oto-web-url {
       display: block;
       margin: 10px auto 0;
     }
+
+    .bg-image{
+      left: 40%;
+    }
+    #stage-1 .bg-image {
+      left: 45%;
+    }
+    #stage-2 .bg-image {
+      left: 50%;
+    }
+    #stage-3 .bg-image {
+      left: 33%;
+    }
+    #stage-4 .bg-image {
+      left: 13%;
+    }
     #congratz .logo {
       position: absolute;
       top: 0;
