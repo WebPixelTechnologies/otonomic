@@ -71,45 +71,49 @@ function checkConnectedWithFacebook() {
     track_event('Loading Page', 'Start');
 	jQuery('input[type=text]').addClass('LoNotSensitive');
 
+    function move_slide(pressed_button) {
+        var current_slide = pressed_button.parents('.installer-stage');
+        track_event('Loading Page', 'Next', current_slide.attr('id'));
+        current_slide.fadeOut('slow', function () {
+            current_slide.next().removeClass('hidden').fadeIn();
+        });
+    }
 
-	// Intro next btn - Let the magic begin
+    // Intro next btn - Let the magic begin
+    $('.btn-back').click(function(event) {
+        var $this = $(this);
+        var current_slide = $this.parents('.installer-stage');
+        track_event('Loading Page', 'Back', current_slide.attr('id'));
+        event.preventDefault();
+
+        current_slide.fadeOut('slow', function () {
+            current_slide.addClass('hidden');
+        });
+        current_slide.prev().removeClass('hidden').fadeIn();
+    });
+
+    // Intro next btn - Let the magic begin
 	$('.js-intro-next').click(function(event){
-        track_event('Loading Page', 'Next', 'Start process');
-		event.preventDefault();
-		$('#intro').fadeOut('slow', function () {
-			$(this).addClass('hidden');
-		});
-		$('#stage-1').css('opacity',0).removeClass('hidden').animate({opacity: 1}, 'slow');
+        event.preventDefault();
+        move_slide( $(this));
 	});
 
 	// Stage-1 next btn - Be found on Search Engines
 	$('.js-stage1-next').click(function(event){
-        track_event('Loading Page', 'Next', '1 > 2');
-		event.preventDefault();
-		$('#stage-1').fadeOut('slow', function () {
-			$(this).addClass('hidden');
-		});
-		$('#stage-2').css('opacity',0).removeClass('hidden').animate({opacity: 1}, 'slow');
+        event.preventDefault();
+        move_slide( $(this));
 	});
 	
 	// Stage-2 next btn - Select device
 	$('.js-stage2-next').click(function(event){
-        track_event('Loading Page', 'Next', '2 > 3');
-		event.preventDefault();
-		$('#stage-2').fadeOut('slow', function () {
-			$(this).addClass('hidden');
-		});
-		$('#stage-3').css('opacity',0).removeClass('hidden').animate({opacity: 1}, 'slow');
+        event.preventDefault();
+        move_slide( $(this));
 	});
 
 	// Stage-3 next btn - Store/Booking
 	$('.js-stage3-next').click(function(event){
-        track_event('Loading Page', 'Next', '3 > 4');
-		event.preventDefault();
-		$('#stage-3').fadeOut('slow', function () {
-			$(this).addClass('hidden');
-		});
-		$('#stage-4').css('opacity',0).removeClass('hidden').animate({opacity: 1}, 'slow');
+        event.preventDefault();
+        move_slide( $(this));
 
         var values = {};
         values.show_store = $('#option-online-store').hasClass('checked') ? 'yes' : 'no';
@@ -120,17 +124,12 @@ function checkConnectedWithFacebook() {
 
 	// Stage-4 next btn - Social Channels
 	$('.js-stage4-next').click(function(event){
-        track_event('Loading Page', 'Next', '4 > 5');
-		event.preventDefault();
-        $('#stage-4').fadeOut('slow', function () {
-            $(this).addClass('hidden');
-        });
-        $('#choose-template').css('opacity',0).removeClass('hidden').animate({opacity: 1}, 'slow');
+        event.preventDefault();
+        move_slide( $(this));
 	});
 
     // Stage-5 next btn - Select Template
     $('.btn-choose-template').click(function(event){
-        track_event('Loading Page', 'Next', '5 > 6');
         event.preventDefault();
         switchToCongratz();
 
