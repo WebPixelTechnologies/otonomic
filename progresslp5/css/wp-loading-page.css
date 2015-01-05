@@ -686,6 +686,23 @@ h3#oto-web-url {
 
 
   /*==========  Non-Mobile First Method  ==========*/
+  @media only screen and (max-width : 1600px) {
+
+    #stage-1 .bg-image {
+      left: 35%;
+    }
+    #stage-2 .bg-image {
+      left: 40%;
+    }
+    #stage-3 .bg-image {
+      left: 33%;
+    }
+    #stage-4 .bg-image {
+      left: 20%;
+    }
+
+  }
+
 
   /* Large Devices, Wide Screens */
   @media only screen and (max-width : 1200px) {
