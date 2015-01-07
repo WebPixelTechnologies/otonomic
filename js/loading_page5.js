@@ -274,11 +274,12 @@ function callback(data) {
         track_virtual_pageview('site_created');
 	}
 
-	// Site created, facebook fixel
+    <!-- START Facebook Pixel Tracking for Site created-->
 	window._fbq = window._fbq || [];
     if(!is_localhost()) {
 	    window._fbq.push(['track', facebook_site_created_pixel_id, {'value':'0.00', 'currency':'USD'}]);
     }
+    <!-- END Facebook Pixel Tracking -->
 
 	window.site_url = data.site_url;
 	window.blog_redirect = data.redirect;
