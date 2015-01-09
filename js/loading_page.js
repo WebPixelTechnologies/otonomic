@@ -32,6 +32,7 @@ if (is_localhost()) {
 
 
     track_event('Loading Page', 'Start');
+	track_virtual_pageview('installer_start');
 	jQuery('input[type=text]').addClass('LoNotSensitive');
 
 
@@ -223,7 +224,8 @@ if (is_localhost()) {
 		
 		var cdate = new Date();
 		var time_difff = cdate - page_load_timestamp;
-		
+
+		ga('set', 'metric5', '1');
 		track_event('Loading Page', 'Take to website', 'button', time_difff);
 		
 	    var btn = $(this);
@@ -944,11 +946,13 @@ function callback(data) {
 	if (data.status == 'fail') {
 		window.location = data.site_url;
 		track_event('Account Manage', 'Site Exists', data.message);
+		ga('set', 'metric6', '1');
         track_virtual_pageview('site_exists');
 
 	} else {
 		var page_type = window.page_type || 'Fan Page';
 		track_event('Account Manage', 'Site Created', page_type);
+		ga('set', 'metric4', '1');
         track_virtual_pageview('site_created');
 	}
 

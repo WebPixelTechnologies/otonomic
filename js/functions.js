@@ -43,6 +43,7 @@ var img_height, img_width = 0;
         jQuery(document).on("click", ".facebook_connect", function (e) {
             e.preventDefault();
             if(num_click_connect_facebook == 0) {
+
                 trackPageView('clickfacebook');
             }
             num_click_connect_facebook++;
