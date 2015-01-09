@@ -1,4 +1,5 @@
 var found_result = 0;
+var query_registered = false;
 var found_only_result_url = '';
 var p2s_site_url = 'http://builder.otonomic.com/';
 var p2s_site_creation_base_url = 'http://wp.otonomic.com/migration/';
@@ -375,6 +376,13 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
                 ind++;
             });
             query_tags.page_id = null;
+			if(!query_registered) {
+				query_registered = true;
+
+				ga('set', 'metric3', '1');
+				track_virtual_pageview('query');
+
+			}
 
             if (found_result > 0) {
                 wrapper.html($('<div/>', {'class': 'search_results', html: items.join('')}));
