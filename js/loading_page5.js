@@ -211,6 +211,15 @@ function checkConnectedWithFacebook() {
 
         timed_submit(send_need_store, 'i_need_store');
  	});
+	$('.btn-checkbox, .social-btn').click(function (e) {
+		var action = $(this).attr('data-analytics-action');
+		var label = $(this).attr('data-analytics-label');
+		var value = 'Selected';
+		if($(this).hasClass('checked'))
+			value = 'Selection removed';
+
+		track_event('Loading Page', action, label, value);
+	});
 
 	// Skip Store
 	////////////////////////////////////////

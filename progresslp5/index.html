@@ -75,13 +75,13 @@
                   <h2>Do you want your website listed on the following search engines and directories?</h2>
                   <div class="row">
                     <div class="col-xs-4">
-                      <button class="btn btn-ttc-white btn-checkbox btn-search-engine" data-engine="Google"><img src="images/search-buttons/google.png"></button>
+                      <button class="btn btn-ttc-white btn-checkbox btn-search-engine" data-engine="Google" data-analytics-action="Search engines" data-analytics-label="Google"><img src="images/search-buttons/google.png"></button>
                     </div>
                     <div class="col-xs-4">
-                      <button class="btn btn-ttc-white btn-checkbox btn-search-engine" data-engine="Yahoo"><img src="images/search-buttons/yahoo.png"></button>
+                      <button class="btn btn-ttc-white btn-checkbox btn-search-engine" data-engine="Yahoo" data-analytics-action="Search engines" data-analytics-label="Yahoo"><img src="images/search-buttons/yahoo.png"></button>
                     </div>
                     <div class="col-xs-4">
-                      <button class="btn btn-ttc-white btn-checkbox btn-search-engine" data-engine="Bing"><img src="images/search-buttons/bing.png"></button>
+                      <button class="btn btn-ttc-white btn-checkbox btn-search-engine" data-engine="Bing" data-analytics-action="Search engines" data-analytics-label="Bing"><img src="images/search-buttons/bing.png"></button>
                     </div>
                   </div>
                   <hr>
@@ -118,13 +118,13 @@
             <p>Select the devices for an optimized version of your site:</p>
             <div class="row">
               <div class="col-xs-4">
-                <button class="btn btn-ttc-white btn-checkbox btn-device"><img src="images/devices-buttons/desktop.png"></button>
+                <button class="btn btn-ttc-white btn-checkbox btn-device" data-analytics-action="Device" data-analytics-label="Desktop"><img src="images/devices-buttons/desktop.png"></button>
               </div>
               <div class="col-xs-4">
-                <button class="btn btn-ttc-white btn-checkbox btn-device"><img src="images/devices-buttons/tablet.png"></button>
+                <button class="btn btn-ttc-white btn-checkbox btn-device" data-analytics-action="Device" data-analytics-label="Tablet"><img src="images/devices-buttons/tablet.png"></button>
               </div>
               <div class="col-xs-4">
-                <button class="btn btn-ttc-white btn-checkbox btn-device"><img src="images/devices-buttons/mobile.png"></button>
+                <button class="btn btn-ttc-white btn-checkbox btn-device" data-analytics-action="Device" data-analytics-label="Mobile"><img src="images/devices-buttons/mobile.png"></button>
               </div>
             </div>
             <hr>
@@ -160,13 +160,13 @@
           <h2>Select add-ons to your website</h2>
           <div class="row">
             <div class="col-xs-12">
-              <button id="option-online-store" class="btn btn-block btn-ttc-white btn-checkbox btn-add-on"><span class="text-type-1">Online Store</span> sell products & services online <span class="glyphicons shop"></span></button>
+              <button id="option-online-store" class="btn btn-block btn-ttc-white btn-checkbox btn-add-on" data-analytics-action="Addons" data-analytics-label="Online Store"><span class="text-type-1">Online Store</span> sell products & services online <span class="glyphicons shop"></span></button>
             </div>
             <div class="col-xs-12">
-              <button id="option-booking" class="btn btn-block btn-ttc-white btn-checkbox btn-add-on"><span class="text-type-1">Online Booking</span> let your clients book online <span class="glyphicons calendar"></span></button>
+              <button id="option-booking" class="btn btn-block btn-ttc-white btn-checkbox btn-add-on" data-analytics-action="Addons" data-analytics-label="Online Booking"><span class="text-type-1">Online Booking</span> let your clients book online <span class="glyphicons calendar"></span></button>
             </div>
             <div class="col-xs-12">
-              <button class="btn btn-block btn-ttc-white btn-checkbox btn-add-on btn-uncheck-others">
+              <button class="btn btn-block btn-ttc-white btn-checkbox btn-add-on btn-uncheck-others" data-analytics-action="Addons" data-analytics-label="I don’t need these features">
               I don’t need these features<br/>
               <small>You can always add them later</small>
               <span class="glyphicons remove"></span>
@@ -206,10 +206,10 @@
               <p>Select the social networks you’d like to connect to your site:</p>
               <div class="row">
                 <div class="col-xs-12">
-                  <button class="btn social-btn facebook-btn selected"><img src="images/facebook-icon.svg"></button>
-                  <button class="btn social-btn twitter-btn"><img src="images/twitter-icon.svg"></button>
-                  <button class="btn social-btn instagram-btn"><img src="images/instagram-icon.svg"></button>
-                  <button class="btn social-btn googleplus-btn"><img src="images/googleplus-icon.svg"></button>
+                  <button class="btn social-btn facebook-btn selected" data-analytics-action="Social" data-analytics-label="Facebook"><img src="images/facebook-icon.svg"></button>
+                  <button class="btn social-btn twitter-btn" data-analytics-action="Social" data-analytics-label="Twitter"><img src="images/twitter-icon.svg"></button>
+                  <button class="btn social-btn instagram-btn" data-analytics-action="Social" data-analytics-label="Instagram"><img src="images/instagram-icon.svg"></button>
+                  <button class="btn social-btn googleplus-btn" data-analytics-action="Social" data-analytics-label="Google plus"><img src="images/googleplus-icon.svg"></button>
                 </div>
               </div>
               <a href="#" onclick="return false;" class="btn btn-ttc-orange pull-right js-stage4-next">
@@ -292,7 +292,7 @@
       </div>
     </div><!-- /.container -->
 
-    <script src="/js/loading_page5.js"></script>
+    <script src="/js/loading_page5.js?v=1.0.2"></script>
 
     <script>
         window.fbAsyncInit = function() {
