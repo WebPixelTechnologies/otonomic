@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Otomobic</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="css/main.css" rel="stylesheet"> -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="js/assets/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/assets/ie-emulation-modes-warning.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/assets/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/assets/html5shiv.min.js"></script>
+      <script src="js/assets/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div id="otomobic" class="main_container">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-xs-4">
+                <!-- Edit me Button -->
+                <button id="open_panel" class="btn btn-success open_panel_button">Edit me!</button>
+                <!-- Edit panel -->
+                <div id="editing-panel" role="tabpanel">
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#contact-details-tab" aria-controls="contact-details-tab" role="tab" data-toggle="tab">Contact Details</a></li>
+                    <li role="presentation"><a href="#social-content-tab" aria-controls="social-content-tab" role="tab" data-toggle="tab">Social Content</a></li>
+                  </ul>
+                  
+                  <!-- Close button -->
+                  <button type="button" id="close_panel" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <!-- Contact Details -->
+                    <div role="tabpanel" class="tab-pane fade in active" id="contact-details-tab">
+                      <p class="contact_sec_desc">Please insert your contact details so your customers can easily access your business from anywhere</p>
+                      <div class="form-group clearfix">
+                        <label for="phone" class="col-xs-2">Phone</label>
+                        <div class="col-xs-8">
+                          <input type="text" class="form-control" id="phone" placeholder="e.g. 000-000-0000">
+                        </div>
+                        <div class="checkbox col-xs-2">
+                          <label>
+                            <input type="checkbox"> Hide
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-group clearfix">
+                        <label for="email" class="col-xs-2">Email</label>
+                        <div class="col-xs-8">
+                          <input type="email" class="form-control" id="email" placeholder="e.g. johndoe@gmail.com">
+                        </div>
+                        <div class="checkbox col-xs-2">
+                          <label>
+                            <input type="checkbox"> Hide
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-group clearfix">
+                        <label for="address" class="col-xs-2">Address</label>
+                        <div class="col-xs-8">
+                          <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                        <div class="checkbox col-xs-2">
+                          <label>
+                            <input type="checkbox"> Hide
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Opening hours button-->
+                      <p>
+                        <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#open_hours" aria-expanded="false" aria-controls="open_hours">
+                          Opening Hours
+                          <span class="caret"></span>
+                        </button>
+                      </p>
+
+                      <!-- Opening hours form -->
+                      <div class="collapse" id="open_hours">
+                        <div class="well form-horizontal">
+                          <div class="form-group">
+                            <label class="col-xs-3 control-label">Monday</label>
+                            <div class="col-xs-3 opening">
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-xs-3 closing">
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-xs-3">
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"> Closed
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-xs-3 control-label">Tuesday</label>
+                            <div class="col-xs-3 opening">
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-xs-3 closing">
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-xs-3">
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"> Closed
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-xs-3 control-label">Wednesday</label>
+                            <div class="col-xs-3 opening">
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-xs-3 closing">
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-xs-3">
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"> Closed
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-xs-3 control-label">Thursday</label>
+                            <div class="col-xs-3 opening">
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-xs-3 closing">
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-xs-3">
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"> Closed
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-xs-3 control-label">Friday</label>
+                            <div class="col-xs-3 opening">
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-xs-3 closing">
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-xs-3">
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"> Closed
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-xs-3 control-label">Saturday</label>
+                            <div class="col-xs-3 opening">
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-xs-3 closing">
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-xs-3">
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"> Closed
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-xs-3 control-label">Sunday</label>
+                            <div class="col-xs-3 opening">
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-xs-3 closing">
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-xs-3">
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"> Closed
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="facebook-connect-container text-center well">
+                        <p>Connect with Facebook to update it automatically</p>
+                        <button class="btn btn-primary">
+                          <!-- <img src="images/facebook-icon.svg"> -->
+                          <span class="social facebook"></span>
+                          Show my content!
+                        </button>
+                      </div>
+                      <div class="save-submit-container">
+                        <button class="btn btn-success">
+                          <span class="glyphicons ok_2"></span>
+                          Show my content!
+                        </button>
+                      </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="social-content-tab">
+                      <div class="well text-center">
+                        <p>Please connect with Facebook to showcase the testimonials and your photos</p>
+                        <button class="btn btn-primary">
+                            <!-- <img src="images/facebook-icon.svg"> -->
+                            <span class="social facebook"></span>
+                            Facebook Connect
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              </div>
+              <div class="col-xs-4">
+                  <div class="mobile-device-container">
+                    <img class="mobile-device svg shadow" src="images/apple-iphone-5s.svg">
+                  </div>
+              </div>
+              <div class="col-xs-4"></div>
+          </div>
+        </div>
+
+      </div><!-- /.container -->
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
