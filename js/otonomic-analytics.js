@@ -5,11 +5,13 @@ function is_localhost() {
     return false;
 }
 
-var facebook_site_created_pixel_id = '6008636103630';
 var piwik_site_id = 1;
 if(window.location.hostname.replace('www.', '') == 'verisites.com') {
 	piwik_site_id = 2;
 }
+
+/*
+var facebook_site_created_pixel_id = '6008636103630';
 var pixel_values = {
     shared_promotion: '6020812900230',
     registered_to_promotion: '6020812953830',
@@ -24,6 +26,23 @@ var pixel_values = {
     shared_site: '6018983762230',
     changed_theme: '6020069221230',
     returned_to_site_on_a_different_day: '6020069294630'
+};
+*/
+var facebook_site_created_pixel_id = '6008636103630';
+var pixel_values = {
+    // shared_promotion: '',
+    // registered_to_promotion: '',
+    viewed_installer: '6021618382030',
+    // visited_editor: '',
+    edited_site: '6022083479230',
+    added_product: '6020069233430',
+    edited_booking: '6022085273030',
+    // visited_domain_page: '',
+    visited_pricing_page: '6018983658230',
+    visited_checkout_page: '6022085252830',
+    shared_site: '6018983762230',
+    // changed_theme: '',
+    returned_to_site_on_a_different_day: '6022084259630'
 };
 
 
