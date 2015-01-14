@@ -1,0 +1,41 @@
+/*iPhone4 iframe*/
+#mobile-container {
+    background-repeat: no-repeat;
+    height: 380px;
+    width: 750px;
+    margin: 0 auto 30px;
+    position: relative;
+}
+
+#mobile-img {
+    width: 750px;
+}
+
+/*Mobile iframe CSS*/
+#iframe {
+    height: 480px;
+    width: 321px;
+    position: absolute;
+    top: 132px;
+    left: 38px;
+    background: #FFF;
+    overflow: hidden;
+}
+iframe {
+    height: 410px;
+    width: 321px;
+    border: 0;
+    margin-top: -5px;
+}
+img#otomobic-header {
+    z-index: 999999;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+img#otomobic-footer {
+    z-index: 9;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}

@@ -69,6 +69,7 @@ function checkConnectedWithFacebook() {
     }
 
     track_event('Loading Page', 'Start');
+	track_virtual_pageview('installer_start');
 	jQuery('input[type=text]').addClass('LoNotSensitive');
 
     function move_slide(pressed_button) {
@@ -182,6 +183,7 @@ function checkConnectedWithFacebook() {
 			}
 
             if(sec == 4) {
+				ga('set', 'metric5', '1');
                 track_event('Loading Page', 'Redirect to website', '');
                 window.do_redirect = 1;
                 redirect_to_website();
@@ -211,6 +213,15 @@ function checkConnectedWithFacebook() {
 
         timed_submit(send_need_store, 'i_need_store');
  	});
+	$('.btn-checkbox, .social-btn').click(function (e) {
+		var action = $(this).attr('data-analytics-action');
+		var label = $(this).attr('data-analytics-label');
+		var value = 'Selected';
+		if($(this).hasClass('checked'))
+			value = 'Selection removed';
+
+		track_event('Loading Page', action, label, value);
+	});
 
 	// Skip Store
 	////////////////////////////////////////
@@ -266,19 +277,22 @@ function callback(data) {
 	if (data.status == 'fail') {
 		window.location = data.site_url;
 		track_event('Account Manage', 'Site Exists', data.message);
+		ga('set', 'metric6', '1');
         track_virtual_pageview('site_exists');
 
 	} else {
 		var page_type = window.page_type || 'Fan Page';
 		track_event('Account Manage', 'Site Created', page_type);
+		ga('set', 'metric4', '1');
         track_virtual_pageview('site_created');
 	}
 
-	// Site created, facebook fixel
+    <!-- START Facebook Pixel Tracking for Site created-->
 	window._fbq = window._fbq || [];
     if(!is_localhost()) {
 	    window._fbq.push(['track', facebook_site_created_pixel_id, {'value':'0.00', 'currency':'USD'}]);
     }
+    <!-- END Facebook Pixel Tracking -->
 
 	window.site_url = data.site_url;
 	window.blog_redirect = data.redirect;

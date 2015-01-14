@@ -1,28 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-<url>
-  <loc>http://otonomic.com/</loc>
-  <lastmod>2014-08-13T08:52:14+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://otonomic.com/pages/jobs/</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://otonomic.com/pdfs/Otonomic_Terms_of_Service.pdf</loc>
-  <lastmod>2014-03-26T16:28:10+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://otonomic.com/pdfs/Otonomic_Privacy_Policy.pdf</loc>
-  <lastmod>2014-03-26T16:28:10+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<sitemap>
+<loc>http://otonomic.com/otonomic-sitemap.xml</loc>
+<lastmod>2014-12-31T16:43:34+00:00</lastmod>
+</sitemap>
+<sitemap>
+<loc>http://otonomic.com/blog/post-sitemap.xml</loc>
+<lastmod>2015-01-02T11:41:37+00:00</lastmod>
+</sitemap>
+<sitemap>
+<loc>http://otonomic.com/blog/page-sitemap.xml</loc>
+<lastmod>2015-01-02T07:58:13+00:00</lastmod>
+</sitemap>
+<sitemap>
+<loc>http://otonomic.com/blog/bwl_advanced_faq-sitemap.xml</loc>
+<lastmod>2014-11-01T10:46:01+00:00</lastmod>
+</sitemap>
+<sitemap>
+<loc>http://otonomic.com/blog/feature-sitemap.xml</loc>
+<lastmod>2014-10-30T11:14:49+00:00</lastmod>
+</sitemap>
+<sitemap>
+<loc>http://otonomic.com/blog/category-sitemap.xml</loc>
+<lastmod>2015-01-02T11:41:37+00:00</lastmod>
+</sitemap>
+<sitemap>
+<loc>http://otonomic.com/blog/post_tag-sitemap.xml</loc>
+<lastmod>2015-01-02T11:41:37+00:00</lastmod>
+</sitemap>
+<sitemap>
+<loc>http://otonomic.com/blog/feature_category-sitemap.xml</loc>
+<lastmod>2014-10-30T11:14:49+00:00</lastmod>
+</sitemap>
+<sitemap>
+<loc>http://otonomic.com/blog/product_cat-sitemap.xml</loc>
+<lastmod>2015-01-07T13:33:28+00:00</lastmod>
+</sitemap>
+<sitemap>
+<loc>http://otonomic.com/blog/product_tag-sitemap.xml</loc>
+<lastmod>2015-01-07T13:33:28+00:00</lastmod>
+</sitemap>
+<sitemap>
+<loc>http://otonomic.com/blog/product_shipping_class-sitemap.xml</loc>
+<lastmod>2015-01-07T13:33:28+00:00</lastmod>
+</sitemap>
+<sitemap>
+<loc>http://otonomic.com/blog/advanced_faq_category-sitemap.xml</loc>
+<lastmod>2014-11-01T10:46:01+00:00</lastmod>
+</sitemap>
+<sitemap>
+<loc>http://otonomic.com/blog/advanced_faq_topics-sitemap.xml</loc>
+<lastmod>2014-11-01T10:46:01+00:00</lastmod>
+</sitemap>
+<sitemap>
+<loc>http://otonomic.com/blog/ngg_tag-sitemap.xml</loc>
+<lastmod>2015-01-07T13:33:28+00:00</lastmod>
+</sitemap>
+</sitemapindex>

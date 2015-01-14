@@ -388,3 +388,4 @@ function showLoader(message, is_model) {
 
     counterLoader('loaderCounter');
 }
+

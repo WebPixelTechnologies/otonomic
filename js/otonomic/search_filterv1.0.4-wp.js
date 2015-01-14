@@ -226,9 +226,10 @@ function searchBoxKeyUp(InputField,targetContainer,targetCloseBtn) {
         p2strack++;
         trackFBConnect("Search Marketing Website", "Query", $(InputField).attr('data-attr')+","+value, p2strack);
 
+        <!-- START Facebook Pixel Tracking for User Searched -->
         window._fbq = window._fbq || [];
-        window._fbq.push(['track', '6016621432630', {'value':'0.00','currency':'USD'}]);
-
+        window._fbq.push(['track', '6022085222230', {'value':'0.00','currency':'USD'}]);
+        <!-- START Facebook Pixel Tracking -->
 
     }, 2000);
 
