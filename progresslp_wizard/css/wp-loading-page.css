@@ -1,0 +1,994 @@
+
+html {
+  height: 100%;
+}
+body {
+    height: 100%;
+    background-color: #f5ece6;
+    color: #3d3632;
+    font-family: 'aller', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'aller', sans-serif;
+  font-weight: lighter;
+}
+h1{
+  font-size: 62px;
+}
+a{
+  color: #29abe2;
+}
+a:hover{
+  color: #0980b2;
+}
+
+a.btn img{
+  margin-top: -2px!important;
+}
+select {
+  font-family: arial, sans-serif;
+}
+textarea {
+    resize: none;
+}
+
+/* BG image 
+----------------------------------*/
+.bg-image{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 635px;
+  bottom: 0;
+  overflow: hidden;
+}
+.bg-image img{
+  height: 100%;
+  min-width: 100%;
+}
+
+/* INTRO 
+----------------------------------*/
+#intro{
+
+}
+#intro .logo{
+  position: absolute;
+  top: 18px;
+  left: 40px;
+}
+#intro h1.title{
+  margin-top: 70px;
+  font-size: 36px;
+  font-weight: bold;
+}
+#intro h2{
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+#intro h4 {
+  margin-bottom: 40px;
+  font-weight: normal;
+}
+#intro p.site-name{
+  margin-bottom: 20px;
+  color: #f54500;
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#intro .bg-image{
+  background-image: url(../images/bg1.jpg);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  left: 0;
+}
+/* STAGE
+----------------------------------*/
+.content-panel{
+  position: absolute;
+  width: 640px;
+  padding: 18px 40px 0 40px;
+  box-shadow: 3px 0px 0px 0px rgba(0,0,0,0.2);
+  min-height: 100%;
+  /*min-height: calc(100% - 89px);*/
+}
+.content-panel h1.title{
+  margin-top: 25px;
+  margin-bottom: 24px;
+  font-size: 38px;
+  font-weight: bold;
+  line-height: 42px;
+}
+.content-panel h2{
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: normal;
+}
+.content-panel h3{
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 28px;
+}
+.content-panel p{
+	font-size: 18px;
+	font-weight: lighter;
+	margin-bottom: 20px;
+}
+
+.content-panel .btn-p {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: lighter;
+}
+.content-panel .stage-img {
+  margin: 0 0 40px 0;
+}
+
+.content-panel .text-type-1{
+  color: #f54500;
+  font-weight: bold;
+}
+/* STAGE-1
+-----------------------------------*/
+#stage-1{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+#stage-1 .content-panel{
+  background-color: #f5ece6;
+}
+#stage-1 img.oto-gif{
+  margin: 40px -20px;
+}
+#stage-1 .bg-image img{
+  float: left;
+}
+
+
+/* STAGE-2
+----------------------------------*/
+#stage-2{
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+#stage-2 .content-panel{
+  background-color: #f5ece6;
+}
+#stage-2 .bg-image img{
+  float: left;
+}
+/* STAGE-3
+----------------------------------*/
+#stage-3{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+#stage-3 .content-panel{
+  background-color: #f5ece6;
+}
+#stage-3 h3{
+  margin-bottom: 30px;
+  line-height: 32px;
+  font-weight: normal;
+}
+#stage-3 h4{
+  margin-top: 60px;
+  font-size: 16px;
+  font-weight: normal;
+}
+#stage-3 h4 img{
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* STAGE-4
+----------------------------------*/
+#stage-4{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+#stage-4 .content-panel{
+  background-color: #f5ece6;
+}
+#stage-4 h1.title{
+  color: #3d3531;
+}
+#stage-4 .bg-image img{
+  float: left;
+}
+
+
+
+/* Choose-template
+----------------------------------*/
+#choose-template .content-panel{
+  width: 100%;
+}
+#choose-template .template-conrainer {
+  position: relative;
+  margin-bottom: 15px;
+}
+#choose-template .template-conrainer .overlay {
+  position: absolute;
+  padding: 140px 120px;
+  width: 435px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0.7);
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+#choose-template .template-conrainer:hover .overlay {
+  opacity: 1;
+}
+/* Congratz
+----------------------------------*/
+#congratz{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ebded2;
+}
+#congratz .logo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 0 0 40px;
+}
+#congratz .upper-content{
+  min-height: calc(100% - 60px);
+  /*background-color: #ebded2;*/
+}
+#congratz .lower-content{
+  padding-top: 10px;
+}
+#congratz h1.congratz-title{
+  margin-top: 0;
+  margin-bottom: 40px;
+  padding-top: 0;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 50px;
+}
+#congratz p.site-name {
+  padding-top: 55px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#congratz #counter {
+  color: #f54500;
+}
+#congratz .tos {
+  font-size: 16px;
+}
+#congratz .tos a{
+  font-weight: bold;
+}
+#congratz .fb-like{
+  display: block;
+  height: 20px;
+  margin-bottom: 40px;
+}
+
+
+/* glyphicons*/
+.wp-lp p span.glyphicon-thumbs-up, 
+.wp-lp p span.glyphicon-ok {
+  color: #325942;
+  font-size: 50px;
+}
+/* Button Loader
+-------------------------------------------------- */
+.btn-loader{
+  margin-right: 15px;
+}
+/* Custom button
+-------------------------------------------------- */
+.btn {
+  font-size: 16px;
+  font-weight: normal;
+}
+.btn .glyphicon:before {
+  font-size: 16px;
+}
+/* Override base .btn styles */
+/* Apply text and background changes to three key states: default, hover, and active (click). */
+.btn-ttc,
+.btn-ttc:hover,
+.btn-ttc:active {
+  color: white;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+  background-color: #64b285;
+  box-shadow: 2px 2px 0px #325942;
+  border-radius: 2px;
+}
+
+/* Apply the custom-colored gradients */
+/* Note: you'll need to include all the appropriate gradients for various browsers and standards. */
+.btn-ttc {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(top, #009ED2 0%, #64b285 100%);
+}
+
+/* Set the hover state */
+/* An easy hover state is just to move the gradient up a small amount. Add other embellishments as you see fit. */
+.btn-ttc:hover {
+  background-color: #6aba8c;
+  background-position: 0 -15px;
+}
+
+.btn-ttc.disabled{
+  color: #f54500;
+  background-color: #a62f00;
+  opacity: 1;
+  box-shadow: none;
+}
+.btn-ttc-orange,
+.btn-ttc-orange:hover,
+.btn-ttc-orange:active {
+  line-height: 33px;
+  padding: 12px 20px;
+  color: white;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+  background-color: #f54500;
+  box-shadow: inset 0px -2px 0px #ab3000;
+  border-radius: 6px;
+  border: 0;
+}
+
+.btn-ttc-clear {
+  line-height: 33px;
+  padding: 12px 20px;
+  background: transparent;
+  color: #333;
+  box-shadow: none;
+}
+.btn-ttc-clear:hover,
+.btn-ttc-clear:active{
+  box-shadow: none;
+}
+/* Apply the custom-colored gradients */
+/* Note: you'll need to include all the appropriate gradients for various browsers and standards. */
+.btn-ttc-orange {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(top, #a62f00 0%, #f54500 100%);
+}
+
+/* Set the hover state */
+/* An easy hover state is just to move the gradient up a small amount. Add other embellishments as you see fit. */
+.btn-ttc-orange:hover {
+  background-color: #f65b1f;
+  background-position: 0 -15px;
+}
+
+.btn-ttc-orange.disabled {
+  color: #f5eee9;
+  background-color: #d1c7b6;
+  opacity: 1;
+  box-shadow: none;
+}
+
+.btn-ttc-orange .glyphicon,
+.btn-ttc-clear .glyphicon {
+  top: 2px;
+  margin-left: 10px;
+}
+.btn-ttc-orange.glyph-on-left .glyphicon {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+/* Blue Button */
+.btn-ttc-blue,
+.btn-ttc-blue:hover,
+.btn-ttc-blue:active {
+  line-height: 35px;
+  padding-right: 20px;
+  padding-left: 20px;
+  color: white;
+  text-shadow: none;
+  background-color: #28aae1;
+  box-shadow: inset 0px -2px 0px #1c779d;
+  border: 0;
+  border-radius: 6px;
+}
+
+/* Apply the custom-colored gradients */
+/* Note: you'll need to include all the appropriate gradients for various browsers and standards. */
+.btn-ttc-blue {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(top, #0980b2 0%, #28aae1 100%);
+}
+
+/* Set the hover state */
+/* An easy hover state is just to move the gradient up a small amount. Add other embellishments as you see fit. */
+.btn-ttc-blue:hover {
+  background-color: #228ebd;
+  background-position: 0 -15px;
+}
+
+.btn-ttc-blue.disabled {
+  color: #28aae1;
+  background-color: #0980b2;
+  opacity: 1;
+  box-shadow: none;
+}
+
+.btn-ttc-blue .glyphicon {
+  margin-left: 10px;
+}
+
+#see-my-website-btn {
+  background-color: #228ebd;
+}
+#see-my-website-btn:hover {
+  background-color: #0980b2;
+}
+#see-my-website-btn.disabled {
+  background-color: #0980b2;
+  color: white;
+}
+
+
+/* Override base .btn styles */
+/* Apply text and background changes to three key states: default, hover, and active (click). */
+.btn-ttc-white,
+.btn-ttc-white:hover,
+.btn-ttc-white:active {
+  padding: 20px 20px;
+  color: #3d3632;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  box-shadow: inset 0 -2px 0 0 rgba(0,0,0,0.3);
+  border-radius: 6px;
+  border: 0;
+  outline: 0!important;
+}
+
+/* Apply the custom-colored gradients */
+/* Note: you'll need to include all the appropriate gradients for various browsers and standards. */
+.btn-ttc-white {
+
+}
+
+/* Set the hover state */
+/* An easy hover state is just to move the gradient up a small amount. Add other embellishments as you see fit. */
+.btn-ttc-white:hover {
+  
+}
+
+.btn-ttc-white.disabled{
+  color: #f5eee9;
+  background-color: #d1c7b6;
+  opacity: 1;
+  box-shadow: none;
+}
+/*  Buttons with Checkbox
+============================*/
+.btn-checkbox {
+  padding: 25px 18px 25px 54px;
+  background-repeat: no-repeat;
+  background-image: url('../images/search-buttons/checkbox.png');
+  background-size: 28px;
+  background-position: 18px 30px;
+}
+.btn-checkbox:hover {
+  padding: 25px 18px 25px 54px;
+  background-position: 18px -64px;
+}
+.btn-checkbox.checked {
+  background-color: #fcf8f5;
+  background-position: 18px -157px;
+  box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.3);
+}
+
+/* Devices buttons
+============================*/
+.btn-device,
+.btn-device:hover {
+  padding: 15px 38px 15px 74px;
+}
+
+/* Add on buttons
+============================*/
+.btn-add-on {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 60px;
+  height: 90px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: lighter;
+}
+.btn-add-on:hover {
+  padding-left: 60px;
+}
+
+.btn-add-on .glyphicons {
+  position: absolute;
+  top: 22px;
+  right: 20px;
+  color: #f5d000;
+  font-size: 30px;
+}
+
+/* Social buttons
+============================*/
+.social-btn {
+  display: inline-block;
+  position: relative;
+  margin: 0 20px 15px 0;
+  width: 90px;
+  height: 90px;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  line-height: 45px;
+  border-radius: 50%;
+  border: 0;
+  box-shadow: inset 0px -2px 0px rgba(0,0,0,0.2);
+  outline: 0!important;
+}
+.social-btn:hover,
+.social-btn:focus{
+  color: white;
+  text-decoration: none;
+}
+.social-btn:active,
+.social-btn.active{
+  color: white;
+  text-decoration: none;
+  box-shadow: inset 0px -2px 0px rgba(0,0,0,0.2);
+}
+.social-btn.selected {
+  box-shadow: inset 0px -2px 0px rgba(0,0,0,0.05);
+}
+.social-btn.selected:after {
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  content: '\e207';
+  height: 30px;
+  width: 30px;
+  color: white;
+  font-family: 'Glyphicons Regular';
+  font-style: normal;
+  font-weight: normal;
+  background-color: #f54500;
+  border-radius: 50%;
+  line-height: 33px;
+}
+.social-btn img {
+  height: 40px;
+}
+.facebook-btn{
+  background-color: #3c599b;
+}
+.facebook-btn:hover{
+  background-color: #36508b;
+}
+.facebook-btn.selected{
+  background-color: #bcbecb;
+}
+.twitter-btn{
+  background-color: #55acee;
+}
+.twitter-btn:hover{
+  background-color: #4c9ad6;
+}
+.twitter-btn.selected{
+  background-color: #c3d4e1;
+}
+.instagram-btn{
+  background-color: #3f729b;
+}
+.instagram-btn:hover{
+  background-color: #39668b;
+}
+.instagram-btn.selected{
+  background-color: #bdc4cb;
+}
+.googleplus-btn{
+  background-color: #e93f2e;
+}
+.googleplus-btn:hover{
+  background-color: #ce2616;
+}
+.googleplus-btn.selected{
+  background-color: #bdc4cb;
+}
+.tumbler-btn{
+  background-color: #35465c;
+}
+.yelp-btn {
+  background-color: #bf2519;
+}
+.social-check {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #999;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #999;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #999;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #999;
+}
+h3#oto-web-url {
+    font-weight: normal;
+    text-transform: lowercase;
+}
+
+
+
+
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+
+
+
+  /*==========  Mobile First Method  ==========*/
+
+  /* Custom, iPhone Retina */ 
+  @media only screen and (min-width : 320px) {
+
+  }
+  /* Extra Small Devices, Phones */ 
+  @media only screen and (min-width : 480px) {
+
+  }
+
+  /* Small Devices, Tablets */
+  @media only screen and (min-width : 768px) {
+
+  }
+
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width : 992px) {
+
+  }
+
+  /* Large Devices, Wide Screens */
+  @media only screen and (min-width : 1200px) {
+
+  }
+
+
+
+  /*==========  Non-Mobile First Method  ==========*/
+  @media only screen and (max-width : 1600px) {
+
+    #stage-1 .bg-image {
+      left: 35%;
+    }
+    #stage-2 .bg-image {
+      left: 40%;
+    }
+    #stage-3 .bg-image {
+      left: 33%;
+    }
+    #stage-4 .bg-image {
+      left: 20%;
+    }
+
+  }
+
+
+  /* Large Devices, Wide Screens */
+  @media only screen and (max-width : 1200px) {
+    .logo {
+      display: block;
+      margin: 10px auto 0;
+    }
+
+    .bg-image{
+      left: 40%;
+    }
+    #stage-1 .bg-image {
+      left: 45%;
+    }
+    #stage-2 .bg-image {
+      left: 50%;
+    }
+    #stage-3 .bg-image {
+      left: 33%;
+    }
+    #stage-4 .bg-image {
+      left: 13%;
+    }
+    #congratz .logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 0;
+    }
+    #congratz h1.congratz-title {
+      padding-top: 60px;
+      font-size: 26px;
+    }
+    /* Choose-template
+    --------------------------------*/
+    #choose-template .template-conrainer {
+      position: relative;
+      margin-bottom: 50px;
+    }
+    #choose-template .template-conrainer > img {
+      padding-bottom: 50px;
+    }
+    #choose-template .template-conrainer .overlay {
+      position: absolute;
+      width: 100%;
+      padding: 0;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: transparent;
+      opacity: 1;
+    }
+  }
+
+  .theme-option-container {height:390px;}
+
+
+  /* Medium Devices, Desktops */
+  @media only screen and (max-width : 992px) {
+
+  }
+
+  /* Small Devices, Tablets */
+  @media only screen and (max-width : 768px) {
+
+      .social-btn {
+          margin: 0 15px 15px 0;
+          width: 50px;
+          height: 50px;
+          padding:0;
+      }
+
+    .container-fluid {
+      height: 100%;
+    }
+    .logo {
+      display: block;
+      margin: 10px auto 0;
+    }
+    h1.title {
+      margin-top: 40px;
+      font-size: 26px;
+      font-weight: bold;
+    }
+    .content-panel {
+      padding: 0 20px;
+      width: 100%;
+      text-align: center;
+    }
+    .content-panel h1.title {
+      margin-top: 30px;
+      margin-bottom: 20px;
+      font-size: 26px;
+      line-height: 32px;
+    }
+    .content-panel h3 {
+      margin-top: 20px;
+      line-height: 24px;
+    }
+    
+    .content-panel p,
+    .content-panel .btn-p {
+      font-size: 16px;
+      font-weight: normal;
+      margin-bottom: 15px;
+    }
+    .content-panel .stage-img {
+      display: block;
+      margin: 10px auto;
+      max-width: 70%;
+    }
+    /* Intro
+    --------------------------------*/
+    #intro .logo {
+      margin-top: 10px;
+    }
+    #intro p.site-name {
+      font-size: 30px;
+    }
+    #intro h4 {
+      line-height: 24px;
+    }
+    /* Choose-template
+    --------------------------------*/
+    #choose-template .template-conrainer {
+      position: relative;
+      margin-bottom: 50px;
+    }
+    #choose-template .template-conrainer > img {
+      padding-bottom: 50px;
+    }
+    #choose-template .template-conrainer .overlay {
+      position: absolute;
+      width: 100%;
+      padding: 0;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: transparent;
+      opacity: 1;
+    }
+
+    /* Congratz
+    --------------------------------*/
+    #congratz .logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 0;
+    }
+    #congratz h1.congratz-title {
+      padding-top: 60px;
+      font-size: 26px;
+    }
+    #congratz .upper-content, 
+    .lower-content {
+      padding: 0 20px;
+    }
+
+    #congratz .fb-like {
+      margin-bottom: 10px;
+    }
+
+    #congratz .oto-anima{
+      width: 80%;
+      margin: 10px 0;
+    }
+    #congratz h3#oto-web-url {
+      font-size: 16px;
+    }
+
+    /* Buttons
+    --------------------------------*/
+    .btn-ttc-orange, .btn-ttc-orange:hover, .btn-ttc-orange:active {
+      padding-right: 18px;
+      padding-left: 18px;
+    }
+  }
+
+  /* Extra Small Devices, Phones */ 
+  @media only screen and (max-width : 480px) {
+    .content-panel h1.title {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      line-height: 28px;
+    }
+
+    #intro .logo {
+      position: static;
+      margin-top: 10px;
+
+    }
+    #intro h1.title {
+      margin-top: 50px;
+    }
+    #stage-1 #social_connect_hybrid {
+      margin-top: -5px;
+      margin-bottom: 25px;
+    }
+    #stage-1 p.visible-xs {
+      margin-bottom: 10px;
+    }
+    #stage-1 #social_connect_hybrid .social-btn{
+      padding: 0 5px;
+      font-size: 13px;
+    }
+    #stage-1 #social_connect_hybrid .social-btn img {
+      height: 22px;
+    }
+
+    #stage-2 .content-panel .stage-img {
+      max-width: 65%;
+    }
+
+
+    
+    #congratz p.site-name {
+      padding-top: 70px;
+      font-size: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    #congratz h1.congratz-title {
+      margin-top: 10px;
+      margin-bottom: 28px;
+      padding-top: 0;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 30px;
+    }
+    #congratz h1.congratz-title #counter{
+      display: block;
+    }
+    #congratz .tos {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+  }
+  /* Custom, iPhone Retina */ 
+  @media only screen and (max-width : 320px) {
+    .content-panel .logo {
+      height: 28px;
+    }
+
+    .content-panel h1.title {
+      margin-top: 5px;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+    .content-panel p {
+      /*margin-bottom: 0;*/
+    }
+    #stage-1 .content-panel p {
+      margin-bottom: 10px;
+    }
+    #stage-2 .content-panel .stage-img {
+      max-width: 50%;
+    }
+    #stage-2 .content-panel .btn,
+    #stage-3 .content-panel .btn {
+      margin-top: 10px;
+    }
+    #stage-4 .content-panel .btn {
+      margin-top: 10px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+label {
+    font-weight: 100;
+}
+.opening-hours input {
+    width: 30%;
+    display: inline-block;
+}

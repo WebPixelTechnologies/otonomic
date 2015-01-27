@@ -1,0 +1,127 @@
+
+$main-bubble-width: 512px;
+$main-bubble-height: 512px;
+
+$face-bubble-width: 50px;
+$face-bubble-height: 50px;
+
+#socializer-bubble {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+
+    .main-bubble {
+        position: absolute;
+        right: -($main-bubble-width/2);
+        bottom: -($main-bubble-height/2);
+        width: $main-bubble-width;
+        height: $main-bubble-height;
+        border: 3px solid white;
+        border-radius: 50%;
+        background-color: #3b5998;
+        opacity: 0;
+    }
+    .main-bubble-close {
+        position: absolute;
+        display: block;
+        top: -10px;
+        right: ($main-bubble-width/2)+5;
+        text-align: center;
+        color: white;
+        height: 25px;
+        width: 25px;
+        border: 3px solid white;
+        border-radius: 50%;
+        background-color: #3b5998;
+
+        &:hover {
+            background-color: lighten(#3b5998, 10%);
+        }
+
+        .fa.fa-remove {
+            margin-top: -3px;
+            font-size: 12px;
+            vertical-align: middle;
+        }
+    }
+    .main-bubble-content {
+        margin: 60px 0 0 70px;
+        color: white;
+        .name {
+            padding: 0 0 10px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            color: inherit;
+            opacity: 0;
+        }
+        .social-content {
+            color: inherit;
+            opacity: 0;
+        }
+        .text {
+            width: 150px;
+            font-size: 13px;
+            color: inherit;
+            opacity: 0;
+        }
+        .social-content-2 {
+            font-style: italic;
+            opacity: 0;
+        }
+    }
+
+    .socializer-controls {
+        position: absolute;
+        right: ($main-bubble-width/2)+10;
+        bottom: ($main-bubble-width/2)+5;
+        a {
+            display: inline-block;
+            text-align: center;
+            color: white;
+            width: $main-bubble-width/14;
+            height: $main-bubble-height/14;
+            border: 3px solid white;
+            border-radius: 50%;
+            background-color: #3b5998;
+            opacity: 0;
+
+            &:hover {
+                background-color: lighten(#3b5998, 10%);
+            }
+
+            .fa {
+                line-height: 2;
+            }
+        }
+        .control-left {
+            padding-right: 3px;
+        }
+        .control-right {
+            padding-left: 3px;
+        }
+    }
+
+    .faces-container {
+        z-index: 2;
+        position: relative;
+        bottom: 0;
+        right: ($main-bubble-width/2)+(-20);
+    }
+    .face-bubble {
+        display: inline-block;
+        margin-right: -15px;
+        width: $face-bubble-width;
+        height: $face-bubble-height;
+        opacity: 0;
+        border: 3px solid white;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: #3b5998;
+
+        &.current {
+            position: absolute;
+            opacity: 0;
+        }
+    }
+
+}

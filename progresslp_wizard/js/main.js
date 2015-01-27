@@ -138,7 +138,7 @@ function checkConnectedWithFacebook() {
     // Stage-5 next btn - Select Template
     $('.btn-choose-template').click(function(event){
         event.preventDefault();
-        switchToCongratz();
+        move_slide( $(this));
 
         var skin = $(this).attr('data-option-value');
         return enqueue_submit('skin', skin, 'send_template');

@@ -45,9 +45,31 @@ class GoogleSearchScrape {
             $values = $element->find('b');
 
             if($keys && $values) {
+                /*
                 $key = $keys[0]->innertext;
                 $value = $element->plaintext;
                 $value = str_replace($key, '', $value);
+                */
+
+                $value = $element->innertext;
+                $value = str_replace('</b>-<b>', '-', $value);
+                $value = str_replace('</b>-', '-', $value);
+
+                $value = str_replace('</b>_<b>', '_', $value);
+                $value = str_replace('</b>_', '_', $value);
+
+                preg_match_all('/<b>[a-zA-Z0-9\-_ ]*/', $value, $matches, PREG_SET_ORDER);
+                $value = end($matches)[0];
+                $value = str_replace('<b>', '', $value);
+
+
+                $key = $element->plaintext;
+                $strpos = strpos($key, $value);
+                $key = substr($key, 0, $strpos);
+                $key = str_replace('http://www.', '', $key);
+                $key = str_replace('https://www.', '', $key);
+                $key = str_replace('http://', '', $key);
+                $key = str_replace('https://', '', $key);
                 $result[$key] = $value;
             }
         }
