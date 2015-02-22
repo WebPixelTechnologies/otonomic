@@ -42,6 +42,8 @@
 .glyphicons.white:before {
     color: #fff;
 }
+.glyphicons.newspaper:before {
+    content: "\F4F0"}
 .glyphicons.glass:before {
     content: "\E001"}
 .glyphicons.leaf:before {

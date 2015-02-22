@@ -6,11 +6,13 @@ body {
     height: 100%;
     background-color: #f5ece6;
     color: #3d3632;
-    font-family: 'aller', sans-serif;
+    /* font-family: 'aller', sans-serif; */
+    font-family: 'Open Sans', sans-serif;
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: 'aller', sans-serif;
-  font-weight: lighter;
+  /* font-family: 'aller', sans-serif; */
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
 }
 h1{
   font-size: 62px;
@@ -390,7 +392,7 @@ textarea {
 .btn-ttc-orange .glyphicon,
 .btn-ttc-clear .glyphicon {
   top: 2px;
-  margin-left: 10px;
+  margin-right: 10px;
 }
 .btn-ttc-orange.glyph-on-left .glyphicon {
   margin-right: 10px;
@@ -991,4 +993,47 @@ label {
 .opening-hours input {
     width: 30%;
     display: inline-block;
+}
+.form-group.opening-hours label {
+    width: 150px;
+}
+
+#choose-template .overlay p {
+    font-weight: lighter;
+}
+#choose-template .overlay h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+#choose-template .overlay {
+    color: white;
+    text-align: center;
+}
+#choose-template .template-conrainer .overlay {
+    padding: 60px 120px;
+    background-color: rgba(0,0,0,0.83);
+}
+#opening-hours { display:none;}
+
+div.search-results-container {
+    background: white;
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    display:none;
+}
+
+.search-results-container .media.selectable {
+    cursor: pointer;
+}
+.search-results-container .media.selectable:hover {
+background-color: #FAF4F1;
+}
+.search-results-container .clear{
+position: absolute;
+right: 20px;
+top: 7px;
 }

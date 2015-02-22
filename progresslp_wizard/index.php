@@ -119,13 +119,13 @@
                       <div class="col-xs-12">
                           <button class="btn btn-block btn-ttc-white btn-checkbox btn-add-on" data-analytics-action="Addons" data-analytics-label="I don’t need these features">
                               <span class="text-type-1">Show my portfolio</span>
-                              <span class="glyphicons remove"></span>
+                              <span class="glyphicons picture"></span>
                           </button>
                       </div>
                       <div class="col-xs-12">
                           <button class="btn btn-block btn-ttc-white btn-checkbox btn-add-on" data-analytics-action="Addons" data-analytics-label="I don’t need these features">
                               <span class="text-type-1">Get more readers for my content</span>
-                              <span class="glyphicons remove"></span>
+                              <span class="glyphicons newspaper"></span>
                           </button>
                       </div>
                   </div>
@@ -160,6 +160,8 @@
                   <div class="col-xs-12 col-sm-6">
                       <div class="template-conrainer pull-right">
                           <div class="overlay">
+                              <h3>Curly Beige</h3>
+                              <p>Perfect for ...</p>
                               <button class="btn btn-ttc-blue btn-choose-template" data-option-value="curly-beige"><span class="glyphicons ok_2"></span> Choose Template</button>
                           </div>
                           <img class="img-responsive" src="images/templates/curly-beige.png">
@@ -168,6 +170,8 @@
                   <div class="col-xs-12 col-sm-6">
                       <div class="template-conrainer">
                           <div class="overlay">
+                              <h3>Fluffy Strokes</h3>
+                              <p>Perfect for ...</p>
                               <button class="btn btn-ttc-blue btn-choose-template" data-option-value="fluffy-strokes"><span class="glyphicons ok_2"></span> Choose Template</button>
                           </div>
                           <img class="img-responsive" src="images/templates/fluffy-strokes.png">
@@ -176,6 +180,8 @@
                   <div class="col-xs-12 col-sm-6">
                       <div class="template-conrainer pull-right">
                           <div class="overlay">
+                              <h3>Blonde Rays</h3>
+                              <p>Perfect for ...</p>
                               <button class="btn btn-ttc-blue btn-choose-template" data-option-value="blonde-rays"><span class="glyphicons ok_2"></span> Choose Template</button>
                           </div>
                           <img class="img-responsive" src="images/templates/blonde-rays.png">
@@ -184,6 +190,8 @@
                   <div class="col-xs-12 col-sm-6">
                       <div class="template-conrainer">
                           <div class="overlay">
+                              <h3>Dream Salon</h3>
+                              <p>Perfect for ...</p>
                               <button class="btn btn-ttc-blue btn-choose-template" data-option-value=""><span class="glyphicons ok_2"></span>Choose Template</button>
                           </div>
                           <img class="img-responsive" src="images/templates/dream-salon.png">
@@ -215,74 +223,74 @@
                               <input type="text" class="form-control" id="phone" name="contact_phone" value="">
                           </div>
                           <div class="form-group">
-                              <label for="phone">Show opening hours</label>
-                              <input type="checkbox" class="form-control" id="show_opening_hours" name="show_opening_hours" value="">
+                              <label for="show_opening_hours">Show opening hours</label>
+                              <input type="checkbox" class="form-control" id="show_opening_hours" name="show_opening_hours">
                           </div>
 
-                          <div class="opening-hours">
+                          <div class="opening-hours" id="opening-hours">
                               <h4>Opening Hours</h4>
 
                               <div class="form-group opening-hours">
                                   <label for="opening_hours_mon">Monday</label>
                                   <input type="text" class="form-control" name="opening_hours[mon][start]"
-                                         value="<?= $data['opening_hours']['mon']['start'] ?>">
+                                         value="">
                                   <span>&nbsp;-&nbsp;</span>
                                   <input type="text" class="form-control" name="opening_hours[mon][end]"
-                                         value="<?= $data['opening_hours']['mon']['end'] ?>">
+                                         value="">
                               </div>
 
                               <div class="form-group opening-hours">
                                   <label for="opening_hours_tue">Tuesday</label>
                                   <input type="text" class="form-control" name="opening_hours[tue][start]"
-                                         value="<?= $data['opening_hours']['tue']['start'] ?>">
+                                         value="">
                                   <span>&nbsp;-&nbsp;</span>
                                   <input type="text" class="form-control" name="opening_hours[tue][end]"
-                                         value="<?= $data['opening_hours']['tue']['end'] ?>">
+                                         value="">
                               </div>
 
                               <div class="form-group opening-hours">
                                   <label for="opening_hours_wed">Wednesday</label>
                                   <input type="text" class="form-control" name="opening_hours[wed][start]"
-                                         value="<?= $data['opening_hours']['wed']['start'] ?>">
+                                         value="">
                                   <span>&nbsp;-&nbsp;</span>
                                   <input type="text" class="form-control" name="opening_hours[wed][end]"
-                                         value="<?= $data['opening_hours']['wed']['end'] ?>">
+                                         value="">
                               </div>
 
                               <div class="form-group opening-hours">
                                   <label for="opening_hours_thu">Thursday</label>
                                   <input type="text" class="form-control" name="opening_hours[thu][start]"
-                                         value="<?= $data['opening_hours']['thu']['start'] ?>">
+                                         value="">
                                   <span>&nbsp;-&nbsp;</span>
                                   <input type="text" class="form-control" name="opening_hours[thu][end]"
-                                         value="<?= $data['opening_hours']['thu']['end'] ?>">
+                                         value="">
                               </div>
 
                               <div class="form-group opening-hours">
                                   <label for="opening_hours_fri">Friday</label>
                                   <input type="text" class="form-control" name="opening_hours[fri][start]"
-                                         value="<?= $data['opening_hours']['fri']['start'] ?>">
+                                         value="">
                                   <span>&nbsp;-&nbsp;</span>
                                   <input type="text" class="form-control" name="opening_hours[fri][end]"
-                                         value="<?= $data['opening_hours']['fri']['end'] ?>">
+                                         value="">
                               </div>
 
                               <div class="form-group opening-hours">
                                   <label for="opening_hours_sat">Saturday</label>
                                   <input type="text" class="form-control" name="opening_hours[sat][start]"
-                                         value="<?= $data['opening_hours']['sat']['start'] ?>">
+                                         value="">
                                   <span>&nbsp;-&nbsp;</span>
                                   <input type="text" class="form-control" name="opening_hours[sat][end]"
-                                         value="<?= $data['opening_hours']['sat']['end'] ?>">
+                                         value="">
                               </div>
 
                               <div class="form-group opening-hours">
                                   <label for="opening_hours_sun">Sunday</label>
                                   <input type="text" class="form-control" name="opening_hours[sun][start]"
-                                         value="<?= $data['opening_hours']['sun']['start'] ?>">
+                                         value="">
                                   <span>&nbsp;-&nbsp;</span>
                                   <input type="text" class="form-control" name="opening_hours[sun][end]"
-                                         value="<?= $data['opening_hours']['sun']['end'] ?>">
+                                         value="">
                               </div>
                           </div>
 
@@ -302,9 +310,10 @@
           <div class="bg-image hidden-xs"><img src="images/bg6.jpg"></div>
           <div class="content-panel">
               <img class="logo" src="images/otonomic-logo-dark.png">
-              <h1 class="title">Every social media post added to your website, in real time. </h1>
+              <h1 class="title">Every social media post added to your website. </h1>
               <h2>We help you promote your website with every new post and picture.</h2>
               <p>Select the social networks you’d like to connect to your site:</p>
+              <!--
               <div class="row">
                   <div class="col-xs-12">
                       <button class="btn social-btn facebook-btn selected" data-analytics-action="Social" data-analytics-label="Facebook"><img src="images/facebook-icon.svg"></button>
@@ -313,6 +322,42 @@
                       <button class="btn social-btn googleplus-btn" data-analytics-action="Social" data-analytics-label="Google plus"><img src="images/googleplus-icon.svg"></button>
                   </div>
               </div>
+              -->
+
+              <div class="row">
+                  <div class="col-xs-12">
+
+                      <!-- START Facebook -->
+                      <!-- END Facebook -->
+
+                      <!-- START Instagram -->
+                      <!-- END Instagram -->
+
+                      <!-- START YouTube -->
+                      <!-- END YouTube -->
+
+
+                      <!-- START Twitter -->
+                      <div class="form-group social-media-field" id="twitter">
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <label for="businessName"><i class="glyphicons social_twitter"></i> Twitter</label>
+                              </div>
+                              <div class="col-xs-9">
+                                  <input type="text" class="form-control LoNotSensitive" id="social_media_twitter" name="social_media_twitter" value="pinkfloyd1">
+                              </div>
+                          </div>
+
+                          <div class="row">
+                              <div class="col-xs-12">
+                                  <div class="search-results-container" id="search-results-twitter"></div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- END Twitter -->
+                  </div>
+              </div>
+
               <a href="#" onclick="return false;" class="btn btn-ttc-orange pull-right js-stage4-next">
                   Select
                   <span class="glyphicon glyphicon-chevron-right"></span>
@@ -434,6 +479,35 @@
           // Devices buttons
           $('.social-btn').click(function(){
               $(this).toggleClass('selected');
+          });
+
+          $('#show_opening_hours').click(function() {
+              $('#opening-hours').toggle();
+          });
+
+
+
+
+          var path_socialmedia_library = "/shared/lib/socialmedia/";
+          $('#social_media_twitter').on('keyup', function() {
+              var $this = $(this);
+              var searchval = $this.val();
+              if(searchval.length > 2) {
+                  jQuery('#search-results-twitter').html('Searching... ').show();
+                  jQuery.get(path_socialmedia_library + "searchUsernameTwitter.php?format=html&search_box="+searchval, function(data) {
+                      jQuery('#search-results-twitter').html(data);
+                      jQuery('#social_media_twitter').find('.clear').show();
+                  });
+              } else {
+                  jQuery('#search-results-twitter').html('').hide();
+                  jQuery('#social_media_twitter').find('.clear').hide();
+              }
+          });
+
+          $('#search-results-twitter').on('click', '.media.selectable', function() {
+              var value = $(this).attr('data-value');
+              $('#social_media_twitter').val(value);
+              $('#search-results-twitter').hide();
           });
       })
     </script>
