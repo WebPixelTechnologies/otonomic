@@ -226,9 +226,9 @@
                               <label for="phone">Phone number</label>
                               <input type="text" class="form-control" id="phone" name="contact_phone" value="">
                           </div>
-                          <div class="form-group">
-                              <label for="show_opening_hours">Show opening hours</label>
-                              <input type="checkbox" class="form-control" id="show_opening_hours" name="show_opening_hours">
+                          <div class="checkbox">
+                              <label for="show_opening_hours"><input type="checkbox" id="show_opening_hours" name="show_opening_hours"> Show opening hours</label>
+
                           </div>
 
                           <div class="opening-hours" id="opening-hours">
