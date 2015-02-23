@@ -11,13 +11,13 @@
 
     <title>Otonomic is creating your site...</title>
 
+      <!-- Glyphicons -->
+      <link href="fonts/Glyphicons-WebFont/glyphicons.css" rel="stylesheet">
+      <!-- Aller font -->
+      <link href="fonts/Aller-WebFont/aller_font.css" rel="stylesheet">
+
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Glyphicons -->
-    <link href="fonts/Glyphicons-WebFont/glyphicons.css" rel="stylesheet">
-    <!-- Aller font -->
-    <link href="fonts/Aller-WebFont/aller_font.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/wp-loading-page.css" rel="stylesheet">
@@ -347,8 +347,9 @@
                               <div class="col-xs-3">
                                   <label for="businessName"><i class="glyphicons social_twitter"></i> Twitter</label>
                               </div>
-                              <div class="col-xs-9">
+                              <div class="col-xs-9 has-feedback">
                                   <input type="text" class="form-control LoNotSensitive" id="social_media_twitter" name="social_media_twitter" value="pinkfloyd1">
+                                  <i class="glyphicons remove_2 form-control-feedback clear-input"></i>
                               </div>
                           </div>
 

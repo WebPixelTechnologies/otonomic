@@ -733,6 +733,26 @@ function checkConnectedWithFacebook() {
         displayKey: 'value',
         source: substringMatcher(categories)
     });
+    $('.clear-input').each(function (index){
+        input = jQuery(this).prev();
+        $(input).on('change keyup paste', function() {
+            console.log('updated!!');
+            if($(this).val().length>0) {
+                jQuery(this).next().show();
+            }
+            else {
+                jQuery(this).next().hide();
+            }
+        });
+        $(this).bind('click', function (e){
+            $(this).hide();
+            input = jQuery(this).prev();
+            input.val('');
+            wrapper = jQuery(this).parent().parent().parent();
+            jQuery('.search-results-container', wrapper).hide();
+        });
+    });
+
 
 })(jQuery, window);
 

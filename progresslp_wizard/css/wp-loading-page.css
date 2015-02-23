@@ -711,7 +711,11 @@ h3#oto-web-url {
   margin: 0;
 }
 
-
+#twitter .form-control-feedback {
+  top: 0;
+  right: 10px;
+  cursor: pointer;
+}
 
 
 /*==================================================
