@@ -13,6 +13,9 @@
 
       <!-- Glyphicons -->
       <link href="fonts/Glyphicons-WebFont/glyphicons.css" rel="stylesheet">
+
+      <link rel='stylesheet' id='sb_instagram_icons-css'  href='//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css?ver=4.2.0' type='text/css' media='all' />
+
       <!-- Aller font -->
       <link href="fonts/Aller-WebFont/aller_font.css" rel="stylesheet">
 
@@ -33,7 +36,6 @@
 
       <![endif]-->
     <script src="/js/otonomic-analytics.js?v=1.0"></script>
-
   </head>
 
   <body class="wp-lp">
@@ -335,7 +337,7 @@
                       <div class="form-group social-media-field" id="facebook">
                           <div class="row">
                               <div class="col-xs-3">
-                                  <label for="businessName"><i class="glyphicons social_facebook"></i> Facebook</label>
+                                  <label for="businessName"><i class="fa fa-facebook-square"></i> Facebook</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
                                   <input type="text" class="form-control LoNotSensitive" id="social_media_facebook" name="social_media_facebook" value="pinkfloyd1">
@@ -355,7 +357,7 @@
                       <div class="form-group social-media-field" id="instagram">
                           <div class="row">
                               <div class="col-xs-3">
-                                  <label for="businessName"><i class="glyphicons social_instagram"></i> Instagram</label>
+                                  <label for="businessName"><i class="fa fa-instagram"></i> Instagram</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
                                   <input type="text" class="form-control LoNotSensitive" id="social_media_instagram" name="social_media_instagram" value="pinkfloyd1">
@@ -375,7 +377,7 @@
                       <div class="form-group social-media-field" id="youtube">
                           <div class="row">
                               <div class="col-xs-3">
-                                  <label for="businessName"><i class="glyphicons social_youtube"></i> YouTube</label>
+                                  <label for="businessName"><i class="fa fa-youtube"></i> YouTube</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
                                   <input type="text" class="form-control LoNotSensitive" id="social_media_youtube" name="social_media_youtube" value="pinkfloyd1">
@@ -396,7 +398,7 @@
                       <div class="form-group social-media-field" id="twitter">
                           <div class="row">
                               <div class="col-xs-3">
-                                  <label for="businessName"><i class="glyphicons social_twitter"></i> Twitter</label>
+                                  <label for="businessName"><i class="fa fa-twitter"></i> Twitter</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
                                   <input type="text" class="form-control LoNotSensitive" id="social_media_twitter" name="social_media_twitter" value="pinkfloyd1">
@@ -445,7 +447,7 @@
         <div class="lower-content">
           <h3 id="oto-web-url" class="hidden">http://wp.otonomic.com/newsite</h3>
           <p class="tos">
-            By clicking the button, you accept the Otonomic <a target="_blank" href="/pdfs/Otonomic_Terms_of_Service.pdf" id="link-tos">Terms of Service</a>
+            By continuing to use our platform, you accept the Otonomic <a target="_blank" href="/pdfs/Otonomic_Terms_of_Service.pdf" id="link-tos">Terms of Service</a>
           </p>
         </div>
       </div>

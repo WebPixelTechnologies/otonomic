@@ -1093,6 +1093,7 @@ div.search-results-container {
     max-height: 200px;
     overflow-y: auto;
     display:none;
+    text-align:left;
 }
 
 .search-results-container .media.selectable {
