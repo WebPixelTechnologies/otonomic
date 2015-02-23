@@ -332,12 +332,63 @@
                   <div class="col-xs-12">
 
                       <!-- START Facebook -->
+                      <div class="form-group social-media-field" id="facebook">
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <label for="businessName"><i class="glyphicons social_facebook"></i> Facebook</label>
+                              </div>
+                              <div class="col-xs-9 has-feedback">
+                                  <input type="text" class="form-control LoNotSensitive" id="social_media_facebook" name="social_media_facebook" value="pinkfloyd1">
+                                  <i class="glyphicons remove_2 form-control-feedback clear-input"></i>
+                              </div>
+                          </div>
+
+                          <div class="row">
+                              <div class="col-xs-12">
+                                  <div class="search-results-container" id="search-results-facebook"></div>
+                              </div>
+                          </div>
+                      </div>
                       <!-- END Facebook -->
 
                       <!-- START Instagram -->
+                      <div class="form-group social-media-field" id="instagram">
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <label for="businessName"><i class="glyphicons social_instagram"></i> Instagram</label>
+                              </div>
+                              <div class="col-xs-9 has-feedback">
+                                  <input type="text" class="form-control LoNotSensitive" id="social_media_instagram" name="social_media_instagram" value="pinkfloyd1">
+                                  <i class="glyphicons remove_2 form-control-feedback clear-input"></i>
+                              </div>
+                          </div>
+
+                          <div class="row">
+                              <div class="col-xs-12">
+                                  <div class="search-results-container" id="search-results-instagram"></div>
+                              </div>
+                          </div>
+                      </div>
                       <!-- END Instagram -->
 
                       <!-- START YouTube -->
+                      <div class="form-group social-media-field" id="youtube">
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <label for="businessName"><i class="glyphicons social_youtube"></i> YouTube</label>
+                              </div>
+                              <div class="col-xs-9 has-feedback">
+                                  <input type="text" class="form-control LoNotSensitive" id="social_media_youtube" name="social_media_youtube" value="pinkfloyd1">
+                                  <i class="glyphicons remove_2 form-control-feedback clear-input"></i>
+                              </div>
+                          </div>
+
+                          <div class="row">
+                              <div class="col-xs-12">
+                                  <div class="search-results-container" id="search-results-youtube"></div>
+                              </div>
+                          </div>
+                      </div>
                       <!-- END YouTube -->
 
 
@@ -508,11 +559,71 @@
                   jQuery('#social_media_twitter').find('.clear').hide();
               }
           });
-
           $('#search-results-twitter').on('click', '.media.selectable', function() {
               var value = $(this).attr('data-value');
               $('#social_media_twitter').val(value);
               $('#search-results-twitter').hide();
+          });
+
+          /* Youtube */
+          $('#social_media_youtube').on('keyup', function() {
+              var $this = $(this);
+              var searchval = $this.val();
+              if(searchval.length > 2) {
+                  jQuery('#search-results-youtube').html('Searching... ').show();
+                  jQuery.get(path_socialmedia_library + "searchUsernameYoutube.php?format=html&search_box="+searchval, function(data) {
+                      jQuery('#search-results-youtube').html(data);
+                      jQuery('#youtube').find('.clear').show();
+                  });
+              } else {
+                  jQuery('#search-results-youtube').html('').hide();
+                  jQuery('#social_media_youtube').find('.clear').hide();
+              }
+          });
+          $('#search-results-youtube').on('click', '.media.selectable', function() {
+              var value = $(this).attr('data-value');
+              $('#social_media_youtube').val(value);
+              $('#search-results-youtube').hide();
+          });
+          /* Instagram */
+          $('#social_media_instagram').on('keyup', function() {
+              var $this = $(this);
+              var searchval = $this.val();
+              if(searchval.length > 2) {
+                  jQuery('#search-results-instagram').html('Searching... ').show();
+                  jQuery.get(path_socialmedia_library + "searchUsernameInstagram.php?format=html&search_box="+searchval, function(data) {
+                      jQuery('#search-results-instagram').html(data);
+                      jQuery('#instagram').find('.clear').show();
+                  });
+              } else {
+                  jQuery('#search-results-instagram').html('').hide();
+                  jQuery('#social_media_instagram').find('.clear').hide();
+              }
+          });
+          $('#search-results-instagram').on('click', '.media.selectable', function() {
+              var value = $(this).attr('data-value');
+              $('#social_media_instagram').val(value);
+              $('#search-results-instagram').hide();
+          });
+          /* Facebook */
+          $('#social_media_facebook').on('keyup', function() {
+              var $this = $(this);
+              var searchval = $this.val();
+              if(searchval.length > 2) {
+                  jQuery('#search-results-facebook').html('Searching... ').show();
+                  jQuery.get(path_socialmedia_library + "searchUsernameFacebook.php?format=html&search_box="+searchval, function(data) {
+                      jQuery('#search-results-facebook').html(data);
+                      jQuery('#facebook').find('.clear').show();
+                  });
+              } else {
+                  jQuery('#search-results-facebook').html('').hide();
+                  jQuery('#social_media_facebook').find('.clear').hide();
+              }
+          });
+          $('#search-results-facebook').on('click', '.media.selectable', function() {
+              var value = $(this).attr('data-value');
+              $('#social_media_facebook').val(value);
+              $('#search-results-facebook').hide();
           });
       })
     </script>

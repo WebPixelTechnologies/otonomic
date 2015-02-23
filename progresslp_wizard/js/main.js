@@ -736,7 +736,6 @@ function checkConnectedWithFacebook() {
     $('.clear-input').each(function (index){
         input = jQuery(this).prev();
         $(input).on('change keyup paste', function() {
-            console.log('updated!!');
             if($(this).val().length>0) {
                 jQuery(this).next().show();
             }
