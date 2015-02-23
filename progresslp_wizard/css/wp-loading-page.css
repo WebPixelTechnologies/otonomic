@@ -649,6 +649,68 @@ h3#oto-web-url {
     text-transform: lowercase;
 }
 
+/* typeahead
+-----------------------------------*/
+#cat-selector .twitter-typeahead {
+  width:100%;
+}
+#cat-selector .tt-dropdown-menu {
+  position: static!important;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.typeahead,
+.tt-query,
+.tt-hint {
+  /*width: 390px;
+  height: 30px;
+  font-size: 16px;
+  padding: 8px 12px;
+  line-height: 30px;
+  outline: none;*/
+
+}
+
+.tt-query {
+  -webkit-box-shadow: inset 1px 1px 0px rgba(217,214,215,1);
+  -mozbox-shadow: inset 1px 1px 0px rgba(217,214,215,1);
+  box-shadow: inset 1px 1px 0px rgba(217,214,215,1);
+}
+
+.tt-hint {
+  color: #999
+}
+
+.tt-dropdown-menu {
+  /*width: 390px;*/
+  margin-top: 0px;
+  padding: 0 0 0 1px;
+  background-color: #fff;
+  -webkit-box-shadow: inset 1px 1px 0px rgba(217,214,215,1);
+  -mozbox-shadow: inset 1px 1px 0px rgba(217,214,215,1);
+  box-shadow: inset 1px 1px 0px rgba(217,214,215,1);
+}
+
+.tt-suggestion {
+  padding: 6px 20px;
+  font-size: 16px;
+  line-height: 40px;
+  color: #524843;
+}
+
+.tt-suggestion.tt-cursor {
+  cursor: pointer;
+  color: #524843;
+  font-size: 16px;
+  background-color: #faf3c9;
+
+}
+
+.tt-suggestion p {
+  font-size: 16px;
+  margin: 0;
+}
+
 
 
 

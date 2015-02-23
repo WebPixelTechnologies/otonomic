@@ -24,6 +24,7 @@
 
       <script src="js/jquery-1.11.1.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
+      <script src="js/typeahead.jquery.min.js"></script>
 
       <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -79,7 +80,10 @@
                           </div>
                           <div class="form-group">
                               <label for="email">Category</label>
-                              <input type="email" class="form-control" id="email" name="contact_email" value="">
+                              <div id="cat-selector" class="">
+                                  <input class="typeahead form-control pulse-background" type="text" placeholder="Search for your category" id="fb_category">
+                                  <!-- span class="glyphicon glyphicon-search form-control-feedback"></span -->
+                              </div>
                           </div>
                           <div class="form-group">
                               <label for="email">Email</label>
@@ -395,7 +399,7 @@
       </div>
     </div><!-- /.container -->
 
-    <script src="js/main.js?v=1.0.0"></script>
+    <script src="js/main.js?v=1.0.1"></script>
 
     <script>
         window.fbAsyncInit = function() {
