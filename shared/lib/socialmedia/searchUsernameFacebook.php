@@ -9,7 +9,7 @@ $reqdata = urlencode(strtolower($_GET['search_box']));
 //Facebook Access Token.
 $token = "CAAUlWzuUGiYBAO7BZA8ek15RMSy8LNdD38wWlO9ssi6fPjdUFl3dSdxiB6eddwtZBWEEied2cPV8UmYH9zTqr1x2hhJCtRx60w0ZA4tdHziZAZCBzEUEFSFsMLXDnZCTZAQW3RETBAbtto9sIhiDjvwnIxeVSrbYY9ICTfOvLlxniqjnNWDK3tuxwTRBcUzQWvIxA3ZCeVBQgkYcYUE7V08p";
 
-$url = "https://graph.facebook.com/search?q=".$reqdata."&type=user&access_token=".$token;
+$url = "https://graph.facebook.com/search?q=".$reqdata."&type=page&access_token=".$token;
 
 //User Search JSON
 $user_json = @file_get_contents($url);
@@ -32,7 +32,7 @@ if($format == 'json') {
                 <div class="media-body">
                     <h4 class="media-heading" data-bind="text: name">
                         {$item->name}
-                        <span style="color: #BCBCBC; font-size: 16px; font-weight: normal !important;">{$item->name} </span>
+                        <span style="color: #BCBCBC; font-size: 16px; font-weight: normal !important;">{$item->category} </span>
                     </h4>
                 </div>
             </div>
