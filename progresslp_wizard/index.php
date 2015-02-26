@@ -82,6 +82,7 @@
                           </div>
                           <div class="form-group">
                               <label for="email">Category</label>
+                              <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" class="tooltip" title="Start typing, and a list of available options will show up. Select the option that best describes your business."></i>
                               <div id="cat-selector" class="">
                                   <input class="typeahead form-control pulse-background" type="text" placeholder="Search for your category" id="fb_category">
                                   <!-- span class="glyphicon glyphicon-search form-control-feedback"></span -->
@@ -105,7 +106,7 @@
       <div id="stage-3" class="row hidden installer-stage">
           <div class="bg-image hidden-xs"><img src="images/bg7.jpg"></div>
           <div class="content-panel">
-              <div class="hidden-xs">
+              <div class="">
                   <img class="logo" src="images/otonomic-logo-dark.png">
                   <h1 class="title">Site Purpose</h1>
                   <h2>What would you like to achieve with your website?</h2>
@@ -217,11 +218,14 @@
                   <div class="row">
                       <div class="col-xs-12">
                           <div class="form-group">
-                              <label for="productName">Business address</label>
+                              <label for="productName">Business address
+                                  <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="We will show your address and a Google Map, so your customers can easily locate your business" class="tooltip"></i>
+                              </label>
                               <textarea rows="3" id="address" name="contact_address" class="form-control" autocomplete="off" placeholder=""></textarea>
                           </div>
                           <div class="form-group">
                               <label for="email">Email</label>
+                              <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" class="tooltip" title="We will show this email on your site. Messages sent through your contact form will also be sent to this address."></i>
                               <input type="email" class="form-control" id="email" name="contact_email" value="">
                           </div>
                           <div class="form-group">
@@ -230,7 +234,6 @@
                           </div>
                           <div class="checkbox">
                               <label for="show_opening_hours"><input type="checkbox" id="show_opening_hours" name="show_opening_hours"> Show opening hours</label>
-
                           </div>
 
                           <div class="opening-hours" id="opening-hours">

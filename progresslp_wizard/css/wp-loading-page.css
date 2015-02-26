@@ -1082,6 +1082,9 @@ label {
     padding: 60px 120px;
     background-color: rgba(0,0,0,0.83);
 }
+.content-panel {
+    text-align: left;
+}
 #opening-hours { display:none;}
 
 div.search-results-container {

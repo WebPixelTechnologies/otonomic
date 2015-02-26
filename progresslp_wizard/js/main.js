@@ -148,6 +148,8 @@ function checkConnectedWithFacebook() {
 		track_event('Loading Page', 'ToS', '');
 	});
 
+    $('[data-toggle="tooltip"]').tooltip();
+
 	// #see-my-website-btn Click
 	////////////////////////////////////////
 	$('#see-my-website-btn').click(function (event) {
@@ -195,8 +197,7 @@ function checkConnectedWithFacebook() {
                 redirect_to_website();
             }
 		}, 1000);
-
-	}
+    }
 
 
 	if (page_id) {
