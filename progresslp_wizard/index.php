@@ -343,7 +343,7 @@
                                   <label for="businessName"><i class="fa fa-facebook-square"></i> Facebook</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
-                                  <input type="text" class="form-control LoNotSensitive enable-suggest" id="social_media_facebook" data-suggest-url="searchUsernameFacebook.php" name="social_media_facebook" value="pinkfloyd1">
+                                  <input type="text" class="form-control LoNotSensitive enable-suggest" id="social_media_facebook" data-suggest-url="searchUsernameFacebook.php" name="social_media_facebook" value="">
                                   <i class="glyphicons remove_2 form-control-feedback clear-input"></i>
                               </div>
                           </div>
@@ -362,7 +362,7 @@
                                   <label for="businessName"><i class="fa fa-instagram"></i> Instagram</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
-                                  <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameInstagram.php" id="social_media_instagram" name="social_media_instagram" value="pinkfloyd1">
+                                  <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameInstagram.php" id="social_media_instagram" name="social_media_instagram" value="">
                                   <i class="glyphicons remove_2 form-control-feedback clear-input"></i>
                               </div>
                           </div>
@@ -382,7 +382,7 @@
                                   <label for="businessName"><i class="fa fa-youtube"></i> YouTube</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
-                                  <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameYoutube.php" id="social_media_youtube" name="social_media_youtube" value="pinkfloyd1">
+                                  <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameYoutube.php" id="social_media_youtube" name="social_media_youtube" value="">
                                   <i class="glyphicons remove_2 form-control-feedback clear-input"></i>
                               </div>
                           </div>
@@ -403,7 +403,7 @@
                                   <label for="businessName"><i class="fa fa-twitter"></i> Twitter</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
-                                  <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameTwitter.php" id="social_media_twitter" name="social_media_twitter" value="pinkfloyd1">
+                                  <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameTwitter.php" id="social_media_twitter" name="social_media_twitter" value="">
                                   <i class="glyphicons remove_2 form-control-feedback clear-input"></i>
                               </div>
                           </div>
@@ -422,7 +422,7 @@
                                   <label for="businessName"><i class="glyphicons social_media_linkedin"></i> LinkedIn</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
-                                  <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameLinkedin.php" id="social_media_linkedin" name="social_media_linkedin" value="pinkfloyd1">
+                                  <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameLinkedin.php" id="social_media_linkedin" name="social_media_linkedin" value="">
                                   <i class="glyphicons remove_2 form-control-feedback clear-input"></i>
                               </div>
                           </div>
@@ -441,7 +441,7 @@
                                   <label for="businessName"><i class="glyphicons social_media_flickr"></i> Flickr</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
-                                  <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameFlickr.php" id="social_media_flickr" name="social_media_flickr" value="pinkfloyd1">
+                                  <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameFlickr.php" id="social_media_flickr" name="social_media_flickr" value="">
                                   <i class="glyphicons remove_2 form-control-feedback clear-input"></i>
                               </div>
                           </div>
@@ -460,7 +460,7 @@
                                   <label for="businessName"><i class="glyphicons social_media_googleplus"></i> Google+</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
-                                  <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameGoogleplus.php" id="social_media_googleplus" name="social_media_googleplus" value="pinkfloyd1">
+                                  <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameGoogleplus.php" id="social_media_googleplus" name="social_media_googleplus" value="">
                                   <i class="glyphicons remove_2 form-control-feedback clear-input"></i>
                               </div>
                           </div>
@@ -479,7 +479,7 @@
                                   <label for="businessName"><i class="glyphicons social_media_pinterest"></i> Pinterest</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
-                                  <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernamePinterest.php" id="social_media_pinterest" name="social_media_pinterest" value="pinkfloyd1">
+                                  <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernamePinterest.php" id="social_media_pinterest" name="social_media_pinterest" value="">
                                   <i class="glyphicons remove_2 form-control-feedback clear-input"></i>
                               </div>
                           </div>
