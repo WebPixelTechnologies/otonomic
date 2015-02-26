@@ -338,11 +338,10 @@
                                   <label for="businessName"><i class="glyphicons social_facebook"></i> Facebook</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
-                                  <input type="text" class="form-control LoNotSensitive" id="social_media_facebook" name="social_media_facebook" value="pinkfloyd1">
+                                  <input type="text" class="form-control LoNotSensitive enable-suggest" id="social_media_facebook" data-suggest-url="searchUsernameFacebook.php" name="social_media_facebook" value="pinkfloyd1">
                                   <i class="glyphicons remove_2 form-control-feedback clear-input"></i>
                               </div>
                           </div>
-
                           <div class="row">
                               <div class="col-xs-12">
                                   <div class="search-results-container" id="search-results-facebook"></div>
@@ -358,7 +357,7 @@
                                   <label for="businessName"><i class="glyphicons social_instagram"></i> Instagram</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
-                                  <input type="text" class="form-control LoNotSensitive" id="social_media_instagram" name="social_media_instagram" value="pinkfloyd1">
+                                  <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameInstagram.php" id="social_media_instagram" name="social_media_instagram" value="pinkfloyd1">
                                   <i class="glyphicons remove_2 form-control-feedback clear-input"></i>
                               </div>
                           </div>
@@ -378,7 +377,7 @@
                                   <label for="businessName"><i class="glyphicons social_youtube"></i> YouTube</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
-                                  <input type="text" class="form-control LoNotSensitive" id="social_media_youtube" name="social_media_youtube" value="pinkfloyd1">
+                                  <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameYoutube.php" id="social_media_youtube" name="social_media_youtube" value="pinkfloyd1">
                                   <i class="glyphicons remove_2 form-control-feedback clear-input"></i>
                               </div>
                           </div>
@@ -399,7 +398,7 @@
                                   <label for="businessName"><i class="glyphicons social_twitter"></i> Twitter</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
-                                  <input type="text" class="form-control LoNotSensitive" id="social_media_twitter" name="social_media_twitter" value="pinkfloyd1">
+                                  <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameTwitter.php" id="social_media_twitter" name="social_media_twitter" value="pinkfloyd1">
                                   <i class="glyphicons remove_2 form-control-feedback clear-input"></i>
                               </div>
                           </div>
@@ -411,6 +410,82 @@
                           </div>
                       </div>
                       <!-- END Twitter -->
+                      <!-- START LinkedIn -->
+                      <div class="form-group social-media-field" id="linkedin">
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <label for="businessName"><i class="glyphicons social_media_linkedin"></i> LinkedIn</label>
+                              </div>
+                              <div class="col-xs-9 has-feedback">
+                                  <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameLinkedin.php" id="social_media_linkedin" name="social_media_linkedin" value="pinkfloyd1">
+                                  <i class="glyphicons remove_2 form-control-feedback clear-input"></i>
+                              </div>
+                          </div>
+
+                          <div class="row">
+                              <div class="col-xs-12">
+                                  <div class="search-results-container" id="search-results-linkedin"></div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- END LinkedIn -->
+                      <!-- START Flickr -->
+                      <div class="form-group social-media-field" id="flickr">
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <label for="businessName"><i class="glyphicons social_media_flickr"></i> Flickr</label>
+                              </div>
+                              <div class="col-xs-9 has-feedback">
+                                  <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameFlickr.php" id="social_media_flickr" name="social_media_flickr" value="pinkfloyd1">
+                                  <i class="glyphicons remove_2 form-control-feedback clear-input"></i>
+                              </div>
+                          </div>
+
+                          <div class="row">
+                              <div class="col-xs-12">
+                                  <div class="search-results-container" id="search-results-flickr"></div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- END Flickr -->
+                      <!-- START Google+ -->
+                      <div class="form-group social-media-field" id="googleplus">
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <label for="businessName"><i class="glyphicons social_media_googleplus"></i> Google+</label>
+                              </div>
+                              <div class="col-xs-9 has-feedback">
+                                  <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameGoogleplus.php" id="social_media_googleplus" name="social_media_googleplus" value="pinkfloyd1">
+                                  <i class="glyphicons remove_2 form-control-feedback clear-input"></i>
+                              </div>
+                          </div>
+
+                          <div class="row">
+                              <div class="col-xs-12">
+                                  <div class="search-results-container" id="search-results-googleplus"></div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- END Google+ -->
+                      <!-- START Pinterest -->
+                      <div class="form-group social-media-field" id="pinterest">
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <label for="businessName"><i class="glyphicons social_media_pinterest"></i> Pinterest</label>
+                              </div>
+                              <div class="col-xs-9 has-feedback">
+                                  <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernamePinterest.php" id="social_media_pinterest" name="social_media_pinterest" value="pinkfloyd1">
+                                  <i class="glyphicons remove_2 form-control-feedback clear-input"></i>
+                              </div>
+                          </div>
+
+                          <div class="row">
+                              <div class="col-xs-12">
+                                  <div class="search-results-container" id="search-results-pinterest"></div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- END Google+ -->
                   </div>
               </div>
 
@@ -545,7 +620,31 @@
 
 
           var path_socialmedia_library = "/shared/lib/socialmedia/";
-          $('#social_media_twitter').on('keyup', function() {
+          jQuery('.enable-suggest').each(function(index){
+              var wrapper = jQuery(this).parent().parent().parent();
+              //jQuery(wrapper).append('<div class="search-results-container" />');
+              jQuery(this).on('keyup', function() {
+                  var $this = jQuery(this);
+                  var searchval = $this.val();
+                  //wrapper = jQuery(this).parent();
+                  if(searchval.length > 2) {
+
+                      jQuery('.search-results-container', wrapper).html('Searching... ').show();
+                      jQuery.get(path_socialmedia_library + jQuery(this).attr('data-suggest-url') +"?format=html&search_box="+searchval, function(data) {
+                          jQuery('.search-results-container', wrapper).html(data);
+                      });
+                  } else {
+                      jQuery('.search-results-container', wrapper).html('').hide();
+                  }
+              });
+          });
+          jQuery('.search-results-container').on('click', '.media.selectable', function() {
+              var value = jQuery(this).attr('data-value');
+              var wrapper = jQuery(this).parent().parent().parent().parent();
+              jQuery('input', wrapper).val(value);
+              jQuery('.search-results-container', wrapper).hide();
+          });
+          /*$('#social_media_twitter').on('keyup', function() {
               var $this = $(this);
               var searchval = $this.val();
               if(searchval.length > 2) {
@@ -565,7 +664,7 @@
               $('#search-results-twitter').hide();
           });
 
-          /* Youtube */
+          // Youtube
           $('#social_media_youtube').on('keyup', function() {
               var $this = $(this);
               var searchval = $this.val();
@@ -585,7 +684,7 @@
               $('#social_media_youtube').val(value);
               $('#search-results-youtube').hide();
           });
-          /* Instagram */
+          // Instagram
           $('#social_media_instagram').on('keyup', function() {
               var $this = $(this);
               var searchval = $this.val();
@@ -605,7 +704,7 @@
               $('#social_media_instagram').val(value);
               $('#search-results-instagram').hide();
           });
-          /* Facebook */
+          // Facebook
           $('#social_media_facebook').on('keyup', function() {
               var $this = $(this);
               var searchval = $this.val();
@@ -624,7 +723,7 @@
               var value = $(this).attr('data-value');
               $('#social_media_facebook').val(value);
               $('#search-results-facebook').hide();
-          });
+          });*/
       })
     </script>
 

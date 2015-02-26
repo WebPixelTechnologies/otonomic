@@ -714,7 +714,11 @@ h3#oto-web-url {
 #twitter .form-control-feedback,
 #youtube .form-control-feedback,
 #instagram .form-control-feedback,
-#facebook .form-control-feedback{
+#facebook .form-control-feedback,
+#linkedin .form-control-feedback,
+#flickr .form-control-feedback,
+#googleplus .form-control-feedback,
+#pinterest .form-control-feedback{
   top: 0;
   right: 10px;
   cursor: pointer;
