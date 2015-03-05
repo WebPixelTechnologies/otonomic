@@ -61,7 +61,7 @@
             <img class="logo" src="images/otonomic-logo-dark.png">
             <h1 class="title">Create a website for </h1>
             <p class="site-name" id="ot-fb-name">YOUR BUSINESS</p>
-            <h2 >in just 5 minutes!</h2>
+            <h2 >in just 5 steps!</h2>
             <a href="#" onclick="return false;" class="btn btn-ttc-blue btn-next">Let the magic begin!<span class="glyphicon glyphicon-chevron-right"></span></a>
           </div>
         </div>
@@ -69,7 +69,7 @@
 
       <!-- Stage ================================================ -->
       <div id="" class="row hidden installer-stage">
-          <div class="bg-image hidden-xs"><div class="map_canvas"></div></div>
+          <div class="bg-image hidden-xs"><img src="images/bg5.jpg"></div>
           <div class="content-panel">
               <h1 class="title">Let's start creating your awesome website!</h1>
               <h3></h3>
@@ -93,7 +93,6 @@
                               <input type="email" class="form-control" id="email" name="contact_email" value="">
                           </div>
                           <div class="form-group text-right">
-                              <a href="#" onclick="return false;" class="submit-skip-contact btn btn-ttc-clear btn-lg"><span class="glyphicon glyphicon-share-alt"></span>Skip</a>
                               <a href="#" onclick="return false;" class="btn-next btn btn-ttc-orange btn-lg"><span class="glyphicon glyphicon-ok"></span>Next</a>
                           </div>
                       </div>
@@ -132,7 +131,7 @@
                       <div class="col-xs-12">
                           <button class="btn btn-block btn-ttc-white btn-checkbox btn-add-on" data-analytics-action="Addons" data-analytics-label="I don’t need these features">
                               <span class="text-type-1">Get more readers for my content</span>
-                              <span class="glyphicons newspaper"></span>
+                              <span class="glyphicons book_open"></span>
                           </button>
                       </div>
                   </div>
@@ -205,12 +204,16 @@
                       </div>
                   </div>
               </div>
+              <a href="#" onclick="return false;" class="btn btn-ttc-clear btn-back pull-right">
+                  <span class="glyphicons undo"></span>
+                  Back
+              </a>
           </div>
       </div>
 
       <!-- Stage ================================================ -->
       <div id="" class="row hidden installer-stage">
-          <div class="bg-image hidden-xs"><div class="map_canvas"></div></div>
+          <div class="bg-image hidden-xs"><img src="images/bg4.jpg"></div>
           <div class="content-panel">
               <h1 class="title">Let your clients easily contact you!</h1>
               <h3>Review, update and complete your contact details to make sure clients can reach you:</h3>
@@ -304,10 +307,13 @@
                           </div>
 
 
-                          <div class="form-group text-right">
-                              <a href="#" onclick="return false;" class="submit-skip-contact btn btn-ttc-clear btn-lg"><span class="glyphicon glyphicon-share-alt"></span>Skip</a>
-                              <a href="#" onclick="return false;" class="btn-next btn btn-ttc-orange btn-lg"><span class="glyphicon glyphicon-ok"></span>Next</a>
-                          </div>
+                          <a href="#" onclick="return false;" class="btn-next btn btn-ttc-orange btn-lg pull-right">
+                              <span class="glyphicon glyphicon-ok"></span>Next
+                          </a>
+                          <a href="#" onclick="return false;" class="btn btn-ttc-clear btn-back pull-right">
+                              <span class="glyphicons undo"></span>
+                              Back
+                          </a>
                       </div>
                   </div>
               </form>
@@ -354,6 +360,25 @@
                           </div>
                       </div>
                       <!-- END Facebook -->
+
+                      <!-- START Yelp -->
+                      <div class="form-group social-media-field" id="yelp">
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <label for="businessName"><i class="fa fa-yelp"></i> Yelp</label>
+                              </div>
+                              <div class="col-xs-9 has-feedback">
+                                  <input type="text" class="form-control LoNotSensitive enable-suggest" id="social_media_yelp" data-suggest-url="searchUsernameYelp.php" name="social_media_yelp" value="">
+                                  <i class="glyphicons remove_2 form-control-feedback clear-input"></i>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-xs-12">
+                                  <div class="search-results-container" id="search-results-yelp"></div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- END Yelp -->
 
                       <!-- START Instagram -->
                       <div class="form-group social-media-field" id="instagram">
@@ -419,7 +444,7 @@
                       <div class="form-group social-media-field" id="linkedin">
                           <div class="row">
                               <div class="col-xs-3">
-                                  <label for="businessName"><i class="glyphicons social_media_linkedin"></i> LinkedIn</label>
+                                  <label for="businessName"><i class="fa fa-linkedin"></i> LinkedIn</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
                                   <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameLinkedin.php" id="social_media_linkedin" name="social_media_linkedin" value="">
@@ -438,7 +463,7 @@
                       <div class="form-group social-media-field" id="flickr">
                           <div class="row">
                               <div class="col-xs-3">
-                                  <label for="businessName"><i class="glyphicons social_media_flickr"></i> Flickr</label>
+                                  <label for="businessName"><i class="fa fa-flickr"></i> Flickr</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
                                   <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameFlickr.php" id="social_media_flickr" name="social_media_flickr" value="">
@@ -457,7 +482,7 @@
                       <div class="form-group social-media-field" id="googleplus">
                           <div class="row">
                               <div class="col-xs-3">
-                                  <label for="businessName"><i class="glyphicons social_media_googleplus"></i> Google+</label>
+                                  <label for="businessName"><i class="fa fa-google-plus"></i> Google+</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
                                   <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameGoogleplus.php" id="social_media_googleplus" name="social_media_googleplus" value="">
@@ -467,7 +492,7 @@
 
                           <div class="row">
                               <div class="col-xs-12">
-                                  <div class="search-results-container" id="search-results-googleplus"></div>
+                                  <div class="search-results-container" id="search-results-google-plus"></div>
                               </div>
                           </div>
                       </div>
@@ -476,7 +501,7 @@
                       <div class="form-group social-media-field" id="pinterest">
                           <div class="row">
                               <div class="col-xs-3">
-                                  <label for="businessName"><i class="glyphicons social_media_pinterest"></i> Pinterest</label>
+                                  <label for="businessName"><i class="fa fa-pinterest"></i> Pinterest</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
                                   <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernamePinterest.php" id="social_media_pinterest" name="social_media_pinterest" value="">
@@ -494,8 +519,8 @@
                   </div>
               </div>
 
-              <a href="#" onclick="return false;" class="btn btn-ttc-orange pull-right js-stage4-next">
-                  Select
+              <a href="#" onclick="return false;" class="btn btn-ttc-orange pull-right js-switch-to-congratz">
+                  Next
                   <span class="glyphicon glyphicon-chevron-right"></span>
               </a>
               <a href="#" onclick="return false;" class="btn btn-ttc-clear btn-back pull-right">
@@ -518,20 +543,24 @@
         <img class="logo" src="images/otonomic-logo-dark.png">
         <div class="upper-content">
           <p class="site-name" id="ot-fb-name">Your business</p>
-          <h1 class="congratz-title">website will be ready in <span id="counter">7 seconds</span></h1>
+          <h1 class="congratz-title">website will be ready in <span id="counter">10 seconds</span></h1>
           <div class="fb-like" data-href="https://www.facebook.com/otonomic" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
           <img class="oto-anima" src="images/ottoHoverLoop.gif">
         </div>
         <div class="lower-content">
           <h3 id="oto-web-url" class="hidden">http://wp.otonomic.com/newsite</h3>
           <p class="tos">
-            By continuing to use our platform, you accept the Otonomic <a target="_blank" href="/pdfs/Otonomic_Terms_of_Service.pdf" id="link-tos">Terms of Service</a>
+            By continuing to use our platform, you accept the Otonomic <a target="_blank" href="http://otonomic.com/terms/" id="link-tos">Terms of Service</a>
           </p>
         </div>
       </div>
     </div><!-- /.container -->
 
     <script src="js/main.js?v=1.0.1"></script>
+
+
+
+
 
     <script>
         window.fbAsyncInit = function() {
@@ -556,50 +585,6 @@
           window._fbq = window._fbq || [];
           window._fbq.push(['track', '6021618382030', {'value':'0.00','currency':'USD'}]);
 
-
-          $('#social_connect_hybrid a').click(function(){
-              var type = $(this).attr('id').split('_');
-
-              track_event('Loading Page', 'Social Connect', type[1]);
-
-              var url = base_url+"?social="+type[1];
-              window.open(
-                      url,
-                      "hybridauth_social_sign_on",
-                      "location=0,status=0,scrollbars=1,width=800,height=500"
-              );
-              return false;
-          });
-
-          // Change social buttons appearance depending on screen width
-            var changeWidth = function(){
-            console.log('Resized');
-            if ( $(window).width() < 480 ){
-                $('#social_connect_hybrid').addClass('btn-group-justified btn-group');
-                $('#social_connect_hybrid a').addClass('btn');
-              } else {
-                $('.btn-group-vertical').removeClass('btn-group-justified btn-group');
-                $('#social_connect_hybrid a').removeClass('btn');
-              }
-            };
-            $(window).resize(changeWidth());
-
-          // Search engine buttons
-          $('.btn-search-engine').click(function(){
-            // $('.btn-search-engine').removeClass('checked');
-            $(this).toggleClass('checked');
-
-              var engineName =$(this).data('engine');
-            $('.js-stage1-next').removeClass('disabled').html('Rank high on search engines, got it!');
-          });
-
-          // Devices buttons
-          $('.btn-device').click(function(){
-            // $('.btn-device').removeClass('checked');
-            $(this).toggleClass('checked');
-            $(this).parents('.installer-stage').find('.next-btn').removeClass('disabled').html('Continue <span class="glyphicon glyphicon-chevron-right"></span>');
-          });
-
           // Online store / booking buttons
           $('.btn-add-on').click(function(){
               var $this = $(this);
@@ -612,16 +597,9 @@
               $this.parents('.installer-stage').find('.next-btn').removeClass('disabled').html('Continue <span class="glyphicon glyphicon-chevron-right"></span>');
           });
 
-          // Devices buttons
-          $('.social-btn').click(function(){
-              $(this).toggleClass('selected');
-          });
-
           $('#show_opening_hours').click(function() {
               $('#opening-hours').toggle();
           });
-
-
 
 
           var path_socialmedia_library = "/shared/lib/socialmedia/";
@@ -649,86 +627,6 @@
               jQuery('input', wrapper).val(value);
               jQuery('.search-results-container', wrapper).hide();
           });
-          /*$('#social_media_twitter').on('keyup', function() {
-              var $this = $(this);
-              var searchval = $this.val();
-              if(searchval.length > 2) {
-                  jQuery('#search-results-twitter').html('Searching... ').show();
-                  jQuery.get(path_socialmedia_library + "searchUsernameTwitter.php?format=html&search_box="+searchval, function(data) {
-                      jQuery('#search-results-twitter').html(data);
-                      jQuery('#social_media_twitter').find('.clear').show();
-                  });
-              } else {
-                  jQuery('#search-results-twitter').html('').hide();
-                  jQuery('#social_media_twitter').find('.clear').hide();
-              }
-          });
-          $('#search-results-twitter').on('click', '.media.selectable', function() {
-              var value = $(this).attr('data-value');
-              $('#social_media_twitter').val(value);
-              $('#search-results-twitter').hide();
-          });
-
-          // Youtube
-          $('#social_media_youtube').on('keyup', function() {
-              var $this = $(this);
-              var searchval = $this.val();
-              if(searchval.length > 2) {
-                  jQuery('#search-results-youtube').html('Searching... ').show();
-                  jQuery.get(path_socialmedia_library + "searchUsernameYoutube.php?format=html&search_box="+searchval, function(data) {
-                      jQuery('#search-results-youtube').html(data);
-                      jQuery('#youtube').find('.clear').show();
-                  });
-              } else {
-                  jQuery('#search-results-youtube').html('').hide();
-                  jQuery('#social_media_youtube').find('.clear').hide();
-              }
-          });
-          $('#search-results-youtube').on('click', '.media.selectable', function() {
-              var value = $(this).attr('data-value');
-              $('#social_media_youtube').val(value);
-              $('#search-results-youtube').hide();
-          });
-          // Instagram
-          $('#social_media_instagram').on('keyup', function() {
-              var $this = $(this);
-              var searchval = $this.val();
-              if(searchval.length > 2) {
-                  jQuery('#search-results-instagram').html('Searching... ').show();
-                  jQuery.get(path_socialmedia_library + "searchUsernameInstagram.php?format=html&search_box="+searchval, function(data) {
-                      jQuery('#search-results-instagram').html(data);
-                      jQuery('#instagram').find('.clear').show();
-                  });
-              } else {
-                  jQuery('#search-results-instagram').html('').hide();
-                  jQuery('#social_media_instagram').find('.clear').hide();
-              }
-          });
-          $('#search-results-instagram').on('click', '.media.selectable', function() {
-              var value = $(this).attr('data-value');
-              $('#social_media_instagram').val(value);
-              $('#search-results-instagram').hide();
-          });
-          // Facebook
-          $('#social_media_facebook').on('keyup', function() {
-              var $this = $(this);
-              var searchval = $this.val();
-              if(searchval.length > 2) {
-                  jQuery('#search-results-facebook').html('Searching... ').show();
-                  jQuery.get(path_socialmedia_library + "searchUsernameFacebook.php?format=html&search_box="+searchval, function(data) {
-                      jQuery('#search-results-facebook').html(data);
-                      jQuery('#facebook').find('.clear').show();
-                  });
-              } else {
-                  jQuery('#search-results-facebook').html('').hide();
-                  jQuery('#social_media_facebook').find('.clear').hide();
-              }
-          });
-          $('#search-results-facebook').on('click', '.media.selectable', function() {
-              var value = $(this).attr('data-value');
-              $('#social_media_facebook').val(value);
-              $('#search-results-facebook').hide();
-          });*/
       })
     </script>
 

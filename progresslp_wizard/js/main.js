@@ -99,24 +99,6 @@ function checkConnectedWithFacebook() {
         move_slide( $(this));
     });
 
-    // Intro next btn - Let the magic begin
-	$('.js-intro-next').click(function(event){
-        event.preventDefault();
-        move_slide( $(this));
-	});
-
-	// Stage-1 next btn - Be found on Search Engines
-	$('.js-stage1-next').click(function(event){
-        event.preventDefault();
-        move_slide( $(this));
-	});
-	
-	// Stage-2 next btn - Select device
-	$('.js-stage2-next').click(function(event){
-        event.preventDefault();
-        move_slide( $(this));
-	});
-
 	// Stage-3 next btn - Store/Booking
 	$('.js-stage3-next').click(function(event){
         event.preventDefault();
@@ -129,11 +111,11 @@ function checkConnectedWithFacebook() {
         return enqueue_submit('show_booking', values.show_booking, 'send_booking');
 	});
 
-	// Stage-4 next btn - Social Channels
-	$('.js-stage4-next').click(function(event){
+    $(".js-switch-to-congratz").click(function(event){
         event.preventDefault();
         move_slide( $(this));
-	});
+        switchToCongratz();
+    });
 
     // Stage-5 next btn - Select Template
     $('.btn-choose-template').click(function(event){
@@ -150,28 +132,11 @@ function checkConnectedWithFacebook() {
 
     $('[data-toggle="tooltip"]').tooltip();
 
-	// #see-my-website-btn Click
-	////////////////////////////////////////
-	$('#see-my-website-btn').click(function (event) {
-		//event.preventDefault();
-		var cdate = new Date(); var time_diff = cdate - page_load_timestamp;
-		track_event('Loading Page', 'Take to website', 'button', time_diff);
-	    var btn = $(this);
-	    btn.button('loading');
-	});
-	
 	// function that switched to stage-5 from stage-4
 	/////////////////////////////////////////////////////
 	function switchToCongratz() {
-		
-		// fade stage
-		$('#choose-template').fadeOut('slow', function () {
-			$(this).addClass('hidden');
-		});
-		$('#congratz').css('opacity',0).removeClass('hidden').animate({opacity: 1}, 'slow');
-
 		// CountDown
-		var sec = 8;
+		var sec = 10;
 		var timer = setInterval(function() { 
 			if (sec > 1) {
 				$('#congratz #counter').text(--sec+' seconds');
@@ -208,55 +173,6 @@ function checkConnectedWithFacebook() {
 		    getFacebookPageAddress(page_id);
         }
 	}
-
-	// Submit Store
-	////////////////////////////////////////
-	$('.submit-store').click(function (e) {
-		e.preventDefault();
-
-		var cdate = new Date(); var time_diff = cdate - page_load_timestamp;
-		
-		track_event('Loading Page', 'Store Yes', '', time_diff);
-
-        timed_submit(send_need_store, 'i_need_store');
- 	});
-	$('.btn-checkbox, .social-btn').click(function (e) {
-		var action = $(this).attr('data-analytics-action');
-		var label = $(this).attr('data-analytics-label');
-		var value = 'Selected';
-		if($(this).hasClass('checked'))
-			value = 'Selection removed';
-
-		track_event('Loading Page', action, label, value);
-	});
-
-	// Skip Store
-	////////////////////////////////////////
-	$('.submit-skip-store').click(function (e) {
-		e.preventDefault();
-
-		var cdate = new Date();
-		var time_diff = cdate - page_load_timestamp;
-		
-		track_event('Loading Page', 'Store No', '', time_diff);
-        timed_submit(send_dont_need_store, 'i_dont_need_store');
-	});
-
-    // Submit Booking
-    $('.submit-booking').click(function (e) {
-        e.preventDefault();
-        var cdate = new Date(); var time_diff = cdate - page_load_timestamp;
-        track_event('Loading Page', 'Booking Yes', '', time_diff);
-        timed_submit(send_need_store, 'i_need_booking');
-    });
-
-    // Skip Booking
-    $('.submit-skip-booking').click(function (e) {
-        e.preventDefault();
-        var cdate = new Date(); var time_diff = cdate - page_load_timestamp;
-        track_event('Loading Page', 'Booking No', '', time_diff);
-        timed_submit(send_dont_need_booking, 'i_dont_need_booking');
-    });
 
     // typeahead
     var substringMatcher = function (strs) {
@@ -734,6 +650,7 @@ function checkConnectedWithFacebook() {
         displayKey: 'value',
         source: substringMatcher(categories)
     });
+
     $('.clear-input').each(function (index){
         input = jQuery(this).prev();
         $(input).on('change keyup paste', function() {
@@ -860,6 +777,9 @@ function is_localhost() {
 	return false;
 }
 
+
+
+
 function createWebsiteUsingAjax(page_id) {
 	var request_data = {};
 	request_data.theme = "dreamtheme";
@@ -881,38 +801,10 @@ function createWebsiteUsingAjax(page_id) {
 	});
 }
 
-function send_store() {
-    if (window.show_store == "yes") {
-        send_need_store();
-    } else {
-        send_dont_need_store();
-    }
-}
-
-function send_booking() {
-    if (window.show_booking == "yes") {
-        send_need_booking();
-    } else {
-        send_dont_need_booking();
-    }
-}
-
 function send_template() {
     var skin = window.skin || '';
     track_event('Loading Page', 'Select Template', skin);
     return post_WP_settings({ skin: skin }, 'Select Template');
-}
-
-function enqueue_submit(setting, value, callback_function) {
-    window[setting] = value;
-
-    if(window.is_blog_ready) {
-        window[callback_function]();
-
-    } else {
-        window.callbacks = window.callbacks || [];
-        window.callbacks.push(callback_function);
-    }
 }
 
 function blog_created() {
@@ -933,21 +825,6 @@ function redirect_to_website() {
 	}
 }
 
-
-function contact_form_submited() {
-	window.is_contact_saved = 1;
-
-	if (window.is_blog_ready == 1) {
-		send_contact_data();
-
-	} else {
-		window.users_contacts = {
-			'phone': $('#phone').val(),
-			'address': $('#address').val(),
-			'email': $('#email').val()
-		}
-	}
-}
 
 function post_WP_settings(data, tracking_action, endpoint) {
     endpoint = endpoint  || 'settings.set_many';
@@ -986,48 +863,10 @@ function post_WP_settings(data, tracking_action, endpoint) {
     });
 }
 
-function send_contact_data() {
-    var _phone, _email, _address;
-
-    if (window.users_contacts != undefined) {
-        _phone = window.users_contacts.phone;
-        _email = window.users_contacts.email;
-        _address = window.users_contacts.address;
-
-    } else {
-        _phone = $('#phone').val();
-        _email = $('#email').val();
-        _address = $('#address').val();
-    }
-
-    var values_changes = { phone: _phone, address: _address, email: _email};
-    return post_WP_settings(values_changes, 'Send Contact Data');
-}
-
 function send_site_category() {
 	_facebook_category = window.facebook_category;
 	var values_changes = { facebook_category: _facebook_category };
     return post_WP_settings(values_changes, 'Send Site Category');
-}
-
-function send_need_store() {
-	track_event('Loading Page', 'Online Store', 'Yes');
-    return post_WP_settings({}, 'Online Store', 'store.create');
-}
-
-function send_dont_need_store() {
-    track_event('Loading Page', 'Online Store', 'No');
-    return post_WP_settings({}, 'Online Store', 'store.hide');
-}
-
-function send_need_booking() {
-    track_event('Loading Page', 'Booking', 'Yes');
-    return post_WP_settings({ show_booking: 1 }, 'Booking');
-}
-
-function send_dont_need_booking() {
-    track_event('Loading Page', 'Booking', 'No');
-    return post_WP_settings({ show_booking: 0 }, 'Booking');
 }
 
 function send_user_fb_details()
