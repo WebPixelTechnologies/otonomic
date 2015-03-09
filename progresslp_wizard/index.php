@@ -51,9 +51,10 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
   <!-- /Facebook SDK -->
-
+  
     <!-- Intro    ========================================================== -->
     <div class="container-fluid">
+        <form id="User_site_creation">
       <div id="intro" class="row installer-stage">
         <div class="bg-image hidden-xs"></div>
         <div class="col-xs-12">
@@ -66,38 +67,38 @@
           </div>
         </div>
       </div>
-
+        
       <!-- Stage ================================================ -->
       <div id="" class="row hidden installer-stage">
           <div class="bg-image hidden-xs"><img src="images/bg5.jpg"></div>
           <div class="content-panel">
               <h1 class="title">Let's start creating your awesome website!</h1>
               <h3></h3>
-              <form role="form" id="business-details" action="">
+              <!--<form role="form" id="business-details" action="">-->
                   <div class="row">
                       <div class="col-xs-12">
                           <div class="form-group">
                               <label for="productName">Business name</label>
-                              <textarea rows="3" id="address" name="contact_address" class="form-control" autocomplete="off" placeholder=""></textarea>
+                              <textarea rows="3" id="address" name="business_address" class="form-control" autocomplete="off" placeholder=""></textarea>
                           </div>
                           <div class="form-group">
-                              <label for="email">Category</label>
+                              <label for="fb_category">Category</label>
                               <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" class="tooltip" title="Start typing, and a list of available options will show up. Select the option that best describes your business."></i>
                               <div id="cat-selector" class="">
-                                  <input class="typeahead form-control pulse-background" type="text" placeholder="Search for your category" id="fb_category">
+                                  <input name="fb_category" class="typeahead form-control pulse-background" type="text" placeholder="Search for your category" id="fb_category">
                                   <!-- span class="glyphicon glyphicon-search form-control-feedback"></span -->
                               </div>
                           </div>
                           <div class="form-group">
                               <label for="email">Email</label>
-                              <input type="email" class="form-control" id="email" name="contact_email" value="">
+                              <input type="email" class="form-control" id="email" name="email" value="">
                           </div>
                           <div class="form-group text-right">
                               <a href="#" onclick="return false;" class="btn-next btn btn-ttc-orange btn-lg"><span class="glyphicon glyphicon-ok"></span>Next</a>
                           </div>
                       </div>
                   </div>
-              </form>
+              <!--</form>-->
           </div>
       </div>
 
@@ -123,17 +124,21 @@
                           </button>
                       </div>
                       <div class="col-xs-12">
-                          <button class="btn btn-block btn-ttc-white btn-checkbox btn-add-on" data-analytics-action="Addons" data-analytics-label="I don’t need these features">
+                          <button id="option-portfolio" class="btn btn-block btn-ttc-white btn-checkbox btn-add-on" data-analytics-action="Addons" data-analytics-label="I don’t need these features">
                               <span class="text-type-1">Show my portfolio</span>
                               <span class="glyphicons picture"></span>
                           </button>
                       </div>
                       <div class="col-xs-12">
-                          <button class="btn btn-block btn-ttc-white btn-checkbox btn-add-on" data-analytics-action="Addons" data-analytics-label="I don’t need these features">
+                          <button id="options-blog" class="btn btn-block btn-ttc-white btn-checkbox btn-add-on" data-analytics-action="Addons" data-analytics-label="I don’t need these features">
                               <span class="text-type-1">Get more readers for my content</span>
                               <span class="glyphicons book_open"></span>
                           </button>
                       </div>
+                      <input id="option-online-store" type="hidden" name="otonomic_module_store['enabled']" value="0"/>
+                      <input id="option-booking" type="hidden" name="otonomic_module_booking['enabled']" value="0"/>
+                      <input id="option-portfolio" type="hidden" name="otonomic_module_portfolio['enabled']" value="0"/>
+                      <input id="options-blog" type="hidden" name="otonomic_module_blog['enabled']" value="0"/>
                   </div>
 
                   <hr>
@@ -203,6 +208,7 @@
                           <img class="img-responsive" src="images/templates/dream-salon.png">
                       </div>
                   </div>
+                  <input type="hidden" name="skin" value="" />
               </div>
               <a href="#" onclick="return false;" class="btn btn-ttc-clear btn-back pull-right">
                   <span class="glyphicons undo"></span>
@@ -217,7 +223,7 @@
           <div class="content-panel">
               <h1 class="title">Let your clients easily contact you!</h1>
               <h3>Review, update and complete your contact details to make sure clients can reach you:</h3>
-              <form role="form" id="business-details" action="">
+              <!--<form role="form" id="business-details" action="">-->
                   <div class="row">
                       <div class="col-xs-12">
                           <div class="form-group">
@@ -316,7 +322,7 @@
                           </a>
                       </div>
                   </div>
-              </form>
+              <!--</form>-->
           </div>
       </div>
 
@@ -346,7 +352,7 @@
                       <div class="form-group social-media-field" id="facebook">
                           <div class="row">
                               <div class="col-xs-3">
-                                  <label for="businessName"><i class="fa fa-facebook-square"></i> Facebook</label>
+                                  <label for="social_media_facebook"><i class="fa fa-facebook-square"></i> Facebook</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
                                   <input type="text" class="form-control LoNotSensitive enable-suggest" id="social_media_facebook" data-suggest-url="searchUsernameFacebook.php" name="social_media_facebook" value="">
@@ -365,7 +371,7 @@
                       <div class="form-group social-media-field" id="yelp">
                           <div class="row">
                               <div class="col-xs-3">
-                                  <label for="businessName"><i class="fa fa-yelp"></i> Yelp</label>
+                                  <label for="social_media_yelp"><i class="fa fa-yelp"></i> Yelp</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
                                   <input type="text" class="form-control LoNotSensitive enable-suggest" id="social_media_yelp" data-suggest-url="searchUsernameYelp.php" name="social_media_yelp" value="">
@@ -384,7 +390,7 @@
                       <div class="form-group social-media-field" id="instagram">
                           <div class="row">
                               <div class="col-xs-3">
-                                  <label for="businessName"><i class="fa fa-instagram"></i> Instagram</label>
+                                  <label for="social_media_instagram"><i class="fa fa-instagram"></i> Instagram</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
                                   <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameInstagram.php" id="social_media_instagram" name="social_media_instagram" value="">
@@ -404,7 +410,7 @@
                       <div class="form-group social-media-field" id="youtube">
                           <div class="row">
                               <div class="col-xs-3">
-                                  <label for="businessName"><i class="fa fa-youtube"></i> YouTube</label>
+                                  <label for="social_media_youtube"><i class="fa fa-youtube"></i> YouTube</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
                                   <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameYoutube.php" id="social_media_youtube" name="social_media_youtube" value="">
@@ -425,7 +431,7 @@
                       <div class="form-group social-media-field" id="twitter">
                           <div class="row">
                               <div class="col-xs-3">
-                                  <label for="businessName"><i class="fa fa-twitter"></i> Twitter</label>
+                                  <label for="social_media_twitter"><i class="fa fa-twitter"></i> Twitter</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
                                   <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameTwitter.php" id="social_media_twitter" name="social_media_twitter" value="">
@@ -444,7 +450,7 @@
                       <div class="form-group social-media-field" id="linkedin">
                           <div class="row">
                               <div class="col-xs-3">
-                                  <label for="businessName"><i class="fa fa-linkedin"></i> LinkedIn</label>
+                                  <label for="social_media_linkedin"><i class="fa fa-linkedin"></i> LinkedIn</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
                                   <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameLinkedin.php" id="social_media_linkedin" name="social_media_linkedin" value="">
@@ -463,7 +469,7 @@
                       <div class="form-group social-media-field" id="flickr">
                           <div class="row">
                               <div class="col-xs-3">
-                                  <label for="businessName"><i class="fa fa-flickr"></i> Flickr</label>
+                                  <label for="social_media_flickr"><i class="fa fa-flickr"></i> Flickr</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
                                   <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameFlickr.php" id="social_media_flickr" name="social_media_flickr" value="">
@@ -482,7 +488,7 @@
                       <div class="form-group social-media-field" id="googleplus">
                           <div class="row">
                               <div class="col-xs-3">
-                                  <label for="businessName"><i class="fa fa-google-plus"></i> Google+</label>
+                                  <label for="social_media_googleplus"><i class="fa fa-google-plus"></i> Google+</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
                                   <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernameGoogleplus.php" id="social_media_googleplus" name="social_media_googleplus" value="">
@@ -501,7 +507,7 @@
                       <div class="form-group social-media-field" id="pinterest">
                           <div class="row">
                               <div class="col-xs-3">
-                                  <label for="businessName"><i class="fa fa-pinterest"></i> Pinterest</label>
+                                  <label for="social_media_pinterest"><i class="fa fa-pinterest"></i> Pinterest</label>
                               </div>
                               <div class="col-xs-9 has-feedback">
                                   <input type="text" class="form-control LoNotSensitive enable-suggest" data-suggest-url="searchUsernamePinterest.php" id="social_media_pinterest" name="social_media_pinterest" value="">
@@ -515,7 +521,7 @@
                               </div>
                           </div>
                       </div>
-                      <!-- END Google+ -->
+                      <!-- END Pinterest -->
                   </div>
               </div>
 
@@ -527,6 +533,7 @@
                   <span class="glyphicons undo"></span>
                   Back
               </a>
+              
           </div>
       </div>
 
@@ -554,6 +561,7 @@
           </p>
         </div>
       </div>
+        </form>
     </div><!-- /.container -->
 
     <script src="js/main.js?v=1.0.1"></script>
@@ -588,6 +596,7 @@
           // Online store / booking buttons
           $('.btn-add-on').click(function(){
               var $this = $(this);
+              
               if($this.hasClass('btn-uncheck-others') && !$this.hasClass('checked')) {
                 $('.btn-add-on').removeClass('checked');
               } else {
@@ -595,7 +604,15 @@
               }
               $this.toggleClass('checked');
               $this.parents('.installer-stage').find('.next-btn').removeClass('disabled').html('Continue <span class="glyphicon glyphicon-chevron-right"></span>');
-          });
+              
+              if($this.hasClass('checked')){
+                  var option_id = $this.attr('id');
+                  $('input#'+option_id).val('1');
+              }else{
+                  var option_id = $this.attr('id');
+                  $('input#'+option_id).val('0');
+              }
+        });
 
           $('#show_opening_hours').click(function() {
               $('#opening-hours').toggle();

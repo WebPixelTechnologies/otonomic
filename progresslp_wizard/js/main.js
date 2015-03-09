@@ -115,14 +115,21 @@ function checkConnectedWithFacebook() {
         event.preventDefault();
         move_slide( $(this));
         switchToCongratz();
+        $('#User_site_creation').submit();
     });
+
+    $('#User_site_creation').submit(function(){
+        console.log($(this).serialize());
+        return false;
+    })
 
     // Stage-5 next btn - Select Template
     $('.btn-choose-template').click(function(event){
         event.preventDefault();
         move_slide( $(this));
-
+        
         var skin = $(this).attr('data-option-value');
+        $('input[name="skin"]').val(skin);
         return enqueue_submit('skin', skin, 'send_template');
     });
 
