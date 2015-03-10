@@ -12,8 +12,9 @@
     <?php } ?>
 
     <div class="media-body">
-        <h4 class="media-heading"><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h4>
+        <h1 class="media-heading"><?php the_title(); ?></h1>
         <p class="post-meta">By <?php the_author_link(); ?>  •  <?php echo get_the_date(); ?></p>
+        <hr style="margin-bottom:20px;margin-top:-8px;">
         <?php //the_excerpt();
 		the_content();
 		 ?>
