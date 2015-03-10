@@ -34,9 +34,11 @@ wp_reset_query();
 				<?php the_title(); ?>
 			</a>
 		</h4>
+        
 		<p class="post-meta">
 			By <?php the_author_link(); ?>  •  <?php echo get_the_date(); ?>
 		</p>
+        <hr style="margin-bottom:20px;margin-top:-8px;">
 		<?php the_excerpt(); ?>
 	</div>
 	<div class="post-shares">
@@ -58,6 +60,7 @@ wp_reset_query();
 		<div class="create-website-block" align="center">
             <span>1-click website from your facebook page</span>
             <a href="http://otonomic.com/" class="btn btn-oto-orange">Create Your Website Now</a>
+            
          </div>
 	<?php 
 	}
@@ -79,5 +82,5 @@ wp_reset_postdata();
  ?> 
 </div>
 </div>
-		
+
  
