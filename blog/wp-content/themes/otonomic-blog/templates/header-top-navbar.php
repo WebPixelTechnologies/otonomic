@@ -12,6 +12,7 @@
       <a class="navbar-brand" href="https://otonomic.com"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="otonomic.com"></a>
       <div class="navbar-right" >
         <a href="#" class="btn btn-sm navbar-btn btn-oto-orange hidden-xs">Create Your Website Now</a>
+        <a href="#" style="padding-left: 14px;vertical-align: sub;color: #F54500;">Login</a>
       </div>
     </div>
   </div>
