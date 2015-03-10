@@ -2,6 +2,7 @@
 /**
  * Roots includes
  */
+ add_theme_support( 'post-thumbnails' );
 require_once locate_template('/lib/utils.php');           // Utility functions
 require_once locate_template('/lib/init.php');            // Initial theme setup and constants
 require_once locate_template('/lib/wrapper.php');         // Theme wrapper class
