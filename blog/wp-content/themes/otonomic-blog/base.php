@@ -17,17 +17,30 @@
     }
   ?>
 
-
-
-
 <div id="main-wrapper" class="otonomic-blog">
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
+    <div class="jumbotron cus-jumbotron">
       <div class="container">
         <?php if (!is_front_page()) { ?>
           <a href="<?php echo home_url(); ?>/" class="btn-back btn-link"><span class="glyphicons chevron-left"></span>Back</a>
         <?php } ?>
-        <h1><?php echo wp_trim_words( roots_title(), $num_words = 9, $more = null ); ?></h1>
+        <?php 
+		if(is_front_page())
+			{
+				$blog_title = get_bloginfo('name');
+			
+		 ?>
+        <h1><?php echo $blog_title; ?></h1>
+        <h2><?php echo str_replace('-','<br />',get_bloginfo('description')); ?></h2>
+        <?php
+			}
+			else
+			{
+		?>
+        	<h1><?php echo wp_trim_words( roots_title(), $num_words = 9, $more = null ); ?></h1>		
+        <?php    
+			}
+		?>
         <?php 
             if (is_single()) { 
               while (have_posts()) : the_post(); 
