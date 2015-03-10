@@ -764,6 +764,8 @@ function wp_generate_tag_cloud( $tags, $args = '' ) {
 	$font_step = $font_spread / $spread;
 
 	$a = array();
+	$c_value = count($tags);
+	$i = 1;
 
 	foreach ( $tags as $key => $tag ) {
 		$count = $counts[ $key ];
@@ -777,10 +779,18 @@ function wp_generate_tag_cloud( $tags, $args = '' ) {
 		} else {
 			$title_attribute = call_user_func( $args['topic_count_text_callback'], $real_count, $tag, $args );
 		}
-
+		if($c_value != $i)
+		{
+			$comma = "<span style='padding-left:5px;font-size: 23px;vertical-align: text-top;'>,</span>";
+		}
+		else
+		{
+			$comma = "";	
+		}
 		$a[] = "<a href='$tag_link' class='tag-link-$tag_id' title='" . esc_attr( $title_attribute ) . "' style='font-size: " .
 			str_replace( ',', '.', ( $args['smallest'] + ( ( $count - $min_count ) * $font_step ) ) )
-			. $args['unit'] . ";'>$tag_name</a>";
+			. $args['unit'] . ";'>$tag_name</a>".$comma;
+		$i++;	
 	}
 
 	switch ( $args['format'] ) {
