@@ -14,8 +14,7 @@
     <div class="media-body">
         <h1 class="media-heading"><?php the_title(); ?></h1>
       <p class="post-meta" style="margin-bottom:0px;">By <?php the_author_link(); ?>  •  <?php echo get_the_date(); ?></p>
-        <!--<hr style="margin-bottom:20px;margin-top:-8px;">-->
-        <p><?php the_tags(); ?></p>
+               <p><?php the_tags(); ?></p>
         <?php //the_excerpt();
 		the_content();
 		 ?>
