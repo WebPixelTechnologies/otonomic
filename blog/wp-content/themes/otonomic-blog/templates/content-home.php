@@ -35,10 +35,10 @@ wp_reset_query();
 			</a>
 		</h4>
         
-		<p class="post-meta">
+	<p class="post-meta" style="margin-bottom:0px;">
 			By <?php the_author_link(); ?>  •  <?php echo get_the_date(); ?>
 		</p>
-        <hr style="margin-bottom:20px;margin-top:-8px;">
+        <p><?php the_tags(); ?></p>
 		<?php the_excerpt(); ?>
 	</div>
 	<div class="post-shares">
